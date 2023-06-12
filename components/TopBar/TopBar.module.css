@@ -1,0 +1,99 @@
+.topBar{ 
+     width: 1440px; 
+     height: 66px; 
+     left: 0px; 
+     top: 0px; 
+     background: #E9F6E9; 
+     margin:0 auto;
+ }
+ .topBarIcon{ 
+     position: absolute;
+     right: 5%;
+     top: 0.46%;
+     bottom: 98.78%;
+     width:25px;
+     height:28.4px;
+     top:17.4px;
+     left:660px;
+ 
+ }
+ .phone{
+     position: absolute;
+     width: 178px;
+     height: 25px;
+     left: 670px;
+     top: 20px;
+     font-family: 'Poppins';
+     font-style: normal;
+     font-weight: 600;
+     font-size: 16px;
+     line-height: 24px;
+     color: #092E3D;
+ 
+ }
+ 
+ .contact{
+  position: absolute;
+ width: 123px;
+ height: 12px;
+ left: 950px;
+ top: 27px;
+ font-family: 'Poppins';
+ font-style: normal;
+ font-weight: 500;
+ font-size: 20px;
+ line-height: 30px;
+ display: flex;
+ align-items: center;
+ text-align: center;
+ color: #092E3D;
+ 
+ }
+ 
+ @media only screen and (max-width:1024px){
+     .topBar{ 
+         width:100%;
+         text-align: center !important;
+     }
+     .topBarIcon{ 
+         left:310px;
+     
+     }
+     .contact{
+     left:610px;
+        
+        }
+        .phone{
+         left:330px;
+        }
+ }
+ @media only screen and (max-width:992px){
+     .topBar{ 
+         width:100%;
+         text-align: center !important;
+     }
+     .topBarIcon{ 
+         left:200px;
+     
+     }
+     .contact{
+     left:444px;
+        
+        }
+        .phone{
+         left:215px;
+        }
+ }
+ @media only screen and (max-width:500px){
+     .topBarIcon{ 
+         left:60px;
+     
+     }
+     .phone{
+         left:65px;
+        }
+     .contact {
+         left: 254px;
+     }
+ }
+ 

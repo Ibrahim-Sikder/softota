@@ -1,0 +1,242 @@
+.header{
+     width: 1440px;
+     margin:0 auto;
+     height:90px;
+     background: #E6F8FF;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+     box-sizing: border-box;
+     }
+     
+     .headerContent{
+         width:1440px;
+         margin: 0 auto;
+         position:absolute;
+         top:5px;
+         
+     }
+     .logo{
+         position: absolute;
+         width: 159px;
+         height: 56px;
+         left: 166px;
+         top: 82px;
+         }
+     .header h5{
+     position: absolute;
+     width: 93px;
+     height: 12px;
+     left: 386px;
+     top: 105px;
+     font-family: 'Poppins';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 30px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     color: #092E3D;
+     }
+     .header input{
+     box-sizing: border-box;
+     width: 430px;
+     height: 43px;
+     top: 89px;
+     background: #FFFFFF;
+     border: 1px solid #4AB449;
+     border-radius: 5px;
+     padding-left:10px;
+     }
+     
+     .header button{
+     position: absolute;
+     width: 102px;
+     height: 46px;
+     left: 1060px;
+     top: 88px;
+     color:#fff;
+     background: #4AB449;
+     border-radius: 5px;
+     }
+     .header .buttonTow{
+      position: absolute;
+     width: 102px;
+     height: 46px;
+     left: 1173px;
+     top: 88px;
+     background: #19ABE3;
+     border-radius: 5px;
+     color:#fff;
+     text-align:center;
+     justify-content: center;
+     }
+     
+     .searchIcon {
+         position: absolute;
+         right: 530px;
+         top: 98px;
+         font-size: 25px;
+     }
+     /*
+     Menu styling 
+     */
+     .toggle{
+         display: none;
+     }
+     .navItems{
+         display: none;
+     }
+     
+     @media only screen and (max-width:1024px){
+             .header{
+                 width: 100%;
+                 overflow: hidden;
+                 }
+         .logo{
+             width: 150px;
+             left: 15px;
+             }
+             .header h5{
+                 width: 130px;
+                 left:180px;
+                
+             }
+             .headerContent{
+                display: block;
+                width:100%;
+                 
+             }
+             .header input{
+                 width: 312px;
+                 left: 5px;
+             }
+             .searchIcon {
+                 right:370px;
+             }
+             .header button{
+                 width: 102px;
+                 left: 780px;
+                 }
+                 .header .buttonTow{
+                 width: 102px;
+                 height: 46px;
+                 left: 891px;
+                 }
+             
+         
+     }
+     @media only screen and (max-width:768px){    
+         .header input{
+             left:132px;
+          }
+            .searchIcon {
+                     right: 107px;
+                     color: #333;
+          }
+          .header button, .header .buttonTow{
+           display:none;
+             }
+             .header input {
+                 display: none;
+             }
+             .searchIcon {
+                 display: none;
+             }
+             .toggle {
+                 display: block;
+                 position: absolute;
+                 right: 36px;
+                 top: 93px;
+                 font-size: 28px;
+             }
+             .navItems.active{
+                 left:0px !important;
+             }
+             
+             .navItems {
+                 display: block;
+             }
+             
+             .navItems {
+                 background: #19ABE3;
+                 color: #fff;
+                 width: 73%;
+                 position: absolute;
+                 height: 100vh;
+                 top: 0;
+                 left: -1000px;
+                 transition: all .7s ease;
+                 -webkit-trnsition: all .5s ease;
+                 -moz-transition: all .7s ease;
+                 -ms-transition: all .7s ease;
+                 -o-transition: all .7s ease;
+                 -webkit-transition: all .7s ease;
+                 z-index: 999;
+             }
+             
+             .navItems ul li {
+                 display: block;
+                 padding-bottom: 15px;
+                 text-align: center;
+             }
+             
+             .navItems ul {
+                 margin-top: 136px;
+             }
+             
+             
+             .navItems{
+                 display: block;
+             }
+             /*
+                 humberger menu styling
+             */
+     
+             .navItems.active{
+                 left:0px !important;
+             }
+             .bar{
+                 display: block;
+                 width:25px;
+                 height:3px;
+                 margin:5px;
+                 transition:all .3s ease-in-out;
+                 -webkit-transition:all .3s ease-in-out;
+                 -moz-transition:all .3s ease-in-out;
+                 -ms-transition:all .3s ease-in-out;
+                 -o-transition:all .3s ease-in-out;
+                 background-color:#4AB449;
+             }
+     
+             .humberger{
+                 display: block;
+             }
+             .humberger.active .bar:nth-child(2){
+                 opacity:0;
+             }
+             .humberger.active .bar:nth-child(1){
+                 transform:translateY(8px) rotate(45deg);
+                 -webkit-transform:translateY(8px) rotate(45deg);
+                 -moz-transform:translateY(8px) rotate(45deg);
+                 -ms-transform:translateY(8px) rotate(45deg);
+                 -o-transform:translateY(8px) rotate(45deg);
+         }
+             .humberger.active .bar:nth-child(3){
+                 transform:translateY(-8px) rotate(-45deg)	;
+                 -webkit-transform:translateY(-8px) rotate(-45deg)	;
+                 -moz-transform:translateY(-8px) rotate(-45deg)	;
+                 -ms-transform:translateY(-8px) rotate(-45deg)	;
+                 -o-transform:translateY(-8px) rotate(-45deg)	;
+         }
+         .humberger {
+             display: block;
+             position: absolute;
+             right: 33px;
+             top: 93px;
+             font-size: 42px;
+             color:black;
+         }
+     }
+     
+     
+     
