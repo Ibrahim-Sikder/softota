@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import style from './Header.module.css'
-// import logo from '../../src/Assets/logo'
+import logo from '../../public/logo.png'
 import { FaSistrix } from "react-icons/fa";
-
 import TopBar from '../TopBar/TopBar';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -24,12 +23,12 @@ const Header = () => {
             <div className={style.headerContent}>
               <div>
                 <div className={style.logo}>
-                {/* <Image
+                <Image
                     src={logo}
                     alt="Picture of the author"
                     width={500}
                     height={500}
-               /> */}
+               />
                 </div>
                 <h5>About Us</h5>
             <nav className={style.navItems} ref={navRef}>
@@ -64,7 +63,7 @@ const Header = () => {
             <span className={style.bar}></span>
           </div>
                 <div className='relative'>
-                <input placeholder='Search right hotel, visa' className='relative bg-black' type="text" />
+                <input placeholder='Search right hotel, visa' className='relative bg-black left-[500px]' type="text" />
                 <FaSistrix className={style.searchIcon}></FaSistrix>
                 </div>
               </div>
