@@ -7,12 +7,12 @@ const Travel = () => {
         <div className={style.travel}>
            <div>
            <Image
-                    src={travel}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className='object-cover'
-               />
+            src={travel}
+            alt="Picture of the author"
+            width={500}
+            height={500}
+            className='object-cover'
+            />
            </div>
         </div>
     );

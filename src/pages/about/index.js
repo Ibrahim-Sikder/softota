@@ -33,7 +33,7 @@ const About = () => {
       <h2>THi is about page </h2>
       <form onSubmit={handleSubmit}>
 
-        <input name='name' className='border px-3' placeholder='name' /><br/>
+        <input onChange={(event)=>setTitle(event.target.value)} name='name' className='border px-3' placeholder='name' /><br/>
         <button type='submit' className='btn btn-secondary'>Submit</button>
       </form>
     </div>
