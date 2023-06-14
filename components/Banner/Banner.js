@@ -135,7 +135,7 @@ const Banner = () => {
 Economy Class</span> <br />
         <span>1 Person </span>
       </div>
-      <button className="style.flightBtn mb-10">Search Flight</button>
+      <button className={style.flightBtn}>Search Flight</button>
     </div>
   );
 };

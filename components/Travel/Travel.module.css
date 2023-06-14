@@ -1,0 +1,31 @@
+.travel{
+     width: 1440px;
+     height: 500px;
+     border-radius: 5px;
+     overflow: hidden;
+     margin-top:50px;
+     margin-bottom:50px;
+     }
+     .travel img{
+         width:100%;
+         object-fit:cover;
+     }
+     
+     @media only screen and (max-width:768px){
+         .travel{
+             width:100%;
+         }
+         .travel img{
+             max-width:100%
+         }
+     }
+     @media only screen and (max-width:768px){
+         .travel img {
+             height: 268px;
+             object-fit: cover;
+             background-repeat: no-repeat;
+             background-size: cover;
+             width: 100%;
+         }
+     }
+     

@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Places = () => {
     return (
         <div className={style.places}>
-           <h2 className='mb-16 center'>Best Places To Visit In Bangladesh</h2>
+           <h2 className='mb-16 grid place-items-center'>Best Places To Visit In Bangladesh</h2>
            <div className={style.bestPlaces}>
                 <div>
                 <Image
