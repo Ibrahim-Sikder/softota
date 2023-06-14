@@ -5,6 +5,7 @@ import Banner from '../../components/Banner/Banner'
 import Places from '../../components/Places/Places'
 import Travel from '../../components/Travel/Travel'
 import Trending from '../../components/Trending/Trending'
+import Mission from '../../components/Mission/Mission'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,6 +17,7 @@ export default function Home() {
       <Places></Places>
       <Travel></Travel>
       <Trending></Trending>
+      <Mission></Mission>
     </div>
     
 
