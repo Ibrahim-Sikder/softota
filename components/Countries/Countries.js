@@ -12,7 +12,7 @@ import newzealand from '../../public/newzealand.png';
 const Countries = () => {
   return (
     <div className='my-10 text-center'>
-          <div className='w-[500px] mx-auto text-center' >
+          <div className='w-[500px] mx-auto text-center mb-10' >
                <h2 className='text-2xl font-bold capitalize'>Top visited countries</h2>
                <p>The Top Ranking of Most Visited Countries in the World is based on the most recent available numbers of visitors a country</p>
           </div>
