@@ -12,7 +12,7 @@ const Passion = () => {
           className='tourImg'
           src={people}
           alt="Picture of the author"
-          width={300}
+          width={500}
           height={500}
      />
      <div className='ml-5'>
@@ -29,7 +29,7 @@ const Passion = () => {
           className='tourImg'
           src={man}
           alt="Picture of the author"
-          width={300}
+          width={500}
           height={500}
      />
      <div className='ml-5'>
@@ -46,7 +46,7 @@ const Passion = () => {
           className='tourImg'
           src={doctor}
           alt="Picture of the author"
-          width={300}
+          width={500}
           height={500}
      />
      <div className='ml-5'>

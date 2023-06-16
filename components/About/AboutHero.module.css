@@ -1,0 +1,64 @@
+
+.aboutHero{
+     position:relative;
+
+}
+.aboutHeroImg{
+     width:100%;
+     height:100vh;
+    
+}
+.aboutHero:after{
+     content:'';
+     position:absolute;
+     width:100%;
+     height:100%;
+     background:linear-gradient(180deg,#092e3d,rgba(9,46,61,.35) .01%,rgba(9,46,61,.65));
+     z-index: 99;
+     top:0;
+     left:0;
+     bottom:0;
+     right:0;
+     opacity:0.7;
+}
+.aboutHead{
+     position:absolute;
+     left:50%;
+     top:50%;
+     transform:translate(-50%, -50%);
+     z-index: 999;
+     color:white;
+     font-size:60px;
+     font-weight:600;
+     width:80%;
+     text-align:center;
+     line-height:70px;
+}
+.leftBox{
+width: 401px;
+height: 414px;
+background: linear-gradient(180deg, rgba(38, 173, 226, 0.282) 0%, rgba(38, 173, 226, 0.3) 100%);
+box-shadow: 0px 4px 4px rgba(74, 180, 73, 0.5);
+border-radius: 5px;
+overflow: hidden;
+margin-top:-150px;
+margin-right:45px;
+align-items:center;
+justify-content:center;
+display:flex;
+}
+.aboutMan{
+width: 250px;
+height: 300px;
+}
+.rightBox{
+width: 412px;
+height: 408px;
+background: rgba(25, 171, 227, 0.3);
+border-radius: 5px;
+display:flex;
+justify-content: center;
+align-items:center;
+padding:0px 30px;
+margin-left:45px;
+}
