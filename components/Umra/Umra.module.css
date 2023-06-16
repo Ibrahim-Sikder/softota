@@ -39,7 +39,7 @@
    .bannerItem {
      position: absolute;
      width: 1105px;
-     height: 250px;
+     height: 300px;
      left:50%;
      top:55%;
      transform:translate(-50%, -50%);
@@ -90,7 +90,7 @@
      position: absolute;
      width: 400px;
      height: 50px;
-     left: 485px;
+     left: 515px;
      top: 230px;
      background: #ffffff;
      border: 1px solid #4ab449;
@@ -214,6 +214,7 @@
    text-align:left;
    }
    .flightBtn{
+     position:absolute;
    width: 236px;
    height: 53px;
    color:#fff;
@@ -223,7 +224,8 @@
    margin-top:30px;
    z-index: 999;
    margin-left:600px;
-   z-index: 99;
+   z-index: 9999;
+   bottom:46px;
    }
    
    

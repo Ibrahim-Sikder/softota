@@ -10,7 +10,7 @@ import tours from '../../public/tours.png'
 import buss from '../../public/buss.png'
 const Umra = () => {
      return (
-         <div className='pb-32'>
+         <section className='pb-32'>
            <div className={style.banner}>
             <Image
                src={banner}
@@ -102,14 +102,21 @@ const Umra = () => {
                 </li>
               </ul>
             </div>
-            <div className={style.inputBox}>
+            <div className={style. u  }>
               <span className={style.hajj}>Hajj Package</span>
               <span>Ummra Package</span>
             </div>
            
             <button className={style.flightBtn}>Search Flight</button>
           </div>
-         </div>
+          <section>
+               <div className='w-[610px] mt-5 mx-auto text-center'>
+                    <h2 className='text-3xl bold' >Best Hajj Packages 2023 from bangladesh</h2>
+                    <p className=' mt-3 text-[#738187]'>Some of the renowned and best Hajj agencies in Bangladesh are
+                    Universal Travel & Tours, Holy Hajj & Umrah</p>
+               </div>
+          </section>
+         </section>
         );
 }
 
