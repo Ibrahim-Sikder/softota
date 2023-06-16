@@ -101,12 +101,12 @@ const Umra = () => {
                           className="mr-3 text-[#092E3D]"
                          
                      />
-                  </span>{" "}
-                  Busses{" "}
+                  </span>
+                  Busses
                 </li>
               </ul>
             </div>
-            <div className={style. u  }>
+            <div className={style.package}>
               <span className={style.hajj}>Hajj Package</span>
               <span>Ummra Package</span>
             </div>
