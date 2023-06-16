@@ -383,4 +383,86 @@
    }
    
    }
-   
+.singleHajj{
+width: 350px;
+height: 601px;
+background: #FFFFFF;
+box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
+border-radius: 5px;
+padding:10px;
+}
+.singleHajjmiddl{
+width: 350px;
+height: 601px;
+background: #FFFFFF;
+box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
+border-radius: 5px;
+padding:10px;
+background: #E6F8FF !important;
+}
+.singleHajjmiddl ul li{
+     color:black !important;
+}
+.hajjBtn{
+width: 160px;
+height: 46px;
+background: #4AB449;
+border-radius: 5px;
+color:white;
+margin-left:75px;
+margin-top:10px;
+   }
+.day{
+width: 100px;
+height: 40px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #092E3D;
+background: #19ABE3;
+padding:10px;
+overflow: hidden;
+color:white;
+margin-top:20px;
+
+   }
+.clock{
+box-sizing: border-box;
+width: 350px;
+height: 52px;
+background: #FFFFFF;
+border: 1px solid #E6F8FF;
+box-shadow: 0px 4px 4px #E6F8FF;
+border-radius: 5px;
+display:flex;
+align-items:center;
+
+}
+.clock2{
+     box-sizing: border-box;
+     width: 350px;
+     height: 52px;
+     background: #FFFFFF;
+     border: 1px solid #E6F8FF;
+     box-shadow: 0px 4px 4px #E6F8FF;
+     border-radius: 5px;
+     display:flex;
+     align-items:center;
+     margin:0px 40px;
+     
+     }
+.rBtn{
+width: 236px;
+height: 53px;
+background: #19ABE3;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+color:white;
+display:grid;
+place-content: center;
+}
