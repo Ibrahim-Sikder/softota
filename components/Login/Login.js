@@ -4,7 +4,6 @@ import Image from 'next/image';
 import login from '../../public/login.png';
 import google from '../../public/google.png';
 import facebook from '../../public/facebook.png';
-import { IconName } from "react-icons/fa";
 
 const Login = () => {
   return (
