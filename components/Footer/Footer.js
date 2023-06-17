@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Footer.module.css'
 import { FaPhoneAlt, FaMapMarkerAlt, FaFacebook,FaTwitter,FaBimobject,FaWhatsappSquare,FaInstagramSquare } from "react-icons/fa";
+import Link from 'next/link';
 const Footer = () => {
     return (
         <div className={style.footer}>
@@ -94,18 +95,18 @@ const Footer = () => {
                 <div className='mb-10'>
                     <h4 className='pb-5'>HELP </h4>
                     <p className={style.number}>
-                       <span>
+                      <Link href='/faq'> <span>
                        FAQ
+                       </span></Link>
+                    </p>
+                    <p className={style.number}>
+                       <span>
+                        <Link href='/privacy'><span>Privary Policy</span></Link>
                        </span>
                     </p>
                     <p className={style.number}>
                        <span>
-                        <span>Privary Policy</span>
-                       </span>
-                    </p>
-                    <p className={style.number}>
-                       <span>
-                        <span>Term & Condition </span>
+                        <Link href='/termAndCondition'><span>Term & Condition </span></Link>
                        </span>
                     </p>
                    

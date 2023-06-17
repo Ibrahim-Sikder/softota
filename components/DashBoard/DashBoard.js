@@ -2,44 +2,23 @@ import React from 'react'
 import style from './DashBoard.module.css';
 import Image from 'next/image';
 import admin from '../../public/admin.png'
+import clock from '../../public/clock.png'
+import clock2 from '../../public/clock2.png'
+import clock3 from '../../public/clock3.png'
+import clock4 from '../../public/clock4.png'
+import clock5 from '../../public/clock5.png'
+import AdminLeftSide from './AdminLeftSide';
+import AdminRightSide from './AdminRightSide';
 
 const DashBoard = () => {
   return (
     <section>
       <div className='grid grid-cols-12'>
-          <div  className='cols-span-10'>
-               <div className={style.AdminleftSide}>
-               <div className='absolute left-24 top-52'>
-                    <Image
-                    src={admin}
-                    alt="Picture of the author"
-                    width={100}
-                    height={100}       
-                    />
-                    <h2 className='text-white '>Ibrahim Sikder</h2>
-               </div>
-               <div className={style.adminBtn}>
-                    <button>My Account</button>
-               </div>
-               <div className={style.adminBtn2}>
-                    <button>My Booking</button>
-               </div>
-               <div className={style.adminBtn3}>
-                    <button>Saved cards</button>
-               </div>
-               <div className={style.adminBtn4}>
-                    <button>Manage Your Data </button>
-               </div>
-               <div className={style.adminBtn5}>
-                    <button>My Account</button>
-               </div>
-               <div className={style.logOutBtn}>
-                    <button>My Account</button>
-               </div>
-               </div>
-          </div>
           <div>
-              
+              <AdminLeftSide></AdminLeftSide>
+          </div>
+          <div className='col-span-9'>
+              <AdminRightSide></AdminRightSide>
           </div>
       </div>
     </section>

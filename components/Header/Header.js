@@ -1,3 +1,4 @@
+"use client"
 
 import style from './Header.module.css'
 import logo from '../../public/logo.png'
@@ -10,12 +11,12 @@ const Header = () => {
 
 
   const navRef = useRef();
-
   const showNavbar = () => {
     navRef.current.classList.toggle("active");
     const navItems = document.querySelector(".navItems");
-    navItems.classList.toggle("active");
+    navItems?.classList.toggle("active");
   };
+
 
     return (
         <div>
@@ -80,3 +81,4 @@ const Header = () => {
 };
 
 export default Header;
+

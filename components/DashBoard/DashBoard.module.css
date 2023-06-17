@@ -2,6 +2,7 @@
 width: 330px;
 height: 1100px;
 background: #092E3D;
+overflow: hidden;
 }
 .adminBtn, .adminBtn2, .adminBtn3, .adminBtn4, .adminBtn5{
 position: absolute;
@@ -45,4 +46,35 @@ font-size:23px;
      display: flex;
      justify-content: center;
      color:white;
+}
+.adminRightSide{
+     box-sizing: border-box;
+     position: absolute;
+     width: 399px;
+     height: 397px;
+     left: 356px;
+     top: 471px;
+     background: #E5F8FF;
+     border: 1px solid #E5F8FF;
+     box-shadow: 0px 2px 8px rgba(74, 180, 73, 0.5);
+     border-radius: 5px;
+     padding:15px;
+}
+.bookingBtn{
+     width: 150px;
+     height: 50px;
+     background: #19BA18;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     color:white;
+     margin-right:5px;
+}
+.bookingBtn2{
+     width: 150px;
+     height: 50px;
+     background: #19ABE3;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     color:white;
+     margin-left:5px;
 }
