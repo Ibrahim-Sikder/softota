@@ -1,17 +1,18 @@
-import React, { useRef } from 'react';
+
 import style from './Header.module.css'
 import logo from '../../public/logo.png'
 import { FaSistrix } from "react-icons/fa";
 import TopBar from '../TopBar/TopBar';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRef } from 'react';
 const Header = () => {
 
 
   const navRef = useRef();
 
   const showNavbar = () => {
-    navRef.current.classList?.toggle("active");
+    navRef.current.classList.toggle("active");
     const navItems = document.querySelector(".navItems");
     navItems.classList.toggle("active");
   };
@@ -23,14 +24,15 @@ const Header = () => {
             <div className={style.headerContent}>
               <div>
                 <div className={style.logo}>
+               <Link href='/'> 
                 <Image
                     src={logo}
                     alt="Picture of the author"
                     width={500}
                     height={500}
-               />
+               /></Link>
                 </div>
-                <h5>About Us</h5>
+               <Link href='/aboutUs'> <h5>About Us</h5></Link>
             <nav className={style.navItems} ref={navRef}>
             <ul>
               <li>
@@ -68,8 +70,8 @@ const Header = () => {
                 </div>
               </div>
              <div>
-             <button>Log in</button>
-              <button className={style.buttonTow}>Sign Up</button>
+             <Link href='/login'><button>Log in</button></Link>
+              <Link href='/signup'><button className={style.buttonTow}>Sign Up</button></Link>
              </div>
             </div>
           </div>  

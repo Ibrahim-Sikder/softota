@@ -4,6 +4,7 @@ import Image from 'next/image';
 import login from '../../public/login.png';
 import google from '../../public/google.png';
 import facebook from '../../public/facebook.png';
+import Link from 'next/link';
 
 const Login = () => {
   return (
@@ -36,10 +37,15 @@ const Login = () => {
                          <p className={style.devided}></p>
                     </div>
                     <div className='mb-5 ml-16 mt-5'>
+                         <Link href='/loginAgent'>
                          <button className={style.loginBtn2} type='submit'>Login as Agent</button>
+                         </Link>
                     </div>
                     <div className='mb-5 ml-16 mt-10'>
-                         <button className={style.loginBtn3} type='submit'>Create your account </button>
+                        
+                         <Link href='/signup'>
+                               <button className={style.loginBtn3} type='submit'>Create your account </button>
+                               </Link>
                     </div>
                     <div className='flex justify-between mt-32 w-32 mx-auto'>
                     <div className={style.circle}>
