@@ -4,8 +4,17 @@ import style from './Hotel.module.css';
 import hotel from '../../public/hotel4.png'
 import hotel2 from '../../public/hotel5.png'
 import hotel3 from '../../public/hotel6.png'
+import Link from 'next/link';
 
 const Hotel = () => {
+     async function getData() {
+          const res = await fetch('data.json')
+          if (!res.ok) {
+            throw new Error('Failed to fetch data')
+          }
+         
+          return res.json()
+        }
      return (
           <div className={style.destination}>
             <div className={style.trendingHead}>
@@ -38,7 +47,10 @@ const Hotel = () => {
                   <p>1 Night </p>
                   </div>
                 </div>
-                <button>View Details </button>
+                
+               {/* <Link href={`http://localhost:3000/hotel/${id}`}> */}
+               <button>View Details </button>
+               {/* </Link> */}
               </div>
               <div className={style.trending}>
               <Image

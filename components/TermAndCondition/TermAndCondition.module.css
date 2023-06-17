@@ -1,0 +1,32 @@
+.termCondition{
+width: 1440px;
+height: 1778px;
+background: rgba(230, 248, 255, 0.7);
+text-align:center;
+margin:0 auto;
+}
+.termCondition h2{
+     width: 529px;
+     font-family: 'Poppins';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 52px;
+     line-height: 78px;
+     margin:0 auto;
+     color: #000000;
+ 
+}
+.termCondition p, .termCondition li{
+width: 1108px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 23px;
+margin:10px auto;
+color: #092E3D;
+
+}
+.termCondition ul li{
+     list-style-type: circle;
+}

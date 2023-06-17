@@ -1,0 +1,48 @@
+.AdminleftSide{
+width: 330px;
+height: 1100px;
+background: #092E3D;
+}
+.adminBtn, .adminBtn2, .adminBtn3, .adminBtn4, .adminBtn5{
+position: absolute;
+width: 281px;
+height: 60px;
+left: 23px;
+top: 480px;
+background: #19ABE3;
+border: 1px solid #26ADE2;
+border-radius: 5px;
+display: flex;
+justify-content: center;
+color:white;
+font-size:23px;
+}
+.adminBtn2{
+ top: 576px;
+ background: rgba(25, 171, 227, 0.3);
+
+}
+.adminBtn3{
+     top:672px;
+     background: rgba(25, 171, 227, 0.8);
+}
+.adminBtn4{
+     top:768px;
+     background: rgba(25, 171, 227, 0.8);
+}
+.adminBtn5{
+     top:864px;
+     background: rgba(25, 171, 227, 0.8);
+}
+.logOutBtn{
+     position: absolute;
+     width: 219px;
+     height: 60px;
+     left: 54px;
+     top: 1130px;
+     background: #4AB449;
+     border-radius: 5px;
+     display: flex;
+     justify-content: center;
+     color:white;
+}

@@ -10,7 +10,7 @@ body{
 image{
 max-width:100% !important;
 }
-ol, ul, menu {
+/* ol, ul, menu {
      list-style: circle;
      margin: 0;
      padding: 0;
@@ -18,4 +18,4 @@ ol, ul, menu {
      color: #4AB449;
      margin-left: 20px;
      font-size:20px;
- }
+ } */
