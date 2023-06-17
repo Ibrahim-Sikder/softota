@@ -26,7 +26,7 @@ const AdminLeftSide = () => {
                     <Link href='/mybooking'><button>My Booking</button></Link>
                </div>
                <div className={style.adminBtn3}>
-                    <button>Saved cards</button>
+                    <Link href='/saveCard'><button>Saved cards</button></Link>
                </div>
                <div className={style.adminBtn4}>
                     <Link href='/deleteAccount'><button>Manage Your Data </button></Link>
