@@ -1,0 +1,83 @@
+.payment h2{
+     width: 357px;
+     height: 46px;
+     font-family: 'Poppins';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 32px;
+     color: #000000;
+     margin:30px auto;
+}
+.paymentBtn{
+     box-sizing: border-box;
+     width: 472px;
+     height: 66px;
+     background: #E6F8FF;
+     border: 1px solid rgba(25, 171, 227, 0.3);
+     border-radius: 5px;
+     padding-left:10px;
+}
+.payments{
+     background:#E4F4E4;
+     width:800px;
+     margin:0 auto;
+     text-align:center;
+     padding:50px 20px;
+     
+}
+.payments h3{
+     width: 490px;
+     height: 46px;
+     font-family: 'Poppins';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 32px;
+     line-height: 48px;
+     display: flex;
+     align-items: center;
+     text-align: center;
+     color: #092E3D;
+}
+.method{
+     box-sizing: border-box;
+     width: 66px;
+     height: 50px;
+     background: #FFFFFF;
+     border: 1px solid #4AB449;
+     border-radius: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-right:20px;
+}
+.bkash{
+     box-sizing: border-box;
+     width: 472px;
+     height: 50px;
+     background: #FFFFFF;
+     border: 1px solid rgba(25, 171, 227, 0.3);
+     border-radius: 5px;
+     padding-left:10px;
+
+}
+.bkashText{
+     width: 500px;
+     height: 30px;
+     font-family: 'Poppins';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 20px;
+     line-height: 30px;
+     color: #092E3D;
+     display: flex;
+     align-items: cente;
+     justify-content: center;
+     margin:0 auto;
+}
+.termBtn{
+     width: 472px;
+     height: 53px;
+     color:white;
+     background: #26ADE2;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
