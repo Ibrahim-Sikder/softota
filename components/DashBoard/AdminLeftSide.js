@@ -20,7 +20,7 @@ const AdminLeftSide = () => {
                     <h2 className='text-white '>Ibrahim Sikder</h2>
                </div>
                <div className={style.adminBtn}>
-                    <button>My Account</button>
+                    <Link href='/account'><button>My Account</button></Link>
                </div>
                <div className={style.adminBtn2}>
                     <Link href='/mybooking'><button>My Booking</button></Link>
@@ -32,10 +32,10 @@ const AdminLeftSide = () => {
                     <Link href='/deleteAccount'><button>Manage Your Data </button></Link>
                </div>
                <div className={style.adminBtn5}>
-                    <button>My Account</button>
+                    <Link href='/changePassword'><button>Change Password</button></Link>
                </div>
                <div className={style.logOutBtn}>
-                    <button>My Account</button>
+                    <button>Log Out</button>
                </div>
                </div>
     </div>

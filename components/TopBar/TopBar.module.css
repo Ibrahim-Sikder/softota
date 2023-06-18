@@ -6,22 +6,23 @@
      background: #E9F6E9; 
      margin:0 auto;
  }
+ .topBarWrap{
+    width:600px;
+    margin:0 auto;
+    text-align: center;
+ }
  .topBarIcon{ 
      position: absolute;
-     right: 5%;
-     top: 0.46%;
      bottom: 98.78%;
      width:25px;
      height:28.4px;
      top:17.4px;
-     left:660px;
+     left:510px;
  
  }
  .phone{
      position: absolute;
-     width: 178px;
-     height: 25px;
-     left: 670px;
+     left: 540px;
      top: 20px;
      font-family: 'Poppins';
      font-style: normal;
@@ -36,12 +37,12 @@
   position: absolute;
  width: 123px;
  height: 12px;
- left: 950px;
+ left: 800px;
  top: 27px;
  font-family: 'Poppins';
  font-style: normal;
  font-weight: 500;
- font-size: 20px;
+ font-size: 23px;
  line-height: 30px;
  display: flex;
  align-items: center;

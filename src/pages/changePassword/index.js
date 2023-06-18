@@ -17,8 +17,8 @@ const index = () => {
                     <Image
                     src={password}
                     alt="Picture of the author"
-                    width={400}
-                    height={400}
+                    width={300}
+                    height={300}
                     />
                     <div className={style.passwordWrapa}>
                          <form>
