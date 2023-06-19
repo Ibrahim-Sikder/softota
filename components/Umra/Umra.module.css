@@ -332,9 +332,7 @@ border-radius: 5px;
          width:100%;
          overflow: hidden;
        }
-       .bannerItem {
-         width: 100%;
-       }
+  
      .banner h2{
        width: 100%;
        font-size: 26px;
@@ -397,15 +395,20 @@ border-radius: 5px;
        width:100%;
        overflow: hidden;
      }
-     .banner h2{
-       width: 100%;
-       left:0px;
-       top:70px;
-     }
+
      .menu {
        width: 100%;
        height: 80px;
-       display: none;
+    
+   }
+   .singleHajj, .singleHajjmiddl{
+    width: 450px;
+    height: 626px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 25px;
    }
    
      .inputBox {
@@ -453,6 +456,12 @@ border-radius: 5px;
        object-fit: cover;
        background-repeat: no-repeat;
    }
+   .banner h2{
+    width: 100%;
+    left: 59%;
+    top: 19px;
+   }
+   
    }
    @media only screen and (max-width:500px){
      .inputBox {
