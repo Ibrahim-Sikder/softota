@@ -7,6 +7,7 @@ import TopBar from '../TopBar/TopBar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRef } from 'react';
+
 const Header = () => {
 
 
@@ -20,7 +21,9 @@ const Header = () => {
 
     return (
         <div>
+  
           <TopBar></TopBar>
+          
           <div className={style.header}>
             <div className={style.headerContent}>
               <div>

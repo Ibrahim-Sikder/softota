@@ -3,8 +3,8 @@
      height: 300px;
      border-radius: 5px;
      overflow: hidden;
-     margin-top:50px;
-     margin-bottom:30px;
+     margin-top:10px;
+     margin-bottom:10px;
      }
      .travel img{
          width:100%;
@@ -21,7 +21,7 @@
      }
      @media only screen and (max-width:768px){
          .travel img {
-             height: 268px;
+             height: 300px;
              object-fit: cover;
              background-repeat: no-repeat;
              background-size: cover;

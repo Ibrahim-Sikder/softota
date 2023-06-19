@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import style from './SignUp.module.css';
 import login from '../../public/login.png';
 import google from '../../public/google.png';
@@ -7,6 +7,38 @@ import facebook from '../../public/facebook.png';
 import Link from 'next/link';
 
 const SignUp = () => {
+const [name, setName] = useState('')
+const [email, setEmail] = useState('')
+const [password, setPassword] = useState('')
+const [loading, setLoading] = useState(false)
+
+  const handleSubmit = async (event)=>{
+    setLoading(true)
+    event.preventDefault();
+    const post = {name, email,password}
+
+    try{
+       fetch('/api/blog',{
+        method: 'POST',
+        headers:{
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(post)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+          setTitle(data)
+          alert('Data inserterd succssfully!!')
+     })
+    }
+    catch(err){
+      console.log(err)
+    }
+    finally{
+      setLoading(false)
+    }
+
+  }
      return (
           <div className='py-24'>
             <div className='flex items-center justify-center'>
@@ -19,18 +51,18 @@ const SignUp = () => {
               />
                 </div>
                 <div>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                     <div className='mb-5'>
                           <label>User Name</label> <br/>
-                          <input placeholder='User Name' className={style.loginInput}/>
+                          <input type='text' onChange={(event)=>setName(event.target.value)} placeholder='User Name' className={style.loginInput}/>
                           </div>     
                           <div className='mb-5'>
                           <label>Email Address</label> <br/>
-                          <input placeholder='Email' className={style.loginInput}/>
+                          <input type='email' name='email' onChange={(event)=>setEmail(event.target.value)} placeholder='Email' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
-                          <label>Email Address</label> <br/>
-                          <input placeholder='Email' className={style.loginInput}/>
+                          <label>Password</label> <br/>
+                          <input type='password' name='password' onChange={(event)=>setPassword(event.target.value)} placeholder='Password' className={style.loginInput}/>
                           </div>
                           <div className='mb-5 ml-16 mt-10'>
                                <button className={style.loginBtn} type='submit'>Sign Up</button>

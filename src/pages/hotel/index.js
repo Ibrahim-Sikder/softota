@@ -6,7 +6,7 @@ import Customer from '../../../components/Customer/Customer'
 
 const index = () => {
   return (
-    <div>
+    <div className='w-[1440px] mx-auto'>
       <Hotel></Hotel>
       <Travel></Travel>
       <Hotel></Hotel>

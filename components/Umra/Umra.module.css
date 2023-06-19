@@ -12,8 +12,7 @@
      background-position: center;
      object-fit: cover;
      height: 200px;
-     max-width: 100%;
-     position: relative;
+     max-width: 100% !important;
      background: linear-gradient(
        180deg,
        rgba(230, 248, 255, 0.3) 0%,

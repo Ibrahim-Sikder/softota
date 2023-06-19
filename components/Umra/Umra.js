@@ -12,18 +12,21 @@ import hajj from '../../public/hajj.png'
 import hajj2 from '../../public/hajj2.png'
 import hajj3 from '../../public/hajj3.png'
 import clock from '../../public/clock.png'
+import Link from 'next/link';
 const Umra = () => {
      return (
          <section className='pb-32'>
            <div className={style.banner}>
             <Image
                src={banner}
-               alt="Picture of the author"        
+               alt="Picture of the author" 
+               className={style.bannerImg}       
                />
             <h2>Welcome to Ghuronti! Find Hajj & Umrah Packages</h2>
             <div className={style.bannerItem}>
               <ul className={style.menu}>
-                <li className={style.items}>
+            
+               <li className={style.items}>
                   <span>
                   <Image
                           src={mokka}
@@ -35,8 +38,9 @@ const Umra = () => {
                      />
                    
                   </span>{" "}
-                  Hajj & Umrah{" "}
+                <Link href='/hajjUmra'>  Hajj & Umrah</Link>
                 </li>
+            
                 <li className={style.items}>
                   <span>
                   <Image
@@ -49,7 +53,7 @@ const Umra = () => {
                      />
                     
                   </span>{" "}
-                  Flight{" "}
+                  <Link href='/flight'>Flight</Link>
                 </li>
                 <li className={style.items}>
                   <span>
@@ -63,7 +67,7 @@ const Umra = () => {
                      />
                    
                   </span>{" "}
-                  Hotel{" "}
+                  <Link href='/hotel'>Hotel</Link>
                 </li>
                 <li className={style.items}>
                   <span>
@@ -76,7 +80,7 @@ const Umra = () => {
                          
                      />
                   </span>{" "}
-                  Visa{" "}
+                  <Link href='/vissa'>Vissa </Link>
                 </li>
                 <li className={style.items}>
                   <span>
@@ -89,7 +93,7 @@ const Umra = () => {
                          
                      />
                   </span>{" "}
-                  Tour{" "}
+                  <Link href='/hotel'>Tour</Link>
                 </li>
                 <li className={style.items}>
                   <span>
@@ -102,7 +106,7 @@ const Umra = () => {
                          
                      />
                   </span>
-                  Busses
+                  <Link href='/hotel'>Busses</Link>
                 </li>
               </ul>
             </div>

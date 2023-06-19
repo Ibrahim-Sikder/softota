@@ -19,15 +19,15 @@
      text-transform: capitalize;
    }
    .customerHead p {
-     font-family: "Poppins";
-     width:503px;
-     margin:0 auto;
-     font-style: normal;
-     font-weight: 500;
-     font-size: 16px;
-     line-height: 24px;
-     color: #738187;
-     padding-bottom:40px;
+    font-family: "Poppins";
+    width: 600px;
+    margin: 0 auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 25px;
+    color: #738187;
+    padding-bottom: 40px;
    }
    .customer {
      width: 1110px;
@@ -41,17 +41,18 @@
    }
    
    .customer p {
-     width: 576px;
+     width: 600px;
      height: 104px;
      font-family: "Poppins";
      font-style: normal;
      font-weight: 400;
-     font-size: 20px;
+     font-size: 25px;
      line-height: 30px;
      color: #092e3d;
      margin:0 auto;
      padding-top:60px;
      text-align:center;
+     
    }
    .quoteImg{
        margin-top:-170px;

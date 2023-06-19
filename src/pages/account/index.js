@@ -7,7 +7,7 @@ import start from '../../../public/start.png';
 import eye from '../../../public/eye.png';
 const index = () => {
      return (
-          <section>
+          <section className='w-[1440px] mx-auto'>
             <div className='grid grid-cols-12'>
                 <div>
                     <AdminLeftSide></AdminLeftSide>

@@ -2,19 +2,15 @@ import React from "react";
 import style from "./Banner.module.css";
 import Image from "next/image";
 import banner from '../../public/banner.png'
-import mokka from '../../public/mokka.png'
-import flight from '../../public/flight.png'
-import hotel from '../../public/hotel.png'
-import vissa from '../../public/vissa.png'
-import tours from '../../public/tours.png'
-import buss from '../../public/buss.png'
 import NavBar from "../NavBar/NavBar";
 
 const Banner = () => {
   return (
-    <div className={style.banner}>
-      {/* <img className="bannerImg" src={banner} alt="" /> */}
+    <div>
+      <div className={style.banner}>
+      {/* <img className="bannerIsrc={banner} alt="" /> */}
       <Image
+      className={style.bannerImg}
         src={banner}
         alt="Picture of the author"        
         />
@@ -52,6 +48,7 @@ Economy Class</span> <br />
         <span>1 Person </span>
       </div>
       <button className={style.flightBtn}>Search Flight</button>
+    </div>
     </div>
   );
 };

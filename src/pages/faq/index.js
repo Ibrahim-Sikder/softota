@@ -3,7 +3,7 @@ import Faq from '../../../components/Faq/Faq'
 
 const index = () => {
   return (
-    <div>
+    <div className='w-[1440px] mx-auto'>
       <Faq></Faq>
     </div>
   )

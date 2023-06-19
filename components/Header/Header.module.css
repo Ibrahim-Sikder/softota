@@ -89,16 +89,16 @@
      
      @media only screen and (max-width:1024px){
              .header{
-                 width: 100%;
+                
                  overflow: hidden;
                  }
          .logo{
              width: 150px;
-             left: 15px;
+             left: 142px;
              }
              .header h5{
                  width: 130px;
-                 left:180px;
+                 left:305px;
                 
              }
              .headerContent{
@@ -108,19 +108,19 @@
              }
              .header input{
                  width: 312px;
-                 left: 5px;
+                 left: 548px;
              }
              .searchIcon {
-                 right:370px;
+                 right:187px;
              }
              .header button{
                  width: 102px;
-                 left: 780px;
+                 left: 1200px;
                  }
                  .header .buttonTow{
                  width: 102px;
                  height: 46px;
-                 left: 891px;
+                 left: 1050px;
                  }
              
          
@@ -210,6 +210,7 @@
      
              .humberger{
                  display: block;
+                 
              }
              .humberger.active .bar:nth-child(2){
                  opacity:0;
@@ -231,12 +232,18 @@
          .humberger {
              display: block;
              position: absolute;
-             right: 33px;
+             right: -476px;
              top: 93px;
              font-size: 42px;
              color:black;
          }
      }
      
+     @media only screen and (max-width:500px){
+        .humberger {
+            right: -830px;
+        }
+
+     }
      
      

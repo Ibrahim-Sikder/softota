@@ -3,7 +3,7 @@ import LoginAgent from '../../../components/LoginAgent/LoginAgent'
 
 const index = () => {
   return (
-    <div>
+    <div className='w-[1440px] mx-auto'>
       <LoginAgent></LoginAgent>
     </div>
   )

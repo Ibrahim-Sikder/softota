@@ -3,7 +3,7 @@ import SignUp from '../../../components/SignUp/SignUp'
 
 const index = () => {
   return (
-    <div>
+    <div className='w-[1440px] mx-auto'>
       <SignUp></SignUp>
     </div>
   )

@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import NavBar from '../../../components/NavBar/NavBar'
+import NavBarr from '../../../components/NavBar2/NavBarr'
 
 const About = () => {
   const [title, setTitle] = useState('')
@@ -30,6 +32,7 @@ const About = () => {
   }
   return (
     <div>
+   
       <h2>THi is about page </h2>
       <form onSubmit={handleSubmit}>
 

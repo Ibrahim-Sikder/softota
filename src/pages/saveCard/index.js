@@ -5,7 +5,7 @@ import Image from 'next/image';
 import saveCard from '../../../public/saveCard.png'
 const index = () => {
      return (
-          <section>
+          <section className='w-[1440px] mx-auto'>
             <div className='grid grid-cols-12'>
                 <div>
                     <AdminLeftSide></AdminLeftSide>

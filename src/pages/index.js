@@ -7,13 +7,14 @@ import Travel from '../../components/Travel/Travel'
 import Trending from '../../components/Trending/Trending'
 import Mission from '../../components/Mission/Mission'
 import Customer from '../../components/Customer/Customer'
+import NavBar from '../../components/NavBar/NavBar'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div>
+    <section className='w-[1440px] mx-auto'>
       <Banner></Banner>
       <Places></Places>
       <Travel></Travel>
@@ -21,7 +22,7 @@ export default function Home() {
       <Mission></Mission>
       <Customer></Customer>
       
-    </div>
+    </section>
     
 
   )

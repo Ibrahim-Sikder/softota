@@ -53,48 +53,53 @@
  
  @media only screen and (max-width:1024px){
      .topBar{ 
-         width:100%;
+        width:100%;
          text-align: center !important;
      }
      .topBarIcon{ 
-         left:310px;
+         left:408px;
      
      }
      .contact{
-     left:610px;
+     left:850px;
         
         }
         .phone{
-         left:330px;
+            left: 442px;
         }
  }
- @media only screen and (max-width:992px){
+ @media only screen and (max-width:768px){
      .topBar{ 
          width:100%;
          text-align: center !important;
      }
      .topBarIcon{ 
-         left:200px;
+         left:500px;
      
      }
      .contact{
-     left:444px;
+        left: 900px;
         
         }
         .phone{
-         left:215px;
+         left:540px;
         }
  }
  @media only screen and (max-width:500px){
      .topBarIcon{ 
-         left:60px;
+         left:600px;
      
      }
-     .phone{
-         left:65px;
-        }
-     .contact {
-         left: 254px;
-     }
+     .topBarIcon{ 
+        left:470px;
+    
+    }
+    .contact{
+    left:950px;
+       
+       }
+       .phone{
+           left: 520px;
+       }
  }
  

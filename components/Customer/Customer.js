@@ -4,7 +4,9 @@ import quote2 from '../../public/quote2.png'
 import Image from "next/image";
 const Customer = () => {
   return (
-    <div className={style.Customers}>
+   <div>
+    
+       <div className={style.Customers}>
       <div className={style.customerHead}>
         <h2>Customer satisfaction is our top priority</h2>
         <p>
@@ -23,6 +25,7 @@ const Customer = () => {
       />
       </div>
     </div>
+   </div>
   );
 };
 

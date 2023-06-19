@@ -3,7 +3,7 @@ import TermAndCondition from '../../../components/TermAndCondition/TermAndCondit
 
 const index = () => {
   return (
-    <div>
+    <div className='w-[1440px] mx-auto'>
       <TermAndCondition></TermAndCondition>
     </div>
   )

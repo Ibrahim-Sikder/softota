@@ -2,7 +2,7 @@
      position: relative;
      width:1440px;
      margin: 0 auto;
-     overflow: hidden;
+
      box-sizing: border-box;
    }
    .bannerImg {
@@ -226,17 +226,13 @@
    
    
    @media only screen and (max-width:1024px){
-       .banner{
-         width:100%;
-         overflow: hidden;
-       }
-       .bannerItem {
-         width: 100%;
-       }
-     .banner h2{
-       width: 100%;
-       font-size: 26px;
-     }
+  
+    
+    .banner h2 {
+      top: 90px;
+      left: 357px;
+      font-size:25px;
+  }
      .menu {
        width: 100%;
        height: 80px;
@@ -249,44 +245,42 @@
      .inputBox {
        width: 400px;
        display: flex;
-      left:300px;
-      top:250px;
+       left: 458px;
+       top: 159px;
      }
      .airPort {
-       top:330px;
-       left:90px;
+       top:231px;
+       left:269px;
       }
       .airPort2 {
-       top: 330px;
-       right: 84px;
+       top: 231px;
+       right: 300px;
    }
       .depart{   
-       width: 209px;
-       left: 336px;
-       top:425px;
+        width: 209px;
+        left: 544px;
+        top: 315px;
    
        }
        .depart2{
        width: 209px;
        height: 74px;
-       left: 128px;
-       top: 425px;
+       left: 304px;
+       top: 315px;
        }
     .passenger{
      width: 313px;
-     left: 572px;
-     top: 425px;
+     left: 779px;
+     top: 315px;
      }
      .flightBtn{
-       width: 236px;
-       left: 385px;
-       top: 524px;
+      width: 251px;
+      z-index: 999;
+      position: absolute;
+      top: 382px;
        
        }
-       .banner h2 {
-         top: 122px;
-         left: 115px;
-     }
+      
      
    }
    
@@ -296,9 +290,7 @@
        overflow: hidden;
      }
      .banner h2{
-       width: 100%;
-       left:0px;
-       top:70px;
+       top:19px;
      }
      .menu {
        width: 100%;
@@ -307,41 +299,22 @@
    }
    
      .inputBox {
-       width: 400px;
-       left:184px;
-       top: 230px;
-       margin: auto;
+       top:85px;
        
      }
-   
-   
      .airPort {
-      width:400px;
-      top:285px;
-      left:189px;
+      top: 143px;
+      left: 453px;
      }
      .airPort2 {
-       width:400px;
-       top:363px;
-       left:184px;
+      width: 400px;
+      left: 467px;
+      height: 75px;
+      padding: 5px;
+      font-size: 20px;
        
      }
-     .depart2 {
-       width: 175px;
-       height: 74px;
-       left: 48px;
-       top: 435px;
-   }
-   .depart {
-     width: 175px;
-     left: 222px;
-     top: 435px;
-   }
-   .passenger {
-     width: 289px;
-     left: 443px;
-     top: 435px;
-   }
+     
      .inputBox2{
        display: block;
      }

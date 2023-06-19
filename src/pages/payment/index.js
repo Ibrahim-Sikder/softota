@@ -3,7 +3,7 @@ import Payment from '../../../components/Payment/Payment'
 
 const index = () => {
   return (
-    <div>
+    <div className='w-[1440px] mx-auto'>
       <Payment></Payment>
     </div>
   )

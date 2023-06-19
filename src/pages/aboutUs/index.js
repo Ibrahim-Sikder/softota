@@ -7,12 +7,12 @@ import Customer from '../../../components/Customer/Customer'
 
 const index = () => {
   return (
-    <>
+    <section className='w-[1440px] mx-auto'>
      <AboutHero></AboutHero>
      <Team></Team>
      <Mission></Mission>
      <Customer></Customer>
-    </>
+    </section>
   )
 }
 

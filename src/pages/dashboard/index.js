@@ -3,9 +3,9 @@ import DashBoard from '../../../components/DashBoard/DashBoard'
 
 const index = () => {
   return (
-    <div>
+    <section className='w-[1440px] mx-auto'>
       <DashBoard></DashBoard>
-    </div>
+    </section>
   )
 }
 
