@@ -11,13 +11,13 @@ import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
 import { useRouter } from 'next/router';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-
+import { signIn } from "next-auth/react"
 
 const SignUp = () => {
      const router = useRouter()
-const { createUser} = useContext(AuthContext);
+const { createUser, signInWithGoogle} = useContext(AuthContext);
   const handleSignUp = event => {
-     
+
     event.preventDefault();
     const fname = event.target.fname.value;
     const email = event.target.email.value;
@@ -38,6 +38,25 @@ const { createUser} = useContext(AuthContext);
     
  }
 
+ const handleGoogleSignIn = () => {
+     signInWithGoogle()
+         .then(result => {
+             console.log(result.user)
+             router('/')
+         })
+         .catch(err => {
+             console.log(err);
+         })
+ }
+
+// async function handleGoogleSignIn(){
+//      signIn('google',{callbackUrl:"http://localhost:3000"})
+// }
+async function handleGithubSignIn(){
+     signIn('github',{callbackUrl:"http://localhost:3000"})
+}
+
+
 
      return (
           <div className='py-24'>
@@ -55,7 +74,7 @@ const { createUser} = useContext(AuthContext);
                     <div className='mb-5'>
                           <label>User Name</label> <br/>
                           <input name='fname' type='text'  placeholder='User Name' className={style.loginInput}/>
-                          </div>     
+                          </div>
                           <div className='mb-5'>
                           <label>Email Address</label> <br/>
                           <input type='email' name='email' placeholder='Email' className={style.loginInput}/>
@@ -84,6 +103,8 @@ const { createUser} = useContext(AuthContext);
                           </div>
                           <div className='flex justify-between mt-32 w-32 mx-auto'>
                           <div className={style.circle}>
+                          
+                          <button type='button' onClick={handleGoogleSignIn}>
                           <Image
                                src={google}
                                alt="Picture of the author"
@@ -91,15 +112,18 @@ const { createUser} = useContext(AuthContext);
                                height={20}
                                
                           /> 
+                          </button>
                           </div>
                           <div className={style.circle}>
+                          <button type='button' onClick={handleGithubSignIn}>
                           <Image
                                src={facebook}
                                alt="Picture of the author"
                                width={40}
                                height={20}
            
-                          />    
+                          />  
+                          </button>  
                           </div>
                          
                           </div>

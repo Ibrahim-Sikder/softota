@@ -1,10 +1,56 @@
 import Image from 'next/image'
-import React from 'react'
+import React, { useContext } from 'react'
 import agent from '../../public/agent.png';
 import google from '../../public/google.png';
 import facebook from '../../public/facebook.png';
 import style from './LoginAgent.module.css'
+import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
+import { useRouter } from 'next/router';
+import { signIn } from 'next-auth/react';
+import { toast } from 'react-hot-toast';
 const LoginAgent = () => {
+     const router = useRouter()
+     const {signInWithGoogle, logIn} = useContext(AuthContext)
+     const handleLogin = event => {
+          event.preventDefault()
+          const email = event.target.email.value;
+          const password = event.target.password.value;
+          const number = event.target.number.value;
+          
+
+
+          logIn(email, password)
+          .then( result => {
+              const user = result.user;
+              console.log(user)
+              toast.success('User Login Successfully')
+               router.push('/')
+          })
+          .catch( err => {
+              console.error( err )
+          })
+      }
+   
+
+     const handleGoogleSignIn = () => {
+          signInWithGoogle()
+              .then(result => {
+                  console.log(result.user)
+              })
+              .catch(err => {
+                  console.log(err);
+              })
+      }
+
+     // async function handleGoogleSignIn(){
+     //      signIn('google',{callbackUrl:"http://localhost:3000"})
+     // }
+     async function handleGithubSignIn(){
+          signIn('github',{callbackUrl:"http://localhost:3000"})
+     }
+
+
+
      return (
           <div className='py-24'>
             <div className='flex justify-between w-[1300px] mx-auto'>
@@ -17,18 +63,18 @@ const LoginAgent = () => {
               />
                 </div>
                 <div>
-                    <form>     
+                    <form onSubmit={handleLogin}>     
                           <div className='mb-5'>
                           <label>Email Address</label> <br/>
-                          <input placeholder='Email' className={style.loginInput}/>
+                          <input name='email' type='email' placeholder='Email' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
                           <label>Password</label> <br/>
-                          <input placeholder='Password' className={style.loginInput}/>
+                          <input name='password' type='password' placeholder='Password' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
                           <label>Agent Number</label> <br/>
-                          <input placeholder='Agent Number' className={style.loginInput}/>
+                          <input name='number' type='number' placeholder='Agent Number' className={style.loginInput}/>
                           </div>
                           <div className='mb-5 ml-16 mt-10'>
                                <button className={style.loginBtn} type='submit'>Login</button>
@@ -46,22 +92,27 @@ const LoginAgent = () => {
                           </div>
                           <div className='flex justify-between mt-32 w-32 mx-auto'>
                           <div className={style.circle}>
-                          <Image
+                          
+                         <button type='submit' onClick={handleGoogleSignIn}>
+                         <Image
                                src={google}
                                alt="Picture of the author"
                                width={40}
                                height={20}
                                
                           /> 
+                         </button>
                           </div>
                           <div className={style.circle}>
-                          <Image
+                              <button onClick={handleGithubSignIn} type='submit'>
+                              <Image
                                src={facebook}
                                alt="Picture of the author"
                                width={40}
                                height={20}
            
-                          />    
+                          />  
+                              </button>  
                           </div> 
                           </div>
                      </form> 
