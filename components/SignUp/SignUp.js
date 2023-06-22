@@ -1,44 +1,44 @@
+'use client'
+
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import style from './SignUp.module.css';
 import login from '../../public/login.png';
 import google from '../../public/google.png';
 import facebook from '../../public/facebook.png';
 import Link from 'next/link';
+import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
+import { useRouter } from 'next/router';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+
 
 const SignUp = () => {
-const [name, setName] = useState('')
-const [email, setEmail] = useState('')
-const [password, setPassword] = useState('')
-const [loading, setLoading] = useState(false)
-
-  const handleSubmit = async (event)=>{
-    setLoading(true)
+     const router = useRouter()
+const { createUser} = useContext(AuthContext);
+  const handleSignUp = event => {
+     
     event.preventDefault();
-    const post = {name, email,password}
+    const fname = event.target.fname.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    console.log(fname,email,password)
 
-    try{
-       fetch('/api/blog',{
-        method: 'POST',
-        headers:{
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(post)
-      })
-      .then(res=>res.json())
-      .then(data=>{
-          setTitle(data)
-          alert('Data inserterd succssfully!!')
-     })
-    }
-    catch(err){
-      console.log(err)
-    }
-    finally{
-      setLoading(false)
-    }
+    createUser(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                toast.success('User Created Successfully')
+                router.push('/')
+                
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    
+ }
 
-  }
+
      return (
           <div className='py-24'>
             <div className='flex items-center justify-center'>
@@ -51,18 +51,18 @@ const [loading, setLoading] = useState(false)
               />
                 </div>
                 <div>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSignUp}>
                     <div className='mb-5'>
                           <label>User Name</label> <br/>
-                          <input type='text' onChange={(event)=>setName(event.target.value)} placeholder='User Name' className={style.loginInput}/>
+                          <input name='fname' type='text'  placeholder='User Name' className={style.loginInput}/>
                           </div>     
                           <div className='mb-5'>
                           <label>Email Address</label> <br/>
-                          <input type='email' name='email' onChange={(event)=>setEmail(event.target.value)} placeholder='Email' className={style.loginInput}/>
+                          <input type='email' name='email' placeholder='Email' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
                           <label>Password</label> <br/>
-                          <input type='password' name='password' onChange={(event)=>setPassword(event.target.value)} placeholder='Password' className={style.loginInput}/>
+                          <input type='password' name='password' placeholder='Password' className={style.loginInput}/>
                           </div>
                           <div className='mb-5 ml-16 mt-10'>
                                <button className={style.loginBtn} type='submit'>Sign Up</button>
@@ -100,7 +100,8 @@ const [loading, setLoading] = useState(false)
                                height={20}
            
                           />    
-                          </div> 
+                          </div>
+                         
                           </div>
                      </form> 
                 </div>

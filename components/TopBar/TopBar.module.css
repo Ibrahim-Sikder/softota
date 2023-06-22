@@ -52,10 +52,7 @@
  }
  
  @media only screen and (max-width:1024px){
-     .topBar{ 
-        width:100%;
-         text-align: center !important;
-     }
+  
      .topBarIcon{ 
          left:408px;
      
@@ -69,10 +66,7 @@
         }
  }
  @media only screen and (max-width:768px){
-     .topBar{ 
-         width:100%;
-         text-align: center !important;
-     }
+  
      .topBarIcon{ 
          left:500px;
      

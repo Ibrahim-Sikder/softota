@@ -1,12 +1,59 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import style from './Login.module.css'
 import Image from 'next/image';
 import login from '../../public/login.png';
 import google from '../../public/google.png';
 import facebook from '../../public/facebook.png';
 import Link from 'next/link';
+import { signIn } from "next-auth/react"
+
+import { useRouter } from 'next/router';
+import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
+import { toast } from 'react-hot-toast';
 
 const Login = () => {
+     const router = useRouter()
+     const {signInWithGoogle, logIn} = useContext(AuthContext)
+     const handleLogin = event => {
+          event.preventDefault()
+          const email = event.target.email.value;
+          const password = event.target.password.value;
+          console.log(email,password)
+
+
+          logIn(email, password)
+          .then( result => {
+              const user = result.user;
+              console.log(user)
+              toast.success('User Login Successfully')
+               router.push('/')
+          })
+          .catch( err => {
+              console.error( err )
+          })
+      }
+   
+
+     const handleGoogleSignIn = () => {
+          signInWithGoogle()
+              .then(result => {
+                  console.log(result.user)
+              })
+              .catch(err => {
+                  console.log(err);
+              })
+      }
+
+     // async function handleGoogleSignIn(){
+     //      signIn('google',{callbackUrl:"http://localhost:3000"})
+     // }
+     async function handleGithubSignIn(){
+          signIn('github',{callbackUrl:"http://localhost:3000"})
+     }
+
+   
+
+
   return (
     <div className='py-24'>
       <div className='flex items-center justify-center'>
@@ -19,14 +66,14 @@ const Login = () => {
         />
           </div>
           <div>
-              <form>     
+              <form onSubmit={handleLogin}>     
                     <div className='mb-5'>
                     <label>Email Address</label> <br/>
-                    <input placeholder='Email' className={style.loginInput}/>
+                    <input name='email' type='email' placeholder='Email' className={style.loginInput}/>
                     </div>
                     <div className='mb-5'>
-                    <label>Email Address</label> <br/>
-                    <input placeholder='Email' className={style.loginInput}/>
+                    <label>Password</label> <br/>
+                    <input name='password' type='password' placeholder='password' className={style.loginInput}/>
                     </div>
                     <div className='mb-5 ml-16 mt-10'>
                          <button className={style.loginBtn} type='submit'>Login</button>
@@ -49,6 +96,7 @@ const Login = () => {
                     </div>
                     <div className='flex justify-between mt-32 w-32 mx-auto'>
                     <div className={style.circle}>
+                    <button type='button' onClick={handleGoogleSignIn}>
                     <Image
                          src={google}
                          alt="Picture of the author"
@@ -56,15 +104,18 @@ const Login = () => {
                          height={20}
                          
                     /> 
+                    </button>
                     </div>
                     <div className={style.circle}>
+                    <button type='button' onClick={handleGithubSignIn}>
                     <Image
                          src={facebook}
                          alt="Picture of the author"
                          width={40}
                          height={20}
      
-                    />    
+                    />   
+                    </button> 
                     </div> 
                     </div>
                </form> 

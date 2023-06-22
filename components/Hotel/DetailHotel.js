@@ -19,25 +19,6 @@ import Trending from '../Trending/Trending';
 import location from '../../public/location.png'
 
 
-// export const getStaticProps = async ()=>{
-//   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-//   const data = await res.json()
-
-//   return {
-//     props: {hotels: data }
-//   }
-    
-// }
-
-async function getData() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
- 
-  return res.json()
-}
 
 const  DetailHotel = async () => {
   const datas = await getData()
@@ -45,9 +26,7 @@ const  DetailHotel = async () => {
   return (
   <>
           <h2>Hotels Details </h2>
-          {
-            datas.map(data=><div key={data.id}> Title: {data.title} </div>)
-          }
+         
   </>
   )
 }

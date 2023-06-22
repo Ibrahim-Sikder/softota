@@ -18,8 +18,8 @@ const Banner = () => {
       <NavBar></NavBar>
       <div className={style.inputBox}>
         <span>One way</span>
-        <span>One way</span>
-        <span>One way</span>
+        <span>Round Trip</span>
+        <span>Multi city </span>
       </div>
       <div className="grid style.inputBox2 grid-cols-1 md:grid-cols-2">
         <div className={style.airPort}>

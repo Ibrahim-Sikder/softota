@@ -8,22 +8,26 @@ import Trending from '../../components/Trending/Trending'
 import Mission from '../../components/Mission/Mission'
 import Customer from '../../components/Customer/Customer'
 import NavBar from '../../components/NavBar/NavBar'
-
+import { signIn, signOut, useSession } from "next-auth/react"
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return (
-    <section className='w-[1440px] mx-auto'>
-      <Banner></Banner>
-      <Places></Places>
-      <Travel></Travel>
-      <Trending></Trending>
-      <Mission></Mission>
-      <Customer></Customer>
-      
-    </section>
-    
+ return(
+  <section>
+  <Banner></Banner>
+  <Places></Places>
+  <Travel></Travel>
+  <Trending></Trending>
+  <Mission></Mission>
+  <Customer></Customer>
+  
+</section>
+ )
 
-  )
+  
 }
+
+
+
+

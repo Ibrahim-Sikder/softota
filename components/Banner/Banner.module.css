@@ -2,8 +2,10 @@
      position: relative;
      width:1440px;
      margin: 0 auto;
-
      box-sizing: border-box;
+   }
+   .banner Image{
+    max-width:100%;
    }
    .bannerImg {
      background-size: cover;
@@ -12,7 +14,6 @@
      object-fit: cover;
      height: 507px;
      max-width: 100%;
-     position: relative;
      background: linear-gradient(
        180deg,
        rgba(230, 248, 255, 0.3) 0%,

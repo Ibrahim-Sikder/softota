@@ -46,7 +46,7 @@ const Hotel = () => {
         centeredSlides={true}
         breakpoints={{
           400: {
-            slidesPerView: 1,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
           640: {

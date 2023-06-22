@@ -3,7 +3,7 @@ import DetailHotel from '../../../components/Hotel/DetailHotel'
 
 const index = () => {
   return (
-    <section className='w-[1440px] mx-auto'>
+    <section>
       <DetailHotel></DetailHotel>
     </section>
   )

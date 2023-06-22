@@ -9,8 +9,8 @@
      font-family: "Poppins";
      font-style: normal;
      font-weight: 500;
-     font-size: 30px;
-     line-height: 33px;
+     font-size: 20px;
+     line-height: 25px;
      display: flex;
      align-items: center;
    
@@ -20,8 +20,8 @@
      font-family: "Poppins";
      font-style: normal;
      font-weight: 500;
-     font-size: 25px;
-     line-height: 32px;
+     font-size: 18px;
+     line-height: 25px;
      display: flex;
      align-items: center;
    
@@ -31,12 +31,10 @@
        padding-bottom:7px;
    }
    .socialIcon{
-   font-size:30px;
+   font-size:25px;
    margin-right:5px;
    }
    
    @media only screen and (max-width:1024px){
-     .footer {
-       width:100%;
-     }
+    
    }
