@@ -71,8 +71,7 @@ const Hotel = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className={style.mySwiper}
       >
-        <SwiperSlide>
-          
+        <SwiperSlide> 
         <div className={style.trending}>
               <Image
                   src={hotel}
@@ -93,202 +92,165 @@ const Hotel = () => {
                   <p>1 Night </p>
                   </div>
                 </div>
-                
-               {/* <Link href={`http://localhost:3000/hotel/${id}`}> */}
-               <button>View Details </button>
-               {/* </Link> */}
+                <Link href='/detailHotel'>
+                <button>View Details </button>
+                </Link>
               </div>
         </SwiperSlide>
-        <SwiperSlide>
-          
+        <SwiperSlide> 
         <div className={style.trending}>
               <Image
-              className={style.swiperImg}
-                  src={hotel2}
+                  src={hotel}
                   alt="Picture of the author"
                   width={500}
                   height={500}
-            
+                 className={style.swiperImg}
                   />
+                {/* <img src={trending} className="w-full" alt="" /> */}
                 <div className="w-full flex justify-between px-5">
                   <div>
-                    <h6>Dubai: The city of life </h6>
+                    <h6>New York City Hotels </h6>
                     <span>
-                      Starts From <span className="text-black">155$</span>
+                      Starts From <span className="text-black">184$</span>
                     </span>
                   </div>
                   <div className={style.night}>
                   <p>1 Night </p>
                   </div>
                 </div>
+                <Link href='/detailHotel'>
                 <button>View Details </button>
+                </Link>
               </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel3}
-                  className={style.swiperImg}
+                  src={hotel}
                   alt="Picture of the author"
                   width={500}
                   height={500}
-              
+                 className={style.swiperImg}
                   />
+                {/* <img src={trending} className="w-full" alt="" /> */}
                 <div className="w-full flex justify-between px-5">
                   <div>
-                    <h6>New Orleans Hotels </h6>
+                    <h6>New York City Hotels </h6>
                     <span>
-                      Starts From <span className="text-black">199$</span>
+                      Starts From <span className="text-black">184$</span>
                     </span>
                   </div>
                   <div className={style.night}>
                   <p>1 Night </p>
                   </div>
                 </div>
+                <Link href='/detailHotel'>
                 <button>View Details </button>
+                </Link>
               </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide> 
         <div className={style.trending}>
               <Image
-              className={style.swiperImg}
-                  src={hotel8}
+                  src={hotel}
                   alt="Picture of the author"
                   width={500}
                   height={500}
-           
+                 className={style.swiperImg}
                   />
+                {/* <img src={trending} className="w-full" alt="" /> */}
                 <div className="w-full flex justify-between px-5">
                   <div>
-                    <h6>New Orleans Hotels </h6>
+                    <h6>New York City Hotels </h6>
                     <span>
-                      Starts From <span className="text-black">199$</span>
+                      Starts From <span className="text-black">184$</span>
                     </span>
                   </div>
                   <div className={style.night}>
                   <p>1 Night </p>
                   </div>
                 </div>
+                <Link href='/detailHotel'>
                 <button>View Details </button>
+                </Link>
               </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide> 
         <div className={style.trending}>
               <Image
-              className={style.swiperImg}
-                  src={hotel7}
+                  src={hotel}
                   alt="Picture of the author"
                   width={500}
                   height={500}
-       
+                 className={style.swiperImg}
                   />
+                {/* <img src={trending} className="w-full" alt="" /> */}
                 <div className="w-full flex justify-between px-5">
                   <div>
-                    <h6>New Orleans Hotels </h6>
+                    <h6>New York City Hotels </h6>
                     <span>
-                      Starts From <span className="text-black">199$</span>
+                      Starts From <span className="text-black">184$</span>
                     </span>
                   </div>
                   <div className={style.night}>
                   <p>1 Night </p>
                   </div>
                 </div>
+                <Link href='/detailHotel'>
                 <button>View Details </button>
+                </Link>
               </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel3}
-                  className={style.swiperImg}
+                  src={hotel}
                   alt="Picture of the author"
                   width={500}
                   height={500}
+                 className={style.swiperImg}
                   />
+                {/* <img src={trending} className="w-full" alt="" /> */}
                 <div className="w-full flex justify-between px-5">
                   <div>
-                    <h6>New Orleans Hotels </h6>
+                    <h6>New York City Hotels </h6>
                     <span>
-                      Starts From <span className="text-black">199$</span>
+                      Starts From <span className="text-black">184$</span>
                     </span>
                   </div>
                   <div className={style.night}>
                   <p>1 Night </p>
                   </div>
                 </div>
+                <Link href='/detailHotel'>
                 <button>View Details </button>
+                </Link>
               </div>
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide> 
         <div className={style.trending}>
               <Image
-              className={style.swiperImg}
-                  src={hotel6}
+                  src={hotel}
                   alt="Picture of the author"
                   width={500}
                   height={500}
-  
+                 className={style.swiperImg}
                   />
+                {/* <img src={trending} className="w-full" alt="" /> */}
                 <div className="w-full flex justify-between px-5">
                   <div>
-                    <h6>New Orleans Hotels </h6>
+                    <h6>New York City Hotels </h6>
                     <span>
-                      Starts From <span className="text-black">199$</span>
+                      Starts From <span className="text-black">184$</span>
                     </span>
                   </div>
                   <div className={style.night}>
                   <p>1 Night </p>
                   </div>
                 </div>
+                <Link href='/detailHotel'>
                 <button>View Details </button>
-              </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className={style.trending}>
-              <Image
-              className={style.swiperImg}
-                  src={hotel5}
-                  alt="Picture of the author"
-                  width={500}
-                  height={500}
-            
-                  />
-                <div className="w-full flex justify-between px-5">
-                  <div>
-                    <h6>New Orleans Hotels </h6>
-                    <span>
-                      Starts From <span className="text-black">199$</span>
-                    </span>
-                  </div>
-                  <div className={style.night}>
-                  <p>1 Night </p>
-                  </div>
-                </div>
-                <button>View Details </button>
-              </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className={style.trending}>
-              <Image
-              className={style.swiperImg}
-                  src={hotel4}
-                  alt="Picture of the author"
-                  width={500}
-                  height={500}
-                 
-                  />
-                <div className="w-full flex justify-between px-5">
-                  <div>
-                    <h6>New Orleans Hotels </h6>
-                    <span>
-                      Starts From <span className="text-black">199$</span>
-                    </span>
-                  </div>
-                  <div className={style.night}>
-                  <p>1 Night </p>
-                  </div>
-                </div>
-                <button>View Details </button>
+                </Link>
               </div>
         </SwiperSlide>
       </Swiper>

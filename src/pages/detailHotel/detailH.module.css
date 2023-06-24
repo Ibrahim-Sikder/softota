@@ -1,0 +1,35 @@
+.leftSideImg{
+     width:400px !important;
+     margin-right:20px;
+}
+.leftSideSimg{
+     width:200px !important;
+     margin-right:10px;
+     height:200px;
+     margin-bottom:10px;
+
+}
+.leftSideText{
+     background:#E9F6E9;
+     padding:30px;
+}
+.rightSide{
+     background:white;
+     padding:20px;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     width:300px;
+     padding:30px 20px;
+     
+}
+.rightSideIcon{
+     width:15px !important;
+     margin-right:5px;
+}
+.rightSideBtn{
+     background:#19ABE3;
+     color:white;
+     padding:7px 30px;
+     text-align:center;
+     margin:15px auto;
+    display:flex;
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import style from './Countries.module.css'
 import Image from 'next/image';
-import malasiya from '../../public/malasiya.png'
+import malasiya from '../../public/malasiya.png';
 import usa from '../../public/usa.png';
 import england from '../../public/england.png';
 import china from '../../public/china.png';
@@ -18,7 +18,7 @@ import hotel from '../../public/hIcon.png'
 import vissa from '../../public/vissa.png'
 import tours from '../../public/tours.png'
 import buss from '../../public/buss.png';
-
+import { FaSistrix } from "react-icons/fa";
 
 const Countries = () => {
   return (
@@ -116,6 +116,15 @@ const Countries = () => {
             <Link href='/hotel'> Busses</Link>
           </li>
         </ul>
+        <div className={style.vissaInputBox}>
+          <p className={style.hajjPackage}>Visa Processing</p>
+          <p>Vissa Guideline</p>
+        </div>
+        <div className={style.searchingVissa}>
+          <FaSistrix className={style.vissaIcon}/>
+          <input  placeholder='Enter your country' />
+          <button >Search Vissa </button>
+        </div>
       </div>
 
     </div>
