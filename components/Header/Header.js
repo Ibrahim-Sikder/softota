@@ -15,7 +15,7 @@ const Header = () => {
                height={100}
                alt='logo'
                />
-               <Link href='/about'><h4>About</h4></Link>
+               <Link href='/aboutUs'><h4>About</h4></Link>
           </div>
          
           <div className={style.searchBox}>

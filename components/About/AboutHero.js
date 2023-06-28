@@ -17,7 +17,7 @@ const AboutHero = () => {
       <h2 className={style.aboutHead}>The goal as a company is to have customer service that is not just the best but legendary.</h2>
      </section>
      <section className='py-28'>
-      <div className='flex justify-center items-center'>
+      <div className='flex justify-center flex-wrap-reverse items-center'>
         <div className={style.leftBox}>
         <Image
           src={VectorMan}

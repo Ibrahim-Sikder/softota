@@ -1,5 +1,5 @@
 .aboutWrap{
-     width:1440px;
+     width:100vw;
      overflow: hidden;
 }
 .aboutHero{
@@ -31,7 +31,7 @@
      transform:translate(-50%, -50%);
      z-index: 999;
      color:white;
-     font-size:60px;
+     font-size:50px;
      font-weight:600;
      width:80%;
      text-align:center;
@@ -49,6 +49,7 @@ margin-right:45px;
 align-items:center;
 justify-content:center;
 display:flex;
+margin-bottom:30px;
 }
 .aboutMan{
 width: 250px;
@@ -64,6 +65,7 @@ justify-content: center;
 align-items:center;
 padding:0px 30px;
 margin-left:45px;
+
 }
 
 
@@ -77,10 +79,33 @@ margin-left:45px;
      .aboutWrap{
           width:100%;
      }
+     .rightBox{
+          margin-left:-35px;
+          
+     }
+     .leftBox{
+      margin-top:10px;
+    }
 }
 
 @media only screen and (max-width:500px){
      .aboutWrap{
           width:100%;
+          text-align: center;
      }
+     .leftBox{
+          width: 380px;
+          height: 400px;
+          margin:0 auto;
+          }
+          .aboutMan{
+          width: 250px;
+          height: 300px;
+          }
+          .rightBox{
+          height: 400px;
+          width: 380px;
+          margin: 27px auto;
+          }
+          
 }
