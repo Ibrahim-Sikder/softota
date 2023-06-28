@@ -53,7 +53,7 @@ const Login = () => {
 
   return (
     <div className={style.loginWrap}>
-      <div className='grid grid-cols-1 lg:grid-cols-2 '>
+      <div className='grid grid-cols-1 lg:grid-cols-2 place-items-center'>
           <div>
           <Image
           src={login}
@@ -65,11 +65,11 @@ const Login = () => {
           <div>
               <form onSubmit={handleLogin}>     
                     <div className='mb-5'>
-                    <label>Email Address</label> <br/>
+                    <label className={style.inputLabel}>Email Address</label> <br/>
                     <input name='email' type='email' placeholder='Email' className={style.loginInput}/>
                     </div>
                     <div className='mb-5'>
-                    <label>Password</label> <br/>
+                    <label className={style.inputLabel}>Password</label> <br/>
                     <input name='password' type='password' placeholder='password' className={style.loginInput}/>
                     </div>
                     <div className='mb-5 ml-16 mt-10'>

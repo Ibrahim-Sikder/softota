@@ -1,5 +1,5 @@
 .loginWrapa{
-     width:1440px;
+     width:100vw;
 }
 .loginInput{
 box-sizing: border-box;
@@ -58,13 +58,39 @@ color:#4AB449;
      .loginWrapa{
           width:100%;
      }
-     .circle{
-          position: absolute;
-          left:0 !important;
-     }
+     
+     .loginWrap{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      .loginWithProvider {
+          text-align: left;
+           margin-left: 0px;
+          margin-bottom: 20px;
+          margin-top: 30px;
+      }
+      .circle{
+          /* position: absolute; */
+          left: 0 !important;
+      }
 }
 @media only screen and (max-width:500px){
      .loginWrap{
           width:100%;
      }
+     .loginInput{
+          width: 400px;
+          height: 59px;
+          margin-left: 43px;
+      }
+      .inputLabel{
+          margin-left:43px;
+      }
+      .loginBtn{
+          margin-left: 19px;
+      }
+      .loginBtn2{
+          margin-left: 19px;
+      }
 }

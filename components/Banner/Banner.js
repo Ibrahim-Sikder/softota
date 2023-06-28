@@ -62,7 +62,7 @@ const Banner = () => {
               width={30}
               height={30}
               />
-             <p className='ml-3'>Vissa </p>
+             <Link href='/vissa'><p className='ml-3'>Vissa</p></Link>
              </li>
              <li>
              <Image
@@ -71,7 +71,7 @@ const Banner = () => {
               width={30}
               height={30}
               />
-             <p className='ml-3'>Tours</p>
+             <Link href='/tours'><p className='ml-3'>Tours</p></Link>
              </li>
              <li>
              <Image
@@ -80,7 +80,7 @@ const Banner = () => {
               width={30}
               height={30}
               />
-             <p className='ml-3'>Busses</p>
+              <Link href='/busses'><p className='ml-3'>Busses</p></Link>
              </li>
              <li className={style.trainLi}>
              <Image
@@ -89,7 +89,7 @@ const Banner = () => {
               width={30}
               height={30}
               />
-             <p className='ml-3'>Trains</p>
+              <Link href='/train'><p className='ml-3'>Trains</p></Link>
              </li>
             </ul>
           </div>

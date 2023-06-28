@@ -1,5 +1,5 @@
 .SignupWrap{
-     width:1440px;
+     width:100vw;
 }
 .loginInput{
      box-sizing: border-box;
@@ -41,7 +41,26 @@
      border-radius: 5px;
      color:#4AB449;
      }
-     
+     .loginWithProvider{
+          width:100%;
+          margin:0 auto;
+     }
+     .circle{
+          width: 220px;
+          margin-bottom: 17px;
+          margin-right: 26px;
+     }
+     .providerLoginWrap{
+          display: flex;
+     }
+     .providerLoginWrap{
+          display: flex;
+          margin-top: 126px;
+          justify-content: center;
+          width: 136px;
+          align-items: center;
+          margin-left: 174px;
+      }
 @media only screen and (max-width:1024px){
      .SignupWrap{
           width:100%;
@@ -51,15 +70,28 @@
      .SignupWrap{
           width:100%;
      }
-     .loginWithProvider{
-          text-align: left;
-          margin-left: -1036px;
-          margin-bottom: 20px;
-          margin-top: 30px;
-      }
+    
 }
 @media only screen and (max-width:500px){
      .SignupWrap{
           width:100%;
      }
+     .loginInput{
+          width: 90%;
+          height: 60px; 
+          margin-left: 25px;
+      }
+      .inputLabel{
+          margin-left: 25px;
+      }
+      .devided{
+          width: 154px;
+          margin-left: 8px;
+      }
+      .loginBtn, .loginBtn2, .loginBtn3 {
+          width: 317px;
+          margin-left: -27px;
+      }
+
+
 }

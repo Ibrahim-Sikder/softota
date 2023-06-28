@@ -60,7 +60,7 @@ async function handleGithubSignIn(){
 
      return (
           <div className={style.SignupWrap}>
-            <div className='grid grid-cols-1 lg:grid-cols-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center'>
                 <div>
                 <Image
                 src={login}
@@ -72,15 +72,15 @@ async function handleGithubSignIn(){
                 <div>
                     <form onSubmit={handleSignUp}>
                     <div className='mb-5'>
-                          <label>User Name</label> <br/>
+                          <label className={style.inputLabel}>User Name</label> <br/>
                           <input name='fname' type='text'  placeholder='User Name' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
-                          <label>Email Address</label> <br/>
+                          <label className={style.inputLabel}>Email Address</label> <br/>
                           <input type='email' name='email' placeholder='Email' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
-                          <label>Password</label> <br/>
+                          <label className={style.inputLabel}>Password</label> <br/>
                           <input type='password' name='password' placeholder='Password' className={style.loginInput}/>
                           </div>
                           <div className='mb-5 ml-16 mt-10'>
@@ -91,18 +91,18 @@ async function handleGithubSignIn(){
                                <span className='mx-5'>or</span>
                                <p className={style.devided}></p>
                           </div>
-                          <div className='mb-5 ml-16 mt-5'>
+                          <div className='mb-5 ml-16 sm:ml-8 mt-5'>
                                <Link href='/signupAgent'>
                                <button className={style.loginBtn2} type='submit'>Sign Up as Agent</button>
                                </Link>
                           </div>
-                          <div className='mb-5 ml-16 mt-10'>
+                          <div className='mb-5 ml-16 sm:ml-8 mt-10'>
                                <Link href='/signup'>
                                <button className={style.loginBtn3} type='submit'>Create your account </button>
                                </Link>
                           </div>
                           <div className={style.loginWithProvider}>
-                          <div className='flex justify-between mt-32 w-32 mx-auto'>
+                          <div className={style.providerLoginWrap}>
                           <div className={style.circle}>
                           
                           <button type='button' onClick={handleGoogleSignIn}>
