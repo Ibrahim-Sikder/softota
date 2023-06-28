@@ -1,5 +1,5 @@
 .signUpAgentWrap{
-     width:1440px;
+     width:100vw;
 }
 .loginInput{
      box-sizing: border-box;
@@ -56,4 +56,7 @@
           .signUpAgentWrap{
                width:100%;
           }
+          .loginInput {
+               width: 400px;
+           }
      }
