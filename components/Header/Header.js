@@ -22,8 +22,8 @@ const Header = () => {
                <input placeholder='Search Flight, Hotel, Visa'/>
           </div>
           <div className={style.inputBox}>
-               <button className='mr-3'>Login</button>
-               <button className='ml-3'>Sign Up</button>
+              <Link href='/login'> <button className='mr-3'>Login</button></Link>
+              <Link href='/signup'> <button className='mr-3'>Sign Up</button></Link>
           </div>
      </div>
     </div>

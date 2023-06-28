@@ -53,30 +53,30 @@ const LoginAgent = () => {
 
      return (
           <div className={style.loginAgentWrap}>
-            <div className='grid grid-cols-1 lg:grid-cols-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center'>
                 <div>
                 <Image
                 src={agent}
                 alt="Picture of the author"
-                width={600}
-                height={700}
+                width={500}
+                height={500}
               />
                 </div>
                 <div>
                     <form onSubmit={handleLogin}>     
                           <div className='mb-5'>
-                          <label>Email Address</label> <br/>
+                          <label className={style.loginLabel}>Email Address</label> <br/>
                           <input name='email' type='email' placeholder='Email' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
-                          <label>Password</label> <br/>
+                          <label className={style.loginLabel}>Password</label> <br/>
                           <input name='password' type='password' placeholder='Password' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
-                          <label>Agent Number</label> <br/>
+                          <label className={style.loginLabel}>Agent Number</label> <br/>
                           <input name='number' type='number' placeholder='Agent Number' className={style.loginInput}/>
                           </div>
-                          <div className='mb-5 ml-16 mt-10'>
+                          <div className='mb-5 ml-16 sm:ml-0 mt-10'>
                                <button className={style.loginBtn} type='submit'>Login</button>
                           </div>
                           <div className='flex items-center'>

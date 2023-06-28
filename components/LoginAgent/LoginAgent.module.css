@@ -1,5 +1,5 @@
 .loginAgentWrap{
-     width:1440px;
+     width:100vw;
 }
 .loginInput{
      box-sizing: border-box;
@@ -47,13 +47,30 @@
                width:100%;
           }
      }
-     @media only screen and (max-width:768){
+     @media only screen and (max-width:768px){
           .loginAgentWrap{
                width:100%;
           }
      }
-     @media only screen and (max-width:500){
+     @media only screen and (max-width:500px){
           .loginAgentWrap{
                width:100%;
           }
-     }
+          .loginInput{
+               width: 350px;
+               margin-left: 23px;
+               height: 60px;
+           }
+           .loginLabel{
+               margin-left:23px;
+           }
+           .devided {
+               width: 150px;
+               margin: 0 auto;;
+           }
+           .loginBtn {
+               width: 300px;
+           }
+
+
+          }
