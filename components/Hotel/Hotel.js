@@ -9,6 +9,15 @@ import hotel4 from '../../public/hotel8.png'
 import hotel5 from '../../public/hotel8.png'
 import hotel7 from '../../public/hotel9.png'
 import hotel8 from '../../public/hotel10.png'
+import banner from '../../public/banner.png'
+import NavBar from "../NavBar/NavBar";
+import hajj from '../../public/hajj.png'
+import tour from '../../public/tour.png'
+import train from '../../public/train.png'
+import buss from '../../public/Bus.png'
+import flight from '../../public/flight.png'
+import hotelIcon from '../../public/hotel.png'
+import vissa from '../../public/vissa.png'
 import Link from 'next/link';
 import { useRef, useState } from "react";
 // Import Swiper React components
@@ -24,7 +33,122 @@ import {autoplay, FreeMode, Pagination,Autoplay,Navigation } from "swiper";
 const Hotel = () => {
    
      return (
-         <div>
+        <div>
+          {/* banner */}
+          <div className={style.bannerWrap}>
+        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
+        <div className={style.heroBoxMain}>
+         <div className={style.packageWrap}>
+         <div className={style.package}>
+            <div >
+            <h4>City/Hotel/Street Name</h4>
+            <input type="text " placeholder='Enter your city' />
+            </div>
+          </div>
+          <div className={style.package2}>
+            <div>
+            <h4>Nationality</h4>
+            <input type="text " placeholder='Bangladesh' />
+            </div>
+          </div>
+         </div>
+         <div className={style.packageWrap}>
+         <div className={style.packageDate}>
+            <div className={style.date}>
+            <h4>Check In</h4>
+            <input type="text" placeholder='dd----yyyy' />
+            </div>
+            <div className={style.date2}>
+            <h4>Check In</h4>
+            <input type="text" placeholder='dd----yyyy' />
+            </div>
+          </div>
+          <div className={style.package4}>
+            <div>
+            <h4>Room & Guests</h4>
+            <input type="text " placeholder='1 person'/>
+            </div>
+          </div>
+         </div>
+          <button className={style.heroBoxBtn}>Get Your Offers</button>
+
+          {/* menubar */}
+          <div>
+            <ul className={style.menu}>
+             <li>
+             <Image
+              src={hajj}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/hajjUmra'><p className='ml-3'>Hajj & Umrah</p></Link>
+             </li>
+             <li>
+             <Image
+              src={flight}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+                <Link href='/flight'><p className='ml-3'>Flight</p></Link>
+             </li>
+             <li>
+             <Image
+              src={hotelIcon}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/hotel'><p className='ml-3'>Hotel</p></Link>
+             </li>
+             <li>
+             <Image
+              src={vissa}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/vissa'><p className='ml-3'>Vissa</p></Link>
+             </li>
+             <li>
+             <Image
+              src={tour}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <p className='ml-3'>Tours</p>
+             </li>
+             <li>
+             <Image
+              src={buss}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <p className='ml-3'>Busses</p>
+             </li>
+             <li className={style.trainLi}>
+             <Image
+              src={train}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <p className='ml-3'>Trains</p>
+             </li>
+            </ul>
+          </div>
+
+
+        </div>
+    </div>
+
+
+
+          {/* hotel structure */}
+          <div>
            <div className={style.trendingHead}>
               <h2>Trending International Destinations</h2>
               <p>
@@ -40,13 +164,13 @@ const Hotel = () => {
 
          
       <Swiper
-        slidesPerView={4}
+        slidesPerView={1}
         spaceBetween={100}
         freeMode={true}
         centeredSlides={true}
         breakpoints={{
-          400: {
-            slidesPerView: 4,
+          430: {
+            slidesPerView: 1,
             spaceBetween: 20,
           },
           640: {
@@ -259,6 +383,8 @@ const Hotel = () => {
             </div>
           </div>
          </div>
+          {/* hotel */}
+        </div>
         );
 }
 

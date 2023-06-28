@@ -1,5 +1,5 @@
 .Customers{
-     width:1440px;
+     width:100vw;
      margin:0 auto;
      padding:30px;
    }
@@ -75,8 +75,15 @@
    
     
    }
-   
+   @media only screen and (max-width:768px){
+    .Customers{
+      width:100%;
+    }
+  }
    @media only screen and (max-width:500px){
+    .Customers{
+      width:100%;
+    }
      .customerHead p {
        width: 350px;
        margin-bottom:32px;

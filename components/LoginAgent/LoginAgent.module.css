@@ -1,3 +1,6 @@
+.loginAgentWrap{
+     width:1440px;
+}
 .loginInput{
      box-sizing: border-box;
      width: 472px;
@@ -38,4 +41,19 @@
      border-radius: 5px;
      color:#4AB449;
      }
-     
+
+     @media only screen and (max-width:1024px){
+          .loginAgentWrap{
+               width:100%;
+          }
+     }
+     @media only screen and (max-width:768){
+          .loginAgentWrap{
+               width:100%;
+          }
+     }
+     @media only screen and (max-width:500){
+          .loginAgentWrap{
+               width:100%;
+          }
+     }

@@ -52,8 +52,8 @@ const LoginAgent = () => {
 
 
      return (
-          <div className='py-24'>
-            <div className='flex justify-between w-[1300px] mx-auto'>
+          <div className={style.loginAgentWrap}>
+            <div className='grid grid-cols-1 lg:grid-cols-2'>
                 <div>
                 <Image
                 src={agent}
@@ -79,7 +79,7 @@ const LoginAgent = () => {
                           <div className='mb-5 ml-16 mt-10'>
                                <button className={style.loginBtn} type='submit'>Login</button>
                           </div>
-                          <div className='flex items-center justify-center'>
+                          <div className='flex items-center'>
                                <p className={style.devided}></p>
                                <span className='mx-5'>or</span>
                                <p className={style.devided}></p>

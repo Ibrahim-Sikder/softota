@@ -1,3 +1,6 @@
+.loginWrapa{
+     width:1440px;
+}
 .loginInput{
 box-sizing: border-box;
 width: 472px;
@@ -37,4 +40,31 @@ border: 1px solid rgba(74, 180, 73, 0.5);
 box-shadow: 0px 2px 4px rgba(25, 171, 227, 0.3);
 border-radius: 5px;
 color:#4AB449;
+}
+
+.loginWithProvider{
+    text-align: left;
+    margin-left: -1036px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width:1024px){
+     .loginWrapa{
+          width:100;
+     }
+}
+@media only screen and (max-width:768px){
+     .loginWrapa{
+          width:100%;
+     }
+     .circle{
+          position: absolute;
+          left:0 !important;
+     }
+}
+@media only screen and (max-width:500px){
+     .loginWrap{
+          width:100%;
+     }
 }

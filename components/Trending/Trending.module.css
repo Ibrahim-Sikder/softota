@@ -1,7 +1,8 @@
 .destination{
-     width:1440px;
-     margin: 0 auto;
+     width:100vw;
+     margin: 50px auto;
      overflow: hidden;
+     z-index:-10;
  }
  .trendingHead{
      width:800px;
@@ -9,15 +10,15 @@
  }
  .trending{
    margin-top:10px;
-   margin-bottom:50px;
+   margin-bottom:10px;
      background: #FFFFFF;
      box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
      padding:10px;
 
  }
- .trending img{
-     width:100%;
- 
+
+ .trendingImg{
+    height:300px !important;
  }
  .trendingHead{
      text-align:center;
@@ -27,7 +28,7 @@
  font-family: 'Poppins';
  font-style: normal;
  font-weight: 600;
- font-size: 36px;
+ font-size: 35px;
  line-height: 54px;
  color: #092E3D;
  justify-content: center;
@@ -53,14 +54,14 @@
  font-family: 'Poppins';
  font-style: normal;
  font-weight: 500;
- font-size: 20px;
+ font-size: 16px;
  line-height: 30px;
  }
  .trending h6{
  font-family: 'Poppins';
  font-style: normal;
  font-weight: 500;
- font-size: 30px;
+ font-size: 20px;
  line-height: 30px;
  display: flex;
  align-items: center;
@@ -120,8 +121,17 @@
      }
  }
  
- @media only screen and (max-width:450px){
-     
+ @media only screen and (max-width:768px){
+    .destination{
+        width:100%;
+        margin-top:100px;
+    }
+ 
+ }
+ @media only screen and (max-width:500px){
+    .destination{
+        width:100%;
+    }
  
  }
  

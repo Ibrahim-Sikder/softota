@@ -7,11 +7,9 @@ import Banner from '../../../components/Banner/Banner'
 
 const index = () => {
   return (
-    <div className='w-[1440px] mx-auto'>
-      <Banner></Banner>
+    <div>
       <Hotel></Hotel>
       <Travel></Travel>
-      <Hotel></Hotel>
       <Customer></Customer>
     </div>
   )

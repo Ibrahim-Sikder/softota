@@ -7,7 +7,7 @@ import VectorMan from '../../public/VectorMan.png';
 
 const AboutHero = () => {
   return (
-     <div>
+     <div className={style.aboutWrap}>
       <section className={style.aboutHero}>
       <Image
           src={about}

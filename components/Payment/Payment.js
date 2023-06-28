@@ -9,7 +9,7 @@ import payment5 from '../../public/payment5.png';
 import term from '../../public/term.png'
 const Payment = () => {
   return (
-    <div className='mb-10'>
+    <div className={style.paymentWrap}>
       <div className={style.payment}>
           <h2 >Personal Information </h2>
           <form>

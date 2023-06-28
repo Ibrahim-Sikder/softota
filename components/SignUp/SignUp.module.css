@@ -1,3 +1,6 @@
+.SignupWrap{
+     width:1440px;
+}
 .loginInput{
      box-sizing: border-box;
      width: 472px;
@@ -39,3 +42,24 @@
      color:#4AB449;
      }
      
+@media only screen and (max-width:1024px){
+     .SignupWrap{
+          width:100%;
+     }
+}
+@media only screen and (max-width:768px){
+     .SignupWrap{
+          width:100%;
+     }
+     .loginWithProvider{
+          text-align: left;
+          margin-left: -1036px;
+          margin-bottom: 20px;
+          margin-top: 30px;
+      }
+}
+@media only screen and (max-width:500px){
+     .SignupWrap{
+          width:100%;
+     }
+}

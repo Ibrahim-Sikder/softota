@@ -263,7 +263,7 @@
      .menu {
        width: 100%;
        height: 80px;
-       display: none;
+       
    }
    
      .inputBox {
@@ -273,8 +273,6 @@
        margin: auto;
        
      }
-   
-   
      .airPort {
       width:400px;
       top:285px;

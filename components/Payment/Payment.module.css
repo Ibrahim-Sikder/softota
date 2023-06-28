@@ -1,3 +1,6 @@
+.paymentWrap{
+     width:1440px;
+}
 .payment h2{
      width: 357px;
      height: 46px;
@@ -81,3 +84,23 @@
      background: #26ADE2;
      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+
+@media only screen and (max-width:1024px){
+     .paymentWrap{
+          width:100%;
+     }
+   
+   }
+   @media only screen and (max-width:768px){
+     .paymentWrap{
+          width:100%;
+     }
+   }
+    
+    @media only screen and (max-width:500px){
+     .paymentWrap{
+          width:100%;
+     }
+    
+    }

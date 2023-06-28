@@ -3,54 +3,102 @@ import style from "./Banner.module.css";
 import Image from "next/image";
 import banner from '../../public/banner.png'
 import NavBar from "../NavBar/NavBar";
-
+import hajj from '../../public/hajj.png'
+import tour from '../../public/tour.png'
+import train from '../../public/train.png'
+import buss from '../../public/Bus.png'
+import flight from '../../public/flight.png'
+import hotel from '../../public/hotel.png'
+import vissa from '../../public/vissa.png'
+import Link from "next/link";
 const Banner = () => {
   return (
     <div>
-      <div className={style.banner}>
-      {/* <img className="bannerIsrc={banner} alt="" /> */}
-      <Image
-      className={style.bannerImg}
-        src={banner}
-        alt="Picture of the author"        
-        />
-      <h2>Welcome to Ghuronti! Find Flights, Hotels & Tour Packages</h2>
-      <NavBar></NavBar>
-      <div className={style.inputBox}>
-        <span>One way</span>
-        <span>Round Trip</span>
-        <span>Multi city </span>
-      </div>
-      <div className="grid style.inputBox2 grid-cols-1 md:grid-cols-2">
-        <div className={style.airPort}>
-          <h6>Flying From</h6>
-          <p>City or Airport </p>
+      <div className={style.bannerWrap}>
+        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
+        <div className={style.heroBoxMain}>
+          <div className={style.package}>
+            <div className={style.packageWrap}>
+            <button className={style.packageBtn}>Hajj Packages </button>
+            <button>Ummra Packages</button>
+            </div>
+          </div>
+          <button className={style.heroBoxBtn}>Get Your Offers</button>
+
+          {/* menubar */}
+          <div>
+            <ul className={style.menu}>
+             <li>
+             <Image
+              src={hajj}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/hajjUmra'><p className='ml-3'>Hajj & Umrah</p></Link>
+             </li>
+             <li>
+             <Image
+              src={flight}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+                <Link href='/flight'><p className='ml-3'>Flight</p></Link>
+             </li>
+             <li>
+             <Image
+              src={hotel}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/hotel'><p className='ml-3'>Hotel</p></Link>
+             </li>
+             <li>
+             <Image
+              src={vissa}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <p className='ml-3'>Vissa </p>
+             </li>
+             <li>
+             <Image
+              src={tour}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <p className='ml-3'>Tours</p>
+             </li>
+             <li>
+             <Image
+              src={buss}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <p className='ml-3'>Busses</p>
+             </li>
+             <li className={style.trainLi}>
+             <Image
+              src={train}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <p className='ml-3'>Trains</p>
+             </li>
+            </ul>
+          </div>
+
+
         </div>
-        <div className={style.airPort2}>
-          <h6>Flying From</h6>
-          <p>City or Airport </p>
-        </div>
-      </div>
-      <div>
-        <div className={style.depart}>
-          <p>Depart To</p>
-          <span>18 March 2023</span>
-        </div>
-        <div className={style.depart2}>
-          <p>Return To</p>
-          <span>25 March 2023</span>
-        </div>
-      </div>
-      <div className={style.passenger}>
-        <span>Passengers & Cabin Class</span>
-        <span>Copy
-Economy Class</span> <br />
-        <span>1 Person </span>
-      </div>
-      <button className={style.flightBtn}>Search Flight</button>
     </div>
     </div>
   );
 };
 
-export default Banner;
+export default Banner; 

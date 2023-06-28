@@ -1,4 +1,6 @@
-
+   .missionWrap{
+    width:100vw;
+   }
    .missionHead {
      width: 800px;
      text-align:center;
@@ -6,7 +8,7 @@
    }
    .missionBox {
      width: 350px;
-     height: 350px;
+     height: 300px;
      text-align:center;
      position: relative;
      margin-right:15px;
@@ -69,7 +71,7 @@
      align-items: center;
      color: #092e3d;
      left: 54%;
-     top: 52%;
+     top: 2%;
      text-align:justify;
      transform: translate(-60%, -50%);
      -webkit-transform: translate(-60%, -50%);
@@ -78,6 +80,10 @@
      -o-transform: translate(-60%, -50%);
    }
    @media only screen and (max-width:1024px){
+    .missionWrap{
+      width:100%;
+     }
+  
      .missionBox {
        overflow: hidden;
        height:500px;
@@ -90,36 +96,50 @@
    
      .missionBox p {
        left: 54%;
-       top: 48%;
+       top: 5%;
        
      }
      
    }
    @media only screen and (max-width:768px){
-     .vission{
-       display: block;
+    .missionWrap{
+      width:100%;
      }
+   
+     .missionHead {
+     width:100%;
+    }
    
      .missionText {
        padding-left: 30px;
-       padding-top: 30px;
+   
      
      }
      .missionBox p {
        left: 54%;
-       top: 61%;
+       top: 40%;
    }
    .missionBox {
      overflow: hidden;
-     height: 450px;
+     height: 300px;
      width: 400px;
      margin: auto;
-     margin-bottom: 20px;
+
    }
    
    }
    
-   @media only screen and (max-width:768px){
+   @media only screen and (max-width:500px){
+    .missionWrap{
+      width:100%;
+     }
+     .missionHead {
+      width:100%;
+     }
+     .missionBox p {
+      top: 50%;
+      
+    }
      .missionHead {
        width: 100%;
        padding: 38px 24px;

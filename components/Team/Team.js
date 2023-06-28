@@ -7,7 +7,7 @@ import team3 from '../../public/team3.png'
 import team4 from '../../public/team4.png'
 const Team = () => {
   return (
-    <section>
+    <section className=''>
       <div className='w-[600px] mx-auto text-center'>
           <h2 className='text-3xl bold'>Our Team </h2>
           <p className='text-xl text-[#738187] '>At Better Work, we are driven by shared standards of excellence, guided by the same integrity, and motivated by a common ambition to improve lives.</p>

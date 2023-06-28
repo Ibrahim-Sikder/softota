@@ -1,6 +1,6 @@
 .places{
-    width:1440px;
-    margin: 50px auto;
+    width:100vw;
+    margin: 30px auto;
     overflow: hidden;
 }
 
@@ -52,6 +52,9 @@ line-height: 30px;
 }
 
 @media only screen and (max-width:1024px){
+    .places{
+        width:100%;
+    }
     .leftContent p{
         margin-top:20px;
     }
@@ -68,8 +71,19 @@ line-height: 30px;
 }
 
 
-@media only screen and (max-width:1024px){
-    .leftContent p {
-        padding: 17px;
+@media only screen and (max-width:768px){
+    .places{
+        width:100%;
     }
+   
+}
+
+@media only screen and (max-width:500px){
+    .places{
+        width:100%;
+    }
+    .places h2{
+        text-align:center;
+    }
+   
 }

@@ -1,4 +1,7 @@
-
+.aboutWrap{
+     width:1440px;
+     overflow: hidden;
+}
 .aboutHero{
      position:relative;
 
@@ -61,4 +64,23 @@ justify-content: center;
 align-items:center;
 padding:0px 30px;
 margin-left:45px;
+}
+
+
+@media only screen and (max-width:1024px){
+     .aboutWrap{
+          width:100%;
+     }
+}
+
+@media only screen and (max-width:768px){
+     .aboutWrap{
+          width:100%;
+     }
+}
+
+@media only screen and (max-width:500px){
+     .aboutWrap{
+          width:100%;
+     }
 }

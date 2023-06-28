@@ -8,7 +8,7 @@ const Places = () => {
     return (
         <div className={style.places}>
            <h2 className=' grid place-items-center my-10'>Best Places To Visit In Bangladesh</h2>
-           <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+           <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
                 <div>
                 <Image
                     src={place}
@@ -21,7 +21,7 @@ const Places = () => {
                     </div>
                 </div>
                 <div className={style.leftContent}>
-                    <p>Bangladesh is a South Asian country with a rich cultural heritage <br /> and natural beauty. It is home to the world s largest mangrove <br /> forest, culture, and natural beauty.</p>
+                    <p className='mb-8'>Bangladesh is a South Asian country with a rich cultural heritage <br /> and natural beauty. It is home to the world s largest mangrove <br /> forest, culture, and natural beauty.</p>
                     <div className=' grid grid-cols-1 md:grid-cols-2 gap-8'>
                         <div className='w-full'>
                         <Image

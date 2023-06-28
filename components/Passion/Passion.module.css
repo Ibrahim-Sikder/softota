@@ -1,3 +1,55 @@
+.passionWrap{
+     width:100vw;
+     overflow: hidden;
+     margin:50px 0px;
+}
+.singlePassion{
+     display:flex;
+     align-items: center;
+     margin-bottom:10px;
+     flex-wrap:wrap;
+     justify-content: center;
+     margin-bottom:10px;
+    
+}
+.singlePassion ul{
+     width:400px;
+}
+.singlePassion ul li{
+    margin-bottom:15px;
+}
 .tourImg{
      height:500px !important;
 }
+
+
+@media only screen and (max-width:1024px){
+     .passionWrap{
+          width:100%;
+     }
+   
+   }
+   @media only screen and (max-width:768px){
+     .passionWrap{
+          width:100%;
+     }
+     .singlePassion ul, .singlePassion h4{
+         margin-left:-110px;
+     }
+   
+   }
+   @media only screen and (max-width:768px){
+     .singlePassion{
+          display:flex;
+          align-items: center;
+          justify-content: center;
+     }
+   }
+    
+    @media only screen and (max-width:500px){
+    
+     .passionWrap{
+          width:100%;
+     }
+    
+    }

@@ -5,7 +5,7 @@ import travel from '../../public/travell.png'
 const Travel = () => {
     return (
         <div className={style.travel}>
-           <div>
+           <div > 
            <Image
             src={travel}
             alt="Picture of the author"

@@ -92,7 +92,7 @@ const Footer = () => {
                        </span>
                     </p>
                 </div>
-                <div className='mb-10'>
+                <div className={style.privacy}>
                     <h4 className='pb-5'>HELP </h4>
                     <p className={style.number}>
                       <Link href='/faq'> <span>

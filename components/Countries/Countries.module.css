@@ -1,162 +1,40 @@
-.countryImg{
-     width:200px !important;
-     height:100px !important;
-     object-fit: cover;
+.countryWrap{
+  width:100vw;
+  overflow: hidden;
 }
-
-
-/* banner css */
-.bannerImg{
-width:100%;
-height:250px;
-}
-.bannerItem {
-     position: absolute;
-     width: 1105px;
-     height: 250px;
-     left:50%;
-     top:70%;
-     transform:translate(-50%, -50%);
-     background: linear-gradient(180deg,rgba(230,248,255,.33),rgba(229,248,255,.33));
-     box-shadow: 0px 2px 12px rgba(25, 171, 227, 0.3);
-     border-radius: 42px;
-     -webkit-transform:translate(-50%, -50%);
-     -moz-transform:translate(-50%, -50%);
-     -ms-transform:translate(-50%, -50%);
-     -o-transform:translate(-50%, -50%);
-   }
-
-.banner {
-     width:1440px;
-     margin: 0 auto;
-     overflow: hidden;
-     box-sizing: border-box;
-   }
-
-
-   .banner h2 {
-     position: absolute;
-     font-family: "Poppins";
-     font-style: normal;
-     font-weight: 600;
-     font-size: 36px;
-     line-height: 48px;
-     /* display: flex; */
-     align-items: center;
-     /* text-align: center; */
-     color: #092e3d;
-     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-     width: 100%;
-     top: 196px;
-     left: 258px;
-     z-index: 99;
-   }
-   .menu {
-     position: absolute;
-     width: 1105px;
-     height: 86px;
-     left: 0px;
-     top: 0px;
-     background: #ffffff;
-     border-radius: 42px 42px 0px 0px;
-     display: flex;
-     justify-content: space-between;
-     padding: 0 20px;
-   }
-   
-   .menu li {
-     display: flex;
-     justify-content: space-around;
-     font-family: "Poppins";
-     font-style: normal;
-     font-weight: 500;
-     font-size: 20px;
-     line-height: 30px;
-   }
-   .items {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-   }
-  .vissaInputBox{
-    width: 400px;
-    height: 40px;
-    background: white;
-    z-index: 9999;
-    position: absolute;
-    top: 138px;
-    display: flex;
-    justify-content: space-between;
-    padding-top:1px;
-    padding-left:30px;
-    padding-right:30px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); 
-    border-radius:50px solid #4AB449;  
-  }
-.hajjPackage{
-  border-bottom: 3px solid #4AB449;
-  margin-bottom:10px;
-}
-.searchingVissa{
-  position:absolute;
-  top:80%;
-  left:50%;
-  transform:translate(-50%, -50%)
-}
-.searchingVissa input{
-  width:400px;
-  height:50px;
- padding-left:30px;
- border-radius:10px;
- border:1px solid #4AB449;
+.countryHeadText{
+  width:550px;
+  margin:20px auto;
+  text-align: center;
 
 }
-.vissaIcon{
-  position:absolute;
-  top:18px;
-  left:5px;
-  font-size:20px;
-  color:#333;
-}
-.searchingVissa button{
-background:#4AB449;
-height:50px;
-color:white;
-padding:0px 20px;
-border-radius:10px;
-margin-left:-30px;
-}
-
    
 @media only screen and (max-width:1024px){
-     .banner{
-       width:100%;
-       overflow: hidden;
-     }
+  .countryWrap{
+    width:100%;
+  }
   
-        .banner h2 {
-          top: 122px;
-          left: 115px;
-      }
 }
 @media only screen and (max-width:768px){
-     .banner {
-       width:100%;
-       overflow: hidden;
-     }
-     .banner h2{
-          width: 100%;
-          left:0px;
-          top:70px;
-        }
+  .countryWrap{
+    width:100%;
+  }
+  .countryHeadText{
+    width:100%;
+  
+  }
+  
 }
 
 @media only screen and (max-width:500px){
-     .banner h2 {
-       top: 64px;
-   }
+  .countryWrap{
+    width:100%;
+  }
+  .countryHeadText{
+    width:100%;
+  
+  }
+  
    
    }
    

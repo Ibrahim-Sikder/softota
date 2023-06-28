@@ -4,7 +4,7 @@ import mission from '../../public/mission.png'
 import Image from "next/image";
 const Mission = () => {
   return (
-    <div className="py-20">
+    <div className={style.missionWrap}>
       <div className={style.missionHead}>
         <h2>Our Mission & Vision</h2>
         <p>

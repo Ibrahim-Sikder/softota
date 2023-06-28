@@ -1,3 +1,6 @@
+.signUpAgentWrap{
+     width:1440px;
+}
 .loginInput{
      box-sizing: border-box;
      width: 472px;
@@ -39,3 +42,18 @@
      color:#4AB449;
      }
      
+     @media only screen and (max-width:1024px){
+          .signUpAgentWrap{
+               width:100%;
+          }
+     }
+     @media only screen and (max-width:768px){
+          .signUpAgentWrap{
+               width:100%;
+          }
+     }
+     @media only screen and (max-width:500px){
+          .signUpAgentWrap{
+               width:100%;
+          }
+     }

@@ -38,3 +38,21 @@
      .termCondition ul li{
           list-style-type: circle;
      }
+
+
+
+     @media only screen and (max-width:1024px){
+          .termCondition{
+               width:100%;
+          }
+     }
+     @media only screen and (max-width:768px){
+          .termCondition{
+               width:100%;
+          }
+     }
+     @media only screen and (max-width:500px){
+          .termCondition{
+               width:100%;
+          }
+     }

@@ -30,3 +30,29 @@ color: #092E3D;
 .termCondition ul li{
      list-style-type: circle;
 }
+
+
+@media only screen and (max-width:1024px){
+     .termCondition{
+          width:100%;
+     }
+     .termCondition h2{
+          width: 100%;
+          margin:0 auto;
+     }
+     .termCondition p, .termCondition li{
+     width: 100%;
+     margin:0 auto;
+     
+     }
+}
+@media only screen and (max-width:768px){
+     .termCondition{
+          width:100%;
+     }
+}
+@media only screen and (max-width:500px){
+     .termCondition{
+          width:100%;
+     }
+}

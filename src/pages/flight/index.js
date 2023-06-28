@@ -5,14 +5,16 @@ import Travel from '../../../components/Travel/Travel'
 import Trending from '../../../components/Trending/Trending'
 import FlightMission from '../../../components/FlightMission/FlightMission'
 import Customer from '../../../components/Customer/Customer'
+import Hotel from '../../../components/Hotel/Hotel'
+import BestPlace from '../../../components/BestPlace/BestPlace'
 
 const index = () => {
   return (
     <div>
       <Banner></Banner>
-      <Places></Places>
+      <BestPlace></BestPlace>
       <Travel></Travel>
-      <Trending></Trending>
+      <Hotel></Hotel>
       <FlightMission></FlightMission>
       <Customer></Customer>
     </div>

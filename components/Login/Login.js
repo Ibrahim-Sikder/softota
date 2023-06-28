@@ -51,12 +51,9 @@ const Login = () => {
           signIn('github',{callbackUrl:"http://localhost:3000"})
      }
 
-   
-
-
   return (
-    <div className='py-24'>
-      <div className='flex items-center justify-center'>
+    <div className={style.loginWrap}>
+      <div className='grid grid-cols-1 lg:grid-cols-2 '>
           <div>
           <Image
           src={login}
@@ -78,7 +75,7 @@ const Login = () => {
                     <div className='mb-5 ml-16 mt-10'>
                          <button className={style.loginBtn} type='submit'>Login</button>
                     </div>
-                    <div className='flex items-center justify-center'>
+                    <div className='flex items-center '>
                          <p className={style.devided}></p>
                          <span className='mx-5'>or</span>
                          <p className={style.devided}></p>
@@ -94,6 +91,7 @@ const Login = () => {
                                <button className={style.loginBtn3} type='submit'>Create your account </button>
                                </Link>
                     </div>
+                    <div className={style.loginWithProvider}>
                     <div className='flex justify-between mt-32 w-32 mx-auto'>
                     <div className={style.circle}>
                     <button type='button' onClick={handleGoogleSignIn}>
@@ -117,6 +115,7 @@ const Login = () => {
                     />   
                     </button> 
                     </div> 
+                    </div>
                     </div>
                </form> 
           </div>

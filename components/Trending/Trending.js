@@ -1,8 +1,8 @@
 import React from "react";
 import style from './Trending.module.css'
 import trending from '../../public/Trending.png'
-import trending2 from '../../public/trending3.png'
-import trending3 from '../../public/trending3.png'
+import hotel2 from '../../public/hotel1.png'
+import hotel from '../../public/hotel3.png'
 
 import Image from "next/image";
 const Trending = () => {
@@ -24,7 +24,7 @@ const Trending = () => {
             alt="Picture of the author"
             width={500}
             height={500}
-            className='object-cover'
+            className={style.trendingImg}
             />
           {/* <img src={trending} className="w-full" alt="" /> */}
           <div className="w-full flex justify-between px-5">
@@ -40,11 +40,11 @@ const Trending = () => {
         </div>
         <div className={style.trending}>
         <Image
-            src={trending2}
+            src={hotel2}
             alt="Picture of the author"
             width={500}
             height={500}
-            className='object-cover'
+            className={style.trendingImg}
             />
           <div className="w-full flex justify-between px-5">
             <div>
@@ -59,11 +59,11 @@ const Trending = () => {
         </div>
         <div className={style.trending}>
         <Image
-            src={trending3}
+            src={hotel}
             alt="Picture of the author"
             width={500}
             height={500}
-            className='object-cover'
+            className={style.trendingImg}
             />
           <div className="w-full flex justify-between px-5">
             <div>

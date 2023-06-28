@@ -5,7 +5,7 @@ import Image from 'next/image'
 const FlightMission = () => {
   return (
     <div>
-      <div>
+      <div className={style.missionWrap}>
       <div className={style.missionHead}>
         <h2>Our Mission & Vision</h2>
         <p>

@@ -3,7 +3,7 @@ import Umra from '../../../components/Umra/Umra'
 
 const index = () => {
   return (
-    <div className='w-[1440px] mx-auto'>
+    <div>
       <Umra></Umra>
     </div>
   )

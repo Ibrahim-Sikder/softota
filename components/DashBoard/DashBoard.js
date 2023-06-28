@@ -12,7 +12,7 @@ import AdminRightSide from './AdminRightSide';
 
 const DashBoard = () => {
   return (
-    <section>
+    <section className={style.dashboardWrap}>
       <div className='grid grid-cols-12'>
           <div>
               <AdminLeftSide></AdminLeftSide>

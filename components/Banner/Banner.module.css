@@ -1,355 +1,164 @@
-.banner {
-     position: relative;
-     width:1440px;
-     margin: 0 auto;
-     box-sizing: border-box;
-   }
-   .banner Image{
-    max-width:100%;
-   }
-   .bannerImg {
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
-     object-fit: cover;
-     height: 507px;
-     max-width: 100%;
-     background: linear-gradient(
+.banner{
+  width:100vw !important;
+  overflow: hidden !important;
+  box-sizing: border-box;
+}
+.bannerWrap{
+  position: relative;
+  background-image: url('../../public/banner.png');
+  background-size:cover;
+  background-repeat:no-repeat;
+  max-width:100vw !important;
+  height:450px;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* background: linear-gradient(
        180deg,
        rgba(230, 248, 255, 0.3) 0%,
        rgba(230, 248, 255, 0.18) 0.01%,
        rgba(38, 173, 226, 0.5) 100%
-     );
-   }
-   .banner h2 {
-     position: absolute;
-     font-family: "Poppins";
-     font-style: normal;
-     font-weight: 600;
-     font-size: 32px;
-     line-height: 48px;
-     display: flex;
-     align-items: center;
-     text-align: center;
-     color: #092e3d;
-     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-     width: 100%;
-     top: 135px;
-     left:236px;
-     z-index: 99;
-   }
-   
-   .bannerItem {
-     position: absolute;
-     width: 1105px;
-     height: 600px;
-     left:50%;
-     top:50%;
-     transform:translate(-50%, -50%);
-     background: linear-gradient(    180deg,    rgba(230, 248, 255, 0.33) 0%,    rgba(229, 248, 255, 0.33) 100%  );
-     box-shadow: 0px 2px 12px rgba(25, 171, 227, 0.3);
-     border-radius: 42px;
-     -webkit-transform:translate(-50%, -50%);
-     -moz-transform:translate(-50%, -50%);
-     -ms-transform:translate(-50%, -50%);
-     -o-transform:translate(-50%, -50%);
-   }
-   .menu {
-     position: absolute;
-     width: 1105px;
-     height: 86px;
-     left: 0px;
-     top: 0px;
-     background: #ffffff;
-     border-radius: 42px 42px 0px 0px;
-     display: flex;
-     justify-content: space-between;
-     padding: 0 20px;
-   }
-   
-   .menu li {
-     display: flex;
-     justify-content: space-around;
-     font-family: "Poppins";
-     font-style: normal;
-     font-weight: 500;
-     font-size: 20px;
-     line-height: 30px;
-   }
-   .items {
-     display: flex;
-     align-items: center;
-     justify-content: center;
-   }
-   
-   .inputBox {
-     box-sizing: border-box;
-     display: flex;
-     padding: 0 10px;
-     justify-content: center;
-     align-items: center;
-     justify-content: space-between;
-     position: absolute;
-     width: 465px;
-     height: 40px;
-     left: 485px;
-     top: 230px;
-     background: #ffffff;
-     border: 1px solid #4ab449;
-     box-shadow: 0px 2px 4px rgba(25, 171, 227, 0.3);
-     border-radius: 5px;
-   }
-   .inputBox span {
-     font-family: "Poppins";
-     font-style: normal;
-     font-weight: 500;
-     font-size: 16px;
-     line-height: 24px;
-     display: flex;
-     align-items: center;
-   
-     color: #092e3d;
-   }
-   .airPort {
-     box-sizing: border-box;
-     position: absolute;
-     width: 418px;
-     height: 65px;
-     left: 276px;
-     top: 305px;
-     background: #ffffff;
-     border: 1px solid #4ab449;
-     border-radius: 5px;
-     text-align: left;
-     padding: 0 10px;
-   }
-   .airPort2 {
-     box-sizing: border-box;
-     position: absolute;
-     width: 418px;
-     height: 65px;
-     right: 276px;
-     top: 305px;
-     background: #ffffff;
-     border: 1px solid #4ab449;
-     border-radius: 5px;
-     padding: 0 10px;
-     text-align: left;
-   }
-   .airPort h6 {
-     font-family: "Poppins";
-     font-style: normal;
-     font-weight: 500;
-     font-size: 16px;
-     line-height: 24px;
-     display: flex;
-     align-items: center;
-     text-align: center;
-     color: #092e3d;
-   }
-   .depart{   
-   box-sizing: border-box;
-   position: absolute;
-   width: 209px;
-   height: 74px;
-   left: 485px;
-   top: 399px;
-   
-   background: #FFFFFF;
-   border: 1px solid #4AB449;
-   border-radius: 0px 5px 5px 0px;
-   text-align:left;
-   padding:0 10px;
-   }
-   .depart2{
-   padding:0 10px;
-   box-sizing: border-box;
-   position: absolute;
-   width: 209px;
-   height: 74px;
-   left: 276px;
-   top: 399px;
-   
-   background: #FFFFFF;
-   border: 1px solid #4AB449;
-   border-radius: 5px 0px 0px 5px;
-   text-align: left;
-   }
-   .depart p{
-       
-   font-family: 'Poppins';
-   font-style: normal;
-   font-weight: 500;
-   font-size: 16px;
-   line-height: 24px;
-   display: flex;
-   align-items: center;
-   text-align: center;
-   
-   color: #092E3D;
-   }
-   
-   .passenger{
-   box-sizing: border-box;
-   position: absolute;
-   width: 418px;
-   height: 74px;
-   left: 736px;
-   top: 399px;
-   background: #FFFFFF;
-   border: 1px solid #4AB449;
-   border-radius: 5px;
-   text-align:left;
-   padding:0 20px;
-   }
-   .passenger span{
-       font-family: 'Poppins';
-   font-style: normal;
-   font-weight: 500;
-   font-size: 14px;
-   align-items: center;
-   color: #092E3D;
-   text-align:left;
-   }
-   .flightBtn{
-   width: 236px;
-   height: 53px;
-   color:#fff;
-   background: #19ABE3;
-   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-   border-radius: 5px;
-   margin-top:30px;
-   z-index: 999;
-   margin-left:600px;
-   z-index: 99;
-   }
-   
-   
-   
-   @media only screen and (max-width:1024px){
+     ); */
+}
+
+.bannerWrap h2{
+ display: flex;
+ justify-content: center;
+ font-size:35px;
+ margin-top:20px;
+}
+.heroBoxMain{
+  width:1105px;
+  height:250px;
+  background:#C6E8F1;
+  z-index: 99;
+  margin:0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius:37px;
+  position:relative;
+}
+
+.package{
+  width:400px;
+  height:40px;
+  background:white;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  top:100px;
+  border-radius:5px;
+  border:1px solid #4AB449;
+
+}
+.packageBtn{
+  border-bottom: 2px solid #4AB449;
+}
+.packageWrap{
+  display: flex !important;
+  justify-content: space-between;
+  padding:0 20px;
   
-    
-    .banner h2 {
-      top: 90px;
-      left: 357px;
-      font-size:25px;
+}
+.heroBoxBtn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 170px;
+  background: #19ABE3;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 16px 55px;
+}
+/* menu styling  */
+.menu{
+  display:flex;
+  justify-content: space-between;
+  padding:23px 20px;
+  font-size:18px;
+  background:white;
+  border-top-left-radius: 20px;
+  border-top-right-radius:20px;
+  
+}
+.menu li{
+  display:flex;
+  z-index: 999 IM !important;
+}
+.menu li P{
+ 
+  z-index: 999 !important;
+}
+
+
+
+@media only screen and (max-width:768px){
+  .bannerWrap h2{
+    font-size:25px;
+   }
+   .menu{
+    background:none;
+    flex-wrap:wrap;
   }
-     .menu {
-       width: 100%;
-       height: 80px;
-     }
-     
-     .menu li {
-       display: flex;
-       font-size: 16px;
-     }
-     .inputBox {
-       width: 400px;
-       display: flex;
-       left: 458px;
-       top: 159px;
-     }
-     .airPort {
-       top:231px;
-       left:269px;
-      }
-      .airPort2 {
-       top: 231px;
-       right: 300px;
-   }
-      .depart{   
-        width: 209px;
-        left: 544px;
-        top: 315px;
+  .menu li{
+    margin-right:50px;
+    margin-left:50px;
+    margin-bottom:30px;
+    z-index: 999 !important;
+    color:black;
+
+  }
+  .heroBoxMain{
+    width:95%;
+    height:90%;
    
-       }
-       .depart2{
-       width: 209px;
-       height: 74px;
-       left: 304px;
-       top: 315px;
-       }
-    .passenger{
-     width: 313px;
-     left: 779px;
-     top: 315px;
-     }
-     .flightBtn{
-      width: 251px;
-      z-index: 999;
-      position: absolute;
-      top: 382px;
-       
-       }
-      
-     
+  }
+  .package{
+    top:250px;
+    
+  }
+  .heroBoxBtn{
+    top: 307px;
+}
+.heroBoxMain{
+  background:none;
+  
+}
+.bannerWrap h2 {
+  margin-bottom: 10px;
+}
+ 
+  
+
+}
+@media only screen and (max-width:500px){
+  .bannerWrap{
+   height:500px;
+  }
+  .bannerWrap h2{
+    text-align: center;
    }
-   
-   @media only screen and (max-width:768px){
-     .banner {
-       width:100%;
-       overflow: hidden;
-     }
-     .banner h2{
-       top:19px;
-     }
-     .menu {
-       width: 100%;
-       height: 80px;
-       display: none;
-   }
-   
-     .inputBox {
-       top:85px;
-       
-     }
-     .airPort {
-      top: 143px;
-      left: 453px;
-     }
-     .airPort2 {
-      width: 400px;
-      left: 467px;
-      height: 75px;
-      padding: 5px;
-      font-size: 20px;
-       
-     }
-     
-     .inputBox2{
-       display: block;
-     }
-     .places img {
-       max-width: 100% !important;
-       height: 279px;
-       object-fit: cover;
-       background-repeat: no-repeat;
-   }
-   }
-   @media only screen and (max-width:500px){
-     .inputBox {
-       width: 348px;
-       left: 38px;
-     }
-     .airPort {
-       width: 370px;
-       left: 29px;
-   }
-   .airPort2 {
-     width: 370px;
-     left: 29px;
-   }
-   .depart2 {
-     left: 32px;
-   
-   }
-   
-     .menu {
-         display: none;
-     }
-     .banner h2 {
-       top: 64px;
-   }
-   
-   }
-   
+   .menu li{
+    margin-right:20px;
+    margin-left:30px;
+    margin-bottom:30px;
+    z-index: 999 !important;
+    color:black;
+
+  }
+  .trainLi{
+    margin-left:140px !important;
+  }
+  .heroBoxBtn{
+    padding:10px 28px;
+    top: 326px;
+}
+.package{
+  top: 266px;
+  width: 328px;
+}
+.bannerWrap h2 {
+  margin-bottom: 15px;
+}
+ 
+
+}

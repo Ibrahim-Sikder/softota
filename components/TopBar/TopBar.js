@@ -6,8 +6,8 @@ import phone from '../../public/phone.png'
 const TopBar = () => {
   return (
     <div className={style.topBar}>
-      <div className={style.topBarWrap}>
-        <span>
+     <div className={style.topbarWrap}>
+     <span className={style.topBarLeft}>
         <Image
           className={style.topBarIcon}
           src={phone}
@@ -18,7 +18,7 @@ const TopBar = () => {
           <span className={style.phone}>+01825-445033</span>
         </span>
         <span className={style.contact}>Contact us</span>
-      </div>
+     </div>
     </div>
   );
 };

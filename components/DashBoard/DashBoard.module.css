@@ -1,3 +1,6 @@
+.dashboardWrap{
+     width:1440px;
+}
 .AdminleftSide{
 width: 330px;
 height: 1100px;
@@ -77,4 +80,21 @@ font-size:23px;
      border-radius: 5px;
      color:white;
      margin-left:5px;
+}
+
+@media only screen and (max-width:1024px){
+     .dashboardWrap{
+          width:100%;
+     }
+}
+@media only screen and (max-width:768px){
+     .dashboardWrap{
+          width:100%;
+     }
+}
+@media only screen and (max-width:500px){
+     .dashboardWrap{
+          width:100%;
+     }
+
 }
