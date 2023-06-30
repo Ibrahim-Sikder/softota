@@ -1,13 +1,10 @@
 .header{
      width:100vw;
-     padding:30px 50px;
      background:#E6F8FF;
 
 }
-.headerWrap{
-     display:flex;
-     justify-content: space-around;
-}
+
+
 .logo{
      display:flex;
 }
@@ -20,8 +17,17 @@
      font-weight: 400px;
     
 }
+.about{
+     font-size:25px;
+     
+}
+.imgWrap{
+     display:flex;
+     align-items:center;
+     margin-left:-60px;
+}
 .searchBox input{
-     width:500px;
+     width:400px;
      padding:10px 20px;
      background:#E9F6E9;
      border-radius:10px;
@@ -29,31 +35,144 @@
      
 }
 .inputBox button{
-     background:#4AB449;
-     color:white;
      padding:10px 10px;
      width:100px;
      border-radius:5px;
 }
+.toggleBtnWrap{
+     display: flex;
+     justify-content: space-evenly;
+     padding-top: 20px;
+     padding-bottom: 20px;
+     width: 100%;
+     align-items: center;
+ }
+ .loginBtn{
+     background:#4AB449;
+     color:white;
+ }
+ .inputBox{
+     margin-right: 35px;
+ }
+ .signupBtn{
+     background:#26ADE2;
+     color:white;
+ }
+
+/* toggle nav styling  */
+
+.toggleBtn, .toggleBtn2{
+     display: none;
+}
+.headerWrapBox{
+
+}
+
 
 @media only screen and (max-width:1024px){
      
      .searchBox input{
         width:450px
      }
+     .imgWrap {
+     margin-left: 0px; 
+}
      
 }
 
 @media only screen and (max-width:768px){
      
-     .inputBox button, .searchBox input{
-         display:none;
+     .toggleBtn, .toggleBtn2{
+          display: block;
      }
-     
+     .logoImg2{
+          display:none;
+     }
+ 
+     .logoWrap{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          
+          }
+          .toggleBtn{
+               color:#4AB449;
+               cursor:pointer;
+               margin-top:10px;
+          }
+          .toggleBtn2{
+               color: #4AB449;
+               cursor: pointer;
+               position: absolute;
+               top: 92px;
+               right: 38px;
+               font-size: 25px;
+
+          }
+          .toggleBtnWrap{
+               background: #4AB449;
+               width: 100%;
+               height: 400px;
+               overflow: hidden;
+               padding: 20px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+
+          }
+          .about{
+               text-align: center;
+               color: white;
+               font-size: 25px;
+               margin-bottom: 19px;
+          }
+          .inputBox{
+               text-align: center;
+               margin-top: 15px;
+          }
+          .loginBtn{
+               color: #4AB449;
+               padding: 10px 10px;
+               width: 100px;
+               border-radius: 5px;
+               background: white;
+          }
+          .signupBtn{
+               background: #26ADE2;
+               color: white;
+
+          }
+          .logoWrap{
+               padding:20px;
+          }
+          .toggleBtn{
+               color: white;
+               cursor: pointer;
+               font-size: 25px;
+               position: absolute;
+               right: 24px;
+               top: 92px;
+           }
+           .toggleBtnWrap{
+               display: block;
+               text-align:center;
+             }
+             .about{
+               position: absolute;
+               left: 50%;
+               transform: translateX(-50%);
+               top:166px;
+           }
+           .searchBox {
+               margin-top: 130px;
+           }
 }
 @media only screen and (max-width:500px){
      .header{
          width:100%;
      
      }
+     .searchBox input {
+          width: 380px;
+      }
 }

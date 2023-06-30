@@ -5,11 +5,25 @@
 }
    .singleHajj{
      width: 430px;
-     height: 601px;
+     height: 610px;
      background: #FFFFFF;
      box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
      border-radius: 5px;
      padding:10px;
+     
+     }
+     .imgWrap{
+      width:420px;
+      height:300px;
+      overflow: hidden;
+     }
+     .hajjImg{
+      transform:scale(1);
+      transition:.5s ease-in-out
+     
+     }
+     .hajjImg:hover{
+      transform:scale(1.2)
      }
      .singleHajjmiddl{
      width: 430px;
@@ -118,6 +132,11 @@ border-radius: 5px;
       .singleHajjmiddl{
       width: 330px;
    }
+   .imgWrap{
+    width: 312px;
+    height: 247px;
+   }
+ 
 
   }
    @media only screen and (max-width:768px){
@@ -138,6 +157,14 @@ border-radius: 5px;
     width:300px;
     margin-bottom:15px;
     }
+    .imgWrap{
+      width: 312px;
+      height: 247px;
+      display: flex;
+      align-items:center;
+      justify-content: center;
+     }
+   
   
 
    }

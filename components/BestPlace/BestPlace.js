@@ -49,13 +49,16 @@ const BestPlace = () => {
                          
                  </div>
                  <div className={style.trending}>
-                         <Image
+                        <div className={style.imgWrap}> 
+                        <Image
                          src={see2}
                          alt="Picture of the author"
                          width={400}
                          height={300}
                          className={style.swiperImg}
                          />
+                        </div>
+                        
                          {/* <img src={trending} className="w-full" alt="" /> */}
                          <div className={style.placeFooter}>
                          <h3>Shylet</h3>

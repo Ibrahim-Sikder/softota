@@ -19,12 +19,15 @@ const Umra = () => {
                </div>
               <div className='grid grid-cols-1 lg:grid-cols-3 gap-10 md:grid-cols-2 place-items-center'>
                     <div className={style.singleHajj}>
+                         <div className={style.imgWrap}>
                          <Image
                          src={hajj2}
                          alt="Picture of the author"
                          width={500}
                          height={500}
+                         className={style.hajjImg}
                          />
+                         </div>
                            <div className='flex justify-between'>
                          <h3 className='text-2xl'>Economy Package</h3>
                          <p className={style.day}>40 Days </p>
@@ -45,12 +48,15 @@ const Umra = () => {
 
                     </div>
                     <div className={style.singleHajjmiddl}>
+                         <div className={style.imgWrap}>
                          <Image
                          src={hajj3}
                          alt="Picture of the author"
                          width={500}
                          height={500}
+                         className={style.hajjImg}
                          />
+                         </div>
                           <div className='flex justify-between'>
                          <h3 className='text-2xl'>Economy Package</h3>
                          <p className={style.day}>40 Days </p>
@@ -71,12 +77,15 @@ const Umra = () => {
 
                     </div>
                     <div className={style.singleHajj}>
+                         <div className={style.imgWrap}>
                          <Image
                          src={hajj4}
                          alt="Picture of the author"
                          width={500}
                          height={500}
+                         className={style.hajjImg}
                          />
+                         </div>
                          <div className='flex justify-between'>
                          <h3 className='text-2xl'>Economy Package</h3>
                          <p className={style.day}>40 Days </p>

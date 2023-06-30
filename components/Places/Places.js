@@ -24,12 +24,16 @@ const Places = () => {
                     <p className='mb-8'>Bangladesh is a South Asian country with a rich cultural heritage <br /> and natural beauty. It is home to the world s largest mangrove <br /> forest, culture, and natural beauty.</p>
                     <div className=' grid grid-cols-1 md:grid-cols-2 gap-8'>
                         <div className='w-full'>
-                        <Image
+                            <div className={style.imgWrap}>
+                            <Image
                             src={place2}
                             alt="Picture of the author"
                             width={500}
                             height={500}
+                            className={style.hajjImg}
                              />
+                            </div>
+                        
                             <div className={style.placesPrice}>
                                 <span>Cox s Bazar</span>
                                 <span>1500tk</span>

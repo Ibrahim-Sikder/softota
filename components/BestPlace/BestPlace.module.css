@@ -11,6 +11,19 @@ width:1100px;
      grid-template-columns: repeat(4, minmax(0, 1fr));
      place-items: center;
  }
+ .imgWrap{
+    width:420px;
+    height:300px;
+    overflow: hidden;
+   }
+   .hajjImg{
+    transform:scale(1);
+    transition:.5s ease-in-out
+   
+   }
+   .hajjImg:hover{
+    transform:scale(1.2)
+   }
  .trendingHead{
      width:800px;
      margin: 0px auto;  

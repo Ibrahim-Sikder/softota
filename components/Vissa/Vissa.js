@@ -72,7 +72,7 @@ const Vissa = () => {
                     width={30}
                     height={30}
                     />
-                   <p className='ml-3'>Tours</p>
+                   <Link href='/tours'><p className='ml-3'>Tours</p></Link>
                    </li>
                    <li>
                    <Image

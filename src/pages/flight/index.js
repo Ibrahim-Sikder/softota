@@ -14,7 +14,6 @@ const index = () => {
       <Banner></Banner>
       <BestPlace></BestPlace>
       <Travel></Travel>
-      <Hotel></Hotel>
       <FlightMission></FlightMission>
       <Customer></Customer>
     </div>

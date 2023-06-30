@@ -2,9 +2,10 @@
     width:100vw;
    }
    .missionHead {
+    padding-top:60px;
      width: 800px;
      text-align:center;
-     margin:0 auto;
+     margin: 0 auto;
    }
    .missionBox {
      width: 350px;
@@ -71,7 +72,7 @@
      align-items: center;
      color: #092e3d;
      left: 54%;
-     top: 2%;
+     top: 57%;
      text-align:justify;
      transform: translate(-60%, -50%);
      -webkit-transform: translate(-60%, -50%);
