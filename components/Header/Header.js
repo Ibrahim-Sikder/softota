@@ -5,15 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FaPlaneArrival, FaPlaneDeparture} from "react-icons/fa";
 const Header = () => {
-    const [mobActive, setMobActive] = useState(0)
+    const [active, setActive] = useState(0)
   return (
     <div className={style.header}>
      <div className={style.headerWrap}>
           
          {
-          mobActive === 0 ? 
+          active === 0 ? 
      <div className={style.toggleBtnWrap}>
-      <div><FaPlaneDeparture className={style.toggleBtn} onClick={()=>setMobActive(1)}/></div>
+      <div><FaPlaneDeparture className={style.toggleBtn} onClick={()=>setActive(1)}/></div>
      <div className={style.imgWrap}>
      <Link href='/'>
           <Image
@@ -48,7 +48,7 @@ const Header = () => {
           alt='logo'
           />
           </Link>
-     <div className={style.toggleBtn2}> <FaPlaneArrival onClick={()=>setMobActive(0)}/></div>
+     <div className={style.toggleBtn2}> <FaPlaneArrival onClick={()=>setActive(0)}/></div>
         
       </div>
 
