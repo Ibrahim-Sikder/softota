@@ -17,6 +17,8 @@
       height:300px;
       overflow: hidden;
      }
+
+     
      .hajjImg{
       transform:scale(1);
       transition:.5s ease-in-out

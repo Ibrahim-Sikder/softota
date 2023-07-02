@@ -8,13 +8,15 @@ const Passion = () => {
   return (
     <div className={style.passionWrap}>
       <div className={style.singlePassion}>
-      <Image
-          className='tourImg'
+     <div className={style.passionImgWrap}>
+     <Image
+          className={style.tourImg}
           src={people}
           alt="Picture of the author"
           width={500}
           height={500}
      />
+     </div>
      <div className='ml-5'>
           <h4 className='text-2xl'>For Studnet</h4>
           <ul>
@@ -25,13 +27,15 @@ const Passion = () => {
      </div>
       </div>
       <div className={style.singlePassion}>
-      <Image
-          className='tourImg'
+      <div className={style.passionImgWrap}>
+     <Image
+          className={style.tourImg}
           src={doctor}
           alt="Picture of the author"
           width={500}
           height={500}
      />
+     </div>
      <div className='ml-5'>
           <h4 className='text-2xl'>For Medical</h4>
           <ul>
@@ -42,13 +46,15 @@ const Passion = () => {
      </div>
       </div>
       <div className={style.singlePassion}>
-      <Image
-          className='tourImg'
+      <div className={style.passionImgWrap}>
+     <Image
+          className={style.tourImg}
           src={man}
           alt="Picture of the author"
           width={500}
           height={500}
      />
+     </div>
      <div className='ml-5'>
           <h4 className='text-2xl'>For Job Holder</h4>
           <ul>

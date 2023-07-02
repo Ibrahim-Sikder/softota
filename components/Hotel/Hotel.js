@@ -224,7 +224,7 @@ const Hotel = () => {
         <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel}
+                  src={hotel2}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -250,7 +250,7 @@ const Hotel = () => {
         <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel}
+                  src={hotel3}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -276,7 +276,7 @@ const Hotel = () => {
         <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel}
+                  src={hotel4}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -302,7 +302,7 @@ const Hotel = () => {
         <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel}
+                  src={hotel5}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -328,7 +328,7 @@ const Hotel = () => {
         <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel}
+                  src={hotel6}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -354,7 +354,7 @@ const Hotel = () => {
         <SwiperSlide> 
         <div className={style.trending}>
               <Image
-                  src={hotel}
+                  src={hotel6}
                   alt="Picture of the author"
                   width={500}
                   height={500}

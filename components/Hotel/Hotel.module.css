@@ -132,7 +132,11 @@
     z-index: 999 !important;
   }
   
-  
+  @media only screen and (max-width:1024px){
+    .heroBoxMain{
+     width:98%;
+    }
+  }
   
   @media only screen and (max-width:768px){
     .bannerWrap h2{
@@ -233,7 +237,13 @@
  }
  .swiperImg{
     height:300px !important;
+    transform:scale(1)
  }
+ .swiperImg:hove{
+  height:300px !important;
+  transform:scale(1.5)
+}
+
  .trending img{
      width:100%;
  

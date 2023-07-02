@@ -16,13 +16,19 @@ import { signIn } from "next-auth/react"
 const SignUp = () => {
      const router = useRouter()
 const { createUser, signInWithGoogle} = useContext(AuthContext);
-  const handleSignUp = event => {
+     const [fname, setName] = useState('')
+     const [email, setEmail] = useState('')
+     const [password, setPassword] = useState('') 
+     const [title, setTitle] = useState('')
+     const [loading, setLoading] = useState(false)
 
+  const handleSignUp = event => {
     event.preventDefault();
-    const fname = event.target.fname.value;
+    const name = event.target.fname.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
-    console.log(fname,email,password)
+    const post  = {name: name, email, password}
+    console.log(post)
 
     createUser(email, password)
             .then(result => {
@@ -35,6 +41,24 @@ const { createUser, signInWithGoogle} = useContext(AuthContext);
             .catch(err => {
                 console.error(err)
             })
+
+            try{
+               fetch('/api/hello',{
+                method: 'POST',
+                headers:{
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(post)
+              })
+              .then(res=>res.json())
+              .then(data=>setTitle(data))
+            }
+            catch(err){
+              console.log(err)
+            }
+            finally{
+              setLoading(false)
+            }
     
  }
 
@@ -73,18 +97,18 @@ async function handleGithubSignIn(){
                     <form onSubmit={handleSignUp}>
                     <div className='mb-5'>
                           <label className={style.inputLabel}>User Name</label> <br/>
-                          <input name='fname' type='text'  placeholder='User Name' className={style.loginInput}/>
+                          <input onChange={(event)=>setName(event.target.value)} name='fname' type='text'  placeholder='User Name' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
                           <label className={style.inputLabel}>Email Address</label> <br/>
-                          <input type='email' name='email' placeholder='Email' className={style.loginInput}/>
+                          <input onChange={(event)=>setEmail(event.target.value)} type='email' name='email' placeholder='Email' className={style.loginInput}/>
                           </div>
                           <div className='mb-5'>
                           <label className={style.inputLabel}>Password</label> <br/>
-                          <input type='password' name='password' placeholder='Password' className={style.loginInput}/>
+                          <input onChange={(event)=>setPassword(event.target.value)} type='password' name='password' placeholder='Password' className={style.loginInput}/>
                           </div>
                           <div className='mb-5 ml-16 mt-10'>
-                               <button className={style.loginBtn} type='submit'>Sign Up</button>
+                               <button className={style.loginBtn} type='submit' >Sign Up</button>
                           </div>
                           <div className='flex items-center '>
                                <p className={style.devided}></p>

@@ -1,11 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import style from './Header.module.css';
 import logo from '../../public/logo.png'
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaPlaneArrival, FaPlaneDeparture} from "react-icons/fa";
+import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
 const Header = () => {
     const [active, setActive] = useState(0)
+    const {user, logout} = useContext(AuthContext)
+    console.log(user)
+
+    const handleLogOut = () => {
+     logout()
+       .then(() => { })
+       .catch((error) => console.error(error));
+   };
+
+
   return (
     <div className={style.header}>
      <div className={style.headerWrap}>
@@ -30,7 +41,16 @@ const Header = () => {
           <input placeholder='Search Flight, Hotel, Visa'/>
      </div>
      <div className={style.inputBox}>
-     <Link href='/login'> <button className={style.loginBtn}>Login</button></Link>
+         {
+
+          user?.uid ?  
+          <Link href='/login'> <button onClick={handleLogOut} className={style.loginBtn}>Log Out</button></Link>
+
+          :
+
+          <Link href='/login'> <button className={style.loginBtn}>Login</button></Link>
+
+         }
      <Link href='/signup'> <button className={style.signupBtn}>Sign Up</button></Link>
      </div>
      </div>

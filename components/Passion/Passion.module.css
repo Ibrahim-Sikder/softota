@@ -18,8 +18,20 @@
 .singlePassion ul li{
     margin-bottom:15px;
 }
+.passionImgWrap{
+     width:500px;
+     height:300px;
+     overflow: hidden;
+     
+}
 .tourImg{
      height:500px !important;
+     transform:scale(1);
+     transition:.5s ease-in-out;
+     object-fit: cover;
+}
+.tourImg:hover{
+     transform:scale(1.5)
 }
 
 
@@ -36,6 +48,15 @@
      .singlePassion ul, .singlePassion h4{
          margin-left:-110px;
      }
+     .passionImgWrap{
+          width:350px;
+          height:250px;
+
+     }
+     .singlePassion ul, .singlePassion h4 {
+          margin-left: 0px;
+      }
+     
    
    }
    @media only screen and (max-width:768px){
