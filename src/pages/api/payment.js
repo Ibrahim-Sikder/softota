@@ -13,17 +13,21 @@ const is_live = false //true for live, false for sandbox
 const blog = async (req, res) =>{
 
      const productCollection = db.collection('payment')
+     
      if(req.method == "GET"){
           res.send({name: 'Ibrahim Sikder'})
      }
+     
      else if(req.method == "POST"){
       const product = productCollection.findOne({ _id: new ObjectId(req.body.productId )});
+      const tran_id = new ObjectId().toString()
+      const order = req.body;
       console.log(product)
           const post = req.body;
           const data = {
-            total_amount: 100,
-            currency: 'BDT',
-            tran_id: 'REF123', // use unique tran_id for each api call
+            total_amount: product?.price,
+            currency: order?.currency,
+            tran_id: tran_id, // use unique tran_id for each api call
             success_url: 'http://localhost:3030/success',
             fail_url: 'http://localhost:3030/fail',
             cancel_url: 'http://localhost:3030/cancel',
@@ -32,8 +36,8 @@ const blog = async (req, res) =>{
             product_name: 'Computer.',
             product_category: 'Electronic',
             product_profile: 'general',
-            cus_name: 'Customer Name',
-            cus_email: 'customer@example.com',
+            cus_name: order?.fname,
+            cus_email: order?.email,
             cus_add1: 'Dhaka',
             cus_add2: 'Dhaka',
             cus_city: 'Dhaka',
@@ -51,13 +55,13 @@ const blog = async (req, res) =>{
             ship_country: 'Bangladesh',
         };
 
-        // const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
-        // sslcz.init(data).then(apiResponse => {
-        //     // Redirect the user to payment gateway
-        //     let GatewayPageURL = apiResponse.GatewayPageURL
-        //     res.redirect(GatewayPageURL)
-        //     console.log('Redirecting to: ', GatewayPageURL)
-        // });
+        const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
+        sslcz.init(data).then(apiResponse => {
+            // Redirect the user to payment gateway
+            let GatewayPageURL = apiResponse.GatewayPageURL
+            res.redirect({url:GatewayPageURL})
+            console.log('Redirecting to: ', GatewayPageURL)
+        });
 
         
      }

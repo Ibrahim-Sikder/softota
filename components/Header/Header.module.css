@@ -50,6 +50,11 @@
  .loginBtn{
      background:#4AB449;
      color:white;
+     transition:all .5s ease-in-out;
+ }
+ .loginBtn:hover{
+     background:#26ADE2;
+
  }
  .inputBox{
      margin-right: 35px;
@@ -57,6 +62,10 @@
  .signupBtn{
      background:#26ADE2;
      color:white;
+     transition:all .5s ease-in-out;
+ }
+ .signupBtn:hover{
+     background:#4AB449;
  }
 
 /* toggle nav styling  */
@@ -136,6 +145,13 @@
                width: 100px;
                border-radius: 5px;
                background: white;
+               animation:all 3.s ease-in-out;
+          }
+          .loginBtn:hover{
+               background:white !important;
+               color:black;
+
+
           }
           .signupBtn{
                background: #26ADE2;

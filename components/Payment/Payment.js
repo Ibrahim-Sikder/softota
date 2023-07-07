@@ -13,10 +13,10 @@ const Payment = () => {
      const [email, setEmail] = useState('')
      const [password, setPassword] = useState('')
      const [number, setNumber] = useState('')
-     const [gender, setGender] = useState('')
-     const [date, setDate] = useState('')
-     const [nationality, setNationality] = useState('')
-     const [bkash, setBkash] = useState('')
+     const [price, setPrice] = useState('')
+     const [address, setAddress] = useState('')
+     const [currency, setCurrency] = useState('')
+     const [postcode, setPostcode] = useState('')
      const [title, setTitle] = useState('')
      const [loading, setLoading] = useState(false)
 
@@ -25,18 +25,19 @@ const Payment = () => {
           const fname = event.target.fname.value;
           const lname = event.target.lname.value;
           const number = event.target.number.value;
-          const nationality = event.target.nationality.value;
-          const gender = event.target.gender.value;
-          const date = event.target.date.value;
+          const currency = event.target.currency.value;
+          const price = event.target.price.value;
+          const address = event.target.address.value;
           const email = event.target.email.value;
           const password = event.target.password.value;
-          const bkash = event.target.bkash.value;
-          const payment  = {fname, lname, number, nationality, gender, date, email, password, bkash}
+          const postcode = event.target.postcode.value;
+          const payment  = {fname, lname, number, currency, price, address, email, password, postcode}
           console.log(payment)
+          // event.productId = id;
 
           
           try{
-               fetch('/api/payment',{
+               fetch('http://localhost:5000/payment',{
                 method: 'POST',
                 headers:{
                   'Content-Type': 'application/json'
@@ -44,7 +45,10 @@ const Payment = () => {
                 body: JSON.stringify(payment)
               })
               .then(res=>res.json())
-              .then(data=>setTitle(data))
+               .then(data=>{
+                    console.log(data)
+                    window.location.replace(data.url)
+               })
             }
             catch(err){
               console.log(err)
@@ -85,24 +89,40 @@ const Payment = () => {
                     <input onChange={(event)=>setNumber(event.target.value)} type='number' className={style.paymentBtn} name='number' placeholder='Mobile Number'/>
                     </div>
                     <div>
-                    <label>Gender</label> <br/>
-                    <input onChange={(event)=>setGender(event.target.value)} type='text' className={style.paymentBtn} name='gender' placeholder='Gender'/>
+                    <label>Price</label> <br/>
+                    <input onChange={(event)=>setPrice(event.target.value)} type='number' className={style.paymentBtn} name='price' placeholder='Price'/>
                     </div>
                </div> 
                <div className={style.singlePayment}>
                     <div>
-                    <label>Date of Birth </label> <br/>
-                    <input onChange={(event)=>setDate(event.target.value)} type='date' className={style.paymentBtn} name='date' placeholder='Date of Birth'/>
+                    <label>Address </label> <br/>
+                    <input onChange={(event)=>setAddress(event.target.value)} type='text' className={style.paymentBtn} name='address' placeholder='Address'/>
+                    
                     </div>
-                    <div>
+                    {/* <div>
                     <label>Nationality </label> <br/>
                     <input onChange={(event)=>setNationality(event.target.value)} type='text' className={style.paymentBtn} name='nationality' placeholder='Nationality '/>
+                    </div> */}
+                     <div>
+                    <label>Currency </label> <br/>
+                    <select className={style.paymentBtn} onChange={(event)=>setCurrency(event.target.value)} name="currency" id="">
+                         <option value="BDT">BDT</option>
+                         <option value="USA">USA</option>
+                    </select>
+                   
+                    </div>
+               </div>
+               <div className={style.singlePayment}>
+                    <div>
+                    <label>Post Code  </label> <br/>
+                    <input onChange={(event)=>setPostcode(event.target.value)} type='number' className={style.paymentBtn} name='postcode' placeholder='Post Code '/>
+                    
                     </div>
                </div>
                <div className={style.payments}>
-               <div>
-                    <h3 className='w-full mx-auto pl-12 mb-5'>Select your Payment mathod</h3>
-                    <div className='flex items-center justify-center flex-wrap'>
+               {/* <div> */}
+                    {/* <h3 className='w-full mx-auto pl-12 mb-5'>Select your Payment mathod</h3> */}
+                    {/* <div className='flex items-center justify-center flex-wrap'>
                          <div className={style.method}>
                          <Image
                               src={payment}
@@ -143,13 +163,13 @@ const Payment = () => {
                               height={50}
                           />
                          </div>
-                    </div>
-               </div>
-               <div className='mb-5'>
+                    </div> */}
+               {/* </div> */}
+               {/* <div className='mb-5'>
                     <lable>Bkash</lable> <br/>
                     <input onChange={(event)=>setBkash(event.target.value)} type='number' className={style.bkash} placeholder='Enter Your Number' name='bkash'/>
-               </div>
-               <div className={style.bkashText}>
+               </div> */}
+               {/* <div className={style.bkashText}>
                <h4>Tatal amount = BDT 23,650</h4>
                <span className='text-[#6EC36D]'>(Price includes VAT & Tax)</span>
                </div>
@@ -161,7 +181,7 @@ const Payment = () => {
                    height={10}
                     />
                     <p> I have read and accept the <span className='text-[#6EC36D]'>Terms and Conditions.</span></p>
-               </div>
+               </div> */}
                <button type='submit' className={style.termBtn}>Send your payment</button>
           </div>
 

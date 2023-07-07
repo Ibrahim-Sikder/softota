@@ -69,6 +69,10 @@
   font-size: 18px;
   border-radius: 5px;
   padding: 16px 55px;
+  transition:all .5s ease;
+}
+.heroBoxBtn:hover{
+  background:#4AB449;
 }
 /* menu styling  */
 .menu{
