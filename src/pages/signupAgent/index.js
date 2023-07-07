@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React, { useContext, useState } from 'react';
 import login from '../../../public/agent.png';
-import google from '../../../public/google.png';
 import facebook from '../../../public/facebook.png';
 import { useRouter } from 'next/router';
 import { toast } from 'react-hot-toast';

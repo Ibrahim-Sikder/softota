@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import style from './Login.module.css'
 import Image from 'next/image';
 import login from '../../public/login.png';
-import google from '../../public/google.png';
 import facebook from '../../public/facebook.png';
 import Link from 'next/link';
 import { signIn } from "next-auth/react"
@@ -95,13 +94,13 @@ const Login = () => {
                     <div className='flex justify-between mt-32 w-32 mx-auto'>
                     <div className={style.circle}>
                     <button type='button' onClick={handleGoogleSignIn}>
-                    <Image
+                    {/* <Image
                          src={google}
                          alt="Picture of the author"
                          width={40}
                          height={20}
                          
-                    /> 
+                    />  */}
                     </button>
                     </div>
                     <div className={style.circle}>

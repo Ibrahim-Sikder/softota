@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import React, { useContext } from 'react'
 import agent from '../../public/agent.png';
-import google from '../../public/google.png';
 import facebook from '../../public/facebook.png';
 import style from './LoginAgent.module.css'
 import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
@@ -94,13 +93,13 @@ const LoginAgent = () => {
                           <div className={style.circle}>
                           
                          <button type='submit' onClick={handleGoogleSignIn}>
-                         <Image
+                         {/* <Image
                                src={google}
                                alt="Picture of the author"
                                width={40}
                                height={20}
                                
-                          /> 
+                          />  */}
                          </button>
                           </div>
                           <div className={style.circle}>
