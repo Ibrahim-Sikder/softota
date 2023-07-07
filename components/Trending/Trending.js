@@ -1,6 +1,6 @@
 import React from "react";
 import style from './Trending.module.css'
-import trending from '../../public/Trending.png'
+// import trending from '../../public/Trending.png'
 import hotel2 from '../../public/hotel1.png'
 import hotel from '../../public/hotel3.png'
 
@@ -19,13 +19,13 @@ const Trending = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 ">
         <div className={style.trending}>
-        <Image
+        {/* <Image
             src={trending}
             alt="Picture of the author"
             width={500}
             height={500}
             className={style.trendingImg}
-            />
+            /> */}
           {/* <img src={trending} className="w-full" alt="" /> */}
           <div className="w-full flex justify-between px-5">
             <div>
