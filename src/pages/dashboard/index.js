@@ -1,10 +1,10 @@
 import React from 'react'
-import DashBoard from '../../../components/DashBoard/DashBoard'
+import UserDashBoard from '../../../components/UserDashBoard/UserDashBoard'
 
 const index = () => {
   return (
     <section>
-      <DashBoard></DashBoard>
+      <UserDashBoard></UserDashBoard>
     </section>
   )
 }

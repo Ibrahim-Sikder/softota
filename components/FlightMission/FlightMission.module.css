@@ -87,7 +87,7 @@
   
      .missionBox {
        overflow: hidden;
-       height:500px;
+       
      }
    
      .missionBox img{
@@ -96,8 +96,8 @@
      }
    
      .missionBox p {
-       left: 54%;
-       top: 5%;
+      left: 54%;
+      top: 52%;
        
      }
      

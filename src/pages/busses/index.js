@@ -5,31 +5,17 @@ import Travel from '../../../components/Travel/Travel'
 import Trending from '../../../components/Trending/Trending'
 import Customer from '../../../components/Customer/Customer'
 import { getSession, signIn } from 'next-auth/react';
+import Tour from '../../../components/Tour/Tour'
+import TourDestination from '../../../components/Tour/TourDestination'
+import BestPlace from '../../../components/BestPlace/BestPlace'
 
 const Busses = () => {
-  const [loading, setLoading] = useState(true)
-  useEffect(()=>{
-    const securePage = async()=>{
-      const session = await getSession()
-      if(!session){
-        signIn()
-      }
-      else{
-        setLoading(false)
-      }
-    }
-    securePage()
-  },[])
-
-  if(loading){
-    return <h2>Loading.....</h2>
-  }
+  
   return (
     <div>
-      <TrainBanner></TrainBanner>
-    <Places></Places>
+      <Tour></Tour>
     <Travel></Travel>
-    <Trending></Trending>
+    <TourDestination></TourDestination>
     <Customer></Customer>
     </div>
   )

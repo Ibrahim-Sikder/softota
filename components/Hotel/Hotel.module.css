@@ -55,7 +55,7 @@
     border: 1px solid #4AB449;
     padding-left: 10px;
     top: 187px;
-    left: 130px;
+    left: 122px;
     height: 65px;
     width:207.5px;
   }
@@ -66,32 +66,33 @@
     border: 1px solid #4AB449;
     padding-left: 10px;
     top: 187px;
-    left: 339px;
+    left: 328px;
     height: 65px;
     width:207.5px;
   }
   .package{
     top:100px;
-    left:130px;
+    left: 125px;
   }
 
   .package2{
-    right:130px;
-    top:100px;
+    right: 131px;
+    top: 100px;
   
 
   }
+
   .package3{
     top:187px;
-    left:130px;
+    left:125px;
 
   }
   .package4{
     top:187px;
-    right:130px;
+    right: 131px;
   }
   .package, .package2 h4{
-    font-size:20px;
+    font-size:18px;
   }
   .packageBtn{
     border-bottom: 2px solid #4AB449;
@@ -177,7 +178,7 @@
     
   
   }
-  @media only screen and (max-width:500px){
+  /* @media only screen and (max-width:500px){
     .bannerWrap{
      height:500px;
     }
@@ -208,7 +209,7 @@
   }
    
   
-  }
+  } */
 
 /* hotel styling */
 
@@ -216,6 +217,7 @@
      width:1100px;
     margin-left:250px;
      overflow: hidden;
+     margin-bottom:100px;
  }
  .trendingHead{
      width:800px;
@@ -226,17 +228,18 @@
    
  }
 
- .trending{
-     height: 500px;
-     background: #FFFFFF;
-     box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
-     padding:10px;
-     width:280px;
-     margin-right:30px;
-     overflow: hidden;
- }
+
+ .tourTrending{
+  height: 500px;
+    background: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width:280px;
+    margin: 0 auto;
+    
+
+}
  .swiperImg{
-    height:300px !important;
+    height:280px !important;
     transform:scale(1)
  }
  .swiperImg:hove{
@@ -269,78 +272,47 @@
  line-height: 24px;
  color: #738187;
  }
- .trending .city{
- height: 54px;
- background: #E5F8FF;
- border-radius: 0px 0px 5px 5px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- padding:0px 10px;
- font-family: 'Poppins';
- font-style: normal;
- font-weight: 500;
- font-size: 20px;
- line-height: 30px;
- }
- .trending h6{
- font-family: 'Poppins';
- font-style: normal;
- font-weight: 500;
- font-size: 20px;
- line-height: 30px;
- display: flex;
- align-items: center;
- text-align: center;
- color: #092E3D;
- }
- .trending p{
- font-family: 'Poppins';
- font-style: normal;
- font-weight: 500;
- font-size: 16px;
- line-height: 24px;
- display: flex;
- align-items: center;
- text-align: center;
- color: #092E3D;
- }
- .trending span{
- font-family: 'Poppins';
- font-style: normal;
- font-weight: 400;
- font-size: 16px;
- line-height: 24px;
- display: flex;
- align-items: center;
- text-align: center;
- color: #4AB449;
- }
- .trending button{
- width: 160px;
- height: 46px;
- background: #4AB449;
- border-radius: 5px;
- color: #E6F8FF;
- font-family: 'Poppins';
- font-style: normal;
- font-weight: 500;
- font-size: 16px;
- line-height: 24px;
- margin-top:20px;
- }
 
-.night{
-width: 75px;
-height: 40px;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-background: #E5F8FF;
-padding:5px;
- }
 
+
+ .bestPlaceHead{
+  width:650px;
+  margin:50px auto;
+  text-align:center;
+}
+.bestPlaceHead h2{
+  font-size:35px;
+  font-weight:bold;
+  color:#092E3D;
+}
+.bestPlaceHead p{
+  color:#738187;
+  line-height:26px;
+  font-size:18px;
+  margin-top:15px;
+}
+.pricePackage{
+  text-align: center;
+}
+.pricePackage h6{
+  font-size:20px;
+  padding-left:5px;
+}
+.pricePackage span{
+  padding-left:5px;
+}
+
+.viewDetailBtn button{
+  background: #4AB449;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  margin-top: 30px;
+  padding: 10px 40px;
+  margin-left: 60px;
+  color: white;
+  border-radius:5px;
+}
  
  @media only screen and (max-width:1024px){
      .destination{
@@ -349,8 +321,8 @@ padding:5px;
      }
  
      .trending{
-         height: 430px;
-         width:100% !important;
+          height: 446px;
+         width:257px;
          margin-bottom:20px;
          padding:0px;
      }
@@ -369,22 +341,19 @@ padding:5px;
  }
  @media only screen and (max-width:768px){
     .destination{
-        width:100%;
-        margin-left:0px;
-    }
-    .destination{
         width:100%x;
        margin-left:0px;
     }
     .trending{
-        height: 400px;
+      height: 471px;
     }
+ 
     .heroBoxMain{
      height:439px;
     }
     .package2, .package{
       top: 194px;
-      width: 230px;
+      width: 253px;
   
     }
     .package4{
@@ -420,7 +389,12 @@ padding:5px;
   .package input, .package2 input{
     font-size:14px;
   }
+  .bestPlaceHead{
+   
+    width: 100%;
+    margin-top: 129px;
 
+  }
  
   
  }
@@ -438,7 +412,7 @@ padding:5px;
       margin-bottom: 300px;
   }
   .heroBoxMain{
-    height: 600px;
+    height: 661px;
   }
   .heroBoxBtn {
     top: 540px;
@@ -483,6 +457,12 @@ padding:5px;
 .date2{
   position: absolute;
   left: 203px;
+}
+.bestPlaceHead{
+   
+  width: 100%;
+  margin-top: 387px;
+
 }
 
  }

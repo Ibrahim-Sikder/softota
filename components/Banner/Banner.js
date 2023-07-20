@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Banner.module.css";
 import Image from "next/image";
 import banner from '../../public/banner.png'
@@ -20,7 +20,7 @@ const Banner = () => {
           <div className={style.package}>
             <div className={style.packageWrap}>
             <button className={style.packageBtn}>Hajj Packages </button>
-            <button>Ummra Packages</button>
+            <button >Ummra Packages</button>
             </div>
           </div>
           <button className={style.heroBoxBtn}>Get Your Offers</button>

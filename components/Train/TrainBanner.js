@@ -101,11 +101,11 @@ const TrainBanner = () => {
                     <div className={style.travelFormDouble}>
                          <div className={style.singleTravel}>
                          <label>Depart To </label><br />
-                          <input type="text" placeholder='dd---yyyy' />
+                          <input type="date"  />
                          </div>
                          <div className={style.singleTravel}>
                          <label>Return To </label><br />
-                          <input type="text" placeholder='dd---yyyy' />
+                          <input type="date" />
                          </div>
                     </div>
                     <div className={style.travelForm}>

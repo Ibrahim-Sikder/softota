@@ -1,0 +1,159 @@
+
+.sideBarWrap{
+     display:grid;
+     grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+.leftSideBar{
+grid-column: span 2 / span 2;
+}
+.rightSideBar{
+     grid-column: span 10 / span 10;
+}
+.dasBoardTop{
+     display:flex;
+     justify-content: space-between;
+     padding:10px;
+}
+.dasBoardTop input{
+     border: 1px solid #ddd;
+     width:300px;
+     padding-left:30px;
+}
+.logo{
+     margin-right:20px;
+}
+.logoWrap{
+     display:flex;
+     position:relative;
+}
+.searchIcon{
+     position: absolute;
+     left: 106px;
+     top: 7px;
+}
+.userWrap{
+     display:flex;
+     width:230px;
+     justify-content: space-between;
+}
+
+/* dashboard left side styling  */
+.dashBoardLeftSide{
+     background:#29566A;
+     width:220px;
+     height:1024px;
+
+}
+.leftSideWrap{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items:center;
+     padding-top:20px;
+}
+.bookingIcon{
+     display:flex;
+     justify-content: space-between;
+     cursor:pointer;
+} 
+.bookingIcon h5{
+     color:white;
+     margin-bottom:5px;
+     
+}
+.bookingIcon span{
+     margin-left:15px;
+     display: block;
+     margin-top:5px;
+     color:#fff;
+}
+
+.bookingList{
+     /* background:#1C4354 !important; */
+     margin:0 auto;
+     text-align: center;
+     position:relative;
+     padding-left:20px;
+}
+.bookingList li{
+     position:relative;
+     margin-bottom:10px;
+     color:white;
+     margin-bottom:20px;
+}
+.bookingList li:nth-child(6){
+     margin-bottom:0px !important;
+}
+.bookingList li::before{
+     content: attr(data-counter);
+     position: absolute;
+     top: 0;
+     width: 10px;
+     left: -25px;
+     line-height: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: #26ADE2;
+     text-align: center;
+
+}
+.bookingList::before{
+     content:'';
+     position:absolute;
+     top:0;
+     left:0;
+     width:1px;
+     background:white;
+     height:100%;
+}
+.profileInfo{
+     text-align:left;
+     width: 100%;
+     margin-top:30px;
+}
+.profileInfo span{
+     font-size:14px;
+     text-align:left ;
+     margin-left:10px;
+}
+.profileInfoIcon{
+     color:white;
+}
+
+.profileInfo li{
+     display:flex;
+     color:white;
+     margin-bottom:20px;
+     text-align:left !important;
+     margin-left:0;
+     padding:0;
+}
+.userService{
+     margin-top:230px;
+     margin-left:-30px;
+
+}
+
+/* Right side styling  */
+
+
+/* media query styling */
+@media only screen and (max-width:768px){
+     .sideBarWrap{
+          display:block;
+          
+     }
+     .leftSideBar{
+     grid-column: span 2 / span 2;
+     }
+     .rightSideBar{
+          grid-column: span 10 / span 10;
+     }
+     .dashBoardLeftSide {
+          background: #29566A;
+          width: 328px;
+          height: 1024px;
+          margin: 0 auto;
+      }
+
+}

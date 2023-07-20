@@ -10,9 +10,21 @@ import flight from '../../public/flight.png'
 import hotel from '../../public/hotel.png'
 import vissa from '../../public/vissa.png'
 import { FaSistrix } from "react-icons/fa";
+import hotel2 from '../../public/hotel5.png'
+import hotel3 from '../../public/hotel6.png'
+import hotel6 from '../../public/hotel7.png'
+import hotel4 from '../../public/hotel8.png'
+import hotel5 from '../../public/hotel8.png'
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import {autoplay, FreeMode, Pagination,Autoplay,Navigation } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import BestPlace from '../BestPlace/BestPlace'
 const Tour = () => {
      return (
-          <div className={style.train}>
+         <div>
+           <div className={style.train}>
              <div className={style.bannerWrap}>
               <h2>Welcome to Ghuronti! Find Tours, <br className={style.block} /> Flights & Hotels Packages</h2>
               <div className={style.heroBoxMain}>
@@ -63,7 +75,7 @@ const Tour = () => {
                     width={30}
                     height={30}
                     />
-                   <Link href='/tours'><p className='ml-3'>Tour</p></Link>
+                   <Link href='/tours'><p className='ml-3'>Tours</p></Link>
                    </li>
                    <li>
                    <Image
@@ -92,11 +104,11 @@ const Tour = () => {
                     <div className={style.travelFormDouble}>
                          <div className={style.singleTravel}>
                          <label>Depart To </label><br />
-                          <input type="text" placeholder='dd---yyyy' />
+                          <input type="date" />
                          </div>
                          <div className={style.singleTravel}>
                          <label>Return To </label><br />
-                          <input type="text" placeholder='dd---yyyy' />
+                          <input type="date" />
                          </div>
                     </div>
                     <div className={style.travelForm}>
@@ -111,6 +123,7 @@ const Tour = () => {
               </div>
           </div>
           </div>
+         </div>
         )
 }
 

@@ -94,7 +94,7 @@
      padding-left:5px;
    }
    .singleTravel input{
-     width:100px;
+     width:98%;
    }
    
    .searchTrainBtn{
@@ -111,6 +111,81 @@
      transform: translateX(-50%);
      border-radius:5px;
    }
+
+   .trending{
+    height: 364px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
+    width:280px;
+    margin-right:30px;
+    overflow: hidden;
+}
+.tourTrending{
+  height: 500px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
+    width:280px;
+    margin-right:30px;
+    overflow: hidden;
+
+}
+.bestPlaceHead{
+  width:650px;
+  margin:50px auto;
+  text-align:center;
+}
+.bestPlaceHead h2{
+  font-size:35px;
+  font-weight:bold;
+  color:#092E3D;
+}
+.bestPlaceHead p{
+  color:#738187;
+  line-height:26px;
+  font-size:18px;
+  margin-top:15px;
+}
+.bestPlace{
+  background:#E5F8FF;
+  display:flex;
+  justify-content: space-between;
+  padding:25px 10px;
+  align-items: center;
+}
+.swiperImg{
+   height:300px !important;
+   transform:scale(1)
+}
+.swiperImg:hove{
+ height:300px !important;
+ transform:scale(1.5)
+}
+.destination{
+  width:1100px;
+ margin-left:250px;
+  overflow: hidden;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+.pricePackage{
+  text-align: center;
+}
+.pricePackage h6{
+  font-size:20px;
+  padding-left:5px;
+}
+.pricePackage span{
+  padding-left:5px;
+}
+.viewDetailBtn button{
+  background: #4AB449;
+  place-content: center;
+  place-items: center;
+  margin-top: 30px;
+  padding: 12px 30px;
+  margin-left: 54px;
+  color: white;
+}
    
    
    @media only screen and (max-width:1024px){
@@ -128,6 +203,10 @@
          margin-bottom:150px;
      
        }
+       .destination{
+        width:100%;
+        margin-left:0px;
+    }
         
    }
    
@@ -203,6 +282,15 @@
    .singleTravel{
      width:200px;
    }
+   .destination{
+    width:100%;
+   margin-left:0px;
+}
+.bestPlaceHead{
+  width:100%;
+}
+
+
    }
      
    @media only screen and (max-width:500px){
@@ -270,7 +358,18 @@
      height: 100%;
      background: none;
  }
-   
+ .destination{
+  width:100%;
+}
+.bestPlaceHead{
+  width:100%;
+}
+
+.tourTrending{
+width:100%;
+
+}
+
     
    }
    

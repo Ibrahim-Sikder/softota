@@ -24,8 +24,8 @@
     margin: 0 auto;
     font-style: normal;
     font-weight: 500;
-    font-size: 23px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 28px;
     color: #738187;
     padding-bottom: 40px;
    }
@@ -70,7 +70,8 @@
        padding:10px;
      }
      .customer p{
-       width:680px;
+      width: 100%;
+      line-height: 32px;
      }
    
     
