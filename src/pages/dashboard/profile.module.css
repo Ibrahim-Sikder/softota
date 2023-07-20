@@ -123,6 +123,8 @@
      margin:0px 5px;
 }
 
+/* transaction styling */
+
 .transaction{
      width:340px;
      display:flex;
@@ -138,6 +140,26 @@
      border-radius:5px;
 }
 .transaction span{
+     margin-right:10px;
+     margin-left:10px;
+}
+
+/* passenger styling  */
+.passenger{
+     width:500px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.passenger button{
+     background:#04A444;
+     padding:5px 10px;
+     color:white;
+     font-size:15px;
+     border-radius:5px;
+}
+.passenger span{
      margin-right:10px;
      margin-left:10px;
 }
