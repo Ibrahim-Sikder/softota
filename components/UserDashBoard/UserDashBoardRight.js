@@ -4,11 +4,11 @@ const UserDashBoardRight = () => {
   return (
     <div>
     
-      <div className="overflow-x-auto w-full h-screen">
-  <table className="table table-xs">
+      <div className="overflow-x-auto ">
+  <table className="table  lg:table-auto columns-xl break-after-column">
     <thead className={style.tableWrap}>
       <tr>
-        <th>Agency Code </th> 
+        <th >Agency Code </th> 
         <th>Booked By</th> 
         <th>Hotel Name </th> 
         <th>City </th> 
@@ -20,10 +20,14 @@ const UserDashBoardRight = () => {
         <th>Check In </th> 
         <th>Check Out </th> 
         <th>Detail </th> 
+        <th>Call</th>
+        <th>Check Out </th> 
+        <th>Detail </th> 
         <th>Call</th> 
       </tr>
+
     </thead> 
-    <tbody className={style.tableRowWrap}>
+    <tbody>
       <tr>
       <td>056XNH</td>
         <td >Globa04</td> 
@@ -35,6 +39,9 @@ const UserDashBoardRight = () => {
         <td>Yes</td> 
         <td>GT6797234</td> 
         <td>29 Mar 2023 16:08</td>
+        <td>29 Mar 2023 16:08</td> 
+        <td>View</td> 
+        <td>Call</td>
         <td>29 Mar 2023 16:08</td> 
         <td>View</td> 
         <td>Call</td> 
@@ -52,19 +59,7 @@ const UserDashBoardRight = () => {
         <td>29 Mar 2023 16:08</td>
         <td>29 Mar 2023 16:08</td> 
         <td>View</td> 
-        <td>Call</td> 
-      </tr>
-      <tr>
-      <td>056XNH</td>
-        <td >Globa04</td> 
-        <td>Golden Inn Ltd</td> 
-        <td>Chittagong</td>
-        <td> Bangladesh</td> 
-        <td>056XNH</td> 
-        <td>57590</td> 
-        <td>Yes</td> 
-        <td>GT6797234</td> 
-        <td>29 Mar 2023 16:08</td>
+        <td>Call</td>
         <td>29 Mar 2023 16:08</td> 
         <td>View</td> 
         <td>Call</td> 
@@ -82,19 +77,7 @@ const UserDashBoardRight = () => {
         <td>29 Mar 2023 16:08</td>
         <td>29 Mar 2023 16:08</td> 
         <td>View</td> 
-        <td>Call</td> 
-      </tr>
-      <tr>
-      <td>056XNH</td>
-        <td >Globa04</td> 
-        <td>Golden Inn Ltd</td> 
-        <td>Chittagong</td>
-        <td> Bangladesh</td> 
-        <td>056XNH</td> 
-        <td>57590</td> 
-        <td>Yes</td> 
-        <td>GT6797234</td> 
-        <td>29 Mar 2023 16:08</td>
+        <td>Call</td>
         <td>29 Mar 2023 16:08</td> 
         <td>View</td> 
         <td>Call</td> 
@@ -112,6 +95,9 @@ const UserDashBoardRight = () => {
         <td>29 Mar 2023 16:08</td>
         <td>29 Mar 2023 16:08</td> 
         <td>View</td> 
+        <td>Call</td>
+        <td>29 Mar 2023 16:08</td> 
+        <td>View</td> 
         <td>Call</td> 
       </tr>
       <tr>
@@ -125,13 +111,34 @@ const UserDashBoardRight = () => {
         <td>Yes</td> 
         <td>GT6797234</td> 
         <td>29 Mar 2023 16:08</td>
+        <td>29 Mar 2023 16:08</td> 
+        <td>View</td> 
+        <td>Call</td>
+        <td>29 Mar 2023 16:08</td> 
+        <td>View</td> 
+        <td>Call</td> 
+      </tr>
+       <tr>
+      <td>056XNH</td>
+        <td >Globa04</td> 
+        <td>Golden Inn Ltd</td> 
+        <td>Chittagong</td>
+        <td> Bangladesh</td> 
+        <td>056XNH</td> 
+        <td>57590</td> 
+        <td>Yes</td> 
+        <td>GT6797234</td> 
+        <td>29 Mar 2023 16:08</td>
+        <td>29 Mar 2023 16:08</td> 
+        <td>View</td> 
+        <td>Call</td>
         <td>29 Mar 2023 16:08</td> 
         <td>View</td> 
         <td>Call</td> 
       </tr>
     </tbody> 
   </table>
-</div>
+      </div>
     </div>
   )
 }

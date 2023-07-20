@@ -39,11 +39,13 @@ const UserDashBoardLeft = () => {
                 
                   <li>
                   <FaPlane/>
-                    <span>Partial Payment</span>
+                    <span></span>
+                    <Link href='/dashboard/partial'><span>Partial Payment</span></Link>
                 </li>
                 <li>
                     <FaPlane/>
-                    <span>Void/Return/Change</span>
+                    <span></span>
+                    <Link href='/dashboard/returnChange'><span>Void/Return/Change</span></Link>
                 </li>
                 <li> <Image
                     src={transaction}
@@ -51,7 +53,7 @@ const UserDashBoardLeft = () => {
                     width={10}
                     height={10}
                     />
-                    <span>Transactions</span>
+                    <Link href='/dashboard/transactions'><span>Transactions</span></Link>
                 </li>
                 <li> <Image
                     src={payment}
@@ -59,7 +61,8 @@ const UserDashBoardLeft = () => {
                     width={10}
                     height={10}
                     />
-                    <span>Payment</span>
+                   <Link href='/dashboard/payment'><span>Payment</span></Link>
+                    
                 </li>
                 <li> <Image
                     src={bank}
@@ -67,7 +70,7 @@ const UserDashBoardLeft = () => {
                     width={10}
                     height={10}
                     />
-                    <span>Bank List</span>
+                    <Link href='/dashboard/banklist'><span>Bank List </span></Link>
                 </li>
                 <li>
                   <FaUserAlt/>
@@ -79,7 +82,7 @@ const UserDashBoardLeft = () => {
                     width={10}
                     height={10}
                     />
-                    <span>Quick Passengers</span>
+                    <Link href='/dashboard/passenger'><span>Quick Passengers</span></Link>
                 </li>
                 <li> <Image
                     src={company}
@@ -87,7 +90,7 @@ const UserDashBoardLeft = () => {
                     width={10}
                     height={10}
                     />
-                    <span>Company</span>
+                    <Link href='/dashboard/company'><span>Company</span></Link>
                   
                 </li>
                 </ul>

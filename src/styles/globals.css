@@ -14,3 +14,11 @@ body{
 .layout{
      width:100vw;
 }
+
+.table :where(th, td) {
+     padding-left: 0rem;
+     padding-right: 0rem;
+     padding-top: 0.75rem;
+     padding-bottom: 0.75rem;
+     vertical-align: middle;
+ }

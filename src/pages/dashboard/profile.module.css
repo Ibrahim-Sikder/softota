@@ -60,3 +60,64 @@
      margin-top:50px;
      border-radius:5px;
 }
+.tableWrap{
+     border-collapse: collapse;
+     width:100%;
+}
+.tableWrap th{
+     text-align:left;
+     border-bottom: 1px solid #ddd;
+     width:10px;
+     height:auto;
+}
+.tableWrap td{
+     text-align:left;
+     border-bottom: 1px solid #ddd;
+     width:10px;
+     height:auto;
+}
+
+/* flight styling */
+.flightHistory{
+     background:white;
+     width:100%;
+     height:100%;
+     margin-top:30px;
+}
+
+/* payment styling  */
+
+.paymentBtn{
+     background:#04A444;
+     padding:5px 10px;
+     color:white;
+     font-size:15px;
+     border-radius:5px;
+}
+.payment{
+     width:500px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.payment button{
+     background:#04A444;
+     padding:5px 10px;
+     color:white;
+     font-size:15px;
+     border-radius:5px;
+}
+.payment span{
+     margin-right:5px;
+     margin-left:5px;
+}
+.paymentBtn{
+   background: #26ADE2 !important;
+     margin-right:10px;
+}
+.paymentPage{
+     background:#CFE4F4;
+     padding:5px;
+     margin:0px 5px;
+}

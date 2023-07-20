@@ -85,7 +85,11 @@ const profile = () => {
                          </div>
                     </div>
                </div>
-           </div>
+
+                </div>
+
+
+  
          </div>
         </div>
      );
