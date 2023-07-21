@@ -16,7 +16,7 @@ const UserDashBoardRight = () => {
         <th>Voucher Code </th>
         <th>Total Price </th> 
         <th>Cancellation Policy</th> 
-        <th>Agent Confirmation Status </th> 
+        <th>Agent  Status </th> 
         <th>Check In </th> 
         <th>Check Out </th> 
         <th>Detail </th> 
