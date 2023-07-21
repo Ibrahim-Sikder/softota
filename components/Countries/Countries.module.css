@@ -23,6 +23,11 @@
     width:100%;
   
   }
+  .countryHeadText p{
+    width: 78%;
+    margin: 14px auto;
+  
+  }
   
 }
 

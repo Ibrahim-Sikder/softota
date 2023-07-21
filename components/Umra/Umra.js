@@ -7,10 +7,111 @@ import hajj3 from '../../public/hajj3.png'
 import clock from '../../public/clock.png'
 import Link from 'next/link';
 import Banner from '../Banner/Banner';
+import hotel2 from '../../public/hotel5.png'
+import hotel3 from '../../public/hotel6.png'
+import hotel6 from '../../public/hotel7.png'
+import hotel4 from '../../public/hotel8.png'
+import hotel5 from '../../public/hotel8.png'
+import hotel7 from '../../public/hotel9.png'
+import hotel8 from '../../public/hotel10.png'
+import banner from '../../public/banner.png'
+import NavBar from "../NavBar/NavBar";
+import hajj from '../../public/hajj.png'
+import tour from '../../public/tour.png'
+import train from '../../public/train.png'
+import buss from '../../public/Bus.png'
+import flight from '../../public/flight.png'
+import hotelIcon from '../../public/hotel.png'
+import vissa from '../../public/vissa.png';
 const Umra = () => {
      return (
          <section >
-           <Banner></Banner>
+                {/* banner */}
+          <div className={style.bannerWrap}>
+        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
+        <div className={style.heroBoxMain}>
+         <div className={style.packageWrap}>
+          <div className={style.package2}>
+          <span>Hajj Package </span>
+            <span>Umra Package </span>
+          </div>
+            
+         </div>
+       
+          <button className={style.heroBoxBtn}>Get Your Offers</button>
+
+          {/* menubar */}
+          <div>
+            <ul className={style.menu}>
+             <li>
+             <Image
+              src={hajj}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/hajjUmra'><p className='ml-3'>Hajj & Umrah</p></Link>
+             </li>
+             <li>
+             <Image
+              src={flight}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+                <Link href='/flight'><p className='ml-3'>Flight</p></Link>
+             </li>
+             <li>
+             <Image
+              src={hotelIcon}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/hotel'><p className='ml-3'>Hotel</p></Link>
+             </li>
+             <li>
+             <Image
+              src={vissa}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/vissa'><p className='ml-3'>Vissa</p></Link>
+             </li>
+             <li>
+             <Image
+              src={tour}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+               <Link href='/tours'><p className='ml-3'>Tours</p></Link>
+             </li>
+             <li>
+             <Image
+              src={buss}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/busses'><p className='ml-3'>Buses</p></Link>
+             </li>
+             <li className={style.trainLi}>
+             <Image
+              src={train}
+              alt='menu'
+              width={30}
+              height={30}
+              />
+             <Link href='/train'><p className='ml-3'>Trains</p></Link>
+             </li>
+            </ul>
+          </div>
+
+
+        </div>
+          </div> 
           <section className={style.ummraWrap}>
                <div className=' text-center'>
                     <h2 className='text-3xl bold' >Best Hajj Packages 2023 from bangladesh</h2>

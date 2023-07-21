@@ -1,6 +1,13 @@
-import React, { useState } from "react";
-import style from "./Banner.module.css";
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import React from 'react';
+import hotel2 from '../../public/hotel5.png'
+import hotel3 from '../../public/hotel6.png'
+import hotel6 from '../../public/hotel7.png'
+import hotel4 from '../../public/hotel8.png'
+import hotel5 from '../../public/hotel8.png'
+import hotel7 from '../../public/hotel9.png'
+import hotel8 from '../../public/hotel10.png'
 import banner from '../../public/banner.png'
 import NavBar from "../NavBar/NavBar";
 import hajj from '../../public/hajj.png'
@@ -8,41 +15,34 @@ import tour from '../../public/tour.png'
 import train from '../../public/train.png'
 import buss from '../../public/Bus.png'
 import flight from '../../public/flight.png'
-import hotel from '../../public/hotel.png'
-import vissa from '../../public/vissa.png'
-import Link from "next/link";
 import hotelIcon from '../../public/hotel.png'
-
-const Banner = () => {
-  return (
-    <div>
-      <div className={style.bannerWrap}>
+import vissa from '../../public/vissa.png'
+import style from './Bus.module.css'
+const BusBanner = () => {
+     return (
+          <div>
+              {/* banner */}
+          <div className={style.bannerWrap}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
          <div className={style.packageWrap}>
-         <div className={style.flightGroup}>
-            <span>One Way </span>
-            <span>Round Trip </span>
-            <span>Multiple city </span>
-            <span>Flight Group</span>
-          </div>
          <div className={style.package}>
             <div >
-            <h4>Flying From</h4>
-            <input type="text " placeholder='City or Airport ' />
+            <h4>Travel From </h4>
+            <input type="text " placeholder='Enter your city' />
             </div>
           </div>
           <div className={style.package2}>
             <div>
-            <h4>Flying To </h4>
-            <input type="text " placeholder='City or Airport' />
+            <h4>Travel To </h4>
+            <input type="text " placeholder='Bangladesh' />
             </div>
           </div>
          </div>
          <div className={style.packageWrap}>
          <div className={style.packageDate}>
             <div className={style.date}>
-            <h4>Depart To</h4>
+            <h4>Depart To </h4>
             <input type="date" />
             </div>
             <div className={style.date2}>
@@ -52,7 +52,7 @@ const Banner = () => {
           </div>
           <div className={style.package4}>
             <div>
-            <h4>Passengers & Cabin Class</h4>
+            <h4>Passengers & Seat Class</h4>
             <input type="text "  placeholder='1 person'/>
             </div>
           </div>
@@ -130,9 +130,9 @@ const Banner = () => {
 
 
         </div>
-    </div>
-    </div>
-  );
+    </div> 
+          </div>
+     );
 };
 
-export default Banner; 
+export default BusBanner;

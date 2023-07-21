@@ -8,12 +8,13 @@ import { getSession, signIn } from 'next-auth/react';
 import Tour from '../../../components/Tour/Tour'
 import TourDestination from '../../../components/Tour/TourDestination'
 import BestPlace from '../../../components/BestPlace/BestPlace'
+import BusBanner from '../../../components/BusBanner/BusBanner'
 
 const Busses = () => {
   
   return (
     <div>
-      <Tour></Tour>
+      <BusBanner></BusBanner>
     <Travel></Travel>
     <TourDestination></TourDestination>
     <Customer></Customer>

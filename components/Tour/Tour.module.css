@@ -320,7 +320,8 @@
      top: 255px;
    }
    .bannerWrap h2 {
-     margin-bottom: 15px;
+    margin-bottom: 15px;
+    padding-top: 19px
    }
    .vissaSearchBar input{
      width:205px
@@ -354,9 +355,10 @@
    
    }
    .heroBoxMain{
-     width: 95%;
-     height: 100%;
-     background: none;
+    width: 95%;
+    height: 100%;
+    border-radius: 0px;
+    background: none;
  }
  .destination{
   width:100%;
@@ -369,8 +371,37 @@
 width:100%;
 
 }
-
+.bestPlaceHead p {
+  width: 93%;
+  margin: 0 auto;
+}
     
    }
    
-     
+@media only screen and (max-width:400px){
+  .travelForm {
+    width: 345px;
+    margin-left: 8px;
+}
+.travelFormWrap {
+  width: 100%;
+}
+.singleTravel {
+  width: 150px;
+  margin: 0 auto;
+}
+.travelFormDouble {
+  width: 100%;
+  margin: 0 auto;
+}
+.menu li {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.bannerWrap h2 {
+  width: 86%;
+  margin: 0 auto;
+ 
+}
+
+}

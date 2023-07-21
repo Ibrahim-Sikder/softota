@@ -26,8 +26,8 @@ const UserDashBoardLeft = () => {
               
                <div  className={bookingListShow ? `hidden` : ''}>
                <ul className={style.bookingList}>
-                    <li data-counter=''><Link href='/'>Flight</Link></li>
-                    <li data-counter=''><Link href='/'>Hotel</Link></li>
+                    <li data-counter=''><Link href='/dashboard/flight'>Flight</Link></li>
+                    <li data-counter=''><Link href='/dashboard'>Hotel</Link></li>
                     <li data-counter=''><Link href='/'>Visa</Link></li>
                     <li><Link href='/'>Tours</Link></li>
                     <li><Link href='/'>Buses</Link></li>

@@ -127,7 +127,6 @@ const Hotel = () => {
               width={30}
               height={30}
               />
-             <p className='ml-3'>Busses</p>
              <Link href='/busses'><p className='ml-3'>Buses</p></Link>
              </li>
              <li className={style.trainLi}>

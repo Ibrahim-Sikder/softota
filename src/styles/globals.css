@@ -21,4 +21,31 @@ body{
      padding-top: 0.75rem;
      padding-bottom: 0.75rem;
      vertical-align: middle;
+     text-align: center;
+     width: 71px
  }
+ .table :where(th) {
+     padding-left: 0rem;
+     padding-right: 0rem;
+     padding-top: 0.75rem;
+     padding-bottom: 0.75rem;
+     text-align: center;
+     width: 24px;
+     overflow: hidden;
+     height: 112px;
+     text-align: center;
+     font-size: 14px;
+     
+ }
+ .table :where(th):nth-child(9){
+     width:10px !important;
+
+ }
+ .table :where(td) {
+  border-right:1px solid #ddd;
+     
+ }
+ .table :where(th) {
+     border-bottom:2px solid #04A444;
+        
+    }

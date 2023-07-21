@@ -17,7 +17,7 @@ const Passion = () => {
           height={500}
      />
      </div>
-     <div className='ml-5'>
+     <div className='ml-[52px]'>
           <h4 className='text-2xl'>For Studnet</h4>
           <ul>
                <li className='text-black'>Student ID card Photo Copy</li>
