@@ -1,0 +1,52 @@
+.userInfo{
+     display:flex;
+     justify-content: center;
+     margin-top:50px;
+}
+.uploadImgWrap{
+     display: flex;
+
+}
+.uploadImgWrap button{
+     background: #C9E9C9;
+     color: black;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     margin-right: 48px;
+     padding: 10px 27px;
+     font-size: 20px;
+     border-radius: 4px;
+     font-weight: 500;
+}
+.uploadImgWrap button:nth-child(2){
+     background:#fff;
+}
+.userImg{
+     margin-bottom: 42px;
+     text-align: center;
+     margin-left: 182px;
+}
+.inputBtn{
+     width:400px;
+     margin-right:10px;
+     margin-left:10px;
+}
+.inputGroupWrap{
+     width: 100%;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     margin-top: 30px;
+     
+}
+.saveBtn{
+     display: flex;
+     justify-content: center;
+     margin-top: 37px;
+     margin-bottom: 50px;
+}
+.saveBtn button{
+     background: #26ADE2;
+     padding: 10px 45px;
+     color: white;
+     font-size: 20px;
+}

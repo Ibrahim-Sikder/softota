@@ -1,0 +1,11 @@
+.profileWrap{
+     display:grid;
+     grid-template-columns: repeat(12, minmax(0, 1fr));
+     
+}
+.userProfileLeftSide{
+     grid-column: span 3 / span 3;
+}
+.userProfileRightSide{
+     grid-column: span 9 / span 9;
+}

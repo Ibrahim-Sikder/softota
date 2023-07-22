@@ -24,7 +24,7 @@ const Banner = () => {
             <span>One Way </span>
             <span>Round Trip </span>
             <span>Multiple city </span>
-            <span>Flight Group</span>
+            <span> Group Flight</span>
           </div>
          <div className={style.package}>
             <div >
