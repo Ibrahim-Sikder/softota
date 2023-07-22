@@ -1,9 +1,28 @@
 import React from 'react'
 import style from './UserDashBoard.module.css'
+import {  FaAngleLeft, FaAngleRight, FaCalendarAlt} from 'react-icons/fa';
+import styles from '../../src/pages/dashboard/profile.module.css'
 const UserDashBoardRight = () => {
   return (
     <div>
-    
+        <div className={style.profileTop}>
+       <div className={style.hotelHistory}>
+          <span className='text-[#808FA4]'>Dashboard / Profile </span>
+            <div className='flex justify-between'>
+             <h2 className='text-2xl font-bold text-[#04A444]'>Hotel History</h2>
+               <div className={styles.pages}>
+                <button>Primary Action</button>
+                  <span >Pages</span>
+                  <FaAngleLeft/>
+                  <span>1</span>
+                   <span>2</span>
+                   <span>3</span>
+                   <FaAngleRight/>
+                    <FaCalendarAlt/>
+            </div>
+           </div>
+          </div>
+                        
       <div className="overflow-x-auto ">
   <table className="table  lg:table-auto columns-xl break-after-column">
     <thead className={style.tableWrap}>
@@ -178,6 +197,8 @@ const UserDashBoardRight = () => {
     </tbody> 
   </table>
       </div>
+</div>
+
     </div>
   )
 }

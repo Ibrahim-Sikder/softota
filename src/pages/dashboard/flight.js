@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaSistrix, FaAngleLeft, FaCommentAlt,FaHeadSideCoughSlash ,FaUserCircle,FaEllipsisV} from 'react-icons/fa';
+import { FaSistrix, FaAngleLeft, FaCalendarAlt, FaAngleRight, FaCommentAlt,FaHeadSideCoughSlash ,FaUserCircle,FaEllipsisV} from 'react-icons/fa';
 import logo from '../../../public/logo.png'
 import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLeft';
 import style from '../../../components/UserDashBoard/UserDashBoard.module.css'
@@ -43,7 +43,7 @@ const flight = () => {
                          <div>
                          <span className='text-[#808FA4]'>Dashboard / Profile </span>
                          <div className='flex justify-between'>
-                              <h2 className='text-2xl font-bold '>Flight History</h2>
+                              <h2 className='text-2xl font-bold text-[#04A444]'>Flight History</h2>
                               <div className={styles.pages}>
                                    <button>Primary Action</button>
                                    <span >Pages</span>
@@ -51,6 +51,8 @@ const flight = () => {
                                    <span>1</span>
                                    <span>2</span>
                                    <span>3</span>
+                                   <FaAngleRight/>
+                                   <FaCalendarAlt/>
                               </div>
                          </div>
                          </div>
