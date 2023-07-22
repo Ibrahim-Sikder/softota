@@ -20,8 +20,8 @@ const ProfileLeftSide = () => {
                </div>
                <div className={style.userInfo}>
                   <div>
-                  <Link href=''><p>My Account </p></Link>     
-                   <Link href=''><p>My Booking </p></Link>     
+                  <Link href='/profile'><p>My Account </p></Link>     
+                   <Link href='/profile/booking'><p>My Booking </p></Link>     
                    <Link href=''><p>Change Password </p></Link>     
                    <Link href=''><p>Save Cards </p></Link>     
                    <Link href=''><p>Manage Your Data  </p></Link>
