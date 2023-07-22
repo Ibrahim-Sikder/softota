@@ -22,9 +22,9 @@ const ProfileLeftSide = () => {
                   <div>
                   <Link href='/profile'><p>My Account </p></Link>     
                    <Link href='/profile/booking'><p>My Booking </p></Link>     
-                   <Link href=''><p>Change Password </p></Link>     
-                   <Link href=''><p>Save Cards </p></Link>     
-                   <Link href=''><p>Manage Your Data  </p></Link>
+                   <Link href='/profile/password'><p>Change Password </p></Link>     
+                   <Link href='/profile/saveCard'><p>Save Cards </p></Link>     
+                   <Link href='/profile/manageData'><p>Manage Your Data  </p></Link>
                </div>    
                </div>
                     <div className={style.logOutBtn}>
