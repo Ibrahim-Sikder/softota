@@ -10,6 +10,9 @@ import Customer from '../../components/Customer/Customer'
 import NavBar from '../../components/NavBar/NavBar'
 import { signIn, signOut, useSession } from "next-auth/react"
 import { useState } from 'react'
+import Umra from '../../components/Umra/Umra'
+import TopBar from '../../components/TopBar/TopBar'
+import Footer from '../../components/Footer/Footer'
 
 export default function Home() {
   const[loading, setLoading] = useState(false)
@@ -18,13 +21,10 @@ export default function Home() {
   }
  return(
   <section>
- <Banner></Banner>
-  <Places></Places>
-  <Travel></Travel>
-  <Trending></Trending>
-  <Mission></Mission>
-  <Customer></Customer> 
-  
+    <TopBar></TopBar>
+     <Header></Header>    
+    <Umra></Umra>
+    <Footer></Footer>
 </section>
  )
 

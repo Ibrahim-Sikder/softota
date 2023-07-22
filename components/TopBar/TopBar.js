@@ -17,7 +17,7 @@ const TopBar = () => {
           /> 
           <span className={style.phone}>+01825-445033</span>
         </span>
-        <span className={style.contact}>Contact us</span>
+        <span className={style.contact}>Us Contact</span>
      </div>
     </div>
   );

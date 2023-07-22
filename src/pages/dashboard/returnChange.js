@@ -65,12 +65,12 @@ const returnChange = () => {
                               <tr>
                               <th >PNR</th> 
                               <th>Booked </th> 
-                              <th>Created At </th> 
-                              <th>Request Code  </th> 
-                              <th>Booking Code </th> 
-                              <th>Request Type  </th>
+                              <th>Created <br /> At </th> 
+                              <th>Request <br /> Code  </th> 
+                              <th>Booking <br /> Code </th> 
+                              <th>Request <br /> Type  </th>
                               <th>Status   </th>
-                              <th>Details</th>
+                              <th colSpan={2}>Details</th>
                               </tr>
 
                          </thead> 
@@ -82,9 +82,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -93,9 +94,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -104,9 +106,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -115,9 +118,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -126,9 +130,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -137,9 +142,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -148,9 +154,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -159,9 +166,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                               <tr>
                               <td>WBZCTH</td>
@@ -170,20 +178,10 @@ const returnChange = () => {
                               <td>CHANGE-6403091864602</td>
                               <td> GTRN164091864602 </td> 
                               <td>Change </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
-                              </tr>
-                              <tr>
-                              <td>WBZCTH</td>
-                              <td >Global04 </td> 
-                              <td>04 Mar 2023</td> 
-                              <td>CHANGE-6403091864602</td>
-                              <td> GTRN164091864602 </td> 
-                              <td>Change </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Completed </td>
-                              <td className='btn bg-[#04A444] text-[#fff] mx-3'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              <td >Completed </td>
+                              <td className='cursor-pointer'>View </td> 
+                              <td className='cursor-pointer'>Call </td> 
+                             
                               </tr>
                          </tbody> 
                          </table>

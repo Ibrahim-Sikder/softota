@@ -1,4 +1,4 @@
-import '@/styles/globals.css'
+import '../styles/globals.css'
 import Layout from '../../components/Layout/Layout'
 import { SessionProvider } from "next-auth/react"
 import AuthProvider from './context/AuthContext/AuthProvider'

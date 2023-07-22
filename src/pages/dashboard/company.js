@@ -81,9 +81,9 @@ const company = () => {
                               <td>+88-01885-071-488</td>
                               <td>ghuronti@gmail.com</td> 
                               <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Active </td> 
+                              <td >Active </td> 
                               <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              <td >View </td> 
                               </tr>
                               <tr>
                               <td>Ghuronti.com</td>
@@ -91,9 +91,9 @@ const company = () => {
                               <td>+88-01885-071-488</td>
                               <td>ghuronti@gmail.com</td> 
                               <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Deactive </td> 
+                              <td >Active </td> 
                               <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              <td >View </td> 
                               </tr>
                               <tr>
                               <td>Ghuronti.com</td>
@@ -101,9 +101,9 @@ const company = () => {
                               <td>+88-01885-071-488</td>
                               <td>ghuronti@gmail.com</td> 
                               <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Active </td> 
+                              <td >Active </td> 
                               <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              <td >View </td> 
                               </tr>
                               <tr>
                               <td>Ghuronti.com</td>
@@ -111,9 +111,9 @@ const company = () => {
                               <td>+88-01885-071-488</td>
                               <td>ghuronti@gmail.com</td> 
                               <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Deactive </td> 
+                              <td >Active </td> 
                               <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              <td >View </td> 
                               </tr>
                               <tr>
                               <td>Ghuronti.com</td>
@@ -121,9 +121,9 @@ const company = () => {
                               <td>+88-01885-071-488</td>
                               <td>ghuronti@gmail.com</td> 
                               <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Active </td> 
+                              <td >Active </td> 
                               <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              <td >View </td> 
                               </tr>
                               <tr>
                               <td>Ghuronti.com</td>
@@ -131,19 +131,9 @@ const company = () => {
                               <td>+88-01885-071-488</td>
                               <td>ghuronti@gmail.com</td> 
                               <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Deactive </td> 
+                              <td >Active </td> 
                               <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              </tr>
-                               <tr>
-                              <td>Ghuronti.com</td>
-                              <td >Kaji Ehsan</td> 
-                              <td>+88-01885-071-488</td>
-                              <td>ghuronti@gmail.com</td> 
-                              <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>Active </td> 
-                              <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              <td >View </td> 
                               </tr>
                               <tr>
                               <td>Ghuronti.com</td>
@@ -151,9 +141,9 @@ const company = () => {
                               <td>+88-01885-071-488</td>
                               <td>ghuronti@gmail.com</td> 
                               <td>01 Jan 2010 </td> 
-                              <td className='btn bg-[#FA5653] text-[#fff]'>Deactive </td> 
+                              <td >Active </td> 
                               <td>Tropicana Tower, L 12, 45 Topkhana Rd, Purana Paltan, Dhaka 1000</td> 
-                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              <td >View </td> 
                               </tr>
                          </tbody> 
                          </table>

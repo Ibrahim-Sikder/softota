@@ -1,6 +1,12 @@
 .SignupWrap{
      width:100vw;
 }
+.ShowIcon{
+     position: absolute;
+     right: 20px;
+     top: 44px;
+     font-size: 25px;
+}
 .loginInput{
      box-sizing: border-box;
      width: 472px;
@@ -24,15 +30,17 @@
      border: 2px solid #B0B8BA;
      }
      .loginBtn2{
-          width: 323px;
-          height: 53px;
-          background: #26ADE2;
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-          border-radius: 5px;
-          color:white;
+     width: 323px;
+    height: 53px;
+    background: #26ADE2;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: white;
+    margin-left: 35px;
      }
      .loginBtn3{
      position: absolute;
+     margin-left: 37px;
      width: 323px;
      height: 53px;
      background: #FFFFFF;

@@ -6,13 +6,21 @@ import style from './SignUp.module.css';
 import login from '../../public/login.png';
 import facebook from '../../public/facebook.png';
 import Link from 'next/link';
-import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
+import { AuthContext } from '../../src/pages/context/AuthContext/AuthProvider';
 import { useRouter } from 'next/router';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { signIn } from "next-auth/react"
-
+import { FaEyeSlash, FaEye  } from "react-icons/fa";
 const SignUp = () => {
+     const [showPassword, setShowPassword] = useState(false);
+
+     const handleClickShowPassword = () => setShowPassword((show) => !show);
+ 
+     const handleMouseDownPassword = () => {
+ 
+     };
+
      const router = useRouter()
 const { createUser, signInWithGoogle} = useContext(AuthContext);
      const [fname, setName] = useState('')
@@ -102,9 +110,15 @@ async function handleGithubSignIn(){
                           <label className={style.inputLabel}>Email Address</label> <br/>
                           <input onChange={(event)=>setEmail(event.target.value)} type='email' name='email' placeholder='Email' className={style.loginInput}/>
                           </div>
-                          <div className='mb-5'>
+                          <div className='mb-5 relative'>
                           <label className={style.inputLabel}>Password</label> <br/>
-                          <input onChange={(event)=>setPassword(event.target.value)} type='password' name='password' placeholder='Password' className={style.loginInput}/>
+                          <input onChange={(event)=>setPassword(event.target.value)} type={showPassword ? 'text' : 'password'} name='password' placeholder='Password' className={style.loginInput}/>
+                          <span  
+                         onClick={handleClickShowPassword}
+                         onMouseDown={handleMouseDownPassword} 
+                         className={style.ShowIcon}>
+                         {showPassword ? <FaEyeSlash/> :  <FaEye/>}
+                         </span>
                           </div>
                           <div className='mb-5 ml-16 mt-10'>
                                <button className={style.loginBtn} type='submit' >Sign Up</button>

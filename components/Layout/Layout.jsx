@@ -6,10 +6,11 @@ export default function Layout({children}){
 
      return (
           <>
-          <TopBar></TopBar>
+          {/* <TopBar></TopBar>
           <Header></Header>
+          <Footer></Footer> */}
           <main className="layout">{children}</main>
-         <Footer></Footer>
+         
           </>
      )
 }

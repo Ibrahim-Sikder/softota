@@ -47,6 +47,12 @@ color:#4AB449;
     margin-bottom: 20px;
     margin-top: 30px;
 }
+.ShowIcon{
+     position: absolute;
+     right: 20px;
+     top: 44px;
+     font-size: 25px;
+}
 
 @media only screen and (max-width:1024px){
      .loginWrapa{
@@ -84,12 +90,51 @@ color:#4AB449;
           margin-left: 43px;
       }
       .inputLabel{
-          margin-left:43px;
+          margin-left: 23px;
       }
       .loginBtn{
-          margin-left: 19px;
+          margin-left: -23px;
       }
       .loginBtn2{
           margin-left: 19px;
+      }
+      .devided{
+          width: 160px;
+          margin: 0 auto;
+          height: 0px;
+          border: 2px solid #B0B8BA;
+      }
+      .loginInput {
+          width: 368px;
+          height: 59px;
+          margin-left: 18px;
+      }
+      .ShowIcon {
+          right: 33px;
+          top: 41px;
+      }
+      .loginBtn2 {
+          margin-left: -29px;
+      }
+      .loginBtn3 {
+          left: 51px;
+      }
+}
+@media only screen and (max-width:400px){
+     .loginInput {
+          width: 350px;
+          margin-left: 12px;
+      }
+      .loginBtn {
+          margin-left: -37px;
+      }
+      .loginBtn2 {
+          margin-left: -41px;
+      }
+      .loginBtn3{
+          left: 25px;
+      }
+      .devided {
+          width: 150px;
       }
 }

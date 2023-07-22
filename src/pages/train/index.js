@@ -5,15 +5,21 @@ import Travel from '../../../components/Travel/Travel'
 import TourDestination from '../../../components/Tour/TourDestination'
 import Customer from '../../../components/Customer/Customer'
 import BestPlace from '../../../components/BestPlace/BestPlace'
+import TopBar from '../../../components/TopBar/TopBar'
+import Header from '../../../components/Header/Header'
+import Footer from '../../../components/Footer/Footer'
 
 const index = () => {
   return (
     <div>
+      <TopBar/>
+      <Header/>
     <Tour></Tour>
     <BestPlace></BestPlace>
     <Travel></Travel>
     <TourDestination></TourDestination>
     <Customer></Customer>
+    <Footer/>
     </div>
   )
 }

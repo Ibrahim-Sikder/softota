@@ -1,12 +1,14 @@
+'use client'
 import Image from 'next/image'
 import React, { useContext } from 'react'
 import agent from '../../public/agent.png';
 import facebook from '../../public/facebook.png';
 import style from './LoginAgent.module.css'
-import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
 import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';
 import { toast } from 'react-hot-toast';
+import { AuthContext } from '../../src/pages/context/AuthContext/AuthProvider';
+
 const LoginAgent = () => {
      const router = useRouter()
      const {signInWithGoogle, logIn} = useContext(AuthContext)
@@ -31,23 +33,7 @@ const LoginAgent = () => {
       }
    
 
-     const handleGoogleSignIn = () => {
-          signInWithGoogle()
-              .then(result => {
-                  console.log(result.user)
-              })
-              .catch(err => {
-                  console.log(err);
-              })
-      }
-
-     // async function handleGoogleSignIn(){
-     //      signIn('google',{callbackUrl:"http://localhost:3000"})
-     // }
-     async function handleGithubSignIn(){
-          signIn('github',{callbackUrl:"http://localhost:3000"})
-     }
-
+   
 
 
      return (
@@ -92,18 +78,18 @@ const LoginAgent = () => {
                           <div className='flex justify-between mt-32 w-32 mx-auto'>
                           <div className={style.circle}>
                           
-                         <button type='submit' onClick={handleGoogleSignIn}>
-                         {/* <Image
+                         <button type='submit'>
+                         <Image
                                src={google}
                                alt="Picture of the author"
                                width={40}
                                height={20}
                                
-                          />  */}
+                          /> 
                          </button>
                           </div>
                           <div className={style.circle}>
-                              <button onClick={handleGithubSignIn} type='submit'>
+                              <button type='submit'>
                               <Image
                                src={facebook}
                                alt="Picture of the author"

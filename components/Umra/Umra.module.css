@@ -53,6 +53,10 @@
     padding: 0px 20px;
     top:104px;
 }
+.package2 span:nth-child(1){
+  border-bottom:2px solid #4AB449;
+  margin-bottom: 17px;
+}
 
 .heroBoxBtn{
   position: absolute;

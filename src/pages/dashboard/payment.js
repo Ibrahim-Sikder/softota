@@ -71,7 +71,6 @@ const payment = () => {
                               <th>Gateway Name </th> 
                               <th>Payment Status  </th> 
                               <th>Details </th>
-                              <th>call </th>
                               </tr>
 
                          </thead> 

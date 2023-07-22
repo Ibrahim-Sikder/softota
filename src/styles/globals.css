@@ -34,15 +34,23 @@ table{
     vertical-align: middle;
     white-space: pre-wrap;
 }
-.table :where(th, td):nth-child(8) {
-    background:red;
-    display: none;
+.table :where(td) {
+   border-right:1px solid #ddd;
+   text-align: center;
 }
+.table :where(td):nth-last-of-type() {
+    border-bottom:3px solid #ddd !important;
+ }
+.table :where(th) {
+    border-bottom:1px solid #04A444;
+    text-align: center;
+    background:#F5F7FB;
+ }
 .table {
     position: relative;
     width: 100%;
     text-align: left;
-    font-size: 0.7em;
+    font-size: 0.6em;
     line-height: 1.75rem;
     border-radius: var(--rounded-box, 1rem);
 }

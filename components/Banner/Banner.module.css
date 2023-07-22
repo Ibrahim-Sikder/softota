@@ -66,6 +66,10 @@
 .flightGroup span{
   font-size: 14px;
 }
+.flightGroup span:nth-child(1){
+  border-bottom:2px solid #4AB449;
+  margin-bottom: 19px;
+}
 
 .date{
   background: white;

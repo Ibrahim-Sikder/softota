@@ -65,7 +65,7 @@ const transactions = () => {
                               <tr>
                               <th >Source</th> 
                               <th>Payment Type </th> 
-                              <th>Ticket/Booking/Invoice Number </th> 
+                              <th>Ticket <br /> Booking <br /> Invoice Number </th> 
                               <th>Reference ID  </th> 
                               <th>Debit </th> 
                               <th>Credit</th>

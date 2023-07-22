@@ -67,19 +67,18 @@ const partial = () => {
                               <th>Zone  </th> 
                               <th>Agency </th> 
                               <th>PNR </th> 
-                              <th>Company Code </th> 
-                              <th>Fly Date  </th>
-                              <th>Total Amount  </th> 
-                              <th>Total Paid Amount  </th> 
-                              <th>Due Amount  </th> 
-                              <th>Payment Due Date  </th>
+                              <th>Company <br /> Code </th> 
+                              <th>Fly <br /> Date  </th>
+                              <th>Total <br /> Amount  </th> 
+                              <th>Total <br /> Paid <br /> Amount  </th> 
+                              <th>Due <br /> Amount  </th> 
+                              <th>Payment <br /> Due <br /> Date  </th>
                               <th>Status </th>
-                              <th>Payment Status  </th>
-                              <th>Expired At  </th>
-                              <th>Agent Pay  </th>
-                              <th>Requested Pay </th>
-                              <th>Requested On </th>
-                              <th>Details  </th>
+                              <th>Payment <br /> Status  </th>
+                              <th>Expired <br /> At  </th>
+                              <th>Agent <br /> Pay  </th>
+                              <th>Requested <br /> On </th>
+                              <th colSpan={2}>Details  </th>
                               </tr>
 
                          </thead> 
@@ -101,7 +100,6 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
                               
                               </tr>
                               <tr>
@@ -121,7 +119,6 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
                               
                               </tr>
                               <tr>
@@ -141,7 +138,6 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
                               
                               </tr>
                               <tr>
@@ -161,7 +157,6 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
                               
                               </tr>
                               <tr>
@@ -181,7 +176,6 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
                               
                               </tr>
                               <tr>
@@ -201,7 +195,6 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
                               
                               </tr>
                               <tr>
@@ -221,7 +214,6 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
                               
                               </tr>
                               <tr>
@@ -241,7 +233,44 @@ const partial = () => {
                               <td>2023-03-2915:00</td> 
                               <td>2023-03-2915:00</td>
                               <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
-                              <td className='btn bg-[#26ADE2] text-[#fff]'>Call </td>
+                              
+                              </tr>
+                              <tr>
+                              <td>PARTIAL641961B9444B3</td>
+                              <td >Dhaka </td> 
+                              <td>GlobalExplorePvt Ltd </td> 
+                              <td>BFFNBD</td>
+                              <td> STA-102081 </td> 
+                              <td>20 Apr 23 11:30</td> 
+                              <td>39330</td> 
+                              <td>39330</td> 
+                              <td>0</td> 
+                              <td>2023-03-2915:00</td> 
+                              <td>Completed</td> 
+                              <td>Paid</td> 
+                              <td>2023-03-2915:00</td> 
+                              <td>2023-03-2915:00</td> 
+                              <td>2023-03-2915:00</td>
+                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
+                              
+                              </tr>
+                              <tr>
+                              <td>PARTIAL641961B9444B3</td>
+                              <td >Dhaka </td> 
+                              <td>GlobalExplorePvt Ltd </td> 
+                              <td>BFFNBD</td>
+                              <td> STA-102081 </td> 
+                              <td>20 Apr 23 11:30</td> 
+                              <td>39330</td> 
+                              <td>39330</td> 
+                              <td>0</td> 
+                              <td>2023-03-2915:00</td> 
+                              <td>Completed</td> 
+                              <td>Paid</td> 
+                              <td>2023-03-2915:00</td> 
+                              <td>2023-03-2915:00</td> 
+                              <td>2023-03-2915:00</td>
+                              <td className='btn bg-[#04A444] text-[#fff]'>View </td> 
                               
                               </tr>
                          </tbody> 

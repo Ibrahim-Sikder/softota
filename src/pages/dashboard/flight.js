@@ -59,29 +59,29 @@ const flight = () => {
                          <table className="table  lg:table-auto columns-xl break-after-column">
                          <thead className={style.tableWrap}>
                               <tr>
-                              <th >Booking By  </th> 
-                              <th>Booked Date </th> 
-                              <th>Issue Date </th> 
-                              <th>Fly Date  </th> 
-                              <th>Time Limit  </th> 
+                              <th >Booking <br /> By  </th> 
+                              <th>Booked <br /> Date </th> 
+                              <th>Issue <br /> Date </th> 
+                              <th>Fly <br /> Date  </th> 
+                              <th>Time <br /> Limit  </th> 
                               <th>Rout  </th>
                               <th>Airlines </th> 
-                              <th>Booking Code </th> 
+                              <th>Booking <br /> Code </th> 
                               <th>PNR </th> 
-                              <th>Payment Status</th> 
-                              <th>Booking Status  </th> 
-                              <th>Cards Pay </th> 
-                              <th>Client Pays</th>
-                              <th>Agent Pay  </th> 
+                              <th>Payment <br /> Status</th> 
+                              <th>Booking <br /> Status  </th> 
+                              <th>Cards <br /> Pay </th> 
+                              <th>Client <br /> Pays</th>
+                              <th>Agent <br /> Pay  </th> 
                               <th>AIT </th> 
-                              <th>Detail</th> 
+                              <th colSpan={2}>Detail</th> 
                               </tr>
 
                          </thead> 
                          <tbody>
                               <tr>
                               <td>Global04</td>
-                              <td >29 Mar 2023 16:08</td> 
+                              <td >29 Mar  2023 16:08</td> 
                               <td>Not Issued Yet </td> 
                               <td>05 Apr 2023 11:00</td>
                               <td> 30 Mar 2023 12:05</td> 
@@ -95,11 +95,12 @@ const flight = () => {
                               <td>-57590</td>
                               <td>-5143</td> 
                               <td>156</td> 
-                              <td className='btn btn-secondary'>View</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
                               </tr>
                               <tr>
                               <td>Global04</td>
-                              <td >29 Mar 2023 16:08</td> 
+                              <td >29 Mar  2023 16:08</td> 
                               <td>Not Issued Yet </td> 
                               <td>05 Apr 2023 11:00</td>
                               <td> 30 Mar 2023 12:05</td> 
@@ -113,11 +114,12 @@ const flight = () => {
                               <td>-57590</td>
                               <td>-5143</td> 
                               <td>156</td> 
-                              <td className='btn btn-secondary'>View</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
                               </tr>
                               <tr>
                               <td>Global04</td>
-                              <td >29 Mar 2023 16:08</td> 
+                              <td >29 Mar  2023 16:08</td> 
                               <td>Not Issued Yet </td> 
                               <td>05 Apr 2023 11:00</td>
                               <td> 30 Mar 2023 12:05</td> 
@@ -131,11 +133,12 @@ const flight = () => {
                               <td>-57590</td>
                               <td>-5143</td> 
                               <td>156</td> 
-                              <td className='btn btn-secondary'>View</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
                               </tr>
                               <tr>
                               <td>Global04</td>
-                              <td >29 Mar 2023 16:08</td> 
+                              <td >29 Mar  2023 16:08</td> 
                               <td>Not Issued Yet </td> 
                               <td>05 Apr 2023 11:00</td>
                               <td> 30 Mar 2023 12:05</td> 
@@ -149,11 +152,12 @@ const flight = () => {
                               <td>-57590</td>
                               <td>-5143</td> 
                               <td>156</td> 
-                              <td className='btn btn-secondary'>View</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
                               </tr>
                               <tr>
                               <td>Global04</td>
-                              <td >29 Mar 2023 16:08</td> 
+                              <td >29 Mar  2023 16:08</td> 
                               <td>Not Issued Yet </td> 
                               <td>05 Apr 2023 11:00</td>
                               <td> 30 Mar 2023 12:05</td> 
@@ -167,11 +171,12 @@ const flight = () => {
                               <td>-57590</td>
                               <td>-5143</td> 
                               <td>156</td> 
-                              <td className='btn btn-secondary'>View</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
                               </tr>
                               <tr>
                               <td>Global04</td>
-                              <td >29 Mar 2023 16:08</td> 
+                              <td >29 Mar  2023 16:08</td> 
                               <td>Not Issued Yet </td> 
                               <td>05 Apr 2023 11:00</td>
                               <td> 30 Mar 2023 12:05</td> 
@@ -185,11 +190,12 @@ const flight = () => {
                               <td>-57590</td>
                               <td>-5143</td> 
                               <td>156</td> 
-                              <td className='btn btn-secondary'>View</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
                               </tr>
                               <tr>
                               <td>Global04</td>
-                              <td >29 Mar 2023 16:08</td> 
+                              <td >29 Mar  2023 16:08</td> 
                               <td>Not Issued Yet </td> 
                               <td>05 Apr 2023 11:00</td>
                               <td> 30 Mar 2023 12:05</td> 
@@ -203,7 +209,46 @@ const flight = () => {
                               <td>-57590</td>
                               <td>-5143</td> 
                               <td>156</td> 
-                              <td className='btn btn-secondary'>View</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
+                              </tr>
+                              <tr>
+                              <td>Global04</td>
+                              <td >29 Mar  2023 16:08</td> 
+                              <td>Not Issued Yet </td> 
+                              <td>05 Apr 2023 11:00</td>
+                              <td> 30 Mar 2023 12:05</td> 
+                              <td>DAC-MAA-DAC</td> 
+                              <td>BS</td> 
+                              <td>GTRN16797234601596</td> 
+                              <td>056XNH</td> 
+                              <td>Unpaid </td>
+                              <td>Cancel </td> 
+                              <td>No</td> 
+                              <td>-57590</td>
+                              <td>-5143</td> 
+                              <td>156</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
+                              </tr>
+                              <tr>
+                              <td>Global04</td>
+                              <td >29 Mar  2023 16:08</td> 
+                              <td>Not Issued Yet </td> 
+                              <td>05 Apr 2023 11:00</td>
+                              <td> 30 Mar 2023 12:05</td> 
+                              <td>DAC-MAA-DAC</td> 
+                              <td>BS</td> 
+                              <td>GTRN16797234601596</td> 
+                              <td>056XNH</td> 
+                              <td>Unpaid </td>
+                              <td>Cancel </td> 
+                              <td>No</td> 
+                              <td>-57590</td>
+                              <td>-5143</td> 
+                              <td>156</td> 
+                              <td className='btn bg-[#26ADE2] text-white'>View</td> 
+                              <td className='btn bg-[#04A444] text-white'>Call</td> 
                               </tr>
                          </tbody> 
                          </table>
