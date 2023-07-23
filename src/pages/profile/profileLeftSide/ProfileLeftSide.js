@@ -3,7 +3,18 @@ import Image from 'next/image';
 import admin from '../../../../public/admin.png'
 import Link from 'next/link';
 import style from './profile.module.css'
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 const ProfileLeftSide = () => {
+     const [age, setAge] = React.useState('');
+     const handleChange = (event) => {
+          setAge(event.target.value);
+        };
+
      return (
           <div>
              <div className={style.userProfileLeftSide}>
@@ -19,7 +30,7 @@ const ProfileLeftSide = () => {
                     </div>
                </div>
                <div className={style.userInfo}>
-                  <div>
+                  <div className={style.userInfoList}>
                   <Link href='/profile'><p>My Account </p></Link>     
                    <Link href='/profile/booking'><p>My Booking </p></Link>     
                    <Link href='/profile/password'><p>Change Password </p></Link>     
@@ -27,7 +38,7 @@ const ProfileLeftSide = () => {
                    <Link href='/profile/manageData'><p>Manage Your Data  </p></Link>
                </div>    
                </div>
-                    <div className={style.logOutBtn}>
+            <div className={style.logOutBtn}>
                        <button className={style.userLogoutBtn}>Log Out</button>
                     </div>
               </div>

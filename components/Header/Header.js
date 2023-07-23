@@ -4,7 +4,7 @@ import logo from '../../public/logo.png'
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaPlaneArrival, FaPlaneDeparture} from "react-icons/fa";
-import { AuthContext } from '@/pages/context/AuthContext/AuthProvider';
+import { AuthContext } from '../../src/pages/context/AuthContext/AuthProvider';
 const Header = () => {
     const [active, setActive] = useState(0)
     const {user, logout} = useContext(AuthContext)

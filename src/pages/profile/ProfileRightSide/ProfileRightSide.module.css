@@ -50,3 +50,52 @@
      color: white;
      font-size: 20px;
 }
+
+
+@media only screen and (max-width:768px){
+     .inputBtn{
+          width:100%;
+          margin-bottom:20px;
+     }
+     .inputGroupWrap {
+          width: 87%;
+          display: block;
+         
+      }
+      .inputGroupWrap {
+          margin-top: 0px;
+      }
+      .uploadImgWrap{
+          display: block;
+          margin-bottom: 30px;
+          text-align: center;
+      }
+      .uploadImgWrap button {
+          background: #C9E9C9;
+          color: black;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          margin-right: 5px;
+          padding: 8px 23px;
+          font-size: 17px;
+          border-radius: 4px;
+          font-weight: 500;
+          margin-bottom: 10px;
+      }
+      .userInfo {
+           display: block; 
+          margin-top: -4px;
+      }
+      .userImg {
+          margin-bottom: 18px;
+          margin-left: 161px;
+      }
+      .saveBtn {
+          margin-top: 4px;
+          margin-bottom: 30px;
+      }
+      .inputBtn {
+          margin-right: 0px;
+          margin-left: 0px;
+      }
+      
+}

@@ -29,8 +29,9 @@ const Booking = () => {
                          alt="Picture of the author"
                          width={30}
                          height={30}
+                         className={styles.logoIcon}
                          />
-                         <button className='ml-3'>Flight Booking</button>
+                         <button className='ml-3'>Flight </button>
                          </div>
                          <div className='flex '>
                          <Image
@@ -38,8 +39,9 @@ const Booking = () => {
                          alt="Picture of the author"
                          width={30}
                          height={30}
+                         className={styles.logoIcon}
                          />
-                         <button className='ml-3'>Hotel Booking</button>
+                         <button className='ml-3'>Hotel </button>
                          </div>
                          <div className='flex '>
                          <Image
@@ -47,8 +49,9 @@ const Booking = () => {
                          alt="Picture of the author"
                          width={30}
                          height={30}
+                         className={styles.logoIcon}
                          />
-                         <button className='ml-3'>Visa Booking</button>
+                         <button className='ml-3'>Visa </button>
                          </div>
                          <div className='flex '>
                          <Image
@@ -56,8 +59,9 @@ const Booking = () => {
                          alt="Picture of the author"
                          width={30}
                          height={30}
+                         className={styles.logoIcon}
                          />
-                         <button className='ml-3'>Tours Booking</button>
+                         <button className='ml-3'>Tours </button>
                          </div>
                     </div>
                     <div className={styles.bookImg}>

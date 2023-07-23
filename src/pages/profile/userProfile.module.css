@@ -24,3 +24,17 @@
      font-size: 21px;
      margin-top: 31px;
 }
+
+@media only screen and (max-width:768px){
+     .userProfileLeftSide{
+          grid-column: span 12 / span 12;
+     }
+     .userProfileRightSide{
+          grid-column: span 12 / span 12;
+     }
+     .deleteBtn {
+          margin-bottom: 25px;
+      }
+      
+
+}
