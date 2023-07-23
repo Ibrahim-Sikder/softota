@@ -154,7 +154,7 @@
   align-items: center;
 }
 .swiperImg{
-   height:300px !important;
+   height:245px !important;
    transform:scale(1)
 }
 .swiperImg:hove{

@@ -109,3 +109,18 @@ margin-left:45px;
           }
           
 }
+@media only screen and (max-width:500px){
+     .aboutHead {
+          font-size: 26px;
+          line-height: 30px;
+      }
+      .rightBox {
+          margin-top: -73px;
+      }
+      
+}
+@media only screen and (max-width:400px){
+     .teamHead {
+          width: 100%;
+      }
+}

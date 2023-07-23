@@ -192,3 +192,11 @@
           width: 380px;
       }
 }
+@media only screen and (max-width:400px){
+     .searchBox input {
+          width: 337px;
+      }
+      .inputBox{
+          margin-right: 17px;
+      }
+}

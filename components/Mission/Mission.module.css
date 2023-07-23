@@ -151,3 +151,12 @@
         height:400px;
     }
   }
+  @media only screen and (max-width:400px){
+    .missionHead h2 {
+      font-size: 30px;
+  }
+  .missionHead p {
+    font-size: 18px;
+    line-height: 25px;
+}
+  }
