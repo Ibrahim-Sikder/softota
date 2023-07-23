@@ -13,10 +13,15 @@ import clock4 from '../../../public/clock4.png'
 import clock5 from '../../../public/clock5.png';
 import travel from '../../../public/travel2.png'
 import Trending from '../../../components/Trending/Trending'
+import TopBar from '../../../components/TopBar/TopBar'
+import Header from '../../../components/Header/Header'
+import Footer from '../../../components/Footer/Footer'
 const index = () => {
   return (
     <section>
-      <div className='mt-14 mb-3'>
+      <TopBar/>
+      <Header/>
+      <div className={style.detailHeadText}>
         <h2 className='text-3xl font-bold before:'>Laos: Land of a Million Elephants!</h2>
         <div className='flex'>
         <Image
@@ -28,20 +33,19 @@ const index = () => {
           <p>Vientinane, Laos</p>
         </div>
       </div>
-      <div className='grid grid-cols-12 gap-10'>
-        <div className='col-span-8'>
-          <div className='flex flex-wrap'>
+      <div className={style.hotelDetailWrap}>
+        <div className={style.leftSideDetail}>
+          <div className={style.leftSideImg}>
             <div >
             <Image
-            className={style.leftSideImg}
+            className={style.detailImg}
                 src={hotel}
                 alt="Picture of the author"
-                width={500}
-                height={500}
+               
               />
             </div>
-            <div>
-            <div className='flex'>
+            <div className={style.groupImgWrap}>
+            <div className={style.groupImg}>
             <Image
              className={style.leftSideSimg}
                 src={hotel2}
@@ -57,7 +61,7 @@ const index = () => {
                 height={100}
               />
             </div>
-            <div className='flex'>
+            <div className={style.groupImg}>
             <Image
              className={style.leftSideSimg}
                 src={hotel2}
@@ -103,7 +107,7 @@ const index = () => {
             
           </div>
         </div>
-        <div className='col-span-4'>
+        <div className={style.detailRightSide}>
          <div className={style.rightSide}>
             <div>
             <div className='flex  mb-3'>
@@ -182,7 +186,7 @@ const index = () => {
           </Link>
             </div>
           </div>
-          <div className='mt-28'>
+          <div className={style.rightSideImg}>
           <Image
                 src={travel}
                 alt="Picture of the author"
@@ -193,6 +197,7 @@ const index = () => {
          </div>
         </div>
       <Trending></Trending>
+      <Footer/>
     </section>
   )
 }
