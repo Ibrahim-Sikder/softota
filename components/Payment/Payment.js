@@ -65,64 +65,58 @@ const Payment = () => {
           <form onSubmit={handleSubmit}>
                <div className={style.singlePayment}>
                     <div>
-                    <label>First Name </label> <br/>
+                    <label className={style.inputLabel}>First Name </label> <br/>
                     <input onChange={(event)=>setFname(event.target.value)} type='text' className={style.paymentBtn} name='fname' placeholder='First Name '/>
                     </div>
                     <div>
-                    <label>Last Name </label> <br/>
+                    <label className={style.inputLabel}>Last Name </label> <br/>
                     <input onChange={(event)=>setLname(event.target.value)} type='text' className={style.paymentBtn} name='lname' placeholder='Last Name '/>
                     </div>
                </div>
                <div className={style.singlePayment}>
                     <div>
-                    <label>Email </label> <br/>
+                    <label className={style.inputLabel}>Email </label> <br/>
                     <input onChange={(event)=>setEmail(event.target.value)} type='email' className={style.paymentBtn} name='email' placeholder='Email '/>
                     </div>
                     <div>
-                    <label>Password </label> <br/>
+                    <label className={style.inputLabel}>Password </label> <br/>
                     <input onChange={(event)=>setPassword(event.target.value)} type='password' className={style.paymentBtn} name='password' placeholder='Password '/>
                     </div>
                </div> 
                <div className={style.singlePayment}>
                     <div>
-                    <label>Mobile Number </label> <br/>
+                    <label className={style.inputLabel}>Mobile Number </label> <br/>
                     <input onChange={(event)=>setNumber(event.target.value)} type='number' className={style.paymentBtn} name='number' placeholder='Mobile Number'/>
                     </div>
                     <div>
-                    <label>Price</label> <br/>
+                    <label className={style.inputLabel}>Price</label> <br/>
                     <input onChange={(event)=>setPrice(event.target.value)} type='number' className={style.paymentBtn} name='price' placeholder='Price'/>
                     </div>
                </div> 
                <div className={style.singlePayment}>
                     <div>
-                    <label>Address </label> <br/>
-                    <input onChange={(event)=>setAddress(event.target.value)} type='text' className={style.paymentBtn} name='address' placeholder='Address'/>
+                    <label className={style.inputLabel}>Date of Birth </label> <br/>
+                    <input onChange={(event)=>setAddress(event.target.value)} type='date' className={style.paymentBtn} name='date' placeholder='Date of Birth'/>
                     
                     </div>
-                    {/* <div>
-                    <label>Nationality </label> <br/>
-                    <input onChange={(event)=>setNationality(event.target.value)} type='text' className={style.paymentBtn} name='nationality' placeholder='Nationality '/>
-                    </div> */}
-                     <div>
-                    <label>Currency </label> <br/>
-                    <select className={style.paymentBtn} onChange={(event)=>setCurrency(event.target.value)} name="currency" id="">
-                         <option value="BDT">BDT</option>
-                         <option value="USA">USA</option>
-                    </select>
-                   
+                  
+                    <div>
+                    <label className={style.inputLabel}>Nationality </label> <br/>
+                    <input onChange={(event)=>setAddress(event.target.value)} type='text' className={style.paymentBtn} name='nationality' placeholder='Nationality'/>
+                    
                     </div>
                </div>
                <div className={style.singlePayment}>
                     <div>
-                    <label>Post Code  </label> <br/>
-                    <input onChange={(event)=>setPostcode(event.target.value)} type='number' className={style.paymentBtn} name='postcode' placeholder='Post Code '/>
+                    <label className={style.inputLabel}>Address </label> <br/>
+                    <input onChange={(event)=>setPostcode(event.target.value)} type='text' className={style.paymentBtn} name='address' placeholder='Address '/>
                     
                     </div>
                </div>
                <div className={style.payments}>
-               {/* <div> */}
-                    {/* <h3 className='w-full mx-auto pl-12 mb-5'>Select your Payment mathod</h3> */}
-                    {/* <div className='flex items-center justify-center flex-wrap'>
+               <div>
+                    <h3 >Select your Payment mathod</h3>
+                     <div className='flex items-center justify-center mb-8 flex-wrap'>
                          <div className={style.method}>
                          <Image
                               src={payment}
@@ -163,15 +157,15 @@ const Payment = () => {
                               height={50}
                           />
                          </div>
-                    </div> */}
-               {/* </div> */}
-               {/* <div className='mb-5'>
+                    </div> 
+               </div>
+               <div className='mb-5'>
                     <lable>Bkash</lable> <br/>
                     <input onChange={(event)=>setBkash(event.target.value)} type='number' className={style.bkash} placeholder='Enter Your Number' name='bkash'/>
-               </div> */}
-               {/* <div className={style.bkashText}>
+               </div>
+                <div className={style.bkashText}>
                <h4>Tatal amount = BDT 23,650</h4>
-               <span className='text-[#6EC36D]'>(Price includes VAT & Tax)</span>
+               <span className={style.priceTax}> (Price includes VAT & Tax)</span>
                </div>
                <div className='flex mb-5  items-center justify-center mt-5'>
                <Image
@@ -180,8 +174,8 @@ const Payment = () => {
                    width={20}
                    height={10}
                     />
-                    <p> I have read and accept the <span className='text-[#6EC36D]'>Terms and Conditions.</span></p>
-               </div> */}
+                    <p> I have read and accept the <span className={style.priceTax}>Terms and Conditions.</span></p>
+               </div> 
                <button type='submit' className={style.termBtn}>Send your payment</button>
           </div>
 
