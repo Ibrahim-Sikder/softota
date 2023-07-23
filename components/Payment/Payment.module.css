@@ -33,6 +33,27 @@
 .inputLabel{
   margin-left:9px;
 }
+.ShowIcon{
+     position: absolute;
+     top: 42px;
+     right: 23px;
+     font-size: 25px;
+}
+.star{
+     position: absolute;
+     top: 0;
+     left: 97px;
+     font-size: 12px;
+     color: #F73D3D;
+}
+.star2{
+     position: absolute;
+     top: 0;
+     left: 134px;
+     font-size: 12px;
+     color: #F73D3D;
+
+}
 .payments h3{
      width: 100%;
      font-weight: 500;

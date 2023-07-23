@@ -13,10 +13,11 @@
        
      }
      .travel{
-        width: 100%;
+        width: 85%;
         height: 350px;
-        margin-top:10px;
-       }
+        margin: 0 auto;
+    }
+       
      
      @media only screen and (max-width:768px){
          .travel{

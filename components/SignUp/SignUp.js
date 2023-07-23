@@ -14,11 +14,8 @@ import { signIn } from "next-auth/react"
 import { FaEyeSlash, FaEye  } from "react-icons/fa";
 const SignUp = () => {
      const [showPassword, setShowPassword] = useState(false);
-
      const handleClickShowPassword = () => setShowPassword((show) => !show);
- 
      const handleMouseDownPassword = () => {
- 
      };
 
      const router = useRouter()

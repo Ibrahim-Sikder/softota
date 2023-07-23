@@ -127,6 +127,10 @@
      margin: auto;
 
    }
+   .missionText{
+    font-size:25px;
+    padding-left:65px
+   }
    
    }
    
@@ -147,4 +151,8 @@
      }
    
    }
-   
+   @media only screen and (max-width:400px){
+    .missionBox p {
+      font-size: 14px;
+  }
+   }

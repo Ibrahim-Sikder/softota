@@ -7,7 +7,12 @@ import payment3 from '../../public/payment3.png'
 import payment4 from '../../public/payment4.png'
 import payment5 from '../../public/payment5.png';
 import term from '../../public/term.png'
+import { FaEyeSlash,FaEye,FaStar } from "react-icons/fa";
 const Payment = () => {
+     const [showPassword, setShowPassword] = useState(false);
+     const handleClickShowPassword = () => setShowPassword((show) => !show);
+     const handleMouseDownPassword = () => {
+     };
      const [fname, setFname] = useState('')
      const [lname, setLname] = useState('')
      const [email, setEmail] = useState('')
@@ -64,33 +69,45 @@ const Payment = () => {
           <h2 >Personal Information </h2>
           <form onSubmit={handleSubmit}>
                <div className={style.singlePayment}>
-                    <div>
+                    <div className='relative'>
                     <label className={style.inputLabel}>First Name </label> <br/>
+                    <span className={style.star}><FaStar/></span>
                     <input onChange={(event)=>setFname(event.target.value)} type='text' className={style.paymentBtn} name='fname' placeholder='First Name '/>
+                    
                     </div>
-                    <div>
+                    <div className='relative'>
                     <label className={style.inputLabel}>Last Name </label> <br/>
+                    <span className={style.star}><FaStar/></span>
                     <input onChange={(event)=>setLname(event.target.value)} type='text' className={style.paymentBtn} name='lname' placeholder='Last Name '/>
                     </div>
                </div>
                <div className={style.singlePayment}>
-                    <div>
+                    <div className='relative'>
                     <label className={style.inputLabel}>Email </label> <br/>
+                    <span className={style.star}><FaStar/></span>
                     <input onChange={(event)=>setEmail(event.target.value)} type='email' className={style.paymentBtn} name='email' placeholder='Email '/>
                     </div>
-                    <div>
+                    <div className='relative'>
                     <label className={style.inputLabel}>Password </label> <br/>
-                    <input onChange={(event)=>setPassword(event.target.value)} type='password' className={style.paymentBtn} name='password' placeholder='Password '/>
+                    <span className={style.star}><FaStar/></span>
+                    <input onChange={(event)=>setPassword(event.target.value)} type={showPassword ? 'text' : 'password'} className={style.paymentBtn} name='password' placeholder='Password '/>
+                    <span  
+                         onClick={handleClickShowPassword}
+                         onMouseDown={handleMouseDownPassword} 
+                         className={style.ShowIcon}>
+                         {showPassword ? <FaEyeSlash/> :  <FaEye/>}
+                         </span>
                     </div>
                </div> 
                <div className={style.singlePayment}>
-                    <div>
+                    <div className='relative'>
                     <label className={style.inputLabel}>Mobile Number </label> <br/>
+                    <span className={style.star2}><FaStar/></span>
                     <input onChange={(event)=>setNumber(event.target.value)} type='number' className={style.paymentBtn} name='number' placeholder='Mobile Number'/>
                     </div>
                     <div>
-                    <label className={style.inputLabel}>Price</label> <br/>
-                    <input onChange={(event)=>setPrice(event.target.value)} type='number' className={style.paymentBtn} name='price' placeholder='Price'/>
+                    <label className={style.inputLabel}>Gender</label> <br/>
+                    <input onChange={(event)=>setPrice(event.target.value)} type='text' className={style.paymentBtn} name='price' placeholder='Price'/>
                     </div>
                </div> 
                <div className={style.singlePayment}>
