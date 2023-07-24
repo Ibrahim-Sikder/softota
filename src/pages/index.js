@@ -23,8 +23,7 @@ export default function Home() {
  return(
   <section>
     <TopBar></TopBar>
-     <Header></Header> 
-     <TeamSection></TeamSection>   
+     <Header></Header>  
     <Umra></Umra>
     <Footer></Footer>
 </section>

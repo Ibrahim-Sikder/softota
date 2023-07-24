@@ -5,6 +5,7 @@ import React, { useContext, useState } from 'react'
 import style from './SignUp.module.css';
 import login from '../../public/login.png';
 import facebook from '../../public/facebook.png';
+import google from '../../public/google.png';
 import Link from 'next/link';
 import { AuthContext } from '../../src/pages/context/AuthContext/AuthProvider';
 import { useRouter } from 'next/router';
@@ -140,13 +141,13 @@ async function handleGithubSignIn(){
                           <div className={style.circle}>
                           
                           <button type='button' onClick={handleGoogleSignIn}>
-                          {/* <Image
+                          <Image
                                src={google}
                                alt="Picture of the author"
                                width={40}
                                height={20}
                                
-                          />  */}
+                          /> 
                           </button>
                           </div>
                           <div className={style.circle}>

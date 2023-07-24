@@ -10,6 +10,7 @@ body{
      box-sizing: border-box;
      font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+   
 }
 .layout{
      width:100vw;
@@ -53,4 +54,7 @@ table{
     font-size: 0.6em;
     line-height: 1.75rem;
     border-radius: var(--rounded-box, 1rem);
+}
+.vertical-timeline::before {
+    background: #4AB449 !important;
 }

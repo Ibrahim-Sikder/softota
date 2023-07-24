@@ -11,6 +11,7 @@ import payment from '../../public/cashless-payment.png'
 import transaction from '../../public/transaction.png'
 import passenger from '../../public/passenger.png'
 import { FaUserAlt,FaPlane, FaCommentDollar, FaAmazonPay, FaHospitalUser, FaSkating, FaRegBuilding, FaHeadset ,FaSignOutAlt, FaAcquisitionsIncorporated } from "react-icons/fa";
+
 const UserDashBoardLeft = () => {
   const [bookingListShow, setBookingListShow] = useState()
   const handleBooking = () =>{

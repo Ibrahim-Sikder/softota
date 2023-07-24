@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import style from './Umra.module.css'
 import Image from 'next/image';
 import hajj4 from '../../public/hajj4.png'
@@ -24,6 +24,10 @@ import flight from '../../public/flight.png'
 import hotelIcon from '../../public/hotel.png'
 import vissa from '../../public/vissa.png';
 const Umra = () => {
+     const [activeHajjButton, setActiveHajjButton]= useState()
+     const handleActiveButton = ()=>{
+          setActiveHajjButton(!activeHajjButton)
+     }
      return (
          <section >
                 {/* banner */}
@@ -38,12 +42,15 @@ const Umra = () => {
             
          </div>
        
-          <button className={style.heroBoxBtn}>Get Your Offers</button>
+         <div className={style.heroBoxBtnWrap}>
+          <button className={style.heroBoxBtn}><h4>Get Your Offers</h4></button>
+         </div>
 
           {/* menubar */}
           <div>
             <ul className={style.menu}>
-             <li>
+             <li onClick={handleActiveButton} className={`active ${activeHajjButton ? 'activeClass' : ''}`} >
+            
              <Image
               src={hajj}
               alt='menu'
@@ -51,6 +58,7 @@ const Umra = () => {
               height={30}
               />
              <Link href='/hajjUmra'><p className='ml-3'>Hajj & Umrah</p></Link>
+            
              </li>
              <li>
              <Image
@@ -145,7 +153,9 @@ const Umra = () => {
                               <span className='text-[#4AB449]'>Starts From</span>
                               <span>979999TK</span>
                          </div>
-                         <button className={style.hajjBtn}>View Details</button>
+                         <div className={style.viewDetailBtn}>
+                         <button className={style.hajjBtn}><h4>View Details</h4></button>
+                         </div>
 
                     </div>
                     <div className={style.singleHajjmiddl}>
@@ -174,7 +184,9 @@ const Umra = () => {
                               <span className='text-[#4AB449]'>Starts From</span>
                               <span>979999TK</span>
                          </div>
-                         <button className={style.hajjBtn}>View Details</button>
+                         <div className={style.viewDetailBtn}>
+                         <button className={style.hajjBtn}><h4>View Details</h4></button>
+                         </div>
 
                     </div>
                     <div className={style.singleHajj}>
@@ -203,7 +215,9 @@ const Umra = () => {
                               <span className='text-[#4AB449]'>Starts From</span>
                               <span>979999TK</span>
                          </div>
-                         <button className={style.hajjBtn}>View Details</button>
+                         <div className={style.viewDetailBtn}>
+                         <button className={style.hajjBtn}><h4>View Details</h4></button>
+                         </div>
 
                     </div>
               </div>
@@ -256,10 +270,12 @@ const Umra = () => {
                     </div>
                </div>
                </div>
-               <div className='flex items-center justify-center mt-10'> 
+               <div className='flex items-center justify-center mt-10'>
+              <div className={style.registrationBtn}>
                <button className={style.rBtn}>
-                    Get pre-register
+                   <h4> Get pre-register</h4>
                </button>
+              </div>
                </div>
           </section>
          </section>

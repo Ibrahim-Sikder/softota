@@ -26,6 +26,9 @@
  font-size:35px;
  padding-top:20px;
 }
+.activeClass{
+  background:red;
+}
 .heroBoxMain{
   width:1105px;
   height:295px;
@@ -220,6 +223,53 @@ border-radius: 5px;
   display:flex;
   flex-wrap:wrap;
   justify-content: center;
+}
+
+.heroBoxBtnWrap{
+  transition:all .3s ease-in-out
+}
+.heroBoxBtnWrap:hover .heroBoxBtn{
+  background:#4AB449;
+  transition:all .3s ease-in-out;
+  
+
+}
+.heroBoxBtn h4{
+  transform:rotateX(0deg);
+  transition:all .5s ease-in-out;
+}
+.heroBoxBtnWrap:hover .heroBoxBtn h4{
+  transform:rotate(360deg);
+}
+
+.hajjBtn h4{
+  transform:rotateX(0deg);
+  transition:all .5s ease-in-out;
+}
+.viewDetailBtn:hover .hajjBtn h4{
+  transform:rotate(360deg);
+}
+.viewDetailBtn{
+  transition:all .3s ease-in-out
+}
+.viewDetailBtn:hover .hajjBtn{
+  background:#19ABE3;
+  transition:all .3s ease-in-out;
+}
+.registrationBtn{
+  transition:all .3s ease-in-out
+}
+.registrationBtn:hover .rBtn{
+  background:#4AB449;
+  transition:all .3s ease-in-out;
+  
+}
+.rBtn h4{
+  transform:rotateX(0deg);
+  transition:all .5s ease-in-out;
+}
+.registrationBtn:hover .rBtn h4{
+  transform:rotate(360deg);
 }
    
    @media only screen and (max-width:1024px){

@@ -11,12 +11,13 @@
      padding-left:10px;
      }
      .loginBtn{
-     width: 323px;
-     height: 53px;
-     background: #4AB449;
-     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-     border-radius: 5px;
-     color:white;
+          width: 323px;
+          height: 53px;
+          background: #4AB449;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+          border-radius: 5px;
+          color: white;
+          margin-left: 65px;
      }
      .devided{
      width: 206px;
@@ -70,6 +71,15 @@
            }
            .loginBtn {
                width: 300px;
+           }
+           .loginBtn {
+               margin-left: -23px;
+           }
+           .loginBtn2 {
+               margin-left: -36px;
+           }
+           .loginBtn3 {
+               margin-left: -35px;
            }
 
 

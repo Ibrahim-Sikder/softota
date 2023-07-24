@@ -6,6 +6,9 @@ import { useRouter } from 'next/router';
 import { toast } from 'react-hot-toast';
 import style from './signupAgent.module.css'
 import { AuthContext } from '../context/AuthContext/AuthProvider';
+import TopBar from '../../../components/TopBar/TopBar';
+import Header from '../../../components/Header/Header';
+import Footer from '../../../components/Footer/Footer';
 const SignUpAgent = () => {
      const [name, setName] = useState('')
      const [number, setNumber] = useState('')
@@ -60,6 +63,9 @@ const SignUpAgent = () => {
        }
      
      return (
+         <div>
+          <TopBar/>
+          <Header/>
           <div className={style.signUpAgentWrap}>
             <div className='grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center'>
                 <div>
@@ -100,6 +106,8 @@ const SignUpAgent = () => {
                 </div>
             </div>
           </div>
+          <Footer/>
+         </div>
         )
 }
 

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React, { useContext } from 'react'
 import agent from '../../public/agent.png';
 import facebook from '../../public/facebook.png';
+import google from '../../public/google.png';
 import style from './LoginAgent.module.css'
 import { useRouter } from 'next/router';
 import { signIn } from 'next-auth/react';

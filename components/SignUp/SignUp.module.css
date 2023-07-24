@@ -78,6 +78,9 @@
      .SignupWrap{
           width:100%;
      }
+     .loginBtn {
+          margin-left: 63px;
+      }
     
 }
 @media only screen and (max-width:500px){
@@ -99,6 +102,9 @@
       .loginBtn, .loginBtn2, .loginBtn3 {
           width: 317px;
           margin-left: -27px;
+      }
+      .loginBtn {
+          margin-left: 32px;
       }
 
 
