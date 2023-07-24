@@ -9,11 +9,12 @@ import see4 from '../../public/see4.png'
 import hotel5 from '../../public/hotel8.png'
 import hotel7 from '../../public/hotel9.png'
 import hotel8 from '../../public/hotel10.png'
-
-
+import house from '../../public/house.jpg'
 
 
 import {autoplay, FreeMode, Pagination,Autoplay,Navigation } from "swiper";
+import Link from 'next/link';
+import { FaLaptopHouse } from 'react-icons/fa';
 const BestPlace = () => {
      return (
           <div className={style.bestPlaceWrap}>
@@ -26,77 +27,100 @@ const BestPlace = () => {
                forest, culture, and natural beauty.
                 </p>
              </div>
-           <div className={style.destination}> 
-               <div className={style.trending}>
-                        <div className={style.bestPlaceImgWrap}>
-                        <Image
-                         src={see}
-                         alt="Picture of the author"
-                         width={400}
-                         height={300}
-                         className={style.swiperImg}
-                         />
-                        </div>
-                         {/* <img src={trending} className="w-full" alt="" /> */}
-                         <div className={style.placeFooter}>
-                         <h3>Coxs Bazar</h3>
-                         <span>1500TK</span>
-                         </div>
-                         
+             <div >
+                <div className={style.singleBestPlace}>
+                <div className="max-w-screen-xl mx-auto px-4 pt-8 pb-10">
+              <div className="flex flex-col flex-wrap md:flex-row md:-mx-2">
+               
+                 <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0" >
+                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-secondary">
+                              {/* <img src={category.img}  /> */}
+
+                              <Image
+                              className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150" alt='house'
+                               src={house} /> 
+                              {/* width={40}
+                               height={20} */}
+
+                              <div className="absolute gradient transition duration-500 group-hover:bg-[#19ABE3] group-hover:opacity-90 w-full h-72 md:h-96 z-100"></div>
+                              <div className="absolute left-0 right-0 bottom-0 p-6 z-30 transform translate-y-1/2 transition duration-500 h-full group-hover:translate-y-0 delay-100">
+                                  <div className="h-1/2 relative">
+                                      <div className="absolute bottom-0">
+                                          <h2 className="font-bold text-white leading-tight transition duration-500 text-xl pb-6 group-hover:underline">Cox s Bazar</h2>
+                                          <h2 className="font-bold text-white leading-tight transition duration-500 text-xl pb-6 ">4500TK</h2>
+                                      </div>
+                                  </div>
+                                  <div className="h-1/2">
+                                      <p className="text-white pb-4 opacity-0 transition duration-500 group-hover:opacity-100"> It is famous mostly for its long natural sandy beach, and it is infamous for the largest refugee camp in the world. It is located 150 km.</p>
+                                     
+                                  </div>
+                              </div>
+                          </Link>
                  </div>
-                 <div className={style.trending}>
-                 <div className={style.bestPlaceImgWrap}>
-                        <Image
-                         src={see2}
-                         alt="Picture of the author"
-                         width={400}
-                         height={300}
-                         className={style.swiperImg}
-                         />
-                        </div>
-                        
-                         {/* <img src={trending} className="w-full" alt="" /> */}
-                         <div className={style.placeFooter}>
-                         <h3>Shylet</h3>
-                         <span>900TK</span>
-                         </div>
-                         
+                 <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0" >
+                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-secondary">
+                              {/* <img src={category.img}  /> */}
+
+                              <Image
+                              className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150" alt='house'
+                               src={see2} /> 
+                              {/* width={40}
+                               height={20} */}
+
+                              <div className="absolute gradient transition duration-500 group-hover:bg-[#19ABE3] group-hover:opacity-90 w-full h-72 md:h-96 z-100"></div>
+                              <div className="absolute left-0 right-0 bottom-0 p-6 z-30 transform translate-y-1/2 transition duration-500 h-full group-hover:translate-y-0 delay-100">
+                                  <div className="h-1/2 relative">
+                                      <div className="absolute bottom-0">
+                                          <h2 className="font-bold text-white leading-tight transition duration-500 text-xl pb-6 group-hover:underline">Shylet</h2>
+                                          <h2 className="font-bold text-white leading-tight transition duration-500 text-xl pb-6 ">4500TK</h2>
+                                      </div>
+                                  </div>
+                                  <div className="h-1/2">
+                                      <p className="text-white pb-4 opacity-0 transition duration-500 group-hover:opacity-100"> Tourist attractions outside the city include Ratargul Swamp Forest, Bisnakandi, Bholaganj SadaPathor, Jaflong, Lalakhal, Khadimnagar Rain Forest, Sreemangal</p>
+                                     
+                                  </div>
+                              </div>
+                          </Link>
                  </div>
-                 <div className={style.trending}>
-                 <div className={style.bestPlaceImgWrap}>
-                        <Image
-                         src={see3}
-                         alt="Picture of the author"
-                         width={400}
-                         height={300}
-                         className={style.swiperImg}
-                         />
-                        </div>
-                         {/* <img src={trending} className="w-full" alt="" /> */}
-                         <div className={style.placeFooter}>
-                         <h3>Sainmartin</h3>
-                         <span>1400TK</span>
-                         </div>
-                         
+                 <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0" >
+                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-secondary">
+                              {/* <img src={category.img}  /> */}
+
+                              <Image
+                              className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150" alt='house'
+                               src={see3} /> 
+                              {/* width={40}
+                               height={20} */}
+
+                              <div className="absolute gradient transition duration-500 group-hover:bg-[#19ABE3] group-hover:opacity-90 w-full h-72 md:h-96 z-100"></div>
+                              <div className="absolute left-0 right-0 bottom-0 p-6 z-30 transform translate-y-1/2 transition duration-500 h-full group-hover:translate-y-0 delay-100">
+                                  <div className="h-1/2 relative">
+                                      <div className="absolute bottom-0">
+                                          <h2 className="font-bold text-white leading-tight transition duration-500 text-xl pb-6 group-hover:underline">Sundarban</h2>
+                                          <h2 className="font-bold text-white leading-tight transition duration-500 text-xl pb-6 ">4500TK</h2>
+                                      </div>
+                                  </div>
+                                  <div className="h-1/2">
+                                      <p className="text-white pb-4 opacity-0 transition duration-500 group-hover:opacity-100"> Sundarbans is a mangrove area in the delta formed by the confluence of the Ganges, Brahmaputra and Meghna Rivers in the Bay of Bengal</p>
+                                     
+                                  </div>
+                              </div>
+                          </Link>
                  </div>
-                 <div className={style.trending}>
-                 <div className={style.bestPlaceImgWrap}>
-                        <Image
-                         src={see4}
-                         alt="Picture of the author"
-                         width={400}
-                         height={300}
-                         className={style.swiperImg}
-                         />
-                        </div>
-                         {/* <img src={trending} className="w-full" alt="" /> */}
-                         <div className={style.placeFooter}>
-                         <h3>Sundarban</h3>
-                         <span>1900TK</span>
-                         </div>
-                         
-                 </div>
-           </div>
+              </div>
+                </div>
+                </div>
+             </div>
+
+             <br />
+             <br />
+             <br />
+
+
+           
+
+
+
           </div>
          );
 }

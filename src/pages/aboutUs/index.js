@@ -6,6 +6,7 @@ import Customer from '../../../components/Customer/Customer'
 import TopBar from '../../../components/TopBar/TopBar'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
+import TeamSection from '../../../components/TeamSection/TeamSection'
 
 
 const index = () => {

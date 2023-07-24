@@ -13,6 +13,7 @@ import { useState } from 'react'
 import Umra from '../../components/Umra/Umra'
 import TopBar from '../../components/TopBar/TopBar'
 import Footer from '../../components/Footer/Footer'
+import TeamSection from '../../components/TeamSection/TeamSection'
 
 export default function Home() {
   const[loading, setLoading] = useState(false)
@@ -22,7 +23,8 @@ export default function Home() {
  return(
   <section>
     <TopBar></TopBar>
-     <Header></Header>    
+     <Header></Header> 
+     <TeamSection></TeamSection>   
     <Umra></Umra>
     <Footer></Footer>
 </section>

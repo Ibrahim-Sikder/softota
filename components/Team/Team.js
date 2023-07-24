@@ -5,6 +5,7 @@ import team from '../../public/team.png'
 import team2 from '../../public/team2.png'
 import team3 from '../../public/team3.png'
 import team4 from '../../public/team4.png'
+import TeamSection from '../TeamSection/TeamSection'
 const Team = () => {
   return (
     <section className=''>
@@ -12,7 +13,9 @@ const Team = () => {
           <h2 className='text-3xl bold'>Our Team </h2>
           <p className='text-xl text-[#738187] '>At Better Work, we are driven by shared standards of excellence, guided by the same integrity, and motivated by a common ambition to improve lives.</p>
       </div>
-      <div className='flex justify-center flex-wrap items-center'>
+      <TeamSection/>
+      {/* ghuronti team section design */}
+      {/* <div className='flex justify-center flex-wrap items-center'>
           <div className={style.singleTeam}>
           <Image
           src={team}
@@ -57,7 +60,7 @@ const Team = () => {
         <h3>Dan REES</h3>
         <span>Better Work Chief</span>
           </div>
-      </div>
+      </div> */}
     </section>
   )
 }
