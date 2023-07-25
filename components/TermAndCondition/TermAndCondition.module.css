@@ -1,56 +1,15 @@
-.termCondition{
-width: 100vw;
-background: rgba(230, 248, 255, 0.7);
-overflow: hidden;
-padding:100px;
+.refund{
+     padding-bottom:20px;
 }
-.termCondition h2{
-     font-family: 'Poppins';
-     font-style: normal;
-     font-weight: 500;
-     font-size: 52px;
-     line-height: 78px;
-     margin:0 auto;
-     color: #000000;
- 
+.refund ul{
+     margin:0;
+     padding:0;
 }
-.termCondition p, .termCondition li{
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 18px;
-line-height: 23px;
-margin:10px auto;
-color: #092E3D;
-
+.refund ul li{
+     list-style-type: disc;
+    margin-left:20px;
 }
-.termCondition ul li{
-     list-style-type: circle;
-}
-
-
-@media only screen and (max-width:1024px){
-     .termCondition{
-          width:100%;
-     }
-     .termCondition h2{
-          width: 100%;
-          margin:0 auto;
-     }
-     .termCondition p, .termCondition li{
-     width: 100%;
-     margin:0 auto;
-     
-     }
-}
-@media only screen and (max-width:768px){
-     .termCondition{
-          width:100%;
-     }
-}
-@media only screen and (max-width:500px){
-     .termCondition{
-          width:100%;
-     }
+.flight li{
+     list-style-type: disc !important;
+     margin-left:20px;
 }

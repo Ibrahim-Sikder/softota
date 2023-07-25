@@ -14,7 +14,7 @@ const AboutHero = () => {
           alt="Picture of the author"
           className={style.aboutHeroImg}
      />
-      <h2 className={style.aboutHead}>The goal as a company is to have customer service that is not just the best but legendary.</h2>
+      <h2 className={style.aboutHead}>Ghuronti.com is partnering with you to reach your dream destinations.</h2>
      </section>
      <section className='py-28'>
       <div className='flex justify-center flex-wrap-reverse items-center'>
@@ -27,10 +27,10 @@ const AboutHero = () => {
         </div>
         <div className={style.rightBox}>
           <div>
-          <h2 className='text-4xl bold'>Ibrahim Sikder</h2>
+          <h2 className='text-4xl bold'>Kaji Ehsan</h2>
           <p className='text-xl'>Directior</p>
           <hr className='mb-5 mt-2 border-black'/>
-          <p>THE Ghuronti GROUP HAS STARTED OPERATION AS A REAL ESTATE VENTURE KNOWN AS Ghuronti UNDER THE AEGIS OF THE GROUP S FIRST CONCERN - THE EAST-WEST PROPERTY DEVELOPMENT (PVT) LTD IN 1987.</p>
+          <p>Coming soon this information....</p>
           </div>
         </div>
       </div>

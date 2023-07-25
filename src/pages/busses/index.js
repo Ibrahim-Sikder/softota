@@ -21,6 +21,7 @@ const Busses = () => {
       <TopBar/>
       <Header/>
       <BusBanner></BusBanner>
+      <BestPlace/>
     <Travel></Travel>
     <TourDestination></TourDestination>
     <Customer></Customer>

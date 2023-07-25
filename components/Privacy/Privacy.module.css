@@ -1,31 +1,11 @@
 .termCondition{
-     width: 1440px;
-     height: 1778px;
+     width: 100vw;
      background: rgba(230, 248, 255, 0.7);
-     
      margin:0 auto;
      }
-     .termCondition h2{
-          width: 529px;
-          font-family: 'Poppins';
-          font-style: normal;
-          font-weight: 500;
-          font-size: 52px;
-          line-height: 78px;
-          margin:0 auto;
-          color: #000000;
-      
-     }
-     .termCondition strong{
-          width: 529px;
-          margin:0 auto;
-          font-family: 'Poppins';
-          font-style: normal;
-          color: #000000;
-          padding-left:166px;
-     }
+
+ 
      .termCondition p, .termCondition li{
-     width: 1108px;
      font-family: 'Poppins';
      font-style: normal;
      font-weight: 600;
@@ -39,20 +19,3 @@
           list-style-type: circle;
      }
 
-
-
-     @media only screen and (max-width:1024px){
-          .termCondition{
-               width:100%;
-          }
-     }
-     @media only screen and (max-width:768px){
-          .termCondition{
-               width:100%;
-          }
-     }
-     @media only screen and (max-width:500px){
-          .termCondition{
-               width:100%;
-          }
-     }

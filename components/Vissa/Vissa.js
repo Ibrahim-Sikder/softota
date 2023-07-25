@@ -81,7 +81,7 @@ const Vissa = () => {
                     width={30}
                     height={30}
                     />
-                   <p className='ml-3'>Buses</p>
+                    <Link href='/busses'><p className='ml-3'>Buses</p></Link>
                    </li>
                    <li className={style.trainLi}>
                    <Image
@@ -90,7 +90,7 @@ const Vissa = () => {
                     width={30}
                     height={30}
                     />
-                   <p className='ml-3'>Trains</p>
+                   <Link href='/train'><p className='ml-3'>Train</p></Link>
                    </li>
                   </ul>
                 </div>

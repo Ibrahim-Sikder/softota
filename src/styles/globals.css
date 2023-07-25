@@ -59,3 +59,10 @@ table{
 .vertical-timeline::before {
     background: #4AB449 !important;
 }
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+    background-color: #E9F6E9;
+    
+}
+.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
+    background:#fff;
+}

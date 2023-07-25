@@ -8,6 +8,8 @@ import { getSession, signIn } from 'next-auth/react';
 import TopBar from '../../../components/TopBar/TopBar'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
+import TourDestination from '../../../components/Tour/TourDestination'
+import HotelTrending from '../../../components/Hotel/HotelTrending/HotelTrending'
 const HotelPage = () => {
 
   return (
@@ -16,6 +18,7 @@ const HotelPage = () => {
       <Header/>
       <Hotel></Hotel>
       <Travel></Travel>
+      <HotelTrending/>
       <Customer></Customer>
       <Footer/>
     </div>

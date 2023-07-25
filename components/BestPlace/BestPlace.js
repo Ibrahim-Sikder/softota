@@ -1,15 +1,9 @@
 import React from 'react'
 import style from './BestPlace.module.css';
 import Image from 'next/image';
-import hotel from '../../public/hotel4.png'
-import see from '../../public/see.png'
-import see2 from '../../public/see2.png'
+import cox from '../../public/assets/cox.jpg'
+import see from '../../public/assets/shylet.jpg'
 import see3 from '../../public/see3.png'
-import see4 from '../../public/see4.png'
-import hotel5 from '../../public/hotel8.png'
-import hotel7 from '../../public/hotel9.png'
-import hotel8 from '../../public/hotel10.png'
-import house from '../../public/house.jpg'
 
 
 import {autoplay, FreeMode, Pagination,Autoplay,Navigation } from "swiper";
@@ -33,12 +27,12 @@ const BestPlace = () => {
               <div className="flex flex-col flex-wrap md:flex-row md:-mx-2">
                
                  <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0" >
-                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-secondary">
+                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]">
                               {/* <img src={category.img}  /> */}
 
                               <Image
                               className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150" alt='house'
-                               src={house} /> 
+                               src={cox} /> 
                               {/* width={40}
                                height={20} */}
 
@@ -58,12 +52,12 @@ const BestPlace = () => {
                           </Link>
                  </div>
                  <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0" >
-                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-secondary">
+                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]">
                               {/* <img src={category.img}  /> */}
 
                               <Image
                               className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150" alt='house'
-                               src={see2} /> 
+                               src={see} /> 
                               {/* width={40}
                                height={20} */}
 
@@ -83,7 +77,7 @@ const BestPlace = () => {
                           </Link>
                  </div>
                  <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0" >
-                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-secondary">
+                          <Link href='' className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]">
                               {/* <img src={category.img}  /> */}
 
                               <Image

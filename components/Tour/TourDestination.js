@@ -1,17 +1,29 @@
 import React from "react";
-import hotel from "../../public/hotel.png";
-import vissa from "../../public/vissa.png";
-import { FaSistrix } from "react-icons/fa";
-import hotel2 from "../../public/hotel5.png";
-import hotel3 from "../../public/hotel6.png";
-import hotel6 from "../../public/hotel7.png";
-import hotel4 from "../../public/hotel8.png";
-import hotel5 from "../../public/hotel8.png";
-import hotel11 from "../../public/hotel11.png";
-import hotel7 from "../../public/hotel7.png";
-import hotel8 from "../../public/hotel8.png";
-import hotel9 from "../../public/hotel9.png";
-import hotel10 from "../../public/hotel10.png";
+import destination from '../../public/assets/destination.jpeg'
+import destination2 from '../../public/assets/destination6.jpeg'
+import destination3 from '../../public/assets/destination2.jpeg'
+import destination4 from '../../public/assets/destination3.jpeg'
+import destination5 from '../../public/assets/destination1.jpeg'
+import destination6 from '../../public/assets/destination4.jpeg'
+import destination7 from '../../public/assets/destination5.jpeg'
+import destination8 from '../../public/assets/destination6.jpeg'
+import destination9 from '../../public/assets/destination7.jpeg'
+import destination10 from '../../public/assets/destination8.jpeg'
+import destination11 from '../../public/assets/destination9.jpeg'
+import destination12 from '../../public/assets/destination10.jpeg'
+import destination13 from '../../public/assets/destination11.jpeg'
+import india from '../../public/assets/india.jpeg'
+import india2 from '../../public/assets/india2.jpeg'
+import india3 from '../../public/assets/india3.jpeg'
+import india4 from '../../public/assets/india4.jpeg'
+import india5 from '../../public/assets/india5.jpeg'
+import india6 from '../../public/assets/india6.jpeg'
+import india7 from '../../public/assets/india7.jpeg'
+import india8 from '../../public/assets/india8.jpeg'
+import india9 from '../../public/assets/india9.jpeg'
+import india10 from '../../public/assets/india10.jpeg'
+import india11 from '../../public/assets/india4.jpeg'
+import india12 from '../../public/assets/destination9.jpeg'
 import Image from "next/image";
 import Link from "next/link";
 import style from "./Tour.module.css";
@@ -68,11 +80,11 @@ const TourDestination = () => {
         </p>
       </div>
       <div className={style.destination}>
-      <div>
-          <Slider {...settings}>
+        <div>
+        <Slider {...settings}>
           <div className={style.tourTrending}>
                 <Image
-                  src={hotel2}
+                  src={destination}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -95,7 +107,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel3}
+                  src={destination2}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -118,7 +130,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel4}
+                  src={destination3}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -141,7 +153,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel5}
+                  src={destination4}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -164,7 +176,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel6}
+                  src={destination5}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -187,7 +199,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel7}
+                  src={destination6}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -210,7 +222,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel8}
+                  src={destination7}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -233,7 +245,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel9}
+                  src={destination8}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -256,7 +268,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel10}
+                  src={destination9}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -279,7 +291,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel11}
+                  src={destination10}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -302,7 +314,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel2}
+                  src={destination11}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -325,7 +337,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel3}
+                  src={destination13}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -362,7 +374,7 @@ const TourDestination = () => {
         <Slider {...settings}>
           <div className={style.tourTrending}>
                 <Image
-                  src={hotel2}
+                  src={india}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -385,7 +397,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel3}
+                  src={india2}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -408,7 +420,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel4}
+                  src={india3}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -431,7 +443,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel5}
+                  src={india5}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -454,7 +466,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel6}
+                  src={india6}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -477,7 +489,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel7}
+                  src={india7}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -500,7 +512,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel8}
+                  src={india8}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -523,7 +535,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel9}
+                  src={india9}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -546,7 +558,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel10}
+                  src={india10}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -569,7 +581,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel11}
+                  src={india11}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -592,7 +604,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel2}
+                  src={india12}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -615,7 +627,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={hotel3}
+                  src={destination13}
                   alt="Picture of the author"
                   width={500}
                   height={500}

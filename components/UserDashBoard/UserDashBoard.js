@@ -5,6 +5,7 @@ import logo from '../../public/logo.png'
 import { FaSistrix, FaCommentAlt,FaHeadSideCoughSlash ,FaUserCircle,FaEllipsisV} from 'react-icons/fa';
 import UserDashBoardLeft from './UserDashBoardLeft';
 import UserDashBoardRight from './UserDashBoardRight';
+import Link from 'next/link';
 const UserDashBoard = () => {
   return (
    <div>
@@ -12,13 +13,14 @@ const UserDashBoard = () => {
           <div className={style.dasBoardTop}>
          
             <div className={style.logoWrap}>
-            <Image
+           <Link href='/'> 
+           <Image
             src={logo}
             alt="Picture of the author"
-            width={80}
-            height={20}
+            width={100}
+            height={100}
             className={style.logo}
-            />
+            /></Link>
                <input type="text" placeholder='Search'/>
                <p className={style.searchIcon}><FaSistrix/></p>
                

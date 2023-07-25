@@ -2,8 +2,11 @@ import React from 'react'
 import DetailHotel from '../../../components/Hotel/DetailHotel'
 import Link from 'next/link'
 import Image from 'next/image'
-import hotel from '../../../public/hotel7.png'
-import hotel2 from '../../../public/hotel9.png'
+import hotel from '../../../public/assets/hotel9.jpg'
+import hotel2 from '../../../public/assets/hotell3.jpeg'
+import hotel3 from '../../../public/assets/hotell4.jpeg'
+import hotel4 from '../../../public/assets/hotell5.jpeg'
+import hotel5 from '../../../public/assets/hotell6.jpeg'
 import style from './detailH.module.css'
 import clock from '../../../public/clock.png'
 import location from '../../../public/location.png'
@@ -29,6 +32,7 @@ const index = () => {
            alt="Picture of the author"
            width={10}
            height={10}
+           className='mr-3'
          />
           <p>Vientinane, Laos</p>
         </div>
@@ -48,14 +52,14 @@ const index = () => {
             <div className={style.groupImg}>
             <Image
              className={style.leftSideSimg}
-                src={hotel2}
+                src={hotel5}
                 alt="Picture of the author"
                 width={200}
                 height={100}
               />
                <Image
                 className={style.leftSideSimg}
-                src={hotel2}
+                src={hotel3}
                 alt="Picture of the author"
                 width={200}
                 height={100}
@@ -71,7 +75,7 @@ const index = () => {
               />
                <Image
                 className={style.leftSideSimg}
-                src={hotel2}
+                src={hotel4}
                 alt="Picture of the author"
                 width={200}
                 height={100}
