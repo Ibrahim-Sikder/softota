@@ -19,21 +19,376 @@ import Typography from "@mui/material/Typography";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import Link from "next/link";
 
 const HotelSearch = () => {
   return (
     <div>
-      <div className="flex justify-between px-20 py-8 bg-[#E9F6E9] ">
+      <div className={style.searchDetailHead}>
         <div>
           <h2 className="text-3xl font-bold">COX S BAZAR</h2>
-          <p>27th August 2023 - 28th August 2023 4 Persons - 1 Rooms</p>
+          <p className="sm:my-3">27th August 2023 - 28th August 2023 4 Persons - 1 Rooms</p>
         </div>
-        <button className="bg-[#4AB449] text-white px-8 rounded-sm h-10 border-radius text-sm">
+        <button className="bg-[#4AB449] md:mt-[16px] text-white px-8 rounded-sm h-10 border-radius text-sm">
           EDIT SEARCH{" "}
         </button>
       </div>
-      <div className="grid grid-cols-12 px-8">
-        <div className="col-span-3 ">
+      <div className={style.hotelSearchBoxWrap}>
+      <div className={style.hotelSearchLeftSide}>
+          <div className={style.availableHotel}>
+            <div>
+              <h5 className="font-bold">95 Available Hotels </h5>
+              <small>Price includes VAT & Tax </small>
+            </div>
+            <div className={style.bookBtnGroup}>
+              <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm mr-3">
+                Highest Price{" "}
+              </button>
+              <Link href='/detailHotel'>
+                    <button className="bg-[#26ADE2] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      Lowest Price
+                    </button>
+                    </Link>
+            </div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className={style.detailBoxWrap}>
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <Link href='/detailHotel'>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW
+                    </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className={style.detailBoxWrap}>
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel2}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <Link href='/detailHotel'>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW
+                    </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className={style.detailBoxWrap}>
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel3}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <Link href='/detailHotel'>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW
+                    </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className={style.detailBoxWrap}>
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel2}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <Link href='/detailHotel'>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW
+                    </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className={style.detailBoxWrap}>
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel5}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <Link href='/detailHotel'>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW
+                    </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className={style.detailBoxWrap}>
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel6}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <Link href='/detailHotel'>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW
+                    </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div className={style.hotelSearchRightSide}>
           <div className={style.propertyWrap}>
           <div className="mb-5">
           <TextField
@@ -305,346 +660,7 @@ const HotelSearch = () => {
           </div>
        
         </div>
-        <div className="col-span-9">
-          <div className="flex justify-between px-2 my-5 px-5">
-            <div>
-              <h5 className="font-bold">95 Available Hotels </h5>
-              <small>Price includes VAT & Tax </small>
-            </div>
-            <div className="flex justify-between px-2">
-              <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm mr-3">
-                Highest Price{" "}
-              </button>
-              <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm">
-                Lowest Price{" "}
-              </button>
-            </div>
-          </div>
-          <div className={style.SearchHotel}>
-            <div className="flex">
-              <div className="searchLeftSideImg">
-                <Image
-                  src={hotel}
-                  alt="Picture of the author"
-                  className={style.searchLeftImg}
-                />
-              </div>
-              <div className={style.searchBoxWrap}>
-                <div>
-                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
-                  <div className="flex my-3">
-                    <FaStar className="text-[#4AB449]" />
-                    <FaStar className="text-[#4AB449] mx-[3px]" />
-                    <FaStar className="text-[#4AB449]" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
-                    <p>
-                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
-                      Cox s Bazar{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className={style.priceBlock}>
-                  <div>
-                    <p className={style.starFrom}>Starts from</p>
-                    <p>
-                      <del>BDT 5000</del>
-                      <span className={style.starFrom}>/Night</span>
-                    </p>
-                    <div>
-                      <span>
-                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
-                        <strong>
-                          BDT 2240/{" "}
-                          <span className={style.starFrom}>Night</span>{" "}
-                        </strong>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-xs">Price Includes VAT & Tax </span>
-                    </div>
-                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
-                      BOOK NOW{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div></div>
-          </div>
-          <div className={style.SearchHotel}>
-            <div className="flex">
-              <div className="searchLeftSideImg">
-                <Image
-                  src={hotel2}
-                  alt="Picture of the author"
-                  className={style.searchLeftImg}
-                />
-              </div>
-              <div className={style.searchBoxWrap}>
-                <div>
-                  <h2 className="text-2xl font-bold ">Sea Pearl Beach Resort & Spa Cox s Bazar</h2>
-                  <div className="flex my-3">
-                    <FaStar className="text-[#4AB449]" />
-                    <FaStar className="text-[#4AB449] mx-[3px]" />
-                    <FaStar className="text-[#4AB449]" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
-                    <p>
-                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
-                      Cox s Bazar{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className={style.priceBlock}>
-                  <div>
-                    <p className={style.starFrom}>Starts from</p>
-                    <p>
-                      <del>BDT 5000</del>
-                      <span className={style.starFrom}>/Night</span>
-                    </p>
-                    <div>
-                      <span>
-                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
-                        <strong>
-                          BDT 2240/{" "}
-                          <span className={style.starFrom}>Night</span>{" "}
-                        </strong>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-xs">Price Includes VAT & Tax </span>
-                    </div>
-                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
-                      BOOK NOW{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div></div>
-          </div>
-          <div className={style.SearchHotel}>
-            <div className="flex">
-              <div className="searchLeftSideImg">
-                <Image
-                  src={hotel3}
-                  alt="Picture of the author"
-                  className={style.searchLeftImg}
-                />
-              </div>
-              <div className={style.searchBoxWrap}>
-                <div>
-                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
-                  <div className="flex my-3">
-                    <FaStar className="text-[#4AB449]" />
-                    <FaStar className="text-[#4AB449] mx-[3px]" />
-                    <FaStar className="text-[#4AB449]" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
-                    <p>
-                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
-                      Cox s Bazar{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className={style.priceBlock}>
-                  <div>
-                    <p className={style.starFrom}>Starts from</p>
-                    <p>
-                      <del>BDT 5000</del>
-                      <span className={style.starFrom}>/Night</span>
-                    </p>
-                    <div>
-                      <span>
-                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
-                        <strong>
-                          BDT 2240/{" "}
-                          <span className={style.starFrom}>Night</span>{" "}
-                        </strong>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-xs">Price Includes VAT & Tax </span>
-                    </div>
-                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
-                      BOOK NOW{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div></div>
-          </div>
-          <div className={style.SearchHotel}>
-            <div className="flex">
-              <div className="searchLeftSideImg">
-                <Image
-                  src={hotel4}
-                  alt="Picture of the author"
-                  className={style.searchLeftImg}
-                />
-              </div>
-              <div className={style.searchBoxWrap}>
-                <div>
-                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
-                  <div className="flex my-3">
-                    <FaStar className="text-[#4AB449]" />
-                    <FaStar className="text-[#4AB449] mx-[3px]" />
-                    <FaStar className="text-[#4AB449]" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
-                    <p>
-                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
-                      Cox s Bazar{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className={style.priceBlock}>
-                  <div>
-                    <p className={style.starFrom}>Starts from</p>
-                    <p>
-                      <del>BDT 5000</del>
-                      <span className={style.starFrom}>/Night</span>
-                    </p>
-                    <div>
-                      <span>
-                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
-                        <strong>
-                          BDT 2240/{" "}
-                          <span className={style.starFrom}>Night</span>{" "}
-                        </strong>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-xs">Price Includes VAT & Tax </span>
-                    </div>
-                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
-                      BOOK NOW{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div></div>
-          </div>
-          <div className={style.SearchHotel}>
-            <div className="flex">
-              <div className="searchLeftSideImg">
-                <Image
-                  src={hotel5}
-                  alt="Picture of the author"
-                  className={style.searchLeftImg}
-                />
-              </div>
-              <div className={style.searchBoxWrap}>
-                <div>
-                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
-                  <div className="flex my-3">
-                    <FaStar className="text-[#4AB449]" />
-                    <FaStar className="text-[#4AB449] mx-[3px]" />
-                    <FaStar className="text-[#4AB449]" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
-                    <p>
-                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
-                      Cox s Bazar{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className={style.priceBlock}>
-                  <div>
-                    <p className={style.starFrom}>Starts from</p>
-                    <p>
-                      <del>BDT 5000</del>
-                      <span className={style.starFrom}>/Night</span>
-                    </p>
-                    <div>
-                      <span>
-                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
-                        <strong>
-                          BDT 2240/{" "}
-                          <span className={style.starFrom}>Night</span>{" "}
-                        </strong>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-xs">Price Includes VAT & Tax </span>
-                    </div>
-                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
-                      BOOK NOW{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div></div>
-          </div>
-          <div className={style.SearchHotel}>
-            <div className="flex">
-              <div className="searchLeftSideImg">
-                <Image
-                  src={hotel6}
-                  alt="Picture of the author"
-                  className={style.searchLeftImg}
-                />
-              </div>
-              <div className={style.searchBoxWrap}>
-                <div>
-                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
-                  <div className="flex my-3">
-                    <FaStar className="text-[#4AB449]" />
-                    <FaStar className="text-[#4AB449] mx-[3px]" />
-                    <FaStar className="text-[#4AB449]" />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
-                    <p>
-                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
-                      Cox s Bazar{" "}
-                    </p>
-                  </div>
-                </div>
-                <div className={style.priceBlock}>
-                  <div>
-                    <p className={style.starFrom}>Starts from</p>
-                    <p>
-                      <del>BDT 5000</del>
-                      <span className={style.starFrom}>/Night</span>
-                    </p>
-                    <div>
-                      <span>
-                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
-                        <strong>
-                          BDT 2240/{" "}
-                          <span className={style.starFrom}>Night</span>{" "}
-                        </strong>
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-xs">Price Includes VAT & Tax </span>
-                    </div>
-                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
-                      BOOK NOW{" "}
-                    </button>
-                  </div>
-                </div>
-              </div>
-              
-            </div>
-            <div></div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
