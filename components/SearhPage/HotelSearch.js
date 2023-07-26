@@ -1,0 +1,653 @@
+import React from "react";
+import style from "./HotelSearch.module.css";
+import Image from "next/image";
+import hotel from "../../public/assets/hotelll.jpeg";
+import hotel2 from "../../public/assets/hotelll2.jpg";
+import hotel3 from "../../public/assets/hotell3.jpeg";
+import hotel4 from "../../public/assets/hotell4.jpeg";
+import hotel5 from "../../public/assets/hotell5.jpeg";
+import hotel6 from "../../public/assets/hotell6.jpeg";
+import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+
+const HotelSearch = () => {
+  return (
+    <div>
+      <div className="flex justify-between px-20 py-8 bg-[#E9F6E9] ">
+        <div>
+          <h2 className="text-3xl font-bold">COX S BAZAR</h2>
+          <p>27th August 2023 - 28th August 2023 4 Persons - 1 Rooms</p>
+        </div>
+        <button className="bg-[#4AB449] text-white px-8 rounded-sm h-10 border-radius text-sm">
+          EDIT SEARCH{" "}
+        </button>
+      </div>
+      <div className="grid grid-cols-12 px-8">
+        <div className="col-span-3 ">
+          <div className={style.propertyWrap}>
+          <div className="mb-5">
+          <TextField
+            id="standard-basic"
+            label="Search Hotel"
+            variant="standard"
+          />
+          </div>
+         
+          <div>
+            <strong>Filter:</strong>
+            <div>
+           
+            <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Your budget (per night)  </strong> <br />
+                    <span className="my-5 block">BDT 3400 - BDT 45000</span>
+                     <input className="w-full" type="range" />
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Popular filters</strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>Restaurant</span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Breakfast included </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>No prepayment </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>5 stars </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Beachfront </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Beach </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Hotels </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Swimming Pool </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Fun things to do </strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>Fitness centre </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Beach </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Indoor pool </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Games room </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Hotel tub/Jacuzzi </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Meal</strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>Breakfast </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Half Board </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Full Board </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Property rating</strong> <br />
+                    <small>Includes stars and other ratings </small>
+                    <div>
+                      <Checkbox />
+                      <span>3 stars </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>4 stars </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>5 stars </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Unrated </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Sustainability </strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>
+                        Travel Sustainable properties Properties taking steps to
+                        make your stay more sustainable{" "}
+                      </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Property type  </strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>Hotels </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Entire hoes & apartments </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Resorts  </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Bed preference   </strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>Twin beds  </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Double bed  </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Large double bed  </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Extra-large double bed  </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Property accessibility  </strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>Wheelchair accessible </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    <strong>Room accessibility  </strong> <br />
+                    <div>
+                      <Checkbox />
+                      <span>Upper floors accessible by elevator  </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Entire unit wheelchair accessible  </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Toilet with grab rails   </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Walk-in shower  </span>
+                    </div>
+                    <div>
+                      <Checkbox />
+                      <span>Emergency cord in bathroom  </span>
+                    </div>
+                  </Typography>
+                </CardContent>
+              </Card>
+             
+            </div>
+          </div>
+          </div>
+       
+        </div>
+        <div className="col-span-9">
+          <div className="flex justify-between px-2 my-5 px-5">
+            <div>
+              <h5 className="font-bold">95 Available Hotels </h5>
+              <small>Price includes VAT & Tax </small>
+            </div>
+            <div className="flex justify-between px-2">
+              <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm mr-3">
+                Highest Price{" "}
+              </button>
+              <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm">
+                Lowest Price{" "}
+              </button>
+            </div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className="flex">
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Bashati Bay Resort </h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW{" "}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className="flex">
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel2}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Sea Pearl Beach Resort & Spa Cox s Bazar</h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW{" "}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className="flex">
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel3}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW{" "}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className="flex">
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel4}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW{" "}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className="flex">
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel5}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW{" "}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+          <div className={style.SearchHotel}>
+            <div className="flex">
+              <div className="searchLeftSideImg">
+                <Image
+                  src={hotel6}
+                  alt="Picture of the author"
+                  className={style.searchLeftImg}
+                />
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div>
+                  <h2 className="text-2xl font-bold ">Laguna Beach Hotel & Resort</h2>
+                  <div className="flex my-3">
+                    <FaStar className="text-[#4AB449]" />
+                    <FaStar className="text-[#4AB449] mx-[3px]" />
+                    <FaStar className="text-[#4AB449]" />
+                  </div>
+                  <div className="flex items-center justify-center">
+                    <FaMapMarkerAlt className="mr-[5px] text-[#4AB449]" />
+                    <p>
+                      Plot No.33, Block-A, Kolatoli Road, Sugandha Point, <br />{" "}
+                      Cox s Bazar{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.priceBlock}>
+                  <div>
+                    <p className={style.starFrom}>Starts from</p>
+                    <p>
+                      <del>BDT 5000</del>
+                      <span className={style.starFrom}>/Night</span>
+                    </p>
+                    <div>
+                      <span>
+                        <small className="text-[#4AB449] ">44% OFF</small>{" "}
+                        <strong>
+                          BDT 2240/{" "}
+                          <span className={style.starFrom}>Night</span>{" "}
+                        </strong>
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-xs">Price Includes VAT & Tax </span>
+                    </div>
+                    <button className="bg-[#4AB449] text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                      BOOK NOW{" "}
+                    </button>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HotelSearch;

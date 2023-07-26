@@ -20,10 +20,15 @@ import TopBar from '../../../components/TopBar/TopBar'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 const index = () => {
+ 
   return (
     <section>
       <TopBar/>
       <Header/>
+
+
+
+      
       <div className={style.detailHeadText}>
         <h2 className='text-3xl font-bold before:'>Laos: Land of a Million Elephants!</h2>
         <div className='flex'>

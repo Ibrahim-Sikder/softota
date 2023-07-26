@@ -1,0 +1,31 @@
+.SearchHotel{
+     width:95%;
+     height:230px;
+     margin:15px auto;
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.searchLeftImg{
+     width:230px;
+     height:230px !important;
+     object-fit: cover;
+}
+.starFrom{
+     color:#4AB449;
+     font-size:12px;
+     
+     
+}
+.searchBoxWrap{
+     display:flex;
+     justify-content: space-between;
+     width:100%;
+    padding:10px;
+}
+.priceBlock{
+     text-align: right;
+     margin-top: 60px;
+}
+.propertyWrap{
+     width:200px;
+     text-align: left;
+}

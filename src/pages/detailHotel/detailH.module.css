@@ -48,10 +48,13 @@
      background: #E9F6E9;
      padding: 30px 10px;
      text-align: left;
-     width: 92%;
+     width: 94%;
      overflow: hidden;
-     margin-left:25px;
+     margin-top: 36px;
+     margin: 0 auto;
 }
+
+
 .rightSide{
      background: white;
      padding: 20px;
@@ -77,7 +80,8 @@
     display:flex;
 }
 .rightSideImg{
-     margin-top:80px;
+     margin-top: 80px;
+     margin-left: 68px;
 }
 @media only screen and (max-width:1024px){
      .leftSideDetail{
@@ -117,16 +121,7 @@
       .groupImg{
           width: 100%;
           overflow: hidden;
-     }
-     .leftSideText {
-          background: #E9F6E9;
-          padding: 30px 10px;
-          text-align: left;
-          width: 100%;
-          overflow: hidden;
-          margin-top: 84px;
-      }
-         
+     } 
 }
 
 @media only screen and (max-width:768px){
