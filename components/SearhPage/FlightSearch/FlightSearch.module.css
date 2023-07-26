@@ -77,6 +77,40 @@
      justify-content:space-between;
      padding: 0px 20px;
 }
+.flightButton{
+     margin:20px;
+     display: flex;
+}
+.perFlightPerson{
+     width:100px;
+     background:#E9F6E9;
+     text-align: center;
+     overflow: hidden;
+     transition:all .3s ease;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; 
+}
+.perFlightPerson:hover{
+     border: 1px solid #4AB449;
+}
+.perFlightPerson h2{
+     font-size:14px !important;
+     margin:0;
+     padding:0;
+}
+.perFlightPerson small{
+     font-size:10px;
+}
+.flight{
+     width:33.33%;
+     height:40px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     text-align:center;
+     border:1px solid #ddd;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
 
 
 @media only screen and (max-width:768px){

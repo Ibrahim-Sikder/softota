@@ -1,9 +1,16 @@
 import React from 'react';
+import FlightSearch from '../../../components/SearhPage/FlightSearch/FlightSearch';
+import TopBar from '../../../components/TopBar/TopBar';
+import Header from '../../../components/Header/Header';
+import Footer from '../../../components/Footer/Footer';
 
 const flightSearch = () => {
      return (
           <div>
-               <h2>Flight search page </h2>
+               <TopBar/>
+               <Header/>
+              <FlightSearch/>
+              <Footer/>
           </div>
      );
 };
