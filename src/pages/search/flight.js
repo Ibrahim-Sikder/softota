@@ -3,7 +3,7 @@ import FlightSearch from '../../../components/SearhPage/FlightSearch/FlightSearc
 import TopBar from '../../../components/TopBar/TopBar';
 import Header from '../../../components/Header/Header';
 import Footer from '../../../components/Footer/Footer';
-
+import dynamic from "next/dynamic";
 const flightSearch = () => {
      return (
           <div>
@@ -15,4 +15,4 @@ const flightSearch = () => {
      );
 };
 
-export default flightSearch;
+export default dynamic (() => Promise.resolve(flightSearch), {ssr: false})

@@ -130,7 +130,6 @@ const FlightSearch = () => {
               <Airlines className="mr-2" /> Earliest Flight
             </div>
           </div>
-         
           <div className={style.flightSearch}>
             <div className={style.detailBoxWrap}>
               <div className={style.flightSearchLeftSide}>
@@ -142,86 +141,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <button className={style.flightBookBtn}>Book Now</button> <br />
-                <span className="text-[#26ADE2] mt-16 md:mt-3 sm:mb-8 block">
-                  See more <KeyboardArrowDown />
-                </span>
-              </div>
-              <div className={style.searchBoxWrap}>
-                <div className={style.flightDurationWrap}>
-                  <div className={style.flightDuration}>
-                    <div>
-                      <AirplaneTicket className="text-[#26ADE2] mr-2" />
-                    </div>
-                    <div className={style.duration}>
-                      <h2 className="text-xl">
-                        {" "}
-                        DAC - <strong>07:30</strong>
-                      </h2>
-                      <p>Hazrat Shahjalal Internation Airport</p>
-                      <small>29Th Jul 2023</small>
-                    </div>
-                  </div>
-                  <div className={style.flightDuration}>
-                    <div className={style.duration2}>
-                      <FlightLand className="text-[#26ADE2]" /> <br />
-                      <p>Non stop </p>
-                      <small>02h: 30m</small>
-                    </div>
-                    <div>
-                      <h2 className="text-xl">
-                        {" "}
-                        RJH - <strong>08:25</strong>
-                      </h2>
-                      <small>Shah Mokhdum Airport</small>
-                      <small>29Th Jul 2023</small>
-                    </div>
-                  </div>
-                  <div className={style.flightDuration}>
-                    <div>
-                      <AirplaneTicket className="text-[#26ADE2] mr-2" />
-                    </div>
-                    <div className={style.duration}>
-                      <h2 className="text-xl">
-                        {" "}
-                        DAC - <strong>07:30</strong>
-                      </h2>
-                      <p>Hazrat Shahjalal Internation Airport</p>
-                      <small>29Th Jul 2023</small>
-                    </div>
-                  </div>
-                  <div className={style.flightDuration}>
-                    <div className={style.duration2}>
-                      <FlightLand className="text-[#26ADE2]" /> <br />
-                      <p>Non stop </p>
-                      <small>02h: 30m</small>
-                    </div>
-                    <div>
-                      <h2 className="text-xl">
-                        {" "}
-                        RJH - <strong>08:25</strong>
-                      </h2>
-                      <small>Shah Mokhdum Airport</small>
-                      <small>29Th Jul 2023</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-           
-          <div className={style.flightSearch}>
-            <div className={style.detailBoxWrap}>
-              <div className={style.flightSearchLeftSide}>
-                <div className={style.deal}>
-                  <LocalOffer className={style.dealIcon} /> Best Deal
-                </div>
-                <span>Partially Refundable</span>
-                <h4 className="text-2xl font-bold text-[#26ADE2]">
-                  BDT 39,400
-                </h4>
-                <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <button className={style.flightBookBtn}>Book Now</button> <br />
+                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>
@@ -288,7 +208,6 @@ const FlightSearch = () => {
               </div>
             </div>
           </div>
-           
           <div className={style.flightSearch}>
             <div className={style.detailBoxWrap}>
               <div className={style.flightSearchLeftSide}>
@@ -300,7 +219,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <button className={style.flightBookBtn}>Book Now</button> <br />
+                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>
@@ -367,7 +286,6 @@ const FlightSearch = () => {
               </div>
             </div>
           </div>
-           
           <div className={style.flightSearch}>
             <div className={style.detailBoxWrap}>
               <div className={style.flightSearchLeftSide}>
@@ -379,7 +297,85 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <button className={style.flightBookBtn}>Book Now</button> <br />
+                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
+                <span className="text-[#26ADE2] mt-16 block">
+                  See more <KeyboardArrowDown />
+                </span>
+              </div>
+              <div className={style.searchBoxWrap}>
+                <div className={style.flightDurationWrap}>
+                  <div className={style.flightDuration}>
+                    <div>
+                      <AirplaneTicket className="text-[#26ADE2] mr-2" />
+                    </div>
+                    <div className={style.duration}>
+                      <h2 className="text-xl">
+                        {" "}
+                        DAC - <strong>07:30</strong>
+                      </h2>
+                      <p>Hazrat Shahjalal Internation Airport</p>
+                      <small>29Th Jul 2023</small>
+                    </div>
+                  </div>
+                  <div className={style.flightDuration}>
+                    <div className={style.duration2}>
+                      <FlightLand className="text-[#26ADE2]" /> <br />
+                      <p>Non stop </p>
+                      <small>02h: 30m</small>
+                    </div>
+                    <div>
+                      <h2 className="text-xl">
+                        {" "}
+                        RJH - <strong>08:25</strong>
+                      </h2>
+                      <small>Shah Mokhdum Airport</small>
+                      <small>29Th Jul 2023</small>
+                    </div>
+                  </div>
+                  <div className={style.flightDuration}>
+                    <div>
+                      <AirplaneTicket className="text-[#26ADE2] mr-2" />
+                    </div>
+                    <div className={style.duration}>
+                      <h2 className="text-xl">
+                        {" "}
+                        DAC - <strong>07:30</strong>
+                      </h2>
+                      <p>Hazrat Shahjalal Internation Airport</p>
+                      <small>29Th Jul 2023</small>
+                    </div>
+                  </div>
+                  <div className={style.flightDuration}>
+                    <div className={style.duration2}>
+                      <FlightLand className="text-[#26ADE2]" /> <br />
+                      <p>Non stop </p>
+                      <small>02h: 30m</small>
+                    </div>
+                    <div>
+                      <h2 className="text-xl">
+                        {" "}
+                        RJH - <strong>08:25</strong>
+                      </h2>
+                      <small>Shah Mokhdum Airport</small>
+                      <small>29Th Jul 2023</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={style.flightSearch}>
+            <div className={style.detailBoxWrap}>
+              <div className={style.flightSearchLeftSide}>
+                <div className={style.deal}>
+                  <LocalOffer className={style.dealIcon} /> Best Deal
+                </div>
+                <span>Partially Refundable</span>
+                <h4 className="text-2xl font-bold text-[#26ADE2]">
+                  BDT 39,400
+                </h4>
+                <del className="text-[#26ADE2]">BDT 33,500</del> <br />
+                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>
