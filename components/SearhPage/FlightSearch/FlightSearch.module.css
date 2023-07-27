@@ -6,7 +6,7 @@
 .hotelSearchLeftSide{
      grid-column: span 9 / span 9;
 }
-.hotelSearchRightSide{
+.flightRightSide{
      grid-column: span 3 / span 3;
 }
 .searchDetailHead{
@@ -15,22 +15,73 @@
      padding: 32px 80px;
      background:#E9F6E9;
 }
-.SearchHotel{
-     width:95%;
-     height:230px;
-     margin:15px auto;
+.flightSearch{
+     width: 95%;
+     height: 251px;
+     margin: 15px auto;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+     transition:all .3s ease-in-out;
+}
+.flightSearch:hover{
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .bookBtnGroup{
      justify-content:space-between;
      padding: 0px 8px;
 }
-.searchLeftSideImg{
-     position:relative;
-     width:230px;
-     height:230px !important;
-     overflow: hidden;
+.flightPrice{
+     display: flex;
+     justify-content: space-between;
 }
+.flightSearchLeftSide{
+     position: relative;
+     width: 389px;
+     overflow: hidden;
+     background: #E9F6E9;
+     padding: 5px;
+     height: 251px;
+}
+.deal{
+     background: #26ADE2;
+     font-size: 12px;
+     color: #fff;
+     width: 120px;
+     padding: 3px;
+     border-top-right-radius: 16px;
+     border-bottom-right-radius: 16px;
+}
+.dealIcon{
+     font-size:14px;
+}
+.flightBookBtn{
+     color:white;
+     background: #26ADE2;
+     padding:5px 15px;
+     font-size:14px;
+     margin:5px 0px;
+     border-radius:5px;
+}
+.flightDurationWrap{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin:0 auto;
+     flex-wrap:wrap;
+}
+.flightDuration{
+        display: flex;
+    align-items: center;
+    width: 43%;
+    margin-bottom: 20px;
+}
+.duration, .duration2 p{
+     font-size:12px;
+     color:black;
+}
+
+
+
+
 
 
 .searchLeftImg{
@@ -64,7 +115,7 @@
      text-align: right;
      margin-top: 60px;
 }
-.propertyWrap{
+.flightDesc{
      width: 200px;
      text-align: left;
      margin-top: 41px;
@@ -101,7 +152,7 @@
      font-size:10px;
 }
 .flight{
-     width:33.33%;
+     width:33.1%;
      height:40px;
      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
      text-align:center;
@@ -109,20 +160,78 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     transition:all .3s ease-out;
+}
+.flight:hover{
+     background:#4AB449;
+     color:#fff;
+}
+.bookDuration{
+     width: 250px;
+     margin: 0 auto;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     padding: 15px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+}
+.bookDuration p{
+     font-size:12px;
+     margin-bottom:3px;
+}
+.bookDuration button{
+     background: #4AB449;
+    width: 34px;
+    font-size: 12px;
+    border-radius: 2px;
+    padding: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+}
+.bookDurationBtn{
+     display: flex;
+     justify-content: center;
+     align-items:center;
+
 }
 
+.sheduleBtn{
+     width: 80%;
+     text-align: left;
+     margin: 0 auto;
+     padding: 8px 5px;
+     background: #fff;
+     color: black;
+     border:1px solid #ddd;
+     transition:all .3s ease-in-out;
+     margin-bottom:5px;
+}
+.sheduleBtn:hover{
+     border:1px solid #4AB449;
+}
+.sheduleBtnIcon{
+  font-size:16px;
+}
 
 
 @media only screen and (max-width:768px){
      .hotelSearchLeftSide{
           grid-column: span 12 / span 12;
      }
-     .hotelSearchRightSide{
+     .flightRightSide{
           grid-column: span 12 / span 12;
+          place-content: center;
+          text-align: center;
+          margin: 0 auto;
      }
-     .SearchHotel{
+     .flightSearch{
           height: 252px;
           width:100%;
+      }
+      .flightDesc {
+          width: 522px;
+          text-align: center;
       }
       .searchLeftImg{
           width: 300px;
@@ -135,6 +244,31 @@
      .bookBtnGroup{
           padding: 0px 0px;
      }
+     .flightPrice{
+         display: block;
+     }
+     .flight{
+          width: 100%;
+          height: 45px;
+          margin-bottom: 5px;
+      }
+     .flightButton {
+          margin: 20px 0px !important;
+          flex-wrap: wrap;
+          width: 100%;
+      }
+      .perFlightPerson{
+          width: 99px;
+          background: #E9F6E9;
+          text-align: center;
+          overflow: hidden;
+          transition: all .3s ease;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          margin: 4px 7px;
+      }
+      .sheduleBtn {
+          width: 100%;
+      }
     
      
 }
@@ -142,7 +276,7 @@
      .detailBoxWrap{
           display:block;
      }
-     .SearchHotel {
+     .flightSearch {
           height: 561px;
           width: 100%;
       }
@@ -161,4 +295,14 @@
           display:block;
           padding: 0px 0px;
      }
+     .flightSearchLeftSide {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+      }
+      .deal{
+          color: #fff;
+          width: 120px;
+          margin: 10px auto;
+      }
 }

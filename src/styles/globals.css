@@ -101,3 +101,34 @@ input[type="range"] {
     border: none;
     background: transparent;
   }
+  button, [type='button'], [type='reset'], [type='submit'] {
+    background:#26ADE2;
+    color:#fff;
+}
+button, [type='button'], [type='reset'], [type='submit']:hover {
+    background:#E9F6E9;
+    color:black;
+}
+@media only screen and (max-width:768px){
+    .css-1x51dt5-MuiInputBase-input-MuiInput-input {
+        margin-right: 58px !important;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .css-pwngrv-MuiPaper-root-MuiCard-root {
+        width: 191px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 199px;
+    }
+    label+.css-v4u5dn-MuiInputBase-root-MuiInput-root {
+        margin-top: 16px;
+        width: 50% !important;
+    }
+    .css-1x51dt5-MuiInputBase-input-MuiInput-input {
+        margin-right: 183px !important;
+    }
+}
