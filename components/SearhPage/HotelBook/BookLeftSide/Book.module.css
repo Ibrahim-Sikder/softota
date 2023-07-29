@@ -70,10 +70,45 @@
      width: 320px;
      height: 30px;
      border: 1px solid #ddd;
+
 }
 
+.rewardWrap{
+     width:48%;
+     border:1px solid #ddd;
+     padding:15px;
+     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+     margin-bottom:20px;
+}
+.rewardInfo{
+     display: flex;
+     justify-content: space-between;
+     flex-wrap:wrap;
+}
+.gpOffer span{
+     font-size: 12px;
+}
+.gpOffer small{
+     font-size: 10px;
+     margin:20px 0px;
+     display: block;
+}
+.gpVerify{
+     display: flex;
+     justify-content: space-between;
 
-
+}
+.gpVerify input{
+     border:1px solid #ddd;
+     padding-left:5px;
+     
+}
+.gpVerify button{
+     font-size: 14px;
+     padding:5px 15px;
+     border-radius:5px;
+     
+}
 
 
 

@@ -23,6 +23,9 @@ import milvik from '../../../../public/assets/milvik.png';
 import Link from "next/link";
 import style from './Book.module.css'
 import book from '../../../../public/assets/hotell.jpeg';
+import grameenphon from '../../../../public/assets/grameenphon.png'
+import lotto from '../../../../public/assets/lotto.png'
+import aorong from '../../../../public/assets/aorong.png'
 const HotelBookLeft = () => {
      return (
           <div>
@@ -179,6 +182,152 @@ const HotelBookLeft = () => {
               </div>
               </div>
             </div>
+
+
+            <div className="mt-8">
+              <h6 className="text-xl-font-bold">Rewards</h6>
+              <hr className="w-full mb-8"/>
+              <div className={style.rewardInfo}>
+              <div className={style.rewardWrap}>
+                <div className="flex items-center">
+                  <Image
+                  src={grameenphon}
+                  width={30}
+                  height={30}
+                  alt='logo'
+                  />
+                  <small className="ml-3">Grameenphone</small>
+                </div>
+                <div className={style.gpOffer}>
+                  <h6>Special Deal for GP STAR</h6>
+                  <span>Enter your Grameenphone number to check what deal is available for this product.</span> <br />
+                  <small>Terms & Conditions</small>
+                  <div className={style.gpVerify}>
+                    <input type="text" placeholder="Enter your GP number" />
+                    <button>Verify</button>
+                  </div>
+                </div>
+              </div>
+              <div className={style.rewardWrap}>
+                <div className="flex items-center">
+                  <Image
+                  src={lotto}
+                  width={30}
+                  height={30}
+                  alt='logo'
+                  />
+                  <small className="ml-3">Grameenphone</small>
+                </div>
+                <div className={style.gpOffer}>
+                  <h6>Deal for Lotto Privilege Club Members</h6>
+                  <span>Enter your Lotto registered contact number to check what deal is available.</span> <br />
+                  <small>Terms & Conditions</small>
+                  <div className={style.gpVerify}>
+                    <input type="text" placeholder="Enter your GP number" />
+                    <button>Verify</button>
+                  </div>
+                </div>
+              </div>
+              <div className={style.rewardWrap}>
+                <div className="flex items-center">
+                  <Image
+                  src={aorong}
+                  width={30}
+                  height={30}
+                  alt='logo'
+                  />
+                  <small className="ml-3">Grameenphone</small>
+                </div>
+                <div className={style.gpOffer}>
+                  <h6>Deal for Aarong Privilege Club Members</h6>
+                  <span>Enter your Aarong registered contact number to check what deal is available.</span> <br />
+                  <small>Terms & Conditions</small>
+                  <div className={style.gpVerify}>
+                    <input type="text" placeholder="Enter your GP number" />
+                    <button>Verify</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+
+
+
+            <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          
+            <div className={style.travelInsurance}>
+            <h6 className="text-[#4AB449] font-sm">Travel Insurance </h6> 
+            </div>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          <div className={style.insurance}>
+          <p>Protect your journey across the country at only BDT 10/person.</p>
+          <div className={style.insurancePackage}>
+          <div className="flex items-center">
+            <div className={style.icon}>
+            <FaBiking />
+            </div>
+            <div>
+              <h2 className=" ">BDT 200,000</h2>
+              <small>Accidental Coverage</small>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className={style.icon}>
+            <FaBlind />
+            </div>
+            <div>
+              <h2 className=" ">Up to BDT 30,000</h2>
+              <small>Hospitalization Coverage</small>
+              <small>(Including day care treatment)</small>
+            </div>
+          </div>
+          </div>
+          <div className={style.insurancePackage}>
+          <div className="flex items-center">
+            <div className={style.icon}>
+            <FaReact />
+            </div>
+            <div>
+              <h2 className=" ">BDT 2,000</h2>
+              <small>Covid 19</small>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className={style.icon}>
+            <FaPhoneVolume />
+            </div>
+            <div>
+              <h2 className=" ">24/7 Tele-doctor Consultation</h2>
+              <small>24-Hours Before and 24-Hours After Travel Date</small>
+            </div>
+          </div>
+          </div>
+          </div>
+         <div className="mt-10">
+         <div className="w-full flex  justify-between">
+           <div className="flex items-center">
+           <input type="checkbox" />
+            <small>Yes, I want to secure my journey</small>
+           </div>
+          </div>
+          <div className="flex items-center ">
+            <input type="checkbox" />
+            <small>No, I want to take the risk</small>
+          </div>
+          <div className="mb-5 mt-14">
+            <small >By adding travel insurance policy, you are agreeing to the Terms & Conditions .</small>
+          </div>
+         </div>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
 
        
          <Link href='/payment'><button className={style.continueBtn}>Continue </button></Link>

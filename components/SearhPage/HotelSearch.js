@@ -117,7 +117,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/detailHotel">
+                    <Link href="/search/hotel/book">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -135,7 +135,7 @@ const HotelSearch = () => {
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel2}
+                        src={hotel}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />
@@ -178,7 +178,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/detailHotel">
+                    <Link href="/search/hotel/book">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -196,7 +196,7 @@ const HotelSearch = () => {
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel3}
+                        src={hotel}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />
@@ -239,7 +239,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/detailHotel">
+                    <Link href="/search/hotel/book">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -257,7 +257,7 @@ const HotelSearch = () => {
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel4}
+                        src={hotel}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />
@@ -300,7 +300,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/detailHotel">
+                    <Link href="/search/hotel/book">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -311,14 +311,14 @@ const HotelSearch = () => {
             </div>
             <div></div>
           </div>
-          <div className={style.SearchHotel}>
+           <div className={style.SearchHotel}>
             <div className={style.detailBoxWrap}>
               <div className={style.searchLeftSideImg}>
                 <PhotoProvider>
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel5}
+                        src={hotel}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />
@@ -361,7 +361,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/detailHotel">
+                    <Link href="/search/hotel/book">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
