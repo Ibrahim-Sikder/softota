@@ -21,6 +21,7 @@ import Image from "next/image";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import milvik from '../../../../public/assets/milvik.png';
+import Link from "next/link";
 const FlightBookLeftSide = () => {
   return (
     <div>
@@ -490,7 +491,7 @@ const FlightBookLeftSide = () => {
       </Accordion>
    </div>
    </div>
-   <button className={style.continueBtn}>Continue </button>
+   <Link href='/payment'><button className={style.continueBtn}>Continue </button></Link>
     </div>
   );
 };

@@ -12,6 +12,8 @@ const FlightBook = () => {
                <div className={style.flightBookRightSide}>
                    <RightBook/>
                </div>
+
+               
               </div>
           </div>
      );

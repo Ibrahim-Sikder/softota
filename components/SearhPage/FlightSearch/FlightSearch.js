@@ -219,7 +219,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
+                <Link href='search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>

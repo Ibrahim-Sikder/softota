@@ -1,0 +1,15 @@
+
+.rightSideWrap{
+     width: 100%;
+     height: 600px;
+     border: 1px solid #ddd;
+     padding:20px;
+     margin-left:20px
+}
+.priceSummery div, .priceSummery strong{
+     font-size:12px;
+     margin-bottom:7px;
+}
+.priceSummery strong{
+     display: block;
+}
