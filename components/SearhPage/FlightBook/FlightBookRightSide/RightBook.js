@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Right.module.css'
 const RightBook = () => {
      return (
-          <div>
+          <div className={style.rightSide}>
                <div className={style.rightSideWrap}>
                     <h4 className='text-xl'>Your price summary</h4>
                     <div className='flex justify-between bg-[#E9F6E9] px-3 py-2'>

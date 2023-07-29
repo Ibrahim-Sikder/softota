@@ -7,12 +7,14 @@ import Vissa from '../../../components/Vissa/Vissa'
 import Footer from '../../../components/Footer/Footer'
 import TopBar from '../../../components/TopBar/TopBar'
 import Header from '../../../components/Header/Header'
+import Nav from '../../../components/NavBarr/Nav'
 
 const index = () => {
   return (
     <section>
-      <TopBar></TopBar>
-      <Header></Header>
+      {/* <TopBar></TopBar>
+      <Header></Header> */}
+      <Nav/>
      <Vissa></Vissa>
       <Countries></Countries>
       <Passion></Passion>

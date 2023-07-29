@@ -4,11 +4,13 @@ import Header from '../../../../components/Header/Header';
 import Footer from '../../../../components/Footer/Footer';
 import FlightBook from '../../../../components/SearhPage/FlightBook/FlightBook';
 import dynamic from "next/dynamic";
+import Nav from '../../../../components/NavBarr/Nav';
 const book = () => {
      return (
           <div>
-               <TopBar/>
-               <Header/>
+               {/* <TopBar/>
+               <Header/> */}
+               <Nav/>
                <FlightBook/>
                <Footer/>
           </div>

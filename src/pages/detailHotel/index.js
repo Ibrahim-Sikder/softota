@@ -19,14 +19,15 @@ import Trending from '../../../components/Trending/Trending'
 import TopBar from '../../../components/TopBar/TopBar'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
+import Nav from '../../../components/NavBarr/Nav'
 const index = () => {
  
   return (
     <section>
-      <TopBar/>
-      <Header/>
+      {/* <TopBar/>
+      <Header/> */}
 
-
+      <Nav/>
 
       
       <div className={style.detailHeadText}>

@@ -5,6 +5,7 @@ import logo from '../../../public/logo.png'
 import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLeft';
 import style from '../../../components/UserDashBoard/UserDashBoard.module.css'
 import styles from './profile.module.css'
+import Link from 'next/link';
 const flight = () => {
      return (
           <div>
@@ -12,6 +13,7 @@ const flight = () => {
           <div className={style.dasBoardTop}>
          
             <div className={style.logoWrap}>
+            <Link href='/'>
             <Image
             src={logo}
             alt="Picture of the author"
@@ -19,6 +21,7 @@ const flight = () => {
             height={20}
             className={style.logo}
             />
+            </Link>
                <input type="text" placeholder='Search'/>
                <p className={style.searchIcon}><FaSistrix/></p>
                

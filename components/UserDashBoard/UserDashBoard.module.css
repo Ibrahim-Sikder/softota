@@ -9,6 +9,10 @@ grid-column: span 2 / span 2;
 .rightSideBar{
      grid-column: span 10 / span 10;
 }
+.active{
+    display:none;
+
+}
 .dasBoardTop{
      display: flex;
      justify-content: space-between;

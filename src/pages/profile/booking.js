@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from './userProfile.module.css'
 import TopBar from '../../../components/TopBar/TopBar';
 import Header from '../../../components/Header/Header';
@@ -12,6 +12,10 @@ import visa from '../../../public/vissa.png'
 import tour from '../../../public/tour.png'
 import booking from '../../../public/saveCard.png'
 const Booking = () => {
+     const [activeBooking, setActiveBooking] = useState()
+     const handleBooking = ()=>{
+          setActiveBooking(activeBooking => !activeBooking)
+     }
      return (
           <section>
                <TopBar/>
@@ -23,7 +27,7 @@ const Booking = () => {
                 </div>
                 <div className={style.userProfileRightSide}>
                     <div className={styles.bookingWrap}>
-                         <div className='flex '>
+                         <div style={{display:'flex'}}   className={activeBooking ? `${style.active}` : ''}>
                          <Image
                          src={flight}
                          alt="Picture of the author"
@@ -33,7 +37,7 @@ const Booking = () => {
                          />
                          <button className='ml-3'>Flight </button>
                          </div>
-                         <div className='flex '>
+                         <div className='flex' >
                          <Image
                          src={hotel}
                          alt="Picture of the author"

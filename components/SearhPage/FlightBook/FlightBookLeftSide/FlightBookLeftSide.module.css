@@ -14,27 +14,199 @@
   padding: 10px 3px;
   font-size: 12px;
 }
-.pMethod{
-     width: 100px;
-     height: 60px;
-     border: 1px solid #E9F6E9;
-     transition: all .5s ease-in-out;
-     margin-bottom: 8px;
-     margin-right: 5px;
+.pMethod {
+  width: 100px;
+  height: 60px;
+  border: 1px solid #e9f6e9;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 8px;
+  margin-right: 5px;
 }
-.pMethod:hover{
-     border:1px solid #4AB449;
+.pMethod:hover {
+  border: 1px solid #4ab449;
 }
-.pMethodImg{
+.pMethodImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.methodWrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100% !important;
+  justify-content: space-between;
+  margin-top: 17px;
+}
+.reviewIcon {
+  font-size: 14px !important;
+}
+.flightDetail {
+  display: flex;
+  justify-content: space-between;
+}
+.flightDetail h6,
+.flightDetail p {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.dealWrap {
+  width: 100%;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.hotdetailWrap {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.hotDeal {
+  width: 48%;
+  height: 155px;
+  background: #e9f6e9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+.hotDeal strong {
+  font-size: 10px;
+}
+.couponCodeWrap {
+  width: 100%;
+  margin-top:10px;
+}
+.couponCode {
+  display: flex;
+  align-items: center;
+}
+.couponField {
+  width: 65%;
+}
+.apply {
+  background: #4ab449;
+  color: white;
+  margin-left: 13px;
+  padding: 13px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.adultBtn{
+     background: #e9f6e9;
+     margin: 0 5px;
+     font-size: 14px;
+     padding: 5px;
+}
+.travelerSelect{
      width:100%;
-     height:100%;
-     object-fit: cover;
+}
+.titleBtnWrap{
+     display:flex;
 
 }
-.methodWrap{
+.titleBtnWrap button{
+     margin-right: 5px;
+     padding: 5px;
+     width: 54px;
+     height: 38px;
+     background: transparent;
+     border: 1px solid #ddd
+
+}
+.personal{
+     margin-top:15px;
+}
+.personal span{
+     font-size:12px;
+}
+.inputFieldWrap{
+     width: 100%;
      display: flex;
-     flex-wrap: wrap;
-     width: 100% !important;
      justify-content: space-between;
-     margin-top: 17px;
+     align-items: center;
+     margin-top: 30px;
+}
+.titleInputField{
+     width:320px
+}
+.contactDetailWrap{
+     width:100%;
+     margin-top:30px;
+}
+.contactDetailWrap p{
+     font-size:12px;
+}
+.contactDetail{
+     display:flex;
+     justify-content: space-between;
+     margin-top:20px;
+}
+.contactField{
+     width: 320px;
+     border: 1px solid #ddd;
+     height: 35px;
+}
+.contactDetail label{
+     font-size:12px;
+     
+}
+.checkbox{
+     display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.checkbox input[type="checkbox"] {
+     margin: 0;
+     font: inherit;
+     color: currentColor;
+     width: 1.15em;
+     height: 1.15em;
+     border: 0.15em solid currentColor;
+     border-radius: 0.15em;
+     transform: translateY(-0.075em);
+     margin-right:5px;
+   }
+  
+.travelInsurance{
+     display:flex;
+     justify-content: space-between;
+     width:100%;
+     align-items:center;
+
+
+}
+.insurance{
+     width:100%;
+     height:200px;
+     background:#e9f6e9;
+     padding:20px;
+}
+.icon{
+     width: 30px;
+     height: 30px;
+     background: white;
+     color: black;
+     border-radius: 50%;
+     font-size: 24px;
+     line-height: 30px;
+     text-align: center;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     margin-right: 9px;
+}
+.insurancePackage{
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+     width:90%;
+     margin-top:20px;
+}
+.continueBtn{
+     width:100%;
+     height:35px;
+     background:#4AB449;
+     color:white;
+     margin-bottom:30px;
 }

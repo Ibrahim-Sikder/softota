@@ -17,16 +17,15 @@ import Umra from '../../components/Umra/Umra'
 import TopBar from '../../components/TopBar/TopBar'
 import Footer from '../../components/Footer/Footer'
 import TeamSection from '../../components/TeamSection/TeamSection'
+import Nav from '../../components/NavBarr/Nav'
 
 export default function Home() {
-  const[loading, setLoading] = useState(false)
-  if(loading){
-    return <h2>Loadding.......</h2>
-  }
+ 
  return(
   <section>
-    <TopBar></TopBar>
-     <Header></Header>  
+    <Nav/>
+    {/* <TopBar></TopBar>
+     <Header></Header>   */}
     <Umra></Umra>
     <Footer></Footer>
 </section>

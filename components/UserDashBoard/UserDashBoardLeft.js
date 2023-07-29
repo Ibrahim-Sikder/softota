@@ -25,7 +25,7 @@ const UserDashBoardLeft = () => {
                <span ><FaAngleDown/></span>
                </div>
               
-               <div  className={bookingListShow ? `hidden` : ''}>
+               <div  className={bookingListShow ? `${style.active}` : ''}>
                <ul className={style.bookingList}>
                     <li data-counter=''><Link href='/dashboard/flight'>Flight</Link></li>
                     <li data-counter=''><Link href='/dashboard'>Hotel</Link></li>

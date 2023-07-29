@@ -7,12 +7,14 @@ import TourDestination from '../../../components/Tour/TourDestination'
 import TopBar from '../../../components/TopBar/TopBar'
 import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
+import Nav from '../../../components/NavBarr/Nav'
 
 const index = () => {
   return (
     <div>
-      <TopBar/>
-      <Header/>
+      <Nav/>
+      {/* <TopBar/>
+      <Header/> */}
       <Banner></Banner>      
       <TourDestination></TourDestination>
       <Travel></Travel>

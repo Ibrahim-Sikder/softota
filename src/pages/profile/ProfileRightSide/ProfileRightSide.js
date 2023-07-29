@@ -39,14 +39,12 @@ const ProfileRightSide = () => {
                required
                id="outlined-required"
                label="First Name"
-               defaultValue="First Name"
                 />
                 <TextField
                  className={style.inputBtn}
                required
                id="outlined-required"
                label="Last Name"
-               defaultValue="Last Name"
                 />
           </div>
           <div className={style.inputGroupWrap}>
@@ -55,14 +53,12 @@ const ProfileRightSide = () => {
                required
                id="outlined-required"
                label="Email"
-               defaultValue="Email"
                 />
                 <TextField
                  className={style.inputBtn}
                required
                id="outlined-required"
                label="password"
-               defaultValue="Password"
                 />
           </div>
           <div className={style.inputGroupWrap}>
@@ -71,14 +67,12 @@ const ProfileRightSide = () => {
                required
                id="outlined-required"
                label="Mobile Number"
-               defaultValue="Mobile Number"
                 />
                <TextField
                className={style.inputBtn}
                required
                id="outlined-required"
                label="Gender"
-               defaultValue="Gender"
                 />
           </div>
           <div className={style.inputGroupWrap}>
@@ -87,14 +81,12 @@ const ProfileRightSide = () => {
                required
                id="outlined-required"
                label="Date of Birth "
-               defaultValue="Date of Birth "
                 />
                 <TextField
                  className={style.inputBtn}
                required
                id="outlined-required"
                label="Nationality "
-               defaultValue="Nationality "
                 />
           </div>
           <div className={style.inputGroupWrap}>
@@ -103,14 +95,12 @@ const ProfileRightSide = () => {
                required
                id="outlined-required"
                label="Passport Number "
-               defaultValue="Passport Number"
                 />
                 <TextField
                  className={style.inputBtn}
                required
                id="outlined-required"
                label="Passport Expire Date "
-               defaultValue="Passport Expire Date "
                 />
           </div>
           <div className={style.inputGroupWrap}>
@@ -119,14 +109,12 @@ const ProfileRightSide = () => {
                required
                id="outlined-required"
                label="First Name"
-               defaultValue="First Name"
                 />
                 <TextField
                  className={style.inputBtn}
                required
                id="outlined-required"
                label="Last Name"
-               defaultValue="Last Name"
                 />
           </div>
           <div className={style.saveBtn}>
