@@ -1,0 +1,121 @@
+.profileWrap{
+     display:grid;
+     grid-template-columns: repeat(12, minmax(0, 1fr));
+     
+}
+.userProfileLeftSide{
+     grid-column: span 3 / span 3;
+}
+.userProfileRightSide{
+     grid-column: span 9 / span 9;
+}
+
+/* save card styling */
+.saveCard{
+     display:flex;
+     justify-content: center;
+     text-align: center;
+}
+/* managae accoun styling  */
+.deleteBtn{
+     background: #26ADE2;
+     color: white;
+     padding: 10px 33px;
+     font-size: 21px;
+     margin-top: 31px;
+}
+
+.bookingWrap{
+     display:flex;
+     align-items: center;
+     justify-content: center;
+     margin-top:15px;
+}
+.bookingHistory{
+     display:flex;
+     align-items:center;
+     margin-right:25px;
+}
+.bookingHistory button{
+     background:transparent;
+}
+
+.userFlightBookingInfoWrap{
+     width:90%;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     padding:15px;
+     margin:20px auto;
+}
+.bookingInfoWrap{
+     display: flex;
+     justify-content: space-between;
+     align-items:center;
+     width:100%;
+}
+.bookingInfo{
+     width:100%;
+     display: flex;
+     justify-content: space-between;
+}
+.leftSideBook{
+     width:65%;
+     display: flex;
+     justify-content: space-between;
+}
+
+.rightSide{
+     width: 35%;
+     text-align: right;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.bookingInfo p{
+     font-size: 12px;
+}
+.flightInfo{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: #E9F6E9;
+     padding: 40px 20px;
+     margin-top:30px;
+}
+
+.flightInfo p{
+     font-size: 12px;
+     margin-bottom:5px;
+}
+.payment{
+     display:flex;
+     justify-content: space-between;
+     margin-top:20px;
+     background:#19ABE3;
+     padding:10px;
+}
+.payment button{
+     color: white;
+     font-size: 12px;
+     background: #4AB449;
+     padding: 5px 10px;
+     border-radius: 4px;
+}
+
+
+
+
+
+@media only screen and (max-width:768px){
+     .userProfileLeftSide{
+          grid-column: span 12 / span 12;
+     }
+     .userProfileRightSide{
+          grid-column: span 12 / span 12;
+     }
+     .deleteBtn {
+          margin-bottom: 25px;
+      }
+      
+
+}

@@ -11,6 +11,7 @@ import hotel from '../../../public/hotel.png'
 import visa from '../../../public/vissa.png'
 import tour from '../../../public/tour.png'
 import booking from '../../../public/saveCard.png'
+import Link from 'next/link';
 const Booking = () => {
      const [activeBooking, setActiveBooking] = useState()
      const handleBooking = ()=>{
@@ -27,7 +28,9 @@ const Booking = () => {
                 </div>
                 <div className={style.userProfileRightSide}>
                     <div className={styles.bookingWrap}>
-                         <div style={{display:'flex'}}   className={activeBooking ? `${style.active}` : ''}>
+                    
+                      <Link href='/profile/userbooking/flightbooking'>
+                      <div style={{display:'flex'}}   className={activeBooking ? `${style.active}` : ''}>
                          <Image
                          src={flight}
                          alt="Picture of the author"
@@ -37,6 +40,8 @@ const Booking = () => {
                          />
                          <button className='ml-3'>Flight </button>
                          </div>
+                      </Link>
+                         <Link href='/profile/userbooking/hotelbooking'>
                          <div className='flex' >
                          <Image
                          src={hotel}
@@ -47,6 +52,7 @@ const Booking = () => {
                          />
                          <button className='ml-3'>Hotel </button>
                          </div>
+                         </Link>
                          <div className='flex '>
                          <Image
                          src={visa}

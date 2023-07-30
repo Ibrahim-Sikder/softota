@@ -14,8 +14,6 @@ import Nav from "../../../components/NavBarr/Nav";
 const Profile = () => {
   return (
     <section>
-      {/* <TopBar></TopBar>
-               <Header></Header> */}
       <Nav />
       <section className={style.accounWra}>
         <div className={style.profileWrap}>
