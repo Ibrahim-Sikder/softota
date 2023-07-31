@@ -1,4 +1,48 @@
-/* hotel banner styling */
+
+.searchResult{
+  width: 250px;
+  z-index: 999999 !important;
+  position: absolute;
+  box-sizing: border-box;
+  height:300px;
+  overflow-x: hidden;
+  color:black;
+  margin-top:10px;
+}
+.searchResult div{
+  width: 100%;
+  padding: 10px 2px;
+  cursor:pointer;
+  transition:all .3s ease-in-out;
+  background:#4ab449;
+  color:white;
+}
+.searchResult div:hover{
+  background:#19ABE3;
+  color:white;
+}
+.searchTop input{
+  width:100%;
+  height:100%;
+  background:transparent;
+}
+
+.airport{
+  display:flex;
+  flex-wrap: wrap;
+  align-items:center;
+
+}
+.airport p{
+  font-size:12px;
+}
+
+
+
+
+
+
+
 .banner {
   width: 100vw !important;
   box-sizing: border-box;
@@ -35,6 +79,94 @@
   position: relative;
   top: 50px;
 }
+.departDate{
+  background: #19ABE3;
+  position: absolute;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  border: 1px solid #4ab449;
+  padding-left: 10px;
+  top: 248px;
+  left: 122px;
+  height: 65px;
+  width: 38%;
+  color: white;
+}
+.multiplePackageWrap{
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:10px;
+
+}
+.multiplePackage{
+  width: 210px;
+  height: 74px;
+  border: 1px solid rgba(156, 148, 148, 0.664);
+  background: #19ABE3;
+  color: #fff;
+  margin-right: 0px;
+  padding: 8px;
+
+}
+.passengerWrap{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  margin-top:20px;
+}
+.multiplePackage input{
+  width: 100%;
+  background: transparent;
+}
+.pLeftSide{
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+}
+.adultsBtn{
+  display: flex;
+  align-items:center;
+}
+
+.adultsBtn span{
+  width: 40px;
+  height: 40px;
+  border: 1px solid #4ab449;
+  font-size: 20px;
+  margin-right: 10px;
+  line-height: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:#fff;
+  cursor:pointer;
+}
+.dateOfChild{
+  margin-top: 20px;
+  width: 170px;
+  height: 19px;
+  margin-bottom: 20px !important;
+}
+.classType p{
+  font-size:12px ;
+  margin-bottom:5px;
+}
+.addCity{
+  display: flex;
+  align-items: center;
+  background: #4AB449;
+  color: white;
+  width: 103px;
+  padding: 5px;
+  height: 43px;
+  border-radius: 12px;
+  margin-left: 20px;
+}
 
 .package,
 .package2,
@@ -42,11 +174,16 @@
 .package4 {
   width: 415px;
   height: 65px;
-  background: white;
+  background: #19ABE3;
   position: absolute;
   border-radius: 5px;
-  border: 1px solid #4ab449;
+  border: 1px solid #ddd;
   padding-left: 20px;
+  color:white;
+}
+.package input{
+  background:transparent;
+  width:100%;
 }
 .flightGroup {
   width: 450px;
@@ -73,7 +210,6 @@
 }
 
 .date {
-  background: white;
   position: absolute;
   border-bottom-left-radius: 7px;
   border-top-left-radius: 7px;
@@ -81,11 +217,13 @@
   padding-left: 10px;
   top: 248px;
   left: 122px;
+  background: #19ABE3;
   height: 65px;
   width: 207.5px;
+  color: white;
 }
 .date2 {
-  background: white;
+  background: #19ABE3;
   border-bottom-right-radius: 7px;
   border-top-right-radius: 7px;
   position: absolute;
@@ -95,6 +233,7 @@
   left: 328px;
   height: 65px;
   width: 207.5px;
+  color: #fff;
 }
 .package {
   top: 170px;
@@ -105,7 +244,10 @@
   right: 131px;
   top: 170px;
 }
-
+.package2 input, .package3 input, .package4 input, .packageDate input{
+  width:100%;
+  background:transparent;
+}
 .package3 {
   top: 248px;
   left: 125px;
@@ -158,6 +300,9 @@
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
     width: 98%;
+  }
+  .departDate{
+    width: 37.4%;
   }
   .package,
   .package2,
@@ -216,14 +361,21 @@
   .bannerWrap h2 {
     margin-bottom: 10px;
   }
+  
+  .departDate {
+    top: 336px;
+    left:100px;
+    width: 34.4%;
+
+}
   .package,
   .package2 {
     width: 300px;
   }
   .package4 {
-    top: 349px;
-    width: 270px;
-    right: 28px;
+    top: 336px;
+    width: 252px;
+    right: 100px;
   }
   .date {
     top: 349px;
@@ -258,7 +410,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .bannerWrap {
     margin-bottom: 410px;
   }
@@ -268,7 +420,8 @@
   }
   .heroBoxBtn {
     top: 619px;
-    padding: 14px 32px;
+    padding: 14px 25px;
+    width: 190px;
   }
 
   .menu {
@@ -293,6 +446,12 @@
     top: 443px;
     width: 39%;
   }
+  .departDate {
+    top: 449px;
+    left: 48px;
+    width: 77%;
+}
+
   .date {
     left: 48px;
   }

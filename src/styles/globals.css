@@ -103,17 +103,37 @@ input[type="range"] {
     color:#fff;
 }
 button, [type='button'], [type='reset'], [type='submit']:hover {
-    background:#E9F6E9;
-    color:black;
+    background: #19ABE3;
+    color: white;
 }
 
 input::placeholder {
    font-size: 12px;
+   color:white;
   }
 
 
 
+  .css-1ujnqem-MuiTabs-root {
+    margin-left: 280px;
+    margin-top:25px;
+}
 
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    background: #4AB449;
+    color:white;
+}
+.css-1aquho2-MuiTabs-indicator {
+    background-color: #4AB449;
+    
+}
+.modal {
+    width:430px;
+    margin:0 auto;
+}
+:focus{
+    outline:none;
+}
 
 
 
@@ -122,6 +142,18 @@ input::placeholder {
 @media only screen and (max-width:768px){
     .css-1x51dt5-MuiInputBase-input-MuiInput-input {
         margin-right: 58px !important;
+    }
+    .css-1ujnqem-MuiTabs-root {
+        margin-left: 125px;
+        margin-top:-40px;
+    }
+    button, [type='button'], [type='reset'], [type='submit']:hover {
+        width: 103px;
+        padding: 0px 3px;
+        text-transform: capitalize;
+    }
+    .css-heg063-MuiTabs-flexContainer {
+        margin-left: 49px;
     }
 }
 
@@ -140,5 +172,19 @@ input::placeholder {
     }
     .css-1x51dt5-MuiInputBase-input-MuiInput-input {
         margin-right: 183px !important;
+    }
+    .css-1ujnqem-MuiTabs-root {
+        margin-left: 10px;
+        margin-top:-40px;
+    }
+    .css-heg063-MuiTabs-flexContainer {
+        margin-top: 9px;
+        margin-left: 10px;
+    }
+    button, [type='button'], [type='reset'], [type='submit']:hover {
+        width: 90px;
+        padding: 0px 3px;
+        text-transform: capitalize;
+        font-size: 12px;
     }
 }

@@ -11,6 +11,7 @@ const Nav = () => {
           <div className={style.navbarMain}>
             <div className={style.navbarBanner}>
             <svg
+            className='text-white'
           xmlns="http://www.w3.org/2000/svg"
           width={25}
           height={27}
@@ -36,7 +37,7 @@ const Nav = () => {
                               height={50}
                               className={style.logo}
                           />
-                      <Link href="/about" style={{textDecoration:'none', color:"black"}}><p>About Us</p></Link>
+                      <Link href="/aboutUs" style={{textDecoration:'none', color:"black"}}><p>About Us</p></Link>
                   </div>
                   <div className={style.inputDiv}>
                     <input type="text" placeholder="Search Flight, Hotal, Visa" />
@@ -68,7 +69,7 @@ const Nav = () => {
                 <FlightLandIcon className={style.landOf} onClick={() => setMobActive(0)}/>
                 
               </div>
-              <Link href="/about" style={{textDecoration:'none', color:"black"}}><p>About Us</p></Link>
+              <Link href="/aboutUs" style={{textDecoration:'none', color:"black"}}><p>About Us</p></Link>
               <div className={style.inputDivMOb}>
                     <input type="text" placeholder="Search Flight, Hotal, Visa" />
                     <div className={style.inputIcon}>

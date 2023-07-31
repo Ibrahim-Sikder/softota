@@ -71,6 +71,9 @@
    .inputDiv input:focus {
      outline: none;
    }
+   .inputDiv input::placeholder {
+    color:black !important;
+  }
    
    .inputIcon {
      width: 20%;
