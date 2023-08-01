@@ -49,11 +49,11 @@
 }
 .bannerWrap {
   position: relative;
-  background-image: url("../../public/banner.png");
+  background-image: url(/_next/static/media/banner.f7be9e77.png);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100vw !important;
-  height: 500px;
+  height:auto;
   box-sizing: border-box;
   background-position: center;
   margin-bottom: 124px;
@@ -70,7 +70,7 @@
 }
 .heroBoxMain {
   width: 1105px;
-  height: 456px;
+  height: auto;
   background: #c6e8f1 0.6;
   z-index: 9999 !important;
   margin: 0 auto;
@@ -81,7 +81,6 @@
 }
 .departDate{
   background: #19ABE3;
-  position: absolute;
   border-bottom-left-radius: 7px;
   border-top-left-radius: 7px;
   border: 1px solid #4ab449;
@@ -89,9 +88,10 @@
   top: 248px;
   left: 122px;
   height: 65px;
-  width: 38%;
+  width: 415px;
   color: white;
 }
+
 .multiplePackageWrap{
   display: flex;
   width: 100%;
@@ -166,7 +166,30 @@
   height: 43px;
   border-radius: 12px;
   margin-left: 20px;
+  cursor:pointer;
 }
+
+.removeCity{
+  display: flex;
+  align-items: center;
+  background: #19abe3;
+  color: white;
+  width: 100px;
+  padding: 5px;
+  height: 43px;
+  border-radius: 12px;
+  margin-left: 20px;
+  cursor:pointer;
+}
+.oneWayPackage, .roundTripWrap, .groupFlight{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+}
+
 
 .package,
 .package2,
@@ -175,7 +198,6 @@
   width: 415px;
   height: 65px;
   background: #19ABE3;
-  position: absolute;
   border-radius: 5px;
   border: 1px solid #ddd;
   padding-left: 20px;
@@ -195,8 +217,6 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 3px;
-  top: 100px;
-  left: 50%;
   transform: translate(-50%);
   display: flex;
   justify-content: space-between;
@@ -210,13 +230,10 @@
 }
 
 .date {
-  position: absolute;
   border-bottom-left-radius: 7px;
   border-top-left-radius: 7px;
   border: 1px solid #4ab449;
   padding-left: 10px;
-  top: 248px;
-  left: 122px;
   background: #19ABE3;
   height: 65px;
   width: 207.5px;
@@ -226,11 +243,8 @@
   background: #19ABE3;
   border-bottom-right-radius: 7px;
   border-top-right-radius: 7px;
-  position: absolute;
   border: 1px solid #4ab449;
   padding-left: 10px;
-  top: 248px;
-  left: 328px;
   height: 65px;
   width: 207.5px;
   color: #fff;
@@ -238,6 +252,11 @@
 .package {
   top: 170px;
   left: 125px;
+}
+.showModalIcon{
+  margin-right: 22px;
+  cursor: pointer;
+  margin-top: 19px;
 }
 
 .package2 {
@@ -267,17 +286,25 @@
   display: flex;
   justify-content: space-between;
 }
-
+.btnWrap{
+  text-align: center;
+  padding-bottom: 30px;
+}
 .heroBoxBtn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 370px;
-  background: #19abe3;
-  color: white;
-  font-size: 18px;
-  border-radius: 5px;
-  padding: 16px 55px;
+      left: 50%;
+      top: 370px;
+      background: #19abe3;
+      color: white;
+      font-size: 18px;
+      border-radius: 5px;
+      padding: 16px 0px;
+      width: 225px;
+      margin: 0 auto;
+      text-align: center;
+}
+.flightWay{
+  width:100%;
+  margin:0 auto;
 }
 /* menu styling  */
 .menu {
@@ -301,38 +328,14 @@
   .heroBoxMain {
     width: 98%;
   }
-  .departDate{
-    width: 37.4%;
-  }
-  .package,
-  .package2,
-  .package3,
-  .package4 {
-    width: 372px;
-    height: 65px;
-    background: white;
-    position: absolute;
-    border-radius: 5px;
-    border: 1px solid #4ab449;
-    padding-left: 20px;
-  }
-  .date2 {
-    left: 311px;
-    height: 65px;
-    width: 190px;
-  }
-  .date {
-    width: 190px;
-  }
+  
+
+
+  
 }
 
 @media only screen and (max-width: 768px) {
-  .bannerWrap {
-    margin-bottom: 200px;
-  }
-  .heroBoxMain {
-    height: 512px;
-  }
+
   .bannerWrap h2 {
     font-size: 25px;
   }
@@ -347,10 +350,7 @@
     z-index: 999 !important;
     color: black;
   }
-  .heroBoxMain {
-    width: 95%;
-    height: 109%;
-  }
+ 
 
   .heroBoxBtn {
     top: 445px;
@@ -361,44 +361,13 @@
   .bannerWrap h2 {
     margin-bottom: 10px;
   }
-  
-  .departDate {
-    top: 336px;
-    left:100px;
-    width: 34.4%;
-
-}
-  .package,
-  .package2 {
+  .departDate, .package4 {
     width: 300px;
-  }
-  .package4 {
-    top: 336px;
-    width: 252px;
-    right: 100px;
-  }
-  .date {
-    top: 349px;
-    left: 28px;
-    width: 195px;
-  }
-  .date2 {
-    top: 349px;
-    width: 195px;
-    left: 222px;
-  }
-  .package,
-  .package2 {
-    width: 253px;
-  }
-  .package {
-    top: 250px;
-    left: 100px;
-  }
-  .package2 {
-    top: 250px;
-    right: 100px;
-  }
+}
+
+
+  
+
   .flightGroup {
     width: 440px;
     top: 195px;
@@ -411,13 +380,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .bannerWrap {
-    margin-bottom: 410px;
-  }
-  .heroBoxMain {
-    height: 707px;
-    border-radius: 0px;
-  }
+
   .heroBoxBtn {
     top: 619px;
     padding: 14px 25px;
@@ -440,56 +403,42 @@
     margin-right: 0px;
     margin-left: 39px;
   }
+  .oneWayPackage, .roundTripWrap, .groupFlight {
+    display: block;
+}
+  
+.package input, .package3 input, .package2 input, .package4 input, .packageDate input{
+  width: 170px;
 
-  .date,
-  .date2 {
-    top: 443px;
-    width: 39%;
-  }
-  .departDate {
-    top: 449px;
-    left: 48px;
-    width: 77%;
+}
+.package, .package2, .package3, .package4 {
+  width: 90%;
+  margin: 0 auto;
+}
+.package, .package2, .package3, .package4 {
+  height: 54px;
 }
 
-  .date {
-    left: 48px;
-  }
-  .package4 {
-    width: 230px;
-    top: 520px;
-    right: 40px;
-    width: 77%;
-  }
-  .package {
-    top: 275px;
-    width: 80%;
-  }
-  .package2 {
-    top: 300px;
-    width: 80%;
-  }
+.package input, .package3 input, .package2 input, .package4 input, .packageDate input {
+  width: 98%;
+}
+.departDate, .package4 {
+  width: 90%;
+  margin: 0 auto;
+  height: 55px;
+}
+.oneWayPackage, .roundTripWrap, .groupFlight {
+  margin-bottom:0px;
+}
+.departDate, .package4 {
+  margin: 5px auto;
+}
+.package, .package2, .package3, .package4 {
+  width: 90%;
+  margin: 5px auto;
+  height: 54px;
+}
 
-  .package {
-    top: 289px;
-    width: 84%;
-    left: 33px;
-  }
-
-  .package2 {
-    top: 367px;
-    width: 81%;
-    left: 40px;
-    padding-left: 11px;
-  }
-  .date input,
-  .date2 input {
-    width: 100%;
-  }
-  .date2 {
-    position: absolute;
-    left: 205px;
-  }
   .bestPlaceHead {
     width: 100%;
     margin-top: 387px;
