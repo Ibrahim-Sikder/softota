@@ -115,8 +115,9 @@ input::placeholder {
 
 
   .css-1ujnqem-MuiTabs-root {
-    margin-left: 305px;
+    margin-left: 300px;
     margin-top:25px;
+    margin-bottom:8px;
 }
 
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
@@ -134,10 +135,19 @@ input::placeholder {
 :focus{
     outline:none;
 }
+::-webkit-calendar-picker-indicator{
+    background-color: #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
 
 
-
-
+@media only screen and (max-width:1024px){
+    .css-1ujnqem-MuiTabs-root {
+        margin-left: 250px;
+    }
+}
 
 @media only screen and (max-width:768px){
     .css-1x51dt5-MuiInputBase-input-MuiInput-input {
@@ -179,12 +189,18 @@ input::placeholder {
     }
     .css-heg063-MuiTabs-flexContainer {
         margin-top: 9px;
-        margin-left: 10px;
+        margin-left: 20px;
     }
     button, [type='button'], [type='reset'], [type='submit']:hover {
         width: 90px;
         padding: 0px 3px;
         text-transform: capitalize;
         font-size: 12px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .css-heg063-MuiTabs-flexContainer {
+        margin-left: -12px !important;
     }
 }

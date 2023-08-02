@@ -388,6 +388,7 @@ const Faq = () => {
         </AccordionDetails>
             </Accordion>
             </div>
+            <div>Hello</div>
          </div>
         );
 }

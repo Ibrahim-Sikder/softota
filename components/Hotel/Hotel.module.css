@@ -21,54 +21,71 @@
   }
   
   .bannerWrap h2{
-   display: flex;
-   justify-content: center;
-   font-size:35px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    padding-top: 22px;
    
   }
   .heroBoxMain{
-    width:1105px;
-    height:410px;
-    background:#C6E8F1 0.6;
+    width: 1105px;
+    height: 410px;
+    background: #C6E8F1 0.6;
     z-index: 9999 !important;
-    margin:0 auto;
+    margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius:37px;
-    position:relative;
-    top:50px;
+    border-radius: 37px;
+    position: relative;
+    top: 28px;
   }
   
   .package, .package2, .package3, .package4{
-    width:415px;
-    height:65px;
-    background:white;
-    position:absolute;
-    border-radius:5px;
-    border:1px solid #4AB449;
-    padding-left:20px;
-  }
-
-  .date{
+    width: 415px;
+    height: 60px;
     background: white;
     position: absolute;
     border-radius: 5px;
     border: 1px solid #4AB449;
-    padding-left: 10px;
+    /* padding-left: 20px; */
+    background: #19ABE3;
+    color: white;
+    padding: 10px;
+  }
+  .package input, .package2 input, .package3 input, .package4 input, .date input, .date2 input{
+    background:transparent;
+    width:100%;
+    color:white;
+  }
+  .date{
+    position: absolute;
+    border: 1px solid #4AB449;
     top: 187px;
-    left: 122px;
-    height: 65px;
-    width:207.5px;
+    left: 125px;
+    height: 60px;
+    width: 207.5px;
+    background: #19ABE3;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
   }
   .date2{
-    background: white;
     position: absolute;
-    border-radius: 5px;
     border: 1px solid #4AB449;
-    padding-left: 10px;
     top: 187px;
-    left: 328px;
-    height: 65px;
-    width:207.5px;
+    left: 332px;
+    height: 60px;
+    width: 207.5px;
+    background: #19ABE3;
+    color: white;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    font-size: 16px;
+    border-bottom-right-radius: 5px;
+  }
+  .date2 h4{
+    font-size:14px;
   }
   .package{
     top:100px;
@@ -92,7 +109,7 @@
     right: 131px;
   }
   .package, .package2 h4{
-    font-size:18px;
+    font-size: 14px;
   }
   .packageBtn{
     border-bottom: 2px solid #4AB449;
@@ -350,7 +367,6 @@
     .date2{
       top: 281px;
       left: 247px;
-      height: 65px;
       width: 207.5px;
     }
     .date{
@@ -361,13 +377,16 @@
       font-size:14px;
     }
     .bannerWrap h2 {
-      font-size: 30px;
+      font-size: 25px;
       text-align: center;
       width: 80%;
       margin: 0 auto;
   }
     .heroBoxBtn {
-      top: 364px;
+      top: 365px;
+      width: 161px;
+      font-size: 16px;
+      padding:15px 5px;
   }
   .package h4, .package2 h4{
     font-size:16px;
@@ -396,20 +415,19 @@
      }
      .bannerWrap{
       margin-bottom: 300px;
+      height: 465px;
   }
   .heroBoxMain{
-    height: 661px;
-    border-radius:0px;
+    height: 622px;
+    border-radius: 0px;
   }
   .heroBoxBtn {
     top: 540px;
-    padding: 16px 27px;
 }
 .package4{
-  width: 230px;
-  top: 455px;
-  right: 40px;
-  width: 80%;
+  top: 468px;
+    right: 40px;
+    width: 80%;
 }
 .package{
   top: 275px;
@@ -423,20 +441,20 @@
 
 
 .package {
-  top: 241px;
+  top: 260px;
   width: 80%;
   left: 41px;
-  padding-left:5px;
+  padding-left: 5px;
 }
 .date, .date2{
-  top:383px;
-  width:40%;
+  top: 399px;
+    width: 40%;
 }
 .package2{
-  top: 309px;
+  top: 330px;
   width: 80%;
   left: 41px;
-  padding-left:5px;
+  padding-left: 5px;
 }
 .date input, .date2 input{
   width: 100%;
@@ -455,6 +473,7 @@
   font-size: 28px;
 }
 
+
  }
  
  @media only screen and (max-width: 400px){
@@ -467,8 +486,10 @@
 }
 
 .date, .date2 {
-  top: 383px;
-  width: 39%;
+  top: 397px;
+  width: 39.5%;
+  margin: 0 auto;
+  font-size: 12px;
 }
 .package4 {
   right: 32px;
@@ -478,6 +499,9 @@
 }
 .bannerWrap {
   margin-bottom: 433px;
+}
+.package2 {
+  top: 328px;
 }
 
  }

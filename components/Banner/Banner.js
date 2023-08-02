@@ -205,7 +205,7 @@ const Banner = ({ setResults }) => {
     setData4(res);
 
   };
-
+  // const [passengerClass, setPassengerClass] = useState([{First: 'Cabin', Second: 'Premium', Third: 'Economy'}]);
   const [data5, setData5] = useState([]);
   const [filterData5, setFilterData5] = useState([]);
   const [selected5, setSelected5] = useState([])
@@ -290,7 +290,8 @@ const Banner = ({ setResults }) => {
     console.log(text);
     setSelected6(text)
     setData6([])
-  } 
+  }
+ 
 
 
   const [inputList, setinputList]= useState([{flyingFrom:'', flyingTo:'', date:''}]);
@@ -450,7 +451,7 @@ const Banner = ({ setResults }) => {
                     <div className='flex justify-between'>
                         <div>
                         <small>{child + infant + adult} Person</small> <br />
-                      <h4>Passengers & Cabin Class</h4>
+                      <h4>Passengers & Class</h4>
                         </div>
                       <Groups2 onClick={() => window.my_modal_3.showModal()} className={style.showModalIcon}/>
                     </div>
@@ -504,9 +505,7 @@ const Banner = ({ setResults }) => {
                         <div>
                           <TextField
                             className={style.dateOfChild}
-                            required
                             id="outlined-required"
-                            label="Child 1 Date of Birth "
                             type="date"
                           />
                         </div>
@@ -528,7 +527,7 @@ const Banner = ({ setResults }) => {
                         </div>
 
                         <div className={style.classType}>
-                          <p>Cabin class</p>
+                          <p >Cabin class</p>
                           <p>Premium Economy</p>
                           <p>Business class</p>
                           <p>First class</p>
@@ -664,9 +663,7 @@ const Banner = ({ setResults }) => {
                         <div>
                           <TextField
                             className={style.dateOfChild}
-                            required
                             id="outlined-required"
-                            label="Child 1 Date of Birth "
                             type="date"
                           />
                         </div>
@@ -809,9 +806,7 @@ const Banner = ({ setResults }) => {
                         <div>
                           <TextField
                             className={style.dateOfChild}
-                            required
                             id="outlined-required"
-                            label="Child 1 Date of Birth "
                             type="date"
                           />
                         </div>
@@ -901,8 +896,16 @@ const Banner = ({ setResults }) => {
                   </div>
                 </div>
 
-                
-
+                { 
+                   
+                   inputList.length!==1 &&
+                <div  onClick={()=> handleremove(i)}>
+                  <div className={style.removeCity}>
+                    <HorizontalRule />
+                    <span>Remove City </span>
+                  </div>
+                </div>
+                  }
                 
                    
                   { inputList.length-1===i &&
@@ -914,16 +917,7 @@ const Banner = ({ setResults }) => {
                 </div>
                   }
 
-                { 
-                   
-                   inputList.length!==1 &&
-                <div  onClick={()=> handleremove(i)}>
-                  <div className={style.removeCity}>
-                    <HorizontalRule />
-                    <span>Remove</span>
-                  </div>
-                </div>
-                  }
+                
 
               </div>
              );
@@ -937,12 +931,12 @@ const Banner = ({ setResults }) => {
                   <div className={style.searchTop}>
                     <h4>Flying From</h4>
                     <input
-                      onChange={(e) => handleFilter(e.target.value)}
+                      // onChange={(e) => handleFilter(e.target.value)}
                       id="searchAirport"
                       type="text "
                       placeholder="City or Airport "
                     />
-                    <div className={style.searchResult}>
+                    {/* <div className={style.searchResult}>
                       {data?.map((d, i) => (
                         <div key={i}>
                           <div className={style.airport}>
@@ -952,19 +946,19 @@ const Banner = ({ setResults }) => {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className={style.package2}>
                   <div className={style.searchTop}>
                     <h4>Flying To</h4>
                     <input
-                      onChange={(e) => handleFilter2(e.target.value)}
+                      // onChange={(e) => handleFilter2(e.target.value)}
                       id="searchAirport"
                       type="text "
                       placeholder="City or Airport "
                     />
-                    <div className={style.searchResult}>
+                    {/* <div className={style.searchResult}>
                       {data2?.map((d, i) => (
                         <div key={i}>
                           <div className={style.airport}>
@@ -974,7 +968,7 @@ const Banner = ({ setResults }) => {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 </div>

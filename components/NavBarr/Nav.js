@@ -14,7 +14,7 @@ const Nav = () => {
             className='text-white'
           xmlns="http://www.w3.org/2000/svg"
           width={25}
-          height={27}
+          height={25}
           fill="none"
         >
           <path
