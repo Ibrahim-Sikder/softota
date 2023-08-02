@@ -68,6 +68,7 @@ const Banner = ({ setResults }) => {
   const [infant, setInfant] = useState(0);
   const [value, setValue] = React.useState("1");
   const [checked, setChecked] = React.useState([1]);
+  const [classes, setClasses] = useState('')
 
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
@@ -316,7 +317,6 @@ const Banner = ({ setResults }) => {
 
 
 
-
   return (
     <div>
       <div className={style.bannerWrap}>
@@ -452,6 +452,7 @@ const Banner = ({ setResults }) => {
                         <div>
                         <small>{child + infant + adult} Person</small> <br />
                       <h4>Passengers & Class</h4>
+                      <small>{classes}</small>
                         </div>
                       <Groups2 onClick={() => window.my_modal_3.showModal()} className={style.showModalIcon}/>
                     </div>
@@ -527,10 +528,17 @@ const Banner = ({ setResults }) => {
                         </div>
 
                         <div className={style.classType}>
-                          <p >Cabin class</p>
-                          <p>Premium Economy</p>
-                          <p>Business class</p>
-                          <p>First class</p>
+                       
+                         <select onChange={(e)=>{
+                          const classes = e.target.value;
+                          setClasses(classes)
+
+                         }}>
+                          <option value="Premium">Premium</option>
+                          <option value="Emconomy">Emconomy</option>
+                          <option value="Premium">Buisness</option>
+                          <option value="Premium">Premium</option>
+                         </select>
                         </div>
                       </div>
                     </form>
