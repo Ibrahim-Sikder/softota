@@ -1190,7 +1190,9 @@ const Banner = ({ setResults }) => {
           </Box>
          </div>
          <div className={style.btnWrap}>
-         <button className={style.heroBoxBtn}>Get Your Offers</button>
+        <Link href='/search/flight'>
+        <button className={style.heroBoxBtn}>Get Your Flight</button>
+        </Link>
          </div>
         </div>
       </div>

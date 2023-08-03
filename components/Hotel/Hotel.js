@@ -75,7 +75,9 @@ const Hotel = () => {
             </div>
           </div>
          </div>
-          <button className={style.heroBoxBtn}>Get Your Offers</button>
+         <Link href='/search'>
+         <button className={style.heroBoxBtn}>Get Your Hotel</button>
+         </Link>
 
           {/* menubar */}
           <div>

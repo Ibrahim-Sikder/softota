@@ -43,7 +43,7 @@ const Umra = () => {
 
           <div className={style.heroBoxBtnWrap}>
             <button className={style.heroBoxBtn}>
-              <h4>Get Your Offers</h4>
+              <h4>Get Your Package</h4>
             </button>
           </div>
        

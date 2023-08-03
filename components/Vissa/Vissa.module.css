@@ -13,9 +13,12 @@
    }
    
    .bannerWrap h2{
+    
     display: flex;
     justify-content: center;
-    font-size:35px;
+    font-size: 30px;
+    padding-top: 22px;
+
    }
    .heroBoxMain{
      width:1105px;
@@ -26,6 +29,7 @@
      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
      border-radius:37px;
      position:relative;
+     top:27px;
    }
    
    .package{
@@ -85,13 +89,14 @@
 
    /* menu styling  */
    .menu{
-     display:flex;
-     justify-content: space-between;
-     padding:23px 20px;
-     font-size:18px;
-     background:white;
-     border-top-left-radius: 20px;
-     border-top-right-radius:20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+    font-size: 18px;
+    background: #4AB449;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #fff
      
    }
    .menu li{

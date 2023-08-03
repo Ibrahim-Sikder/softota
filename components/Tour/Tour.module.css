@@ -19,7 +19,8 @@
    .bannerWrap h2{
     display: flex;
     justify-content: center;
-    font-size:35px;
+    font-size: 30px;
+    padding-top: 23px;
    
    }
    .heroBoxMain{
@@ -38,14 +39,16 @@
    
    /* menu styling  */
    .menu{
-     display:flex;
-     justify-content: space-between;
-     padding:23px 20px;
-     font-size:18px;
-     background:white;
-     border-top-left-radius: 20px;
-     border-top-right-radius:20px;
-     z-index:99;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 20px;
+    font-size: 18px;
+    background: #4AB449;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #fff;
+    z-index: 99;
+    font-size:16px;
      
    }
    .menu li{
