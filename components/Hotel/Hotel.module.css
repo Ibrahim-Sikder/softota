@@ -58,25 +58,23 @@
   }
   .date{
     position: absolute;
-    border: 1px solid #4AB449;
     top: 187px;
-    left: 125px;
+    left: 134px;
     height: 60px;
-    width: 207.5px;
+    width: 207px;
     background: #19ABE3;
     color: white;
     font-size: 14px;
     padding: 10px;
     border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    border-top-left-radius: 5px
   }
   .date2{
     position: absolute;
-    border: 1px solid #4AB449;
     top: 187px;
-    left: 332px;
+    left: 342px;
     height: 60px;
-    width: 207.5px;
+    width: 207px;
     background: #19ABE3;
     color: white;
     padding: 10px;
@@ -88,12 +86,12 @@
     font-size:14px;
   }
   .package{
-    top:100px;
-    left: 125px;
+    top: 100px;
+    left: 134px
   }
 
   .package2{
-    right: 131px;
+    right: 134px;
     top: 100px;
   
 
@@ -105,8 +103,8 @@
 
   }
   .package4{
-    top:187px;
-    right: 131px;
+    top: 187px;
+    right: 134px;
   }
   .package, .package2 h4{
     font-size: 14px;

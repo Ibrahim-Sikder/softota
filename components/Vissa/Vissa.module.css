@@ -29,19 +29,20 @@
    }
    
    .package{
-     width:400px;
-     height:40px;
-     background:white;
-     position:absolute;
-     left:50%;
-     transform:translateX(-50%);
-     top:100px;
-     border-radius:5px;
-     border:1px solid #4AB449;
+    width: 400px;
+    height: 40px;
+    background: #19ABE3;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 111px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: white;
    
    }
    .packageBtn{
-     border-bottom: 2px solid #4AB449;
+    border-bottom: 2px solid #fff;
    }
    .packageWrap{
      display: flex !important;
@@ -51,18 +52,20 @@
    }
 
    .vissaSearchBar{
-     width:100%;
+    width: 100%;
     position: absolute;
-    left: 64%;
+    left: 68%;
     transform: translateX(-50%);
-    top: 177px;
+    top: 182px;
 
    }
 .vissaSearchBar input{
-     width:560px;
-     height:65px;
-     border-top-left-radius: 10px;
-     border-bottom-left-radius: 10px;
+  width: 560px;
+  height: 65px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background: #19ABE3;
+  color: white;
 }
 .vissaSearchBar button{
      width:180px;
@@ -73,11 +76,11 @@
      border-bottom-right-radius: 10px;
 }
 .searchIcon{
-     position:absolute;
-     font-size:38px;
-     color:#738187;
-     top:23%;
-     left:10px;
+  position: absolute;
+  font-size: 38px;
+  color: white;
+  top: 23%;
+  left: 10px
 }
 
    /* menu styling  */
@@ -142,8 +145,8 @@
    
      }
      .heroBoxMain{
-       width:95%;
-       height:440px;
+      width: 95%;
+    height: 400px;
       
      }
      .package{
@@ -155,15 +158,21 @@
      background:none;
      
    }
+   .searchIcon{
+    font-size: 25px;
+    top: 34%;
+}
    .bannerWrap h2 {
      margin-bottom: 10px;
    }
    .vissaSearchBar {
-     width: 100%;
-     position: absolute;
-     left: 58%;
-     transform: translateX(-50%);
-     top: 251px;
+     
+    width: 100%;
+    position: absolute;
+    left: 61%;
+    transform: translateX(-50%);
+    top: 251px;
+
  }
  .vissaSearchBar input{
      width:440px;
@@ -172,7 +181,7 @@
      top: 194px;
  }
  .vissaSearchBar button{
-     width:170px; 
+  width: 127px;
    
    }
    @media only screen and (max-width:500px){
@@ -205,10 +214,10 @@
      margin-bottom: 15px;
    }
    .vissaSearchBar input{
-     width:205px
+    width: 227px;
    }
    .vissaSearchBar button {
-     width: 116px;
+     width: 100px;
  }
  .vissaSearchBar{
   top: 354px;
@@ -216,6 +225,13 @@
  }
  .heroBoxMain {
   border-radius: 0px;
+}
+.packageWrap button{
+  width: 100% !important;
+  font-size: 12px;
+}
+.packageWrap {
+  padding: 0 0px;
 }
     
 }

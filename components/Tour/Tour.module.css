@@ -23,16 +23,16 @@
    
    }
    .heroBoxMain{
-     width:1105px;
-     height:300px;
-     background:#C6E8F1 0.6;
-     z-index: 9 !important;
-     margin:0 auto;
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     border-radius:37px;
-     position:relative;
-     top:20px;
-     opacity:0.9;
+    width: 1105px;
+    height: 332px;
+    background: #C6E8F1 0.6;
+    z-index: 9 !important;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 37px;
+    position: relative;
+    top: 20px;
+    opacity: 0.9;
    }
    
    
@@ -64,11 +64,13 @@
    
    
    .travelFormWrap{
-     display:flex;
-     width:860px;
-     margin:0 auto;
-     margin-top:20px;
-     justify-content: space-between;
+    display: flex;
+    width: 847px;
+    margin: 0 auto;
+    margin-top: 51px;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: center;
    }
    .travelFormDouble{
      width:420px;
@@ -76,25 +78,41 @@
      padding-left:5px;
      display: flex;
      justify-content: space-between;
+     color:white;
+     margin-right:5px;
    
    }
    .travelForm{
-     background:white;
-     width:420px;
-     height:65px;
-     border-radius:5px;
-     border:1px solid #4AB449;
-     padding-left:5px;
+    background: #36B2E0;
+    width: 420px;
+    height: 65px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 10px;
+    font-size: 14px;
    
    }
+   .travelForm label{
+    font-size: 14px;
+    color:white;
+   }
+   .travelForm input{
+    width:100%;
+    background:transparent;
+    font-size:12px;
+   }
    .singleTravel{
-     width:50%;
-     border:1px solid #4AB449;
-     background:white;
-     padding-left:5px;
+    width: 50%;
+    border: 1px solid #fff;
+    background: #26ADDF;
+    padding: 10px;
+    color: #fff;
+    font-size: 12px;
    }
    .singleTravel input{
-     width:98%;
+    width: 100%;
+    background: transparent;
+    font-size: 12px;
    }
    
    .searchTrainBtn{
@@ -245,7 +263,8 @@
      }
    
    .bannerWrap h2 {
-     margin-bottom: 10px;
+    margin-bottom: 10px;
+    padding-top: 23px;
    }
    .vissaSearchBar {
      width: 100%;
@@ -264,10 +283,10 @@
      width:170px;
    }
    .travelFormWrap{
-     width:600px;
-     display: block;
-     margin-left:135px;
-     margin-top:-28px;
+    width: 600px;
+    display: block;
+    margin-left: 154px;
+    margin-top: -28px;
      
    }
 
@@ -388,7 +407,7 @@ width:100%;
   width: 100%;
 }
 .singleTravel {
-  width: 150px;
+  width: 171px;
   margin: 0 auto;
 }
 .travelFormDouble {

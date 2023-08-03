@@ -23,61 +23,89 @@
    .bannerWrap h2{
     display: flex;
     justify-content: center;
-    font-size:35px;
+    font-size: 30px;
+    padding-top: 24px;
     
    }
    .heroBoxMain{
-     width:1105px;
-     height:410px;
-     background:#C6E8F1 0.6;
-     z-index: 9999 !important;
-     margin:0 auto;
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-     border-radius:37px;
-     position:relative;
-     top:50px;
+    width: 1105px;
+    height: 381px;
+    background: #C6E8F1 0.6;
+    z-index: 9999 !important;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 37px;
+    position: relative;
+    top: 26px;
+   }
+   .packageWrap{
+    display:flex;
+    justify-content: center;
+    align-items: center;
    }
    
    .package, .package2, .package3, .package4{
-     width:415px;
-     height:65px;
-     background:white;
-     position:absolute;
-     border-radius:5px;
-     border:1px solid #4AB449;
-     padding-left:20px;
+    width: 415px;
+    height: 65px;
+    background: #19ABE3;
+    position: absolute;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+    font-size: 14px;
+   }
+   .package input, .package2 input, .package3 input, .package4 input{
+    width:100%;
+    background:transparent;
+    font-size: 12px;
    }
  
-   .date{
-     background: white;
-     position: absolute;
-     border-radius: 5px;
-     border: 1px solid #4AB449;
-     padding-left: 10px;
-     top: 187px;
-     left: 122px;
-     height: 65px;
-     width:207.5px;
+   .date{ 
+    background: #19ABE3;
+    position: absolute;
+    border: 1px solid #fff;
+    padding: 10px;
+    top: 187px;
+    left: 134px;
+    height: 65px;
+    width: 207px;
+    font-size: 14px;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
    }
+
    .date2{
-     background: white;
-     position: absolute;
-     border-radius: 5px;
-     border: 1px solid #4AB449;
-     padding-left: 10px;
-     top: 187px;
-     left: 328px;
-     height: 65px;
-     width:207.5px;
+    background: #19ABE3;
+    position: absolute;
+    border: 1px solid #fff;
+    padding: 10px;
+    top: 187px;
+    left: 341px;
+    height: 65px;
+    font-size: 14px;
+    width: 207px;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+     
+   }
+   .date input, .date2 input{
+    background:transparent;
+    width:100%;
+    font-size:12px;
+    color:white;
    }
    .package{
-     top:100px;
-     left: 125px;
+    top: 112px;
+    left: 134px;
    }
  
    .package2{
-     right: 131px;
-     top: 100px;
+     right: 134px;
+     top: 112px;
    
  
    }
@@ -89,11 +117,9 @@
    }
    .package4{
      top:187px;
-     right: 131px;
+     right: 134px;
    }
-   .package, .package2 h4{
-     font-size:18px;
-   }
+
    .packageBtn{
      border-bottom: 2px solid #4AB449;
    }
@@ -104,15 +130,15 @@
  
  
    .heroBoxBtn{
-     position: absolute;
-     left: 50%;
-     transform: translateX(-50%);
-     top: 291px;
-     background: #19ABE3;
-     color: white;
-     font-size: 18px;
-     border-radius: 5px;
-     padding: 16px 55px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 283px;
+    background: #19ABE3;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 16px 55px;
    }
    /* menu styling  */
    .menu{
@@ -263,18 +289,20 @@
        margin-bottom: 300px;
    }
    .heroBoxMain{
-     height: 661px;
-     border-radius:0px;
+    height: 645px;
+    border-radius: 0px;
    }
    .heroBoxBtn {
-     top: 540px;
-     padding: 16px 27px;
+    top: 562px;
+    width: 209px;
+    font-size: 14px;
+    padding: 17px 0px;
  }
  .package4{
-   width: 230px;
-   top: 455px;
-   right: 40px;
-   width: 80%;
+  width: 230px;
+  top: 475px;
+  right: 40px;
+  width: 80%;
  }
  .package{
    top: 275px;
@@ -288,20 +316,22 @@
  
  
  .package {
-   top: 241px;
-   width: 80%;
-   left: 41px;
-   padding-left:5px;
+  top: 266px;
+  width: 80%;
+  left: 41px;
+  padding-left: 5px;
  }
  .date, .date2{
-   top:383px;
-   width:40%;
+  
+  top: 405px;
+  width: 40%;
+
  }
  .package2{
-   top: 309px;
-   width: 80%;
-   left: 41px;
-   padding-left:5px;
+  top: 335px;
+  width: 80%;
+  left: 41px;
+  padding-left: 5px;
  }
  .date input, .date2 input{
    width: 100%;

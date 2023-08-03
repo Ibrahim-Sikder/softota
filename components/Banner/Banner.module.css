@@ -80,14 +80,13 @@
 }
 .departDate{
   background: #19ABE3;
-  border-bottom-left-radius: 7px;
-  border-top-left-radius: 7px;
-  border: 1px solid #4ab449;
   padding: 8px;
   height: 65px;
   width: 415px;
   font-size: 14px;
+  margin-right: 5px;
   color: white;
+  border-radius: 5px;
 }
 
 .multiplePackageWrap{
@@ -151,9 +150,11 @@
   height: 19px;
   margin-bottom: 20px !important;
 }
-.classType p{
-  font-size:12px ;
-  margin-bottom:5px;
+.classType select{
+ width:100%;
+ border:1px solid #ddd;
+ padding:10px;
+font-size:14px;
 }
 .addCity{
   display: flex;
@@ -201,10 +202,10 @@
   height: 65px;
   background: #19ABE3;
   border-radius: 5px;
-  border: 1px solid #ddd;
   color: white;
   font-size: 14px !important;
   padding: 8px;
+  margin-right: 5px;
 }
 
 .package input{
@@ -253,7 +254,8 @@
   width: 207.5px;
   color: #fff;
   padding: 8px;
-  font-size: 14px;;
+  margin-right: 5px;
+  font-size: 14px
 }
 .package {
   top: 170px;
@@ -284,6 +286,9 @@
 .package,
 .package2 h4 {
   font-size: 14px;
+}
+.package4 h4{
+  font-size:12px;
 }
 .packageBtn {
   border-bottom: 2px solid #4ab449;
@@ -317,9 +322,10 @@
   justify-content: space-between;
   padding: 23px 20px;
   font-size: 18px;
-  background: white;
+  background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  color: white;
 }
 .menu li {
   display: flex;

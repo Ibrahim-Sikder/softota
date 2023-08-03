@@ -5,26 +5,20 @@
 }
 .bannerWrap {
   position: relative;
-  background-image: url("../../public/banner.png");
+  background-image: url(/_next/static/media/banner.f7be9e77.png);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100vw !important;
-  height: 500px;
+  height: 357px;
   box-sizing: border-box;
   background-position: center;
-  /* background: linear-gradient(
-       180deg,
-       rgba(230, 248, 255, 0.3) 0%,
-       rgba(230, 248, 255, 0.18) 0.01%,
-       rgba(38, 173, 226, 0.5) 100%
-     ); */
 }
 
 .bannerWrap h2 {
   display: flex;
   justify-content: center;
-  font-size: 35px;
-  padding-top: 20px;
+  font-size: 30px;
+  padding-top: 22px;
 }
 .activeClass {
   background: red;
@@ -38,26 +32,28 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 37px;
   position: relative;
-  top: 50px;
+  top: 26px;
 }
 
 .package2 {
   width: 408px;
   height: 48px;
-  background: white;
+  background: #19ABE3;
   position: absolute;
   border-radius: 5px;
-  border: 1px solid #4ab449;
+  border: 1px solid #fff;
   padding-left: 20px;
   left: 50%;
   transform: translate(-50%);
   display: flex;
   justify-content: space-between;
   padding: 0px 20px;
-  top: 104px;
+  top: 109px;
+  color: #fff;
+  font-size: 17px;
 }
 .package2 span:nth-child(1) {
-  border-bottom: 2px solid #4ab449;
+  border-bottom: 2px solid #fff;
   margin-bottom: 17px;
 }
 
@@ -74,17 +70,22 @@
 }
 /* menu styling  */
 .menu {
+ 
   display: flex;
   justify-content: space-between;
-  padding: 23px 20px;
+  padding: 16px 20px;
   font-size: 18px;
-  background: white;
+  background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  color: white;
+
 }
 .menu li {
   display: flex;
-  z-index: 999 IM !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
 }
 .menu li P {
   z-index: 999 !important;
@@ -358,24 +359,12 @@
     background: none;
   }
   .heroBoxBtn {
-    padding: 16px 25px;
+    padding: 16px 0px;
     top: 327px;
+    width: 194px;
+    font-size: 14px;
   }
-  .package2 {
-    width: 88%;
-    height: 48px;
-    background: white;
-    position: absolute;
-    border-radius: 5px;
-    border: 1px solid #4ab449;
-    padding-left: 20px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 20px;
-    top: 268px;
-  }
+ 
   .bannerWrap h2 {
     margin-bottom: 10px;
     width: 94%;
@@ -386,6 +375,13 @@
   .bannerWrap {
     margin-bottom: 100px;
   }
+  .package2{
+    top: 256px;
+    width: 94%;
+    font-size: 14px;
+}
+
+
 }
 @media only screen and (max-width: 400px) {
   .menu li {
