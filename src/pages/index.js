@@ -1,39 +1,24 @@
-"use client"
+"use client";
 
-
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import Header from '../../components/Header/Header'
-import Banner from '../../components/Banner/Banner'
-import Places from '../../components/Places/Places'
-import Travel from '../../components/Travel/Travel'
-import Trending from '../../components/Trending/Trending'
-import Mission from '../../components/Mission/Mission'
-import Customer from '../../components/Customer/Customer'
-import NavBar from '../../components/NavBar/NavBar'
-import { signIn, signOut, useSession } from "next-auth/react"
-import { useState } from 'react'
-import Umra from '../../components/Umra/Umra'
-import TopBar from '../../components/TopBar/TopBar'
-import Footer from '../../components/Footer/Footer'
-import TeamSection from '../../components/TeamSection/TeamSection'
-import Nav from '../../components/NavBarr/Nav'
+import { Inter } from "next/font/google";
+import Banner from "../../components/Banner/Banner";
+import Travel from "../../components/Travel/Travel";
+import Customer from "../../components/Customer/Customer";
+import Footer from "../../components/Footer/Footer";
+import Nav from "../../components/NavBarr/Nav";
+import TourDestination from "../../components/Tour/TourDestination";
+import FlightMission from "../../components/FlightMission/FlightMission";
 
 export default function Home() {
- 
- return(
-  <section>
-    <Nav/>
-    {/* <TopBar></TopBar>
-     <Header></Header>   */}
-    <Umra></Umra>
-    <Footer></Footer>
-</section>
- )
-
-  
+  return (
+    <section>
+      <Nav />
+      <Banner></Banner>
+      <TourDestination></TourDestination>
+      <Travel></Travel>
+      <FlightMission></FlightMission>
+      <Customer></Customer>
+      <Footer />
+    </section>
+  );
 }
-
-
-
-

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import style from './userProfile.module.css'
-import TopBar from '../../../components/TopBar/TopBar';
-import Header from '../../../components/Header/Header';
 import ProfileLeftSide from './profileLeftSide/ProfileLeftSide';
 import Footer from '../../../components/Footer/Footer';
 import styles from './booking.module.css'
@@ -12,6 +10,7 @@ import visa from '../../../public/vissa.png'
 import tour from '../../../public/tour.png'
 import booking from '../../../public/saveCard.png'
 import Link from 'next/link';
+import Nav from '../../../components/NavBarr/Nav';
 const Booking = () => {
      const [activeBooking, setActiveBooking] = useState()
      const handleBooking = ()=>{
@@ -19,8 +18,7 @@ const Booking = () => {
      }
      return (
           <section>
-               <TopBar/>
-               <Header/>
+               <Nav/>
                <section className={style.accounWra}>
             <div className={style.profileWrap}>
                 <div className={style.userProfileLeftSide}>

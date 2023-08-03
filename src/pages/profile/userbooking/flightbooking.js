@@ -12,14 +12,33 @@ import tour from '../../../../public/tour.png'
 import Link from 'next/link';
 import visaa from '../../../../public/assets/visa.jpeg'
 import { ReportProblem } from "@mui/icons-material";
+import FlightBookingLeftSide from '../../../../components/Booking/FlightBooking/FlightBookingLeftSide';
+import { ArrowForwardIos, Home} from '@mui/icons-material';
 const flightbooking = () => {
      return (
           <section>
             <Nav />
+            <div className={style.flightBookingTo}>
+              <div className={style.fTopBar}>
+              <span><Home className={style.topIcon}/></span>
+                <span>Home</span>
+                <span><ArrowForwardIos className={style.topIcon}/></span>
+                <span>Profile</span>
+                <span><ArrowForwardIos className={style.topIcon}/></span>
+                <span>Booking</span>
+                <span><ArrowForwardIos className={style.topIcon}/></span>
+                <span>Flight</span>
+                <span><ArrowForwardIos className={style.topIcon}/></span>
+                <span><span>STFL16900068481176</span></span>
+              </div>
+            </div>
+
+
+
             <section className={style.accounWra}>
               <div className={style.profileWrap}>
                 <div className={style.userProfileLeftSide}>
-                  <ProfileLeftSide></ProfileLeftSide>
+                 <FlightBookingLeftSide/>
                 </div>
                 <div className={style.userProfileRightSide}>
                 <div className={style.bookingWrap}>

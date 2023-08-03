@@ -1,3 +1,25 @@
+.flightBookingTo{
+     width: 100%;
+     height: 60px;
+     padding: 0px 65px;
+     display: flex;
+     align-items: center;
+}
+.fTopBar{
+     display: flex;
+     align-items: center;
+ 
+}
+.topIcon{
+     font-size: 18px;
+    color: #4AB449;
+    font-weight: bold;
+}
+.fTopBar span{
+     font-size: 14px;
+     margin-right: 7px;
+     font-weight: bold;
+}
 .profileWrap{
      display:grid;
      grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -8,6 +30,7 @@
 }
 .userProfileRightSide{
      grid-column: span 9 / span 9;
+     padding: 0px 50px;
 }
 
 /* save card styling */
@@ -26,10 +49,20 @@
 }
 
 .bookingWrap{
-     display:flex;
+     display: flex;
      align-items: center;
-     justify-content: center;
-     margin-top:15px;
+     justify-content: space-between;
+     margin-top: 15px;
+     padding: 10px 50px;
+     color: black !important;
+     border-bottom: 1px solid #4AB449;
+     width: 90%;
+     margin: 0 auto;
+ 
+}
+.bookingWrap button{
+     color: black !important;
+     margin-left: 10px;
 }
 .bookingHistory{
      display:flex;
@@ -41,10 +74,11 @@
 }
 
 .userFlightBookingInfoWrap{
-     width:90%;
+     width: 90%;
      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-     padding:15px;
-     margin:20px auto;
+     padding: 15px;
+     margin: 0px auto;
+     padding: 25px;
 }
 .bookingInfoWrap{
      display: flex;
@@ -77,10 +111,9 @@
 .flightInfo{
      display: flex;
      justify-content: space-between;
-     align-items: center;
      background: #E9F6E9;
      padding: 40px 20px;
-     margin-top:30px;
+     margin-top: 30px;
 }
 
 .flightInfo p{

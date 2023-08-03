@@ -5,7 +5,7 @@ import Link from 'next/link';
 const Footer = () => {
     return (
         <div className={style.footer}>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 place-items-center justify-center'>
                 <div className='mb-10'>
                     <h4 className='pb-5'>Bangladesh </h4>
                     <p className={style.number}>

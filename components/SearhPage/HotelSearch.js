@@ -74,7 +74,7 @@ const HotelSearch = () => {
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel}
+                        src={hotel2}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />
@@ -135,7 +135,7 @@ const HotelSearch = () => {
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel}
+                        src={hotel3}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />
@@ -196,7 +196,7 @@ const HotelSearch = () => {
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel}
+                        src={hotel4}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />
@@ -257,7 +257,7 @@ const HotelSearch = () => {
                   {images.map((item, index) => (
                     <PhotoView key={index} src={item}>
                       <Image
-                        src={hotel}
+                        src={hotel5}
                         alt="Picture of the author"
                         className={style.searchLeftImg}
                       />

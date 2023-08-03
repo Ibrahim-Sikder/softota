@@ -31,10 +31,14 @@
      justify-content: center;
      margin-top:15px;
 }
+.bookingWrap button{
+     color:black !important;
+     margin-left:5px;
+}
 .bookingHistory{
-     display:flex;
-     align-items:center;
-     margin-right:25px;
+     display: flex;
+     align-items: center;
+     margin-right: 45px;
 }
 .bookingHistory button{
      background:transparent;
