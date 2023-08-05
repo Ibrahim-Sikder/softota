@@ -1,101 +1,96 @@
-.userInfo{
-     display:flex;
-     justify-content: center;
-     margin-top:50px;
+.userInfo {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
-.uploadImgWrap{
-     display: flex;
-
+.uploadImgWrap {
+  display: flex;
 }
-.uploadImgWrap button{
-     background: #C9E9C9;
-     color: black;
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-     margin-right: 48px;
-     padding: 10px 27px;
-     font-size: 20px;
-     border-radius: 4px;
-     font-weight: 500;
+.uploadImgWrap button {
+  background: #c9e9c9;
+  color: black;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  margin-right: 48px;
+  padding: 10px 27px;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: 500;
 }
-.uploadImgWrap button:nth-child(2){
-     background:#fff;
+.uploadImgWrap button:nth-child(2) {
+  background: #fff;
 }
-.userImg{
-     margin-bottom: 42px;
-     text-align: center;
-     margin-left: 182px;
+.userImg {
+  margin-bottom: 42px;
+  text-align: center;
+  margin-left: 182px;
 }
-.inputBtn{
-     width:400px;
-     margin-right:10px;
-     margin-left:10px;
+.inputBtn {
+  width: 400px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.inputGroupWrap{
-     width: 100%;
-     margin: 0 auto;
-     display: flex;
-     justify-content: center;
-     margin-top: 30px;
-     
+.inputGroupWrap {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
-.saveBtn{
-     display: flex;
-     justify-content: center;
-     margin-top: 37px;
-     margin-bottom: 50px;
+.saveBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+  margin-bottom: 50px;
 }
-.saveBtn button{
-     background: #26ADE2;
-     padding: 10px 45px;
-     color: white;
-     font-size: 20px;
+.saveBtn button {
+  background: #26ade2;
+  padding: 10px 45px;
+  color: white;
+  font-size: 20px;
 }
 
-
-@media only screen and (max-width:768px){
-     .inputBtn{
-          width:100%;
-          margin-bottom:20px;
-     }
-     .inputGroupWrap {
-          width: 87%;
-          display: block;
-         
-      }
-      .inputGroupWrap {
-          margin-top: 0px;
-      }
-      .uploadImgWrap{
-          display: block;
-          margin-bottom: 30px;
-          text-align: center;
-      }
-      .uploadImgWrap button {
-          background: #C9E9C9;
-          color: black;
-          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-          margin-right: 5px;
-          padding: 8px 23px;
-          font-size: 17px;
-          border-radius: 4px;
-          font-weight: 500;
-          margin-bottom: 10px;
-      }
-      .userInfo {
-           display: block; 
-          margin-top: -4px;
-      }
-      .userImg {
-          margin-bottom: 18px;
-          margin-left: 161px;
-      }
-      .saveBtn {
-          margin-top: 4px;
-          margin-bottom: 30px;
-      }
-      .inputBtn {
-          margin-right: 0px;
-          margin-left: 0px;
-      }
-      
+@media only screen and (max-width: 768px) {
+  .inputBtn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .inputGroupWrap {
+    width: 87%;
+    display: block;
+  }
+  .inputGroupWrap {
+    margin-top: 0px;
+  }
+  .uploadImgWrap {
+    display: block;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .uploadImgWrap button {
+    background: #c9e9c9;
+    color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-right: 5px;
+    padding: 8px 23px;
+    font-size: 17px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .userInfo {
+    display: block;
+    margin-top: -4px;
+  }
+  .userImg {
+    margin-bottom: 18px;
+    margin-left: 161px;
+  }
+  .saveBtn {
+    margin-top: 4px;
+    margin-bottom: 30px;
+  }
+  .inputBtn {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
 }

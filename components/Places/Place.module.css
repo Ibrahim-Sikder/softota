@@ -1,91 +1,84 @@
-.places{
-    width:100vw;
-    margin: 30px auto;
-    overflow: hidden;
+.places {
+  width: 100vw;
+  margin: 30px auto;
+  overflow: hidden;
 }
 
-.places h2{
-    font-family: Poppins;
-    font-size:36px;
-    font-weight: 600;
-    line-height: 54px;
+.places h2 {
+  font-family: Poppins;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 54px;
 }
 
+.placeImg {
+  width: 100% !important;
+}
+.placesPrice img {
+  width: 100%;
+}
+.placesPrice {
+  height: 54px;
+  background: #e5f8ff;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+}
+.placesPrice span {
+  font-size: 20px;
+}
+.leftContent {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  align-items: center;
+  text-align: justify;
+  width: 100%;
+}
+.tourImage {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-
-.placeImg{
-    width:100% !important;
-}
-.placesPrice img{
-    width:100%;
-}
-.placesPrice{
-height: 54px;
-background: #E5F8FF;
-border-radius: 0px 0px 5px 5px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding:0px 10px;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 30px;
-}
-.placesPrice span{
-    font-size:20px;
-}
-.leftContent{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    align-items: center;
-    text-align: justify;
+@media only screen and (max-width: 1024px) {
+  .places {
     width: 100%;
- 
-
-}
-.tourImage{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-@media only screen and (max-width:1024px){
-    .places{
-        width:100%;
-    }
-    .leftContent p{
-        margin-top:20px;
-    }
-    .places{
-        width:100% !important;
-        overflow: hidden;
-    }
-    .places img{
-        width: 100%;
-    }
-    .bestPlaces{
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+  }
+  .leftContent p {
+    margin-top: 20px;
+  }
+  .places {
+    width: 100% !important;
+    overflow: hidden;
+  }
+  .places img {
+    width: 100%;
+  }
+  .bestPlaces {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
-
-@media only screen and (max-width:768px){
-    .places{
-        width:100%;
-    }
-   
+@media only screen and (max-width: 768px) {
+  .places {
+    width: 100%;
+  }
 }
 
-@media only screen and (max-width:500px){
-    .places{
-        width:100%;
-    }
-    .places h2{
-        text-align:center;
-    }
-   
+@media only screen and (max-width: 500px) {
+  .places {
+    width: 100%;
+  }
+  .places h2 {
+    text-align: center;
+  }
 }

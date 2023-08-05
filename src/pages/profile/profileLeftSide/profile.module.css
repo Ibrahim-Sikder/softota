@@ -47,11 +47,11 @@
     display: none;
   }
   .userInfoList {
-     flex-wrap: wrap;
-     width: 62%;
-     justify-content: center;
-     margin-top: 15px;
-     display: flex;
+    flex-wrap: wrap;
+    width: 62%;
+    justify-content: center;
+    margin-top: 15px;
+    display: flex;
   }
   .userInfoList a {
     margin-right: 7px;
@@ -63,15 +63,14 @@
     padding-top: 0px;
   }
   .userInfo p {
-     text-align: center;
-     border-radius: 4px;
-     padding: 4px 10px;
-     font-size: 16px;
-     background: none;
-     color: black;
-     margin-bottom: 0px;
-     cursor: pointer;
-    
+    text-align: center;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 16px;
+    background: none;
+    color: black;
+    margin-bottom: 0px;
+    cursor: pointer;
   }
 
   .logOutBtn {

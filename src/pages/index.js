@@ -9,6 +9,12 @@ import Nav from "../../components/NavBarr/Nav";
 import TourDestination from "../../components/Tour/TourDestination";
 import FlightMission from "../../components/FlightMission/FlightMission";
 
+
+export const config ={
+  unstable_runtimeJS: false
+}
+
+
 export default function Home() {
   return (
     <section>

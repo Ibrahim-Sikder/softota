@@ -1,140 +1,139 @@
-.loginWrapa{
-     width:100vw;
+.loginWrapa {
+  width: 100vw;
 }
-.loginInput{
-box-sizing: border-box;
-width: 472px;
-height: 66px;
-background: #E6F8FF;
-border: 1px solid rgba(25, 171, 227, 0.3);
-border-radius: 5px;
-padding-left:10px;
+.loginInput {
+  box-sizing: border-box;
+  width: 472px;
+  height: 66px;
+  background: #e6f8ff;
+  border: 1px solid rgba(25, 171, 227, 0.3);
+  border-radius: 5px;
+  padding-left: 10px;
 }
-.loginBtn{
-width: 323px;
-height: 53px;
-background: #4AB449;
-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-border-radius: 5px;
-color:white;
+.loginBtn {
+  width: 323px;
+  height: 53px;
+  background: #4ab449;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: white;
 }
-.devided{
-width: 206px;
-height: 0px;
-border: 2px solid #B0B8BA;
+.devided {
+  width: 206px;
+  height: 0px;
+  border: 2px solid #b0b8ba;
 }
-.loginBtn2{
-     width: 323px;
-     height: 53px;
-     background: #26ADE2;
-     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-     border-radius: 5px;
-     color:white;
+.loginBtn2 {
+  width: 323px;
+  height: 53px;
+  background: #26ade2;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  color: white;
 }
-.loginBtn3{
-position: absolute;
-width: 323px;
-height: 53px;
-background: #FFFFFF;
-border: 1px solid rgba(74, 180, 73, 0.5);
-box-shadow: 0px 2px 4px rgba(25, 171, 227, 0.3);
-border-radius: 5px;
-color:#4AB449;
+.loginBtn3 {
+  position: absolute;
+  width: 323px;
+  height: 53px;
+  background: #ffffff;
+  border: 1px solid rgba(74, 180, 73, 0.5);
+  box-shadow: 0px 2px 4px rgba(25, 171, 227, 0.3);
+  border-radius: 5px;
+  color: #4ab449;
 }
 
-.loginWithProvider{
+.loginWithProvider {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.ShowIcon {
+  position: absolute;
+  right: 20px;
+  top: 44px;
+  font-size: 25px;
+}
 
+@media only screen and (max-width: 1024px) {
+  .loginWrapa {
+    width: 100;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .loginWrapa {
+    width: 100%;
+  }
+
+  .loginWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loginWithProvider {
+    text-align: left;
+    margin-left: 0px;
     margin-bottom: 20px;
     margin-top: 30px;
+  }
+  .circle {
+    /* position: absolute; */
+    left: 0 !important;
+  }
 }
-.ShowIcon{
-     position: absolute;
-     right: 20px;
-     top: 44px;
-     font-size: 25px;
+@media only screen and (max-width: 500px) {
+  .loginWrap {
+    width: 100%;
+  }
+  .loginInput {
+    width: 400px;
+    height: 59px;
+    margin-left: 43px;
+  }
+  .inputLabel {
+    margin-left: 23px;
+  }
+  .loginBtn {
+    margin-left: -23px;
+  }
+  .loginBtn2 {
+    margin-left: 19px;
+  }
+  .devided {
+    width: 160px;
+    margin: 0 auto;
+    height: 0px;
+    border: 2px solid #b0b8ba;
+  }
+  .loginInput {
+    width: 368px;
+    height: 59px;
+    margin-left: 18px;
+  }
+  .ShowIcon {
+    right: 33px;
+    top: 41px;
+  }
+  .loginBtn2 {
+    margin-left: -29px;
+  }
+  .loginBtn3 {
+    left: 51px;
+  }
 }
-
-@media only screen and (max-width:1024px){
-     .loginWrapa{
-          width:100;
-     }
-}
-@media only screen and (max-width:768px){
-     .loginWrapa{
-          width:100%;
-     }
-     
-     .loginWrap{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-      }
-      .loginWithProvider {
-          text-align: left;
-           margin-left: 0px;
-          margin-bottom: 20px;
-          margin-top: 30px;
-      }
-      .circle{
-          /* position: absolute; */
-          left: 0 !important;
-      }
-}
-@media only screen and (max-width:500px){
-     .loginWrap{
-          width:100%;
-     }
-     .loginInput{
-          width: 400px;
-          height: 59px;
-          margin-left: 43px;
-      }
-      .inputLabel{
-          margin-left: 23px;
-      }
-      .loginBtn{
-          margin-left: -23px;
-      }
-      .loginBtn2{
-          margin-left: 19px;
-      }
-      .devided{
-          width: 160px;
-          margin: 0 auto;
-          height: 0px;
-          border: 2px solid #B0B8BA;
-      }
-      .loginInput {
-          width: 368px;
-          height: 59px;
-          margin-left: 18px;
-      }
-      .ShowIcon {
-          right: 33px;
-          top: 41px;
-      }
-      .loginBtn2 {
-          margin-left: -29px;
-      }
-      .loginBtn3 {
-          left: 51px;
-      }
-}
-@media only screen and (max-width:400px){
-     .loginInput {
-          width: 350px;
-          margin-left: 12px;
-      }
-      .loginBtn {
-          margin-left: -37px;
-      }
-      .loginBtn2 {
-          margin-left: -41px;
-      }
-      .loginBtn3{
-          left: 25px;
-      }
-      .devided {
-          width: 150px;
-      }
+@media only screen and (max-width: 400px) {
+  .loginInput {
+    width: 350px;
+    margin-left: 12px;
+  }
+  .loginBtn {
+    margin-left: -37px;
+  }
+  .loginBtn2 {
+    margin-left: -41px;
+  }
+  .loginBtn3 {
+    left: 25px;
+  }
+  .devided {
+    width: 150px;
+  }
 }

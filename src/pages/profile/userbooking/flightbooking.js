@@ -1,167 +1,127 @@
-import React from 'react';
-import Nav from '../../../../components/NavBarr/Nav';
-import Footer from '../../../../components/Footer/Footer';
-import ProfileLeftSide from '../profileLeftSide/ProfileLeftSide';
-import ProfileRightSide from '../ProfileRightSide/ProfileRightSide';
-import style from './flightbooking.module.css'
-import Image from 'next/image';
-import flight from '../../../../public/flight.png'
-import hotel from '../../../../public/hotel.png'
-import visa from '../../../../public/vissa.png'
-import tour from '../../../../public/tour.png'
-import Link from 'next/link';
-import visaa from '../../../../public/assets/visa.jpeg'
+import React from "react";
+import Nav from "../../../../components/NavBarr/Nav";
+import Footer from "../../../../components/Footer/Footer";
+import style from "./flightbooking.module.css";
+import Image from "next/image";
+import flight from "../../../../public/flight.png";
+import hotel from "../../../../public/hotel.png";
+import visa from "../../../../public/vissa.png";
+import tour from "../../../../public/tour.png";
+import Link from "next/link";
+import visaa from "../../../../public/assets/visa.jpeg";
 import { ReportProblem } from "@mui/icons-material";
-import FlightBookingLeftSide from '../../../../components/Booking/FlightBooking/FlightBookingLeftSide';
-import { ArrowForwardIos, Home} from '@mui/icons-material';
+import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
+import { Groups, SwapHoriz,CalendarMonth,AttachMoney } from "@mui/icons-material";
+import ProfileLeftSide from "../profileLeftSide/ProfileLeftSide";
 const flightbooking = () => {
-     return (
-          <section>
-            <Nav />
-            <div className={style.flightBookingTo}>
-              <div className={style.fTopBar}>
-              <span><Home className={style.topIcon}/></span>
-                <span>Home</span>
-                <span><ArrowForwardIos className={style.topIcon}/></span>
-                <span>Profile</span>
-                <span><ArrowForwardIos className={style.topIcon}/></span>
-                <span>Booking</span>
-                <span><ArrowForwardIos className={style.topIcon}/></span>
-                <span>Flight</span>
-                <span><ArrowForwardIos className={style.topIcon}/></span>
-                <span><span>STFL16900068481176</span></span>
+  return (
+    <section>
+      <Nav />
+      <section className={style.accounWra}>
+        <div className={style.profileWrap}>
+          <div className={style.userProfileLeftSide}>
+          <ProfileLeftSide></ProfileLeftSide>
+          </div>
+          <div className={style.userProfileRightSide}>
+            <div className={style.bookingWrap}>
+              <Link href="/profile/userbooking/flightbooking">
+                <div className={style.bookingHistory}>
+                  <Image
+                    src={flight}
+                    alt="Picture of the author"
+                    width={30}
+                    height={30}
+                    className={style.logoIcon}
+                  />
+                  <button className="ml-1">Flight </button>
+                </div>
+              </Link>
+              <Link href="/profile/userbooking/hotelbooking">
+                <div className={style.bookingHistory}>
+                  <Image
+                    src={hotel}
+                    alt="Picture of the author"
+                    width={30}
+                    height={30}
+                    className={style.logoIcon}
+                  />
+                  <button className="ml-1">Hotel </button>
+                </div>
+              </Link>
+              <div className={style.bookingHistory}>
+                <Image
+                  src={visa}
+                  alt="Picture of the author"
+                  width={30}
+                  height={30}
+                  className={style.logoIcon}
+                />
+                <button className="ml-1">Visa </button>
+              </div>
+              <div className={style.bookingHistory}>
+                <Image
+                  src={tour}
+                  alt="Picture of the author"
+                  width={30}
+                  height={30}
+                  className={style.logoIcon}
+                />
+                <button className="ml-1">Tours </button>
               </div>
             </div>
 
-
-
-            <section className={style.accounWra}>
-              <div className={style.profileWrap}>
-                <div className={style.userProfileLeftSide}>
-                 <FlightBookingLeftSide/>
-                </div>
-                <div className={style.userProfileRightSide}>
-                <div className={style.bookingWrap}>
-                        <Link href='/profile/userbooking/flightbooking'>
-                        <div className={style.bookingHistory}>
-                         <Image
-                         src={flight}
-                         alt="Picture of the author"
-                         width={30}
-                         height={30}
-                         className={style.logoIcon}
-                         />
-                         <button className='ml-1'>Flight </button>
-                         </div>
-                        </Link>
-                        <Link href='/profile/userbooking/hotelbooking'>
-                        <div className={style.bookingHistory}>
-                         <Image
-                         src={hotel}
-                         alt="Picture of the author"
-                         width={30}
-                         height={30}
-                         className={style.logoIcon}
-                         />
-                         <button className='ml-1'>Hotel </button>
-                         </div>
-                        </Link>
-                         <div className={style.bookingHistory}>
-                         <Image
-                         src={visa}
-                         alt="Picture of the author"
-                         width={30}
-                         height={30}
-                         className={style.logoIcon}
-                         />
-                         <button className='ml-1'>Visa </button>
-                         </div>
-                         <div className={style.bookingHistory}>
-                         <Image
-                         src={tour}
-                         alt="Picture of the author"
-                         width={30}
-                         height={30}
-                         className={style.logoIcon}
-                         />
-                         <button className='ml-1'>Tours </button>
-                         </div>
-                    </div>
-
-                    <div className={style.userFlightBookingInfoWrap}>
-                      <div className={style.bookingInfoWrap}>
-                        <div className={style.bookingInfo}>
-                        <div className={style.leftSideBook}>
-                        <div>
-                          <h6>DAC-LHR (One Way)</h6>
-                          <p>Booking ID</p>
-                          <p>FB-DM2307300311</p>
-                        </div>
-                        <div>
-                          <p>Airline Pnr</p>
-                          <p>5P67EL</p>
-                        </div>
-                        <div>
-                          <p>Pax Details</p>
-                          <p>3(Ibrahim Sikder)</p>
-                        </div>
-                        </div>
-                        <div className={style.rightSide}>
-                         <div>
-                         <p>Pending</p>
-                          <Image
-                          src={visaa}
-                          alt='visa'
-                          width={50}
-                          height={50}
-                          
-                          />
-                         </div>
-                        </div>
-                        </div>
-                      </div>
-                      <div className={style.flightInfo}>
-                        <div>
-                        <p>Date</p>
-                        <small>Sat, 05 Aug, 2023</small>
-                        </div>
-                        <div>
-                        <p>Time</p>
-                        <small>10:30 am</small>
-                        </div>
-                        <div>
-                          <p>Flight Info</p>
-                          <p>DepartsDAC</p>
-                          <p>ArrivalLHR</p>
-                        </div>
-                        <div>
-                          <p>Flight Number</p>
-                          <p>UK182 (DAC-DEL)</p>
-                          <p>UK17 (DEL-LHR)</p>
-                          <small>stop: 1</small>
-                        </div>
-                        <div>
-                          <p>Baggage Allowance</p>
-                          <p>7 Kilograms</p>
-                          <p>56 Kilograms</p>
-                          <p>34 Kilograms</p>
-                        </div>
-                      </div>
-                      <div className={style.payment}>
-                        <div className='flex items-center'>
-                        <ReportProblem/>
-                        <p>Your booking expires at 11:14 AM</p>
-                        </div>
-                        <button>Complete Payment</button>
-                      </div>
-                    </div>
-                    
-                </div>
+            <div className={style.flightBooking}>
+              <div className="flex w-full justify-between mb-8">
+                <strong>DAC <SwapHoriz className="mx-3"/> CXB </strong>
+                <strong>BDT 12,445 </strong>
               </div>
-            </section>
-            <Footer />
-          </section>
-        );
+              <div className="flex items-center justify-between mb-3">
+              <div className="flex items-center  ">
+                <Groups className="mr-3 "/>
+                <span> 1 Travelers</span>
+              </div>
+              <div className="flex items-center w-[200px] text-left ">
+                <span> Airline PNR: </span>
+                <strong>MXRHIF</strong>
+              </div>
+              </div>
+              <div className="flex items-center w-full justify-between">
+              <div className="flex items-center">
+                <CalendarMonth className="mr-3 "/>
+                <span>21 Aug 23 - 24 Dev 23</span>
+              </div>
+              <div className="flex items-center  w-[200px] text-left">
+                <span> Reservation PNR:</span>
+                <strong>540K9C</strong>
+              </div>
+              </div>
+              <div className={style.detailBtnGroup}>
+                <Link href='/profile/userbooking/flightDetail'><button>Flight Details</button></Link>
+                <Link href='profile/userbooking/travelerdetails'><button>Traveller</button></Link>
+                <Link href='/profile/userbooking/fareDetail'><button>Pricing</button></Link>
+                <Link href='/profile/userbooking/flightCancel'><button>Cancellation Policy</button></Link>
+                <Link href='/profile/userbooking/baggage'><button>Baggages</button></Link>
+              
+              </div>
+             <div className="flex justify-between mt-5">
+             <div className={style.payments}>
+                <span>Payment:</span>
+                <strong> Unpaid - </strong>
+                <span> Booking:</span>
+                <strong>Canacelled:</strong>
+              </div>
+              <div className="flex items-center">
+               <small className={style.dollars}> <AttachMoney className={style.dollarIcons}/></small>
+                <strong>240</strong>
+              </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </section>
+  );
 };
 
 export default flightbooking;

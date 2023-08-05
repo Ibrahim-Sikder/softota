@@ -14,13 +14,13 @@ import {
   FaReact,
   FaBiking,
   FaBlind,
-  FaPhoneVolume
+  FaPhoneVolume,
 } from "react-icons/fa";
 import { ArrowForwardIos } from "@mui/icons-material";
 import Image from "next/image";
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
-import milvik from '../../../../public/assets/milvik.png';
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
+import milvik from "../../../../public/assets/milvik.png";
 import Link from "next/link";
 const FlightBookLeftSide = () => {
   return (
@@ -227,271 +227,283 @@ const FlightBookLeftSide = () => {
           </div>
         </div>
       </div>
-    <div className="mt-8">
-    <h2>Enter Traveller Details </h2>
-      <div className="my">
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>
-            <div className="flex items-center">
-            <h6 className="text-[#4AB449] font-sm">Passenger 1 </h6> <span className={style.adultBtn}>Adult </span> <small>Primary Contact </small>
-            </div>
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-         <select className={style.travelerSelect}>
-          <option value="">Select Traveler </option>
-          <option value="">New Traveler </option>
-          <option value="">(Me)</option>
-         </select>
-        <div className={style.personal}>
-        <h3 className="text-xl font-bold">Personal Details</h3>
-        <span> As mentioned on your passport or government approved IDs</span>
+      <div className="mt-8">
+        <h2>Enter Traveller Details </h2>
+        <div className="my">
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>
+                <div className="flex items-center">
+                  <h6 className="text-[#4AB449] font-sm">Passenger 1 </h6>{" "}
+                  <span className={style.adultBtn}>Adult </span>{" "}
+                  <small>Primary Contact </small>
+                </div>
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <select className={style.travelerSelect}>
+                  <option value="">Select Traveler </option>
+                  <option value="">New Traveler </option>
+                  <option value="">(Me)</option>
+                </select>
+                <div className={style.personal}>
+                  <h3 className="text-xl font-bold">Personal Details</h3>
+                  <span>
+                    {" "}
+                    As mentioned on your passport or government approved IDs
+                  </span>
+                </div>
+                <div className="mt-3">
+                  <h6>Select Title</h6>
+                  <div className={style.titleBtnWrap}>
+                    <button>MR.</button>
+                    <button>MS.</button>
+                    <button>MRS.</button>
+                  </div>
+                  <div className={style.inputFieldWrap}>
+                    <div>
+                      <div>
+                        <label>First Name</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <label>Last Name </label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={style.inputFieldWrap}>
+                    <div>
+                      <div>
+                        <label>Nationality</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <label>Frequent Flyer Number (Optional)</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                  </div>
+                  <div mt-5>
+                    <hr className="w-full " />
+                  </div>
+                  <div className={style.contactDetailWrap}>
+                    <h6>Contact Detail </h6>
+                    <p>Receive booking confirmation & updates</p>
+                    <div className={style.contactDetail}>
+                      <div>
+                        <label>Email</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                      <div>
+                        <label>Phone Number</label> <br />
+                        <input type="number" className={style.contactField} />
+                      </div>
+                    </div>
+                    <div className={style.checkbox}>
+                      <input type="checkbox" />
+                      <small>Save this to my traveler list.</small>
+                    </div>
+                  </div>
+                </div>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         </div>
-        <div className="mt-3">
-          <h6>Select Title</h6>
-          <div className={style.titleBtnWrap}>
-          <button>MR.</button>
-          <button>MS.</button>
-          <button>MRS.</button>
-          </div>
-            <div className={style.inputFieldWrap}>
-              <div>
-              <div>
-                <label>First Name</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-              </div>
-            <div>
-            <div>
-                <label>Last Name </label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-            </div>
-          </div>
-          <div className={style.inputFieldWrap}>
-              <div>
-              <div>
-                <label>Nationality</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-              </div>
-            <div>
-            <div>
-                <label>Frequent Flyer Number (Optional)</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-            </div>
-          </div>
-          <div mt-5>
-            <hr className="w-full "/>
-          </div>
-          <div className={style.contactDetailWrap}>
-            <h6>Contact Detail </h6>
-            <p>Receive booking confirmation & updates</p>
-            <div className={style.contactDetail}>
-              <div>
-                <label>Email</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-              <div>
-              <label>Phone Number</label> <br />
-              <input type="number"  className={style.contactField} />
-            </div>
-            </div>
-            <div className={style.checkbox}>
-              <input type="checkbox" />
-              <small>Save this to my traveler list.</small>
-            </div>
-          </div>
+        <div className="my-8">
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>
+                <div className="flex items-center">
+                  <h6 className="text-[#4AB449] font-sm">Passenger 2</h6>{" "}
+                  <span className={style.adultBtn}>Adult</span>
+                </div>
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <select className={style.travelerSelect}>
+                  <option value="">Select Traveler </option>
+                  <option value="">New Traveler </option>
+                  <option value="">(Me)</option>
+                </select>
+                <div className={style.personal}>
+                  <h3 className="text-xl font-bold">Personal Details</h3>
+                  <span>
+                    {" "}
+                    As mentioned on your passport or government approved IDs
+                  </span>
+                </div>
+                <div className="mt-3">
+                  <h6>Select Title</h6>
+                  <div className={style.titleBtnWrap}>
+                    <button>MR.</button>
+                    <button>MS.</button>
+                    <button>MRS.</button>
+                  </div>
+                  <div className={style.inputFieldWrap}>
+                    <div>
+                      <div>
+                        <label>First Name</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <label>Last Name </label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={style.inputFieldWrap}>
+                    <div>
+                      <div>
+                        <label>Nationality</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <label>Frequent Flyer Number (Optional)</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                    </div>
+                  </div>
+                  <div mt-5>
+                    <hr className="w-full " />
+                  </div>
+                  <div className={style.contactDetailWrap}>
+                    <h6>Contact Detail </h6>
+                    <p>Receive booking confirmation & updates</p>
+                    <div className={style.contactDetail}>
+                      <div>
+                        <label>Email</label> <br />
+                        <input type="text" className={style.contactField} />
+                      </div>
+                      <div>
+                        <label>Phone Number</label> <br />
+                        <input type="number" className={style.contactField} />
+                      </div>
+                    </div>
+                    <div className={style.checkbox}>
+                      <input type="checkbox" />
+                      <small>Save this to my traveler list.</small>
+                    </div>
+                  </div>
+                </div>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         </div>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
       </div>
-      <div className="my-8">
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>
-            <div className="flex items-center">
-            <h6 className="text-[#4AB449] font-sm">Passenger 2</h6> <span className={style.adultBtn}>Adult 
-             </span> 
-            </div>
-          </Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-         <select className={style.travelerSelect}>
-          <option value="">Select Traveler </option>
-          <option value="">New Traveler </option>
-          <option value="">(Me)</option>
-         </select>
-        <div className={style.personal}>
-        <h3 className="text-xl font-bold">Personal Details</h3>
-        <span> As mentioned on your passport or government approved IDs</span>
+      <div className="addons">
+        <h4>Addons </h4>
+        <div className="my-8">
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <div className={style.travelInsurance}>
+                <h6 className="text-[#4AB449] font-sm">Travel Insurance </h6>
+                <Image alt="milvik" width={50} height={50} src={milvik}></Image>
+              </div>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                <div className={style.insurance}>
+                  <p>
+                    Protect your journey across the country at only BDT
+                    10/person.
+                  </p>
+                  <div className={style.insurancePackage}>
+                    <div className="flex items-center">
+                      <div className={style.icon}>
+                        <FaBiking />
+                      </div>
+                      <div>
+                        <h2 className=" ">BDT 200,000</h2>
+                        <small>Accidental Coverage</small>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className={style.icon}>
+                        <FaBlind />
+                      </div>
+                      <div>
+                        <h2 className=" ">Up to BDT 30,000</h2>
+                        <small>Hospitalization Coverage</small>
+                        <small>(Including day care treatment)</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={style.insurancePackage}>
+                    <div className="flex items-center">
+                      <div className={style.icon}>
+                        <FaReact />
+                      </div>
+                      <div>
+                        <h2 className=" ">BDT 2,000</h2>
+                        <small>Covid 19</small>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className={style.icon}>
+                        <FaPhoneVolume />
+                      </div>
+                      <div>
+                        <h2 className=" ">24/7 Tele-doctor Consultation</h2>
+                        <small>
+                          24-Hours Before and 24-Hours After Travel Date
+                        </small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-10">
+                  <div className="w-full flex  justify-between">
+                    <div className="flex items-center">
+                      <input type="checkbox" />
+                      <small>Yes, I want to secure my journey</small>
+                    </div>
+                    <div>
+                      <strong>BDT 4000</strong> <br />
+                      <span>total for 2 traveler</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center ">
+                    <input type="checkbox" />
+                    <small>No, I want to take the risk</small>
+                  </div>
+                  <div className="mb-5 mt-14">
+                    <small>
+                      By adding travel insurance policy, you are agreeing to the
+                      Terms & Conditions .
+                    </small>
+                  </div>
+                </div>
+              </Typography>
+            </AccordionDetails>
+          </Accordion>
         </div>
-        <div className="mt-3">
-          <h6>Select Title</h6>
-          <div className={style.titleBtnWrap}>
-          <button>MR.</button>
-          <button>MS.</button>
-          <button>MRS.</button>
-          </div>
-            <div className={style.inputFieldWrap}>
-              <div>
-              <div>
-                <label>First Name</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-              </div>
-            <div>
-            <div>
-                <label>Last Name </label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-            </div>
-          </div>
-          <div className={style.inputFieldWrap}>
-              <div>
-              <div>
-                <label>Nationality</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-              </div>
-            <div>
-            <div>
-                <label>Frequent Flyer Number (Optional)</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-            </div>
-          </div>
-          <div mt-5>
-            <hr className="w-full "/>
-          </div>
-          <div className={style.contactDetailWrap}>
-            <h6>Contact Detail </h6>
-            <p>Receive booking confirmation & updates</p>
-            <div className={style.contactDetail}>
-              <div>
-                <label>Email</label> <br />
-                <input type="text" className={style.contactField}  />
-              </div>
-              <div>
-              <label>Phone Number</label> <br />
-              <input type="number"  className={style.contactField} />
-            </div>
-            </div>
-            <div className={style.checkbox}>
-              <input type="checkbox" />
-              <small>Save this to my traveler list.</small>
-            </div>
-          </div>
-        </div>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
       </div>
-    </div>
-   <div className="addons">
-    <h4>Addons </h4>
-   <div className="my-8">
-   <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          
-            <div className={style.travelInsurance}>
-            <h6 className="text-[#4AB449] font-sm">Travel Insurance </h6> 
-            <Image
-            alt='milvik'
-            width={50}
-            height={50}
-            src={milvik}
-            ></Image>
-            </div>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-          <div className={style.insurance}>
-          <p>Protect your journey across the country at only BDT 10/person.</p>
-          <div className={style.insurancePackage}>
-          <div className="flex items-center">
-            <div className={style.icon}>
-            <FaBiking />
-            </div>
-            <div>
-              <h2 className=" ">BDT 200,000</h2>
-              <small>Accidental Coverage</small>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className={style.icon}>
-            <FaBlind />
-            </div>
-            <div>
-              <h2 className=" ">Up to BDT 30,000</h2>
-              <small>Hospitalization Coverage</small>
-              <small>(Including day care treatment)</small>
-            </div>
-          </div>
-          </div>
-          <div className={style.insurancePackage}>
-          <div className="flex items-center">
-            <div className={style.icon}>
-            <FaReact />
-            </div>
-            <div>
-              <h2 className=" ">BDT 2,000</h2>
-              <small>Covid 19</small>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className={style.icon}>
-            <FaPhoneVolume />
-            </div>
-            <div>
-              <h2 className=" ">24/7 Tele-doctor Consultation</h2>
-              <small>24-Hours Before and 24-Hours After Travel Date</small>
-            </div>
-          </div>
-          </div>
-          </div>
-         <div className="mt-10">
-         <div className="w-full flex  justify-between">
-           <div className="flex items-center">
-           <input type="checkbox" />
-            <small>Yes, I want to secure my journey</small>
-           </div>
-           <div>
-            <strong>BDT 4000</strong> <br />
-            <span>total for 2 traveler</span>
-           </div>
-          </div>
-          <div className="flex items-center ">
-            <input type="checkbox" />
-            <small>No, I want to take the risk</small>
-          </div>
-          <div className="mb-5 mt-14">
-            <small >By adding travel insurance policy, you are agreeing to the Terms & Conditions .</small>
-          </div>
-         </div>
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-   </div>
-   </div>
-   <Link href='/payment'><button className={style.continueBtn}>Continue </button></Link>
+      <Link href="/payment">
+        <button className={style.continueBtn}>Continue </button>
+      </Link>
     </div>
   );
 };

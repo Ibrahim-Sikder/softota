@@ -1,6 +1,6 @@
 import React from "react";
-import style from './Mission.module.css'
-import mission from '../../public/mission.png'
+import style from "./Mission.module.css";
+import mission from "../../public/mission.png";
 import Image from "next/image";
 const Mission = () => {
   return (
@@ -14,15 +14,15 @@ const Mission = () => {
         </p>
       </div>
       <div className={style.vission}>
-        <div className={style.missionBox} >
+        <div className={style.missionBox}>
           <h4 className={style.missionText}>Mission</h4>
           <Image
             src={mission}
             alt="Picture of the author"
             width={500}
             height={500}
-            className='object-cover'
-            />
+            className="object-cover"
+          />
           <p className={style.missionPara}>
             Providing advanced travel solutions with great care and
             satisfaction.
@@ -35,8 +35,8 @@ const Mission = () => {
             alt="Picture of the author"
             width={500}
             height={500}
-            className='object-cover'
-            />
+            className="object-cover"
+          />
           <p className={style.missionPara}>
             Providing advanced travel solutions with great care and
             satisfaction.

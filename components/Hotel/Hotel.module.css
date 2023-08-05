@@ -1,311 +1,293 @@
 /* hotel banner styling */
-.banner{
-    width:100vw !important;
-    box-sizing: border-box;
-  }
-  .bannerWrap{
-    position: relative;
-    background-image: url('../../public/banner.png');
-    background-size:cover;
-    background-repeat:no-repeat;
-    max-width:100vw !important;
-    height:500px;
-    box-sizing: border-box;
-    background-position: center;
-    /* background: linear-gradient(
-         180deg,
-         rgba(230, 248, 255, 0.3) 0%,
-         rgba(230, 248, 255, 0.18) 0.01%,
-         rgba(38, 173, 226, 0.5) 100%
-       ); */
-  }
+.banner {
+  width: 100vw !important;
+  box-sizing: border-box;
+}
+.bannerWrap {
+  position: relative;
+  background-image: url("../../public/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100vw !important;
+  height: 500px;
+  box-sizing: border-box;
+  background-position: center;
   
-  .bannerWrap h2{
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    padding-top: 22px;
-   
-  }
-  .heroBoxMain{
-    width: 1105px;
-    height: 410px;
-    background: #C6E8F1 0.6;
-    z-index: 9999 !important;
-    margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 37px;
-    position: relative;
-    top: 28px;
-  }
-  
-  .package, .package2, .package3, .package4{
-    width: 415px;
-    height: 60px;
-    background: white;
-    position: absolute;
-    border-radius: 5px;
-    border: 1px solid #4AB449;
-    /* padding-left: 20px; */
-    background: #19ABE3;
-    color: white;
-    padding: 10px;
-  }
-  .package input, .package2 input, .package3 input, .package4 input, .date input, .date2 input{
-    background:transparent;
-    width:100%;
-    color:white;
-  }
-  .date{
-    position: absolute;
-    top: 187px;
-    left: 134px;
-    height: 60px;
-    width: 207px;
-    background: #19ABE3;
-    color: white;
-    font-size: 14px;
-    padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px
-  }
-  .date2{
-    position: absolute;
-    top: 187px;
-    left: 342px;
-    height: 60px;
-    width: 207px;
-    background: #19ABE3;
-    color: white;
-    padding: 10px;
-    border-top-right-radius: 5px;
-    font-size: 16px;
-    border-bottom-right-radius: 5px;
-  }
-  .date2 h4{
-    font-size:14px;
-  }
-  .package{
-    top: 100px;
-    left: 134px
-  }
+}
 
-  .package2{
-    right: 134px;
-    top: 100px;
-  
+.bannerWrap h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  padding-top: 22px;
+}
+.heroBoxMain {
+  width: 1105px;
+  height: 410px;
+  background: #c6e8f1 0.6;
+  z-index: 9999 !important;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 37px;
+  position: relative;
+  top: 28px;
+}
 
-  }
-
-  .package3{
-    top:187px;
-    left:125px;
-
-  }
-  .package4{
-    top: 187px;
-    right: 134px;
-  }
-  .package, .package2 h4{
-    font-size: 14px;
-  }
-  .packageBtn{
-    border-bottom: 2px solid #4AB449;
-  }
-  .packageDate{
-    display:flex;
-    justify-content: space-between;
-  }
-
-
-  .heroBoxBtn{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 291px;
-    background: #19ABE3;
-    color: white;
-    font-size: 18px;
-    border-radius: 5px;
-    padding: 16px 55px;
-  }
-  /* menu styling  */
-  .menu{
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 20px;
-    font-size: 18px;
-    background: #4AB449;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    color: white;
-  }
-  .menu li{
-    display:flex;
-    z-index: 999 IM !important;
-  }
-  .menu li P{
-   
-    z-index: 999 !important;
-  }
-  
-  @media only screen and (max-width:1024px){
-    .heroBoxMain{
-     width:98%;
-    }
-    .package {
-      left: 85px;
-  }
-  .package2{
-    right:85px;
-  }
-  .package4{
-    right: 85px;
+.package,
+.package2,
+.package3,
+.package4 {
+  width: 415px;
+  height: 60px;
+  background: white;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid #4ab449;
+  /* padding-left: 20px; */
+  background: #19abe3;
+  color: white;
+  padding: 10px;
+}
+.package input,
+.package2 input,
+.package3 input,
+.package4 input,
+.date input,
+.date2 input {
+  background: transparent;
+  width: 100%;
+  color: white;
 }
 .date {
-  left: 85px;
- 
+  position: absolute;
+  top: 187px;
+  left: 134px;
+  height: 60px;
+  width: 207px;
+  background: #19abe3;
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
 }
-.date2{
-  left: 292px;
+.date2 {
+  position: absolute;
+  top: 187px;
+  left: 342px;
+  height: 60px;
+  width: 207px;
+  background: #19abe3;
+  color: white;
+  padding: 10px;
+  border-top-right-radius: 5px;
+  font-size: 16px;
+  border-bottom-right-radius: 5px;
 }
-  
+.date2 h4 {
+  font-size: 14px;
+}
+.package {
+  top: 100px;
+  left: 134px;
+}
+
+.package2 {
+  right: 134px;
+  top: 100px;
+}
+
+.package3 {
+  top: 187px;
+  left: 125px;
+}
+.package4 {
+  top: 187px;
+  right: 134px;
+}
+.package,
+.package2 h4 {
+  font-size: 14px;
+}
+.packageBtn {
+  border-bottom: 2px solid #4ab449;
+}
+.packageDate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroBoxBtn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 291px;
+  background: #19abe3;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 16px 55px;
+}
+/* menu styling  */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  font-size: 18px;
+  background: #4ab449;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+}
+.menu li {
+  display: flex;
+  z-index: 999 IM !important;
+}
+.menu li P {
+  z-index: 999 !important;
+}
+
+@media only screen and (max-width: 1024px) {
+  .heroBoxMain {
+    width: 98%;
   }
-  
-  @media only screen and (max-width:768px){
-    .bannerWrap h2{
-      font-size:25px;
-     }
-     .menu{
-      background:none;
-      flex-wrap:wrap;
-    }
-    .menu li{
-      margin-right: 20px;
-      margin-left: 20px;
-      margin-bottom: 30px;
-      z-index: 999 !important;
-      color: black;
-  
-    }
-    .menu li:nth-child(7){
-      margin-left: 120px;
-    }
-    .heroBoxMain{
-      width:95%;
-      height:90%;
-     
-    }
-    .package{
-      top:250px;
-      
-    }
-    .heroBoxBtn{
-      top: 307px;
+  .package {
+    left: 85px;
   }
-  .heroBoxMain{
-    background:none;
-    
+  .package2 {
+    right: 85px;
+  }
+  .package4 {
+    right: 85px;
+  }
+  .date {
+    left: 85px;
+  }
+  .date2 {
+    left: 292px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .bannerWrap h2 {
+    font-size: 25px;
+  }
+  .menu {
+    background: none;
+    flex-wrap: wrap;
+  }
+  .menu li {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+    z-index: 999 !important;
+    color: black;
+  }
+  .menu li:nth-child(7) {
+    margin-left: 120px;
+  }
+  .heroBoxMain {
+    width: 95%;
+    height: 90%;
+  }
+  .package {
+    top: 250px;
+  }
+  .heroBoxBtn {
+    top: 307px;
+  }
+  .heroBoxMain {
+    background: none;
   }
   .bannerWrap h2 {
     margin-bottom: 10px;
   }
-   
-    
-  
-  }
+}
 
-.destination{
-     width:1100px;
-    margin-left:250px;
-     overflow: hidden;
-     margin-bottom:100px;
- }
- .trendingHead{
-     width:800px;
-     margin: 50px auto;  
- }
- .mySwiper{
-    overflow: hidden;
-   
- }
+.destination {
+  width: 1100px;
+  margin-left: 250px;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+.trendingHead {
+  width: 800px;
+  margin: 50px auto;
+}
+.mySwiper {
+  overflow: hidden;
+}
 
-
- .tourTrending{
+.tourTrending {
   height: 500px;
-    background: #FFFFFF;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width:280px;
-    margin: 0 auto;
-    
-
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 280px;
+  margin: 0 auto;
 }
- .swiperImg{
-    height:280px !important;
-    transform:scale(1)
- }
- .swiperImg:hove{
-  height:300px !important;
-  transform:scale(1.5)
+.swiperImg {
+  height: 280px !important;
+  transform: scale(1);
+}
+.swiperImg:hove {
+  height: 300px !important;
+  transform: scale(1.5);
 }
 
- .trending img{
-     width:100%;
- 
- }
- .trendingHead{
-     text-align:center;
-     margin-bottom:20px;
- }
- .trendingHead h2{
- font-family: 'Poppins';
- font-style: normal;
- font-weight: 600;
- font-size: 36px;
- line-height: 54px;
- color: #092E3D;
- justify-content: center;
- }
- .trendingHead p{
- font-family: 'Poppins';
- font-style: normal;
- font-weight: 500;
- font-size: 16px;
- line-height: 24px;
- color: #738187;
- }
-
-
-
- .bestPlaceHead{
-  width:650px;
-  margin:50px auto;
-  text-align:center;
+.trending img {
+  width: 100%;
 }
-.bestPlaceHead h2{
-  font-size:35px;
-  font-weight:bold;
-  color:#092E3D;
+.trendingHead {
+  text-align: center;
+  margin-bottom: 20px;
 }
-.bestPlaceHead p{
-  color:#738187;
-  line-height:26px;
-  font-size:18px;
-  margin-top:15px;
+.trendingHead h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  color: #092e3d;
+  justify-content: center;
 }
-.pricePackage{
+.trendingHead p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #738187;
+}
+
+.bestPlaceHead {
+  width: 650px;
+  margin: 50px auto;
   text-align: center;
 }
-.pricePackage h6{
-  font-size:20px;
-  padding-left:5px;
+.bestPlaceHead h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #092e3d;
 }
-.pricePackage span{
-  padding-left:5px;
+.bestPlaceHead p {
+  color: #738187;
+  line-height: 26px;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.pricePackage {
+  text-align: center;
+}
+.pricePackage h6 {
+  font-size: 20px;
+  padding-left: 5px;
+}
+.pricePackage span {
+  padding-left: 5px;
 }
 
-.viewDetailBtn button{
-  background: #4AB449;
+.viewDetailBtn button {
+  background: #4ab449;
   display: grid;
   place-content: center;
   place-items: center;
@@ -313,194 +295,187 @@
   padding: 10px 40px;
   margin-left: 60px;
   color: white;
-  border-radius:5px;
+  border-radius: 5px;
 }
- 
- @media only screen and (max-width:1024px){
-     .destination{
-         width:100%;
-         margin-left:0px;
-     }
- 
-     .trending{
-          height: 446px;
-         width:257px;
-         margin-bottom:20px;
-         padding:0px;
-     }
-     .trending img{
-         width:100% !important;
-     }
-     .trendingHead{
-         margin-top:80px;
-         margin-bottom:15px;
-        
-     }
-     .bannerWrap h2{
-      font-size:30px;
-      
-     }
- }
- @media only screen and (max-width:768px){
-    .destination{
-        width:100%x;
-       margin-left:0px;
-    }
-    .trending{
-      height: 471px;
-    }
- 
-    .heroBoxMain{
-     height:439px;
-    }
-    .package2, .package{
-      top: 194px;
-      width: 276px;
-  
-    }
-    .package4{
-      width:230px;
-      top:281px;
-      right:40px;
-    }
-    .date2{
-      top: 281px;
-      left: 247px;
-      width: 207.5px;
-    }
-    .date{
-      left:40px;
-      top:281px;
-    }
-    .date input, .date2 input{
-      font-size:14px;
-    }
-    .bannerWrap h2 {
-      font-size: 25px;
-      text-align: center;
-      width: 80%;
-      margin: 0 auto;
+
+@media only screen and (max-width: 1024px) {
+  .destination {
+    width: 100%;
+    margin-left: 0px;
   }
-    .heroBoxBtn {
-      top: 365px;
-      width: 161px;
-      font-size: 16px;
-      padding:15px 5px;
+
+  .trending {
+    height: 446px;
+    width: 257px;
+    margin-bottom: 20px;
+    padding: 0px;
   }
-  .package h4, .package2 h4{
-    font-size:16px;
+  .trending img {
+    width: 100% !important;
   }
-  .package input, .package2 input{
-    font-size:14px;
+  .trendingHead {
+    margin-top: 80px;
+    margin-bottom: 15px;
   }
-  .bestPlaceHead{
-   
+  .bannerWrap h2 {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .destination {
+    width: 100%x;
+    margin-left: 0px;
+  }
+  .trending {
+    height: 471px;
+  }
+
+  .heroBoxMain {
+    height: 439px;
+  }
+  .package2,
+  .package {
+    top: 194px;
+    width: 276px;
+  }
+  .package4 {
+    width: 230px;
+    top: 281px;
+    right: 40px;
+  }
+  .date2 {
+    top: 281px;
+    left: 247px;
+    width: 207.5px;
+  }
+  .date {
+    left: 40px;
+    top: 281px;
+  }
+  .date input,
+  .date2 input {
+    font-size: 14px;
+  }
+  .bannerWrap h2 {
+    font-size: 25px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .heroBoxBtn {
+    top: 365px;
+    width: 161px;
+    font-size: 16px;
+    padding: 15px 5px;
+  }
+  .package h4,
+  .package2 h4 {
+    font-size: 16px;
+  }
+  .package input,
+  .package2 input {
+    font-size: 14px;
+  }
+  .bestPlaceHead {
     width: 100%;
     margin-top: 129px;
+  }
+}
 
+@media only screen and (max-width: 500px) {
+  .destination {
+    width: 100%;
+    margin-left: 0px;
   }
- 
-  
- }
- 
- @media only screen and (max-width:500px){
-    .destination{
-         width:100%;
-         margin-left:0px;
-     }
-     .trendingHead {
-         width: 100%;
-         padding: 10px;
-     }
-     .bannerWrap{
-      margin-bottom: 300px;
-      height: 465px;
+  .trendingHead {
+    width: 100%;
+    padding: 10px;
   }
-  .heroBoxMain{
+  .bannerWrap {
+    margin-bottom: 300px;
+    height: 465px;
+  }
+  .heroBoxMain {
     height: 622px;
     border-radius: 0px;
   }
   .heroBoxBtn {
     top: 540px;
-}
-.package4{
-  top: 468px;
+  }
+  .package4 {
+    top: 468px;
     right: 40px;
     width: 80%;
-}
-.package{
-  top: 275px;
-  width: 80%;
-}
-.package2{
-  top: 300px;
-  width: 80%;
-}
+  }
+  .package {
+    top: 275px;
+    width: 80%;
+  }
+  .package2 {
+    top: 300px;
+    width: 80%;
+  }
 
-
-
-.package {
-  top: 260px;
-  width: 80%;
-  left: 41px;
-  padding-left: 5px;
-}
-.date, .date2{
-  top: 399px;
+  .package {
+    top: 260px;
+    width: 80%;
+    left: 41px;
+    padding-left: 5px;
+  }
+  .date,
+  .date2 {
+    top: 399px;
     width: 40%;
+  }
+  .package2 {
+    top: 330px;
+    width: 80%;
+    left: 41px;
+    padding-left: 5px;
+  }
+  .date input,
+  .date2 input {
+    width: 100%;
+  }
+  .date2 {
+    position: absolute;
+    left: 203px;
+  }
+  .bestPlaceHead {
+    width: 100%;
+    margin-top: 387px;
+  }
+  .bestPlaceHead h2 {
+    font-size: 28px;
+  }
 }
-.package2{
-  top: 330px;
-  width: 80%;
-  left: 41px;
-  padding-left: 5px;
-}
-.date input, .date2 input{
-  width: 100%;
-}
-.date2{
-  position: absolute;
-  left: 203px;
-}
-.bestPlaceHead{
-   
-  width: 100%;
-  margin-top: 387px;
 
-}
-.bestPlaceHead h2 {
-  font-size: 28px;
-}
-
-
- }
- 
- @media only screen and (max-width: 400px){
-.menu li {
+@media only screen and (max-width: 400px) {
+  .menu li {
     margin-right: 15px;
     margin-left: 15px;
-}
-.date2 {
-  left: 187px;
-}
+  }
+  .date2 {
+    left: 187px;
+  }
 
-.date, .date2 {
-  top: 397px;
-  width: 39.5%;
-  margin: 0 auto;
-  font-size: 12px;
+  .date,
+  .date2 {
+    top: 397px;
+    width: 39.5%;
+    margin: 0 auto;
+    font-size: 12px;
+  }
+  .package4 {
+    right: 32px;
+  }
+  .heroBoxBtn {
+    padding: 14px 15px;
+  }
+  .bannerWrap {
+    margin-bottom: 433px;
+  }
+  .package2 {
+    top: 328px;
+  }
 }
-.package4 {
-  right: 32px;
-}
-.heroBoxBtn {
-  padding: 14px 15px;
-}
-.bannerWrap {
-  margin-bottom: 433px;
-}
-.package2 {
-  top: 328px;
-}
-
- }

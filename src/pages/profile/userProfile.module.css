@@ -1,40 +1,37 @@
-.profileWrap{
-     display:grid;
-     grid-template-columns: repeat(12, minmax(0, 1fr));
-     
+.profileWrap {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
-.userProfileLeftSide{
-     grid-column: span 3 / span 3;
+.userProfileLeftSide {
+  grid-column: span 3 / span 3;
 }
-.userProfileRightSide{
-     grid-column: span 9 / span 9;
+.userProfileRightSide {
+  grid-column: span 9 / span 9;
 }
 
 /* save card styling */
-.saveCard{
-     display:flex;
-     justify-content: center;
-     text-align: center;
+.saveCard {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 /* managae accoun styling  */
-.deleteBtn{
-     background: #26ADE2;
-     color: white;
-     padding: 10px 33px;
-     font-size: 21px;
-     margin-top: 31px;
+.deleteBtn {
+  background: #26ade2;
+  color: white;
+  padding: 10px 33px;
+  font-size: 21px;
+  margin-top: 31px;
 }
 
-@media only screen and (max-width:768px){
-     .userProfileLeftSide{
-          grid-column: span 12 / span 12;
-     }
-     .userProfileRightSide{
-          grid-column: span 12 / span 12;
-     }
-     .deleteBtn {
-          margin-bottom: 25px;
-      }
-      
-
+@media only screen and (max-width: 768px) {
+  .userProfileLeftSide {
+    grid-column: span 12 / span 12;
+  }
+  .userProfileRightSide {
+    grid-column: span 12 / span 12;
+  }
+  .deleteBtn {
+    margin-bottom: 25px;
+  }
 }

@@ -1,22 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import hotel2 from "../../public/hotel5.png";
-import hotel3 from "../../public/hotel6.png";
-import hotel6 from "../../public/hotel7.png";
-import hotel4 from "../../public/hotel8.png";
-import hotel5 from "../../public/hotel8.png";
-import hotel7 from "../../public/hotel9.png";
-import hotel8 from "../../public/hotel10.png";
-import banner from "../../public/banner.png";
-import NavBar from "../NavBar/NavBar";
-import hajj from "../../public/hajj.png";
-import tour from "../../public/tour.png";
-import train from "../../public/train.png";
-import buss from "../../public/Bus.png";
-import flight from "../../public/flight.png";
-import hotelIcon from "../../public/hotel.png";
-import vissa from "../../public/vissa.png";
 import style from "./Bus.module.css";
 const BusBanner = () => {
   return (

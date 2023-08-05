@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import FlightTakeoffIcon from '@mui/icons-material/FlightTakeoff';
-import FlightLandIcon from '@mui/icons-material/FlightLand';;
-import Logo from '../../public/assets/logo.png'
-import Link from 'next/link';
-import style from './Nav.module.css';
-import Image from 'next/image';
+import React, { useState } from "react";
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import FlightLandIcon from "@mui/icons-material/FlightLand";
+import Logo from "../../public/assets/logo.png";
+import Link from "next/link";
+import style from "./Nav.module.css";
+import Image from "next/image";
 const Nav = () => {
-     const [mobActive,setMobActive] = useState(0);
-     return (
-          <div className={style.navbarMain}>
-            <div className={style.navbarBanner}>
-            <svg
-            className='text-white'
+  const [mobActive, setMobActive] = useState(0);
+  return (
+    <div className={style.navbarMain}>
+      <div className={style.navbarBanner}>
+        <svg
+          className="text-white"
           xmlns="http://www.w3.org/2000/svg"
           width={25}
           height={25}
@@ -24,66 +24,102 @@ const Nav = () => {
             clipRule="evenodd"
           />
         </svg>
-              <h2>+88-01885-071-488</h2>
-              <p>Contact Us</p>
-            </div>
-            <div className={style.navigationMain}>
-                <div className={style.navigationContent}>
-                  <div className={style.navigationLeft}>
-                  <Image
-                      src={Logo}
-                              alt="Picture of the author"
-                              width={50}
-                              height={50}
-                              className={style.logo}
-                          />
-                      <Link href="/aboutUs" style={{textDecoration:'none', color:"black"}}><p>About Us</p></Link>
-                  </div>
-                  <div className={style.inputDiv}>
-                    <input type="text" placeholder="Search Flight, Hotal, Visa" />
-                    <div className={style.inputIcon}>
-                     
-                    </div>
-                  </div>
-                  <div className={style.inputButtons}>
-                    <Link href="/login" className={style.logInButton}  style={{textDecoration:'none', color:'white'}}>Log In</Link>
-                    <Link href="/signup" className={style.signUpButtonTwo} style={{textDecoration:'none', color:'white'}}>Sign Up</Link>
-                  </div>
-                </div>
-            </div>
-            {
-              mobActive === 0 ?  <div className={style.navigationMOb}>
-              <Image
-                      src={Logo}
-                              alt="Picture of the author"
-                              width={50}
-                              height={50}
-                              className={style.mobLogo}
-                          />
-              <div className={style.iconsMobNav}>
-                <FlightTakeoffIcon className={style.takeOf} onClick={() => setMobActive(1)}/>
-              </div>
-            </div> :  <div className={style.activeNavMob}>
-              
-              <div className={style.iconsMobNav}>
-                <FlightLandIcon className={style.landOf} onClick={() => setMobActive(0)}/>
-                
-              </div>
-              <Link href="/aboutUs" style={{textDecoration:'none', color:"black"}}><p>About Us</p></Link>
-              <div className={style.inputDivMOb}>
-                    <input type="text" placeholder="Search Flight, Hotal, Visa" />
-                    <div className={style.inputIcon}>
-                     
-                    </div>
-                  </div>
-                  <div className={style.inputButtons}>
-                    <Link href="/login" className={style.logInButton}  style={{textDecoration:'none', color:'white'}}>Log In</Link>
-                    <Link href="/signup" className={style.signUpButtonTwo} style={{textDecoration:'none', color:'white'}}>Sign Up</Link>
-                  </div>
-            </div>
-            }
+        <h2>+88-01885-071-488</h2>
+        <p>Contact Us</p>
+      </div>
+      <div className={style.navigationMain}>
+        <div className={style.navigationContent}>
+          <div className={style.navigationLeft}>
+            <Image
+              src={Logo}
+              alt="Picture of the author"
+              width={50}
+              height={50}
+              className={style.logo}
+            />
+            <Link
+              href="/aboutUs"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <p>About Us</p>
+            </Link>
           </div>
-        )
+          <div className={style.inputDiv}>
+            <input type="text" placeholder="Search Flight, Hotal, Visa" />
+            <div className={style.inputIcon}></div>
+          </div>
+          <div className={style.inputButtons}>
+            <Link
+              href="/login"
+              className={style.logInButton}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Log In
+            </Link>
+            <Link
+              href="/signup"
+              className={style.signUpButtonTwo}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Sign Up
+            </Link>
+          </div>
+        </div>
+      </div>
+      {mobActive === 0 ? (
+        <div className={style.navigationMOb}>
+          <Image
+            src={Logo}
+            alt="Picture of the author"
+            width={50}
+            height={50}
+            className={style.mobLogo}
+          />
+          <div className={style.iconsMobNav}>
+            <FlightTakeoffIcon
+              className={style.takeOf}
+              onClick={() => setMobActive(1)}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className={style.activeNavMob}>
+          <div className={style.iconsMobNav}>
+            <FlightLandIcon
+              className={style.landOf}
+              onClick={() => setMobActive(0)}
+            />
+          </div>
+          <Link
+            href="/aboutUs"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <p>About Us</p>
+          </Link>
+          <div className={style.inputDivMOb}>
+            <input type="text" placeholder="Search Flight, Hotal, Visa" />
+            <div className={style.inputIcon}></div>
+          </div>
+          <div className={style.inputButtons}>
+            <Link
+              href="/login"
+              className={style.logInButton}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Log In
+            </Link>
+            <Link
+              href="/signup"
+              className={style.signUpButtonTwo}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Sign Up
+            </Link>
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default Nav;

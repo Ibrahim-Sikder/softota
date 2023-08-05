@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Passion.module.css";
-import {  FaUserGraduate,FaBookReader, FaSnowman } from "react-icons/fa";
+import { FaUserGraduate, FaBookReader, FaSnowman } from "react-icons/fa";
 import doctor from "../../public/doctor.png";
 import man from "../../public/man.png";
 import people from "../../public/people.png";
@@ -37,16 +37,10 @@ const Passion = () => {
           icon={<FaUserGraduate />}
         >
           <h3 className="vertical-timeline-element-title">For Student </h3>
-          
-          <p>
-            Student ID card Photo Copy
-          </p>
-          <p>
-          Birth Certificate (Only for Child & infant)
-          </p>
-          <p>
-          Travel Letter or Leave letter from the Educational Institute.
-          </p>
+
+          <p>Student ID card Photo Copy</p>
+          <p>Birth Certificate (Only for Child & infant)</p>
+          <p>Travel Letter or Leave letter from the Educational Institute.</p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -68,9 +62,19 @@ const Passion = () => {
           icon={<FaSnowman />}
         >
           <h3 className="vertical-timeline-element-title">For Medical </h3>
-          <p>In case of medical treatment, a copy of the appointment letter from a hospital in Thailand and if applicable, an original letter from a local doctor/hospital if the applicant is a first-time traveler.</p>
-          <p>Recent case summary of the patient’s medical reports issued by the local hospital.</p>
-          <p>Booking confirmation letter (such as Med letter & Action Plan) of an Air Ambulance.</p>
+          <p>
+            In case of medical treatment, a copy of the appointment letter from
+            a hospital in Thailand and if applicable, an original letter from a
+            local doctor/hospital if the applicant is a first-time traveler.
+          </p>
+          <p>
+            Recent case summary of the patient’s medical reports issued by the
+            local hospital.
+          </p>
+          <p>
+            Booking confirmation letter (such as Med letter & Action Plan) of an
+            Air Ambulance.
+          </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
@@ -91,15 +95,17 @@ const Passion = () => {
           iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
           icon={<FaBookReader />}
         >
-          <h3 className="vertical-timeline-element-title">
-           For Job Holder 
-          </h3>
-         <p>In the Case of Personal Account Statement (Savings Account) - need to provide the Salary Certificate/Payslip last 03 months</p>
-         <p>Visiting card copy.</p>
-         <p>For Govt. employees - GO is required with an English translation notary must be required.</p>
+          <h3 className="vertical-timeline-element-title">For Job Holder</h3>
+          <p>
+            In the Case of Personal Account Statement (Savings Account) - need
+            to provide the Salary Certificate/Payslip last 03 months
+          </p>
+          <p>Visiting card copy.</p>
+          <p>
+            For Govt. employees - GO is required with an English translation
+            notary must be required.
+          </p>
         </VerticalTimelineElement>
-       
-        
       </VerticalTimeline>
     </div>
     // <div className={style.timeline}>

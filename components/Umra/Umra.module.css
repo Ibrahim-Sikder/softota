@@ -38,7 +38,7 @@
 .package2 {
   width: 408px;
   height: 48px;
-  background: #19ABE3;
+  background: #19abe3;
   position: absolute;
   border-radius: 5px;
   border: 1px solid #fff;
@@ -70,16 +70,14 @@
 }
 /* menu styling  */
 .menu {
- 
   display: flex;
   justify-content: space-between;
   padding: 16px 20px;
   font-size: 18px;
-  background: #4AB449;
+  background: #4ab449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: white;
-
 }
 .menu li {
   display: flex;
@@ -364,7 +362,7 @@
     width: 194px;
     font-size: 14px;
   }
- 
+
   .bannerWrap h2 {
     margin-bottom: 10px;
     width: 94%;
@@ -375,13 +373,11 @@
   .bannerWrap {
     margin-bottom: 100px;
   }
-  .package2{
+  .package2 {
     top: 256px;
     width: 94%;
     font-size: 14px;
-}
-
-
+  }
 }
 @media only screen and (max-width: 400px) {
   .menu li {

@@ -9,9 +9,9 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 4px;
 }
-.bookingWrap button{
-  background:transparent !important;
-  color:black;
+.bookingWrap button {
+  background: transparent !important;
+  color: black;
 }
 .bookImg {
   display: flex;
@@ -19,9 +19,9 @@
   margin: 50px 0px;
   text-align: center;
 }
-.active{
-  background:red;
-  color:white;
+.active {
+  background: red;
+  color: white;
 }
 
 @media only screen and (max-width: 500px) {
