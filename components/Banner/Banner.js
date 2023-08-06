@@ -9,8 +9,14 @@ import Box from "@mui/material/Box";
 import { Add, Groups2, HorizontalRule} from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 
+import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
+import FlightLandIcon from "@mui/icons-material/FlightLand";
+import Logo from "../../public/assets/logo.png";
+import Image from "next/image";
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
+  
+
   
   return (
     <div
@@ -49,7 +55,17 @@ function CustomTabPanel(props) {
       const [value, setValue] = React.useState("1");
       const [checked, setChecked] = React.useState([1]);
       const [classes, setClasses] = useState('')
-      
+  //     const [fixedMenu, setFixedMenu] = useState(false)
+
+  //     function handleFixedMenu(){
+        
+  //      setFixedMenu(window.scrollY > 200)
+  //     }
+  //     window.addEventListener('scroll', handleFixedMenu)
+  //  return()=>window.removeEventListener('scroll', handleFixedMenu)
+
+
+  
       const handleToggle = (value) => () => {
         const currentIndex = checked.indexOf(value);
         const newChecked = [...checked];
@@ -143,6 +159,7 @@ function CustomTabPanel(props) {
         
       };
       
+      const [mobActive, setMobActive] = useState(0);
       const [data3, setData3] = useState([]);
       const [filterData3, setFilterData3] = useState([]);
       const [selected3, setSelected3] = useState([])
@@ -299,7 +316,123 @@ function CustomTabPanel(props) {
       
       return (
         <div>
+
+
+
+
+
+
+
+
         <div className={style.bannerWrap}>
+
+        <div className={style.navigationMain}>
+        <div className={style.navigationContent}>
+          <div className={style.navigationLeft}>
+            <Image
+              src={Logo}
+              alt="Picture of the author"
+              width={50}
+              height={50}
+              className={style.logo}
+            />
+            <Link
+              href="/aboutUs"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <p>About Us</p>
+            </Link>
+          </div>
+          <div className={style.inputDiv}>
+            <input type="text" placeholder="Search Flight, Hotal, Visa" />
+            <div className={style.inputIcon}></div>
+          </div>
+          <div className={style.inputButtons}>
+            <Link
+              href="/login"
+              className={style.logInButton}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Log In
+            </Link>
+            <Link
+              href="/signup"
+              className={style.signUpButtonTwo}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Sign Up
+            </Link>
+          </div>
+        </div>
+      </div>
+      {mobActive === 0 ? (
+        <div className={style.navigationMOb}>
+          <Image
+            src={Logo}
+            alt="Picture of the author"
+            width={50}
+            height={50}
+            className={style.mobLogo}
+          />
+          <div className={style.iconsMobNav}>
+            <FlightTakeoffIcon
+              className={style.takeOf}
+              onClick={() => setMobActive(1)}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className={style.activeNavMob}>
+          <div className={style.iconsMobNav}>
+            <FlightLandIcon
+              className={style.landOf}
+              onClick={() => setMobActive(0)}
+            />
+          </div>
+          <Link
+            href="/aboutUs"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <p>About Us</p>
+          </Link>
+          <div className={style.inputDivMOb}>
+            <input type="text" placeholder="Search Flight, Hotal, Visa" />
+            <div className={style.inputIcon}></div>
+          </div>
+          <div className={style.inputButtons}>
+            <Link
+              href="/login"
+              className={style.logInButton}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Log In
+            </Link>
+            <Link
+              href="/signup"
+              className={style.signUpButtonTwo}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              Sign Up
+            </Link>
+          </div>
+        </div>
+      )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
         

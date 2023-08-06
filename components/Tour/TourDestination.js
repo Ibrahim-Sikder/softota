@@ -40,8 +40,8 @@ const TourDestination = () => {
     slidesToScroll: 4,
     initialSlide: 0,
     autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 2000,
+    speed: 56000,
+    autoplaySpeed: 6000,
     responsive: [
       {
         breakpoint: 1024,
@@ -92,10 +92,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6>The Grand Canyon </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -115,10 +117,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">Cinnamon Dhonveli</h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">9Days</span>
+                    <h6 className="mb-3">Colosseum, Rome </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -138,10 +142,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">Egypt: Mysteries Desert </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">3Days</span>
+                    <h6 className="mb-3">Lakshadweep. Tropical Band of Islands </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">484$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -161,10 +167,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">Europe: the city of dream city  </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Leh. White Paradise in Ladakh </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">454$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -184,10 +192,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Pondicherry. Bewitching French City </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -207,10 +217,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Goa. Popular for beaches and nightlife </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -231,9 +243,11 @@ const TourDestination = () => {
                 <div>
                   <div className={style.pricePackage}>
                     <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -254,9 +268,11 @@ const TourDestination = () => {
                 <div>
                   <div className={style.pricePackage}>
                     <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -277,9 +293,11 @@ const TourDestination = () => {
                 <div>
                   <div className={style.pricePackage}>
                     <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -300,9 +318,11 @@ const TourDestination = () => {
                 <div>
                   <div className={style.pricePackage}>
                     <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -314,7 +334,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={destination11}
+                  src={destination12}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -323,9 +343,11 @@ const TourDestination = () => {
                 <div>
                   <div className={style.pricePackage}>
                     <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -346,9 +368,36 @@ const TourDestination = () => {
                 <div>
                   <div className={style.pricePackage}>
                     <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination11}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -370,7 +419,7 @@ const TourDestination = () => {
         </p>
       </div>
       <div className={style.destination}>
-        <div>
+      <div>
         <Slider {...settings}>
           <div className={style.tourTrending}>
                 <Image
@@ -382,10 +431,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6>Radisson Blu Plaza Delhi Airport </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">504$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -405,10 +456,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">Cinnamon Dhonveli</h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">9Days</span>
+                    <h6 className="mb-3">The Corinthians Resort & Club </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">1344$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -428,10 +481,37 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">Egypt: Mysteries Desert </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">3Days</span>
+                    <h6 className="mb-3">Roseate House</h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">454$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={india4}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">Kaldan Samudhra Palace</h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">124$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -451,10 +531,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">Europe: the city of dream city  </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Gokulam Grand Turtle on the Beach </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">774$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -474,10 +556,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Caravela Beach Resort </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -497,10 +581,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">The Lalit New Delhi </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -520,10 +606,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Trident Udaipur</h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -543,10 +631,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Taj Resort & Convention Centre, Goa </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -566,10 +656,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Country Inn Mysore </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -589,10 +681,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3"> The Leela Kovalam, A Raviz Hotel</h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -612,10 +706,12 @@ const TourDestination = () => {
                 />
                 <div>
                   <div className={style.pricePackage}>
-                    <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <h6 className="mb-3">Chandys Windy Woods </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -627,7 +723,7 @@ const TourDestination = () => {
               </div>
               <div className={style.tourTrending}>
                 <Image
-                  src={destination13}
+                  src={destination11}
                   alt="Picture of the author"
                   width={500}
                   height={500}
@@ -636,9 +732,11 @@ const TourDestination = () => {
                 <div>
                   <div className={style.pricePackage}>
                     <h6 className="mb-3">New York City Hotels </h6>
-                    <div>
-                      <span className="text-[#4AB449] mt-5 ">Starts From <span className="text-black">184$</span></span>
-                      <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
                 </div>

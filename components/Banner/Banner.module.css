@@ -1,4 +1,299 @@
 
+.navbarMain {
+  width: 100%;
+}
+
+.navbarBanner {
+  width: 100%;
+  height: 45px;
+  background: #e9f6e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarBanner h2 {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  margin-left: 10px;
+}
+.navbarBanner p {
+  font-family: PoppinsRegular;
+  font-size: 16px;
+  margin-left: 46px;
+}
+.navigationMain {
+  width: 100%;
+  height: 90px;
+  padding-top: 25px;
+  margin-bottom: 10px;
+}
+.logo {
+  height: 60px;
+  width: 180px;
+  object-fit: cover;
+}
+.navigationContent {
+  display: flex;
+  display: flex;
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigationLeft {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  width: 30%;
+}
+.navigationLeft p {
+  font-family: PoppinsRegular;
+  font-size: 18px;
+  margin-left: 46px;
+}
+.inputDiv {
+  height: 43px;
+  background: #e9f6e9;
+  border: 1px solid #4ab449;
+  border-radius: 10px;
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  width: 40%;
+}
+.inputDiv input {
+  height: 43px;
+  width: 80%;
+  border: none;
+  padding-left: 20px;
+  background: transparent;
+}
+.inputDiv input:focus {
+  outline: none;
+}
+.inputDiv input::placeholder {
+  color: black !important;
+}
+
+.inputIcon {
+  width: 20%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputButtons {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logInButton {
+  font-size: 14px;
+  color: white;
+  font-family: PoppinsRegular;
+  width: 102px;
+  height: 46px;
+  background: #4ab449;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signUpButtonTwo {
+  font-size: 14px;
+  color: white;
+  font-family: PoppinsRegular;
+  width: 102px;
+  height: 46px;
+  background: #19abe3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigationMain {
+  display: block;
+}
+.navigationMOb {
+  display: none;
+}
+.activeNavMob {
+  display: none;
+}
+@media (max-width: 1366px) {
+  /* Add your CSS styles for small laptops here */
+  .navigationMain {
+    display: block;
+  }
+  .navigationMOb {
+    display: none;
+  }
+  .activeNavMob {
+    display: none;
+  }
+}
+
+/* Styles for tablets */
+@media (max-width: 1024px) {
+  .navigationMOb {
+    display: none;
+  }
+  .activeNavMob {
+    display: none;
+  }
+  .navigationMain {
+    display: block;
+  }
+  .navigationLeft p {
+    font-family: PoppinsRegular;
+    font-size: 18px;
+    margin-left: 4px;
+  }
+  .inputDiv {
+    height: 43px;
+    background: #e9f6e9;
+    border: 1px solid #4ab449;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 36%;
+  }
+  .navigationContent {
+   width:100%;
+  }
+  .inputButtons {
+    width: 22%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+  }
+  .navigationLeft {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 35%;
+  }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .navigationMain {
+    display: none;
+  }
+  .mobLogo {
+    height: 65px;
+    width: 129px;
+  }
+  .navigationMOb {
+    display: flex;
+    height: 69px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+  }
+  .takeOf {
+    color: #26ade2;
+    cursor: pointer;
+  }
+  .landOf {
+    color: white;
+  }
+  .activeNavMob {
+    width: 100%;
+    height: 100vh;
+    background: #26ade2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .iconsMobNav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 20px;
+    height: 100px;
+  }
+  .inputDivMOb {
+    width: 80%;
+    height: 43px;
+    background: #e9f6e9;
+    border: 1px solid #4ab449;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  .inputDivMOb input {
+    height: 43px;
+    width: 80%;
+    border: none;
+    padding-left: 20px;
+    background: transparent;
+  }
+  .inputDivMOb input:focus {
+    outline: none;
+  }
+  .inputButtons {
+    width: 70%;
+    height: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+  }
+  .signUpButtonTwo {
+    background-color: white;
+    color: black !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .navigationMOb {
+    height: 55px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .searchResult{
   width: 250px;
   z-index: 999999 !important;

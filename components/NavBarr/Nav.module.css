@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 .navbarBanner h2 {
@@ -34,8 +35,9 @@
 }
 .navigationContent {
   display: flex;
+  display: flex;
   height: 100%;
-  max-width: 1100px;
+  width: 1200px;
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
@@ -170,6 +172,9 @@
     overflow: hidden;
     justify-content: space-between;
     width: 36%;
+  }
+  .navigationContent {
+   width:100%;
   }
   .inputButtons {
     width: 22%;

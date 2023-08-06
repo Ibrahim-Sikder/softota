@@ -6,12 +6,12 @@ import Slider from "react-slick";
 const Customer = () => {
   var settings = {
     infinite: true,
-    speed: 600,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 1000,
-    autoplaySpeed: 1000,
+    speed: 4000,
+    autoplaySpeed: 4000,
   };
   return (
     <div>

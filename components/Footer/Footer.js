@@ -13,70 +13,41 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className={style.footer}>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center">
+      <div className={style.footerWrap}>
         <div className="mb-10">
           <h4 className="pb-5">Bangladesh </h4>
-          <p className={style.number}>
-            <span>
-              <span>
-                {" "}
-                <FaPhoneAlt></FaPhoneAlt>{" "}
-              </span>
+          <p className='flex items-center'>
+                <FaPhoneAlt className="mr-3 text-white"></FaPhoneAlt>
               <span>+88 01885071488</span>
-            </span>
+            
           </p>
-          <p className={style.number}>
-            <span>
-              <span>
-                {" "}
-                <FaPhoneAlt></FaPhoneAlt>{" "}
-              </span>
+          <p className='flex items-center text-white my-2'>
+                <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
               <span>+88 01533389338</span>
-            </span>
           </p>
-          <p className={style.number}>
-            <span className="flex items-center">
-              <span>
-                {" "}
-                <FaMapMarkerAlt></FaMapMarkerAlt>{" "}
-              </span>
+          <p className='flex items-center text-white'>   
+                <FaMapMarkerAlt className="text-white mr-3"></FaMapMarkerAlt>{" "}
               <span>
                 Tropicana Tower, L 12, 45 <br /> Topkhana Rd, Purana Paltan
                 Dhaka 1000
-              </span>
             </span>
           </p>
         </div>
         <div className="mb-10">
           <h4 className="pb-5">USA </h4>
-          <p className={style.number}>
-            <span>
-              <span>
-                {" "}
-                <FaPhoneAlt></FaPhoneAlt>{" "}
-              </span>
+          <p className="flex items-center text-white">
+                <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
               <span>+1 470 9296928</span>
-            </span>
           </p>
-          <p className={style.number}>
-            <span>
-              <span>
-                {" "}
-                <FaPhoneAlt></FaPhoneAlt>{" "}
-              </span>
+          <p className="flex items-center text-white my-2">
+                <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
               <span>+1 470 9071527</span>
-            </span>
           </p>
-          <p className={style.number}>
-            <span className="flex items-center">
-              <span>
-                {" "}
-                <FaMapMarkerAlt></FaMapMarkerAlt>{" "}
-              </span>
+          <p className="flex items-center text-white">
+                <FaMapMarkerAlt className="mr-3"></FaMapMarkerAlt>{" "}
               <span>
                 2932 Arbor Creek Ln, <br /> Doraville, GA 30340
               </span>
-            </span>
           </p>
         </div>
         <div className="mb-10">

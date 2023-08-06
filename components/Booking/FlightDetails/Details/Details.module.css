@@ -1,10 +1,21 @@
 .detailsWrap{
-     width:100%;
-     padding:30px;
-     border:1px solid #ddd;
+     width: 100%;
+     padding: 30px;
+     border: 1px solid #ddd;
      text-align: left;
-     justify-content: left;
-     font-size:14px;
+     font-size: 14px;
+     margin-bottom: 30px;
+}
+.flightDetailInfo{
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     margin-top:20px;
+}
+.airportDetail{
+     display:flex;
+     justify-content: space-between;
+     margin-top:20px;
 }
 .detailBtn{
      display:flex;
@@ -76,4 +87,17 @@
 }
 .dollarIcon{
      font-size:12px;
+}
+
+
+@media only screen and (max-width:600px){
+     .flightDetailInfo{
+          display:block;
+     }
+     .singleDetail{
+          margin-bottom:10px;
+     }
+     .airportDetail{
+          display:block;
+     }
 }

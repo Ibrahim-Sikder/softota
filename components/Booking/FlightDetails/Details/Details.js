@@ -12,10 +12,10 @@ import { useState } from 'react';
 
 
 const Details = () => {
-   const [value, setValue ] = useState(false)
-   const handleChange = ()=>{
-     setValue(value)
-   }
+     const [value, setValue ] = useState(false)
+     const handleChange = ()=>{
+          setValue(value)
+     }
      
      return (
           <div>
@@ -30,16 +30,16 @@ const Details = () => {
           </div>
           </div>
           <div>
-
+          
           <strong  className='text-xl'>BDT 4,499</strong> <br />
-         <div className="flex items-center">
-         <small className={style.dollarIconWrap}><AttachMoney className={style.dollarIcon}/></small>
+          <div className="flex items-center">
+          <small className={style.dollarIconWrap}><AttachMoney className={style.dollarIcon}/></small>
           <small>159</small>
-         </div>
           </div>
           </div>
-          <div className='flex justify-between text-left items-center mt-5'>
-          <div>
+          </div>
+          <div className={style.flightDetailInfo}>
+          <div className={style.singleDetail}>
           <span className='flex '>
           <Flight className={style.detailFlightIcon}/> 
           <span> Round Trip </span>
@@ -57,12 +57,12 @@ const Details = () => {
           <span>3 Travelers  </span>
           </span>
           </div>
-          <div>
+          <div className={style.singleDetail}>
           <div>Booking ID</div>
           <div>Airline PNR </div>
           <div>Reservation PNR</div>
           </div>
-          <div>
+          <div className={style.singleDetail}>
           <div>
           <strong className='mr-3'>: </strong><strong> STFL16900068481176 </strong>
           </div>
@@ -80,34 +80,34 @@ const Details = () => {
           <div>
           <div>
           <div className={style.detailBtns}>
-               <button className='mr-2'>DAC-CXB</button>
-               <button>CXB-DAC</button>
+          <button className='mr-2'>DAC-CXB</button>
+          <button>CXB-DAC</button>
           </div>
           <div className="flex mt-5 items-center">
           <span className={style.flightDIcon}> <FlightTakeoff className={style.flightIcon} /></span>
-       <span className='mr-2'>   Biman Bangladesh Airlines   BG437</span>
-        <small className='text-xs'> DEHAVILLAND DASH 8 - DH8
+          <span className='mr-2'>   Biman Bangladesh Airlines   BG437</span>
+          <small className='text-xs'> DEHAVILLAND DASH 8 - DH8
           Economy-T (T)</small>
           </div>
-          <div className='flex justify-between  mt-5'>
-          <div>
-               <strong className=''>DAC  15:20</strong> <br />
-               <small>Hazrat Shahjalal International Airport</small><br />
-               <small>Terminal: D</small><br />
-               <small>23rd Jul 2023</small>
+          <div className={style.airportDetail}>
+          <div className={style.singleAirport}>
+          <strong className=''>DAC  15:20</strong> <br />
+          <small>Hazrat Shahjalal International Airport</small><br />
+          <small>Terminal: D</small><br />
+          <small>23rd Jul 2023</small>
           </div>
           <div className='text-center'>
-                    <AirplanemodeActive className={style.middleIcon}/> <br />
-                    <small>02h 230m</small>
-               </div>
-               <div>
-                    <strong>CXB 16:30</strong> <br />
-                    <small>Cox s Bazar Airport</small> <br />
-                    <small>23rd Aug 2023</small>
-               </div>
+          <AirplanemodeActive className={style.middleIcon}/> <br />
+          <small>02h 230m</small>
+          </div>
+          <div>
+          <strong>CXB 16:30</strong> <br />
+          <small>Cox s Bazar Airport</small> <br />
+          <small>23rd Aug 2023</small>
           </div>
           </div>
-             
+          </div>
+          
           </div>
           </div>
           </div>

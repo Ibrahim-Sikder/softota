@@ -27,7 +27,7 @@ const Nav = () => {
         <h2>+88-01885-071-488</h2>
         <p>Contact Us</p>
       </div>
-      <div className={style.navigationMain}>
+      {/* <div className={style.navigationMain}>
         <div className={style.navigationContent}>
           <div className={style.navigationLeft}>
             <Image
@@ -117,7 +117,7 @@ const Nav = () => {
             </Link>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
