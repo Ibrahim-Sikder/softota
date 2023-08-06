@@ -33,7 +33,7 @@ const flightbooking = () => {
                     height={30}
                     className={style.logoIcon}
                   />
-                  <button className="ml-1">Flight </button>
+                  <button className={style.none}>Flight </button>
                 </div>
               </Link>
               <Link href="/profile/userbooking/hotelbooking">
@@ -45,7 +45,7 @@ const flightbooking = () => {
                     height={30}
                     className={style.logoIcon}
                   />
-                  <button className="ml-1">Hotel </button>
+                  <button className={style.none}>Hotel </button>
                 </div>
               </Link>
               <div className={style.bookingHistory}>
@@ -56,7 +56,7 @@ const flightbooking = () => {
                   height={30}
                   className={style.logoIcon}
                 />
-                <button className="ml-1">Visa </button>
+                <button  className={style.none}>Visa </button>
               </div>
               <div className={style.bookingHistory}>
                 <Image
@@ -66,7 +66,7 @@ const flightbooking = () => {
                   height={30}
                   className={style.logoIcon}
                 />
-                <button className="ml-1">Tours </button>
+                <button  className={style.none}>Tours </button>
               </div>
             </div>
 
@@ -75,8 +75,8 @@ const flightbooking = () => {
                 <strong>DAC <SwapHoriz className="mx-3"/> CXB </strong>
                 <strong>BDT 12,445 </strong>
               </div>
-              <div className="flex items-center justify-between mb-3">
-              <div className="flex items-center  ">
+              <div className={style.traveler}>
+              <div className="flex items-center mb-3 ">
                 <Groups className="mr-3 "/>
                 <span> 1 Travelers</span>
               </div>
@@ -85,9 +85,9 @@ const flightbooking = () => {
                 <strong>MXRHIF</strong>
               </div>
               </div>
-              <div className="flex items-center w-full justify-between">
+              <div className={style.travelerDate}>
               <div className="flex items-center">
-                <CalendarMonth className="mr-3 "/>
+                <CalendarMonth className="mr-3 mb-3"/>
                 <span>21 Aug 23 - 24 Dev 23</span>
               </div>
               <div className="flex items-center  w-[200px] text-left">

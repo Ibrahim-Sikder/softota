@@ -38,7 +38,7 @@
   justify-content: center;
   text-align: center;
 }
-/* managae accoun styling  */
+
 .deleteBtn {
   background: #26ade2;
   color: white;
@@ -56,7 +56,8 @@
   color: black !important;
   border-bottom: 1px solid #4ab449;
   width: 90%;
-  margin: 0 auto;
+  margin: 24px auto;
+  margin-top: 40px
 }
 .bookingWrap button {
   color: black !important;
@@ -103,6 +104,18 @@
   justify-content: center;
 }
 
+.traveler{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
+.travelerDate{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:12px;
+}
 .bookingInfo p {
   font-size: 12px;
 }
@@ -141,6 +154,7 @@
 }
 .detailBtnGroup{
   display: flex;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 .detailBtnGroup button{
@@ -149,8 +163,10 @@
   color: #19abe3;
   border: 1px solid #19abe3;
   font-size: 14px;
-  padding: 8px 12px;
   transition: all .3s ease-in-out;
+  margin-bottom: 8px;
+  width: 147px;
+  padding: 10px 5px;
 }
 .detailBtnGroup button:hover{
   background:#4ab449;
@@ -158,9 +174,10 @@
   border:1px solid #4ab449;
 }
 .payments{
-  display:flex;
-  align-items:center;
-  margin-top:10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
 }
 .payments span{
   margin-right:10px;
@@ -211,9 +228,35 @@
 }
 .fTopBar {
   flex-wrap: wrap;
+    margin-top: 20px;
 }
 .userProfileRightSide {
   padding: 0px 0px !important;
+}
+.traveler{
+  display:block;
+}
+.travelerDate{
+  display: block;
+}
+.bookingWrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   padding: 10px 50px;
+  border-bottom:none;
+  margin: 10px auto;
+  margin-top: 0px;
+}
+.none{
+  display:none;
+}
+.bookingHistory {
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.flightBooking{
+  padding-bottom: 50px;
 }
 
 }

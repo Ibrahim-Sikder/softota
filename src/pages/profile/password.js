@@ -9,6 +9,7 @@ import password from "../../../public/pass.png";
 import styles from "./password.module.css";
 import TextField from "@mui/material/TextField";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
+import Nav from "../../../components/NavBarr/Nav";
 const Password = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showPassword2, setShowPassword2] = useState(false);
@@ -19,8 +20,7 @@ const Password = () => {
   const handleMouseDownPassword = () => {};
   return (
     <section>
-      <TopBar />
-      <Header />
+     <Nav/>
       <section className={style.accounWra}>
         <div className={style.profileWrap}>
           <div className={style.userProfileLeftSide}>

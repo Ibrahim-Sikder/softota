@@ -59,7 +59,7 @@ const baggage = () => {
           </div>
           <div className={style.userProfileRightSide}>
         
-          <div className="w-full border p-5">
+          <div className="w-full border p-5 mb-10">
                <h2 className="text-2xl text-[#4AB449] font-bold mb-5">Baggage Details</h2>
                <span className="underline mb-3">Baggage Details</span>
                <div className="flex justify-between w-[500px] items-center ">

@@ -18,20 +18,26 @@
   background: #19abe3;
   margin-bottom: 12px;
   text-align: center;
-  border-radius: 4px;
-  padding: 10px 10px;
-  font-size: 20px;
+  padding: 8px 1px;
+  font-size: 18px;
+  width: 200px;
+  transition:all .3s ease-in-out;
+}
+.userInfo p:hover {
+  background:#4ab449
 }
 .userLogoutBtn {
   background: #4ab449;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 12px;
+  text-align: center;
+  padding: 8px 1px;
+  font-size: 18px;
   width: 200px;
-  font-size: 20px;
-  padding: 10px;
-  border-radius: 4px;
+  transition:all .3s ease-in-out;
+}
+.userLogoutBtn:hover {
+  background: #19abe3;
 }
 .logOutBtn {
   display: flex;

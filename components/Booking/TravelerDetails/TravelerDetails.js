@@ -3,7 +3,7 @@ import style from './TravelerDetails.module.css'
 import { Person,SupervisorAccount,LocalPhone,CalendarMonth, Email,Flag,AutoStories, DriveFileRenameOutline,House } from "@mui/icons-material";
 const TravelerDetails = () => {
      return (
-          <div className='mb-24'>
+          <div className={style.travelerInfoWrap}>
                <h2 className='text-xl font-bold'>Traveller(s) Details  </h2>
                <div>
                     <h3 className='mt-5 mb-3'>IBRAHIM SIKDER - (Primary Contact) - Adult</h3>
@@ -15,7 +15,7 @@ const TravelerDetails = () => {
                               <p>IBRAHIM SIKDER </p>
                          </div>
                     </div>
-                    <div className="flex items-center justify-between w-[600px]">
+                    <div className={style.travelerInfo}>
                     <div className='flex items-center mb-3'>
                          <SupervisorAccount className='mr-5'/>
                          <div>
@@ -31,7 +31,7 @@ const TravelerDetails = () => {
                          </div>
                     </div>
                     </div>
-                    <div className="flex items-center justify-between w-[600px]">
+                    <div className={style.travelerInfo}>
                     <div className='flex items-center mb-3'>
                          <CalendarMonth className='mr-5'/>
                          <div>
@@ -47,7 +47,7 @@ const TravelerDetails = () => {
                          </div>
                     </div>
                     </div>
-                    <div className="flex  justify-between w-[600px]">
+                    <div className={style.travelerInfo}>
                     <div className='flex items-center mb-3'>
                          <Flag className='mr-5'/>
                          <div>
@@ -63,7 +63,7 @@ const TravelerDetails = () => {
                          </div>
                     </div>
                     </div>
-                    <div className="flex  justify-between w-[600px]">
+                    <div className={style.travelerInfo}>
                     <div className='flex items-center mb-3'>
                          <AutoStories className='mr-5'/>
                          <div>
@@ -79,7 +79,7 @@ const TravelerDetails = () => {
                          </div>
                     </div>
                     </div>
-                    <div className="flex  justify-between w-[600px]">
+                    <div className={style.travelerInfo}>
                     <div className='flex items-center mb-3'>
                          <House className='mr-5'/>
                          <div>

@@ -11,9 +11,9 @@
 }
 .cancelBtn button{
      background: #4AB449;
-     padding: 10px 15px;
-     font-size: 16px;
-     border-radius: 3px;
+     padding: 10px 0px;
+     font-size: 14px;
+     width: 176px;
      margin-top: 20px;
 }
 .cancelImg{

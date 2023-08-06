@@ -4,6 +4,7 @@
   width: 265px;
   margin-top: 40px;
 }
+
 .flightDetail {
   display: flex;
   align-items: center;
@@ -29,4 +30,14 @@
 }
 .flightIcon {
   font-size: 20px;
+}
+
+
+@media only screen and (max-width:600px){
+.flightInfoWrap {
+  margin-left: 18px;
+  justify-content: left;
+}
+
+
 }

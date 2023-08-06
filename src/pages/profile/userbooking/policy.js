@@ -60,7 +60,7 @@ const policy = () => {
           </div>
           <div className={style.userProfileRightSide}>
         
-          <div className="w-full border p-5">
+          <div className="w-full border p-8 mb-10 mt-5">
                <h2 className="text-3xl font-bold mb-5">Cancellation Policy</h2>
               <div className="mb-3">
               <h4 className="text-xl font-bold">PENALTIES/GENERAL</h4>

@@ -6,11 +6,11 @@ import TopBar from "../../../components/TopBar/TopBar";
 import Footer from "../../../components/Footer/Footer";
 import style from "./userProfile.module.css";
 import card from "../../../public/deleteAccount.png";
+import Nav from "../../../components/NavBarr/Nav";
 const manageData = () => {
   return (
     <section>
-      <TopBar />
-      <Header />
+      <Nav/>
       <section className={style.accounWra}>
         <div className={style.profileWrap}>
           <div className={style.userProfileLeftSide}>

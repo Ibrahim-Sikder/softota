@@ -55,6 +55,27 @@ function CustomTabPanel(props) {
       const [value, setValue] = React.useState("1");
       const [checked, setChecked] = React.useState([1]);
       const [classes, setClasses] = useState('')
+      const [data, setData] = useState([]);
+      const [filterData, setFilterData] = useState([]);
+      const [selected, setSelected] = useState([])
+      const [data2, setData2] = useState([]);
+      const [filterData2, setFilterData2] = useState([]);
+      const [selected2, setSelected2] = useState([])
+      const [mobActive, setMobActive] = useState(0);
+      const [data3, setData3] = useState([]);
+      const [filterData3, setFilterData3] = useState([]);
+      const [selected3, setSelected3] = useState([])
+      const [data4, setData4] = useState([]);
+      const [filterData4, setFilterData4] = useState([]);
+      const [selected4, setSelected4] = useState([])
+      const [data5, setData5] = useState([]);
+      const [filterData5, setFilterData5] = useState([]);
+      const [selected5, setSelected5] = useState([])
+      const [data6, setData6] = useState([]);
+      const [filterData6, setFilterData6] = useState([]);
+      const [selected6, setSelected6] = useState([])
+
+
   //     const [fixedMenu, setFixedMenu] = useState(false)
 
   //     function handleFixedMenu(){
@@ -65,7 +86,7 @@ function CustomTabPanel(props) {
   //  return()=>window.removeEventListener('scroll', handleFixedMenu)
 
 
-  
+
       const handleToggle = (value) => () => {
         const currentIndex = checked.indexOf(value);
         const newChecked = [...checked];
@@ -115,9 +136,7 @@ function CustomTabPanel(props) {
       
       
       
-      const [data, setData] = useState([]);
-      const [filterData, setFilterData] = useState([]);
-      const [selected, setSelected] = useState([])
+    
       useEffect(() => {
         fetch("search.json")
         .then((res) => res.json())
@@ -137,9 +156,7 @@ function CustomTabPanel(props) {
         
       };
       
-      const [data2, setData2] = useState([]);
-      const [filterData2, setFilterData2] = useState([]);
-      const [selected2, setSelected2] = useState([])
+    
       useEffect(() => {
         fetch("search.json")
         .then((res) => res.json())
@@ -159,10 +176,7 @@ function CustomTabPanel(props) {
         
       };
       
-      const [mobActive, setMobActive] = useState(0);
-      const [data3, setData3] = useState([]);
-      const [filterData3, setFilterData3] = useState([]);
-      const [selected3, setSelected3] = useState([])
+   
       useEffect(() => {
         fetch("search.json")
         .then((res) => res.json())
@@ -182,9 +196,7 @@ function CustomTabPanel(props) {
         
       };
       
-      const [data4, setData4] = useState([]);
-      const [filterData4, setFilterData4] = useState([]);
-      const [selected4, setSelected4] = useState([])
+      
       useEffect(() => {
         fetch("search.json")
         .then((res) => res.json())
@@ -204,9 +216,7 @@ function CustomTabPanel(props) {
         
       };
       // const [passengerClass, setPassengerClass] = useState([{First: 'Cabin', Second: 'Premium', Third: 'Economy'}]);
-      const [data5, setData5] = useState([]);
-      const [filterData5, setFilterData5] = useState([]);
-      const [selected5, setSelected5] = useState([])
+     
       useEffect(() => {
         fetch("search.json")
         .then((res) => res.json())
@@ -226,9 +236,7 @@ function CustomTabPanel(props) {
         
       };
       
-      const [data6, setData6] = useState([]);
-      const [filterData6, setFilterData6] = useState([]);
-      const [selected6, setSelected6] = useState([])
+     
       useEffect(() => {
         fetch("search.json")
         .then((res) => res.json())
@@ -326,7 +334,7 @@ function CustomTabPanel(props) {
 
         <div className={style.bannerWrap}>
 
-        <div className={style.navigationMain}>
+        {/* <div className={style.navigationMain}>
         <div className={style.navigationContent}>
           <div className={style.navigationLeft}>
             <Image
@@ -416,7 +424,7 @@ function CustomTabPanel(props) {
             </Link>
           </div>
         </div>
-      )}
+      )} */}
 
 
 
