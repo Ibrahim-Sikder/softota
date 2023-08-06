@@ -30,13 +30,14 @@ const Nav = () => {
       <div className={style.navigationMain}>
         <div className={style.navigationContent}>
           <div className={style.navigationLeft}>
+            <div  className={style.logo}>
             <Image
               src={Logo}
               alt="Picture of the author"
-              width={50}
-              height={50}
-              className={style.logo}
+              
+             
             />
+            </div>
             <Link
               href="/aboutUs"
               style={{ textDecoration: "none", color: "black" }}

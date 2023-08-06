@@ -98,7 +98,7 @@ async function handleGithubSignIn(){
                 height={700}
               />
                 </div>
-                <div>
+                <div className='mt-10'>
                     <form onSubmit={handleSignUp}>
                     <div className='mb-5'>
                           <label className={style.inputLabel}>User Name</label> <br/>

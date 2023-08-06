@@ -32,6 +32,9 @@
   width: 180px;
   object-fit: cover;
 }
+.logo img{
+  width:100%;
+}
 .navigationContent {
   display: flex;
   display: flex;

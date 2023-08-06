@@ -72,8 +72,8 @@ const SignUpAgent = () => {
           </div>
           <div>
             <form onSubmit={handleSignUp}>
-              <div className="mb-5">
-                <label>User Name</label> <br />
+              <div className="mb-5 relative">
+                <label className={style.loginLabel}>User Name</label> <br />
                 <input
                   onChange={(event) => setName(event.target.value)}
                   name="name"
@@ -82,8 +82,8 @@ const SignUpAgent = () => {
                   className={style.loginInput}
                 />
               </div>
-              <div className="mb-5">
-                <label>Email Address</label> <br />
+              <div className="mb-5 relative" >
+                <label className={style.loginLabel}>Email Address</label> <br />
                 <input
                   onChange={(event) => setEmail(event.target.value)}
                   type="email"
@@ -92,8 +92,8 @@ const SignUpAgent = () => {
                   className={style.loginInput}
                 />
               </div>
-              <div className="mb-5">
-                <label>Password</label> <br />
+              <div className="mb-5 relative">
+                <label  className={style.loginLabel}>Password</label> <br />
                 <input
                   onChange={(event) => setPassword(event.target.value)}
                   type="password"
@@ -102,8 +102,8 @@ const SignUpAgent = () => {
                   className={style.loginInput}
                 />
               </div>
-              <div className="mb-5">
-                <label>Mobile Number</label> <br />
+              <div className="mb-5 relative">
+                <label  className={style.loginLabel}>Mobile Number</label> <br />
                 <input
                   onChange={(event) => setNumber(event.target.value)}
                   name="number"
@@ -112,8 +112,8 @@ const SignUpAgent = () => {
                   className={style.loginInput}
                 />
               </div>
-              <div className="mb-5">
-                <label>Agent Number </label> <br />
+              <div className="mb-5 relative">
+                <label  className={style.loginLabel}>Agent Number </label> <br />
                 <input
                   onChange={(event) => setAnumber(event.target.value)}
                   name="anumber"

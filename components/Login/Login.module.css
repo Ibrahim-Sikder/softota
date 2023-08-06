@@ -1,22 +1,39 @@
-.loginWrapa {
-  width: 100vw;
+
+.loginWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  text-align: center;
 }
 .loginInput {
-  box-sizing: border-box;
   width: 472px;
-  height: 66px;
+  height: 45px;
   background: #e6f8ff;
-  border: 1px solid rgba(25, 171, 227, 0.3);
+  border: 1px solid #4AB449;
   border-radius: 5px;
-  padding-left: 10px;
+  padding:10px;
+}
+.loginInput::placeholder{
+  color:black !important;
 }
 .loginBtn {
   width: 323px;
-  height: 53px;
+  height: 45px;
   background: #4ab449;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   color: white;
+  margin: 0 auto;
+  transition:all .4s ease-in-out;
+}
+.loginBtn:hover {
+  background:#26ade2;
+}
+.inputLabel{
+  text-align: left;
+  position: absolute;
+  left: 0;
 }
 .devided {
   width: 206px;
@@ -25,43 +42,48 @@
 }
 .loginBtn2 {
   width: 323px;
-  height: 53px;
+  height: 45px;
   background: #26ade2;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   color: white;
+  font-size: 14px;
+  transition:all .5s ease-in-out;
+}
+.loginBtn2:hover{
+  background:#4AB449;
 }
 .loginBtn3 {
-  position: absolute;
   width: 323px;
-  height: 53px;
+  height: 45px;
   background: #ffffff;
   border: 1px solid rgba(74, 180, 73, 0.5);
   box-shadow: 0px 2px 4px rgba(25, 171, 227, 0.3);
   border-radius: 5px;
   color: #4ab449;
+  font-size: 14px;
+  transition: all .4s ease-in-out;
 }
-
+.loginBtn3:hover {
+  background:#4AB449;
+  color:white;
+}
 .loginWithProvider {
   margin-bottom: 20px;
   margin-top: 30px;
 }
 .ShowIcon {
   position: absolute;
-  right: 20px;
-  top: 44px;
-  font-size: 25px;
+  right: 15px;
+  top: 39px;
+  font-size: 18px;
+  color: #4AB449;
+}
+.circle button{
+  background:none;
 }
 
-@media only screen and (max-width: 1024px) {
-  .loginWrapa {
-    width: 100;
-  }
-}
 @media only screen and (max-width: 768px) {
-  .loginWrapa {
-    width: 100%;
-  }
 
   .loginWrap {
     display: flex;
@@ -85,18 +107,10 @@
   }
   .loginInput {
     width: 400px;
-    height: 59px;
-    margin-left: 43px;
   }
-  .inputLabel {
-    margin-left: 23px;
-  }
-  .loginBtn {
-    margin-left: -23px;
-  }
-  .loginBtn2 {
-    margin-left: 19px;
-  }
+ 
+ 
+
   .devided {
     width: 160px;
     margin: 0 auto;
@@ -105,31 +119,24 @@
   }
   .loginInput {
     width: 368px;
-    height: 59px;
-    margin-left: 18px;
   }
   .ShowIcon {
     right: 33px;
     top: 41px;
   }
-  .loginBtn2 {
-    margin-left: -29px;
-  }
+ 
   .loginBtn3 {
     left: 51px;
   }
+
+
+
 }
 @media only screen and (max-width: 400px) {
   .loginInput {
     width: 350px;
-    margin-left: 12px;
   }
-  .loginBtn {
-    margin-left: -37px;
-  }
-  .loginBtn2 {
-    margin-left: -41px;
-  }
+
   .loginBtn3 {
     left: 25px;
   }

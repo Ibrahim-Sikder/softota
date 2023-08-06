@@ -21,7 +21,8 @@
   padding: 8px 1px;
   font-size: 18px;
   width: 200px;
-  transition:all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  border-radius: 5px;
 }
 .userInfo p:hover {
   background:#4ab449
@@ -54,7 +55,7 @@
   }
   .userInfoList {
     flex-wrap: wrap;
-    width: 62%;
+    width: 100%;
     justify-content: center;
     margin-top: 15px;
     display: flex;
@@ -71,12 +72,13 @@
   .userInfo p {
     text-align: center;
     border-radius: 4px;
-    padding: 4px 10px;
-    font-size: 16px;
+    padding: 4px 0px;
+    font-size: 14px;
     background: none;
     color: black;
     margin-bottom: 0px;
     cursor: pointer;
+    width: 155px;
   }
 
   .logOutBtn {

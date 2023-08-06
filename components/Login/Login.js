@@ -94,7 +94,7 @@ const Login = () => {
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
-            <div className="mb-5 ml-16 mt-10">
+            <div className="mb-5">
               <button className={style.loginBtn} type="submit">
                 Login
               </button>
@@ -104,14 +104,14 @@ const Login = () => {
               <span className="mx-5">or</span>
               <p className={style.devided}></p>
             </div>
-            <div className="mb-5 ml-16 mt-5">
+            <div className="mb-5 mt-3">
               <Link href="/loginAgent">
                 <button className={style.loginBtn2} type="submit">
                   Login as Agent
                 </button>
               </Link>
             </div>
-            <div className="mb-5 ml-16 mt-10">
+            <div className="mb-5 ">
               <Link href="/signup">
                 <button className={style.loginBtn3} type="submit">
                   Create your account{" "}
@@ -119,7 +119,7 @@ const Login = () => {
               </Link>
             </div>
             <div className={style.loginWithProvider}>
-              <div className="flex justify-between mt-32 w-32 mx-auto">
+              <div className="flex justify-between  w-32 mx-auto">
                 <div className={style.circle}>
                   <button type="button" onClick={handleGoogleSignIn}>
                     <Image
