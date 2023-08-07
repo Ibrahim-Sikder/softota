@@ -1,181 +1,211 @@
-
-.sideBarWrap{
-     display:grid;
+.sideBarWrap {
+     display: grid;
      grid-template-columns: repeat(12, minmax(0, 1fr));
-}
-.leftSideBar{
-grid-column: span 2 / span 2;
-}
-.rightSideBar{
+   }
+   .leftSideBar {
+     grid-column: span 2 / span 2;
+   }
+   .rightSideBar {
      grid-column: span 10 / span 10;
-}
-.active{
-    display:none;
-
-}
-.dasBoardTop{
-     display: flex;
-     justify-content: space-between;
-     padding: 7px 10px;
-     align-items: center;
-}
-.dasBoardTop input{
-     border: 1px solid #ddd;
-     width: 350px;
-     padding-left: 38px;
-}
-.logo{
-     margin-right:20px;
-     width:150px;
-     height:auto;
-     object-fit: cover;
-
-}
-.logoWrap{
-     display:flex;
-     position:relative;
-}
-.searchIcon{
-     position: absolute;
-     left: 179px;
-     top: 14px;
-     font-size: 22px;
-}
-
-.profileTop{
+   }
+   
+   /* admin dashboard right side styling  */
+   
+   .profileTop {
      width: 100%;
-         height: 164vh;
-         padding: 30px 0px;
- }
- .hotelHistory{
-     background: #DCF1FF !important;
-     padding-left: 20px;
-     padding-top: 20px;
-     padding-bottom: 20px;
- }
-.userWrap{
+   }
+   .rightSideTopBar{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        padding:15px 20px;
+   }
+   .adminLeftInfo{
+     width: 38%;
      display: flex;
-     width: 230px;
      justify-content: space-between;
+     text-align: left;
+   }
+   .adminLeftInfo p{
+     color: #4AB449;
+     font-size: 14px;
+     margin-top: 3px;
+   }
+   .adminLeftInfo strong{
+     color: #4AB449;
+        
+   }
+   .customerInfo{
+     position: relative;
+   }
+   .customerInfo button{
+     background: transparent;
+     color: #4AB449;
+     border: 1px solid #4AB449;
+     font-size: 12px;
+     width: 132px;
+     padding: 3px 0px;
+     transition: all .3s eaas;
+     transition: all .3s cubic-bezier(0.24, -0.01, 0.98, 1.11);
+   }
+   .customerInfo button:hover{
+     background:#4AB449;
+     color:white;
+   }
+   .customerInfo small{
+     display: block;
+     margin-bottom: 5px;
+   }
+   .notification{
+     position: absolute;
+     color: #4AB449 !important;
+     top: 2px;
+     left: -36px;
+     font-size: 32px !important;
+
+   }
+   .moveText{
+     width: 100%;
+     height: 70px;
+     background: #19ABE3;
+     color: white;
+     display: flex;
      align-items: center;
+     text-transform: uppercase;
+   }
+   .heroBoxWrap{
+     margin-top: 30px;
+     width: 1000px !important;
+     background: #19ABE3 !important;
+     color:#fff !important;
+   }
+.menubar{
+     background:#19ABE3 !important;
 }
-
-/* dashboard left side styling  */
-.dashBoardLeftSide{
-     background:#29566A;
-     width:204px;
-     height:1024px;
-
+.searchBox, .dateBox, .passenger{
+     border:1px solid #fff !important;
 }
-.leftSideWrap{
+.removecity{
+     background:#4AB449;
+}
+.searchBtn{
+     border: 1px solid #fff !important;
+     transition: all .3s ease-in-out;
+     width: 200px;
+     padding: 9px 0px;
+     font-size: 14px;
+}
+.searchBtn:hover{
+     background:#4AB449;
+     
+}
+.packageTour{
+     width:100%;
+}
+   
+   
+
+   
+   /* dashboard left side styling  */
+   .dashBoardLeftSide {
+     background: #19abe3;
+     width: 100%;
+     height: 1024px;
+   }
+   .leftSideWrap {
      display: flex;
      flex-direction: column;
      justify-content: center;
-     align-items:center;
-     padding-top:20px;
-}
-.bookingIcon{
-     display:flex;
+     align-items: center;
+     padding-top: 20px;
+   }
+
+   .bookingList ul{
+     margin: 0px;
+     padding: 0px !important;
+     margin-left: -35px;
+     margin-top: -14px;
+     font-size: 14px;
+   }
+   .bookingList ul li{
+     text-align: left;
+     padding-bottom: 6px;
+ 
+
+   }
+   .flightIcon{
+     transform: rotate(51deg);
+     font-size: 20px !important;
+   }
+   .bookingIcon {
+     display: flex;
      justify-content: space-between;
-     cursor:pointer;
-} 
-.bookingIcon h5{
-     color:white;
-     margin-bottom:5px;
-     
-}
-.bookingIcon span{
-     margin-left:15px;
+     cursor: pointer;
+   }
+   .bookingIcon h5 {
+     color: white;
+     margin-bottom: 5px;
+   }
+   .bookingIcon span {
+     margin-left: 15px;
      display: block;
-     margin-top:5px;
-     color:#fff;
-}
-
-.bookingList{
-     margin:0 auto;
+     margin-top: 5px;
+     color: #fff;
+   }
+   
+   .bookingList {
+     margin: 0 auto;
      text-align: center;
-     position:relative;
-     padding-left:20px;
-}
-.bookingList li{
-     position:relative;
-     margin-bottom:10px;
-     color:white;
-     margin-bottom:20px;
-}
-.bookingList li:nth-child(6){
-     margin-bottom:0px !important;
-}
-.bookingList li::before{
-     content: attr(data-counter);
-     position: absolute;
-     top: 0;
-     width: 10px;
-     left: -25px;
-     line-height: 10px;
-     height: 10px;
-     border-radius: 50%;
-     background: #26ADE2;
-     text-align: center;
-
-}
-.bookingList::before{
-     content:'';
-     position:absolute;
-     top:0;
-     left:0;
-     width:1px;
-     background:white;
-     height:100%;
-}
-.profileInfo{
-     text-align:left;
+     position: relative;
+     padding-left: 20px;
+   }
+   
+   
+   .profileInfo {
+     text-align: left;
      width: 100%;
-     margin-top:30px;
-}
-.profileInfo span{
-     font-size:14px;
-     text-align:left ;
-     margin-left:10px;
-}
-.profileInfoIcon{
-     color:white;
-}
-
-.profileInfo li{
-     display:flex;
-     color:white;
-     margin-bottom:20px;
-     text-align:left !important;
-     margin-left:0;
-     padding:0;
-}
-.userService{
-     margin-top:230px;
-     margin-left:-30px;
-
-}
-
-/* Right side styling  */
-
-
-/* media query styling */
-@media only screen and (max-width:768px){
-     .sideBarWrap{
-          display:block;
-          
+     margin-top: 30px;
+   }
+   .profileInfo span {
+     font-size: 14px;
+     text-align: left;
+     margin-left: 10px;
+   }
+   .profileInfoIcon {
+     color: white;
+   }
+   
+   .profileInfo li {
+     display: flex;
+     color: white;
+     margin-bottom: 20px;
+     text-align: left !important;
+     margin-left: 0;
+     padding: 0;
+   }
+   .userService {
+     margin-top: 230px;
+     margin-left: -30px;
+   }
+   
+   /* Right side styling  */
+   
+   /* media query styling */
+   @media only screen and (max-width: 768px) {
+     .sideBarWrap {
+       display: block;
      }
-     .leftSideBar{
-     grid-column: span 2 / span 2;
+     .leftSideBar {
+       grid-column: span 2 / span 2;
      }
-     .rightSideBar{
-          grid-column: span 10 / span 10;
+     .rightSideBar {
+       grid-column: span 10 / span 10;
      }
      .dashBoardLeftSide {
-          background: #29566A;
-          width: 328px;
-          height: 1024px;
-          margin: 0 auto;
-      }
-
-}
+       background: #29566a;
+       width: 328px;
+       height: 1024px;
+       margin: 0 auto;
+     }
+   }
+   

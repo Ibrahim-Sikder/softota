@@ -31,12 +31,12 @@ const Nav = () => {
         <div className={style.navigationContent}>
           <div className={style.navigationLeft}>
             <div  className={style.logo}>
-            <Image
+           <Link href='/'>
+           <Image
               src={Logo}
               alt="Picture of the author"
-              
-             
             />
+           </Link>
             </div>
             <Link
               href="/aboutUs"

@@ -11,30 +11,56 @@ import payment from '../../public/cashless-payment.png'
 import transaction from '../../public/transaction.png'
 import passenger from '../../public/passenger.png'
 import { FaUserAlt,FaPlane, FaCommentDollar, FaAmazonPay, FaHospitalUser, FaSkating, FaRegBuilding, FaHeadset ,FaSignOutAlt, FaAcquisitionsIncorporated } from "react-icons/fa";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { Beenhere ,Flight, Hotel, Diversity2, DirectionsBusFilled,Train} from '@mui/icons-material';
+
 
 const UserDashBoardLeft = () => {
-  const [bookingListShow, setBookingListShow] = useState()
-  const handleBooking = () =>{
-    setBookingListShow(bookingListShow => !bookingListShow)
-  }
+
   return (
     <div className={style.dashBoardLeftSide}>
           <div className={style.leftSideWrap}>
-               <div onClick={handleBooking} className={style.bookingIcon}>
+               
+               <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography>
+          <div className={style.bookingIcon}>
                <h5>Booking History</h5>
-               <span ><FaAngleDown/></span>
                </div>
-              
-               <div  className={bookingListShow ? `${style.active}` : ''}>
-               <ul className={style.bookingList}>
-                    <li data-counter=''><Link href='/dashboard/flight'>Flight</Link></li>
-                    <li data-counter=''><Link href='/dashboard'>Hotel</Link></li>
-                    <li data-counter=''><Link href='/'>Visa</Link></li>
-                    <li><Link href=''>Tours</Link></li>
-                    <li><Link href=''>Buses</Link></li>
-                    <li><Link href=''>Trains</Link></li>
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          <div className={style.bookingList}>
+               <ul >
+                    <li > <Link href='/dashboard/flight'><Flight className={style.flightIcon}/> Flight</Link></li>
+                    <li ><Link href='/dashboard'><Hotel/>  Hotel</Link></li>
+                    <li><Link href='/'><Beenhere/>  Visa</Link></li>
+                    <li><Link href=''><Diversity2/>  Tours</Link></li>
+                    <li><Link href=''><DirectionsBusFilled/>  Buses</Link></li>
+                    <li><Link href=''><Train/>  Trains</Link></li>
                </ul>
                </div>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+
+
+
+
+               <div>
+
+            </div>
+              
+             
                <div>
                 <ul className={style.profileInfo}>
                 

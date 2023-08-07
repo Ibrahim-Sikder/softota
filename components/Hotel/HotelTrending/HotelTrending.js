@@ -25,13 +25,13 @@ const HotelTrending = () => {
     slidesToScroll: 4,
     initialSlide: 0,
     autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 2000,
+    speed: 10000,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 3,
           infinite: true,
           dots: true,

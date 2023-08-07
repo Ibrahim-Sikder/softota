@@ -1,19 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import style from "./Hotel.module.css";
-import destination from "../../public/assets/destination.jpeg";
-import destination1 from "../../public/assets/destination11.jpeg";
-import destination2 from "../../public/assets/destination1.jpeg";
-import destination3 from "../../public/assets/destination2.jpeg";
-import destination4 from "../../public/assets/destination3.jpeg";
-import destination5 from "../../public/assets/destination4.jpeg";
-import destination6 from "../../public/assets/destination5.jpeg";
-import destination7 from "../../public/assets/destination6.jpeg";
-import destination8 from "../../public/assets/destination7.jpeg";
-import destination9 from "../../public/assets/destination8.jpeg";
-import destination10 from "../../public/assets/destination9.jpeg";
-import destination11 from "../../public/assets/destination10.jpeg";
-import destination12 from "../../public/assets/destination11.jpeg";
+import destination from '../../public/assets/destination.jpeg'
+import destination2 from '../../public/assets/destination6.jpeg'
+import destination3 from '../../public/assets/destination2.jpeg'
+import destination4 from '../../public/assets/destination3.jpeg'
+import destination5 from '../../public/assets/destination1.jpeg'
+import destination6 from '../../public/assets/destination4.jpeg'
+import destination7 from '../../public/assets/destination5.jpeg'
+import destination8 from '../../public/assets/destination6.jpeg'
+import destination9 from '../../public/assets/destination7.jpeg'
+import destination10 from '../../public/assets/destination8.jpeg'
+import destination11 from '../../public/assets/destination9.jpeg'
+import destination12 from '../../public/assets/destination10.jpeg'
+import destination13 from '../../public/assets/destination11.jpeg'
 import Link from "next/link";
 import { useRef, useState } from "react";
 // Import Swiper React components
@@ -24,9 +24,50 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 import { FreeMode, Pagination, Autoplay, Navigation, Mousewheel } from "swiper";
 
 const Hotel = () => {
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    autoplay: true,
+    speed: 10000,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div>
       {/* banner */}
@@ -308,379 +349,335 @@ const Hotel = () => {
           </p>
         </div>
         <div className={style.destination}>
-          <div>
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={200}
-              freeMode={true}
-              centeredSlides={true}
-              breakpoints={{
-                430: {
-                  slidesPerView: 1,
-                  spaceBetween: 20,
-                },
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 40,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 50,
-                },
-              }}
-              autoplay={{
-                delay: 1000,
-                disableOnInteraction: false,
-              }}
-              loop={true}
-              navigation={true}
-              modules={[Pagination, Autoplay, Navigation, Mousewheel]}
-              className={style.mySwiper}
-            >
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">
-                        Paris, France - The City of Lights{" "}
-                      </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+        <Slider {...settings}>
+          <div className={style.tourTrending}>
+                <Image
+                  src={destination}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6>The Grand Canyon </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination1}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">Machu Picchu, Peru </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination2}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">Colosseum, Rome </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination2}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">New York City Hotels </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination3}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">Lakshadweep. Tropical Band of Islands </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">484$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination3}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">The Grand Canyon </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination4}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">Leh. White Paradise in Ladakh </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">454$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination4}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">
-                        New Zealand - The Land Where Adventures Wait{" "}
-                      </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination5}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">Pondicherry. Bewitching French City </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination5}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">
-                        London, England - London: The heritage of England.{" "}
-                      </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">994$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination6}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">Goa. Popular for beaches and nightlife </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination6}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">
-                        Goa - Beaches, Sunsets and Crazy Nights{" "}
-                      </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">7894$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">3Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination7}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination7}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">New York City Hotels </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination8}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination8}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">New York City Hotels </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination9}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination9}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">
-                        Munnar, Kerala - Tea Gardens, Lakes and Pretty little
-                        hill-station{" "}
-                      </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">984$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination10}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination10}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">
-                        Darjeeling, West Bengal - Queen of The Himalayas{" "}
-                      </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">6544$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination12}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
-                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={style.tourTrending}>
-                  <Image
-                    src={destination12}
-                    alt="Picture of the author"
-                    width={500}
-                    height={500}
-                    className={style.swiperImg}
-                  />
-                  <div>
-                    <div className={style.pricePackage}>
-                      <h6 className="mb-3">New York City Hotels </h6>
-                      <div>
-                        <span className="text-[#4AB449] mt-5 ">
-                          Starts From <span className="text-black">184$</span>
-                        </span>
-                        <span className="bg-[#E6F8FF] p-3 ml-3 ">5Days</span>
-                      </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination13}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
                     </div>
                   </div>
-                  <div className={style.viewDetailBtn}>
-                    <Link href="/detailHotel">
-                      <button>View Details </button>
-                    </Link>
+                </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+              <div className={style.tourTrending}>
+                <Image
+                  src={destination11}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.swiperImg}
+                />
+                <div>
+                  <div className={style.pricePackage}>
+                    <h6 className="mb-3">New York City Hotels </h6>
+                    <div className="relative">
+                      <span>Starts From <span className="text-black">184$</span></span>
+                      <span className={style.tourDay}>
+                      <small>3D</small>
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
+               <div className={style.viewDetailBtn}>
+               <Link href="/detailHotel">
+                  <button>View Details </button>
+                </Link>
+               </div>
+              </div>
+          </Slider>
         </div>
+
       </div>
     </div>
   );

@@ -23,7 +23,7 @@
 }
 .heroBoxMain {
   width: 1105px;
-  height: 410px;
+  height: 385px;
   background: #c6e8f1 0.6;
   z-index: 9999 !important;
   margin: 0 auto;
@@ -121,7 +121,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 291px;
+  top: 275px;
   background: #19abe3;
   color: white;
   font-size: 18px;
@@ -146,6 +146,78 @@
 .menu li P {
   z-index: 999 !important;
 }
+
+
+.destination{
+  width:1100px;
+ margin-left:250px;
+  overflow: hidden;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+.tourTrending{
+  background: #FFFFFF;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 260px !important;
+  margin-right: 20px;
+  height: 440px;
+  text-align: center;
+
+
+}
+.swiperImg{
+  height:245px !important;
+  transform:scale(1)
+}
+.swiperImg:hove{
+height:300px !important;
+transform:scale(1.5)
+}
+
+.pricePackage span{
+  font-size: 14px;
+  color:#4AB449;
+}
+.pricePackage{
+  text-align: center;
+  padding: 0 3px;
+}
+.pricePackage h6{
+  
+  font-size: 16px;
+  margin-top: 15px;
+
+}
+
+.tourDay{
+  background: #4AB449;
+  width: 25px;
+  display: block;
+  font-size: 10px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  position: absolute;
+  right: 37px;
+  color: white;
+  border-radius: 50%;
+  bottom: 2px;
+  color: white !important;
+}
+.viewDetailBtn button{
+  background: #4AB449;
+    place-content: center;
+    place-items: center;
+    margin-top: 16px;
+    padding: 8px 25px;
+    color: white;
+    font-size: 14px;
+    border-radius: 3px;
+
+}
+
+
+
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
@@ -207,8 +279,8 @@
 .destination {
   width: 1100px;
   margin-left: 250px;
-  overflow: hidden;
   margin-bottom: 100px;
+  height: auto;
 }
 .trendingHead {
   width: 800px;
@@ -218,13 +290,13 @@
   overflow: hidden;
 }
 
-.tourTrending {
+/* .tourTrending {
   height: 500px;
   background: #ffffff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 280px;
   margin: 0 auto;
-}
+} */
 .swiperImg {
   height: 280px !important;
   transform: scale(1);
@@ -279,23 +351,23 @@
   text-align: center;
 }
 .pricePackage h6 {
-  font-size: 20px;
-  padding-left: 5px;
+  font-size: 16px;
+  font-size: 16px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
 }
-.pricePackage span {
-  padding-left: 5px;
-}
+
 
 .viewDetailBtn button {
   background: #4ab449;
-  display: grid;
-  place-content: center;
   place-items: center;
-  margin-top: 30px;
-  padding: 10px 40px;
-  margin-left: 60px;
+  padding: 8px 0px;
   color: white;
   border-radius: 5px;
+  font-size: 14px;
+  width: 135px;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -448,6 +520,12 @@
   .bestPlaceHead h2 {
     font-size: 28px;
   }
+  .tourTrending{
+    width:100%;
+    
+    }
+
+
 }
 
 @media only screen and (max-width: 400px) {

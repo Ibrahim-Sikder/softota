@@ -334,6 +334,8 @@ function CustomTabPanel(props) {
 
         <div className={style.bannerWrap}>
 
+{/* for transparent navbar  */}
+
         {/* <div className={style.navigationMain}>
         <div className={style.navigationContent}>
           <div className={style.navigationLeft}>
@@ -425,17 +427,6 @@ function CustomTabPanel(props) {
           </div>
         </div>
       )} */}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1315,9 +1306,9 @@ function CustomTabPanel(props) {
                         <button className={style.heroBoxBtn}>Get Your Flight</button>
                         </Link>
                         </div>
-                        </div>
-                        </div>
-                        </div>
+          </div>
+            </div>
+           </div>
                         );
                       };
                       

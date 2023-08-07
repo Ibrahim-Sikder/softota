@@ -1,6 +1,6 @@
 import React from 'react'
 import UserDashBoard from '../../../components/UserDashBoard/UserDashBoard'
-
+import dynamic from "next/dynamic";
 const index = () => {
   return (
     <section>
@@ -9,4 +9,4 @@ const index = () => {
   )
 }
 
-export default index
+export default dynamic(() => Promise.resolve(index), { ssr: false });

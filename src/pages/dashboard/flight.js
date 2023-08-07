@@ -9,33 +9,7 @@ import Link from 'next/link';
 const flight = () => {
      return (
           <div>
-     <div>
-          <div className={style.dasBoardTop}>
-         
-            <div className={style.logoWrap}>
-            <Link href='/'>
-            <Image
-            src={logo}
-            alt="Picture of the author"
-            width={80}
-            height={20}
-            className={style.logo}
-            />
-            </Link>
-               <input type="text" placeholder='Search'/>
-               <p className={style.searchIcon}><FaSistrix/></p>
-               
-            </div>
-
-            <div className={style.userWrap}>
-               <p><FaCommentAlt/></p>
-               <p><FaHeadSideCoughSlash/></p>
-               <p><FaUserCircle/></p>
-               <p>Ibrahim Sikder</p>
-               <p><FaEllipsisV/></p>
-            </div>
-          </div>
-     </div>
+    
       <div className={style.sideBarWrap}>
       <div className={style.leftSideBar}>
           <UserDashBoardLeft/>

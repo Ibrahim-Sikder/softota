@@ -9,70 +9,14 @@ import payment5 from "../../public/payment5.png";
 import term from "../../public/term.png";
 import { FaEyeSlash, FaEye, FaStar } from "react-icons/fa";
 const Payment = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-  const handleMouseDownPassword = () => {};
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [number, setNumber] = useState("");
-  const [price, setPrice] = useState("");
-  const [address, setAddress] = useState("");
-  const [currency, setCurrency] = useState("");
-  const [postcode, setPostcode] = useState("");
-  const [title, setTitle] = useState("");
-  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const fname = event.target.fname.value;
-    const lname = event.target.lname.value;
-    const number = event.target.number.value;
-    const currency = event.target.currency.value;
-    const price = event.target.price.value;
-    const address = event.target.address.value;
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const postcode = event.target.postcode.value;
-    const payment = {
-      fname,
-      lname,
-      number,
-      currency,
-      price,
-      address,
-      email,
-      password,
-      postcode,
-    };
-    console.log(payment);
-    // event.productId = id;
 
-    try {
-      fetch("http://localhost:5000/payment", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payment),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
-          window.location.replace(data.url);
-        });
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+
   return (
     <div className={style.paymentWrap}>
       <div className={style.payment}>
         <h2>Personal Information </h2>
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className={style.singlePayment}>
             <div className="relative">
               <label className={style.inputLabel}>First Name </label> <br />
@@ -80,8 +24,7 @@ const Payment = () => {
                 <FaStar />
               </span>
               <input
-                onChange={(event) => setFname(event.target.value)}
-                type="text"
+               
                 className={style.paymentBtn}
                 name="fname"
                 placeholder="First Name "
@@ -93,7 +36,6 @@ const Payment = () => {
                 <FaStar />
               </span>
               <input
-                onChange={(event) => setLname(event.target.value)}
                 type="text"
                 className={style.paymentBtn}
                 name="lname"
@@ -108,7 +50,6 @@ const Payment = () => {
                 <FaStar />
               </span>
               <input
-                onChange={(event) => setEmail(event.target.value)}
                 type="email"
                 className={style.paymentBtn}
                 name="email"
@@ -121,7 +62,6 @@ const Payment = () => {
                 <FaStar />
               </span>
               <input
-                onChange={(event) => setPassword(event.target.value)}
                 type={showPassword ? "text" : "password"}
                 className={style.paymentBtn}
                 name="password"
@@ -143,7 +83,6 @@ const Payment = () => {
                 <FaStar />
               </span>
               <input
-                onChange={(event) => setNumber(event.target.value)}
                 type="number"
                 className={style.paymentBtn}
                 name="number"
@@ -153,7 +92,6 @@ const Payment = () => {
             <div>
               <label className={style.inputLabel}>Gender</label> <br />
               <input
-                onChange={(event) => setPrice(event.target.value)}
                 type="text"
                 className={style.paymentBtn}
                 name="price"
@@ -165,7 +103,6 @@ const Payment = () => {
             <div>
               <label className={style.inputLabel}>Date of Birth </label> <br />
               <input
-                onChange={(event) => setAddress(event.target.value)}
                 type="date"
                 className={style.paymentBtn}
                 name="date"
@@ -176,7 +113,6 @@ const Payment = () => {
             <div>
               <label className={style.inputLabel}>Nationality </label> <br />
               <input
-                onChange={(event) => setAddress(event.target.value)}
                 type="text"
                 className={style.paymentBtn}
                 name="nationality"
@@ -188,7 +124,6 @@ const Payment = () => {
             <div>
               <label className={style.inputLabel}>Address </label> <br />
               <input
-                onChange={(event) => setPostcode(event.target.value)}
                 type="text"
                 className={style.paymentBtn}
                 name="address"
@@ -245,7 +180,6 @@ const Payment = () => {
             <div className="mb-5">
               <lable>Bkash</lable> <br />
               <input
-                onChange={(event) => setBkash(event.target.value)}
                 type="number"
                 className={style.bkash}
                 placeholder="Enter Your Number"

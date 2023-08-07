@@ -78,14 +78,6 @@ const { createUser, signInWithGoogle} = useContext(AuthContext);
          })
  }
 
-// async function handleGoogleSignIn(){
-//      signIn('google',{callbackUrl:"http://localhost:3000"})
-// }
-async function handleGithubSignIn(){
-     signIn('github',{callbackUrl:"http://localhost:3000"})
-}
-
-
 
      return (
           <div className={style.SignupWrap}>
