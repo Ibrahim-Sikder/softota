@@ -4,8 +4,10 @@ import { FaSistrix, FaAngleLeft, FaCalendarAlt, FaAngleRight, FaCommentAlt,FaHea
 import logo from '../../../public/logo.png'
 import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLeft';
 import style from '../../../components/UserDashBoard/UserDashBoard.module.css'
-import styles from './profile.module.css'
+import styling from './profile.module.css'
 import Link from 'next/link';
+import RightSideTopBar from '../../../components/UserDashBoard/RightSideTopBar';
+
 const flight = () => {
      return (
           <div>
@@ -15,26 +17,12 @@ const flight = () => {
           <UserDashBoardLeft/>
       </div>
       <div className={style.rightSideBar}>
+      <RightSideTopBar/>
+
       <div>
-                    <div className={styles.profileTop}>
-                         <div>
-                         <span className='text-[#808FA4]'>Dashboard / Profile </span>
-                         <div className='flex justify-between'>
-                              <h2 className='text-2xl font-bold text-[#04A444]'>Flight History</h2>
-                              <div className={styles.pages}>
-                                   <button>Primary Action</button>
-                                   <span >Pages</span>
-                                   <FaAngleLeft/>
-                                   <span>1</span>
-                                   <span>2</span>
-                                   <span>3</span>
-                                   <FaAngleRight/>
-                                   <FaCalendarAlt/>
-                              </div>
-                         </div>
-                         </div>
-                        <div className={styles.flightHistory}>
-                        <div className="overflow-x-auto ">
+           <div className={styling.profileTop}>
+              <div className={styling.flightHistory}>
+               <div className="overflow-x-auto ">
                          <table className="table  lg:table-auto columns-xl break-after-column">
                          <thead className={style.tableWrap}>
                               <tr>
@@ -231,10 +219,10 @@ const flight = () => {
                               </tr>
                          </tbody> 
                          </table>
-                     </div>
-                        </div>
-                    </div>
-               </div>
+                </div>
+                 </div>
+                 </div>
+        </div>
       </div>
     </div>
    </div>

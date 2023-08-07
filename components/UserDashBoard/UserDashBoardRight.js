@@ -11,7 +11,9 @@ import Box from "@mui/material/Box";
 import { Add, Groups2, HorizontalRule} from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import TourDestination from "../Tour/TourDestination";
-
+import Image from "next/image";
+import logo from '../../public/assets/ghuronti.jpg'
+import RightSideTopBar from "./RightSideTopBar";
 
 
 
@@ -371,27 +373,7 @@ const UserDashBoardRight = () => {
   return (
     <div>
         <div className={styles.profileTop}>
-        <div className={styles.rightSideTopBar}>
-          <div className={styles.adminLeftInfo}>
-            <div>
-              <strong>Reservation </strong>
-              <p>Phone: +8801825445033</p>
-              <p>Email: ghuronti@gmail.com </p>
-            </div>
-            <div>
-            <strong>Accounts & Finance  </strong>
-              <p>Phone: +8801825445033</p>
-              <p>Email: ghuronti@gmail.com </p>
-            </div>
-          </div>
-          <div className={styles.customerInfo}>
-            <span>Agent </span>
-            <strong>ST102490</strong> <br />
-            <small>Ghuronti.com (STA-102490)</small>
-            <button>Check Balance</button>
-          <Notifications className={styles.notification} />
-          </div>
-        </div>
+        <RightSideTopBar/>
         <div className={styles.moveText}>
           <marquee  
           onmouseout="this.start()"

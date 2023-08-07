@@ -6,6 +6,7 @@ import { FaSistrix,FaAngleRight, FaCommentAlt,FaHeadSideCoughSlash ,FaUserCircle
 import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLeft';
 import styles from './profile.module.css'
 import { FaAngleLeft } from "react-icons/fa";
+import RightSideTopBar from '../../../components/UserDashBoard/RightSideTopBar';
 const payment = () => {
      return (
           <div>
@@ -16,22 +17,8 @@ const payment = () => {
       <div className={style.rightSideBar}>
       <div>
                     <div className={styles.profileTop}>
-                         <div>
-                         <span className='text-[#808FA4]'>Dashboard / Payment </span>
-                         <div className='flex justify-between'>
-                              <h2 className='text-2xl font-bold '>Payment </h2>
-                              <div className={styles.payment}>
-                                   <button className={styles.paymentBtn}>Payment manual</button>
-                                   <button >Payment online</button>
-                                   <span className={styles.paymentPage}>Pages</span>
-                                   <FaAngleLeft/>
-                                   <span>1</span>
-                                   <span>2</span>
-                                   <span>3</span>
-                                   <FaAngleRight/>
-                              </div>
-                         </div>
-                         </div>
+                    <RightSideTopBar/>
+                        
                         <div className={styles.flightHistory}>
                         <div className="overflow-x-auto ">
                          <table className="table  lg:table-auto columns-xl break-after-column">

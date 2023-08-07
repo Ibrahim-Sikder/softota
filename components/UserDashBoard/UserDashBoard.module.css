@@ -1,12 +1,29 @@
 .sideBarWrap {
-     display: grid;
-     grid-template-columns: repeat(12, minmax(0, 1fr));
+    display:flex;
+   
    }
    .leftSideBar {
-     grid-column: span 2 / span 2;
+     /* width:300px; */
    }
    .rightSideBar {
-     grid-column: span 10 / span 10;
+    width:100%;
+   }
+   .leftSideIconWrap{
+    width: 100px !important;
+    background: red;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 130px;
+    left: -186px;
+    padding: 12px;
+   }
+   .leftSideIconWrap p{
+    margin-bottom:20px;
+   }
+   .icon{
+    font-size:22px !important;
    }
    
    /* admin dashboard right side styling  */
@@ -37,16 +54,19 @@
    }
    .customerInfo{
      position: relative;
+     color: white;
+     margin-bottom: 8px;
    }
    .customerInfo button{
      background: transparent;
-     color: #4AB449;
-     border: 1px solid #4AB449;
+     color: white;
+     border: 1px solid #fff;
      font-size: 12px;
      width: 132px;
      padding: 3px 0px;
      transition: all .3s eaas;
      transition: all .3s cubic-bezier(0.24, -0.01, 0.98, 1.11);
+     margin: 5px 0px
    }
    .customerInfo button:hover{
      background:#4AB449;
@@ -54,24 +74,33 @@
    }
    .customerInfo small{
      display: block;
-     margin-bottom: 5px;
+     margin: 5px 0px;
+ 
+   }
+   .logoWrap{
+     width:200px;
+     cursor:pointer;
    }
    .notification{
+  
      position: absolute;
      color: #4AB449 !important;
-     top: 2px;
-     left: -36px;
-     font-size: 32px !important;
+     top: -10px;
+     right: -5px;
+     font-size: 36px !important;
+ 
 
    }
    .moveText{
      width: 100%;
      height: 70px;
-     background: #19ABE3;
-     color: white;
+     background: transparent;
+     color: #4AB449;
      display: flex;
      align-items: center;
      text-transform: uppercase;
+     border: 1px solid #4AB449;
+     box-shadow: rgba(22, 241, 59, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
    }
    .heroBoxWrap{
      margin-top: 30px;
@@ -103,14 +132,26 @@
      width:100%;
 }
    
-   
-
+   .active{
+    display: flex;
+    padding-left: 10px;
+     width:0px;
+     left: -189px;
+     transition: all .5s ease-in-out;
+   }
+.none{
+  display:none;
+}
    
    /* dashboard left side styling  */
    .dashBoardLeftSide {
-     background: #19abe3;
-     width: 100%;
-     height: 1024px;
+    background: #19abe3;
+    width: 250px;
+    display: flex;
+    padding-left: 10px;
+    left: 0px;
+    justify-content: space-between;
+    transition: all .5s ease-in-out;
    }
    .leftSideWrap {
      display: flex;
@@ -118,6 +159,7 @@
      justify-content: center;
      align-items: center;
      padding-top: 20px;
+
    }
 
    .bookingList ul{
@@ -129,29 +171,47 @@
    }
    .bookingList ul li{
      text-align: left;
-     padding-bottom: 6px;
- 
+     margin-bottom: 6px;
+     width: 100% !important;
+     padding: 5px 0px;
+     transition:all .3s ease-in-out;
 
+   }
+   .bar{
+     background: #4AB449;
+     width: 50px;
+     right: -71px;
+     top: 23px;
+     height: 50px;
+     line-height: 50px;
+     text-align: center;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index:999;
+     
+   }
+   .bar span{
+     width:30px;
+     height:2px;
+     background:#fff;
+     margin-bottom: 3px;
+     display: block;
+   }
+   .bookingList ul li:hover{
+     background:#4AB449;
+     padding: 5px 5px;
    }
    .flightIcon{
      transform: rotate(51deg);
-     font-size: 20px !important;
+     font-size: 16px !important;
+     margin-right: 5px;
    }
-   .bookingIcon {
-     display: flex;
-     justify-content: space-between;
-     cursor: pointer;
+   .flightIcons{
+     font-size: 16px !important;
+     margin-right: 5px;
    }
-   .bookingIcon h5 {
-     color: white;
-     margin-bottom: 5px;
-   }
-   .bookingIcon span {
-     margin-left: 15px;
-     display: block;
-     margin-top: 5px;
-     color: #fff;
-   }
+ 
    
    .bookingList {
      margin: 0 auto;
@@ -174,7 +234,15 @@
    .profileInfoIcon {
      color: white;
    }
-   
+   .bookHistory{
+     margin-left: -16px;
+
+   }
+   .bookHistory .historyIcon{
+     font-size: 22px !important;
+     margin-right: 2px;
+
+   }
    .profileInfo li {
      display: flex;
      color: white;
@@ -195,17 +263,6 @@
      .sideBarWrap {
        display: block;
      }
-     .leftSideBar {
-       grid-column: span 2 / span 2;
-     }
-     .rightSideBar {
-       grid-column: span 10 / span 10;
-     }
-     .dashBoardLeftSide {
-       background: #29566a;
-       width: 328px;
-       height: 1024px;
-       margin: 0 auto;
-     }
+     
    }
    
