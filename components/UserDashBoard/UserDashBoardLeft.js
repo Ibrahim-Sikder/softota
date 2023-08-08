@@ -36,7 +36,7 @@ const UserDashBoardLeft = () => {
           <div className={style.customerInfo}>
            
             <span>Agent </span>
-            <strong>ST102490</strong> <br />
+            <strong>GT102490</strong> <br />
             <small>Ghuronti.com (STA-102490)</small>
             <button>Check Balance</button>
           <NotificationsActive className={style.notification} />
@@ -147,9 +147,7 @@ const UserDashBoardLeft = () => {
         >
           <Typography>
          
-         <div className={style.bookHistory}>
-         <h6><Replay5 className={style.historyIcon}/> Booking History</h6>
-         </div>
+          <h6> Booking History</h6>
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -207,9 +205,9 @@ const UserDashBoardLeft = () => {
 
           <div onClick={showSidebar} className={style.bar}>
               <div>
-              <span></span>
-              <span></span>
-              <span></span>
+              <span className={toggleSideBar ? ` ` : `${style.bar1}`}></span>
+              <span className={toggleSideBar ? ` ` : `${style.bar2}`}></span>
+              <span className={toggleSideBar ? ` ` : `${style.bar3}`}></span>
               </div>
             </div>
     </div>

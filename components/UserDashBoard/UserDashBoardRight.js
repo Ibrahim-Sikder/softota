@@ -20,9 +20,6 @@ import RightSideTopBar from "./RightSideTopBar";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
-  
-
-  
   return (
     <div
     role="tabpanel"
@@ -52,7 +49,13 @@ function CustomTabPanel(props) {
         "aria-controls": `simple-tabpanel-${index}`,
       };
     }
-
+  function BasicTabs() {
+      const [value, setValue] = React.useState(0);
+    
+      const handleChange = (event, newValue) => {
+        setValue(newValue);
+      };
+  }
 
 
     const handleToggle = (value) => () => {
@@ -68,9 +71,7 @@ function CustomTabPanel(props) {
       setChecked(newChecked);
     };
     
-    const handleChange = (event, newValue) => {
-      setValue(newValue);
-    };
+   
     const childIncrement = () => {
       setChild(child + 1);
     };
@@ -615,8 +616,8 @@ const UserDashBoardRight = () => {
         <Tabs
         value={value}
         onChange={handleChange}
-        aria-label="basic tabs example"
-        defaultValue={0}
+        defaultValue={2}
+        selected={2}
         >
         <Tab label="One Way" {...a11yProps(0)} />
         <Tab label="Round Trip" {...a11yProps(1)} />
@@ -708,7 +709,7 @@ const UserDashBoardRight = () => {
             className="btn"
             onClick={() => window.my_modal_3.showModal()}
             >
-            open modal
+           
             </button>
             <dialog id="my_modal_3" className="modal">
             <form method="dialog" className="modal-box">
@@ -874,7 +875,7 @@ const UserDashBoardRight = () => {
                 className="btn"
                 onClick={() => window.my_modal_3.showModal()}
                 >
-                open modal
+               
                 </button>
                 <dialog id="my_modal_3" className="modal">
                 <form method="dialog" className="modal-box">
@@ -1017,7 +1018,7 @@ const UserDashBoardRight = () => {
                     className="btn"
                     onClick={() => window.my_modal_3.showModal()}
                     >
-                    open modal
+                   
                     </button>
                     <dialog id="my_modal_3" className="modal">
                     <form method="dialog" className="modal-box">
@@ -1260,5 +1261,6 @@ const UserDashBoardRight = () => {
     </div>
   )
 }
+
 
 export default UserDashBoardRight

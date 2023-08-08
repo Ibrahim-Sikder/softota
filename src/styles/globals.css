@@ -38,17 +38,18 @@ table {
 .table :where(td) {
   border-right: 1px solid #ddd;
   text-align: center;
+  font-size: 13px;
 }
 .table :where(td):nth-last-of-type() {
   border-bottom: 3px solid #ddd !important;
 }
 .table :where(th) {
-  border-bottom: 1px solid #04a444;
-  text-align: center;
-  background: #f5f7fb;
+      border-bottom: 1px solid #04a444;
+    text-align: center;
+    background: #f5f7fb;
+    font-size: 14px;
 }
 .table {
-  position: relative;
   width: 100%;
   text-align: left;
   font-size: 0.6em;
@@ -118,7 +119,7 @@ input::placeholder {
 }
 
 .css-1ujnqem-MuiTabs-root {
-  margin-left: 300px;
+  margin-left: 265px;
   margin-top: 25px;
   margin-bottom: 8px;
 }
