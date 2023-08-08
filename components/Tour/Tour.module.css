@@ -182,11 +182,11 @@
  transform:scale(1.5)
 }
 .destination{
-  width:1100px;
- margin-left:250px;
+  width: 1100px;
+  /* margin-left: 250px; */
   overflow: hidden;
-  margin-top:50px;
-  margin-bottom:50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .pricePackage{
   text-align: center;

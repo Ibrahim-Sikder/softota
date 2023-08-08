@@ -30,6 +30,7 @@ const RightSideTopBar = () => {
          ></Image>
          </Link>
         </div>
+      
       </div> 
           </div>
      );

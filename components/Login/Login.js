@@ -5,7 +5,6 @@ import login from "../../public/login.png";
 import facebook from "../../public/facebook.png";
 import google from "../../public/google.png";
 import Link from "next/link";
-import { signIn } from "next-auth/react";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useRouter } from "next/router";
 

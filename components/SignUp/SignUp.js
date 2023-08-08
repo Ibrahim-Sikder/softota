@@ -11,7 +11,6 @@ import { AuthContext } from '../../src/pages/context/AuthContext/AuthProvider';
 import { useRouter } from 'next/router';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import { signIn } from "next-auth/react"
 import { FaEyeSlash, FaEye  } from "react-icons/fa";
 const SignUp = () => {
      const [showPassword, setShowPassword] = useState(false);
