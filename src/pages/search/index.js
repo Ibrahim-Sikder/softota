@@ -17,3 +17,6 @@ const SearcPage = () => {
 };
 
 export default dynamic(() => Promise.resolve(SearcPage), { ssr: false });
+
+
+

@@ -1,43 +1,50 @@
-import React, { useState } from "react";
-import style from "./Umra.module.css";
-import Image from "next/image";
-import hajj4 from "../../public/hajj4.png";
-import hajj2 from "../../public/hajj2.png";
-import hajj3 from "../../public/hajj3.png";
-import clock from "../../public/clock.png";
-import Link from "next/link";
-import UmraPackage from "./UmraPackage";
-const Umra = () => {
-  const [activeHajjButton, setActiveHajjButton] = useState();
-  const handleActiveButton = () => {
-    setActiveHajjButton(!activeHajjButton);
-  };
-  return (
-    <section>
-      {/* banner */}
-      <div className={style.bannerWrap}>
-        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
-        <div className={style.heroBoxMain}>
+import React from 'react';
+import style from '../../components/Hotel/Hotel.module.css'
+import Link from 'next/link';
+const HotelHeroBox = () => {
+     return (
+          <div>
+                <div className={style.heroBoxMain}>
           <div className={style.packageWrap}>
+            <div className={style.package}>
+              <div>
+                <h4>City/Hotel/Street Name</h4>
+                <input type="text " placeholder="Enter your city" />
+              </div>
+            </div>
             <div className={style.package2}>
-              <span>Hajj Package </span>
-              <span>Umra Package </span>
+              <div>
+                <h4>Nationality</h4>
+                <input type="text " placeholder="Bangladesh" />
+              </div>
             </div>
           </div>
-
-          <div className={style.heroBoxBtnWrap}>
-            <button className={style.heroBoxBtn}>
-              <h4>Get Your Package</h4>
-            </button>
+          <div className={style.packageWrap}>
+            <div className={style.packageDate}>
+              <div className={style.date}>
+                <h4>Check In</h4>
+                <input type="date" />
+              </div>
+              <div className={style.date2}>
+                <h4>Check In</h4>
+                <input type="date" />
+              </div>
+            </div>
+            <div className={style.package4}>
+              <div>
+                <h4>Room & Guests</h4>
+                <input type="text " placeholder="1 person" />
+              </div>
+            </div>
           </div>
+          <Link href="/search">
+            <button className={style.heroBoxBtn}>Get Your Hotel</button>
+          </Link>
 
           {/* menubar */}
           <div>
             <ul className={style.menu}>
-              <li
-                onClick={handleActiveButton}
-                className={activeHajjButton ? "{activeClass}" : "noClass"}
-              >
+              <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={35}
@@ -261,10 +268,8 @@ const Umra = () => {
             </ul>
           </div>
         </div>
-      </div>
-     <UmraPackage/>
-    </section>
-  );
+          </div>
+     );
 };
 
-export default Umra;
+export default HotelHeroBox;

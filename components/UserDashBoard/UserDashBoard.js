@@ -1,14 +1,6 @@
 import React from "react";
 import style from "./UserDashBoard.module.css";
-import Image from "next/image";
-import logo from "../../public/logo.png";
-import {
-  FaSistrix,
-  FaCommentAlt,
-  FaHeadSideCoughSlash,
-  FaUserCircle,
-  FaEllipsisV,
-} from "react-icons/fa";
+
 import UserDashBoardLeft from "./UserDashBoardLeft";
 import UserDashBoardRight from "./UserDashBoardRight";
 import Link from "next/link";

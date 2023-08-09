@@ -9,8 +9,6 @@ const HajjUmra = () => {
   return (
     <div>
       <Nav/>
-      {/* <TopBar/>
-      <Header/> */}
       <Umra></Umra>
       <Footer/>
     </div>

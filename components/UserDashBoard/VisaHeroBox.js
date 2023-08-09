@@ -1,43 +1,25 @@
-import React, { useState } from "react";
-import style from "./Umra.module.css";
-import Image from "next/image";
-import hajj4 from "../../public/hajj4.png";
-import hajj2 from "../../public/hajj2.png";
-import hajj3 from "../../public/hajj3.png";
-import clock from "../../public/clock.png";
-import Link from "next/link";
-import UmraPackage from "./UmraPackage";
-const Umra = () => {
-  const [activeHajjButton, setActiveHajjButton] = useState();
-  const handleActiveButton = () => {
-    setActiveHajjButton(!activeHajjButton);
-  };
-  return (
-    <section>
-      {/* banner */}
-      <div className={style.bannerWrap}>
-        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
-        <div className={style.heroBoxMain}>
-          <div className={style.packageWrap}>
-            <div className={style.package2}>
-              <span>Hajj Package </span>
-              <span>Umra Package </span>
-            </div>
-          </div>
+import React from 'react';
+import style from '../../components/Vissa/Vissa.module.css'
+import Link from 'next/link';
+import { FaSistrix } from "react-icons/fa";
 
-          <div className={style.heroBoxBtnWrap}>
-            <button className={style.heroBoxBtn}>
-              <h4>Get Your Package</h4>
-            </button>
+
+
+const VisaHeroBox = () => {
+     return (
+          <div>
+                 <div className={style.heroBoxMain}>
+          <div className={style.package}>
+            <div className={style.packageWrap}>
+              <button className={style.packageBtn}>Hajj Packages </button>
+              <button>Ummra Packages</button>
+            </div>
           </div>
 
           {/* menubar */}
           <div>
             <ul className={style.menu}>
-              <li
-                onClick={handleActiveButton}
-                className={activeHajjButton ? "{activeClass}" : "noClass"}
-              >
+              <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={35}
@@ -260,11 +242,17 @@ const Umra = () => {
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-     <UmraPackage/>
-    </section>
-  );
+
+          {/* Vissa searchBar */}
+          <div className={style.vissaSearchBar}>
+            <input type="text" />
+
+            <button>Search Vissa</button>
+            <FaSistrix className={style.searchIcon} />
+          </div>
+        </div> 
+          </div>
+     );
 };
 
-export default Umra;
+export default VisaHeroBox;

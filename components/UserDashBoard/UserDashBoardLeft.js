@@ -17,8 +17,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Beenhere,NotificationsActive ,Flight, Hotel, Diversity2, DirectionsBusFilled,Train, Replay5} from '@mui/icons-material';
-import 'react-tooltip/dist/react-tooltip.css'
-import { Tooltip as ReactTooltip, Tooltip } from 'react-tooltip'
+
 
 const UserDashBoardLeft = () => {
   const [toggleSideBar, setToggleSideBar] = useState(true)
@@ -78,8 +77,7 @@ const UserDashBoardLeft = () => {
                <div>
 
             </div>
-              
-             
+
                <div>
                 <ul className={style.profileInfo}>
                 

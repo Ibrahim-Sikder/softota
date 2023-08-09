@@ -1,23 +1,11 @@
-import React, { useState } from "react";
-import style from "./Umra.module.css";
-import Image from "next/image";
-import hajj4 from "../../public/hajj4.png";
-import hajj2 from "../../public/hajj2.png";
-import hajj3 from "../../public/hajj3.png";
-import clock from "../../public/clock.png";
-import Link from "next/link";
-import UmraPackage from "./UmraPackage";
-const Umra = () => {
-  const [activeHajjButton, setActiveHajjButton] = useState();
-  const handleActiveButton = () => {
-    setActiveHajjButton(!activeHajjButton);
-  };
-  return (
-    <section>
-      {/* banner */}
-      <div className={style.bannerWrap}>
-        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
-        <div className={style.heroBoxMain}>
+import React from 'react';
+import styling from './UmraHeroBox.module.css'
+import style from '../../../components/Umra/Umra.module.css'
+import Link from 'next/link';
+const UmraHeroBox = () => {
+     return (
+          <div>
+               <div className={style.heroBoxMain}>
           <div className={style.packageWrap}>
             <div className={style.package2}>
               <span>Hajj Package </span>
@@ -260,11 +248,9 @@ const Umra = () => {
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-     <UmraPackage/>
-    </section>
-  );
+        </div> 
+          </div>
+     );
 };
 
-export default Umra;
+export default UmraHeroBox;
