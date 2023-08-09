@@ -1,20 +1,46 @@
 import React from 'react';
-import style from '../../components/Vissa/Vissa.module.css'
+import style from '../../../components/Hotel/Hotel.module.css'
 import Link from 'next/link';
-import { FaSistrix } from "react-icons/fa";
-
-
-
-const VisaHeroBox = () => {
+import styling from './HotelHeroBox.module.css';
+const HotelHeroBox = () => {
      return (
           <div>
-                 <div className={style.heroBoxMain}>
-          <div className={style.package}>
-            <div className={style.packageWrap}>
-              <button className={style.packageBtn}>Hajj Packages </button>
-              <button>Ummra Packages</button>
+                <div className={`${style.heroBoxMain} ${styling.hotelHeroBoxMain}`}>
+          <div className={style.packageWrap}>
+            <div className={style.package}>
+              <div>
+                <h4>City/Hotel/Street Name</h4>
+                <input type="text " placeholder="Enter your city" />
+              </div>
+            </div>
+            <div className={style.package2}>
+              <div>
+                <h4>Nationality</h4>
+                <input type="text " placeholder="Bangladesh" />
+              </div>
             </div>
           </div>
+          <div className={style.packageWrap}>
+            <div className={style.packageDate}>
+              <div className={style.date}>
+                <h4>Check In</h4>
+                <input type="date" />
+              </div>
+              <div className={style.date2}>
+                <h4>Check In</h4>
+                <input type="date" />
+              </div>
+            </div>
+            <div className={style.package4}>
+              <div>
+                <h4>Room & Guests</h4>
+                <input type="text " placeholder="1 person" />
+              </div>
+            </div>
+          </div>
+          <Link href="/search">
+            <button className={style.heroBoxBtn}>Get Your Hotel</button>
+          </Link>
 
           {/* menubar */}
           <div>
@@ -157,7 +183,7 @@ const VisaHeroBox = () => {
                     d="M10.607 22.385h-.22v-.91l-1.232-.228v1.138H3.433v-8.401h1.1v.236c0 .35.29.639.643.639h2.227a.644.644 0 0 0 .643-.64v-.235h1.1v2.791l.484-.052.748-.079v-3.273a.61.61 0 0 0-.616-.613H8.046v-.236a.639.639 0 0 0-.643-.639H5.176a.644.644 0 0 0-.643.64v.235H2.817a.61.61 0 0 0-.616.613v9.014h-.22C.889 22.385 0 23.269 0 24.354V36.3c0 1.085.89 1.969 1.98 1.969h.38V27.81a.61.61 0 0 1 .615-.613h6.646a.61.61 0 0 1 .617.613v10.458h.378c1.092 0 1.98-.884 1.98-1.97V24.355a1.991 1.991 0 0 0-1.989-1.97ZM2.975 42.198a1.15 1.15 0 0 0 1.154-1.146 1.15 1.15 0 0 0-1.154-1.147 1.15 1.15 0 0 0-1.153 1.147 1.15 1.15 0 0 0 1.153 1.146ZM9.622 42.198a1.15 1.15 0 0 0 1.153-1.146 1.15 1.15 0 0 0-1.153-1.147 1.15 1.15 0 0 0-1.154 1.147 1.15 1.15 0 0 0 1.154 1.146Z"
                   />
                 </svg>
-                <Link href="/b2bsearch/tours">
+                <Link href="/b2bsearch/tour">
                   <p className="ml-3">Tours</p>
                 </Link>
               </li>
@@ -242,17 +268,9 @@ const VisaHeroBox = () => {
               </li>
             </ul>
           </div>
-
-          {/* Vissa searchBar */}
-          <div className={style.vissaSearchBar}>
-            <input type="text" />
-
-            <button>Search Vissa</button>
-            <FaSistrix className={style.searchIcon} />
-          </div>
-        </div> 
+        </div>
           </div>
      );
 };
 
-export default VisaHeroBox;
+export default HotelHeroBox;

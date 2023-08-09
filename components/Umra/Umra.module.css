@@ -48,7 +48,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 20px;
-  top: 109px;
+  top: 119px;
   color: #fff;
   font-size: 17px;
 }
@@ -61,12 +61,14 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 185px;
+  top: 208px;
   background: #19abe3;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 5px;
-  padding: 16px 55px;
+  border: 1px solid #fff;
+  padding: 9px 0px;
+  width: 209px;
 }
 /* menu styling  */
 .menu {

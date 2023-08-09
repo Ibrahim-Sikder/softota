@@ -6,7 +6,7 @@ import HotelTrending from "../../../components/Hotel/HotelTrending/HotelTrending
 import Travel from "../../../components/Travel/Travel";
 import Customer from "../../../components/Customer/Customer";
 import dynamic from "next/dynamic";
-import HotelHeroBox from "../../../components/UserDashBoard/HotelHeroBox";
+import HotelHeroBox from "../../../components/UserDashBoard/HotelHeroBox/HotelHeroBox";
 const Hotel = () => {
   return (
     <div>

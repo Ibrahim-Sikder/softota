@@ -8,6 +8,7 @@ import Customer from "../../../components/Customer/Customer";
 import HeroBox from "../../../components/UserDashBoard/HeroBox";
 import TourDestination from "../../../components/Tour/TourDestination";
 import dynamic from "next/dynamic";
+import BusesHeroBox from "../../../components/UserDashBoard/BusesHeroBox/BusesHeroBox";
 
 
 const Buses = () => {
@@ -28,7 +29,7 @@ const Buses = () => {
                          </div>
                          <div>
                          </div>
-                         <HeroBox />
+                        <BusesHeroBox/>
                          <BestPlace />
                          <Travel></Travel>
                          <TourDestination></TourDestination>
