@@ -761,7 +761,7 @@ function CustomTabPanel(props) {
             className="btn"
             onClick={() => window.my_modal_3.showModal()}
             >
-            open modal
+            
             </button>
             <dialog id="my_modal_3" className="modal">
             <form method="dialog" className="modal-box">
@@ -927,7 +927,7 @@ function CustomTabPanel(props) {
                 className="btn"
                 onClick={() => window.my_modal_3.showModal()}
                 >
-                open modal
+               
                 </button>
                 <dialog id="my_modal_3" className="modal">
                 <form method="dialog" className="modal-box">
@@ -1070,7 +1070,7 @@ function CustomTabPanel(props) {
                     className="btn"
                     onClick={() => window.my_modal_3.showModal()}
                     >
-                    open modal
+                   
                     </button>
                     <dialog id="my_modal_3" className="modal">
                     <form method="dialog" className="modal-box">

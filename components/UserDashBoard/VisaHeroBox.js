@@ -2,13 +2,13 @@ import React from 'react';
 import style from '../../components/Vissa/Vissa.module.css'
 import Link from 'next/link';
 import { FaSistrix } from "react-icons/fa";
-
+import styling from './TourHeroBox.module.css'
 
 
 const VisaHeroBox = () => {
      return (
           <div>
-                 <div className={style.heroBoxMain}>
+                 <div className={`${style.heroBoxMain} ${styling.visaHeroBox}`}>
           <div className={style.package}>
             <div className={style.packageWrap}>
               <button className={style.packageBtn}>Hajj Packages </button>

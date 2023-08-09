@@ -20,7 +20,7 @@ const UmraHeroBox = () => {
             </div>
           </div>
 
-          <div className={style.heroBoxBtnWrap}>
+          <div className={`${style.heroBoxBtnWrap} ${styling.tourBtn}`}>
             <button className={style.heroBoxBtn}>
               <h4>Get Your Package</h4>
             </button>

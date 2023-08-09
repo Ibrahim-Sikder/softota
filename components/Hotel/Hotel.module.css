@@ -122,12 +122,14 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 275px;
+  top: 292px;
   background: #19abe3;
   color: white;
   font-size: 18px;
   border-radius: 5px;
-  padding: 16px 55px;
+  padding: 8px 0px;
+  border: 1px solid #fff;
+  width: 210px;
 }
 /* menu styling  */
 .menu {

@@ -1,10 +1,11 @@
 import React from 'react';
 import style from '../../components/Tour/Tour.module.css'
 import Link from 'next/link';
+import styling from './TourHeroBox.module.css'
 const TourHeroBox = () => {
      return (
           <div>
-                <div className={style.heroBoxMain}>
+                <div className={`${style.heroBoxMain} ${styling.tourHeroBox}`}>
             {/* menubar */}
             <div>
               <ul className={style.menu}>
@@ -253,7 +254,7 @@ const TourHeroBox = () => {
                 </div>
               </div>
             </form>
-            <div className={style.searchTrainBtn}>
+            <div className={`${style.searchTrainBtn} ${styling.tourBtn}`}>
               <button>Search Tours </button>
             </div>
           </div>

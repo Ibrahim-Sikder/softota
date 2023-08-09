@@ -1,0 +1,11 @@
+.tourHeroBox, .visaHeroBox{
+     background:#19ABE3;
+}
+.tourBtn button{
+     border: 1px solid #fff !important;
+     font-size: 16px;
+     width: 200px;
+     padding: 7px 0px;
+     top: -7px;
+     position: absolute;
+}

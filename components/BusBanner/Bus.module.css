@@ -134,12 +134,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 283px;
+  top: 290px;
   background: #19abe3;
   color: white;
   font-size: 18px;
   border-radius: 5px;
-  padding: 16px 55px;
+  padding: 9px 0px;
+  width: 200px;
 }
 /* menu styling  */
 .menu {

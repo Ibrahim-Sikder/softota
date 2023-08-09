@@ -14,6 +14,32 @@
 }
 .rightSideBar {
   width: 100%;
+  background-image:url(../../public/assets/destination.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background:fixed;
+  height:auto;
+
+  position: relative;
+  background-image: url(/_next/static/media/banner.f7be9e77.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100vw !important;
+  height:auto;
+  box-sizing: border-box;
+  background-position: center;
+}
+.rightSideBar:before{
+  position:absolute;
+  content:'';
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  width:100%;
+  height:100%;
+  
 }
 .leftSideIconWrap {
   /* width: 60px !important; */
@@ -43,6 +69,7 @@
     padding: 15px px 20px;
     justify-content: end;
     padding: 15px 20px;
+    background:#fff;
 }
 .adminLeftInfo {
   width: 38%;
@@ -236,7 +263,7 @@ transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
 }
 .bar {
   background: #19abe3;
-  width: 50px;
+  width: 49px;
   right: -71px;
   top: 23px;
   height: 46px;
@@ -247,7 +274,7 @@ transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
   justify-content: center;
   margin-right: -40px;
   margin-top: 21px;
-  border-top-right-radius: 8px;
+  border-top-right-radius: 27px;
   border-bottom-right-radius: 8px;
   cursor: pointer;
   transition: all .5s linear(-0.47 -53.68%, 1 100%);
