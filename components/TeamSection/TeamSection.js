@@ -1,9 +1,6 @@
 import React from "react";
 import TeamCard from "./TeamCard";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import propertys from "../../public/propery-bg.jpg";
 import Link from "next/link";
-import house from "../../public/house.jpg";
 import Image from "next/image";
 import man from "../../public/man2.jpg";
 import man2 from "../../public/man3.jpg";

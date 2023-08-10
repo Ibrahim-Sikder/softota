@@ -17,6 +17,7 @@ const Tours = () => {
                          <UserDashBoardLeft />
                     </div>
                     <div className={style.rightSideBar}>
+                         <div className={style.rightSideWrap}>
                          <div className={style.profileTop}>
                               <RightSideTopBar />
                               <div className={style.moveText}>
@@ -29,6 +30,7 @@ const Tours = () => {
                          <BestPlace></BestPlace>
                          <Travel></Travel>
                          <Customer></Customer>
+                         </div>
 
 
                     </div>

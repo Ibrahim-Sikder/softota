@@ -20,21 +20,23 @@ const Visa = () => {
           <UserDashBoardLeft />
         </div>
         <div className={style.rightSideBar}>
+          <div className={style.rightSideWrap}>
           <div className={style.profileTop}>
-          <RightSideTopBar />
-          <div className={style.moveText}>
-          <marquee
-            onmouseout="this.start()"
-            onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! Reserver your best hotel.</h2></marquee>
-        </div>
-        </div>
-      <VisaHeroBox/>
-     <div className="mt-10">
-     <Countries></Countries>
-      <Passion></Passion>
-      <Travel></Travel>
+            <RightSideTopBar />
+            <div className={style.moveText}>
+              <marquee
+                onmouseout="this.start()"
+                onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! Reserver your best hotel.</h2></marquee>
+            </div>
+          </div>
+          <VisaHeroBox />
+          <div className="mt-10">
+            <Countries></Countries>
+            <Passion></Passion>
+            <Travel></Travel>
 
-     </div>
+          </div>
+          </div>
 
         </div>
       </div>

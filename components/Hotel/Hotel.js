@@ -15,11 +15,6 @@ import destination11 from '../../public/assets/destination9.jpeg'
 import destination12 from '../../public/assets/destination10.jpeg'
 import destination13 from '../../public/assets/destination11.jpeg'
 import Link from "next/link";
-import { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";

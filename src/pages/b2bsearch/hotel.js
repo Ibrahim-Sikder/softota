@@ -15,19 +15,21 @@ const Hotel = () => {
           <UserDashBoardLeft />
         </div>
         <div className={style.rightSideBar}>
-          <div className={style.profileTop}>
-          <RightSideTopBar />
-          <div className={style.moveText}>
-          <marquee
-            onmouseout="this.start()"
-            onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey.</h2></marquee>
-        </div>
-        </div>
-       <HotelHeroBox/>
-        <HotelTrending/>
-        <Travel></Travel>
-      <HotelTrending/>
-      <Customer></Customer>
+          <div className={style.rightSideWrap}>
+            <div className={style.profileTop}>
+              <RightSideTopBar />
+              <div className={style.moveText}>
+                <marquee
+                  onmouseout="this.start()"
+                  onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey.</h2></marquee>
+              </div>
+            </div>
+            <HotelHeroBox />
+            <HotelTrending />
+            <Travel></Travel>
+            <HotelTrending />
+            <Customer></Customer>
+          </div>
         </div>
       </div>
     </div>

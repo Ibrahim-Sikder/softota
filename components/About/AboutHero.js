@@ -2,7 +2,6 @@ import React from "react";
 import style from "./AboutHero.module.css";
 import Image from "next/image";
 import about from "../../public/about.png";
-import VectorMan from "../../public/VectorMan.png";
 
 const AboutHero = () => {
   return (
@@ -20,11 +19,18 @@ const AboutHero = () => {
       <section className="py-28">
         <div className="flex justify-center flex-wrap-reverse items-center">
           <div className={style.leftBox}>
-            <Image
-              src={VectorMan}
-              alt="Picture of the author"
-              className={style.aboutMan}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={253}
+            height={330}
+            fill="none"
+
+          >
+            <path
+              fill="#000"
+              d="m227.448 224.718-49.914-32.444 18.818-34.499a54.995 54.995 0 0 0 6.696-26.257V76.904A76.765 76.765 0 0 0 126.281.137a76.767 76.767 0 0 0-76.767 76.767v54.614a54.995 54.995 0 0 0 6.695 26.257l18.818 34.499-49.914 32.444A54.643 54.643 0 0 0 .164 270.693v58.444h252.233v-58.444a54.634 54.634 0 0 0-24.949-45.975Zm3.016 82.486H22.097v-36.511a32.786 32.786 0 0 1 14.97-27.585l66.938-43.51-28.54-52.325a33.002 33.002 0 0 1-4.017-15.755V76.904a54.834 54.834 0 0 1 109.666 0v54.614a33 33 0 0 1-4.017 15.755l-28.54 52.325 66.939 43.51a32.785 32.785 0 0 1 14.968 27.585v36.511Z"
             />
+          </svg>
           </div>
           <div className={style.rightBox}>
             <div>

@@ -1,14 +1,8 @@
 import React from "react";
 import Nav from "../../../../components/NavBarr/Nav";
 import Footer from "../../../../components/Footer/Footer";
-import style from '../userbooking/flightbooking.module.css'
-import Image from "next/image";
-import flight from "../../../../public/flight.png";
-import hotel from "../../../../public/hotel.png";
-import visa from "../../../../public/vissa.png";
-import tour from "../../../../public/tour.png";
+import style from '../userbooking/flightbooking.module.css';
 import Link from "next/link";
-import visaa from "../../../../public/assets/visa.jpeg";
 import { ReportProblem } from "@mui/icons-material";
 import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
 import { ArrowForwardIos, Home } from "@mui/icons-material";

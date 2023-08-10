@@ -15,7 +15,8 @@ const Umra = () => {
           <UserDashBoardLeft />
         </div>
         <div className={style.rightSideBar}>
-          <div className={style.profileTop}>
+         <div className={style.rightSideWrap}>
+         <div className={style.profileTop}>
           <RightSideTopBar />
           <div className={style.moveText}>
           <marquee
@@ -27,6 +28,7 @@ const Umra = () => {
         </div>
         <UmraHeroBox/>
         <UmraPackage/>
+         </div>
 
         </div>
       </div>

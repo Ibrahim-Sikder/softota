@@ -1,5 +1,7 @@
 .tourHeroBox, .visaHeroBox{
      background:#19ABE3;
+    position: relative;
+    z-index: 0 !important;
 }
 .tourBtn button{
      border: 1px solid #fff !important;

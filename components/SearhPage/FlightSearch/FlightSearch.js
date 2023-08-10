@@ -1,12 +1,5 @@
 import React from "react";
 import style from "./FlightSearch.module.css";
-import Image from "next/image";
-import hotel from "../../../public/assets/hotelll.jpeg";
-import hotel2 from "../../../public/assets/hotelll2.jpg";
-import hotel3 from "../../../public/assets/hotell3.jpeg";
-import hotel4 from "../../../public/assets/hotell4.jpeg";
-import hotel5 from "../../../public/assets/hotell5.jpeg";
-import hotel6 from "../../../public/assets/hotell6.jpeg";
 import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";

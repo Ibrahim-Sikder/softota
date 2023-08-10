@@ -4,7 +4,6 @@ import style from "./Umra.module.css";
 import hajj4 from "../../public/hajj4.png";
 import hajj2 from "../../public/hajj2.png";
 import hajj3 from "../../public/hajj3.png";
-import clock from "../../public/clock.png";
 
 
 
@@ -131,12 +130,28 @@ const UmraPackage = () => {
         <div className={style.ummrahClock}>
           <div className={style.clock}>
             <p>
-              <Image
-                src={clock}
-                alt="Picture of the author"
-                width={20}
-                height={20}
-              />
+            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width={24}
+                                    height={24}
+                                    fill="none"
+
+                                >
+                                    <path
+                                        stroke="#4AB449"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                    />
+                                    <path
+                                        stroke="#4AB449"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M22 4 12 14.01l-3-3"
+                                    />
+                                </svg>
             </p>
             <div>
               <p>NID scanned soft</p>
@@ -145,12 +160,28 @@ const UmraPackage = () => {
           </div>
           <div className={style.clock2}>
             <p>
-              <Image
-                src={clock}
-                alt="Picture of the author"
-                width={20}
-                height={20}
-              />
+            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width={24}
+                                    height={24}
+                                    fill="none"
+
+                                >
+                                    <path
+                                        stroke="#4AB449"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                    />
+                                    <path
+                                        stroke="#4AB449"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M22 4 12 14.01l-3-3"
+                                    />
+                                </svg>
             </p>
             <div>
               <p>Birth certificate s color soft copy</p>
@@ -158,12 +189,28 @@ const UmraPackage = () => {
           </div>
           <div className={style.clock}>
             <p>
-              <Image
-                src={clock}
-                alt="Picture of the author"
-                width={20}
-                height={20}
-              />
+            <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width={24}
+                                    height={24}
+                                    fill="none"
+
+                                >
+                                    <path
+                                        stroke="#4AB449"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
+                                    />
+                                    <path
+                                        stroke="#4AB449"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2}
+                                        d="M22 4 12 14.01l-3-3"
+                                    />
+                                </svg>
             </p>
             <div>
               <p>Valid mobile number + email id</p>

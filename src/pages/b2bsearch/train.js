@@ -19,21 +19,23 @@ const Train = () => {
           <UserDashBoardLeft />
         </div>
         <div className={style.rightSideBar}>
-          <div className={style.profileTop}>
-          <RightSideTopBar />
-          <div className={style.moveText}>
-          <marquee
-            onmouseout="this.start()"
-            onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! </h2></marquee>
-        </div>
-        </div>
-        <div>
-        <TourHeroBox/>
-        <BestPlace></BestPlace>
-      <Travel></Travel>
-      <TourDestination></TourDestination>
-      <Customer></Customer>
-        </div>
+         <div className={style.rightSideWrap}>
+         <div className={style.profileTop}>
+            <RightSideTopBar />
+            <div className={style.moveText}>
+              <marquee
+                onmouseout="this.start()"
+                onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! </h2></marquee>
+            </div>
+          </div>
+          <div>
+            <TourHeroBox />
+            <BestPlace></BestPlace>
+            <Travel></Travel>
+            <TourDestination></TourDestination>
+            <Customer></Customer>
+          </div>
+         </div>
 
 
         </div>

@@ -14,7 +14,7 @@
   font-weight: 600;
   font-size: 36px;
   line-height: 54px;
-  color: #092e3d;
+  color: black;
   justify-content: center;
   text-transform: capitalize;
 }
@@ -26,8 +26,8 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 28px;
-  color: #738187;
-  padding-bottom: 40px;
+  color: black;
+  padding-bottom: 40px
 }
 .customer {
   width: 1110px;

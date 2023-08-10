@@ -1,26 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from './UserDashBoard.module.css'
-import { Notifications } from '@mui/icons-material';
-import style from '../../components/Banner/Banner.module.css'
-import Link from "next/link";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import { Add, Groups2, HorizontalRule } from "@mui/icons-material";
-import TextField from "@mui/material/TextField";
 import TourDestination from "../Tour/TourDestination";
-import Image from "next/image";
-import logo from '../../public/assets/ghuronti.jpg'
 import RightSideTopBar from "./RightSideTopBar";
 import HeroBox from "./HeroBox";
-
-
-
-
-
-
 
 
 
@@ -28,7 +10,7 @@ const UserDashBoardRight = () => {
 
 
   return (
-    <div>
+    <div className={styles.rightSideWrap}>
       <div className={styles.profileTop}>
         <RightSideTopBar />
         <div className={styles.moveText}>

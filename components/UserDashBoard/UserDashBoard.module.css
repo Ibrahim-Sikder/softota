@@ -5,7 +5,12 @@
 .sideBarLeft {
   width: 247px;
   transition: all 0.5s cubic-bezier(0.15, -0.02, 1, 1.02);
-  z-index:999 !important;
+  z-index:9999999 !important;
+  position:fixed;
+}
+.rightSideBarWrap, .rightSideWrap{
+  position:relative;
+  z-index: 99 !important;
 }
 .sidebar {
   width: 37px;
@@ -14,7 +19,7 @@
 }
 .rightSideBar {
   width: 100%;
-  background-image:url(../../public/assets/destination.jpeg);
+  /* background-image:url(../../public/assets/destination.jpeg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,7 +35,7 @@
   box-sizing: border-box;
   background-position: center;
 }
-.rightSideBar:before{
+.rightSideBar:after{
   position:absolute;
   content:'';
   top:0;
@@ -39,6 +44,8 @@
   right:0;
   width:100%;
   height:100%;
+  background:black;
+  opacity: .2;
   
 }
 .leftSideIconWrap {
@@ -62,6 +69,7 @@
 
 .profileTop {
   width: 100%;
+  position:relative;
 }
 .rightSideTopBar {
   width: 100%;
@@ -124,18 +132,24 @@
   width: 100%;
   height: 58px;
   background: transparent;
-  color: #4ab449;
+  color: white;
   display: flex;
   align-items: center;
   text-transform: capitalize;
   border: 1px solid #4ab449;
   box-shadow: rgba(22, 241, 59, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  z-index: 99 !important;
+  position: relative;
+  background: radial-gradient(black, transparent);
+  background: #19ABE3;
 }
 .heroBoxWrap {
   margin-top: 30px;
   width: 1000px !important;
   background: #19abe3 !important;
   color: #fff !important;
+  position: relative;
+    z-index: 0 !important;
 }
 .menubar {
   background: #4AB449!important;
@@ -163,14 +177,16 @@
 }
 
 .active {
-  background: #19abe3;
+  
+  background: #4AB449;
   display: flex;
   padding-left: 10px;
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
-  position: absolute;
+  position: fixed;
   left: -175px;
   z-index: 999 !important;
+
 }
 .iconsBarHide {
   display: none;
@@ -188,6 +204,8 @@
   transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
   font-size:12px;
   display:none;
+  z-index: 9999999999 !important;
+  position:absolute;
 }
 .mainToolTip{
   top:123px !important;
@@ -197,29 +215,38 @@
 .toolTip2{
   top: 215px !important;
   width: 161px !important;
-  z-index: 999 !important;
+  z-index: 999999 !important;
+  position:absolute;
 }
 .toolTip3{
 top:261px;
+z-index: 999999999 !important;
 }
 .toolTip4{
   top:307px;
+  z-index: 999999999 !important;
 }
 .toolTip5{
   top:353px;
+  z-index: 999999999 !important;
 }
 .toolTip6{
   top:399px;
+  z-index: 9999999999 !important;
 }
 .toolTip7{
   top:445px;
+  z-index: 999999999 !important;
 }
 .toolTip8{
   top:491px;
+  z-index: 9999999999 !important;
 }
+
 .showToolTip:hover .toolTip{
 display:block;
 transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
+z-index: 9999999999 !important;
 }
 
 
@@ -229,7 +256,7 @@ transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
 
 /* dashboard left side styling  */
 .dashBoardLeftSide {
-  background: #19abe3;
+  background: #4AB449;
   width: 253px;
   display: flex;
   padding-left: 10px;
@@ -262,7 +289,9 @@ transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
   transition: all 0.3s ease-in-out;
 }
 .bar {
-  background: #19abe3;
+  background: #4AB449;
+  padding: 0px !important;
+  text-align: left !important;
   width: 49px;
   right: -71px;
   top: 23px;

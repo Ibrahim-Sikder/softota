@@ -1,14 +1,6 @@
 import React from "react";
 import style from "./Vissa.module.css";
-import Image from "next/image";
 import Link from "next/link";
-import hajj from "../../public/hajj.png";
-import tour from "../../public/tour.png";
-import train from "../../public/train.png";
-import buss from "../../public/Bus.png";
-import flight from "../../public/flight.png";
-import hotel from "../../public/hotel.png";
-import vissa from "../../public/vissa.png";
 import { FaSistrix } from "react-icons/fa";
 
 const Vissa = () => {

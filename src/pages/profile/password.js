@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import TopBar from "../../../components/TopBar/TopBar";
-import Header from "../../../components/Header/Header";
 import ProfileLeftSide from "./profileLeftSide/ProfileLeftSide";
 import Footer from "../../../components/Footer/Footer";
 import style from "./userProfile.module.css";

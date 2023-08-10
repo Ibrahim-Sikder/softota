@@ -1,5 +1,4 @@
 import React from 'react'
-import DetailHotel from '../../../components/Hotel/DetailHotel'
 import Link from 'next/link'
 import Image from 'next/image'
 import hotel from '../../../public/assets/hotel9.jpg'
@@ -8,24 +7,18 @@ import hotel3 from '../../../public/assets/hotell4.jpeg'
 import hotel4 from '../../../public/assets/hotell5.jpeg'
 import hotel5 from '../../../public/assets/hotell6.jpeg'
 import style from './detailH.module.css'
-import clock from '../../../public/clock.png'
-import location from '../../../public/location.png'
-import clock2 from '../../../public/clock2.png'
-import clock3 from '../../../public/clock3.png'
-import clock4 from '../../../public/clock4.png'
-import clock5 from '../../../public/clock5.png';
+// import clock from '../../../public/clock.png'
+// import location from '../../../public/location.png'
+// import clock3 from '../../../public/clock3.png'
+// import clock4 from '../../../public/clock4.png'
+// import clock5 from '../../../public/clock5.png';
 import travel from '../../../public/travel2.png'
-import Trending from '../../../components/Trending/Trending'
-import TopBar from '../../../components/TopBar/TopBar'
-import Header from '../../../components/Header/Header'
 import Footer from '../../../components/Footer/Footer'
 import Nav from '../../../components/NavBarr/Nav'
 const index = () => {
  
   return (
     <section>
-      {/* <TopBar/>
-      <Header/> */}
 
       <Nav/>
 
@@ -34,7 +27,7 @@ const index = () => {
         <h2 className='text-3xl font-bold before:'>Laos: Land of a Million Elephants!</h2>
         <div className='flex'>
         <Image
-           src={location}
+          //  src={location}
            alt="Picture of the author"
            width={10}
            height={10}
@@ -123,7 +116,7 @@ const index = () => {
             <div className='flex  mb-3'>
           <Image
                 className={style.rightSideIcon}
-                src={clock}
+                // src={clock}
                 alt="Picture of the author"
                 width={10}
                 height={10}
@@ -133,7 +126,7 @@ const index = () => {
           <div className='flex  mb-3'>
           <Image
                 className={style.rightSideIcon}
-                src={location}
+                // src={location}
                 alt="Picture of the author"
                 width={10}
                 height={10}
@@ -143,7 +136,7 @@ const index = () => {
           <div className='flex  mb-3'>
           <Image
                 className={style.rightSideIcon}
-                src={clock3}
+                // src={clock3}
                 alt="Picture of the author"
                 width={10}
                 height={10}
@@ -153,7 +146,7 @@ const index = () => {
           <div className='flex  mb-3'>
           <Image
                 className={style.rightSideIcon}
-                src={clock4}
+                // src={clock4}
                 alt="Picture of the author"
                 width={10}
                 height={10}
@@ -163,7 +156,7 @@ const index = () => {
           <div className='flex  mb-3'>
           <Image
                 className={style.rightSideIcon}
-                src={clock5}
+                // src={clock5}
                 alt="Picture of the author"
                 width={10}
                 height={10}
@@ -173,7 +166,7 @@ const index = () => {
           <div className='flex  mb-3'>
           <Image
                 className={style.rightSideIcon}
-                src={clock}
+                // src={clock}
                 alt="Picture of the author"
                 width={10}
                 height={10}
@@ -183,7 +176,7 @@ const index = () => {
           <div className='flex  mb-3'>
           <Image
                 className={style.rightSideIcon}
-                src={clock}
+                // src={clock}
                 alt="Picture of the author"
                 width={10}
                 height={10}
@@ -206,7 +199,7 @@ const index = () => {
           </div>
          </div>
         </div>
-      <Trending></Trending>
+      {/* <Trending></Trending> */}
       <Footer/>
     </section>
   )

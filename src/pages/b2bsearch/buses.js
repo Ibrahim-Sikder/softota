@@ -19,6 +19,7 @@ const Buses = () => {
                          <UserDashBoardLeft />
                     </div>
                     <div className={style.rightSideBar}>
+                         <div className={style.rightSideWrap}>
                          <div className={style.profileTop}>
                               <RightSideTopBar />
                               <div className={style.moveText}>
@@ -29,11 +30,12 @@ const Buses = () => {
                          </div>
                          <div>
                          </div>
-                        <BusesHeroBox/>
+                         <BusesHeroBox />
                          <BestPlace />
                          <Travel></Travel>
                          <TourDestination></TourDestination>
                          <Customer></Customer>
+                         </div>
 
                     </div>
                </div>

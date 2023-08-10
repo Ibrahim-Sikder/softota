@@ -1,59 +1,57 @@
 import Image from "next/image";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import login from "../../../public/agent.png";
 import { useRouter } from "next/router";
-import { toast } from "react-hot-toast";
 import style from "./signupAgent.module.css";
-import { AuthContext } from "../context/AuthContext/AuthProvider";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 const SignUpAgent = () => {
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [anumber, setAnumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [title, setTitle] = useState("");
-  const [loading, setLoading] = useState(false);
+  // const [name, setName] = useState("");
+  // const [number, setNumber] = useState("");
+  // const [anumber, setAnumber] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [title, setTitle] = useState("");
+  // const [loading, setLoading] = useState(false);
 
-  const router = useRouter();
-  const { createUser } = useContext(AuthContext);
+  // const router = useRouter();
+  // const { createUser } = useContext(AuthContext);
 
-  const handleSignUp = (event) => {
-    event.preventDefault();
-    const name = event.target.name.value;
-    const number = event.target.number.value;
-    const anumber = event.target.anumber.value;
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const agent = { name, email, password, anumber, number };
-    createUser(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        toast.success("User Created Successfully");
-        router.push("/hotel");
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+  // const handleSignUp = (event) => {
+  //   event.preventDefault();
+  //   const name = event.target.name.value;
+  //   const number = event.target.number.value;
+  //   const anumber = event.target.anumber.value;
+  //   const email = event.target.email.value;
+  //   const password = event.target.password.value;
+  //   const agent = { name, email, password, anumber, number };
+  //   createUser(email, password)
+  //     .then((result) => {
+  //       const user = result.user;
+  //       console.log(user);
+  //       toast.success("User Created Successfully");
+  //       router.push("/hotel");
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     });
 
-    try {
-      fetch("/api/blog", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(agent),
-      })
-        .then((res) => res.json())
-        .then((data) => setTitle(data));
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
-    }
-  };
+  //   try {
+  //     fetch("/api/blog", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(agent),
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => setTitle(data));
+  //   } catch (err) {
+  //     console.log(err);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
 
   return (
     <div>
@@ -71,7 +69,7 @@ const SignUpAgent = () => {
             />
           </div>
           <div>
-            <form onSubmit={handleSignUp}>
+            <form >
               <div className="mb-5 relative">
                 <label className={style.loginLabel}>User Name</label> <br />
                 <input

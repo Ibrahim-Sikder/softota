@@ -6,28 +6,27 @@ import facebook from "../../public/facebook.png";
 import google from "../../public/google.png";
 import style from "./LoginAgent.module.css";
 import { useRouter } from "next/router";
-import { AuthContext } from "../../src/pages/context/AuthContext/AuthProvider";
 
 const LoginAgent = () => {
   const router = useRouter();
-  const { signInWithGoogle, logIn } = useContext(AuthContext);
-  const handleLogin = (event) => {
-    event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-    const number = event.target.number.value;
+  // const { signInWithGoogle, logIn } = useContext(AuthContext);
+  // const handleLogin = (event) => {
+  //   event.preventDefault();
+  //   const email = event.target.email.value;
+  //   const password = event.target.password.value;
+  //   const number = event.target.number.value;
 
-    logIn(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-        toast.success("User Login Successfully");
-        router.push("/");
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  };
+  //   logIn(email, password)
+  //     .then((result) => {
+  //       const user = result.user;
+  //       console.log(user);
+  //       // toast.success("User Login Successfully");
+  //       router.push("/");
+  //     })
+  //     .catch((err) => {
+  //       console.error(err);
+  //     });
+  // };
 
   return (
     <div className={style.loginAgentWrap}>
@@ -41,7 +40,7 @@ const LoginAgent = () => {
           />
         </div>
         <div>
-          <form onSubmit={handleLogin}>
+          <form >
             <div className="mb-5">
               <label className={style.loginLabel}>Email Address</label> <br />
               <input

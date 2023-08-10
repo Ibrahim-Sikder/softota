@@ -1,26 +1,6 @@
 import React from "react";
 import style from "./Tour.module.css";
-import Image from "next/image";
 import Link from "next/link";
-import hajj from "../../public/hajj.png";
-import tour from "../../public/tour.png";
-import train from "../../public/train.png";
-import buss from "../../public/Bus.png";
-import flight from "../../public/flight.png";
-import hotel from "../../public/hotel.png";
-import vissa from "../../public/vissa.png";
-import { FaSistrix } from "react-icons/fa";
-import hotel2 from "../../public/hotel5.png";
-import hotel3 from "../../public/hotel6.png";
-import hotel6 from "../../public/hotel7.png";
-import hotel4 from "../../public/hotel8.png";
-import hotel5 from "../../public/hotel8.png";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import { autoplay, FreeMode, Pagination, Autoplay, Navigation } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import BestPlace from "../BestPlace/BestPlace";
 const Tour = () => {
   return (
     <div>

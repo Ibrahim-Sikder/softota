@@ -13,7 +13,8 @@ const Hotel = () => {
           <UserDashBoardLeft />
         </div>
         <div className={style.rightSideBar}>
-          <div className={style.profileTop}>
+         <div className={style.rightSideWrap}>
+         <div className={style.profileTop}>
           <RightSideTopBar />
           <div className={style.moveText}>
           <marquee
@@ -24,6 +25,7 @@ const Hotel = () => {
         <div>
         <HotelSearch/>
         </div>
+         </div>
 
 
         </div>
