@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Tour.module.css";
 import Link from "next/link";
 const Tour = () => {
+  const [activePackage, setActivePackage] = useState(false)
+  const handleActivePackage = ()=>{
+    setActivePackage(activePackage=> !activePackage)
+  }
   return (
     <div>
       <div className={style.train}>
@@ -14,7 +18,7 @@ const Tour = () => {
             {/* menubar */}
             <div>
               <ul className={style.menu}>
-                <li>
+                <li className={style.menuLists}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={35}
@@ -56,7 +60,7 @@ const Tour = () => {
                     <p className="ml-3">Hajj & Umrah</p>
                   </Link>
                 </li>
-                <li>
+                <li className={style.menuLists}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={40}
@@ -87,7 +91,7 @@ const Tour = () => {
                     <p className="ml-3">Flight</p>
                   </Link>
                 </li>
-                <li>
+                <li className={style.menuLists}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={35}
@@ -111,7 +115,7 @@ const Tour = () => {
                     <p className="ml-3">Hotel</p>
                   </Link>
                 </li>
-                <li>
+                <li className={style.menuLists}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={45}
@@ -134,7 +138,7 @@ const Tour = () => {
                     <p className="ml-3">Vissa</p>
                   </Link>
                 </li>
-                <li>
+                <li className={style.menuLists}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={35}
@@ -156,7 +160,7 @@ const Tour = () => {
                     <p className="ml-3">Tours</p>
                   </Link>
                 </li>
-                <li>
+                <li className={style.menuLists}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={40}
@@ -178,7 +182,7 @@ const Tour = () => {
                     <p className="ml-3">Buses</p>
                   </Link>
                 </li>
-                <li className={style.trainLi}>
+                <li className={style.menuLists}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={40}

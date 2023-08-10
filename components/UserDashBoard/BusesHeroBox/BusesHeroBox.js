@@ -43,7 +43,7 @@ const BusesHeroBox = () => {
           {/* menubar */}
           <div>
             <ul className={style.menu}>
-              <li>
+              <li className={style.menuLists}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={35}

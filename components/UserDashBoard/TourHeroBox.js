@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import style from '../../components/Tour/Tour.module.css'
 import Link from 'next/link';
 import styling from './TourHeroBox.module.css'
 const TourHeroBox = () => {
+  const [activePackage, setActivePackage] = useState(true)
+  const handleActivePackage  = ()=>{
+    setActivePackage(activePackage=>!activePackage)
+  }
      return (
           <div>
                 <div className={`${style.heroBoxMain} ${styling.tourHeroBox}`}>
             {/* menubar */}
             <div>
               <ul className={style.menu}>
-                <li>
+              <li onClick={handleActivePackage}  className={activePackage ? `${styling.menuLists}` : `${styling.menuList}` }>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={35}
@@ -47,11 +51,11 @@ const TourHeroBox = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <Link href="/b2bsearch/umra">
+                  <Link href=" ">
                     <p className="ml-3">Hajj & Umrah</p>
                   </Link>
                 </li>
-                <li>
+                <li className={activePackage ? `${styling}` : `${styling.menuLists}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={40}
@@ -82,7 +86,7 @@ const TourHeroBox = () => {
                     <p className="ml-3">Flight</p>
                   </Link>
                 </li>
-                <li>
+                <li className={activePackage ? `${styling}` : `${styling.menuLists}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={35}
@@ -106,7 +110,7 @@ const TourHeroBox = () => {
                     <p className="ml-3">Hotel</p>
                   </Link>
                 </li>
-                <li>
+                <li className={activePackage ? `${styling}` : `${styling.menuLists}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={45}
@@ -129,7 +133,7 @@ const TourHeroBox = () => {
                     <p className="ml-3">Vissa</p>
                   </Link>
                 </li>
-                <li>
+                <li className={activePackage ? `${styling}` : `${styling.menuLists}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={35}
@@ -151,7 +155,7 @@ const TourHeroBox = () => {
                     <p className="ml-3">Tours</p>
                   </Link>
                 </li>
-                <li>
+                <li className={activePackage ? `${styling}` : `${styling.menuLists}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={40}
@@ -173,7 +177,7 @@ const TourHeroBox = () => {
                     <p className="ml-3">Buses</p>
                   </Link>
                 </li>
-                <li className={style.trainLi}>
+                <li className={activePackage ? `${styling}` : `${styling.menuLists}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={40}

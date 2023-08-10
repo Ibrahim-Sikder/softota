@@ -165,9 +165,10 @@
 .searchBtn {
   border: 1px solid #fff !important;
   transition: all 0.3s ease-in-out;
-  width: 200px;
-  padding: 9px 0px;
-  font-size: 14px;
+  width: 200px !important;
+  padding: 10px 0px !important;
+  font-size: 14px !important;
+
 }
 .searchBtn:hover {
   background: #4ab449;
@@ -193,7 +194,7 @@
 }
 
 .toolTip{
-  background:#19ABE3 !important;
+  background:#4AB449;
   width: 146px;
   padding: 5px;
   position: absolute;

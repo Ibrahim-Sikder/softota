@@ -480,7 +480,7 @@ const Banner = ({ setResults }) => {
               <li>
 
 
-              
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width={40}
@@ -702,7 +702,9 @@ const Banner = ({ setResults }) => {
                           ))}
                         </div>
                       </div>
+
                     </div>
+
                     <div className={style.package2}>
                       <div className={style.searchTop}>
                         <h4>Flying To</h4>
@@ -1051,92 +1053,95 @@ const Banner = ({ setResults }) => {
                       <input type="date" />
                     </div>
                   </div>
+                  
                   <div
-                    onClick={() => window.my_modal_3.showModal()}
-                    className={style.multiplePackage}
-                  >
-                    <div>
-                      <h4 className="text-xs">Passenger </h4>
-                      <small>{child + infant + adult} Person</small> <br />
-                      <small className="text-xs">Economy class</small>
-                    </div>
-                  </div>
-
-                  <div className="modal">
-                    {/* You can open the modal using ID.showModal() method */}
-                    <button
-                      className="btn"
                       onClick={() => window.my_modal_3.showModal()}
+                      className={style.multiplePackage}
                     >
+                      <div>
+                        <h4 >Passenger &  <small>{child + infant + adult} Person</small> </h4>
+                        <small >Economy class</small>
+                      </div>
 
-                    </button>
-                    <dialog id="my_modal_3" className="modal">
-                      <form method="dialog" className="modal-box">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                          ✕
-                        </button>
-                        <div>
-                          <h3 className="font-bold text-lg">Passenger</h3>
-                          <div className={style.passengerWrap}>
-                            <div className={style.pLeftSide}>
-                              <strong>{child}</strong>
-                              <div className="ml-5">
-                                <span className="text-xs">Adults</span> <br />
-                                <small>12 Years and above </small>
-                              </div>
-                            </div>
-                            <div className={style.adultsBtn}>
-                              <span onClick={childDecrement}>-</span>
-                              <span onClick={childIncrement}>+</span>
-                            </div>
-                          </div>
-                          <div className={style.passengerWrap}>
-                            <div className={style.pLeftSide}>
-                              <strong>{adult}</strong>
-                              <div className="ml-5">
-                                <span className="text-xs">Children</span> <br />
-                                <small>2- 11 year at the time of travel </small>
-                              </div>
-                            </div>
-                            <div className={style.adultsBtn}>
-                              <span onClick={decrementAdult}>-</span>
-                              <span onClick={incrementAdult}>+</span>
-                            </div>
-                          </div>
-                          <div>
-                            <TextField
-                              className={style.dateOfChild}
-                              id="outlined-required"
-                              type="date"
-                            />
-                          </div>
-                          <div className={style.passengerWrap}>
-                            <div className={style.pLeftSide}>
-                              <strong>{infant}</strong>
-                              <div className="ml-5">
-                                <span className="text-xs">Children</span> <br />
-                                <small>0 - 23 month at the time of travel </small>
-                              </div>
-                            </div>
-                            <div className={style.adultsBtn}>
-                              <span onClick={decrementInfant}>-</span>
-                              <span onClick={incrementInfant}>+</span>
-                            </div>
-                          </div>
-                          <div>
-                            <hr className="w-full my-5" />
-                          </div>
+                      <div className="modal">
+                      {/* You can open the modal using ID.showModal() method */}
+                      <button
+                        className="btn"
+                        onClick={() => window.my_modal_3.showModal()}
+                      >
 
-                          <div className={style.classType}>
-                            <p>Cabin class</p>
-                            <p>Premium Economy</p>
-                            <p>Business class</p>
-                            <p>First class</p>
+                      </button>
+                      <dialog id="my_modal_3" className="modal">
+                        <form method="dialog" className="modal-box">
+                          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                            ✕
+                          </button>
+                          <div>
+                            <h3 className="font-bold text-lg">Passenger</h3>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{child}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Adults</span> <br />
+                                  <small>12 Years and above </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={childDecrement}>-</span>
+                                <span onClick={childIncrement}>+</span>
+                              </div>
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{adult}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span> <br />
+                                  <small>2- 11 year at the time of travel </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementAdult}>-</span>
+                                <span onClick={incrementAdult}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <TextField
+                                className={style.dateOfChild}
+                                id="outlined-required"
+                                type="date"
+                              />
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{infant}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span> <br />
+                                  <small>0 - 23 month at the time of travel </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementInfant}>-</span>
+                                <span onClick={incrementInfant}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <hr className="w-full my-5" />
+                            </div>
+
+                            <div className={style.classType}>
+                              <p>Cabin class</p>
+                              <p>Premium Economy</p>
+                              <p>Business class</p>
+                              <p>First class</p>
+                            </div>
                           </div>
-                        </div>
-                      </form>
-                    </dialog>
-                  </div>
+                        </form>
+                      </dialog>
+                    </div>
+
+
+
+                    </div>
                 </div>
 
                 {

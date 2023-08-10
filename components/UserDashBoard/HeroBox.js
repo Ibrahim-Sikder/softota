@@ -995,18 +995,7 @@ const HeroBox = () => {
                     <h4>Select Date </h4>
                     <input type="date" />
                   </div>
-                </div>
-                <div
-                  onClick={() => window.my_modal_3.showModal()}
-                  className={`${style.multiplePackage} ${styles.searchBox}`}
-                >
-                  <div>
-                    <h4 className="text-xs">Passenger </h4>
-                    <small>{child + infant + adult} Person</small> <br />
-                    <small className="text-xs">Economy class</small>
-                  </div>
-                </div>
-
+                  
                 <div className="modal">
                   {/* You can open the modal using ID.showModal() method */}
                   <button
@@ -1082,6 +1071,18 @@ const HeroBox = () => {
                     </form>
                   </dialog>
                 </div>
+                </div>
+                <div
+                  onClick={() => window.my_modal_3.showModal()}
+                  className={`${style.multiplePackage} ${styles.searchBox}`}
+                >
+                  <div>
+                    <h4 className="text-xs">Passenger &   <small>{child + infant + adult} Person</small> </h4>
+                
+                    <small className="text-xs">Economy class</small>
+                  </div>
+                </div>
+
               </div>
 
               {

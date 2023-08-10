@@ -376,13 +376,14 @@
 }
 .departDate{
   background: #19ABE3;
-  padding: 8px;
-  height: 65px;
-  width: 415px;
+  height: 68px;
+  width: 400px;
   font-size: 14px;
   margin-right: 5px;
   color: white;
   border-radius: 5px;
+  border: 1px solid #fff;
+  padding: 8px !important;
 }
 
 .multiplePackageWrap{
@@ -396,15 +397,16 @@
 }
 .multiplePackage{
   width: 210px;
-  height: 74px;
-  border: 1px solid rgba(156, 148, 148, 0.664);
+  height: 68px;
+  border: 1px solid #fff;
   background: #19ABE3;
   color: #fff;
   margin-right: 0px;
   padding: 8px;
   font-size: 14px;
-
+  margin-bottom: 8px;
 }
+
 .passengerWrap{
   width:100%;
   display:flex;
@@ -464,12 +466,13 @@ font-size:14px;
   margin-left: 20px;
   cursor: pointer;
   font-size: 14px;
+  border:1px solid #fff;
 }
 
 .removeCity{
   display: flex;
   align-items: center;
-  background: #19abe3;
+  background: #4AB449;
   color: white;
   width: 117px;
   padding: 5px;
@@ -478,6 +481,7 @@ font-size:14px;
   margin-left: 20px;
   cursor: pointer;
   font-size: 13px !important;
+  border:1px solid #fff;
 }
 .oneWayPackage, .roundTripWrap, .groupFlight{
   display: flex;
@@ -494,14 +498,15 @@ font-size:14px;
 .package2,
 .package3,
 .package4 {
-  width: 415px;
-  height: 65px;
+  width: 400px;
+  height: 68px;
   background: #19ABE3;
   border-radius: 5px;
   color: white;
   font-size: 14px !important;
   padding: 8px;
   margin-right: 5px;
+  border: 1px solid #fff;
 }
 
 .package input{
@@ -533,12 +538,13 @@ font-size:14px;
 .date {
   border-bottom-left-radius: 7px;
   border-top-left-radius: 7px;
-  border: 1px solid #4ab449;
+  border: 1px px solid #4ab449;
   background: #19ABE3;
-  height: 65px;
-  width: 207.5px;
+  height: 68px;
+  width: 195px;
   font-size: 14px;
   padding: 8px;
+  border: 1px solid #fff;
   color: white;
 }
 .date2 {
@@ -546,12 +552,13 @@ font-size:14px;
   border-bottom-right-radius: 7px;
   border-top-right-radius: 7px;
   border: 1px solid #4ab449;
-  height: 65px;
+  height: 68px;
   width: 207.5px;
   color: #fff;
   padding: 8px;
   margin-right: 5px;
-  font-size: 14px
+  font-size: 14px;
+  border: 1px solid #fff;
 }
 .package {
   top: 170px;
@@ -584,7 +591,7 @@ font-size:14px;
   font-size: 14px;
 }
 .package4 h4{
-  font-size:12px;
+  font-size:14px;
 }
 .packageBtn {
   border-bottom: 2px solid #4ab449;
@@ -595,17 +602,20 @@ font-size:14px;
 }
 .btnWrap{
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 35px;
+  width: 100%;
+  margin-top: -35px;
 }
 .heroBoxBtn {
-  top: 370px;
+  top: 346px;
   background: #19abe3;
   color: white;
-  font-size: 18px;
   border-radius: 5px;
-  padding: 16px 0px;
+  padding: 12px 0px;
   width: 225px;
   text-align: center;
+  border: 1px solid #fff;
+  font-size: 15px;
 }
 .flightWay{
   width:100%;
@@ -615,16 +625,19 @@ font-size:14px;
 .menu {
   display: flex;
   justify-content: space-between;
-  padding: 23px 20px;
+  padding: 18px 20px;
   font-size: 18px;
   background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: white;
+  align-items: center;
 }
 .menu li {
   display: flex;
-  z-index: 999 IM !important;
+  z-index: 999  !important;
+  align-items: center;
+  justify-content: center;
 }
 .menu li P {
   z-index: 999 !important;

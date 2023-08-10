@@ -11,11 +11,11 @@ const UmraPackage = () => {
      return (
           <div>
                 <section className={style.ummraWrap}>
-        <div className=" text-center">
+        <div className={style.umraHead}>
           <h2 className="text-3xl bold">
             Best Hajj Packages 2023 from bangladesh
           </h2>
-          <p className=" mt-3 mb-12 text-[#738187]">
+          <p className=" mt-3 mb-12 text-black">
             Some of the renowned and best Hajj agencies in Bangladesh are
             Universal Travel & Tours, Holy Hajj & Umrah
           </p>

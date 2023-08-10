@@ -11,3 +11,22 @@
      top: -7px;
      position: absolute;
 }
+
+.menuLists{
+     display: flex;
+     z-index: 999 IM !important;
+     justify-content: center;
+     align-items: center;
+     padding: 15px 20px;
+     border-radius: 10px;
+    }
+    .menuList{
+     display: flex;
+     z-index: 999 IM !important;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid #fff;
+     background: #19ABE3;
+     padding: 15px 20px;
+     border-radius: 10px;
+    }
