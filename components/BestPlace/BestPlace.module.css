@@ -15,7 +15,7 @@
 }
 .singleBestPlace{
   width: 1200px;
-  margin-left: 160px;
+  margin-left: 230px;
 
 }
 
@@ -75,7 +75,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #738187;
+  color: black;
 }
 .trending .city {
   height: 54px;

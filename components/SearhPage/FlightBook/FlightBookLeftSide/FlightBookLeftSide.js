@@ -20,7 +20,7 @@ import { ArrowForwardIos } from "@mui/icons-material";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import milvik from "../../../../public/assets/milvik.png";
+import milvik from "../../../../public/assets/hotel11.jpg";
 import Link from "next/link";
 const FlightBookLeftSide = () => {
   return (
@@ -37,7 +37,7 @@ const FlightBookLeftSide = () => {
           <h6>Payment </h6>
         </div>
       </div>
-      <Accordion>
+      <Accordion className={style.flightBookDetail}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -113,7 +113,7 @@ const FlightBookLeftSide = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion className={style.flightBookDetail}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -230,7 +230,7 @@ const FlightBookLeftSide = () => {
       <div className="mt-8">
         <h2>Enter Traveller Details </h2>
         <div className="my">
-          <Accordion>
+          <Accordion className={style.flightBookDetail}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
@@ -320,7 +320,7 @@ const FlightBookLeftSide = () => {
           </Accordion>
         </div>
         <div className="my-8">
-          <Accordion>
+          <Accordion className={style.flightBookDetail}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
@@ -412,7 +412,7 @@ const FlightBookLeftSide = () => {
       <div className="addons">
         <h4>Addons </h4>
         <div className="my-8">
-          <Accordion>
+          <Accordion className={style.flightBookDetail}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"

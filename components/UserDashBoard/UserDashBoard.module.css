@@ -19,13 +19,9 @@
 }
 .rightSideBar {
   width: 100%;
-  /* background-image:url(../../public/assets/destination.jpeg); */
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
   background:fixed;
   height:auto;
-
   position: relative;
   background-image: url(/_next/static/media/banner.f7be9e77.png);
   background-size: cover;
@@ -63,6 +59,10 @@
 }
 .icon {
   font-size: 22px !important;
+}
+.bookingHistory{
+  background:#4AB449 !important;
+  color:white !important;
 }
 
 /* admin dashboard right side styling  */
@@ -145,11 +145,11 @@
 }
 .heroBoxWrap {
   margin-top: 30px;
-  width: 1000px !important;
-  background: #19abe3 !important;
+  width: 1105px !important;
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
   color: #fff !important;
   position: relative;
-    z-index: 0 !important;
+  z-index: 0 !important;
 }
 .menubar {
   background: #4AB449!important;
@@ -165,8 +165,8 @@
 .searchBtn {
   border: 1px solid #fff !important;
   transition: all 0.3s ease-in-out;
-  width: 200px !important;
-  padding: 10px 0px !important;
+  width: 213px !important;
+  padding: 14px 0px !important;
   font-size: 14px !important;
 
 }
@@ -178,16 +178,14 @@
 }
 
 .active {
-  
   background: #4AB449;
   display: flex;
-  padding-left: 10px;
+  padding-left: 0px;
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
   position: fixed;
-  left: -175px;
+  left: -177px;
   z-index: 999 !important;
-
 }
 .iconsBarHide {
   display: none;
@@ -249,11 +247,15 @@ display:block;
 transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
 z-index: 9999999999 !important;
 }
+.tabLeft{
+  margin-left: 307px !important;
+}
 
 
 
-
-
+.activeNave{
+  background:red;
+}
 
 /* dashboard left side styling  */
 .dashBoardLeftSide {

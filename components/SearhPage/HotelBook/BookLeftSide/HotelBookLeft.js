@@ -19,13 +19,12 @@ import { TrendingFlat } from "@mui/icons-material";
 import Image from "next/image";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import milvik from '../../../../public/assets/milvik.png';
 import Link from "next/link";
 import style from './Book.module.css'
-import book from '../../../../public/assets/hotell.jpeg';
+import book from '../../../../public/assets/hotel11.jpg';
 import grameenphon from '../../../../public/assets/grameenphon.png'
-import lotto from '../../../../public/assets/lotto.png'
-import aorong from '../../../../public/assets/aorong.png'
+import lotto from '../../../../public/assets/grameenphon.png'
+import aorong from '../../../../public/assets/grameenphon.png'
 const HotelBookLeft = () => {
      return (
           <div>
@@ -314,12 +313,12 @@ const HotelBookLeft = () => {
          <div className="w-full flex  justify-between">
            <div className="flex items-center">
            <input type="checkbox" />
-            <small>Yes, I want to secure my journey</small>
+            <small className="ml-3">Yes, I want to secure my journey</small>
            </div>
           </div>
           <div className="flex items-center ">
             <input type="checkbox" />
-            <small>No, I want to take the risk</small>
+            <small className="ml-3">No, I want to take the risk</small>
           </div>
           <div className="mb-5 mt-14">
             <small >By adding travel insurance policy, you are agreeing to the Terms & Conditions .</small>

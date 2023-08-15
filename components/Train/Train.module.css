@@ -38,21 +38,46 @@
 
 
 /* menu styling  */
+.wrapMenu{
+  z-index: 999 !important;
+  display: flex;
+}
 .menu{
-  display:flex;
+  display: flex;
   justify-content: space-between;
-  padding:23px 20px;
-  font-size:18px;
-  background:white;
+  font-size: 18px;
+  background: #4AB449;
   border-top-left-radius: 20px;
-  border-top-right-radius:20px;
-  z-index:99;
-  
+  border-top-right-radius: 20px;
+  color: #fff;
+  z-index: 99;
+  font-size:16px;
+  position:relative;
+   
+ }
+ .menu li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
 }
-.menu li{
-  display:flex;
-  z-index: 999 IM !important;
+
+ .activeMenu{
+  border-right:none;
+  background:#19ABE3 !important;
+ }
+
+.firstChild{
+  border-top-left-radius: 17px !important;
+    padding-left: 25px;
 }
+ .lastChild{
+  border-right:1px solid #fff !important;
+  border-top-right-radius: 17px !important;
+ }
+
 .menu li P{
  
   z-index: 999 !important;

@@ -19,24 +19,17 @@
      margin-right:5px;
      margin-left:5px;
 }
-.globalProfile{
-     background:white;
-     width:100%;
-     height:50px;
-     z-index: 99;
-     margin-top:30px;
-     display:flex;
-     align-items: center;
-     padding-left:30px;
-}
+
 .globalProfile p{
      font-size:12px;
 }
 .profileMiddle{
-     width:100%;
-     height:100%;
-     background:#E9F6E9;
-     padding:30px;
+     height: 100%;
+     background: #4AB449;
+     padding: 50px;
+    margin-top:30px;
+    margin-left:50px;
+    margin-right:50px;
 
 }
 .userInfo{
@@ -72,6 +65,10 @@
      border-bottom: 1px solid #ddd;
      width:10px;
      height:auto;
+}
+
+.transitionInfo, .bankListInfo, .passengerInfo, .companyInfo, .paymentInfo, .profileInfo, .returnChangeBookInfo, .flightRightSide{
+     width:100%;
 }
 
 /* flight styling */

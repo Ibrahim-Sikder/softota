@@ -1,0 +1,116 @@
+.visa{
+    position: relative;
+    z-index:999 !important;
+    background:#4AB449;
+    padding:50px;
+    margin:50px;
+}
+.visaDetailsWrap{
+    margin-top: 12px;
+    width:1150px;
+
+}
+.visaType{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+.downloadPdf{
+    width: 200px;
+    padding: 4px 0px;
+    background-image: linear-gradient(216deg, #066c05, #055472 ) !important;
+}
+.location{
+    color:#fff !important;
+
+}
+.visaLocation{
+    width: 200px;
+    background: #19ABE3;
+    margin-top: 20px;
+    color: white;
+    padding: 10px;
+}
+.coastHalf{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 26px;
+    color: white;
+    font-size: 14px;
+
+}
+.coastHalf span{
+    width: 15.66%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 5px;
+
+}
+.priceInfoHead{
+    background: #163816 !important;
+}
+.showBtn{
+    background-image: linear-gradient(216deg, #066c05, #055472 );
+    width: 142px;
+    padding: 5px 0px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.detailHalf{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: #19ABE3;
+    color: #fff;
+    padding: 5px 0px;
+    font-size: 16px;
+   
+
+}
+.detailHalf span{
+    width: 15.66%;
+    overflow: hidden;
+    text-align: left;
+    padding-left:5px;
+
+}
+.pricInfo{
+    width:1150px;
+}
+.priceInfo{
+    width: 380px;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.selectedProfession{
+    margin-top:50px;
+}
+.professionType{
+    
+    background: #06671D;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid #fff;
+
+}
+
+
+.visaRule ul li{
+    color: white;
+    margin-bottom: 20px;
+    line-height: 30px;
+    display: flex;
+
+}
+.ruleIcon{
+    color: #19ABE3 !important;
+    margin-right: 12px;
+}

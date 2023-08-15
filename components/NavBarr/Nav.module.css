@@ -1,5 +1,6 @@
 .navbarMain {
   width: 100%;
+
 }
 
 .navbarBanner {
@@ -9,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .navbarBanner h2 {
@@ -26,6 +28,20 @@
   height: 90px;
   background: #e6f8ff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999 !important;
+  box-shadow: #4AB449 0px 5px 15px;
+  transition: all .5s cubic-bezier(0, -0.07, 1, 1.02);
+  border-bottom: 1px solid #4AB449;
+  width:100%;
+  height: 90px;
+
 }
 .logo {
   height: 60px;
@@ -199,6 +215,9 @@
   .navigationMain {
     display: none;
   }
+  .sticky{
+    display:none;
+  }
   .mobLogo {
     height: 65px;
     width: 129px;
@@ -211,11 +230,15 @@
     padding: 0px 20px;
   }
   .takeOf {
-    color: #26ade2;
+    color: #26ade2 !important;
     cursor: pointer;
+    font-size: 25px;
+
   }
   .landOf {
     color: white;
+    cursor:pointer;
+    font-size:25px ;
   }
   .activeNavMob {
     width: 100%;

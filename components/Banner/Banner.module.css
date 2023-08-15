@@ -11,7 +11,27 @@
   justify-content: center;
   align-items: center;
 }
+.activeMenuList{
+  display: flex;
+  z-index: 999 IM !important;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+ }
+ .menuList{
+  display: flex;
+  z-index: 999 IM !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  background: #19ABE3;
+  padding: 15px 20px;
+  border-radius: 10px;
+ }
 
+
+ 
 .navbarBanner h2 {
   font-family: PoppinsRegular;
   font-size: 16px;
@@ -264,34 +284,6 @@
     color: black !important;
   }
 }
-@media only screen and (max-width: 450px) {
-  .navigationMOb {
-    height: 55px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .searchResult{
@@ -366,7 +358,7 @@
 .heroBoxMain {
   width: 1105px;
   height: auto;
-  background: #c6e8f1 0.6;
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
   z-index: 9999 !important;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -375,13 +367,13 @@
   top: 34px;
 }
 .departDate{
-  background: #19ABE3;
-  height: 68px;
-  width: 400px;
+  background: transparent;
+  height: 70px;
+  width: 370px;
   font-size: 14px;
-  margin-right: 5px;
+  margin-right: 10px;
   color: white;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #fff;
   padding: 8px !important;
 }
@@ -397,14 +389,18 @@
 }
 .multiplePackage{
   width: 210px;
-  height: 68px;
+  height: 70px;
   border: 1px solid #fff;
-  background: #19ABE3;
+  background: transparent;
   color: #fff;
   margin-right: 0px;
-  padding: 8px;
   font-size: 14px;
   margin-bottom: 8px;
+  margin-right: 8px;
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right:10px;
 }
 
 .passengerWrap{
@@ -498,14 +494,14 @@ font-size:14px;
 .package2,
 .package3,
 .package4 {
-  width: 400px;
-  height: 68px;
-  background: #19ABE3;
-  border-radius: 5px;
+  width: 370px;
+  height: 70px;
+  background: transparent;
+  border-radius: 3px;
   color: white;
   font-size: 14px !important;
-  padding: 8px;
-  margin-right: 5px;
+  padding: 10px;
+  margin-right: 10px;
   border: 1px solid #fff;
 }
 
@@ -536,38 +532,46 @@ font-size:14px;
 }
 
 .date {
-  border-bottom-left-radius: 7px;
-  border-top-left-radius: 7px;
-  border: 1px px solid #4ab449;
-  background: #19ABE3;
-  height: 68px;
-  width: 195px;
-  font-size: 14px;
-  padding: 8px;
-  border: 1px solid #fff;
-  color: white;
+  border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    border: 1px px solid #fff;
+    width: 185px;
+    font-size: 14px;
+    border: 1px solid #fff;
+    color: white;
+    padding: 12px;
+    border-left: 1px solid #fff !important;
+    border-top: 1px solid #fff !important;
+    border-bottom: 1px solid #fff !important;
+    border-right: none !important;
+    height:70px;
 }
 .date2 {
-  background: #19ABE3;
-  border-bottom-right-radius: 7px;
-  border-top-right-radius: 7px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
   border: 1px solid #4ab449;
-  height: 68px;
-  width: 207.5px;
+  height: 70px;
+  width: 185px;
   color: #fff;
   padding: 8px;
-  margin-right: 5px;
   font-size: 14px;
   border: 1px solid #fff;
+  margin-right: 10px;
+  border-radius: 1px solid #fff !important;
+  border: right;
+  border-right: 1px solid #fff !important;
+  border-top: 1px solid #fff !important;
+  border-bottom: 1px solid #fff !important;
 }
 .package {
   top: 170px;
   left: 125px;
 }
 .showModalIcon{
-  margin-right: 22px;
+  margin-right: 2px;
   cursor: pointer;
   margin-top: 19px;
+  font-size: 25px !important;
 }
 
 .package2 {
@@ -604,11 +608,10 @@ font-size:14px;
   text-align: center;
   padding-bottom: 35px;
   width: 100%;
-  margin-top: -35px;
 }
 .heroBoxBtn {
   top: 346px;
-  background: #19abe3;
+  background-image: linear-gradient(90deg, #4ab449, #19ABE3);
   color: white;
   border-radius: 5px;
   padding: 12px 0px;
@@ -616,32 +619,72 @@ font-size:14px;
   text-align: center;
   border: 1px solid #fff;
   font-size: 15px;
+  transition:al .5s ease-in-out;
+}
+.heroBoxBtn:hover {
+  background-image: linear-gradient(90deg,  #19ABE3, #4ab449);
 }
 .flightWay{
   width:100%;
   margin:0 auto;
 }
 /* menu styling  */
-.menu {
+.wrapMenu{
+  z-index: 999 !important;
+  display: flex;
+}
+.menu{
   display: flex;
   justify-content: space-between;
-  padding: 18px 20px;
   font-size: 18px;
   background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  color: white;
-  align-items: center;
-}
-.menu li {
+  color: #fff;
+  z-index: 99;
+  font-size:16px;
+  position:relative;
+   
+ }
+ .menu li{
   display: flex;
-  z-index: 999  !important;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
 }
+
+ .activeMenu{
+  border-right:none;
+  background:#19ABE3 !important;
+ }
+
+.firstChild{
+  border-top-left-radius: 17px !important;
+    padding-left: 25px;
+}
+ .lastChild{
+  border-right:1px solid #fff !important;
+  border-top-right-radius: 17px !important;
+ }
+
 .menu li P {
   z-index: 999 !important;
 }
+.activeLink{
+  background:#19ABE3 !important;
+}
+
+.modalCloseBtn{
+  background: transparent;
+  position: absolute;
+  color: #42A242 !important;
+  right: 22px;
+  top: 2px;
+  font-size: 20px !important;
+}
+
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
@@ -658,18 +701,31 @@ font-size:14px;
   .bannerWrap h2 {
     font-size: 25px;
   }
+  .wrapMenu{
+    flex-wrap: wrap;
+    justify-content: center;
+}
   .menu {
     background: none;
     flex-wrap: wrap;
+    margin-bottom: 44px;
+    padding-top: 40px;
   }
   .menu li {
-    margin-right: 50px;
-    margin-left: 50px;
-    margin-bottom: 30px;
-    z-index: 999 !important;
-    color: black;
-  }
+    height: 82%;
+    width: 100%;
+    border:none;
+}
+.lastChild {
+  border-right:none !important;
+}
  
+
+
+
+
+
+
 
   .heroBoxBtn {
     top: 445px;
@@ -706,22 +762,24 @@ font-size:14px;
     width: 190px;
   }
 
-  .menu {
-    padding: 10px 0px;
-  }
-  .menu li:nth-child(6) {
-    padding-right: 0px;
-    margin-left: 39px;
-  }
-  .menu li:nth-child(7) {
-    padding-right: 0px;
-    margin-left: 150px;
-  }
-  .menu li:nth-child(1) {
-    padding-right: 0px;
-    margin-right: 0px;
-    margin-left: 39px;
-  }
+.wrapMenu {
+    justify-content: space-between !important;
+    padding: 0px 30px;
+}
+.firstChild{
+  border-top-left-radius: 0px !important;
+  padding-left: 0px;
+
+}
+.lastChild{
+  margin-left: 113px;
+
+}
+
+.date{
+  border-right:1px solid #fff !important;
+}
+  
   .oneWayPackage, .roundTripWrap, .groupFlight {
     display: block;
 }
@@ -734,9 +792,6 @@ font-size:14px;
   width: 90%;
   margin: 0 auto;
 }
-.package, .package2, .package3, .package4 {
-  height: 54px;
-}
 
 .package input, .package3 input, .package2 input, .package4 input, .packageDate input {
   width: 98%;
@@ -744,7 +799,6 @@ font-size:14px;
 .departDate, .package4 {
   width: 90%;
   margin: 0 auto;
-  height: 55px;
 }
 .oneWayPackage, .roundTripWrap, .groupFlight {
   margin-bottom:0px;
@@ -755,7 +809,6 @@ font-size:14px;
 .package, .package2, .package3, .package4 {
   width: 90%;
   margin: 5px auto;
-  height: 54px;
 }
 
   .bestPlaceHead {
@@ -791,11 +844,9 @@ font-size:14px;
 }
 
 @media only screen and (max-width: 400px) {
-  .menu li {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
-  
+  .wrapMenu {
+    padding: 0px 6px;
+}
 
 
   .heroBoxBtn {

@@ -13,7 +13,9 @@ const index = () => {
       <Vissa></Vissa>
       <Countries></Countries>
       <Passion></Passion>
+      <div className="my-10">
       <Travel></Travel>
+      </div>
       <Footer></Footer>
     </section>
   );

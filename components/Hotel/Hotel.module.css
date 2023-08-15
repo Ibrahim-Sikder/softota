@@ -9,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100vw !important;
-  height: 500px;
+  height: 450px;
   box-sizing: border-box;
   background-position: center;
   
@@ -27,7 +27,7 @@
   background: #c6e8f1 0.6;
   z-index: 9999 !important;
   margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
   border-radius: 37px;
   position: relative;
   top: 28px;
@@ -39,11 +39,10 @@
 .package4 {
   width: 415px;
   height: 60px;
-  background: white;
   position: absolute;
   border-radius: 5px;
   border: 1px solid #fff;
-  background: #19abe3;
+  background: transparent;
   color: white;
   padding: 10px;
 }
@@ -63,7 +62,7 @@
   left: 134px;
   height: 60px;
   width: 207px;
-  background: #19abe3;
+  background: transparent;
   color: white;
   font-size: 14px;
   padding: 10px;
@@ -77,7 +76,7 @@
   left: 342px;
   height: 60px;
   width: 207px;
-  background: #19abe3;
+  background: transparent;
   color: white;
   padding: 10px;
   border-top-right-radius: 5px;
@@ -123,7 +122,7 @@
   left: 50%;
   transform: translateX(-50%);
   top: 292px;
-  background: #19abe3;
+  background: transparent;
   color: white;
   font-size: 18px;
   border-radius: 5px;
@@ -132,20 +131,49 @@
   width: 210px;
 }
 /* menu styling  */
-.menu {
+
+.wrapMenu{
+  z-index: 999 !important;
+  display: flex;
+}
+.menu{
   display: flex;
   justify-content: space-between;
-  padding: 16px 20px;
   font-size: 18px;
-  background: #4ab449;
+  background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  color: white;
-}
-.menu li {
+  color: #fff;
+  z-index: 99;
+  font-size:16px;
+  position:relative;
+   
+ }
+ .menu li{
   display: flex;
-  z-index: 999 IM !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
 }
+
+ .activeMenu{
+  border-right:none;
+  background:#19ABE3 !important;
+ }
+
+.firstChild{
+  border-top-left-radius: 17px !important;
+    padding-left: 25px;
+}
+ .lastChild{
+  border-right:1px solid #fff !important;
+  border-top-right-radius: 17px !important;
+ }
+
+
+
 .menu li P {
   z-index: 999 !important;
 }
@@ -160,11 +188,12 @@
 }
 .tourTrending{
   background: #FFFFFF;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: #4AB449 0px 5px 10px, #19ABE3 0px 7px 7px;
   width: 260px !important;
   margin-right: 20px;
   height: 440px;
   text-align: center;
+  margin-bottom: 19px;
 
 
 }
@@ -224,7 +253,7 @@ transform:scale(1.5)
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
-    width: 98%;
+    width: 97.9%;
   }
   .package {
     left: 85px;
@@ -247,20 +276,26 @@ transform:scale(1.5)
   .bannerWrap h2 {
     font-size: 25px;
   }
+  .wrapMenu{
+    flex-wrap: wrap;
+    justify-content: center;
+}
   .menu {
     background: none;
     flex-wrap: wrap;
+    margin-bottom: 44px;
+    padding-top: 40px;
   }
   .menu li {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    z-index: 999 !important;
-    color: black;
-  }
-  .menu li:nth-child(7) {
-    margin-left: 120px;
-  }
+    height: 82%;
+    width: 100%;
+    border:none;
+}
+.lastChild {
+  border-right:none !important;
+}
+ 
+
   .heroBoxMain {
     width: 95%;
     height: 90%;
@@ -280,9 +315,7 @@ transform:scale(1.5)
 }
 
 .destination {
-  width: 1100px;
-  margin-left: 250px;
-  margin-bottom: 100px;
+  margin-bottom: 94px;
   height: auto;
 }
 .trendingHead {
@@ -293,13 +326,7 @@ transform:scale(1.5)
   overflow: hidden;
 }
 
-/* .tourTrending {
-  height: 500px;
-  background: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 280px;
-  margin: 0 auto;
-} */
+
 .swiperImg {
   height: 280px !important;
   transform: scale(1);
@@ -376,7 +403,7 @@ transform:scale(1.5)
 @media only screen and (max-width: 1024px) {
   .destination {
     width: 100%;
-    margin-left: 0px;
+    margin-left: 37px;
   }
 
   .trending {
@@ -398,8 +425,8 @@ transform:scale(1.5)
 }
 @media only screen and (max-width: 768px) {
   .destination {
-    width: 100%x;
-    margin-left: 0px;
+    width: 100%;
+    margin-left: 58px;
   }
   .trending {
     height: 471px;
@@ -458,9 +485,32 @@ transform:scale(1.5)
 }
 
 @media only screen and (max-width: 500px) {
+
+  .wrapMenu {
+    justify-content: space-between !important;
+    padding: 0px 30px;
+}
+.firstChild{
+  border-top-left-radius: 0px !important;
+  padding-left: 0px;
+
+}
+.lastChild{
+  margin-left: 113px;
+}
+
+
+.menu {
+  padding-top: 0px;
+}
+
+
+
+
   .destination {
     width: 100%;
-    margin-left: 0px;
+    margin-left: 13px;
+    text-align: center;
   }
   .trendingHead {
     width: 100%;
@@ -475,10 +525,11 @@ transform:scale(1.5)
     border-radius: 0px;
   }
   .heroBoxBtn {
-    top: 540px;
+    top: 544px;
+    width: 195px;
   }
   .package4 {
-    top: 468px;
+    top: 475px;
     right: 40px;
     width: 80%;
   }
@@ -492,18 +543,18 @@ transform:scale(1.5)
   }
 
   .package {
-    top: 260px;
+    top: 268px;
     width: 80%;
     left: 41px;
     padding-left: 5px;
   }
   .date,
   .date2 {
-    top: 399px;
-    width: 40%;
+    top: 406px;
+    width: 39.5%;
   }
   .package2 {
-    top: 330px;
+    top: 337px;
     width: 80%;
     left: 41px;
     padding-left: 5px;
@@ -532,21 +583,15 @@ transform:scale(1.5)
 }
 
 @media only screen and (max-width: 400px) {
-  .menu li {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
+  .wrapMenu {
+    padding: 0px 6px;
+}
+
   .date2 {
     left: 187px;
   }
 
-  .date,
-  .date2 {
-    top: 397px;
-    width: 39.5%;
-    margin: 0 auto;
-    font-size: 12px;
-  }
+  
   .package4 {
     right: 32px;
   }
@@ -556,7 +601,5 @@ transform:scale(1.5)
   .bannerWrap {
     margin-bottom: 433px;
   }
-  .package2 {
-    top: 328px;
-  }
+ 
 }

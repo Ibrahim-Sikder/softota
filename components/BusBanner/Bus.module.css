@@ -9,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100vw !important;
-  height: 500px;
+  height: 433px;
   box-sizing: border-box;
   background-position: center;
   /* background: linear-gradient(
@@ -29,7 +29,7 @@
 .heroBoxMain {
   width: 1105px;
   height: 381px;
-  background: #c6e8f1 0.6;
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
   z-index: 9999 !important;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -49,7 +49,7 @@
 .package4 {
   width: 415px;
   height: 65px;
-  background: #19abe3;
+  background: transparent;
   position: absolute;
   border-radius: 5px;
   border: 1px solid #fff;
@@ -68,7 +68,7 @@
 }
 
 .date {
-  background: #19abe3;
+  background: transparent;
   position: absolute;
   border: 1px solid #fff;
   padding: 10px;
@@ -83,7 +83,7 @@
 }
 
 .date2 {
-  background: #19abe3;
+  background: transparent;
   position: absolute;
   border: 1px solid #fff;
   padding: 10px;
@@ -135,31 +135,82 @@
   left: 50%;
   transform: translateX(-50%);
   top: 290px;
-  background: #19abe3;
+  background-image: linear-gradient(135deg, #278526, #4997b5);
   color: white;
   font-size: 18px;
   border-radius: 5px;
   padding: 9px 0px;
   width: 200px;
+  transition: all .5s cubic-bezier(0.32, 0.25, 0.5, 0.5);
+}
+.heroBoxBtn:hover{
+  background-image: linear-gradient(-135deg, #278526, #4997b5);
+
 }
 /* menu styling  */
-.menu {
+.wrapMenu{
+  z-index: 999 !important;
+  display: flex;
+}
+.menu{
   display: flex;
   justify-content: space-between;
-  padding: 16px 20px;
   font-size: 18px;
-  background: #4ab449;
+  background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: #fff;
-}
-.menu li {
+  z-index: 99;
+  font-size:16px;
+  position:relative;
+   
+ }
+ .menu li{
   display: flex;
-  z-index: 999 IM !important;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #fff;
 }
+
+
+ .activeMenu{
+  border-right:none;
+  background:#19ABE3 !important;
+ }
+
+.firstChild{
+  border-top-left-radius: 17px !important;
+    padding-left: 25px;
+}
+ .lastChild{
+  border-right:1px solid #fff !important;
+  border-top-right-radius: 17px !important;
+ }
+
+
 .menu li P {
   z-index: 999 !important;
 }
+.activeMenuList{
+  display: flex;
+  z-index: 999 IM !important;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 10px;
+ }
+ .menuList{
+  display: flex;
+  z-index: 999 IM !important;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+  background: #19ABE3;
+  padding: 15px 20px;
+  border-radius: 10px;
+ }
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
@@ -186,20 +237,24 @@
   .bannerWrap h2 {
     font-size: 25px;
   }
+  .wrapMenu{
+    flex-wrap: wrap;
+    justify-content: center;
+}
   .menu {
     background: none;
     flex-wrap: wrap;
+    margin-bottom: 44px;
+    padding-top: 8px;
   }
   .menu li {
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    z-index: 999 !important;
-    color: black;
-  }
-  .menu li:nth-child(7) {
-    margin-left: 120px;
-  }
+    height: 82%;
+    width: 100%;
+    border:none;
+}
+.lastChild {
+  border-right:none !important;
+}
   .heroBoxMain {
     width: 95%;
     height: 90%;
@@ -276,12 +331,24 @@
 
 @media only screen and (max-width: 500px) {
   .bannerWrap {
-    margin-bottom: 300px;
+    height: 723px;
   }
   .heroBoxMain {
     height: 645px;
     border-radius: 0px;
   }
+  .wrapMenu {
+    justify-content: space-between !important;
+    padding: 0px 30px;
+}
+.firstChild{
+  border-top-left-radius: 0px !important;
+  padding-left: 0px;
+
+}
+.lastChild{
+  margin-left: 113px;
+}
   .heroBoxBtn {
     top: 562px;
     width: 209px;
@@ -331,10 +398,10 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .menu li {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
+  .wrapMenu {
+    padding: 0px 6px;
+}
+
   .date2 {
     left: 187px;
   }
@@ -350,7 +417,5 @@
   .heroBoxBtn {
     padding: 14px 15px;
   }
-  .bannerWrap {
-    margin-bottom: 433px;
-  }
+ 
 }

@@ -1,0 +1,81 @@
+.activeLink{
+  background: #19ABE3 !important;
+  width: 158px !important;
+  height: 68px !important;
+  z-index: 99 !important;
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+ 
+  .active{
+    background: #4AB449 !important;
+    width: 158px !important;
+    height: 68px !important;
+    z-index: 99 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 17px;
+    border-top-left-radius: 17px;
+  }
+.active:nth-child(1){
+  border-right:none;
+}
+.active:nth-child(2){
+  border-right:none;
+}
+.active:nth-child(3){
+  border-right:none;
+}
+
+@media only screen and (max-width:1024px){
+  .activeLink{
+    width: 144px !important;
+    }
+   
+    .active{
+      width: 143px !important;
+    }
+
+}
+@media only screen and (max-width:768px){
+  .activeLink{
+    width: 175px !important;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    }
+   
+    .active{
+      background: transparent !important;
+       width: 175px !important;
+      height: 68px !important; 
+      z-index: 99 !important;
+    }
+    .astChild {
+      border-right: none !important;
+  }
+
+}
+@media only screen and (max-width:600px){
+  .activeLink{
+    width: 146px !important;
+    }
+   
+    .active{
+      width: 146px !important;
+    }
+
+}
+@media only screen and (max-width:400px){
+  .activeLink{
+    width: 146px !important;
+    }
+   
+    .active{
+      width: 146px !important;
+    }
+
+}

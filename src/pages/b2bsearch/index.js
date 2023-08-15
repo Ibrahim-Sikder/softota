@@ -23,7 +23,9 @@ const Flight = () => {
               </div>
             </div>
             <div>
-              <FlightSearch />
+             <div className={style.flightSearchWrap}>
+             <FlightSearch />
+             </div>
             </div>
           </div>
 

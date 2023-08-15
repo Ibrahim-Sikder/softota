@@ -5,17 +5,28 @@ import Logo from "../../public/assets/logo.png";
 import Link from "next/link";
 import style from "./Nav.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
 const Nav = () => {
   const [mobActive, setMobActive] = useState(0);
+  const [stickyMenu, setStickyMenu] = useState('bg-red-600')
+  useEffect(() => {
+const handleScroll = ()=>{
+  setStickyMenu(window.scrollY > 50)
+}
+window.addEventListener('scroll', handleScroll);
+return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+
+
   return (
     <div className={style.navbarMain}>
       <div className={style.navbarBanner}>
         <svg
-          className="text-white"
+          className="text-[#4AB449]"
           xmlns="http://www.w3.org/2000/svg"
           width={25}
           height={25}
-          fill="none"
+          fill="#4AB449"
         >
           <path
             fill="#4AB449"
@@ -27,7 +38,8 @@ const Nav = () => {
         <h2>+88-01885-071-488</h2>
         <p>Contact Us</p>
       </div>
-      <div className={style.navigationMain}>
+    <div className={`${stickyMenu ? `${style.sticky}` : ` ` }`}>
+    <div className={style.navigationMain}>
         <div className={style.navigationContent}>
           <div className={style.navigationLeft}>
             <div  className={style.logo}>
@@ -67,6 +79,7 @@ const Nav = () => {
           </div>
         </div>
       </div>
+    </div>
       {mobActive === 0 ? (
         <div className={style.navigationMOb}>
           <Image

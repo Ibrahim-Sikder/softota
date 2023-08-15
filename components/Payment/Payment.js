@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import style from "./Payment.module.css";
 import Image from "next/image";
-import payment from "../../public/payment.png";
-import payment2 from "../../public/payment2.png";
-import payment3 from "../../public/payment3.png";
-import payment4 from "../../public/payment4.png";
-import payment5 from "../../public/payment5.png";
-import term from "../../public/term.png";
+import payment from "../../public/assets/payment5.png";
+import payment2 from "../../public/assets/payment2.png";
+import payment3 from "../../public/assets/payment3.png";
+import payment4 from "../../public/assets/payment4.png";
+import payment5 from "../../public/assets/payment.png";
+import term from "../../public/assets/payment6.png";
 import { FaEyeSlash, FaEye, FaStar } from "react-icons/fa";
 const Payment = () => {
+  const [showPassword, setShowPassword] = useState(false);
 
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = () => {};
 
 
   return (
@@ -46,7 +50,7 @@ const Payment = () => {
           <div className={style.singlePayment}>
             <div className="relative">
               <label className={style.inputLabel}>Email </label> <br />
-              <span className={style.star}>
+              <span className={style.star1}>
                 <FaStar />
               </span>
               <input
@@ -199,6 +203,7 @@ const Payment = () => {
                 alt="Picture of the author"
                 width={20}
                 height={10}
+                className="mr-3"
               />
               <p>
                 {" "}

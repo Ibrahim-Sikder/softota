@@ -268,9 +268,11 @@
         margin-top:20px;
    }
    .continueBtn{
-        width:100%;
-        height:35px;
-        background:#4AB449;
-        color:white;
-        margin-bottom:30px;
+     width: 100%;
+     height: 35px !important;
+     color: white;
+     margin-bottom: 30px;
+     padding: 30px !important;
+        background:#4AB449 !important;
+        
    }

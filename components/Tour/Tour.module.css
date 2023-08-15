@@ -7,13 +7,7 @@
      background-size:cover;
      background-repeat:no-repeat;
      max-width:100vw !important;
-     height:350px;
-     /* background: linear-gradient(
-          180deg,
-          rgba(230, 248, 255, 0.3) 0%,
-          rgba(230, 248, 255, 0.18) 0.01%,
-          rgba(38, 173, 226, 0.5) 100%
-        ); */
+     height:370px;
    }
    
    .bannerWrap h2{
@@ -26,7 +20,7 @@
    .heroBoxMain{
     width: 1105px;
     height: 332px;
-    background: #C6E8F1 0.6;
+    background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
     z-index: 9 !important;
     margin: 0 auto;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -38,7 +32,11 @@
    
    
    /* menu styling  */
-   .menu{
+   .wrapMenu{
+    z-index: 999 !important;
+    display: flex;
+  }
+  .menu{
     display: flex;
     justify-content: space-between;
     font-size: 18px;
@@ -48,8 +46,32 @@
     color: #fff;
     z-index: 99;
     font-size:16px;
+    position:relative;
      
    }
+   .menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #fff;
+  }
+  
+   .activeMenu{
+    border-right:none;
+    background:#19ABE3 !important;
+   }
+  
+  .firstChild{
+    border-top-left-radius: 17px !important;
+      padding-left: 25px;
+  }
+   .lastChild{
+    border-right:1px solid #fff !important;
+    border-top-right-radius: 17px !important;
+   }
+  
 
    .menu li P{
     
@@ -82,7 +104,6 @@
    
    }
    .travelForm{
-    background: #36B2E0;
     width: 420px;
     height: 65px;
     border-radius: 5px;
@@ -103,7 +124,6 @@
    .singleTravel{
     width: 50%;
     border: 1px solid #fff;
-    background: #26ADDF;
     padding: 10px;
     color: #fff;
     font-size: 12px;
@@ -117,7 +137,6 @@
    .searchTrainBtn{
      width: 235px;
      height: 55px;
-     background: #19ABE3;
      color: white;
      justify-content: center;
      display: flex;
@@ -127,7 +146,20 @@
      left: 50%;
      transform: translateX(-50%);
      border-radius:5px;
+     
+     
    }
+   .searchTrainBtn button{
+    border: 1px solid #fff !important;
+    font-size: 16px;
+    width: 200px;
+    padding: 7px 0px;
+    top: -7px;
+    position: absolute;
+    background:transparent;
+}
+
+
 
 
 .tourTrending{
@@ -214,18 +246,19 @@
   background: #4AB449;
     place-content: center;
     place-items: center;
-    margin-top: 16px;
-    padding: 8px 25px;
+    margin-top: 27px;
     color: white;
     font-size: 14px;
     border-radius: 3px;
+    width: 150px;
+    height: 29px;
 
 }
    
    
    @media only screen and (max-width:1024px){
      .heroBoxMain{
-          width:95%;
+      width: 97.9%;
          
         }
         .bannerWrap h2 {
@@ -239,8 +272,8 @@
      
        }
        .destination{
-        width:100%;
-        margin-left:0px;
+        width: 100%;
+        margin-left: 30px;
     }
         
    }
@@ -255,18 +288,26 @@
      .bannerWrap h2{
        font-size:25px;
       }
-      .menu{
-       background:none;
-       flex-wrap:wrap;
-     }
-     .menu li{
-       margin-right:50px;
-       margin-left:50px;
-       margin-bottom:30px;
-       z-index: 999 !important;
-       color:black;
-   
-     }
+      .wrapMenu{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+      .menu {
+        background: none;
+        flex-wrap: wrap;
+        margin-bottom: 44px;
+        padding-top: 40px;
+      }
+      .menu li {
+        height: 82%;
+        width: 100%;
+        border:none;
+    }
+    .lastChild {
+      border-right:none !important;
+    }
+     
+    
      .heroBoxMain{
        width:95%;
        height:128%;
@@ -319,8 +360,8 @@
      width:200px;
    }
    .destination{
-    width:100%;
-   margin-left:0px;
+    width: 100%;
+    margin-left: 50px;
 }
 .bestPlaceHead{
   width:100%;
@@ -331,22 +372,24 @@
      
    @media only screen and (max-width:500px){
      .bannerWrap{
-      height:500px;
+     
+    height: 580px;
+
      }
      .bannerWrap h2{
        text-align: center;
       }
-      .menu li{
-       margin-right:20px;
-       margin-left:30px;
-       margin-bottom:30px;
-       z-index: 999 !important;
-       color:black;
+      .wrapMenu {
+        justify-content: space-between !important;
+        padding: 0px 30px;
+    }
+    .firstChild{
+      border-top-left-radius: 0px !important;
+      padding-left: 0px;
+    
+    }
    
-     }
-     .trainLi{
-       margin-left:140px !important;
-     }
+     
      .heroBoxBtn{
        padding:10px 28px;
        top: 326px;
@@ -397,7 +440,8 @@
     background: none;
  }
  .destination{
-  width:100%;
+  width: 100%;
+  margin-left: 70px;
 }
 .bestPlaceHead{
   width:100%;
@@ -411,10 +455,16 @@ width:100%;
   width: 93%;
   margin: 0 auto;
 }
+.searchTrainBtn button {
+  padding: 10px 0px;
+}
     
    }
    
 @media only screen and (max-width:400px){
+  .wrapMenu {
+    padding: 0px 6px;
+}
   .travelForm {
     width: 345px;
     margin-left: 8px;
@@ -438,6 +488,9 @@ width:100%;
   width: 86%;
   margin: 0 auto;
  
+}
+.destination {
+  margin-left: 47px;
 }
 
 }
