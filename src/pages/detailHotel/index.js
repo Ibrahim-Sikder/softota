@@ -7,11 +7,7 @@ import hotel3 from '../../../public/assets/hotell4.jpeg'
 import hotel4 from '../../../public/assets/hotell5.jpeg'
 import hotel5 from '../../../public/assets/hotell6.jpeg'
 import style from './detailH.module.css'
-// import clock from '../../../public/clock.png'
-// import location from '../../../public/location.png'
-// import clock3 from '../../../public/clock3.png'
-// import clock4 from '../../../public/clock4.png'
-// import clock5 from '../../../public/clock5.png';
+import { AccessTime,TransferWithinAStation } from '@mui/icons-material';
 import travel from '../../../public/travel2.png'
 import Footer from '../../../components/Footer/Footer'
 import Nav from '../../../components/NavBarr/Nav'

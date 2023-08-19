@@ -72,7 +72,7 @@ const FlightSearch = () => {
 
           <div className={style.flightButton}>
             <Button variant="outlined">
-              <ChevronLeftRounded />{" "}
+              <ChevronLeftRounded className={style.leftArrow} />{" "}
             </Button>
             <div className={style.perFlightPerson}>
               <h2>USA </h2>
@@ -111,7 +111,7 @@ const FlightSearch = () => {
               <small className="font-sm">2 Flight</small>
             </div>
             <Button variant="outlined">
-              <ChevronRightRounded />{" "}
+              <ChevronRightRounded className={style.leftArrow} />{" "}
             </Button>
           </div>
           <div className={style.flightPrice}>

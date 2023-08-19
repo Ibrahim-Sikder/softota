@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, {  useState } from "react";
 import style from "./Login.module.css";
 import Image from "next/image";
 import login from "../../public/login.png";
@@ -16,34 +16,7 @@ const Login = () => {
   const handleMouseDownPassword = () => {};
 
   const router = useRouter();
-  // const { signInWithGoogle, logIn } = useContext(AuthContext);
-  // const handleLogin = (event) => {
-  //   event.preventDefault();
-  //   const email = event.target.email.value;
-  //   const password = event.target.password.value;
-  //   console.log(email, password);
 
-  //   // logIn(email, password)
-  //   //   .then((result) => {
-  //   //     const user = result.user;
-  //   //     console.log(user);
-  //   //     // toast.success("User Login Successfully");
-  //   //     router.push("/");
-  //   //   })
-  //   //   .catch((err) => {
-  //   //     console.error(err);
-  //   //   });
-  // };
-
-  // const handleGoogleSignIn = () => {
-  //   signInWithGoogle()
-  //     .then((result) => {
-  //       console.log(result.user);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // };
 
  
   return (

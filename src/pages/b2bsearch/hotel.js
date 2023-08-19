@@ -7,6 +7,7 @@ import Travel from "../../../components/Travel/Travel";
 import Customer from "../../../components/Customer/Customer";
 import dynamic from "next/dynamic";
 import HotelHeroBox from "../../../components/UserDashBoard/HotelHeroBox/HotelHeroBox";
+import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 const Hotel = () => {
   return (
     <div>
@@ -18,11 +19,7 @@ const Hotel = () => {
           <div className={style.rightSideWrap}>
             <div className={style.profileTop}>
               <RightSideTopBar />
-              <div className={style.moveText}>
-                <marquee
-                  onmouseout="this.start()"
-                  onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey.</h2></marquee>
-              </div>
+             <MoveText/>
             </div>
             <HotelHeroBox />
             <HotelTrending />

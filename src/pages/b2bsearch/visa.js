@@ -10,6 +10,7 @@ import Travel from "../../../components/Travel/Travel";
 import HeroBox from "../../../components/UserDashBoard/HeroBox";
 import dynamic from "next/dynamic";
 import VisaHeroBox from "../../../components/UserDashBoard/VisaHeroBox";
+import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 
 
 const Visa = () => {
@@ -23,11 +24,7 @@ const Visa = () => {
           <div className={style.rightSideWrap}>
           <div className={style.profileTop}>
             <RightSideTopBar />
-            <div className={style.moveText}>
-              <marquee
-                onmouseout="this.start()"
-                onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! Reserver your best hotel.</h2></marquee>
-            </div>
+            <MoveText/>
           </div>
           <VisaHeroBox />
           <div className="mt-10">

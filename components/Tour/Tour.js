@@ -285,7 +285,6 @@ const Tour = () => {
                 </div>
               </div>
             </form>
-
            <div className={style.searchTrainBtn}>
               <button>Search Tours </button>
             </div>

@@ -1,15 +1,12 @@
 'use client'
 
 import Image from 'next/image'
-import React, { useContext, useState } from 'react'
+import React, {  useState } from 'react'
 import style from './SignUp.module.css';
 import login from '../../public/login.png';
 import facebook from '../../public/facebook.png';
 import google from '../../public/google.png';
 import Link from 'next/link';
-import { AuthContext } from '../../src/pages/context/AuthContext/AuthProvider';
-import { useRouter } from 'next/router';
-import { useNavigate } from 'react-router-dom';
 import { FaEyeSlash, FaEye  } from "react-icons/fa";
 const SignUp = () => {
      const [showPassword, setShowPassword] = useState(false);
@@ -17,64 +14,6 @@ const SignUp = () => {
      const handleMouseDownPassword = () => {
      };
 
-//      const router = useRouter()
-// const { createUser, signInWithGoogle} = useContext(AuthContext);
-//      const [fname, setName] = useState('')
-//      const [email, setEmail] = useState('')
-//      const [password, setPassword] = useState('') 
-//      const [title, setTitle] = useState('')
-//      const [loading, setLoading] = useState(false)
-
-//   const handleSignUp = event => {
-//     event.preventDefault();
-//     const name = event.target.fname.value;
-//     const email = event.target.email.value;
-//     const password = event.target.password.value;
-//     const post  = {name: name, email, password}
-//     console.log(post)
-
-//     createUser(email, password)
-//             .then(result => {
-//                 const user = result.user;
-//                 console.log(user);
-//                //  toast.success('User Created Successfully')
-//                 router.push('/')
-                
-//             })
-//             .catch(err => {
-//                 console.error(err)
-//             })
-
-//             try{
-//                fetch('/api/hello',{
-//                 method: 'POST',
-//                 headers:{
-//                   'Content-Type': 'application/json'
-//                 },
-//                 body: JSON.stringify(post)
-//               })
-//               .then(res=>res.json())
-//               .then(data=>setTitle(data))
-//             }
-//             catch(err){
-//               console.log(err)
-//             }
-//             finally{
-//               setLoading(false)
-//             }
-    
-//  }
-
-//  const handleGoogleSignIn = () => {
-//      signInWithGoogle()
-//          .then(result => {
-//              console.log(result.user)
-//              router('/')
-//          })
-//          .catch(err => {
-//              console.log(err);
-//          })
-//  }
 
 
      return (

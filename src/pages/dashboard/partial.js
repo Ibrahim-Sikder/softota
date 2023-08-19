@@ -7,6 +7,7 @@ import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLe
 import styles from './profile.module.css'
 import { FaAngleLeft } from "react-icons/fa";
 import RightSideTopBar from '../../../components/UserDashBoard/RightSideTopBar';
+import MoveText from '../../../components/UserDashBoard/MoveText/MoveText';
 const partial = () => {
      return (
           <div>
@@ -19,11 +20,7 @@ const partial = () => {
                          <div>
                               <div className={styles.profileTop}>
                                    <RightSideTopBar />
-                                   <div className={style.moveText}>
-                                        <marquee
-                                             onmouseout="this.start()"
-                                             onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! </h2></marquee>
-                                   </div>
+                                   <MoveText/>
                                    <div className={styles.flightHistory}>
                                         <div className="overflow-x-auto ">
                                              <table className="table  lg:table-auto columns-xl break-after-column">

@@ -42,6 +42,7 @@ const FlightBookLeftSide = () => {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
+          className={style.flightToggle}
         >
           <Typography>
             <div className="flex items-center justify-center">
@@ -118,6 +119,7 @@ const FlightBookLeftSide = () => {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
+          className={style.flightToggle}
         >
           <Typography>
             <h6 className="text-[#4AB449] font-sm">Flight Details </h6>
@@ -235,6 +237,7 @@ const FlightBookLeftSide = () => {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              className={style.flightToggle}
             >
               <Typography>
                 <div className="flex items-center">
@@ -325,6 +328,7 @@ const FlightBookLeftSide = () => {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              className={style.flightToggle}
             >
               <Typography>
                 <div className="flex items-center">
@@ -417,10 +421,10 @@ const FlightBookLeftSide = () => {
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
+              className={style.flightToggle}
             >
               <div className={style.travelInsurance}>
-                <h6 className="text-[#4AB449] font-sm">Travel Insurance </h6>
-                <Image alt="milvik" width={50} height={50} src={milvik}></Image>
+                <h6>Travel Insurance </h6>
               </div>
             </AccordionSummary>
             <AccordionDetails>
@@ -477,7 +481,7 @@ const FlightBookLeftSide = () => {
                 <div className="mt-10">
                   <div className="w-full flex  justify-between">
                     <div className="flex items-center">
-                      <input type="checkbox" />
+                      <input className="mr-2" type="checkbox" />
                       <small>Yes, I want to secure my journey</small>
                     </div>
                     <div>
@@ -486,7 +490,7 @@ const FlightBookLeftSide = () => {
                     </div>
                   </div>
                   <div className="flex items-center ">
-                    <input type="checkbox" />
+                    <input className="mr-2" type="checkbox" />
                     <small>No, I want to take the risk</small>
                   </div>
                   <div className="mb-5 mt-14">

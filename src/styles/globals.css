@@ -38,17 +38,19 @@ table {
 .table :where(td) {
   border-right: 1px solid #ddd;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   border-bottom:1px solid #4AB449;
 }
 .table :where(td):nth-last-of-type() {
   border-bottom: 3px solid #ddd !important;
 }
 .table :where(th) {
-      border-bottom: 1px solid #04a444;
-    text-align: center;
-    background: #f5f7fb;
-    font-size: 14px;
+  border: 1px solid #fff;
+  text-align: center;
+  background: #4AB449;
+  font-size: 14px;
+  color: white;
+
 }
 .table {
   width: 100%;
@@ -59,6 +61,10 @@ table {
 }
 .vertical-timeline::before {
   background: #4ab449 !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #fff !important;
+  background: #19ABE3 !important;
 }
 
 .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {

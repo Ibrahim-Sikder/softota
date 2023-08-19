@@ -297,13 +297,14 @@ const VisaHeroBox = () => {
           <option>Business Visa</option>
         </select>
           </div>
-        </div>
           <div className={style.visaBtn}>
-          <input type="text" placeholder="Visa Search" />
-            <Link className={style.visaIcon} href='/b2bsearch/visa/visaSearch'>
+            <Link href='/b2bsearch/visa/visaSearch'>
               <FaSistrix className={style.searchIcon}/>
+              <span>Search</span>
             </Link>
           </div>
+        </div>
+        
           </div>
         </div>
         

@@ -8,6 +8,7 @@ import styles from './profile.module.css'
 import { FaAngleLeft } from "react-icons/fa";
 import RightSideTopBar from '../../../components/UserDashBoard/RightSideTopBar';
 import dynamic from "next/dynamic";
+import MoveText from '../../../components/UserDashBoard/MoveText/MoveText';
 const transactions = () => {
      return (
           <div>
@@ -22,11 +23,7 @@ const transactions = () => {
                          <div>
                               <div className={styles.profileTop}>
                                    <RightSideTopBar />
-                                   <div className={style.moveText}>
-                                        <marquee
-                                             onmouseout="this.start()"
-                                             onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! </h2></marquee>
-                                   </div>
+                                   <MoveText/>
                                   <div className="mt-5">
                                   <div className={styles.flightHistory}>
                                         <div className="overflow-x-auto ">

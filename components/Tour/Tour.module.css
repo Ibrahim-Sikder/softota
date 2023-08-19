@@ -156,7 +156,11 @@
     padding: 7px 0px;
     top: -7px;
     position: absolute;
-    background:transparent;
+    background-image: linear-gradient(90deg, #4ab449, #19ABE3) !important;
+    transition:al .5s ease-in-out;
+}
+.searchTrainBtn button:hover {
+  background-image: linear-gradient(90deg,  #19ABE3, #4ab449) !important;
 }
 
 

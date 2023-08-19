@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const TeamCard = () => {
@@ -6,7 +7,11 @@ const TeamCard = () => {
               <div className="flex justify-between p-4">
                   <div className="flex space-x-4 items-center">
                       <div>
-                          <img src={reviewerImage} alt="" className="object-cover w-16 h-16 rounded-full bg-gray-400 shadow-2xl transform  group-hover:scale-110 duration-500" />
+                          <Image
+                          src={reviewerImage} alt="" className="object-cover w-16 h-16 rounded-full bg-gray-400 shadow-2xl transform  group-hover:scale-110 duration-500"
+                          width={16}
+                          height={16}
+                          />
                       </div>
                       <div>
                           <h4 className="text-xl font-bold">Ibrahim Sikder </h4>

@@ -3,8 +3,6 @@ import React from 'react'
 import AdminLeftSide from '../../../components/DashBoard/AdminLeftSide'
 import style from './account.module.css'
 import admin from '../../../public/admin.png'
-import start from '../../../public/start.png';
-import eye from '../../../public/eye.png';
 const index = () => {
      return (
           <section className={style.accounWra}>
@@ -32,26 +30,14 @@ const index = () => {
                               <div className='mr-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>First Name</label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='First Name '/>
                               </div>
                               <div className='ml-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Last Name</label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                  
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Last Name '/>
                               </div>
@@ -61,26 +47,14 @@ const index = () => {
                               <div className='mr-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Email </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Email  '/>
                               </div>
                               <div className='ml-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Password </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Password  '/>
                               </div>
@@ -90,26 +64,14 @@ const index = () => {
                               <div className='mr-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Mobile Number </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Mobile Number  '/>
                               </div>
                               <div className='ml-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Gender </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                  
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Gender  '/>
                               </div>
@@ -119,26 +81,14 @@ const index = () => {
                               <div className='mr-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Date of Birth </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Date of Birth  '/>
                               </div>
                               <div className='ml-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Nationality </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Nationality  '/>
                               </div>
@@ -148,26 +98,14 @@ const index = () => {
                               <div className='mr-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Passport Number </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Passport Number '/>
                               </div>
                               <div className='ml-5'>
                                    <div className='flex'>
                                    <label className={style.inputLabel}>Passport Expire Date </label>
-                                   <Image
-                                   className={style.star}
-                                   src={start}
-                                   alt="Picture of the author"
-                                   width={10}
-                                   height={10}
-                                   />
+                                   
                                    </div>
                                    <input className={style.acountInputBox} placeholder='Passport Expire Date  '/>
                               </div>

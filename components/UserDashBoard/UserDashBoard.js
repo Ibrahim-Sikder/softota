@@ -1,9 +1,7 @@
 import React from "react";
 import style from "./UserDashBoard.module.css";
-
 import UserDashBoardLeft from "./UserDashBoardLeft";
 import UserDashBoardRight from "./UserDashBoardRight";
-import Link from "next/link";
 const UserDashBoard = () => {
   return (
     <div>

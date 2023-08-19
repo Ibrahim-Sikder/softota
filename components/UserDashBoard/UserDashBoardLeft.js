@@ -55,9 +55,9 @@ const UserDashBoardLeft = () => {
                 <Typography>
                   <div className={style.bookingList}>
                     <ul >
-                      <li > <Link href='/dashboard/flight'><Flight className={style.flightIcon} /> Flight</Link></li>
-                      <li ><Link href='/dashboard'><Hotel className={style.flightIcons} />  Hotel</Link></li>
-                      <li><Link href='/'><Beenhere className={style.flightIcons} />  Visa</Link></li>
+                      <li > <Link href='/admin/flight'><Flight className={style.flightIcon} /> Flight</Link></li>
+                      <li ><Link href='/admin'><Hotel className={style.flightIcons} />  Hotel</Link></li>
+                      <li><Link href=''><Beenhere className={style.flightIcons} />  Visa</Link></li>
                       <li><Link href=''><Diversity2 className={style.flightIcons} />  Tours</Link></li>
                       <li><Link href=''><DirectionsBusFilled className={style.flightIcons} />  Buses</Link></li>
                       <li><Link href=''><Train className={style.flightIcons} />  Trains</Link></li>
@@ -75,36 +75,36 @@ const UserDashBoardLeft = () => {
 
                 <li>
                   <FaAcquisitionsIncorporated />
-                  <Link href='/dashboard/partial'><span>Partial Payment</span></Link>
+                  <Link href='/admin/partial'><span>Partial Payment</span></Link>
                 </li>
                 <li>
                   <FaPlane className='text-white' />
-                  <Link href='/dashboard/returnChange'><span>Void/Return/Change</span></Link>
+                  <Link href='/admin/returnChange'><span>Void/Return/Change</span></Link>
                 </li>
                 <li>
                   <FaCommentDollar className='text-white' />
-                  <Link href='/dashboard/transactions'><span>Transactions</span></Link>
+                  <Link href='/admin/transactions'><span>Transactions</span></Link>
                 </li>
                 <li>
                   <FaAmazonPay className='text-white' />
-                  <Link href='/dashboard/payment'><span>Payment</span></Link>
+                  <Link href='/admin/payment'><span>Payment</span></Link>
 
                 </li>
                 <li>
                   <FaHospitalUser className='text-white' />
-                  <Link href='/dashboard/banklist'><span>Bank List </span></Link>
+                  <Link href='/admin/banklist'><span>Bank List </span></Link>
                 </li>
                 <li>
                   <FaUserAlt />
-                  <Link href='/dashboard/profile'><span>Profile</span></Link>
+                  <Link href='/admin/profile'><span>Profile</span></Link>
                 </li>
                 <li>
                   <FaSkating className='text-white' />
-                  <Link href='/dashboard/passenger'><span>Quick Passengers</span></Link>
+                  <Link href='/admin/passenger'><span>Quick Passengers</span></Link>
                 </li>
                 <li>
                   <FaRegBuilding className='text-white' />
-                  <Link href='/dashboard/company'><span>Company</span></Link>
+                  <Link href='/admin/company'><span>Company</span></Link>
 
                 </li>
               </ul>
@@ -144,9 +144,9 @@ const UserDashBoardLeft = () => {
                       <Typography>
                         <div className={style.bookingList}>
                           <ul >
-                            <li > <Link href='/dashboard/flight'><Flight className={style.flightIcon} /> Flight</Link></li>
-                            <li ><Link href='/dashboard'><Hotel className={style.flightIcons} />  Hotel</Link></li>
-                            <li><Link href='/'><Beenhere className={style.flightIcons} />  Visa</Link></li>
+                            <li > <Link href='/admin/flight'><Flight className={style.flightIcon} /> Flight</Link></li>
+                            <li ><Link href='/admin'><Hotel className={style.flightIcons} />  Hotel</Link></li>
+                            <li><Link href=''><Beenhere className={style.flightIcons} />  Visa</Link></li>
                             <li><Link href=''><Diversity2 className={style.flightIcons} />  Tours</Link></li>
                             <li><Link href=''><DirectionsBusFilled className={style.flightIcons} />  Buses</Link></li>
                             <li><Link href=''><Train className={style.flightIcons} />  Trains</Link></li>
@@ -159,31 +159,31 @@ const UserDashBoardLeft = () => {
 
               </p>
               <p className={style.showToolTip}><FaAcquisitionsIncorporated className={style.icon} />
-                <Link href='/dashboard/partial'><div className={style.toolTip}>Partial Payment</div> </Link>
+                <Link href='/admin/partial'><div className={style.toolTip}>Partial Payment</div> </Link>
               </p>
 
 
               <p className={style.showToolTip}><FaPlane className={style.icon} />
-                <Link href='/dashboard/returnChange'><div className={`${style.toolTip} ${style.toolTip2}`}>Void/Return /Change</div> </Link>
+                <Link href='/admin/returnChange'><div className={`${style.toolTip} ${style.toolTip2}`}>Void/Return /Change</div> </Link>
               </p>
 
               <p className={style.showToolTip}><FaCommentDollar className={style.icon} />
-                <Link href='/dashboard/transactions'><div className={`${style.toolTip} ${style.toolTip3}`}>Transactions</div> </Link>
+                <Link href='/admin/transactions'><div className={`${style.toolTip} ${style.toolTip3}`}>Transactions</div> </Link>
               </p>
               <p className={style.showToolTip}><FaAmazonPay className={style.icon} />
-                <Link href='/dashboard/payment'><div className={`${style.toolTip} ${style.toolTip4}`}>Payment </div> </Link>
+                <Link href='/admin/payment'><div className={`${style.toolTip} ${style.toolTip4}`}>Payment </div> </Link>
               </p>
               <p className={style.showToolTip}><FaHospitalUser className={style.icon} />
-                <Link href='/dashboard/banklist'><div className={`${style.toolTip} ${style.toolTip5}`}>Bank List</div> </Link>
+                <Link href='/admin/banklist'><div className={`${style.toolTip} ${style.toolTip5}`}>Bank List</div> </Link>
               </p>
               <p className={style.showToolTip}><FaUserAlt className={style.icon} />
-                <Link href='/dashboard/profile'><div className={`${style.toolTip} ${style.toolTip6}`}>Profile </div> </Link>
+                <Link href='/admin/profile'><div className={`${style.toolTip} ${style.toolTip6}`}>Profile </div> </Link>
               </p>
               <p className={style.showToolTip}><FaUserAlt className={style.icon} />
-                <Link href='/dashboard/passenger'><div className={`${style.toolTip} ${style.toolTip7}`}>Quick Passengers</div> </Link>
+                <Link href='/admin/passenger'><div className={`${style.toolTip} ${style.toolTip7}`}>Quick Passengers</div> </Link>
               </p>
               <p className={style.showToolTip}><FaSkating className={style.icon} />
-                <Link href='/dashboard/company'><div className={`${style.toolTip} ${style.toolTip8}`}>Company</div> </Link>
+                <Link href='/admin/company'><div className={`${style.toolTip} ${style.toolTip8}`}>Company</div> </Link>
               </p>
 
             </div>

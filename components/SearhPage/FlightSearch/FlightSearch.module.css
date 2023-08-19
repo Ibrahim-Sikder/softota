@@ -17,6 +17,7 @@
      padding: 32px 80px;
      background:#E9F6E9;
 }
+
 .flightSearch{
      width: 95%;
      height: 251px;
@@ -42,6 +43,9 @@
      background: #E9F6E9;
      padding: 5px;
      height: 251px;
+}
+.leftArrow{
+     color:black !important;
 }
 .deal{
      background: #26ADE2;

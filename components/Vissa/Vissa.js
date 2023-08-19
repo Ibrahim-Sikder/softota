@@ -26,7 +26,7 @@ const Vissa = () => {
               <div className={style.wrapMenu}>
 
               
-            <ActiveLink href="/hajjUmra">
+            <ActiveLink href="/hajjUumra">
               <li className={style.firstChild}
 
               >
@@ -73,7 +73,7 @@ const Vissa = () => {
                
               </li>
               </ActiveLink>
-              <ActiveLink href="/flight">
+              <ActiveLink href="/">
               <li>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -297,18 +297,20 @@ const Vissa = () => {
           <option>Business Visa</option>
         </select>
           </div>
-        </div>
           <div className={style.visaBtn}>
-          <input type="text" placeholder="Visa Search" />
-            <Link className={style.visaIcon} href='/b2bsearch/visa/visaSearch'>
+            <Link href='/admin/visa/visaSearch'>
               <FaSistrix className={style.searchIcon}/>
+              <span>Search</span>
             </Link>
           </div>
+        </div>
+        
           </div>
         </div>
         
           
         </div>
+
       </div>
     </div>
   );

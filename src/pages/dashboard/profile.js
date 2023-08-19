@@ -4,6 +4,7 @@ import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLe
 import styles from './profile.module.css'
 import RightSideTopBar from '../../../components/UserDashBoard/RightSideTopBar';
 import dynamic from "next/dynamic";
+import MoveText from '../../../components/UserDashBoard/MoveText/MoveText';
 const profile = () => {
      return (
           <div>
@@ -15,11 +16,7 @@ const profile = () => {
                          <div>
                               <div className={styles.profileTop}>
                                    <RightSideTopBar />
-                                   <div className={style.moveText}>
-                                        <marquee
-                                             onmouseout="this.start()"
-                                             onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! </h2></marquee>
-                                   </div>
+                                   <MoveText/>
                                
                                    <div className={styles.profileMiddle}>
                                    <h2 className='text-white text-xl my-5'>Profile Detail: Global04 </h2>

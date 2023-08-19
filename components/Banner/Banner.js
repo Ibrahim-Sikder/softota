@@ -65,22 +65,7 @@ const Banner = ({ setResults }) => {
   const [filterData2, setFilterData2] = useState([]);
   const [selected2, setSelected2] = useState([])
   const [mobActive, setMobActive] = useState(0);
-  const [data3, setData3] = useState([]);
-  const [filterData3, setFilterData3] = useState([]);
-  const [selected3, setSelected3] = useState([])
-  const [data4, setData4] = useState([]);
-  const [filterData4, setFilterData4] = useState([]);
-  const [selected4, setSelected4] = useState([])
-  const [data5, setData5] = useState([]);
-  const [filterData5, setFilterData5] = useState([]);
-  const [selected5, setSelected5] = useState([])
-  const [data6, setData6] = useState([]);
-  const [filterData6, setFilterData6] = useState([]);
-  const [selected6, setSelected6] = useState([])
 
-
-
-  
 
   // for tab
 
@@ -174,81 +159,6 @@ const Banner = ({ setResults }) => {
   };
 
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFilterData3(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  const handleFilter3 = (value) => {
-    const res = filterData3.filter((airport) =>
-      airport.iata.toLowerCase().includes(value)
-
-    );
-    setData3(res);
-
-  };
-
-
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFilterData4(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  const handleFilter4 = (value) => {
-    const res = filterData4.filter((airport) =>
-      airport.iata.toLowerCase().includes(value)
-
-    );
-    setData4(res);
-
-  };
-
-
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFilterData5(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  const handleFilter5 = (value) => {
-    const res = filterData5.filter((airport) =>
-      airport.iata.toLowerCase().includes(value)
-
-    );
-    setData5(res);
-
-  };
-
-
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFilterData6(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
-  const handleFilter6 = (value) => {
-    const res = filterData6.filter((airport) =>
-      airport.iata.toLowerCase().includes(value)
-
-    );
-    setData6(res);
-
-  };
-
 
   const handleSelect = (iata, name, country) => {
     const text = iata + " , " + country + ", " + name
@@ -263,32 +173,6 @@ const Banner = ({ setResults }) => {
     console.log(text);
     setSelected2(text)
     setData2([])
-  }
-  const handleSelect3 = (iata, name, country) => {
-    const text = iata + " , " + country + ", " + name
-    console.log(text);
-    setSelected3(text)
-    setData3([])
-  }
-  const handleSelect4 = (iata, name, country) => {
-    const text = iata + " , " + country + ", " + name
-    console.log(text);
-    setSelected4(text)
-    setData4([])
-  }
-
-  const handleSelect5 = (iata, name, country) => {
-    const text = iata + " , " + country + ", " + name
-    console.log(text);
-    setSelected5(text)
-    setData5([])
-  }
-
-  const handleSelect6 = (iata, name, country) => {
-    const text = iata + " , " + country + ", " + name
-    console.log(text);
-    setSelected6(text)
-    setData6([])
   }
 
 
@@ -326,107 +210,6 @@ const Banner = ({ setResults }) => {
 
 
       <div className={style.bannerWrap}>
-
-        {/* for transparent navbar  */}
-
-        {/* <div className={style.navigationMain}>
-        <div className={style.navigationContent}>
-          <div className={style.navigationLeft}>
-            <Image
-              src={Logo}
-              alt="Picture of the author"
-              width={50}
-              height={50}
-              className={style.logo}
-            />
-            <Link
-              href="/aboutUs"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <p>About Us</p>
-            </Link>
-          </div>
-          <div className={style.inputDiv}>
-            <input type="text" placeholder="Search Flight, Hotal, Visa" />
-            <div className={style.inputIcon}></div>
-          </div>
-          <div className={style.inputButtons}>
-            <Link
-              href="/login"
-              className={style.logInButton}
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Log In
-            </Link>
-            <Link
-              href="/signup"
-              className={style.signUpButtonTwo}
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Sign Up
-            </Link>
-          </div>
-        </div>
-      </div>
-      {mobActive === 0 ? (
-        <div className={style.navigationMOb}>
-          <Image
-            src={Logo}
-            alt="Picture of the author"
-            width={50}
-            height={50}
-            className={style.mobLogo}
-          />
-          <div className={style.iconsMobNav}>
-            <FlightTakeoffIcon
-              className={style.takeOf}
-              onClick={() => setMobActive(1)}
-            />
-          </div>
-        </div>
-      ) : (
-        <div className={style.activeNavMob}>
-          <div className={style.iconsMobNav}>
-            <FlightLandIcon
-              className={style.landOf}
-              onClick={() => setMobActive(0)}
-            />
-          </div>
-          <Link
-            href="/aboutUs"
-            style={{ textDecoration: "none", color: "black" }}
-          >
-            <p>About Us</p>
-          </Link>
-          <div className={style.inputDivMOb}>
-            <input type="text" placeholder="Search Flight, Hotal, Visa" />
-            <div className={style.inputIcon}></div>
-          </div>
-          <div className={style.inputButtons}>
-            <Link
-              href="/login"
-              className={style.logInButton}
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Log In
-            </Link>
-            <Link
-              href="/signup"
-              className={style.signUpButtonTwo}
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Sign Up
-            </Link>
-          </div>
-        </div>
-      )} */}
-
-
-
-
-
-
-
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
 
@@ -764,7 +547,7 @@ const Banner = ({ setResults }) => {
                           <div className='flex justify-between'>
                             <div>
                               <h4>Passengers & {child + infant + adult} Person</h4>
-                              <small>{classes}</small>
+                              <span>{classes}</span>
                             </div>
                             <Groups2 onClick={() => window.my_modal_3.showModal()} className={style.showModalIcon} />
                           </div>
@@ -863,16 +646,16 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying From</h4>
                         <input
-                          value={selected3}
+                          value={selected}
                           id="searchAirport"
-                          onChange={(e) => handleFilter3(e.target.value)}
-                          type="text "
+                          onChange={(e) => handleFilter(e.target.value)}
+                          type="text"
                           placeholder="City or Airport "
                         />
                         <div className={style.searchResult}>
-                          {data3?.map((d, i) => (
+                          {data?.map((d, i) => (
                             <div key={i}>
-                              <div onClick={() => handleSelect3(d.iata, d.name, d.country)} className={style.airport}>
+                              <div onClick={() => handleSelect(d.iata, d.name, d.country)} className={style.airport}>
                                 <h6 className="mr-3">{d.iata}</h6>
                                 <p>,{d.country}</p>
                                 <p>,{d.name}</p>
@@ -886,16 +669,16 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying From</h4>
                         <input
-                          value={selected4}
+                          value={selected2}
                           id="searchAirport"
-                          onChange={(e) => handleFilter4(e.target.value)}
+                          onChange={(e) => handleFilter2(e.target.value)}
                           type="text "
                           placeholder="City or Airport "
                         />
                         <div className={style.searchResult}>
-                          {data4?.map((d, i) => (
+                          {data2?.map((d, i) => (
                             <div key={i}>
-                              <div onClick={() => handleSelect4(d.iata, d.name, d.country)} className={style.airport}>
+                              <div onClick={() => handleSelect2(d.iata, d.name, d.country)} className={style.airport}>
                                 <h6 className="mr-3">{d.iata}</h6>
                                 <p>,{d.country}</p>
                                 <p>,{d.name}</p>
@@ -923,8 +706,8 @@ const Banner = ({ setResults }) => {
                           className={style.package4}>
                           <div className='flex justify-between'>
                             <div>
-                              <small>{child + infant + adult} Person</small> <br />
-                              <h4>Passengers & Cabin Class</h4>
+                              <span>Passenger & {child + infant + adult} Person</span> <br />
+                              <span>{classes}</span>
                             </div>
                             <Groups2 onClick={() => window.my_modal_3.showModal()} className={style.showModalIcon} />
                           </div>
@@ -996,15 +779,24 @@ const Banner = ({ setResults }) => {
                             </div>
 
                             <div className={style.classType}>
-                              <p>Cabin class</p>
-                              <p>Premium Economy</p>
-                              <p>Business class</p>
-                              <p>First class</p>
+
+                              <select onChange={(e) => {
+                                const classes = e.target.value;
+                                setClasses(classes)
+
+                              }}>
+                                <option value="Premium" selected>Cabin Class</option>
+                                <option value="Premium Econom">Premium Economy</option>
+                                <option value="Economy class">Economy class</option>
+                                <option value="Business class">Business class</option>
+                                <option value="First class">First class</option>
+                              </select>
                             </div>
                           </div>
                         </form>
                       </dialog>
                     </div>
+
                   </div>
                 </div>
               </CustomTabPanel>
@@ -1014,16 +806,16 @@ const Banner = ({ setResults }) => {
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
-                        value={selected5}
+                        value={selected}
                         id="searchAirport"
-                        onChange={(e) => handleFilter5(e.target.value)}
+                        onChange={(e) => handleFilter(e.target.value)}
                         type="text "
                         placeholder="City or Airport "
                       />
                       <div className={style.searchResult}>
-                        {data5?.map((d, i) => (
+                        {data?.map((d, i) => (
                           <div key={i}>
-                            <div onClick={() => handleSelect5(d.iata, d.name, d.country)} className={style.airport}>
+                            <div onClick={() => handleSelect(d.iata, d.name, d.country)} className={style.airport}>
                               <h6 className="mr-3">{d.iata}</h6>
                               <p>,{d.country}</p>
                               <p>,{d.name}</p>
@@ -1037,16 +829,16 @@ const Banner = ({ setResults }) => {
                     <div className={style.searchTop}>
                       <h4>Flying To</h4>
                       <input
-                        value={selected6}
+                        value={selected2}
                         id="searchAirport"
-                        onChange={(e) => handleFilter6(e.target.value)}
+                        onChange={(e) => handleFilter2(e.target.value)}
                         type="text "
                         placeholder="City or Airport "
                       />
                       <div className={style.searchResult}>
-                        {data6?.map((d, i) => (
+                        {data2?.map((d, i) => (
                           <div key={i}>
-                            <div onClick={() => handleSelect6(d.iata, d.name, d.country)} className={style.airport}>
+                            <div onClick={() => handleSelect2(d.iata, d.name, d.country)} className={style.airport}>
                               <h6 className="mr-3">{d.iata}</h6>
                               <p>,{d.country}</p>
                               <p>,{d.name}</p>
@@ -1162,45 +954,21 @@ const Banner = ({ setResults }) => {
                           <div className={style.searchTop}>
                             <h4>Flying From</h4>
                             <input
-
-                              // onChange={(e) => handleFilter(e.target.value)}
                               id="searchAirport"
                               type="text "
                               placeholder="City or Airport "
                             />
-                            {/* <div className={style.searchResult}>
-                          {data?.map((d, i) => (
-                            <div key={i}>
-                            <div className={style.airport}>
-                            <h6 className="mr-3">{d.iata}</h6>
-                            <p>,{d.country}</p>
-                            <p>,{d.name}</p>
-                            </div>
-                            </div>
-                            ))}
-                          </div> */}
+                           
                           </div>
                         </div>
                         <div className={style.multiplePackage}>
                           <div className={style.searchTop}>
                             <h4>Flying To</h4>
                             <input
-                              // onChange={(e) => handleFilter2(e.target.value)}
                               id="searchAirport"
                               type="text "
                               placeholder="City or Airport "
                             />
-                            {/* <div className={style.searchResult}>
-                          {data2?.map((d, i) => (
-                            <div key={i}>
-                            <div className={style.airport}>
-                            <h6 className="mr-3">{d.iata}</h6>
-                            <p>,{d.country}</p>
-                            <p>,{d.name}</p>
-                            </div>
-                            </div>
-                            ))}
-                          </div> */}
                           </div>
                         </div>
                         <div className={style.multiplePackage}>
@@ -1245,44 +1013,20 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying From</h4>
                         <input
-                          // onChange={(e) => handleFilter(e.target.value)}
                           id="searchAirport"
                           type="text "
                           placeholder="City or Airport "
                         />
-                        {/* <div className={style.searchResult}>
-                        {data?.map((d, i) => (
-                          <div key={i}>
-                          <div className={style.airport}>
-                          <h6 className="mr-3">{d.iata}</h6>
-                          <p>,{d.country}</p>
-                          <p>,{d.name}</p>
-                          </div>
-                          </div>
-                          ))}
-                        </div> */}
                       </div>
                     </div>
                     <div className={style.package2}>
                       <div className={style.searchTop}>
                         <h4>Flying To</h4>
                         <input
-                          // onChange={(e) => handleFilter2(e.target.value)}
                           id="searchAirport"
                           type="text "
                           placeholder="City or Airport "
                         />
-                        {/* <div className={style.searchResult}>
-                        {data2?.map((d, i) => (
-                          <div key={i}>
-                          <div className={style.airport}>
-                          <h6 className="mr-3">{d.iata}</h6>
-                          <p>,{d.country}</p>
-                          <p>,{d.name}</p>
-                          </div>
-                          </div>
-                          ))}
-                        </div> */}
                       </div>
                     </div>
                   </div>

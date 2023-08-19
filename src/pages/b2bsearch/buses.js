@@ -9,6 +9,7 @@ import HeroBox from "../../../components/UserDashBoard/HeroBox";
 import TourDestination from "../../../components/Tour/TourDestination";
 import dynamic from "next/dynamic";
 import BusesHeroBox from "../../../components/UserDashBoard/BusesHeroBox/BusesHeroBox";
+import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 
 
 const Buses = () => {
@@ -22,11 +23,7 @@ const Buses = () => {
                          <div className={style.rightSideWrap}>
                          <div className={style.profileTop}>
                               <RightSideTopBar />
-                              <div className={style.moveText}>
-                                   <marquee
-                                        onmouseout="this.start()"
-                                        onmouseover="this.stop();" behavior="scroll" direction="left"> <h2 className="text-xl font-bold">Ghuronti is your best partner for your journey ! Reserver your best hotel.</h2></marquee>
-                              </div>
+                            <MoveText/>
                          </div>
                          <div>
                          </div>

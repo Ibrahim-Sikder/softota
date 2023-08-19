@@ -55,6 +55,11 @@
   margin-bottom: 17px;
 }
 
+
+
+.heroBoxBtn:hover {
+  background-image: linear-gradient(90deg,  #19ABE3, #4ab449);
+}
 .heroBoxBtn {
   position: absolute;
   left: 50%;
@@ -67,6 +72,8 @@
   border: 1px solid #fff;
   padding: 9px 0px;
   width: 209px;
+  background-image: linear-gradient(90deg, #4ab449, #19ABE3);
+  transition:al .5s ease-in-out;
 }
 /* menu styling  */
 .wrapMenu{

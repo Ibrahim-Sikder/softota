@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useContext } from "react";
+import React from "react";
 import agent from "../../public/agent.png";
 import facebook from "../../public/facebook.png";
 import google from "../../public/google.png";
@@ -9,25 +9,7 @@ import { useRouter } from "next/router";
 
 const LoginAgent = () => {
   const router = useRouter();
-  // const { signInWithGoogle, logIn } = useContext(AuthContext);
-  // const handleLogin = (event) => {
-  //   event.preventDefault();
-  //   const email = event.target.email.value;
-  //   const password = event.target.password.value;
-  //   const number = event.target.number.value;
-
-  //   logIn(email, password)
-  //     .then((result) => {
-  //       const user = result.user;
-  //       console.log(user);
-  //       // toast.success("User Login Successfully");
-  //       router.push("/");
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //     });
-  // };
-
+  
   return (
     <div className={style.loginAgentWrap}>
       <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">
