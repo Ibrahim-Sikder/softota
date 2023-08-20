@@ -16,7 +16,7 @@ import Link from "next/link";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import style from "../../../components/tour/Tour.module.css";
+import style from "../../../components/Tour/Tour.module.css";
 const HotelTrending = () => {
   var settings = {
     dots: true,
