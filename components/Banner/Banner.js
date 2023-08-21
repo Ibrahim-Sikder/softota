@@ -470,6 +470,7 @@ const Banner = ({ setResults }) => {
                   onChange={handleChange}
                   aria-label="basic tabs example"
                   defaultValue={0}
+                  className={style.tabsWrap}
                 >
                   <Tab label="One Way" {...a11yProps(0)} />
                   <Tab label="Round Trip" {...a11yProps(1)} />
