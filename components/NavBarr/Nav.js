@@ -8,10 +8,10 @@ import Image from "next/image";
 import { useEffect } from "react";
 const Nav = () => {
   const [mobActive, setMobActive] = useState(0);
-  const [stickyMenu, setStickyMenu] = useState('bg-red-600')
+  const [stickyMenu, setStickyMenu] = useState(false)
   useEffect(() => {
 const handleScroll = ()=>{
-  setStickyMenu(window.scrollY > 50)
+  setStickyMenu(window.scrollY > 100)
 }
 window.addEventListener('scroll', handleScroll);
 return () => window.removeEventListener('scroll', handleScroll)
