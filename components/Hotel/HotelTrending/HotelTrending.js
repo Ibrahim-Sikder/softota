@@ -19,7 +19,6 @@ import Slider from "react-slick";
 import style from "../../../components/Tour/Tour.module.css";
 const HotelTrending = () => {
   var settings = {
-    dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -40,9 +39,9 @@ const HotelTrending = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 3,
         },
       },
       {

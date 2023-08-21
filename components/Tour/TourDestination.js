@@ -34,7 +34,6 @@ const TourDestination = () => {
 
   
   var settings = {
-    dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,

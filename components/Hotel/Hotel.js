@@ -36,7 +36,6 @@ const Hotel = () => {
 
 
   var settings = {
-    dots: true,
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -57,9 +56,9 @@ const Hotel = () => {
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 3,
         },
       },
       {
