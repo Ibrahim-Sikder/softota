@@ -105,7 +105,10 @@ const UmraPackage = () => {
               <p className={style.day}>40D </p>
             </div>
             <ul>
-              <li>3* Hotel In Mecca.</li>
+              <li className='flex items-center'> 
+                
+              <p>3* Hotel In Mecca.</p>
+              </li>
               <li>3* Hotel In Madinah.</li>
               <li>Hotel Distance, 300 – 400 Meter.</li>
               <li>5-6 Persons In Every Room.</li>
@@ -129,7 +132,7 @@ const UmraPackage = () => {
           <h2 className="text-3xl bold">
             Hajj pre-registration Bangladesh 2023- 2024-2025
           </h2>
-          <p className=" mt-3 mb-12 text-[#738187]">
+          <p className=" mt-5 mb-12 text-[#738187]">
             Non-resident & Resident Bangladeshi adults and children can apply
             for hajj pre-registration through the Hajj agency.
           </p>
@@ -146,14 +149,14 @@ const UmraPackage = () => {
 
               >
                 <path
-                  stroke="#fff"
+                  stroke="#4AB449"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
                 />
                 <path
-                  stroke="#fff"
+                  stroke="#4AB449"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
@@ -176,14 +179,14 @@ const UmraPackage = () => {
 
               >
                 <path
-                  stroke="#fff"
+                  stroke="#4AB449"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
                 />
                 <path
-                  stroke="#fff"
+                  stroke="#4AB449"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
@@ -195,7 +198,7 @@ const UmraPackage = () => {
               <p>Birth certificate s color soft copy</p>
             </div>
           </div>
-         <div className="mt-3">
+         <div>
          <div className={style.clock}>
             <p className='mr-2'>
               <svg
@@ -206,14 +209,14 @@ const UmraPackage = () => {
 
               >
                 <path
-                  stroke="#fff"
+                  stroke="#4AB449 "
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
                   d="M22 11.08V12a10 10 0 1 1-5.93-9.14"
                 />
                 <path
-                  stroke="#fff"
+                  stroke="#4AB449 "
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
@@ -227,7 +230,7 @@ const UmraPackage = () => {
           </div>
          </div>
         </div>
-        <div className="flex items-center justify-center mt-10">
+        <div className="flex items-center justify-center mt-5">
           <div className={style.registrationBtn}>
             <button className={style.rBtn}>
               <h4> Get pre-register</h4>

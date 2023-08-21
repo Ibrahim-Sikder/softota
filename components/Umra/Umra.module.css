@@ -128,9 +128,10 @@
   padding: 0 28px;
 }
 .umraHead{
-  width: 645px;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
+  line-height: 25px;
 }
 .singleHajj {
   width: 310px;
@@ -189,38 +190,39 @@
   font-size: 14px;
 }
 .day {
-  width: 30px;
-  height: 30px;
+  width: 54px;
+  height: 32px;
   font-size: 12px;
   background: #19abe3;
   line-height: 30px;
   color: white;
   border-radius: 5px;
+  text-align: center;
 }
 .clock {
+  height:70px;
+  padding-left:5px;
   width: 350px;
-  padding: 12px 20px;
-  background: #ffffff;
   border: 1px solid #e6f8ff;
-  box-shadow: 0px 4px 4px #e6f8ff;
+  box-shadow: #4AB449 0px 14px 28px, #4AB449 0px 10px 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
-  background: #4AB449;
-  color: white;
+  background: #fff;
+  color: black;
 }
 .clock2 {
   width: 350px;
-  padding: 12px 20px;
-  background: #ffffff;
+  height:70px;
+  padding-left:5px;
   border: 1px solid #e6f8ff;
-  box-shadow: 0px 4px 4px #e6f8ff;
+  box-shadow: #4AB449 0px 14px 28px, #4AB449 0px 10px 10px;
   border-radius: 5px;
   display: flex;
   align-items: center;
-  margin: 0px 40px;
-  background: #4AB449;
-  color: white;
+  background: #fff;
+  color: black;
+  margin: 15px 6px;
 }
 .rBtn {
   width: 236px;
@@ -230,6 +232,7 @@
   border-radius: 5px;
   color: white;
   display: grid;
+  margin-top: 10px;
   place-content: center;
 }
 .package {
@@ -255,6 +258,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items:center;
 }
 
 
@@ -276,10 +280,6 @@
     margin-left: 33px;
     margin-top: 18px;
   }
-  .day {
-    font-size: 14px;
-    width: 105px;
-  }
   .bannerWrap h2 {
     font-size: 31px;
     width: 90%;
@@ -289,7 +289,7 @@
 }
 @media only screen and (max-width: 768px) {
   .bannerWrap {
-    height: 456px;
+    height: 575px;
   }
   
   .package2 {
@@ -318,8 +318,7 @@
 }
  
   .heroBoxMain {
-    
-    width: 95%;
+    width: 100%;
     height: 80%;
     background: none;
 
@@ -346,11 +345,7 @@
   .ummrahClock {
     display: flex;
   }
-  .clock2,
-  .clock {
-    width: 300px;
-    margin-bottom: 15px;
-  }
+  
   .imgWrap {
     width: 312px;
     height: 247px;
@@ -393,14 +388,15 @@
     text-align: center;
     padding-top: 20px;
   }
-  .bannerWrap {
-    margin-bottom: 260px;
-  }
   .package2 {
     top: 312px;
     width: 83%;
     font-size: 14px;
   }
+  .umraHead{
+    width: 100%;
+  }
+
 }
 @media only screen and (max-width: 400px) {
   .wrapMenu {
@@ -422,13 +418,12 @@
   .heroBoxBtn {
     padding: 14px 15px;
   }
-  .bannerWrap {
-    margin-bottom: 433px;
-  }
+  .clock {
+    width: 100%;
+}
+.clock2 {
+  width:100%;
+  padding: 12px 20px;
 }
 
-@media only screen and (max-width: 400px) {
-  .ummraWrap {
-    margin-top: -290px;
-  }
 }

@@ -33,11 +33,11 @@
 
 @media only screen and (max-width:1024px){
   .activeLink{
-    width: 144px !important;
+    width: 148px !important;
     }
    
     .active{
-      width: 143px !important;
+      width: 146px !important;
     }
 
 }
