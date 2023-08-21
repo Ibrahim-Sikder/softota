@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import style from "../../../../components/UserDashBoard/UserDashBoard.module.css";
-import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
-import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
+import style from "../../components/UserDashBoard/UserDashBoard.module.css";
+import UserDashBoardLeft from "../../components/UserDashBoard/UserDashBoardLeft";
+import RightSideTopBar from "../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
-import styling from "./visaSearch.module.css";
+import styling from "../pages/admin/visa/visaSearch.module.css";
 import { CheckCircle } from "@mui/icons-material";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import TextField from "@mui/material/TextField";
-import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
+import MoveText from "../../components/UserDashBoard/MoveText/MoveText";
 
 const VisaSearch = () => {
   const [showDetail, setShowDetail] = useState(true);

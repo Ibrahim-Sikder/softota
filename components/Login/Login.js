@@ -30,7 +30,7 @@ const Login = () => {
             height={700}
           />
         </div>
-        <div>
+        <div className="mt-14">
           <form >
             <div className="mb-5 relative">
               <label className={style.inputLabel}>Email Address</label> <br />
@@ -64,7 +64,7 @@ const Login = () => {
             </div>
             <div className="flex items-center ">
               <p className={style.devided}></p>
-              <span className="mx-5">or</span>
+              <span className="mx-2">or</span>
               <p className={style.devided}></p>
             </div>
             <div className="mb-5 mt-3">

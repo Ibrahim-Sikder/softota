@@ -62,12 +62,11 @@
 }
 .trendingHead h2 {
   font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 54px;
-  color: #092e3d;
-  justify-content: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 54px;
+    color: #092e3d;
 }
 .trendingHead p {
   font-family: "Poppins";
@@ -167,6 +166,7 @@
   .trendingHead {
     margin-top: 30px;
     margin-bottom: 15px;
+    width: 80%;
   }
   .singleBestPlace{
     width: 100%;

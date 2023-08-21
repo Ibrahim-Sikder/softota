@@ -85,7 +85,6 @@ const Footer = () => {
           <h4 className="pb-5">HELP </h4>
           <p className={style.number}>
             <Link href="/faq">
-              {" "}
               <span>FAQ</span>
             </Link>
           </p>

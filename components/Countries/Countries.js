@@ -81,7 +81,7 @@ const Countries = () => {
               height={500}
             />
           </div>
-          <button className="countryBtn  bg-[#4AB449] py-2 px-5 text-white">
+          <button className={style.countryBtn}>
             View More countries
           </button>
         </div>

@@ -1,21 +1,21 @@
-
 .loginWrap {
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100vw;
+  width: 100vw;
   text-align: center;
+  padding-bottom: 50px;
 }
 .loginInput {
   width: 472px;
   height: 45px;
   background: #e6f8ff;
-  border: 1px solid #4AB449;
+  border: 1px solid #4ab449;
   border-radius: 5px;
-  padding:10px;
+  padding: 10px;
 }
-.loginInput::placeholder{
-  color:black !important;
+.loginInput::placeholder {
+  color: black !important;
 }
 .loginBtn {
   width: 323px;
@@ -25,12 +25,12 @@
   border-radius: 5px;
   color: white;
   margin: 0 auto;
-  transition:all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .loginBtn:hover {
-  background:#26ade2;
+  background: #26ade2;
 }
-.inputLabel{
+.inputLabel {
   text-align: left;
   position: absolute;
   left: 0;
@@ -48,10 +48,10 @@
   border-radius: 5px;
   color: white;
   font-size: 14px;
-  transition:all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.loginBtn2:hover{
-  background:#4AB449;
+.loginBtn2:hover {
+  background: #4ab449;
 }
 .loginBtn3 {
   width: 323px;
@@ -62,11 +62,11 @@
   border-radius: 5px;
   color: #4ab449;
   font-size: 14px;
-  transition: all .4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 .loginBtn3:hover {
-  background:#4AB449;
-  color:white;
+  background: #4ab449;
+  color: white;
 }
 .loginWithProvider {
   margin-bottom: 20px;
@@ -77,14 +77,13 @@
   right: 15px;
   top: 39px;
   font-size: 18px;
-  color: #4AB449;
+  color: #4ab449;
 }
-.circle button{
-  background:none;
+.circle button {
+  background: none;
 }
 
 @media only screen and (max-width: 768px) {
-
   .loginWrap {
     display: flex;
     align-items: center;
@@ -108,11 +107,9 @@
   .loginInput {
     width: 400px;
   }
- 
- 
 
   .devided {
-    width: 160px;
+    width: 130px;
     margin: 0 auto;
     height: 0px;
     border: 2px solid #b0b8ba;
@@ -121,16 +118,16 @@
     width: 368px;
   }
   .ShowIcon {
-    right: 33px;
-    top: 41px;
+    right: 16px;
+    top: 38px;
   }
- 
+
   .loginBtn3 {
     left: 51px;
   }
-
-
-
+  .inputLabel {
+    left: 7px;
+  }
 }
 @media only screen and (max-width: 400px) {
   .loginInput {

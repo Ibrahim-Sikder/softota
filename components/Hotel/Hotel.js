@@ -40,9 +40,9 @@ const Hotel = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    autoplay: true,
-    speed: 10000,
-    autoplaySpeed: 5000,
+    // autoplay: true,
+    // speed: 10000,
+    // autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1024,
@@ -50,22 +50,24 @@ const Hotel = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          
         },
       },
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 10,
           initialSlide: 3,
+          infinite: true,
         },
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToScroll: 10,
+          infinite: true,
         },
       },
     ],

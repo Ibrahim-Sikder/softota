@@ -13,10 +13,10 @@ const TourPage = () => {
       <Nav/>
     <Tour></Tour>
     <BestPlace></BestPlace>
+    <div className="mb-10">
     <Travel></Travel>
-    <div className="mt-12">
-    <Customer></Customer>
     </div>
+   
     <Footer/>
     </div>
   )

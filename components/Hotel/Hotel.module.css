@@ -199,7 +199,7 @@
   margin-right: 20px;
   height: 440px;
   text-align: center;
-  margin-bottom: 19px;
+  margin-bottom: 5px;
 }
 .swiperImg{
   height:245px !important;
@@ -257,7 +257,7 @@ transform:scale(1.5)
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
-    width: 97.9%;
+    width: 100%;
   }
   .tourTrending{
    width:245px !important;
@@ -313,7 +313,7 @@ transform:scale(1.5)
     top: 250px;
   }
   .heroBoxBtn {
-    top: 307px;
+    top: 363px;
   }
   .heroBoxMain {
     background: none;
@@ -376,7 +376,7 @@ transform:scale(1.5)
   text-align: center;
 }
 .bestPlaceHead h2 {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   color: #092e3d;
 }
@@ -433,6 +433,9 @@ transform:scale(1.5)
   }
 }
 @media only screen and (max-width: 768px) {
+  .bannerWrap {
+    height: 490px;
+}
   .destination {
     width: 100%;
     margin-left: 58px;
@@ -447,51 +450,33 @@ transform:scale(1.5)
   .package2,
   .package {
     top: 194px;
-    width: 276px;
+    width: 296px;
   }
   .package4 {
-    width: 230px;
+    width: 296px;
     top: 281px;
-    right: 40px;
+    right: 85px;
   }
   .date2 {
     top: 281px;
-    left: 247px;
-    width: 207.5px;
-  }
-  .date {
-    left: 40px;
-    top: 281px;
-  }
-  .date input,
-  .date2 input {
-    font-size: 14px;
-  }
-  .bannerWrap h2 {
-    font-size: 25px;
-    text-align: center;
-    width: 80%;
-    margin: 0 auto;
-  }
-  .heroBoxBtn {
-    top: 365px;
-    width: 161px;
-    font-size: 16px;
-    padding: 15px 5px;
-  }
-  .package h4,
-  .package2 h4 {
-    font-size: 16px;
-  }
-  .package input,
-  .package2 input {
-    font-size: 14px;
-  }
-  .bestPlaceHead {
-    width: 100%;
-    margin-top: 129px;
-  }
+    left: 233px;
+    width: 148px;
+    border-left: none;
 }
+.bestPlaceHead {
+  width: 80%;
+  margin-top: 125px;
+}
+.date {
+  left: 85px;
+  top: 281px;
+  width: 148px;
+}
+
+
+
+  }
+
 
 @media only screen and (max-width: 500px) {
 
@@ -527,12 +512,13 @@ transform:scale(1.5)
     height: 465px;
   }
   .heroBoxMain {
-    height: 622px;
+    height: 640px;
     border-radius: 0px;
   }
   .heroBoxBtn {
     top: 544px;
     width: 195px;
+    margin-top: 13px;
   }
   .tourTrending{
     width:290px !important;
@@ -561,6 +547,7 @@ transform:scale(1.5)
   .date2 {
     top: 406px;
     width: 40.7%;
+    left: 41px;
   }
   .package2 {
     top: 337px;

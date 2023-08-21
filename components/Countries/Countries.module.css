@@ -7,6 +7,13 @@
   margin: 20px auto;
   text-align: center;
 }
+.countryBtn{
+  background: #4AB449;
+  color: white;
+  width: 195px;
+  height: 47px;
+  border-radius: 3px;
+}
 
 @media only screen and (max-width: 1024px) {
   .countryWrap {

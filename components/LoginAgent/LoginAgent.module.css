@@ -1,5 +1,6 @@
 .loginAgentWrap {
   width: 100vw;
+  padding: 50px 0px;
 }
 .loginInput {
   width: 472px;
@@ -64,6 +65,19 @@
 .circle button{
   background:none;
 }
+.providerLoginWrap{
+  display: flex;
+  justify-content: space-between;
+  width: 233px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 77px;
+}
+.providerLoginWrap button{
+  width:40px !important;
+  margin-right:20px;
+}
 
 @media only screen and (max-width: 1024px) {
   .loginAgentWrap {
@@ -81,25 +95,17 @@
   }
   .loginInput {
     width: 350px;
-    margin-left: 23px;
+    margin-left: 4px;
   }
   .loginLabel {
-    margin-left: 23px;
+    margin-left: 9px;
   }
   .devided {
-    width: 150px;
+    width: 130px;
     margin: 0 auto;
   }
-  .loginBtn {
+  .loginBtn, .loginBtn2, .loginBtn3 {
     width: 300px;
-  }
-  .loginBtn {
-    margin-left: -23px;
-  }
-  .loginBtn2 {
     margin-left: -36px;
-  }
-  .loginBtn3 {
-    margin-left: -35px;
   }
 }

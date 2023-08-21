@@ -1,21 +1,13 @@
 import React from "react";
 import style from "./FlightSearch.module.css";
-import { FaStar, FaMapMarkerAlt } from "react-icons/fa";
-import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { useState, useEffect } from "react";
-import FormGroup from "@mui/material/FormGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "next/link";
-import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 import {
   ChevronLeftRounded,
   FlightLand,
@@ -49,7 +41,7 @@ const FlightSearch = () => {
       <div className={style.searchDetailHead}>
         <div>
           <div className="flex items-center justify-center">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-xl font-bold ">
               COX S BAZAR - BANGKOK(BANGKOK-ALL)
             </h2>
             <small className="ml-2">(PREMIUM ECONOMY)</small>
@@ -57,7 +49,7 @@ const FlightSearch = () => {
           <span className="sm:my-3">27th August 2023 - 28th August 2023</span>
           <span> | Adult: 2, | Child: 2, | Infant: 2</span>
         </div>
-        <button className="bg-[#4AB449] md:mt-[16px] text-white px-8 rounded-sm h-10 border-radius text-sm">
+        <button className={style.editSearchBtn}>
           EDIT SEARCH{" "}
         </button>
       </div>
@@ -481,7 +473,7 @@ const FlightSearch = () => {
                   gutterBottom
                 >
                   <Diversity3 />{" "}
-                  <small>8 people are looking at this flight.</small>
+                  <p className="font-bold">8 people are looking at this flight.</p>
                 </Typography>
               </CardContent>
             </Card>

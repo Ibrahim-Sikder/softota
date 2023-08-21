@@ -57,7 +57,7 @@ const LoginAgent = () => {
             </div>
             <div className="flex items-center">
               <p className={style.devided}></p>
-              <span className="mx-5">or</span>
+              <span className="mx-2">or</span>
               <p className={style.devided}></p>
             </div>
             <div className="mb-5 ml-16 mt-5">
@@ -70,7 +70,7 @@ const LoginAgent = () => {
                 Create your account{" "}
               </button>
             </div>
-            <div className="flex justify-between mt-32 w-32 mx-auto">
+            <div className={style.providerLoginWrap}>
               <div className={style.circle}>
                 <button type="submit">
                   <Image

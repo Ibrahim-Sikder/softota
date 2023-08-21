@@ -28,6 +28,7 @@
 
   color: #ffffff;
 }
+
 .number {
   padding-bottom: 7px;
 }
@@ -45,6 +46,7 @@
   .footer {
     width: 100%;
   }
+  
 }
 @media only screen and (max-width: 500px) {
   .footer {
@@ -55,5 +57,7 @@
     
     padding-left: 25px;
   }
- 
+  .privacy{
+    width:100%;
+  }
 }

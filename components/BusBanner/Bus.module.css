@@ -139,8 +139,8 @@
   color: white;
   font-size: 18px;
   border-radius: 5px;
-  padding: 9px 0px;
   width: 200px;
+  height: 50px;
   transition: all .5s cubic-bezier(0.32, 0.25, 0.5, 0.5);
 }
 .heroBoxBtn:hover{
@@ -214,7 +214,7 @@
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
-    width: 98%;
+    width: 100%;
   }
   .package {
     left: 85px;
@@ -408,7 +408,7 @@
 
   .date,
   .date2 {
-    top: 383px;
+    top: 406px;
     width: 39%;
   }
   .package4 {
