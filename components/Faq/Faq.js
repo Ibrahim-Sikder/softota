@@ -12,8 +12,9 @@ const Faq = () => {
     <div className="bg-[#EDFAFF] py-14 px-14">
       <div>
         <h2 className="text-3xl font-bold w-full text-center mb-10">FAQ</h2>
+        <h6 className="text-center mt-10">Coming Soooooooon.......................!!!</h6>
       </div>
-      <div className={style.faqWrap}>
+      {/* <div className={style.faqWrap}>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
@@ -902,7 +903,7 @@ const Faq = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </div> */}
     </div>
   );
 };

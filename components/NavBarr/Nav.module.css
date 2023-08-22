@@ -160,8 +160,6 @@
   padding: 0px !important;
   text-align: left !important;
   width: 49px;
-  right: -71px;
-  top: 23px;
   height: 46px;
   line-height: 50px;
   text-align: center;
@@ -171,9 +169,8 @@
   cursor: pointer;
   transition: all .5s linear(-0.47 -53.68%, 1 100%);
   position: absolute;
-  top: 50px;
+  top: 52px;
   right: 2px;
-  display:none;
 }
 .bar div{
   position:relative;
@@ -183,7 +180,7 @@
   width: 30px;
   height: 2px;
   background: #4AB449;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
   display: block;
   transition: all .5s linear(-0.47 -53.68%, 1 100%);
 }
@@ -207,15 +204,70 @@
   right: -18px;
   transition: all .5s linear(-0.47 -53.68%, 1 100%);
 }
+.menuWraps{
+  background: #fff;
+  position: fixed;
+  z-index: 999999;
+  width: 279px;
+  top: 101px;
+  right: -300px;
+  color: black;
+  transition: all .5s cubic-bezier(0.52, 0.48, 0.78, 0.71);
+  height: 100vh;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+.hideMenu{
+  background: #fff;
+  position: fixed;
+  z-index: 999999;
+  width: 279px;
+  top: 101px;
+  right: 0px;
+  color: black;
+  transition: all .5s cubic-bezier(0.52, 0.48, 0.78, 0.71);
+  height: 100vh;
+  padding-top: 5px;
+  padding-left: 15px;
+}
 
+.wrapMenu li{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.menuIcon, .menuFlightIcon{
+  color: #4ab449 !important;
+  font-size: 25px;
+}
+.menuFlightIcon{
+  transform: rotate(41deg);
+}
 
-
-
-
-
-
-
-
+.securityInfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 215px;
+  margin-top: 23px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.securityInfo p{
+  font-size:14px;
+}
+.securityInfo button{
+  background: #4AB449;
+  color: white;
+  width: 70px;
+  border-radius: 3px;
+  padding: 3px 0px;
+}
+.signUpBtn{
+  background: #19ABE3 !important;
+}
 @media (max-width: 1366px) {
   /* Add your CSS styles for small laptops here */
   .navigationMain {
@@ -354,7 +406,7 @@
     color: black !important;
   }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 500px) {
   .navigationMOb {
     height: 55px;
   }

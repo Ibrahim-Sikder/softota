@@ -479,11 +479,18 @@ transform:scale(1.5)
 
 
 @media only screen and (max-width: 500px) {
-
+.menuWrap{
+  display: none;
+}
   .wrapMenu {
     justify-content: space-between !important;
     padding: 0px 30px;
 }
+.bannerWrap h2 {
+  font-size: 23px;
+  text-align: center;
+}
+
 .firstChild{
   border-top-left-radius: 0px !important;
   padding-left: 0px;
@@ -508,25 +515,29 @@ transform:scale(1.5)
     padding: 10px;
   }
   .bannerWrap {
-    margin-bottom: 300px;
-    height: 465px;
+    height: 454px;
+  
   }
   .heroBoxMain {
-    height: 640px;
-    border-radius: 0px;
+    height: 400px;
+    top: 17px;
   }
   .heroBoxBtn {
-    top: 544px;
+    top: 295px;
     width: 195px;
     margin-top: 13px;
+    font-size: 14px;
   }
   .tourTrending{
     width:290px !important;
    }
   .package4 {
-    top: 475px;
+    top: 229px;
     right: 40px;
     width: 80%;
+    height: 53px;
+    padding: 5px;
+    font-size: 13px;
   }
   .package {
     top: 275px;
@@ -538,22 +549,29 @@ transform:scale(1.5)
   }
 
   .package {
-    top: 268px;
+    top: 35px;
     width: 80%;
     left: 41px;
-    padding-left: 5px;
+    height: 53px;
+    padding: 5px;
+    font-size: 13px;
   }
   .date,
   .date2 {
-    top: 406px;
+    top: 160px;
     width: 40.7%;
     left: 41px;
+    font-size: 13px;
+}
   }
   .package2 {
-    top: 337px;
+    top: 98px;
     width: 80%;
     left: 41px;
     padding-left: 5px;
+    height: 53px;
+    padding: 5px;
+    font-size: 13px;
   }
   .date input,
   .date2 input {
@@ -566,10 +584,6 @@ transform:scale(1.5)
     border-left: none;
 
   }
-  .bestPlaceHead {
-    width: 100%;
-    margin-top: 387px;
-  }
   .bestPlaceHead h2 {
     font-size: 28px;
   }
@@ -579,7 +593,7 @@ transform:scale(1.5)
     }
 
 
-}
+
 
 @media only screen and (max-width: 400px) {
   .wrapMenu {

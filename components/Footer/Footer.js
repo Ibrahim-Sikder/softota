@@ -34,12 +34,12 @@ const Footer = () => {
           </p>
         </div>
         <div className="mb-10">
-          <h4 className="pb-5">USA </h4>
+          <h4 className="pb-5">USA Contact </h4>
           <p className="flex items-center text-white">
                 <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
-              <span>+1 470 9296928</span>
+              <span>+17705263551</span>
           </p>
-          <p className="flex items-center text-white my-2">
+          {/* <p className="flex items-center text-white my-2">
                 <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
               <span>+1 470 9071527</span>
           </p>
@@ -48,7 +48,7 @@ const Footer = () => {
               <span>
                 2932 Arbor Creek Ln, <br /> Doraville, GA 30340
               </span>
-          </p>
+          </p> */}
         </div>
         <div className="mb-10">
           <h4 className="pb-5">Social Media </h4>

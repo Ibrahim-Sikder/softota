@@ -356,7 +356,12 @@
   }
 }
 @media only screen and (max-width: 500px) {
-
+  .bannerWrap {
+    height: 313px;
+}
+.menuWrap{
+  display: none;
+}
   .wrapMenu {
     justify-content: space-between !important;
     padding: 0px 30px;
@@ -371,13 +376,14 @@
 }
   .heroBoxMain {
     width: 100%;
-    height: 446px;
+    height: 215px;
     background: none;
-    border-radius: 0px;
+    border-radius: 18px;
+
   }
   .heroBoxBtn {
     padding: 10px 0px;
-    top: 379px;
+    top: 118px;
     width: 195px;
     font-size: 14px;
   }
@@ -387,10 +393,12 @@
     width: 94%;
     margin: 0 auto;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 18px;
+    font-size: 23px;
+
   }
   .package2 {
-    top: 312px;
+    top: 50px;
     width: 83%;
     font-size: 14px;
   }

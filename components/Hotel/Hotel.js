@@ -116,7 +116,7 @@ const Hotel = () => {
           </Link>
 
           {/* menubar */}
-          <div>
+          <div className={style.menuWrap}>
           <ul className={style.menu}>
               <div className={style.wrapMenu}>
 

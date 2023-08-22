@@ -217,6 +217,10 @@
      }
      .bannerWrap h2{
        text-align: center;
+       font-size: 23px;
+      }
+      .menuWrap{
+        display: none;
       }
       .wrapMenu {
         justify-content: space-between !important;

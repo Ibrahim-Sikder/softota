@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import style from "./Banner.module.css";
 import Link from "next/link";
-import { Add, Groups2, HorizontalRule } from "@mui/icons-material";
+import { Flight, Hotel,BookOnline, TransferWithinAStation, BusAlert,DirectionsRailway,  Add, Groups2, HorizontalRule } from '@mui/icons-material';
 import TextField from "@mui/material/TextField";
 import ActiveLink from "./ActiveLink";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
@@ -25,6 +25,9 @@ const Banner = ({ setResults }) => {
 
 
   // for tab
+
+
+
 
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
@@ -146,7 +149,7 @@ const Banner = ({ setResults }) => {
       <div className={style.bannerWrap}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
-          <div className="">
+          <div className={style.menuWraps}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/hajjUmra">
@@ -381,6 +384,42 @@ const Banner = ({ setResults }) => {
             </ul>
           </div>
 
+
+      {/* for mobile menu  */}
+
+      <div className={style.mobileMenuWraps}>
+            <ul className={style.menu}>
+              <div className={style.wrapMenu}>
+
+                <ActiveLink href="/flight">
+                  <li className={style.activeLink}>
+                  <Flight/>
+                    <p className="ml-3">Flight</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/hotel">
+                  <li>
+                   <Hotel/>
+
+                    <p className="ml-3">Hotel</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/vissa">
+                  <li>
+                  <BookOnline/>
+                    <p className="ml-3">Vissa</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/tours">
+                  <li>
+                  <TransferWithinAStation/>
+
+                    <p className="ml-3">Tours</p>
+                  </li>
+                </ActiveLink>
+              </div>
+            </ul>
+          </div>
           {/* tab2 */}
           <div className="flightTab">
             <Tabs
@@ -483,7 +522,7 @@ const Banner = ({ setResults }) => {
                     </div>
 
                     {/* Open modala  */}
-                    <div className={style.modal}>
+                    <div className={style.modalWrap}>
                       {/* You can open the modal using ID.showModal() method */}
 
                       <dialog id="my_modal_3" className="modal">
@@ -569,6 +608,7 @@ const Banner = ({ setResults }) => {
                                 <option value="First class">First class</option>
                               </select>
                             </div>
+                            <input type="submit" value='Submit' className={style.modalSubmitBtn}/>
                           </div>
                         </form>
                       </dialog>

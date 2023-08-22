@@ -60,14 +60,15 @@
 
 }
 @media only screen and (max-width:600px){
-  .activeLink{
-    width: 146px !important;
+  .activeLink, .active{
+    width: 90px !important;
+    height: 50px !important;
+    }
+    .activeLink{
+      background:#4AB449 !important;
     }
    
-    .active{
-      width: 146px !important;
-    }
-
+   
 }
 @media only screen and (max-width:400px){
   .activeLink{

@@ -6,7 +6,7 @@ import Link from "next/link";
 import style from "./Nav.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
-
+import { Flight, Hotel,BookOnline, TransferWithinAStation, BusAlert,DirectionsRailway } from '@mui/icons-material';
 
 const Nav = () => {
   const [mobActive, setMobActive] = useState(0);
@@ -143,6 +143,67 @@ const Nav = () => {
               <span className={mobileMenu ? ` ` : `${style.bar3}`}></span>
             </div>
           </div>
+
+          <div className={mobileMenu ? `${style.menuWraps}` : `${style.hideMenu}` }>
+            <ul className={style.menu}>
+              <div className={style.wrapMenu}>
+                <Link href="/hajjUmra">
+                  <li className={style.firstChild}>
+                  <DirectionsRailway className={style.menuIcon}/>
+
+                    <p className="ml-3">Hajj & Umrah</p>
+                  </li>
+                </Link>
+                <Link href="/flight">
+                  <li className={style.activeLink}>
+                  <Flight className={style.menuFlightIcon}/>
+
+                    <p className="ml-3">Flight</p>
+                  </li>
+                </Link>
+                <Link href="/hotel">
+                  <li>
+                  <Hotel className={style.menuIcon}/>
+
+                    <p className="ml-3">Hotel</p>
+                  </li>
+                </Link>
+                <Link href="/vissa">
+                  <li>
+                  <BookOnline className={style.menuIcon}/>
+
+                    <p className="ml-3">Vissa</p>
+                  </li>
+                </Link>
+                <Link href="/tours">
+                  <li>
+                  <TransferWithinAStation className={style.menuIcon}/>
+
+                    <p className="ml-3">Tours</p>
+                  </li>
+                </Link>
+                <Link href="/busses">
+                  <li>
+                  <BusAlert className={style.menuIcon}/>
+
+                    <p className="ml-3">Buses</p>
+                  </li>
+                </Link>
+                <Link href="/train">
+                  <li className={style.lastChild}>
+                   <DirectionsRailway className={style.menuIcon}/>
+                    <p className="ml-3">Trains</p>
+                  </li>
+                </Link>
+              </div>
+            </ul>
+            <div className={style.securityInfo}>
+             <Link href='/login'><button>Login</button></Link>
+              <Link href='/signup'><button className={style.signUpBtn}>Sign Up</button></Link>
+              <Link href='/aboutUs'><p>About Us</p></Link>
+             </div>
+          </div>
+
 
     </div>
   );

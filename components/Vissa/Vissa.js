@@ -14,7 +14,7 @@ const Vissa = () => {
         </h2>
         <div className={style.heroBoxMain}>
           {/* menubar */}
-          <div>
+          <div className={style.menuWrap}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/hajjUumra">
