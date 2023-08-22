@@ -152,6 +152,70 @@
 .activeNavMob {
   display: none;
 }
+
+
+/* mobile menu styling */
+
+.bar {
+  padding: 0px !important;
+  text-align: left !important;
+  width: 49px;
+  right: -71px;
+  top: 23px;
+  height: 46px;
+  line-height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all .5s linear(-0.47 -53.68%, 1 100%);
+  position: absolute;
+  top: 50px;
+  right: 2px;
+  display:none;
+}
+.bar div{
+  position:relative;
+
+}
+.bar span {
+  width: 30px;
+  height: 2px;
+  background: #4AB449;
+  margin-bottom: 3px;
+  display: block;
+  transition: all .5s linear(-0.47 -53.68%, 1 100%);
+}
+.bar1{
+  transform: rotate(-45deg);
+    position: absolute;
+    top: -2px;
+    left: -12px;
+    transition: all .5s linear(-0.47 -53.68%, 1 100%);
+}
+.bar2{
+  display: none;
+  position: absolute !important;
+  display: none !important;
+  transition: all .5s linear(-0.47 -53.68%, 1 100%);
+}
+.bar3{
+  transform: rotate(45deg);
+  position: absolute;
+  top: -2px;
+  right: -18px;
+  transition: all .5s linear(-0.47 -53.68%, 1 100%);
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 1366px) {
   /* Add your CSS styles for small laptops here */
   .navigationMain {
@@ -233,6 +297,7 @@
     color: #26ade2 !important;
     cursor: pointer;
     font-size: 25px;
+    display: none;
 
   }
   .landOf {

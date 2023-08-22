@@ -2,54 +2,12 @@ import React, { useEffect, useState } from "react";
 import styles from '../../components/UserDashBoard/UserDashBoard.module.css'
 import style from '../Banner/Banner.module.css'
 import Link from "next/link";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 import { Add, Groups2, HorizontalRule } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import ActiveLink from "../Banner/ActiveLink";
+import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
-
-function CustomTabPanel(props) {
-  const { children, value, index, ...other } = props;
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-CustomTabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-function BasicTabs() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-}
 
 
 const handleToggle = (value) => () => {
@@ -124,7 +82,7 @@ const HeroBox = () => {
   const [data6, setData6] = useState([]);
   const [filterData6, setFilterData6] = useState([]);
   const [selected6, setSelected6] = useState([])
-
+  const [tabIndex, setTabIndex] = useState(0);
   const [activePackage, setActivePackage] = useState(true)
   const handleActivePackage  = ()=>{
     setActivePackage(activePackage=>!activePackage)
@@ -615,26 +573,22 @@ const HeroBox = () => {
               </div>
             </ul>
         </div>
-        <div className={style.flightWay}>
-          <Box sx={{ width: "100%" }}>
-            <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-              <Tabs
-              className={styles.tabLeft}
-                value={value}
-                onChange={handleChange}
-                defaultValue={2}
-                selected={2}
-              >
-                <Tab label="One Way" {...a11yProps(0)} />
-                <Tab label="Round Trip" {...a11yProps(1)} />
-                <Tab label="Multiple city" {...a11yProps(2)} />
-                <Tab label="Group Flight" {...a11yProps(3)} />
-              </Tabs>
-            </Box>
-            <CustomTabPanel value={value} index={0}>
+        <div className="flightTab">
+            
+          <Tabs
+            defaultTabIndex={tabIndex}
+            onSelect={(index) => setTabIndex(index)}
+          >
+            <TabList className={style.tabWrap}>
+              <Tab>One Way</Tab>
+              <Tab>Round Trip</Tab>
+              <Tab>Multiple City</Tab>
+              <Tab>Group Flight</Tab>
+            </TabList>
+            <TabPanel>
               <div>
                 <div className={style.oneWayPackage}>
-                  <div className={`${style.package} ${styles.searchBox}`}>
+                  <div className={style.package}>
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
 
@@ -649,7 +603,12 @@ const HeroBox = () => {
                       <div className={style.searchResult}>
                         {data?.map((d, i) => (
                           <div key={i}>
-                            <div onClick={() => handleSelect(d.iata, d.name, d.country)} className={style.airport}>
+                            <div
+                              onClick={() =>
+                                handleSelect(d.iata, d.name, d.country)
+                              }
+                              className={style.airport}
+                            >
                               <h6 className="mr-3">{d.iata}</h6>
                               <p>,{d.country}</p>
                               <p>,{d.name}</p>
@@ -659,7 +618,8 @@ const HeroBox = () => {
                       </div>
                     </div>
                   </div>
-                  <div className={`${style.package2} ${styles.searchBox}`}>
+
+                  <div className={style.package2}>
                     <div className={style.searchTop}>
                       <h4>Flying To</h4>
                       <input
@@ -672,7 +632,12 @@ const HeroBox = () => {
                       <div className={style.searchResult}>
                         {data2?.map((d, i) => (
                           <div key={i}>
-                            <div onClick={() => handleSelect2(d.iata, d.name, d.country)} className={style.airport}>
+                            <div
+                              onClick={() =>
+                                handleSelect2(d.iata, d.name, d.country)
+                              }
+                              className={style.airport}
+                            >
                               <h6 className="mr-3">{d.iata}</h6>
                               <p>,{d.country}</p>
                               <p>,{d.name}</p>
@@ -686,24 +651,25 @@ const HeroBox = () => {
                 <div className={style.packageWrap}>
                   <div className={style.oneWayPackage}>
                     <div className={style.packageDate}>
-                      <div className={`${style.departDate} ${styles.dateBox}`}>
+                      <div className={style.departDate}>
                         <h4>Depart To</h4>
                         <input type="date" />
                       </div>
                     </div>
-                    <div >
-                      <div
-
-                        className={`${style.package4} ${styles.passenger}`}>
-                        <div className='flex justify-between'>
+                    <div>
+                      <div className={style.package4}>
+                        <div className="flex justify-between">
                           <div>
-                            <h4>Passengers & Class</h4>
-                            <small className="block ">{child + infant + adult} Person</small>
-                            <small>{classes}</small>
+                            <h4>
+                              Passengers & {child + infant + adult} Person
+                            </h4>
+                            <span>{classes}</span>
                           </div>
-                          <Groups2 onClick={() => window.my_modal_3.showModal()} className={style.showModalIcon} />
+                          <Groups2
+                            onClick={() => window.my_modal_3.showModal()}
+                            className={style.showModalIcon}
+                          />
                         </div>
-
                       </div>
                     </div>
                   </div>
@@ -711,12 +677,10 @@ const HeroBox = () => {
                   {/* Open modala  */}
                   <div className={style.modal}>
                     {/* You can open the modal using ID.showModal() method */}
-                  
+
                     <dialog id="my_modal_3" className="modal">
                       <form method="dialog" className="modal-box">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                          ✕
-                        </button>
+                        <button className={style.modalCloseBtn}>✕</button>
                         <div>
                           <h3 className="font-bold text-lg">Passenger</h3>
                           <div className={style.passengerWrap}>
@@ -757,7 +721,9 @@ const HeroBox = () => {
                               <strong>{infant}</strong>
                               <div className="ml-5">
                                 <span className="text-xs">Children</span> <br />
-                                <small>0 - 23 month at the time of travel </small>
+                                <small>
+                                  0 - 23 month at the time of travel{" "}
+                                </small>
                               </div>
                             </div>
                             <div className={style.adultsBtn}>
@@ -770,16 +736,24 @@ const HeroBox = () => {
                           </div>
 
                           <div className={style.classType}>
-
-                            <select onChange={(e) => {
-                              const classes = e.target.value;
-                              setClasses(classes)
-
-                            }}>
-                              <option value="Premium" selected>Cabin Class</option>
-                              <option value="Premium Econom">Premium Economy</option>
-                              <option value="Economy class">Economy class</option>
-                              <option value="Business class">Business class</option>
+                            <select
+                              onChange={(e) => {
+                                const classes = e.target.value;
+                                setClasses(classes);
+                              }}
+                            >
+                              <option value="Premium" selected>
+                                Cabin Class
+                              </option>
+                              <option value="Premium Econom">
+                                Premium Economy
+                              </option>
+                              <option value="Economy class">
+                                Economy class
+                              </option>
+                              <option value="Business class">
+                                Business class
+                              </option>
                               <option value="First class">First class</option>
                             </select>
                           </div>
@@ -787,27 +761,31 @@ const HeroBox = () => {
                       </form>
                     </dialog>
                   </div>
-
                 </div>
               </div>
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={1}>
+            </TabPanel>
+            <TabPanel>
               <div>
                 <div className={style.roundTripWrap}>
-                  <div className={`${style.package} ${styles.searchBox}`}>
+                  <div className={style.package}>
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
-                        value={selected3}
+                        value={selected}
                         id="searchAirport"
-                        onChange={(e) => handleFilter3(e.target.value)}
-                        type="text "
+                        onChange={(e) => handleFilter(e.target.value)}
+                        type="text"
                         placeholder="City or Airport "
                       />
                       <div className={style.searchResult}>
-                        {data3?.map((d, i) => (
+                        {data?.map((d, i) => (
                           <div key={i}>
-                            <div onClick={() => handleSelect3(d.iata, d.name, d.country)} className={style.airport}>
+                            <div
+                              onClick={() =>
+                                handleSelect(d.iata, d.name, d.country)
+                              }
+                              className={style.airport}
+                            >
                               <h6 className="mr-3">{d.iata}</h6>
                               <p>,{d.country}</p>
                               <p>,{d.name}</p>
@@ -817,20 +795,25 @@ const HeroBox = () => {
                       </div>
                     </div>
                   </div>
-                  <div className={`${style.package2} ${styles.searchBox}`}>
+                  <div className={style.package2}>
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
-                        value={selected4}
+                        value={selected2}
                         id="searchAirport"
-                        onChange={(e) => handleFilter4(e.target.value)}
+                        onChange={(e) => handleFilter2(e.target.value)}
                         type="text "
                         placeholder="City or Airport "
                       />
                       <div className={style.searchResult}>
-                        {data4?.map((d, i) => (
+                        {data2?.map((d, i) => (
                           <div key={i}>
-                            <div onClick={() => handleSelect4(d.iata, d.name, d.country)} className={style.airport}>
+                            <div
+                              onClick={() =>
+                                handleSelect2(d.iata, d.name, d.country)
+                              }
+                              className={style.airport}
+                            >
                               <h6 className="mr-3">{d.iata}</h6>
                               <p>,{d.country}</p>
                               <p>,{d.name}</p>
@@ -843,44 +826,47 @@ const HeroBox = () => {
                 </div>
 
                 <div className={style.packageWrap}>
-                  <div className={`${style.packageDate} `}>
+                  <div className={style.packageDate}>
                     <div className={style.roundTripWrap}>
-                      <div className={`${style.date} ${styles.searchBox}`}>
+                      <div className={style.date}>
                         <h4>Depart To</h4>
                         <input type="date" />
                       </div>
-                      <div className={`${style.date2} ${styles.searchBox}`}>
+                      <div className={style.date2}>
                         <h4>Return To </h4>
                         <input type="date" />
                       </div>
                       <div
                         onClick={() => window.my_modal_3.showModal()}
-                        className={`${style.package4} ${styles.searchBox}`}>
-                        <div className='flex justify-between'>
+                        className={style.package4}
+                      >
+                        <div className="flex justify-between">
                           <div>
-                            <small>{child + infant + adult} Person</small> <br />
-                            <h4>Passengers & Cabin Class</h4>
+                            <span>
+                              Passenger & {child + infant + adult} Person
+                            </span>{" "}
+                            <br />
+                            <span>{classes}</span>
                           </div>
-                          <Groups2 onClick={() => window.my_modal_3.showModal()} className={style.showModalIcon} />
+                          <Groups2
+                            onClick={() => window.my_modal_3.showModal()}
+                            className={style.showModalIcon}
+                          />
                         </div>
-
                       </div>
                     </div>
-
                   </div>
 
                   {/* open modal */}
                   <div className={style.modal}>
                     {/* You can open the modal using ID.showModal() method */}
-                    
+
                     <dialog id="my_modal_3" className="modal">
                       <form method="dialog" className="modal-box">
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                          ✕
-                        </button>
+                        <button className={style.modalCloseBtn}>✕</button>
                         <div>
                           <h3 className="font-bold text-lg">Passenger</h3>
-                          <div className={`${style.passengerWrap}`}>
+                          <div className={style.passengerWrap}>
                             <div className={style.pLeftSide}>
                               <strong>{child}</strong>
                               <div className="ml-5">
@@ -913,12 +899,184 @@ const HeroBox = () => {
                               type="date"
                             />
                           </div>
-                          <div className={`${style.passengerWrap} `}>
+                          <div className={style.passengerWrap}>
                             <div className={style.pLeftSide}>
                               <strong>{infant}</strong>
                               <div className="ml-5">
                                 <span className="text-xs">Children</span> <br />
-                                <small>0 - 23 month at the time of travel </small>
+                                <small>
+                                  0 - 23 month at the time of travel{" "}
+                                </small>
+                              </div>
+                            </div>
+                            <div className={style.adultsBtn}>
+                              <span onClick={decrementInfant}>-</span>
+                              <span onClick={incrementInfant}>+</span>
+                            </div>
+                          </div>
+                          <div>
+                            <hr className="w-full my-5" />
+                          </div>
+
+                          <div className={style.classType}>
+                            <select
+                              onChange={(e) => {
+                                const classes = e.target.value;
+                                setClasses(classes);
+                              }}
+                            >
+                              <option value="Premium" selected>
+                                Cabin Class
+                              </option>
+                              <option value="Premium Econom">
+                                Premium Economy
+                              </option>
+                              <option value="Economy class">
+                                Economy class
+                              </option>
+                              <option value="Business class">
+                                Business class
+                              </option>
+                              <option value="First class">First class</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                    </dialog>
+                  </div>
+                </div>
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className={style.multiplePackageWrap}>
+                <div className={style.multiplePackage}>
+                  <div className={style.searchTop}>
+                    <h4>Flying From</h4>
+                    <input
+                      value={selected}
+                      id="searchAirport"
+                      onChange={(e) => handleFilter(e.target.value)}
+                      type="text "
+                      placeholder="City or Airport "
+                    />
+                    <div className={style.searchResult}>
+                      {data?.map((d, i) => (
+                        <div key={i}>
+                          <div
+                            onClick={() =>
+                              handleSelect(d.iata, d.name, d.country)
+                            }
+                            className={style.airport}
+                          >
+                            <h6 className="mr-3">{d.iata}</h6>
+                            <p>,{d.country}</p>
+                            <p>,{d.name}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className={style.multiplePackage}>
+                  <div className={style.searchTop}>
+                    <h4>Flying To</h4>
+                    <input
+                      value={selected2}
+                      id="searchAirport"
+                      onChange={(e) => handleFilter2(e.target.value)}
+                      type="text "
+                      placeholder="City or Airport "
+                    />
+                    <div className={style.searchResult}>
+                      {data2?.map((d, i) => (
+                        <div key={i}>
+                          <div
+                            onClick={() =>
+                              handleSelect2(d.iata, d.name, d.country)
+                            }
+                            className={style.airport}
+                          >
+                            <h6 className="mr-3">{d.iata}</h6>
+                            <p>,{d.country}</p>
+                            <p>,{d.name}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className={style.multiplePackage}>
+                  <div>
+                    <h4>Select Date </h4>
+                    <input type="date" />
+                  </div>
+                </div>
+
+                <div
+                  onClick={() => window.my_modal_3.showModal()}
+                  className={style.multiplePackage}
+                >
+                  <div>
+                    <h4>
+                      Passenger & <small>{child + infant + adult} Person</small>{" "}
+                    </h4>
+                    <small>Economy class</small>
+                  </div>
+
+                  <div className="modal">
+                    {/* You can open the modal using ID.showModal() method */}
+                    <button
+                      className="btn"
+                      onClick={() => window.my_modal_3.showModal()}
+                    ></button>
+                    <dialog id="my_modal_3" className="modal">
+                      <form method="dialog" className="modal-box">
+                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                          ✕
+                        </button>
+                        <div>
+                          <h3 className="font-bold text-lg">Passenger</h3>
+                          <div className={style.passengerWrap}>
+                            <div className={style.pLeftSide}>
+                              <strong>{child}</strong>
+                              <div className="ml-5">
+                                <span className="text-xs">Adults</span> <br />
+                                <small>12 Years and above </small>
+                              </div>
+                            </div>
+                            <div className={style.adultsBtn}>
+                              <span onClick={childDecrement}>-</span>
+                              <span onClick={childIncrement}>+</span>
+                            </div>
+                          </div>
+                          <div className={style.passengerWrap}>
+                            <div className={style.pLeftSide}>
+                              <strong>{adult}</strong>
+                              <div className="ml-5">
+                                <span className="text-xs">Children</span> <br />
+                                <small>2- 11 year at the time of travel </small>
+                              </div>
+                            </div>
+                            <div className={style.adultsBtn}>
+                              <span onClick={decrementAdult}>-</span>
+                              <span onClick={incrementAdult}>+</span>
+                            </div>
+                          </div>
+                          <div>
+                            <TextField
+                              className={style.dateOfChild}
+                              id="outlined-required"
+                              type="date"
+                            />
+                          </div>
+                          <div className={style.passengerWrap}>
+                            <div className={style.pLeftSide}>
+                              <strong>{infant}</strong>
+                              <div className="ml-5">
+                                <span className="text-xs">Children</span> <br />
+                                <small>
+                                  0 - 23 month at the time of travel{" "}
+                                </small>
                               </div>
                             </div>
                             <div className={style.adultsBtn}>
@@ -942,280 +1100,82 @@ const HeroBox = () => {
                   </div>
                 </div>
               </div>
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={2}>
-              <div className={style.multiplePackageWrap}>
-                <div className={`${style.multiplePackage} ${styles.searchBox}`}>
-                  <div className={style.searchTop}>
-                    <h4>Flying From</h4>
-                    <input
-                      value={selected5}
-                      id="searchAirport"
-                      onChange={(e) => handleFilter5(e.target.value)}
-                      type="text "
-                      placeholder="City or Airport "
-                    />
-                    <div className={style.searchResult}>
-                      {data5?.map((d, i) => (
-                        <div key={i}>
-                          <div onClick={() => handleSelect5(d.iata, d.name, d.country)} className={style.airport}>
-                            <h6 className="mr-3">{d.iata}</h6>
-                            <p>,{d.country}</p>
-                            <p>,{d.name}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className={`${style.multiplePackage} ${styles.searchBox}`}>
-                  <div className={style.searchTop}>
-                    <h4>Flying To</h4>
-                    <input
-                      value={selected6}
-                      id="searchAirport"
-                      onChange={(e) => handleFilter6(e.target.value)}
-                      type="text "
-                      placeholder="City or Airport "
-                    />
-                    <div className={style.searchResult}>
-                      {data6?.map((d, i) => (
-                        <div key={i}>
-                          <div onClick={() => handleSelect6(d.iata, d.name, d.country)} className={style.airport}>
-                            <h6 className="mr-3">{d.iata}</h6>
-                            <p>,{d.country}</p>
-                            <p>,{d.name}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <div className={`${style.multiplePackage} ${styles.searchBox}`}>
-                  <div>
-                    <h4>Select Date </h4>
-                    <input type="date" />
-                  </div>
-                  
-                <div className="modal">
-                  {/* You can open the modal using ID.showModal() method */}
-                  <button
-                    className="btn"
-                    onClick={() => window.my_modal_3.showModal()}
-                  >
 
-                  </button>
-                  <dialog id="my_modal_3" className="modal">
-                    <form method="dialog" className="modal-box">
-                      <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                        ✕
-                      </button>
+              {inputList.map((x, i) => {
+                return (
+                  <div key={i} className={style.multiplePackageWrap}>
+                    <div className={style.multiplePackage}>
+                      <div className={style.searchTop}>
+                        <h4>Flying From</h4>
+                        <input
+                          id="searchAirport"
+                          type="text "
+                          placeholder="City or Airport "
+                        />
+                      </div>
+                    </div>
+                    <div className={style.multiplePackage}>
+                      <div className={style.searchTop}>
+                        <h4>Flying To</h4>
+                        <input
+                          id="searchAirport"
+                          type="text "
+                          placeholder="City or Airport "
+                        />
+                      </div>
+                    </div>
+                    <div className={style.multiplePackage}>
                       <div>
-                        <h3 className="font-bold text-lg">Passenger</h3>
-                        <div className={`${style.passengerWrap} ${styles.searchBox}`}>
-                          <div className={style.pLeftSide}>
-                            <strong>{child}</strong>
-                            <div className="ml-5">
-                              <span className="text-xs">Adults</span> <br />
-                              <small>12 Years and above </small>
-                            </div>
-                          </div>
-                          <div className={style.adultsBtn}>
-                            <span onClick={childDecrement}>-</span>
-                            <span onClick={childIncrement}>+</span>
-                          </div>
-                        </div>
-                        <div className={style.passengerWrap}>
-                          <div className={style.pLeftSide}>
-                            <strong>{adult}</strong>
-                            <div className="ml-5">
-                              <span className="text-xs">Children</span> <br />
-                              <small>2- 11 year at the time of travel </small>
-                            </div>
-                          </div>
-                          <div className={style.adultsBtn}>
-                            <span onClick={decrementAdult}>-</span>
-                            <span onClick={incrementAdult}>+</span>
-                          </div>
-                        </div>
-                        <div>
-                          <TextField
-                            className={style.dateOfChild}
-                            id="outlined-required"
-                            type="date"
-                          />
-                        </div>
-                        <div className={style.passengerWrap}>
-                          <div className={style.pLeftSide}>
-                            <strong>{infant}</strong>
-                            <div className="ml-5">
-                              <span className="text-xs">Children</span> <br />
-                              <small>0 - 23 month at the time of travel </small>
-                            </div>
-                          </div>
-                          <div className={style.adultsBtn}>
-                            <span onClick={decrementInfant}>-</span>
-                            <span onClick={incrementInfant}>+</span>
-                          </div>
-                        </div>
-                        <div>
-                          <hr className="w-full my-5" />
-                        </div>
+                        <h4>Select Date </h4>
+                        <input
+                          onChange={(e) => handleinputchange(e, i)}
+                          type="date"
+                        />
+                      </div>
+                    </div>
 
-                        <div className={style.classType}>
-                          <p>Cabin class</p>
-                          <p>Premium Economy</p>
-                          <p>Business class</p>
-                          <p>First class</p>
+                    {inputList.length !== 1 && (
+                      <div onClick={() => handleremove(i)}>
+                        <div className={style.removeCity}>
+                          <HorizontalRule />
+                          <span>Remove City </span>
                         </div>
                       </div>
-                    </form>
-                  </dialog>
-                </div>
-                </div>
-                <div
-                  onClick={() => window.my_modal_3.showModal()}
-                  className={`${style.multiplePackage} ${styles.searchBox}`}
-                >
-                  <div>
-                    <h4 className="text-xs">Passenger &   <small>{child + infant + adult} Person</small> </h4>
-                
-                    <small className="text-xs">Economy class</small>
+                    )}
+
+                    {inputList.length - 1 === i && (
+                      <div onClick={handleaddclick}>
+                        <div className={style.addCity}>
+                          <Add />
+                          <span>Add City</span>
+                        </div>
+                      </div>
+                    )}
                   </div>
-                </div>
-
-              </div>
-
-              {
-                inputList.map((x, i) => {
-                  return (
-
-                    <div key={i} className={style.multiplePackageWrap}>
-                      <div className={`${style.multiplePackage} ${styles.searchBox}`}>
-                        <div className={style.searchTop}>
-                          <h4>Flying From</h4>
-                          <input
-
-                            // onChange={(e) => handleFilter(e.target.value)}
-                            id="searchAirport"
-                            type="text "
-                            placeholder="City or Airport "
-                          />
-                          {/* <div className={style.searchResult}>
-                  {data?.map((d, i) => (
-                    <div key={i}>
-                    <div className={style.airport}>
-                    <h6 className="mr-3">{d.iata}</h6>
-                    <p>,{d.country}</p>
-                    <p>,{d.name}</p>
-                    </div>
-                    </div>
-                    ))}
-                  </div> */}
-                        </div>
-                      </div>
-                      <div className={`${style.multiplePackage} ${styles.searchBox}`}>
-                        <div className={style.searchTop}>
-                          <h4>Flying To</h4>
-                          <input
-                            // onChange={(e) => handleFilter2(e.target.value)}
-                            id="searchAirport"
-                            type="text "
-                            placeholder="City or Airport "
-                          />
-                          {/* <div className={style.searchResult}>
-                  {data2?.map((d, i) => (
-                    <div key={i}>
-                    <div className={style.airport}>
-                    <h6 className="mr-3">{d.iata}</h6>
-                    <p>,{d.country}</p>
-                    <p>,{d.name}</p>
-                    </div>
-                    </div>
-                    ))}
-                  </div> */}
-                        </div>
-                      </div>
-                      <div className={`${style.multiplePackage} ${styles.searchBox}`}>
-                        <div>
-                          <h4>Select Date </h4>
-                          <input onChange={e => handleinputchange(e, i)} type="date" />
-                        </div>
-                      </div>
-
-                      {
-
-                        inputList.length !== 1 &&
-                        <div onClick={() => handleremove(i)}>
-                          <div className={`${style.removeCity} ${styles.removecity}`}>
-                            <HorizontalRule />
-                            <span>Remove City </span>
-                          </div>
-                        </div>
-                      }
-
-
-                      {inputList.length - 1 === i &&
-                        <div onClick={handleaddclick}>
-                          <div className={style.addCity}>
-                            <Add />
-                            <span>Add City</span>
-                          </div>
-                        </div>
-                      }
-
-
-
-                    </div>
-                  );
-                })}
-
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={3}>
+                );
+              })}
+            </TabPanel>
+            <TabPanel>
               <div>
                 <div className={style.groupFlight}>
-                  <div className={`${style.package} ${styles.searchBox}`}>
+                  <div className={style.package}>
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
-                        // onChange={(e) => handleFilter(e.target.value)}
                         id="searchAirport"
                         type="text "
                         placeholder="City or Airport "
                       />
-                      {/* <div className={style.searchResult}>
-                {data?.map((d, i) => (
-                  <div key={i}>
-                  <div className={style.airport}>
-                  <h6 className="mr-3">{d.iata}</h6>
-                  <p>,{d.country}</p>
-                  <p>,{d.name}</p>
-                  </div>
-                  </div>
-                  ))}
-                </div> */}
                     </div>
                   </div>
-                  <div className={`${style.package2} ${styles.searchBox}`}>
+                  <div className={style.package2}>
                     <div className={style.searchTop}>
                       <h4>Flying To</h4>
                       <input
-                        // onChange={(e) => handleFilter2(e.target.value)}
                         id="searchAirport"
                         type="text "
                         placeholder="City or Airport "
                       />
-                      {/* <div className={style.searchResult}>
-                {data2?.map((d, i) => (
-                  <div key={i}>
-                  <div className={style.airport}>
-                  <h6 className="mr-3">{d.iata}</h6>
-                  <p>,{d.country}</p>
-                  <p>,{d.name}</p>
-                  </div>
-                  </div>
-                  ))}
-                </div> */}
                     </div>
                   </div>
                 </div>
@@ -1223,29 +1183,27 @@ const HeroBox = () => {
                 <div className={style.packageWrap}>
                   <div className={style.packageDate}>
                     <div className={style.groupFlight}>
-                      <div className={`${style.date} ${styles.searchBox}`}>
+                      <div className={style.date}>
                         <h4>Depart To</h4>
                         <input type="date" />
                       </div>
-                      <div className={`${style.date2} ${styles.searchBox}`} >
+                      <div className={style.date2}>
                         <h4>Return To </h4>
                         <input type="date" />
                       </div>
-                      <div className={`${style.package4} ${styles.searchBox}`}>
+                      <div className={style.package4}>
                         <div>
                           <h4>Passengers & Cabin Class</h4>
                           <input type="text " placeholder="1 person" />
                         </div>
                       </div>
                     </div>
-
                   </div>
-
                 </div>
               </div>
-            </CustomTabPanel>
-          </Box>
-        </div>
+            </TabPanel>
+          </Tabs>
+          </div>
         <div className={style.btnWrap}>
           <Link href='/admin/flightsearch'>
             <button className={`${style.heroBoxBtn} ${styles.searchBtn}`}>Get Your Flight</button>

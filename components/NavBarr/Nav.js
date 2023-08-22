@@ -6,17 +6,22 @@ import Link from "next/link";
 import style from "./Nav.module.css";
 import Image from "next/image";
 import { useEffect } from "react";
+
+
 const Nav = () => {
   const [mobActive, setMobActive] = useState(0);
-  const [stickyMenu, setStickyMenu] = useState(false)
+  const [stickyMenu, setStickyMenu] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(true);
+  const toggleMobileMenu = () => {
+    setMobileMenu((mobileMenu) => !mobileMenu);
+  };
   useEffect(() => {
-const handleScroll = ()=>{
-  setStickyMenu(window.scrollY > 100)
-}
-window.addEventListener('scroll', handleScroll);
-return () => window.removeEventListener('scroll', handleScroll)
+    const handleScroll = () => {
+      setStickyMenu(window.scrollY > 100);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
 
   return (
     <div className={style.navbarMain}>
@@ -38,48 +43,45 @@ return () => window.removeEventListener('scroll', handleScroll)
         <h2>+88-01885-071-488</h2>
         <p>Contact Us</p>
       </div>
-    <div className={`${stickyMenu ? `${style.sticky}` : ` ` }`}>
-    <div className={style.navigationMain}>
-        <div className={style.navigationContent}>
-          <div className={style.navigationLeft}>
-            <div  className={style.logo}>
-           <Link href='/'>
-           <Image
-              src={Logo}
-              alt="Picture of the author"
-            />
-           </Link>
+      <div className={`${stickyMenu ? `${style.sticky}` : ` `}`}>
+        <div className={style.navigationMain}>
+          <div className={style.navigationContent}>
+            <div className={style.navigationLeft}>
+              <div className={style.logo}>
+                <Link href="/">
+                  <Image src={Logo} alt="Picture of the author" />
+                </Link>
+              </div>
+              <Link
+                href="/aboutUs"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <p>About Us</p>
+              </Link>
             </div>
-            <Link
-              href="/aboutUs"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <p>About Us</p>
-            </Link>
-          </div>
-          <div className={style.inputDiv}>
-            <input type="text" placeholder="Search Flight, Hotal, Visa" />
-            <div className={style.inputIcon}></div>
-          </div>
-          <div className={style.inputButtons}>
-            <Link
-              href="/login"
-              className={style.logInButton}
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Log In
-            </Link>
-            <Link
-              href="/signup"
-              className={style.signUpButtonTwo}
-              style={{ textDecoration: "none", color: "white" }}
-            >
-              Sign Up
-            </Link>
+            <div className={style.inputDiv}>
+              <input type="text" placeholder="Search Flight, Hotal, Visa" />
+              <div className={style.inputIcon}></div>
+            </div>
+            <div className={style.inputButtons}>
+              <Link
+                href="/login"
+                className={style.logInButton}
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Log In
+              </Link>
+              <Link
+                href="/signup"
+                className={style.signUpButtonTwo}
+                style={{ textDecoration: "none", color: "white" }}
+              >
+                Sign Up
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-    </div>
       {mobActive === 0 ? (
         <div className={style.navigationMOb}>
           <Image
@@ -132,6 +134,16 @@ return () => window.removeEventListener('scroll', handleScroll)
           </div>
         </div>
       )}
+
+        {/* mobile menu */}
+        <div onClick={toggleMobileMenu} className={style.bar}>
+            <div>
+              <span className={mobileMenu ? ` ` : `${style.bar1}`}></span>
+              <span className={mobileMenu ? ` ` : `${style.bar2}`}></span>
+              <span className={mobileMenu ? ` ` : `${style.bar3}`}></span>
+            </div>
+          </div>
+
     </div>
   );
 };

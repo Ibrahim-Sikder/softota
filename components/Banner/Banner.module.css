@@ -323,12 +323,25 @@
 .airport p{
   font-size:12px;
 }
-
-
-
-
-
-
+.tabWrap{
+  background: transparent;
+  width: 100%;
+  margin: 32px auto;
+  color: white;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.multipleCityBtnGroup{
+  height: 70px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .banner {
   width: 100vw !important;
@@ -453,31 +466,28 @@ font-size:14px;
 .addCity{
   display: flex;
   align-items: center;
-  background: #4AB449;
+  background: #19ABE3;
   color: white;
-  width: 103px;
-  padding: 5px;
-  height: 43px;
-  border-radius: 12px;
-  margin-left: 20px;
+  width: 104px;
+  padding: 5px 0px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 14px;
-  border:1px solid #fff;
+  font-size: 12px;
+  border: 1px solid #fff;
+  margin-top: 3px;
 }
 
 .removeCity{
   display: flex;
   align-items: center;
-  background: #4AB449;
+  background: #19ABE3;
   color: white;
-  width: 117px;
-  padding: 5px;
-  height: 43px;
-  border-radius: 12px;
-  margin-left: 20px;
+  width: 104px;
+  padding: 5px 0px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 13px !important;
-  border:1px solid #fff;
+  border: 1px solid #fff;
 }
 .oneWayPackage, .roundTripWrap, .groupFlight{
   display: flex;
@@ -681,6 +691,7 @@ font-size:14px;
   background:#19ABE3 !important;
 }
 
+
 .modalCloseBtn{
   background: transparent;
   position: absolute;
@@ -842,6 +853,10 @@ font-size:14px;
 }
 .tabsWrap {
   margin-left: 13px;
+}
+.modalCloseBtn{
+  right: -22px;
+  top: 4px;
 }
 
 

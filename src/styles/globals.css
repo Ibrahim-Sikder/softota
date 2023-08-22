@@ -191,6 +191,24 @@ input::placeholder {
 }
 
 
+.react-tabs__tab--selected {
+  background: #19ABE3 !important;
+  color: #fff !important;
+  border-bottom: 1px solid #fff !important;
+  font-size:14px !important;
+}
+.react-tabs__tab {
+  position: initial !important;
+  font-size:14px !important;
+}
+.react-tabs__tab--selected {
+  border:none !important;
+}
+
+
+
+
+
 @media only screen and (max-width: 1024px) {
   .css-1ujnqem-MuiTabs-root {
     margin-left: 250px;
@@ -251,6 +269,10 @@ input::placeholder {
     text-transform: capitalize;
     font-size: 14px;
   }
+  .react-tabs__tab,  .react-tabs__tab--selected {
+    font-size:12px !important;
+  }
+
 }
 
 @media only screen and (max-width: 400px) {
