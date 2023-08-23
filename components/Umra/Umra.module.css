@@ -31,6 +31,7 @@
   border-radius: 37px;
   position: relative;
   top: 26px;
+  overflow: hidden;
 }
 
 .package2 {

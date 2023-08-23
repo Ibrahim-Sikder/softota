@@ -204,3 +204,17 @@
     padding: 10px;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  .trendingHead h2 {
+    font-size: 25px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+  .bestPlaceWrap {
+    padding: 0px 0px;
+}
+  
+}
+
+

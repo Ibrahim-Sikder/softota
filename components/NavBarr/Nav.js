@@ -17,14 +17,16 @@ const Nav = () => {
   };
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 100);
+      setStickyMenu(window.scrollY > 1000);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className={style.navbarMain}>
+
+   <section className={style.navBarMainWrap}>
+       <div className={style.navbarMain}>
       <div className={style.navbarBanner}>
         <svg
           className="text-[#4AB449]"
@@ -135,7 +137,13 @@ const Nav = () => {
         </div>
       )}
 
-        {/* mobile menu */}
+      
+
+
+    </div>
+
+    <div>
+           {/* mobile menu */}
         <div onClick={toggleMobileMenu} className={style.bar}>
             <div>
               <span className={mobileMenu ? ` ` : `${style.bar1}`}></span>
@@ -143,7 +151,8 @@ const Nav = () => {
               <span className={mobileMenu ? ` ` : `${style.bar3}`}></span>
             </div>
           </div>
-
+          <div className={style.mobileToggleSideMenu}>
+            
           <div className={mobileMenu ? `${style.menuWraps}` : `${style.hideMenu}` }>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
@@ -203,9 +212,9 @@ const Nav = () => {
               <Link href='/aboutUs'><p>About Us</p></Link>
              </div>
           </div>
-
-
-    </div>
+          </div>
+       </div>
+   </section>
   );
 };
 

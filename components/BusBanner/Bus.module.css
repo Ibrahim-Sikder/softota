@@ -211,10 +211,15 @@
   padding: 15px 20px;
   border-radius: 10px;
  }
+ .mobileMenuWraps{
+  display: none;
+ }
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
-    width: 100%;
+    width: 95%;
+    overflow: hidden;
+    border-radius: 15px;
   }
   .package {
     left: 85px;
@@ -241,11 +246,32 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.desktopMenu{
+  display: none;
+}
+.mobileMenuWraps{
+  display: block;
+}
+.wrapMenu {
+  justify-content: space-between !important;
+  background: transparent;
+  width: 100%;
+  margin: 0 auto;
+  border-top-left-radius: 6px !important;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid #fff;
+  padding: 0px 0px;
+}
+.mobileMenuIcon{
+  font-size:25px !important;
+}
+.mobileMenuIcons{
+  font-size: 25px !important;
+  transform: rotate(44deg);
+
+}
   .menu {
     background: none;
-    flex-wrap: wrap;
-    margin-bottom: 44px;
-    padding-top: 8px;
   }
   .menu li {
     height: 82%;
@@ -258,12 +284,6 @@
   .heroBoxMain {
     width: 95%;
     height: 90%;
-  }
-  .package {
-    top: 250px;
-  }
-  .heroBoxBtn {
-    top: 307px;
   }
   .heroBoxMain {
     background: none;
@@ -280,27 +300,31 @@
   }
 
   .heroBoxMain {
-    height: 439px;
+    height: 93%;
+    border-radius: 5px;
+    overflow: hidden;
   }
   .package2,
   .package {
-    top: 194px;
-    width: 276px;
+     width: 276px;
+     border-radius: 3px;
   }
   .package4 {
     width: 230px;
-    top: 281px;
     right: 40px;
+    border-radius: 3px;
   }
   .date2 {
-    top: 281px;
     left: 247px;
     height: 65px;
     width: 207.5px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
   .date {
     left: 40px;
-    top: 281px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
   }
   .date input,
   .date2 input {
@@ -311,9 +335,6 @@
     text-align: center;
     width: 80%;
     margin: 0 auto;
-  }
-  .heroBoxBtn {
-    top: 364px;
   }
   .package h4,
   .package2 h4 {
@@ -331,15 +352,27 @@
 
 @media only screen and (max-width: 500px) {
   .bannerWrap {
-    height: 723px;
+    height: 583px;
   }
+  .bannerWrap h2 {
+    font-size: 23px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
   .heroBoxMain {
-    height: 645px;
-    border-radius: 0px;
+    height: 515px;
+    border-radius: 6px;
+
   }
   .wrapMenu {
     justify-content: space-between !important;
-    padding: 0px 30px;
+}
+.menu li {
+  font-size: 14px;
+}
+.mobileMenuIcon, .mobileMenuIcon {
+  font-size: 23px !important;
 }
 .firstChild{
   border-top-left-radius: 0px !important;
@@ -350,72 +383,62 @@
   margin-left: 113px;
 }
   .heroBoxBtn {
-    top: 562px;
+    top: 425px;
     width: 209px;
     font-size: 14px;
     padding: 17px 0px;
   }
   .package4 {
-    width: 230px;
-    top: 475px;
-    right: 40px;
-    width: 80%;
+    top: 335px;
+    right: 8px;
+    width: 96%;
   }
-  .package {
-    top: 275px;
-    width: 80%;
-  }
+  .package h4, .package2 h4 {
+    font-size: 14px;
+}
   .package2 {
     top: 300px;
     width: 80%;
   }
 
   .package {
-    top: 266px;
-    width: 80%;
-    left: 41px;
-    padding-left: 5px;
+      width: 96%;
+      left: 7px;
   }
   .date,
   .date2 {
-    top: 405px;
-    width: 40%;
+   
+    top: 261px;
+    width: 48%;
+    left: 7px;
+
   }
   .package2 {
-    top: 335px;
-    width: 80%;
-    left: 41px;
+    width: 96%;
+    left: 7px;
     padding-left: 5px;
+    top:187px;
   }
   .date input,
   .date2 input {
     width: 100%;
   }
   .date2 {
-    position: absolute;
-    left: 203px;
+    left: 202px;
+    width: 48%;
+
   }
+
+
 }
 
 @media only screen and (max-width: 400px) {
   .wrapMenu {
     padding: 0px 6px;
 }
-
-  .date2 {
-    left: 187px;
-  }
-
-  .date,
-  .date2 {
-    top: 406px;
-    width: 39%;
-  }
-  .package4 {
-    right: 32px;
-  }
-  .heroBoxBtn {
-    padding: 14px 15px;
-  }
+.date2 {
+  left: 179px;
+  width: 48%;
+}
  
 }

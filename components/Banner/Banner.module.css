@@ -142,9 +142,10 @@
   z-index: 9999 !important;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 37px;
+  border-radius: 30px;
   position: relative;
   top: 34px;
+  overflow: hidden;
 }
 .departDate{
   background: transparent;
@@ -418,14 +419,13 @@ font-size:14px;
 .menu{
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
   background: #4AB449;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   color: #fff;
   z-index: 99;
-  font-size:16px;
-  position:relative;
+  font-size: 16px;
+  position: relative;
    
  }
  .mobileMenuWraps{
@@ -446,12 +446,12 @@ font-size:14px;
  }
 
 .firstChild{
-  border-top-left-radius: 17px !important;
-    padding-left: 25px;
+  border-top-left-radius: 9px !important;
+  padding-left: 21px;
 }
  .lastChild{
   border-right:1px solid #fff !important;
-  border-top-right-radius: 17px !important;
+  border-top-right-radius: 9px !important;
  }
 
 .menu li P {
@@ -492,47 +492,63 @@ font-size:14px;
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
-    width: 100%;
+    width: 95%;
+    border-radius: 9px;
+    overflow: hidden;
   }
 
 }
 
 @media only screen and (max-width: 768px) {
 
+
   .bannerWrap h2 {
     font-size: 25px;
+  }
+  .menuWraps{
+    display: none;
+  }
+  .mobileMenuWraps{
+    display: block;
+   }
+   .wrapMenu {
+    justify-content: space-between !important;
+    padding: 0px 0px;
+    background: transparent;
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 9px !important;
+    border-top-right-radius: 9px;
+    border-bottom: 1px solid #fff;
+    padding: 0px 0px;
+  }
+  .mobileMenuIcon{
+    font-size:22px !important;
+  }
+  .mobileMenuIcons{
+    font-size:22px !important;
+    transform:rotate(34deg)
   }
   .wrapMenu{
     flex-wrap: wrap;
     justify-content: center;
 }
-  .menu {
-    background: none;
-    flex-wrap: wrap;
-    margin-bottom: 44px;
-    padding-top: 40px;
-  }
+  
   .menu li {
-    height: 82%;
-    width: 100%;
-    border:none;
+       width: 100%;
+       border: none;
 }
 .lastChild {
   border-right:none !important;
 }
- 
-
-
-
-
-
-
 
   .heroBoxBtn {
     top: 445px;
   }
   .heroBoxMain {
-    background: none;
+    overflow: hidden;
+    width: 93%;
+    border-radius: 5px;
   }
   .bannerWrap h2 {
     margin-bottom: 10px;
@@ -541,8 +557,6 @@ font-size:14px;
     width: 300px;
 }
 
-
-  
 
   .flightGroup {
     width: 440px;
@@ -553,50 +567,44 @@ font-size:14px;
     margin: 0px auto;
     text-align: center;
   }
+
+  .oneWayPackage {
+    margin-left: 5px;
+}
+.menu li {
+  font-size: 14px;
+}
+
+
+
+
+
+
 }
 
 @media only screen and (max-width: 600px) {
   .bannerWrap{
-    height: 550px;
+   
+    height: 595px;
     margin-bottom: 74px;
+
 }
   .heroBoxBtn {
     top: 619px;
     padding: 14px 25px;
     width: 190px;
   }
-  .mobileMenuWraps{
-    display: block;
-   }
+ 
   .heroBoxMain {
     top: 23px;
-    border-radius: 13px !important;
+    border-radius: 18px !important;
     width: 93%;
   }
+  .oneWayPackage {
+    margin-left: 0px;
+}
 
-  
-  .menuWraps{
-    display: none;
-  }
 
-.wrapMenu {
-  justify-content: space-between !important;
-  padding: 0px 0px;
-  background: transparent;
-  width: 100%;
-  margin: 0 auto;
-  border-top-left-radius: 9px !important;
-  border-top-right-radius: 9px;
-  border-bottom: 1px solid #fff;
-  padding: 0px 0px;
-}
-.mobileMenuIcon{
-  font-size:22px !important;
-}
-.mobileMenuIcons{
-  font-size:22px !important;
-  transform:rotate(34deg)
-}
 
 .menu {
   margin-bottom: 0px;
