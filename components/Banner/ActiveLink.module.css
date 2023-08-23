@@ -65,18 +65,18 @@
     height: 50px !important;
     }
     .activeLink{
-      background:#4AB449 !important;
+      background: #4AB449 !important;
+      width: 85px !important;
+      border: none;
     }
+    .activeLink{
+      width: 85px !important;
+      }
+     
+      .active{
+        width: 85px !important;
+      }
+  
    
    
-}
-@media only screen and (max-width:400px){
-  .activeLink{
-    width: 146px !important;
-    }
-   
-    .active{
-      width: 146px !important;
-    }
-
 }

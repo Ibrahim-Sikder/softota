@@ -3,6 +3,7 @@ import style from "./Umra.module.css";
 import Link from "next/link";
 import UmraPackage from "./UmraPackage";
 import ActiveLink from "../Banner/ActiveLink";
+import { Flight, Hotel,BookOnline, TransferWithinAStation, BusAlert,DirectionsRailway,  Add, Groups2, HorizontalRule } from '@mui/icons-material';
 const Umra = () => {
   const [activeHajjButton, setActiveHajjButton] = useState();
   const handleActiveButton = () => {
@@ -270,6 +271,41 @@ const Umra = () => {
                 
               </li>
               </ActiveLink>
+              </div>
+            </ul>
+          </div>
+          {/* for mobile menu  */}
+
+      <div className={style.mobileMenuWraps}>
+            <ul className={style.menu}>
+              <div className={style.wrapMenu}>
+
+                <ActiveLink href="/flight">
+                  <li className={style.activeLink}>
+                  <Flight className={style.mobileMenuIcons}/>
+                    <p className="ml-3">Flight</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/hotel">
+                  <li>
+                   <Hotel className={style.mobileMenuIcon}/>
+
+                    <p className="ml-3">Hotel</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/vissa">
+                  <li>
+                  <BookOnline className={style.mobileMenuIcon}/>
+                    <p className="ml-3">Vissa</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/tours">
+                  <li>
+                  <TransferWithinAStation className={style.mobileMenuIcon}/>
+
+                    <p className="ml-3">Tours</p>
+                  </li>
+                </ActiveLink>
               </div>
             </ul>
           </div>

@@ -260,6 +260,9 @@
   justify-content: center;
   align-items:center;
 }
+.mobileMenuWraps{
+  display: none;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -290,11 +293,45 @@
 }
 @media only screen and (max-width: 768px) {
   .bannerWrap {
-    height: 575px;
+    height: 476px;
+  }
+  .heroBoxMain {
+    width: 93%;
+    height: 355px;
+    background: none;
+    border-radius: 6px;
+
+
   }
   
+  /* mobile menu styling  */
+.mobileMenuWraps{
+  display: block;
+}
+.wrapMenu {
+  justify-content: space-between !important;
+  background: transparent;
+  width: 100%;
+  margin: 0 auto;
+  border-top-left-radius: 6px !important;
+  border-top-right-radius: 6px;
+  border-bottom: 1px solid #fff;
+  padding: 0px 0px;
+}
+.mobileMenuIcon{
+  font-size:25px !important;
+}
+.mobileMenuIcons{
+  font-size: 25px !important;
+  transform: rotate(44deg);
+
+}
+
+.menuWrap{
+  display: none;
+}
   .package2 {
-    top: 192px;
+    top: 150px;
   }
   .bannerWrap h2 {
     font-size: 25px;
@@ -306,8 +343,6 @@
   .menu {
     background: none;
     flex-wrap: wrap;
-    margin-bottom: 44px;
-    padding-top: 40px;
   }
   .menu li {
     height: 82%;
@@ -318,17 +353,12 @@
   border-right:none !important;
 }
  
-  .heroBoxMain {
-    width: 100%;
-    height: 80%;
-    background: none;
 
-  }
   .package {
     top: 250px;
   }
   .heroBoxBtn {
-    top: 266px;
+    top: 224px;
   }
   .bannerWrap h2 {
     margin-bottom: 10px;
@@ -357,14 +387,18 @@
 }
 @media only screen and (max-width: 500px) {
   .bannerWrap {
-    height: 313px;
+    height: 395px;
 }
-.menuWrap{
-  display: none;
+.heroBoxMain {
+  height: 308px;
 }
+.menu {
+  font-size: 14px !important;
+}
+
   .wrapMenu {
     justify-content: space-between !important;
-    padding: 0px 30px;
+    padding: 0px 3px;
 }
 .firstChild{
   border-top-left-radius: 0px !important;
@@ -374,16 +408,10 @@
 .lastChild{
   margin-left: 113px;
 }
-  .heroBoxMain {
-    width: 100%;
-    height: 215px;
-    background: none;
-    border-radius: 18px;
 
-  }
   .heroBoxBtn {
     padding: 10px 0px;
-    top: 118px;
+    top: 192px;
     width: 195px;
     font-size: 14px;
   }
@@ -398,9 +426,11 @@
 
   }
   .package2 {
-    top: 50px;
+    top: 125px;
     width: 83%;
     font-size: 14px;
+    border-radius: 3px;
+
   }
   .umraHead{
     width: 100%;
@@ -408,8 +438,11 @@
 
 }
 @media only screen and (max-width: 400px) {
+  .bannerWrap {
+    height: 430px;
+}
   .wrapMenu {
-    padding: 0px 6px;
+    padding: 0px 3px;
 }
 
   .date2 {

@@ -393,26 +393,26 @@ const Banner = ({ setResults }) => {
 
                 <ActiveLink href="/flight">
                   <li className={style.activeLink}>
-                  <Flight/>
+                  <Flight className={style.mobileMenuIcons}/>
                     <p className="ml-3">Flight</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/hotel">
                   <li>
-                   <Hotel/>
+                   <Hotel className={style.mobileMenuIcon}/>
 
                     <p className="ml-3">Hotel</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/vissa">
                   <li>
-                  <BookOnline/>
+                  <BookOnline className={style.mobileMenuIcon}/>
                     <p className="ml-3">Vissa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
                   <li>
-                  <TransferWithinAStation/>
+                  <TransferWithinAStation className={style.mobileMenuIcon}/>
 
                     <p className="ml-3">Tours</p>
                   </li>
@@ -420,6 +420,9 @@ const Banner = ({ setResults }) => {
               </div>
             </ul>
           </div>
+
+
+          
           {/* tab2 */}
           <div className="flightTab">
             <Tabs

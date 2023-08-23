@@ -255,7 +255,7 @@ transform:scale(1.5)
 
 
 
-@media only screen and (max-width: 1024px) {
+/* @media only screen and (max-width: 1024px) {
   .heroBoxMain {
     width: 100%;
   }
@@ -321,7 +321,7 @@ transform:scale(1.5)
   .bannerWrap h2 {
     margin-bottom: 10px;
   }
-}
+} */
 
 .destination {
   margin-bottom: 94px;
@@ -436,6 +436,40 @@ transform:scale(1.5)
   .bannerWrap {
     height: 490px;
 }
+
+
+
+  /* mobile menu styling  */
+  .menuWrap{
+    display: none;
+  }
+  
+  .mobileMenuWraps{
+    display: block;
+  }
+  .wrapMenu {
+    justify-content: space-between !important;
+    background: transparent;
+    width: 100%;
+    margin: 0 auto;
+    border-top-left-radius: 6px !important;
+    border-top-right-radius: 6px;
+    border-bottom: 1px solid #fff;
+    padding: 0px 0px;
+  }
+  .mobileMenuIcon{
+    font-size:25px !important;
+  }
+  .mobileMenuIcons{
+    font-size: 25px !important;
+    transform: rotate(44deg);
+  
+  }
+
+
+
+
+
   .destination {
     width: 100%;
     margin-left: 58px;
@@ -479,9 +513,7 @@ transform:scale(1.5)
 
 
 @media only screen and (max-width: 500px) {
-.menuWrap{
-  display: none;
-}
+
   .wrapMenu {
     justify-content: space-between !important;
     padding: 0px 30px;
@@ -563,35 +595,44 @@ transform:scale(1.5)
     left: 41px;
     font-size: 13px;
 }
+.package2 {
+  top: 98px;
+  width: 80%;
+  left: 41px;
+  padding-left: 5px;
+  height: 53px;
+  padding: 5px;
+  font-size: 13px;
+}
+.date input,
+.date2 input {
+  width: 100%;
+}
+.date2 {
+
+  position: absolute;
+  left: 210px;
+  border-left: none;
+
+}
+.bestPlaceHead h2 {
+  font-size: 28px;
+}
+.tourTrending{
+  width:100%;
+  
   }
-  .package2 {
-    top: 98px;
-    width: 80%;
-    left: 41px;
-    padding-left: 5px;
-    height: 53px;
-    padding: 5px;
-    font-size: 13px;
+
+
+
+
+
+
+
+
+
   }
-  .date input,
-  .date2 input {
-    width: 100%;
-  }
-  .date2 {
  
-    position: absolute;
-    left: 210px;
-    border-left: none;
-
-  }
-  .bestPlaceHead h2 {
-    font-size: 28px;
-  }
-  .tourTrending{
-    width:100%;
-    
-    }
-
 
 
 
