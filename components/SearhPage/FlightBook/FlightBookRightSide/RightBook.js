@@ -1,6 +1,11 @@
 import React from 'react';
 import style from './Right.module.css'
+import { useState } from 'react';
 const RightBook = () => {
+     const [disabled, setDisabled] = useState(true)
+     const handleDisable = ()=>{
+          setDisabled(false)
+     }
      return (
           <div className={style.rightSide}>
                <div className={style.rightSideWrap}>
@@ -46,7 +51,7 @@ const RightBook = () => {
                                    <div>Travel Insurance Charge </div>
                                    <div>Baggage Protection Charge </div>
                                    <div>Ancillary </div>
-                                   <div>ST Convenience Fee</div>
+                                   <div>GT Convenience Fee</div>
                               </div>
                               
                               <div>
@@ -62,9 +67,26 @@ const RightBook = () => {
                               </div>
                          </div>
                     </div>
-                    <div className="summaryRight">
-
+                    <div>
+                         <hr />
                     </div>
+                    <div className={style.priceSummery}>
+                         <div className='flex justify-between'>
+                              <div>
+                                   <div>Total Payable:</div>
+                                   
+                              </div>
+                              
+                              <div>
+                                   <strong>BDT 1,99,590</strong>
+                              </div>
+                         </div>
+                    </div>
+                    <div className={style.payment}>
+                   <input onClick={handleDisable} className={style.checkbox} type="checkbox" />
+                   <p>I aggree to the <strong>Terms & Condition</strong> and <strong>Privacy Policy</strong> </p>
+                    </div>
+                    <input  disable={disabled} className={style.paymentBtn} type="submit" value='Pay Now' />
                </div>
           </div>
      );

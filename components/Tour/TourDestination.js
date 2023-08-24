@@ -38,9 +38,9 @@ const TourDestination = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    // autoplay: true,
-    // speed: 56000,
-    // autoplaySpeed: 6000,
+    autoplay: true,
+    speed: 56000,
+    autoplaySpeed: 6000,
     responsive: [
       {
         breakpoint: 1024,

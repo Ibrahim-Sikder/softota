@@ -207,6 +207,27 @@ input::placeholder {
 }
 
 
+.slick-prev {
+  left: -33px !important;
+  color: #fff !important;
+  background: #4AB449 !important;
+  width: 33px !important;
+  height: 50px !important;
+  text-align: center;
+  top: 24px !important;
+  border: 1px solid #4AB449;
+  z-index: 99;
+
+}
+.slick-next {
+  right: -33px !important;
+  width: 33px !important;
+  height: 50px !important;
+  top: 24px !important;
+  color: white !important;
+  background: #4AB449 !important;
+}
+
 
 
 

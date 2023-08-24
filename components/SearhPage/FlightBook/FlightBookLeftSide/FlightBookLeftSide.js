@@ -1,3 +1,6 @@
+'use client'
+
+
 import React from "react";
 import style from "./FlightBookLeftSide.module.css";
 import Accordion from "@mui/material/Accordion";
@@ -10,24 +13,20 @@ import {
   FaPlaneDeparture,
   FaPlaneSlash,
   FaPercent,
-  FaHornbill,
-  FaReact,
+    FaReact,
   FaBiking,
   FaBlind,
   FaPhoneVolume,
 } from "react-icons/fa";
-import { ArrowForwardIos } from "@mui/icons-material";
-import Image from "next/image";
-import Box from "@mui/material/Box";
+import { ArrowForwardIos,FileUpload } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
-import milvik from "../../../../public/assets/hotel11.jpg";
 import Link from "next/link";
 const FlightBookLeftSide = () => {
   return (
     <div>
-      <div className="flex justify-between my-5 pr-2">
+      <div className={style.bookingReview}>
         <h3 className="text-[#4AB449] text-xl">Review Your Booking</h3>
-        <div className="flex justify-between">
+        <div className={style.flightSection}>
           <h6>
             Flight Selection <ArrowForwardIos className={style.reviewIcon} />
           </h6>
@@ -39,7 +38,7 @@ const FlightBookLeftSide = () => {
       </div>
       <Accordion className={style.flightBookDetail}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
           className={style.flightToggle}
@@ -56,7 +55,7 @@ const FlightBookLeftSide = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <div className="flex justify-between">
+            <div className={style.searchAllFlight}>
               <div>
                 <div className="flex items-center mb-3">
                   <FaPlaneDeparture className="mr-3 text-[#4AB449]" />
@@ -74,7 +73,7 @@ const FlightBookLeftSide = () => {
                 </div>
                 <div></div>
               </div>
-              <div>
+              <div className="mb-5">
                 <div>
                   <div className="flex items-center mb-3">
                     <FaPlaneSlash className="mr-3 text-[#4AB449]" />
@@ -94,7 +93,7 @@ const FlightBookLeftSide = () => {
                 </div>
               </div>
               <div>
-                <div>
+                <div className={style.nonStop}>
                   <div className="mb-3">
                     <div>
                       <h6>None Stop </h6>
@@ -116,7 +115,7 @@ const FlightBookLeftSide = () => {
       </Accordion>
       <Accordion className={style.flightBookDetail}>
         <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
+          expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
           aria-controls="panel1a-content"
           id="panel1a-header"
           className={style.flightToggle}
@@ -127,8 +126,8 @@ const FlightBookLeftSide = () => {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <div>
-              <div className="flex w-32 justify-between mb-2">
+            <div className={style.policyWrap}>
+              <div className={style.policy}>
                 <span>Baggage </span>
                 <span className="mx-5">Policy </span>
                 <span>Fare </span>
@@ -155,6 +154,27 @@ const FlightBookLeftSide = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <div className={style.dealWrap}>
+        <p className={style.mandatory}>*It is mandatory to upload copy of your valid passport and visa</p>
+         <div className={style.uploadWrap}>
+         <div>
+            <p className="mb-2">Passport Copy (max 2MB)</p>
+            <div className={style.upload}>
+              <span className={style.fileUploadIcon}><FileUpload className={style.uploadIcon} /></span>
+              <button >Upload</button>
+            </div>
+            <button className={style.viewbtn}>View Passport </button>
+          </div>
+          <div>
+            <p className="mb-2">Visa Copy (max 2MB)</p>
+            <div className={style.upload}>
+            <span className={style.fileUploadIcon}><FileUpload className={style.uploadIcon}/></span>
+              <button>Upload</button>
+            </div>
+            <button  className={style.viewbtn}>View Visa </button>
+          </div>
+         </div>
+      </div>
       <div className={style.dealWrap}>
         <h6>Hot Deals </h6>
         <hr className="w-full " />
@@ -229,12 +249,13 @@ const FlightBookLeftSide = () => {
           </div>
         </div>
       </div>
+
       <div className="mt-8">
         <h2>Enter Traveller Details </h2>
         <div className="my">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={style.expandIcon}  />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               className={style.flightToggle}
@@ -248,7 +269,7 @@ const FlightBookLeftSide = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography className={style.travalerInfoWrap}>
                 <select className={style.travelerSelect}>
                   <option value="">Select Traveler </option>
                   <option value="">New Traveler </option>
@@ -268,16 +289,17 @@ const FlightBookLeftSide = () => {
                     <button>MS.</button>
                     <button>MRS.</button>
                   </div>
+                  <div className={style.passengerInfo}>
                   <div className={style.inputFieldWrap}>
-                    <div>
+                    <div >
                       <div>
-                        <label>First Name</label> <br />
+                        <label className={style.inputLabel}>First Name</label> <br />
                         <input type="text" className={style.contactField} />
                       </div>
                     </div>
                     <div>
                       <div>
-                        <label>Last Name </label> <br />
+                        <label className={style.inputLabel}>Last Name </label> <br />
                         <input type="text" className={style.contactField} />
                       </div>
                     </div>
@@ -285,16 +307,17 @@ const FlightBookLeftSide = () => {
                   <div className={style.inputFieldWrap}>
                     <div>
                       <div>
-                        <label>Nationality</label> <br />
+                        <label className={style.inputLabel}>Nationality</label> <br />
                         <input type="text" className={style.contactField} />
                       </div>
                     </div>
                     <div>
                       <div>
-                        <label>Frequent Flyer Number (Optional)</label> <br />
+                        <label className={style.inputLabel}>Frequent Flyer Number (Optional)</label> <br />
                         <input type="text" className={style.contactField} />
                       </div>
                     </div>
+                  </div>
                   </div>
                   <div mt-5>
                     <hr className="w-full " />
@@ -304,11 +327,11 @@ const FlightBookLeftSide = () => {
                     <p>Receive booking confirmation & updates</p>
                     <div className={style.contactDetail}>
                       <div>
-                        <label>Email</label> <br />
+                        <label className={style.inputLabel}>Email</label> <br />
                         <input type="text" className={style.contactField} />
                       </div>
                       <div>
-                        <label>Phone Number</label> <br />
+                        <label className={style.inputLabel}>Phone Number</label> <br />
                         <input type="number" className={style.contactField} />
                       </div>
                     </div>
@@ -325,7 +348,7 @@ const FlightBookLeftSide = () => {
         <div className="my-8">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={style.expandIcon}  />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               className={style.flightToggle}
@@ -418,7 +441,7 @@ const FlightBookLeftSide = () => {
         <div className="my-8">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={style.expandIcon}  />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               className={style.flightToggle}
@@ -505,9 +528,7 @@ const FlightBookLeftSide = () => {
           </Accordion>
         </div>
       </div>
-      <Link href="/payment">
-        <button className={style.continueBtn}>Continue </button>
-      </Link>
+      
     </div>
   );
 };

@@ -306,6 +306,7 @@
     justify-content: end;
     padding: 0px 20px;
     height: 100px;
+    display: none;
   }
   .inputDivMOb {
     width: 80%;

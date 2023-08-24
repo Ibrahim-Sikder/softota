@@ -7,7 +7,6 @@ import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "next/link";
 import "react-photo-view/dist/react-photo-view.css";
-import Button from "@mui/material/Button";
 import {
   ChevronLeftRounded,
   FlightLand,
@@ -19,23 +18,49 @@ import {
   AirplaneTicket,
   Diversity3,
   AccessAlarm,
+  ArrowForward,
+  ArrowBack,
 } from "@mui/icons-material";
 import { FaFighterJet } from "react-icons/fa";
 import dynamic from "next/dynamic";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const FlightSearch = () => {
-  const images = [
-    {
-      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-    {
-      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600",
-    },
-  ];
+  var settings = {
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    initialSlide: 5,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          initialSlide: 4,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+    ],
+  };
+
   return (
     <div className={style.flightSearchWrap}>
       <div className={style.searchDetailHead}>
@@ -49,9 +74,7 @@ const FlightSearch = () => {
           <span className="sm:my-3">27th August 2023 - 28th August 2023</span>
           <span> | Adult: 2, | Child: 2, | Infant: 2</span>
         </div>
-        <button className={style.editSearchBtn}>
-          EDIT SEARCH{" "}
-        </button>
+        <button className={style.editSearchBtn}>EDIT SEARCH </button>
       </div>
       <div className={style.hotelSearchBoxWrap}>
         <div className={style.hotelSearchLeftSide}>
@@ -61,11 +84,8 @@ const FlightSearch = () => {
             </div>
             <small>*Price includes VAT & Tax</small>
           </div>
-
-          <div className={style.flightButton}>
-            <Button variant="outlined">
-              <ChevronLeftRounded className={style.leftArrow} />{" "}
-            </Button>
+          <div className={style.flightSlider}>
+          <Slider {...settings}>
             <div className={style.perFlightPerson}>
               <h2>USA </h2>
               <small className="font-sm">2 Flight</small>
@@ -98,14 +118,9 @@ const FlightSearch = () => {
               <h2>HI </h2>
               <small className="font-sm">2 Flight</small>
             </div>
-            <div className={style.perFlightPerson}>
-              <h2>VQ </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <Button variant="outlined">
-              <ChevronRightRounded className={style.leftArrow} />{" "}
-            </Button>
+          </Slider>
           </div>
+
           <div className={style.flightPrice}>
             <div className={style.flight}>
               <FaFighterJet className="mr-2" /> cheapest Flight
@@ -128,7 +143,10 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
+                <Link href="/search/flight/book">
+                  <button className={style.flightBookBtn}>Book Now</button>
+                </Link>{" "}
+                <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>
@@ -206,7 +224,10 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
+                <Link href="/search/flight/book">
+                  <button className={style.flightBookBtn}>Book Now</button>
+                </Link>{" "}
+                <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>
@@ -284,7 +305,10 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
+                <Link href="/search/flight/book">
+                  <button className={style.flightBookBtn}>Book Now</button>
+                </Link>{" "}
+                <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>
@@ -362,7 +386,10 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href='/search/flight/book'><button className={style.flightBookBtn}>Book Now</button></Link> <br />
+                <Link href="/search/flight/book">
+                  <button className={style.flightBookBtn}>Book Now</button>
+                </Link>{" "}
+                <br />
                 <span className="text-[#26ADE2] mt-16 block">
                   See more <KeyboardArrowDown />
                 </span>
@@ -428,19 +455,48 @@ const FlightSearch = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className={style.pagination}>
+            <p className="text-[#4AB449] font-bold">TOP OF PAGE</p>
+            <p>Showing Results 11 - 20 of 301</p>
+            <div className={style.paginationBtn}>
+              <button>
+                <ArrowBack className={style.arrowLeft} />
+              </button>
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>6</button>
+              <button>7</button>
+              <button>8</button>
+              <button>9</button>
+              <button>10</button>
+              <button>
+                <ArrowForward className={style.arrowRight} />
+              </button>
+            </div>
+          </div>
+          <div className={style.priceInclude}>
+            <p className="mb-3">Prices include all taxes & fees in BDT.</p>
+            <span>
+              Fare may change at the time of booking depending on availability.
+            </span>
           </div>
         </div>
         <div className={style.flightRightSide}>
           <div className={style.flightDesc}>
-            <div className="mb-5">
+            <div className={style.textFieldWrap}>
               <TextField
+                className={style.textField}
                 id="standard-basic"
                 label="Search Flight"
                 variant="standard"
               />
             </div>
 
-            <Card sx={{ minWidth: 275 }}>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
@@ -465,7 +521,7 @@ const FlightSearch = () => {
                 </Typography>
               </CardContent>
             </Card>
-            <Card sx={{ minWidth: 275 }}>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
@@ -473,11 +529,13 @@ const FlightSearch = () => {
                   gutterBottom
                 >
                   <Diversity3 />{" "}
-                  <p className="font-bold">8 people are looking at this flight.</p>
+                  <p className="font-bold">
+                    8 people are looking at this flight.
+                  </p>
                 </Typography>
               </CardContent>
             </Card>
-            <Card sx={{ minWidth: 275 }}>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
@@ -505,7 +563,7 @@ const FlightSearch = () => {
                 variant="standard"
               />
             </div>
-            <Card sx={{ minWidth: 275 }}>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
@@ -532,7 +590,7 @@ const FlightSearch = () => {
                 </Typography>
               </CardContent>
             </Card>
-            <Card sx={{ minWidth: 275 }}>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
               <CardContent>
                 <Typography
                   sx={{ fontSize: 14 }}
@@ -559,67 +617,67 @@ const FlightSearch = () => {
                 </Typography>
               </CardContent>
             </Card>
-            <Card sx={{ minWidth: 275 }}>
-                  <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                    >
-                      <strong>Airlines </strong> <br />
-                      <div>
-                        <Checkbox />
-                        <span>Biman Bangladesh Airlines (2) </span>
-                      </div>
-                      <div>
-                        <Checkbox />
-                        <span>US-Bangla Airlines (4) </span>
-                      </div>
-                      <div>
-                        <Checkbox />
-                        <span>NOVOAIR (9) </span>
-                      </div>
-                    </Typography>
-                  </CardContent>
-                </Card>
-                <Card sx={{ minWidth: 275 }}>
-                  <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                    >
-                      <strong>Weights  </strong> <br />
-                      <div>
-                        <Checkbox />
-                        <span>20KG </span>
-                      </div>
-                    </Typography>
-                  </CardContent>
-                </Card>
-                <Card sx={{ minWidth: 275 }}>
-                  <CardContent>
-                    <Typography
-                      sx={{ fontSize: 14 }}
-                      color="text.secondary"
-                      gutterBottom
-                    >
-                      <strong>Refundable   </strong> <br />
-                      <div>
-                        <Checkbox />
-                        <span>Non Refundable  </span>
-                      </div>
-                      <div>
-                        <Checkbox />
-                        <span>Partially Refundable  </span>
-                      </div>
-                      <div>
-                        <Checkbox />
-                        <span>Rules Wise   </span>
-                      </div>
-                    </Typography>
-                  </CardContent>
-                </Card>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  <strong>Airlines </strong> <br />
+                  <div>
+                    <Checkbox />
+                    <span>Biman Bangladesh Airlines (2) </span>
+                  </div>
+                  <div>
+                    <Checkbox />
+                    <span>US-Bangla Airlines (4) </span>
+                  </div>
+                  <div>
+                    <Checkbox />
+                    <span>NOVOAIR (9) </span>
+                  </div>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  <strong>Weights </strong> <br />
+                  <div>
+                    <Checkbox />
+                    <span>20KG </span>
+                  </div>
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card className={style.bookingCard} sx={{ minWidth: 275 }}>
+              <CardContent>
+                <Typography
+                  sx={{ fontSize: 14 }}
+                  color="text.secondary"
+                  gutterBottom
+                >
+                  <strong>Refundable </strong> <br />
+                  <div>
+                    <Checkbox />
+                    <span>Non Refundable </span>
+                  </div>
+                  <div>
+                    <Checkbox />
+                    <span>Partially Refundable </span>
+                  </div>
+                  <div>
+                    <Checkbox />
+                    <span>Rules Wise </span>
+                  </div>
+                </Typography>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
