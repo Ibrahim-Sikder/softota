@@ -15,14 +15,10 @@ import destination11 from '../../public/assets/destination9.jpeg'
 import destination12 from '../../public/assets/destination10.jpeg'
 import destination13 from '../../public/assets/destination11.jpeg'
 import Link from "next/link";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import { Flight , LocalHotel,BookOnline, TransferWithinAStation, BusAlert,DirectionsRailway,  Add, Groups2, HorizontalRule } from '@mui/icons-material';
+import { Flight ,BookOnline, TransferWithinAStation } from '@mui/icons-material';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { FreeMode, Pagination, Autoplay, Navigation, Mousewheel } from "swiper";
 import { useState } from "react";
 import ActiveLink from "../Banner/ActiveLink";
 
@@ -40,9 +36,9 @@ const Hotel = () => {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    // autoplay: true,
-    // speed: 10000,
-    // autoplaySpeed: 5000,
+    autoplay: true,
+    speed: 10000,
+    autoplaySpeed: 5000,
     responsive: [
       {
         breakpoint: 1024,
