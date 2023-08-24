@@ -4,10 +4,7 @@ import Image from "next/image";
 import cox from "../../public/assets/cox.jpg";
 import see from "../../public/assets/shylet.jpg";
 import see3 from "../../public/see3.png";
-
-import { autoplay, FreeMode, Pagination, Autoplay, Navigation } from "swiper";
 import Link from "next/link";
-import { FaLaptopHouse } from "react-icons/fa";
 const BestPlace = () => {
   return (
     <div className={style.bestPlaceWrap}>

@@ -21,6 +21,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useState } from "react";
 import ActiveLink from "../Banner/ActiveLink";
+import dynamic from "next/dynamic";
 
 const Hotel = () => {
   const [activeToggleMenu, setActiveToggleMenu] = useState(false);
@@ -745,4 +746,5 @@ const Hotel = () => {
   );
 };
 
-export default Hotel;
+
+export default dynamic(() => Promise.resolve(Hotel), { ssr: false });
