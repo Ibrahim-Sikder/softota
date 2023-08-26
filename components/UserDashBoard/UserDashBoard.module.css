@@ -17,6 +17,7 @@
   transition: all 0.5s cubic-bezier(0.15, -0.02, 1, 1.02);
   z-index:999 !important;
 }
+
 .rightSideBar {
   width: 100%;
   background-position: center;
@@ -86,7 +87,7 @@
 }
 
 /* admin dashboard right side styling  */
-.flightRightSide, .hotelSearchRightSideBara{
+.flightRightSide, .hotelSearchRightSideBara, .flightBook{
   width:100% !important;
 }
 
@@ -444,4 +445,28 @@ z-index: 9999999999 !important;
   .sideBarWrap {
     display: block;
   }
+  .UserDashBoard_adminLeftInfo__razAu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+  .adminLeftInfo {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.logoWrap {
+  width: 90%;
+  cursor: pointer;
+}
+
+
+
 }

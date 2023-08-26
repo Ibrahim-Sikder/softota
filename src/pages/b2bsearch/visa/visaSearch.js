@@ -78,6 +78,7 @@ const VisaSearch = () => {
   const handleShowDetail = () => {
     setShowDetail(showDetail => !showDetail)
   }
+  
 
   return (
     <div>
