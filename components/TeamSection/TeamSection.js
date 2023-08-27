@@ -7,7 +7,7 @@ import man2 from "../../public/man3.jpg";
 import man3 from "../../public/man4.jpg";
 const TeamSection = () => {
   return (
-    <div>
+    <section>
       <div className="px-8 lg:px-0 text-gray-700 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto gap-8 group">
         <div className="mb-6 lg:mb-0 cursor-pointer group-hover:blur-sm hover:!blur-none group-hover:scale-[0.85] hover:!scale-100 duration-500">
           <div className="bg-[#62C370] block rounded-lg shadow-lg h-full text-white">
@@ -188,7 +188,7 @@ const TeamSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

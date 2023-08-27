@@ -1,69 +1,69 @@
-import React from 'react'
-import AdminLeftSide from '../../../components/DashBoard/AdminLeftSide'
-import Image from 'next/image'
-import style from './Pass.module.css'
+import React from "react";
+import AdminLeftSide from "../../../components/DashBoard/AdminLeftSide";
+import Image from "next/image";
+import style from "./Pass.module.css";
 const index = () => {
-     return (
-          <section className={style.passWordWrap}>
-            <div className='grid grid-cols-12'>
-                <div>
-                    <AdminLeftSide></AdminLeftSide>
-                </div>
-                <div className='col-span-9'>
-                    <div className={style.passwordImg}>
-                  
-                    <div className={style.passwordWrapa}>
-                         <form>
-                              <div className='relative mb-5'>
-                              <div >
-                              <div className='flex ml-[52px]'>
-                              <label>Old Password </label> 
-                              <span>
-                              
-                              </span>
-                                   </div>
-                               
-                              <input className={style.passwordInput} placeholder='Old Password'/>
-                              </div>
-                             
-                              </div>
-                              <div className='relative mb-5'>
-                              <div >
-                              <div className='flex ml-[52px]'>
-                              <label>New Password </label> 
-                              <span>
-                             
-                              </span>
-                                   </div>
-                               
-                              <input className={style.passwordInput} placeholder='New Password'/>
-                              </div>
-                             
-                              </div>
-                              <div className='relative mb-5'>
-                              <div >
-                              <div className='flex ml-[52px]'>
-                              <label>Re-New Password </label> 
-                              <span>
-                             
-                              </span>
-                                   </div>
-                               
-                              <input className={style.passwordInput} placeholder='Re-New Password'/>
-                              </div>
-                              
-                              </div>
-                              <div>
-                                   <button className={style.updatePassword}>Update Password</button>
-                              </div>
-                         </form>
-                        
+  return (
+    <section className={style.passWordWrap}>
+      <div className="grid grid-cols-12">
+        <div>
+          <AdminLeftSide></AdminLeftSide>
+        </div>
+        <div className="col-span-9">
+          <div className={style.passwordImg}>
+            <div className={style.passwordWrapa}>
+              <form>
+                <div className="relative mb-5">
+                  <div>
+                    <div className="flex ml-[52px]">
+                      <label>Old Password </label>
+                      <span></span>
                     </div>
-                    </div>
-                </div>
-            </div>
-          </section>
-        )
-}
 
-export default index
+                    <input
+                      className={style.passwordInput}
+                      placeholder="Old Password"
+                    />
+                  </div>
+                </div>
+                <div className="relative mb-5">
+                  <div>
+                    <div className="flex ml-[52px]">
+                      <label>New Password </label>
+                      <span></span>
+                    </div>
+
+                    <input
+                      className={style.passwordInput}
+                      placeholder="New Password"
+                    />
+                  </div>
+                </div>
+                <div className="relative mb-5">
+                  <div>
+                    <div className="flex ml-[52px]">
+                      <label>Re-New Password </label>
+                      <span></span>
+                    </div>
+
+                    <input
+                      className={style.passwordInput}
+                      placeholder="Re-New Password"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <button className={style.updatePassword}>
+                    Update Password
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default index;

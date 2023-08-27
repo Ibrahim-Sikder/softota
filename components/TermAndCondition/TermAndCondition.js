@@ -2,7 +2,7 @@ import React from "react";
 import style from "./TermAndCondition.module.css";
 const TermAndCondition = () => {
   return (
-    <div>
+    <section>
       <div className="bg-[#EDFBFF] px-20 py-14">
         <div>
           <h2 className="text-4xl font-bold text-center mb-10">
@@ -11,7 +11,7 @@ const TermAndCondition = () => {
           <h3 className="text-center mt-8">Coming Soooon..............!</h3>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

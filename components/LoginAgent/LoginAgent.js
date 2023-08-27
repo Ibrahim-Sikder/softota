@@ -9,9 +9,9 @@ import { useRouter } from "next/router";
 
 const LoginAgent = () => {
   const router = useRouter();
-  
+
   return (
-    <div className={style.loginAgentWrap}>
+    <section className={style.loginAgentWrap}>
       <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">
         <div>
           <Image
@@ -22,7 +22,7 @@ const LoginAgent = () => {
           />
         </div>
         <div>
-          <form >
+          <form>
             <div className="mb-5">
               <label className={style.loginLabel}>Email Address</label> <br />
               <input
@@ -95,7 +95,7 @@ const LoginAgent = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

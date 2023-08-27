@@ -5,7 +5,7 @@ import about from "../../public/about.png";
 
 const AboutHero = () => {
   return (
-    <div className={style.aboutWrap}>
+    <section className={style.aboutWrap}>
       <section className={style.aboutHero}>
         <Image
           src={about}
@@ -59,7 +59,7 @@ const AboutHero = () => {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 

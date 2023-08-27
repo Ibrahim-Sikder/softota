@@ -17,7 +17,7 @@ const handleClick = event =>{
   const isCurrentPath = router?.pathname === href || router?.asPath === href;
 
     return (
-        <div>
+        <section>
             <a href={href}
             onClick={handleClick}
         //     style={{background: 'red', color: 'white',
@@ -30,7 +30,7 @@ const handleClick = event =>{
             {children}
 
             </a>
-        </div>
+        </section>
     );
 };
 

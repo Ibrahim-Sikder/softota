@@ -14,7 +14,7 @@ const index = () => {
       <Countries></Countries>
       <Passion></Passion>
       <div className="my-10">
-      <Travel></Travel>
+        <Travel></Travel>
       </div>
       <Footer></Footer>
     </section>

@@ -5,11 +5,11 @@ import Nav from "../../../components/NavBarr/Nav";
 
 const index = () => {
   return (
-    <div>
+    <section>
       <Nav />
       <TermAndCondition></TermAndCondition>
       <Footer />
-    </div>
+    </section>
   );
 };
 

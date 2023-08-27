@@ -54,7 +54,7 @@ const HotelTrending = () => {
     ],
   };
   return (
-    <div>
+    <section>
       <div className={style.bestPlaceHead}>
         <h2>Trending Indian Destinations </h2>
         <p>
@@ -369,7 +369,7 @@ const HotelTrending = () => {
         </div>
       </div>
       {/* trending Indian destination  */}
-    </div>
+    </section>
   );
 };
 

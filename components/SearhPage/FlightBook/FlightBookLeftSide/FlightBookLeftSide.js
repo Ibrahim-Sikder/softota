@@ -1,5 +1,4 @@
-'use client'
-
+"use client";
 
 import React from "react";
 import style from "./FlightBookLeftSide.module.css";
@@ -13,17 +12,17 @@ import {
   FaPlaneDeparture,
   FaPlaneSlash,
   FaPercent,
-    FaReact,
+  FaReact,
   FaBiking,
   FaBlind,
   FaPhoneVolume,
 } from "react-icons/fa";
-import { ArrowForwardIos,FileUpload } from "@mui/icons-material";
+import { ArrowForwardIos, FileUpload } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
 const FlightBookLeftSide = () => {
   return (
-    <div>
+    <section>
       <div className={style.bookingReview}>
         <h3 className="text-[#4AB449] text-xl">Review Your Booking</h3>
         <div className={style.flightSection}>
@@ -155,25 +154,31 @@ const FlightBookLeftSide = () => {
         </AccordionDetails>
       </Accordion>
       <div className={style.dealWrap}>
-        <p className={style.mandatory}>*It is mandatory to upload copy of your valid passport and visa</p>
-         <div className={style.uploadWrap}>
-         <div>
+        <p className={style.mandatory}>
+          *It is mandatory to upload copy of your valid passport and visa
+        </p>
+        <div className={style.uploadWrap}>
+          <div>
             <p className="mb-2">Passport Copy (max 2MB)</p>
             <div className={style.upload}>
-              <span className={style.fileUploadIcon}><FileUpload className={style.uploadIcon} /></span>
-              <button >Upload</button>
+              <span className={style.fileUploadIcon}>
+                <FileUpload className={style.uploadIcon} />
+              </span>
+              <button>Upload</button>
             </div>
             <button className={style.viewbtn}>View Passport </button>
           </div>
           <div>
             <p className="mb-2">Visa Copy (max 2MB)</p>
             <div className={style.upload}>
-            <span className={style.fileUploadIcon}><FileUpload className={style.uploadIcon}/></span>
+              <span className={style.fileUploadIcon}>
+                <FileUpload className={style.uploadIcon} />
+              </span>
               <button>Upload</button>
             </div>
-            <button  className={style.viewbtn}>View Visa </button>
+            <button className={style.viewbtn}>View Visa </button>
           </div>
-         </div>
+        </div>
       </div>
       <div className={style.dealWrap}>
         <h6>Hot Deals </h6>
@@ -255,7 +260,7 @@ const FlightBookLeftSide = () => {
         <div className="my">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={style.expandIcon}  />}
+              expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               className={style.flightToggle}
@@ -290,34 +295,42 @@ const FlightBookLeftSide = () => {
                     <button>MRS.</button>
                   </div>
                   <div className={style.passengerInfo}>
-                  <div className={style.inputFieldWrap}>
-                    <div >
+                    <div className={style.inputFieldWrap}>
                       <div>
-                        <label className={style.inputLabel}>First Name</label> <br />
-                        <input type="text" className={style.contactField} />
+                        <div>
+                          <label className={style.inputLabel}>First Name</label>{" "}
+                          <br />
+                          <input type="text" className={style.contactField} />
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <label className={style.inputLabel}>Last Name </label>{" "}
+                          <br />
+                          <input type="text" className={style.contactField} />
+                        </div>
                       </div>
                     </div>
-                    <div>
+                    <div className={style.inputFieldWrap}>
                       <div>
-                        <label className={style.inputLabel}>Last Name </label> <br />
-                        <input type="text" className={style.contactField} />
+                        <div>
+                          <label className={style.inputLabel}>
+                            Nationality
+                          </label>{" "}
+                          <br />
+                          <input type="text" className={style.contactField} />
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <label className={style.inputLabel}>
+                            Frequent Flyer Number (Optional)
+                          </label>{" "}
+                          <br />
+                          <input type="text" className={style.contactField} />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className={style.inputFieldWrap}>
-                    <div>
-                      <div>
-                        <label className={style.inputLabel}>Nationality</label> <br />
-                        <input type="text" className={style.contactField} />
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <label className={style.inputLabel}>Frequent Flyer Number (Optional)</label> <br />
-                        <input type="text" className={style.contactField} />
-                      </div>
-                    </div>
-                  </div>
                   </div>
                   <div mt-5>
                     <hr className="w-full " />
@@ -331,7 +344,8 @@ const FlightBookLeftSide = () => {
                         <input type="text" className={style.contactField} />
                       </div>
                       <div>
-                        <label className={style.inputLabel}>Phone Number</label> <br />
+                        <label className={style.inputLabel}>Phone Number</label>{" "}
+                        <br />
                         <input type="number" className={style.contactField} />
                       </div>
                     </div>
@@ -348,7 +362,7 @@ const FlightBookLeftSide = () => {
         <div className="my-8">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={style.expandIcon}  />}
+              expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               className={style.flightToggle}
@@ -441,7 +455,7 @@ const FlightBookLeftSide = () => {
         <div className="my-8">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={style.expandIcon}  />}
+              expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
               className={style.flightToggle}
@@ -528,8 +542,7 @@ const FlightBookLeftSide = () => {
           </Accordion>
         </div>
       </div>
-      
-    </div>
+    </section>
   );
 };
 

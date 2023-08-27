@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../../../components/UserDashBoard/UserDashBoard.module.css';
+import style from "../../../../components/UserDashBoard/UserDashBoard.module.css";
 import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
@@ -7,22 +7,21 @@ import FlightBook from "../../../../components/UserDashBoard/FlightBook/FlightBo
 
 const Book = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
         </div>
         <div className={style.flightBook}>
-        <RightSideTopBar />
+          <RightSideTopBar />
 
-            <div>
-              <FlightBook></FlightBook>
-            </div>
+          <div>
+            <FlightBook></FlightBook>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-
 
 export default dynamic(() => Promise.resolve(Book), { ssr: false });

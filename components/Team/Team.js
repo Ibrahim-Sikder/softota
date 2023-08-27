@@ -1,19 +1,23 @@
-import React from 'react'
-import style from './Team.module.css'
-import Image from 'next/image'
-import team from '../../public/team.png'
-import team2 from '../../public/team2.png'
-import team3 from '../../public/team3.png'
-import team4 from '../../public/team4.png'
-import TeamSection from '../TeamSection/TeamSection'
+import React from "react";
+import style from "./Team.module.css";
+import Image from "next/image";
+import team from "../../public/team.png";
+import team2 from "../../public/team2.png";
+import team3 from "../../public/team3.png";
+import team4 from "../../public/team4.png";
+import TeamSection from "../TeamSection/TeamSection";
 const Team = () => {
   return (
-    <section className=''>
+    <section className="">
       <div className={style.teamHead}>
-          <h2 className='text-3xl bold'>Our Team </h2>
-          <p className='text-xl text-[#738187] '>At Better Work, we are driven by shared standards of excellence, guided by the same integrity, and motivated by a common ambition to improve lives.</p>
+        <h2 className="text-3xl bold">Our Team </h2>
+        <p className="text-xl text-[#738187] ">
+          At Better Work, we are driven by shared standards of excellence,
+          guided by the same integrity, and motivated by a common ambition to
+          improve lives.
+        </p>
       </div>
-      <TeamSection/>
+      <TeamSection />
       {/* ghuronti team section design */}
       {/* <div className='flex justify-center flex-wrap items-center'>
           <div className={style.singleTeam}>
@@ -62,7 +66,7 @@ const Team = () => {
           </div>
       </div> */}
     </section>
-  )
-}
+  );
+};
 
-export default Team
+export default Team;

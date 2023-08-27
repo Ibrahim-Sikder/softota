@@ -14,7 +14,7 @@ const Customer = () => {
     autoplaySpeed: 4000,
   };
   return (
-    <div>
+    <section>
       <div className={style.customerHead}>
         <h2>Customer satisfaction is our top priority</h2>
         <p>
@@ -73,7 +73,7 @@ const Customer = () => {
           </div>
         </div>
       </Slider>
-    </div>
+    </section>
   );
 };
 

@@ -1,16 +1,16 @@
-import React from 'react'
-import LoginAgent from '../../../components/LoginAgent/LoginAgent'
-import Footer from '../../../components/Footer/Footer'
-import Nav from '../../../components/NavBarr/Nav'
+import React from "react";
+import LoginAgent from "../../../components/LoginAgent/LoginAgent";
+import Footer from "../../../components/Footer/Footer";
+import Nav from "../../../components/NavBarr/Nav";
 
 const index = () => {
   return (
-    <div>
-      <Nav/>
+    <section>
+      <Nav />
       <LoginAgent></LoginAgent>
-      <Footer/>
-    </div>
-  )
-}
+      <Footer />
+    </section>
+  );
+};
 
-export default index
+export default index;

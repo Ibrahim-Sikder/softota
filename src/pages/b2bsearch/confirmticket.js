@@ -2,26 +2,27 @@ import React from "react";
 import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import styling from "./profile.module.css";
 import dynamic from "next/dynamic";
-import RightSideTopBar from "../../../components/SuperAdmin/RightSideTopBar";
-import UserDashBoardLeft from "../../../components/SuperAdmin/UserDashBoardLeft";
-const process = () => {
+import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
+import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
+
+const confirmticket = () => {
   return (
     <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
-          <UserDashBoardLeft />
+          <UserDashBoardLeft></UserDashBoardLeft>
         </div>
         <div className={style.flightRightSide}>
           <RightSideTopBar />
           <div className={style.ticketListHead}>
-            <h3 className="text-2xl font-bold">Proccessing Ticket List </h3>
+            <h3 className="text-2xl font-bold">Confirm Ticket List </h3>
           </div>
 
           <div className="mt-5">
             <div className={styling.profileTop}>
               <div className={styling.flightHistory}>
                 <div className="overflow-x-auto ">
-                  <table className="table lg:table-auto columns-xl break-after-column">
+                  <table className="table  lg:table-auto columns-xl break-after-column">
                     <thead className={style.tableWrap}>
                       <tr>
                         <th>Booking By</th>
@@ -39,6 +40,7 @@ const process = () => {
                         <th>Client Pays</th>
                         <th>Agent Pay </th>
                         <th>AIT</th>
+                        <th>Detail</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -60,7 +62,12 @@ const process = () => {
                         <td>5143</td>
                         <td>156</td>
                         <td>
-                          <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
                             Cancel
                           </span>
                         </td>
@@ -82,7 +89,12 @@ const process = () => {
                         <td>5143</td>
                         <td>156</td>
                         <td>
-                          <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
                             Cancel
                           </span>
                         </td>
@@ -104,7 +116,12 @@ const process = () => {
                         <td>5143</td>
                         <td>156</td>
                         <td>
-                          <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
                             Cancel
                           </span>
                         </td>
@@ -126,7 +143,12 @@ const process = () => {
                         <td>5143</td>
                         <td>156</td>
                         <td>
-                          <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
                             Cancel
                           </span>
                         </td>
@@ -148,7 +170,12 @@ const process = () => {
                         <td>5143</td>
                         <td>156</td>
                         <td>
-                          <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
                             Cancel
                           </span>
                         </td>
@@ -170,7 +197,12 @@ const process = () => {
                         <td>5143</td>
                         <td>156</td>
                         <td>
-                          <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
                             Cancel
                           </span>
                         </td>
@@ -192,7 +224,39 @@ const process = () => {
                         <td>5143</td>
                         <td>156</td>
                         <td>
-                          <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
+                            Cancel
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Global04</td>
+                        <td>29 Mar 2023</td>
+                        <td>Not Issued </td>
+                        <td>5 Apr 2023</td>
+                        <td> 30 Mar 20235</td>
+                        <td>DAC-MAAC</td>
+                        <td>BS</td>
+                        <td>GT16797</td>
+                        <td>056XNH</td>
+                        <td>Unpaid </td>
+                        <td>Cancel </td>
+                        <td>No</td>
+                        <td>590</td>
+                        <td>5143</td>
+                        <td>156</td>
+                        <td>
+                          <span className=" bg-[#26ADE2] rounded text-white py-2 text-xs px-2 font-xs">
+                            View
+                          </span>
+                        </td>
+                        <td>
+                          <span className=" bg-red-900 rounded text-white py-2 text-xs px-2 font-xs">
                             Cancel
                           </span>
                         </td>
@@ -209,4 +273,4 @@ const process = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(process), { ssr: false });
+export default dynamic(() => Promise.resolve(confirmticket), { ssr: false });

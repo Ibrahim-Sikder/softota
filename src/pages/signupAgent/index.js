@@ -54,10 +54,8 @@ const SignUpAgent = () => {
   // };
 
   return (
-    <div>
+    <section>
       <Nav />
-      {/* <TopBar/>
-          <Header/> */}
       <div className={style.signUpAgentWrap}>
         <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">
           <div>
@@ -69,7 +67,7 @@ const SignUpAgent = () => {
             />
           </div>
           <div>
-            <form >
+            <form>
               <div className="mb-5 relative">
                 <label className={style.loginLabel}>User Name</label> <br />
                 <input
@@ -80,7 +78,7 @@ const SignUpAgent = () => {
                   className={style.loginInput}
                 />
               </div>
-              <div className="mb-5 relative" >
+              <div className="mb-5 relative">
                 <label className={style.loginLabel}>Email Address</label> <br />
                 <input
                   onChange={(event) => setEmail(event.target.value)}
@@ -91,7 +89,7 @@ const SignUpAgent = () => {
                 />
               </div>
               <div className="mb-5 relative">
-                <label  className={style.loginLabel}>Password</label> <br />
+                <label className={style.loginLabel}>Password</label> <br />
                 <input
                   onChange={(event) => setPassword(event.target.value)}
                   type="password"
@@ -101,7 +99,7 @@ const SignUpAgent = () => {
                 />
               </div>
               <div className="mb-5 relative">
-                <label  className={style.loginLabel}>Mobile Number</label> <br />
+                <label className={style.loginLabel}>Mobile Number</label> <br />
                 <input
                   onChange={(event) => setNumber(event.target.value)}
                   name="number"
@@ -111,7 +109,7 @@ const SignUpAgent = () => {
                 />
               </div>
               <div className="mb-5 relative">
-                <label  className={style.loginLabel}>Agent Number </label> <br />
+                <label className={style.loginLabel}>Agent Number </label> <br />
                 <input
                   onChange={(event) => setAnumber(event.target.value)}
                   name="anumber"
@@ -130,7 +128,7 @@ const SignUpAgent = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 };
 

@@ -4,23 +4,18 @@ import React from "react";
 import style from "./DashBoard.module.css";
 const AdminRightSide = () => {
   return (
-    <div>
+    <section>
       <div className={style.adminRightSide}>
         <div className="flex mb-3">
-          
           <p className="ml-3">4 Days - 3 Nights</p>
         </div>
         <div className="flex mb-3">
-          
           <p className="ml-3">Tour Type - Economy</p>
         </div>
         <div className="flex mb-3">
-          
           <p className="ml-3">Royal Tulip Hotel, Deira (Dubai)</p>
         </div>
         <div className="flex mb-3">
-          
-          
           <p className="ml-3">Price includes VAT & Tax</p>
         </div>
         <div className="flex mb-3">
@@ -32,7 +27,7 @@ const AdminRightSide = () => {
           <button className={style.bookingBtn2}>Book Now </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

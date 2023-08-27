@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../../components/UserDashBoard/UserDashBoard.module.css';
+import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import FlightSearch from "../../../components/SearhPage/FlightSearch/FlightSearch";
@@ -8,7 +8,7 @@ import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 
 const Flight = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -17,21 +17,18 @@ const Flight = () => {
           <div className={style.rightSideBarWrap}>
             <div className={style.profileTop}>
               <RightSideTopBar />
-              <MoveText/>
+              <MoveText />
             </div>
             <div>
-             <div className={style.flightSearchWrap}>
-             <FlightSearch />
-             </div>
+              <div className={style.flightSearchWrap}>
+                <FlightSearch />
+              </div>
             </div>
           </div>
-
-
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-
 
 export default dynamic(() => Promise.resolve(Flight), { ssr: false });

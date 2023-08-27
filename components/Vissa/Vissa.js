@@ -3,11 +3,21 @@ import style from "./Vissa.module.css";
 import Link from "next/link";
 import { FaSistrix } from "react-icons/fa";
 import ActiveLink from "../Banner/ActiveLink";
-import { Flight, Hotel,BookOnline, TransferWithinAStation, BusAlert,DirectionsRailway,  Add, Groups2, HorizontalRule } from '@mui/icons-material';
+import {
+  Flight,
+  Hotel,
+  BookOnline,
+  TransferWithinAStation,
+  BusAlert,
+  DirectionsRailway,
+  Add,
+  Groups2,
+  HorizontalRule,
+} from "@mui/icons-material";
 
 const Vissa = () => {
   return (
-    <div className={style.vissa}>
+    <section className={style.vissa}>
       <div className={style.bannerWrap}>
         <h2>
           Welcome to Ghuronti! Find Tours, <br className={style.block} />{" "}
@@ -139,7 +149,7 @@ const Vissa = () => {
                       </g>
                     </svg>
 
-                    <p className="ml-3">Vissa</p>
+                    <p className="ml-3">Visa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
@@ -252,32 +262,31 @@ const Vissa = () => {
 
           {/* for mobile menu  */}
 
-      <div className={style.mobileMenuWraps}>
+          <div className={style.mobileMenuWraps}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
-
                 <ActiveLink href="/flight">
                   <li className={style.activeLink}>
-                  <Flight className={style.mobileMenuIcons}/>
+                    <Flight className={style.mobileMenuIcons} />
                     <p className="ml-3">Flight</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/hotel">
                   <li>
-                   <Hotel className={style.mobileMenuIcon}/>
+                    <Hotel className={style.mobileMenuIcon} />
 
                     <p className="ml-3">Hotel</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/vissa">
                   <li>
-                  <BookOnline className={style.mobileMenuIcon}/>
+                    <BookOnline className={style.mobileMenuIcon} />
                     <p className="ml-3">Vissa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
                   <li>
-                  <TransferWithinAStation className={style.mobileMenuIcon}/>
+                    <TransferWithinAStation className={style.mobileMenuIcon} />
 
                     <p className="ml-3">Tours</p>
                   </li>
@@ -285,8 +294,6 @@ const Vissa = () => {
               </div>
             </ul>
           </div>
-
-
 
           <div className={style.visaWrap}>
             <div>
@@ -333,7 +340,7 @@ const Vissa = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

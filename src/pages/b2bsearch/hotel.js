@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../../components/UserDashBoard/UserDashBoard.module.css';
+import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import HotelTrending from "../../../components/Hotel/HotelTrending/HotelTrending";
@@ -10,7 +10,7 @@ import HotelHeroBox from "../../../components/UserDashBoard/HotelHeroBox/HotelHe
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 const Hotel = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -19,7 +19,7 @@ const Hotel = () => {
           <div className={style.rightSideWrap}>
             <div className={style.profileTop}>
               <RightSideTopBar />
-             <MoveText/>
+              <MoveText />
             </div>
             <HotelHeroBox />
             <HotelTrending />
@@ -29,7 +29,7 @@ const Hotel = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

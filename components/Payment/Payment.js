@@ -10,14 +10,10 @@ import term from "../../public/assets/payment6.png";
 import { FaEyeSlash, FaEye, FaStar } from "react-icons/fa";
 const Payment = () => {
   const [showPassword, setShowPassword] = useState(false);
-
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
   const handleMouseDownPassword = () => {};
-
-
   return (
-    <div className={style.paymentWrap}>
+    <section className={style.paymentWrap}>
       <div className={style.payment}>
         <h2>Personal Information </h2>
         <form>
@@ -28,7 +24,6 @@ const Payment = () => {
                 <FaStar />
               </span>
               <input
-               
                 className={style.paymentBtn}
                 name="fname"
                 placeholder="First Name "
@@ -217,7 +212,7 @@ const Payment = () => {
           </div>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

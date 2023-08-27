@@ -1,30 +1,27 @@
-import React, { useState } from 'react';
-import style from '../../components/Tour/Tour.module.css'
-import Link from 'next/link';
-import styling from './TourHeroBox.module.css'
-import ActiveLink from '../Banner/ActiveLink';
+import React, { useState } from "react";
+import style from "../../components/Tour/Tour.module.css";
+import Link from "next/link";
+import styling from "./TourHeroBox.module.css";
+import ActiveLink from "../Banner/ActiveLink";
 const TourHeroBox = () => {
-  const [activePackage, setActivePackage] = useState(true)
+  const [activePackage, setActivePackage] = useState(true);
   const handleActivePackage = () => {
-    setActivePackage(activePackage => !activePackage)
-  }
+    setActivePackage((activePackage) => !activePackage);
+  };
   return (
-    <div>
+    <section>
       <div className={`${style.heroBoxMain} ${styling.tourHeroBox}`}>
         {/* menubar */}
         <div>
           <ul className={style.menu}>
             <div className={style.wrapMenu}>
               <ActiveLink href="/admin/umra">
-                <li className={style.firstChild}
-
-                >
+                <li className={style.firstChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={35}
                     height={35}
                     fill="none"
-
                   >
                     <path
                       fill="#092E3D"
@@ -59,7 +56,6 @@ const TourHeroBox = () => {
                   </svg>
 
                   <p className="ml-3">Hajj & Umrah</p>
-
                 </li>
               </ActiveLink>
               <ActiveLink href="/admin">
@@ -69,7 +65,6 @@ const TourHeroBox = () => {
                     width={40}
                     height={35}
                     fill="none"
-
                   >
                     <path
                       fill="#E0F1F8"
@@ -89,10 +84,10 @@ const TourHeroBox = () => {
                       fill="#4AB449"
                       fillOpacity={0.5}
                       d="M21.236 25.215c-.285 0-.57-.106-.787-.32a1.072 1.072 0 0 1 0-1.537l8.836-8.639a1.13 1.13 0 0 1 1.574 0 1.069 1.069 0 0 1 0 1.539l-8.837 8.638c-.216.213-.501.32-.786.32ZM15.94 20.28c-.285 0-.57-.106-.787-.318a1.07 1.07 0 0 1 0-1.539l8.95-8.751a1.13 1.13 0 0 1 1.573 0 1.07 1.07 0 0 1 0 1.538l-8.95 8.751a1.124 1.124 0 0 1-.786.319Z"
-                    /></svg>
+                    />
+                  </svg>
 
                   <p className="ml-3">Flight</p>
-
                 </li>
               </ActiveLink>
               <ActiveLink href="/admin/hotel">
@@ -102,7 +97,6 @@ const TourHeroBox = () => {
                     width={35}
                     height={40}
                     fill="#fff"
-
                   >
                     <path
                       fill="#fff"
@@ -119,7 +113,6 @@ const TourHeroBox = () => {
                   </svg>
 
                   <p className="ml-3">Hotel</p>
-
                 </li>
               </ActiveLink>
               <ActiveLink href="/admin/visa">
@@ -129,7 +122,6 @@ const TourHeroBox = () => {
                     width={45}
                     height={45}
                     fill="#4AB449"
-
                   >
                     <g opacity={0.4}>
                       <path fill="#4AB449" d="M0 .749h45V44.74H0z" />
@@ -145,7 +137,6 @@ const TourHeroBox = () => {
                   </svg>
 
                   <p className="ml-3">Vissa</p>
-
                 </li>
               </ActiveLink>
               <ActiveLink href="/admin/tours">
@@ -155,7 +146,6 @@ const TourHeroBox = () => {
                     width={35}
                     height={43}
                     fill="#fff"
-
                   >
                     <path
                       fill="#fff"
@@ -170,7 +160,6 @@ const TourHeroBox = () => {
                   </svg>
 
                   <p className="ml-3">Tours</p>
-
                 </li>
               </ActiveLink>
               <ActiveLink href="/admin/buses">
@@ -181,7 +170,12 @@ const TourHeroBox = () => {
                     height={39}
                     fill="#fff"
                   >
-                    <g fill="#fff" fillRule="evenodd" clipRule="evenodd" opacity={0.4}>
+                    <g
+                      fill="#fff"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      opacity={0.4}
+                    >
                       <path d="M6.5 31.296a1 1 0 0 1 1-1H15a1 1 0 0 1 1 1v2.408c0 1.911-1.609 3.407-3.5 3.407H10c-1.891 0-3.5-1.496-3.5-3.407v-2.408Zm2 1v1.408c0 .736.641 1.407 1.5 1.407h2.5c.859 0 1.5-.67 1.5-1.407v-1.408H8.5ZM24 31.296a1 1 0 0 1 1-1h7.5a1 1 0 0 1 1 1v2.408c0 1.911-1.609 3.407-3.5 3.407h-2.5c-1.891 0-3.5-1.496-3.5-3.407v-2.408Zm2 1v1.408c0 .736.641 1.407 1.5 1.407H30c.859 0 1.5-.67 1.5-1.407v-1.408H26Z" />
                       <path d="M11.25 4.611c-2.234 0-4 1.754-4 3.815v20.463c0 .736.641 1.407 1.5 1.407h22.5c.859 0 1.5-.67 1.5-1.407V8.426c0-2.06-1.766-3.815-4-3.815h-17.5Zm-6 3.815c0-3.236 2.734-5.815 6-5.815h17.5c3.266 0 6 2.58 6 5.815v20.463c0 1.912-1.609 3.407-3.5 3.407H8.75c-1.891 0-3.5-1.495-3.5-3.407V8.426Z" />
                       <path d="M5.307 18.927a1 1 0 0 1 1.276-.61 40.446 40.446 0 0 0 26.834 0 1 1 0 0 1 .666 1.885 42.448 42.448 0 0 1-28.166 0 1 1 0 0 1-.61-1.275ZM9.028 25.044a1 1 0 0 1 1.206-.738l5 1.203a1 1 0 1 1-.468 1.945l-5-1.204a1 1 0 0 1-.738-1.206ZM30.972 25.044a1 1 0 0 1-.738 1.206l-5 1.204a1 1 0 1 1-.468-1.945l5-1.203a1 1 0 0 1 1.206.738ZM32.849 10.4a1 1 0 0 1 1.335-.468l5 2.408a1 1 0 0 1 .566.9v6.02a1 1 0 0 1-2 0v-5.391l-4.434-2.135a1 1 0 0 1-.467-1.335ZM7.151 10.4a1 1 0 0 1-.467 1.334L2.25 13.87v5.39a1 1 0 0 1-2 0v-6.018a1 1 0 0 1 .566-.901l5-2.408a1 1 0 0 1 1.335.467Z" />
@@ -189,7 +183,6 @@ const TourHeroBox = () => {
                   </svg>
 
                   <p className="ml-3">Buses</p>
-
                 </li>
               </ActiveLink>
               <ActiveLink href="/admin/train">
@@ -199,7 +192,6 @@ const TourHeroBox = () => {
                     width={40}
                     height={20}
                     fill="none"
-
                   >
                     <path
                       fill="#fff"
@@ -249,7 +241,6 @@ const TourHeroBox = () => {
                   </svg>
 
                   <p className="ml-3">Trains</p>
-
                 </li>
               </ActiveLink>
             </div>
@@ -281,7 +272,7 @@ const TourHeroBox = () => {
           <button>Search Tours </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

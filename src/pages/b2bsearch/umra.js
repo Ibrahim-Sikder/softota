@@ -10,7 +10,7 @@ import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 
 const Umra = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -27,7 +27,7 @@ const Umra = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

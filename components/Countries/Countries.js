@@ -11,7 +11,7 @@ import newzealand from "../../public/newzealand.png";
 
 const Countries = () => {
   return (
-    <div className={style.countryWrap}>
+    <section className={style.countryWrap}>
       <div className="mt-10 text-center">
         <div className={style.countryHeadText}>
           <h2 className="text-3xl font-bold capitalize">
@@ -81,12 +81,10 @@ const Countries = () => {
               height={500}
             />
           </div>
-          <button className={style.countryBtn}>
-            View More countries
-          </button>
+          <button className={style.countryBtn}>View More countries</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

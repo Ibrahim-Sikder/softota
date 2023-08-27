@@ -5,11 +5,11 @@ import HotelBooking from "../../../../components/SearhPage/HotelBook/HotelBookin
 import dynamic from "next/dynamic";
 const book = () => {
   return (
-    <div>
+    <section>
       <Nav />
       <HotelBooking />
       <Footer />
-    </div>
+    </section>
   );
 };
 

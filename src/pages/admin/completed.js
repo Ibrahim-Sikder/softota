@@ -7,7 +7,7 @@ import RightSideTopBar from "../../../components/SuperAdmin/RightSideTopBar";
 import UserDashBoardLeft from "../../../components/SuperAdmin/UserDashBoardLeft";
 const Completed = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft/>
@@ -22,7 +22,7 @@ const Completed = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

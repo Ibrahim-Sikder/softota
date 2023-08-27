@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../../components/UserDashBoard/UserDashBoard.module.css';
+import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import BestPlace from "../../../components/BestPlace/BestPlace";
 import Travel from "../../../components/Travel/Travel";
 import Customer from "../../../components/Customer/Customer";
@@ -10,33 +10,30 @@ import BusesHeroBox from "../../../components/SuperAdmin/BusesHeroBox/BusesHeroB
 import RightSideTopBar from "../../../components/SuperAdmin/RightSideTopBar";
 import UserDashBoardLeft from "../../../components/SuperAdmin/UserDashBoardLeft";
 
-
 const Buses = () => {
-     return (
-          <div>
-               <div className={style.sideBarWrap}>
-                    <div className={style.leftSideBar}>
-                         <UserDashBoardLeft/>
-                    </div>
-                    <div className={style.rightSideBar}>
-                         <div className={style.rightSideWrap}>
-                         <div className={style.profileTop}>
-                              <RightSideTopBar />
-                             <MoveText/>
-                         </div>
-                         <div>
-                         </div>
-                         <BusesHeroBox />
-                         <BestPlace />
-                         <Travel></Travel>
-                         <TourDestination></TourDestination>
-                         <Customer></Customer>
-                         </div>
-
-                    </div>
-               </div>
+  return (
+    <section>
+      <div className={style.sideBarWrap}>
+        <div className={style.leftSideBar}>
+          <UserDashBoardLeft />
+        </div>
+        <div className={style.rightSideBar}>
+          <div className={style.rightSideWrap}>
+            <div className={style.profileTop}>
+              <RightSideTopBar />
+              <MoveText />
+            </div>
+            <div></div>
+            <BusesHeroBox />
+            <BestPlace />
+            <Travel></Travel>
+            <TourDestination></TourDestination>
+            <Customer></Customer>
           </div>
-     );
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default dynamic(() => Promise.resolve(Buses), { ssr: false });

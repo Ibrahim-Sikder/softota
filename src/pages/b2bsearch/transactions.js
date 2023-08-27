@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 import MoveText from '../../../components/UserDashBoard/MoveText/MoveText';
 const transactions = () => {
      return (
-          <div>
+          <section>
                <div>
 
                </div>
@@ -156,7 +156,7 @@ const transactions = () => {
                          </div>
                     </div>
                </div>
-          </div>
+          </section>
      );
 };
 

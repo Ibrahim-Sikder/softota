@@ -11,7 +11,7 @@ const ProfileLeftSide = () => {
   };
 
   return (
-    <div>
+    <section>
       <div className={style.userProfileLeftSide}>
         <div className={style.userImg}>
           <div>
@@ -47,7 +47,7 @@ const ProfileLeftSide = () => {
           <button className={style.userLogoutBtn}>Log Out</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

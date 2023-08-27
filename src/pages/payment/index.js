@@ -1,16 +1,16 @@
-import React from 'react'
-import Payment from '../../../components/Payment/Payment'
-import Footer from '../../../components/Footer/Footer'
-import Nav from '../../../components/NavBarr/Nav'
+import React from "react";
+import Payment from "../../../components/Payment/Payment";
+import Footer from "../../../components/Footer/Footer";
+import Nav from "../../../components/NavBarr/Nav";
 
 const index = () => {
   return (
-    <div>
-      <Nav/>
+    <section>
+      <Nav />
       <Payment></Payment>
-      <Footer/>
-    </div>
-  )
-}
+      <Footer />
+    </section>
+  );
+};
 
-export default index
+export default index;

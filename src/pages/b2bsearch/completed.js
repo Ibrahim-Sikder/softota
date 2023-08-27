@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../../components/UserDashBoard/UserDashBoard.module.css';
+import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
@@ -7,7 +7,7 @@ import RequestCompleted from "../../../components/UserDashBoard/Agent/Completed/
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 const Completed = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -16,13 +16,13 @@ const Completed = () => {
           <div className={style.rightSideWrap}>
             <div className={style.profileTop}>
               <RightSideTopBar />
-              <MoveText/>
+              <MoveText />
             </div>
-                <RequestCompleted/>
+            <RequestCompleted />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

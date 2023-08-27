@@ -26,18 +26,18 @@ import "react-photo-view/dist/react-photo-view.css";
 const HotelSearch = () => {
   const images = [
     {
-      img: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600',
+      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      img: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600',
+      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
     {
-      img: 'https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600',
+      img: "https://images.pexels.com/photos/271639/pexels-photo-271639.jpeg?auto=compress&cs=tinysrgb&w=600",
     },
   ];
 
   return (
-    <div>
+    <section>
       <div className={style.searchDetailHead}>
         <div>
           <h2 className="text-3xl font-bold">COX S BAZAR</h2>
@@ -311,7 +311,7 @@ const HotelSearch = () => {
             </div>
             <div></div>
           </div>
-           <div className={style.SearchHotel}>
+          <div className={style.SearchHotel}>
             <div className={style.detailBoxWrap}>
               <div className={style.searchLeftSideImg}>
                 <PhotoProvider>
@@ -434,7 +434,6 @@ const HotelSearch = () => {
             </div>
             <div></div>
           </div>
-
         </div>
         <div className={style.hotelSearchRightSide}>
           <div className={style.propertyWrap}>
@@ -706,7 +705,7 @@ const HotelSearch = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

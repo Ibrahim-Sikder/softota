@@ -2,14 +2,14 @@ import React from "react";
 import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import styling from "./profile.module.css";
 import dynamic from "next/dynamic";
-import RightSideTopBar from "../../../components/SuperAdmin/RightSideTopBar";
-import UserDashBoardLeft from "../../../components/SuperAdmin/UserDashBoardLeft";
+import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
+import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 const process = () => {
   return (
     <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
-          <UserDashBoardLeft />
+          <UserDashBoardLeft></UserDashBoardLeft>
         </div>
         <div className={style.flightRightSide}>
           <RightSideTopBar />

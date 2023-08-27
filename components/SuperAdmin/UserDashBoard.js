@@ -1,11 +1,11 @@
 import React from "react";
-import style from '../../components/UserDashBoard/UserDashBoard.module.css'
+import style from "../../components/UserDashBoard/UserDashBoard.module.css";
 import UserDashBoardLeft from "./UserDashBoardLeft";
 import UserDashBoardRight from "./UserDashBoardRight";
 
 const UserDashBoard = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -14,7 +14,7 @@ const UserDashBoard = () => {
           <UserDashBoardRight />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

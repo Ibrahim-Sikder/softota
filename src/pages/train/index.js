@@ -9,7 +9,7 @@ import Nav from "../../../components/NavBarr/Nav";
 
 const index = () => {
   return (
-    <div>
+    <section>
       <Nav />
       <Tour></Tour>
       <BestPlace></BestPlace>
@@ -17,7 +17,7 @@ const index = () => {
       <TourDestination></TourDestination>
       <Customer></Customer>
       <Footer />
-    </div>
+    </section>
   );
 };
 

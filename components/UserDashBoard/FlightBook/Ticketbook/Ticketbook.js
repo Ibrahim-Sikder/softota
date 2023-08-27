@@ -49,106 +49,102 @@ const Ticketbook = () => {
           </div>
         </div>
         <div className={style.flightInfoWrap}>
-            <h3 className="text-xl font-bold italic mb-3">Flight Info </h3>
-        <table>
-              <tr>
-                <th>From</th>
-                <th>Destination</th>
-                <th>AirLines</th>
-                <th>Departure </th>
-                <th>Arrival</th>
-                <th>Duration</th>
-                <th>Flight Now</th>
-              </tr>
-              <tr>
-                <td>
-                    <strong>DAC</strong> <br />
-                    <small>Hajrat Shahjalla</small>
-                </td>
-                <td>
-                    <strong>BOM</strong> <br />
-                    <small>Hajrat Shahjalla</small>
-                </td>
-                <td>Vistra</td>
-                <td>Wed, 30 August 2023, 11:45</td>
-                <td>Wed, 30 August 2023, 14:05</td>
-                <td>02 hrs,50 mins</td>
-                <td>255</td>
-              </tr>
-              <tr>
-                <td>
-                    <strong>DAC</strong> <br />
-                    <small>Hajrat Shahjalla</small>
-                </td>
-                <td>
-                    <strong>BOM</strong> <br />
-                    <small>Hajrat Shahjalla</small>
-                </td>
-                <td>Vistra</td>
-                <td>Wed, 30 August 2023, 11:45</td>
-                <td>Wed, 30 August 2023, 14:05</td>
-                <td>02 hrs,50 mins</td>
-                <td>255</td>
-              </tr>
-            </table>
+          <h3 className="text-xl font-bold italic mb-3">Flight Info </h3>
+          <table>
+            <tr>
+              <th>From</th>
+              <th>Destination</th>
+              <th>AirLines</th>
+              <th>Departure </th>
+              <th>Arrival</th>
+              <th>Duration</th>
+              <th>Flight Now</th>
+            </tr>
+            <tr>
+              <td>
+                <strong>DAC</strong> <br />
+                <small>Hajrat Shahjalla</small>
+              </td>
+              <td>
+                <strong>BOM</strong> <br />
+                <small>Hajrat Shahjalla</small>
+              </td>
+              <td>Vistra</td>
+              <td>Wed, 30 August 2023, 11:45</td>
+              <td>Wed, 30 August 2023, 14:05</td>
+              <td>02 hrs,50 mins</td>
+              <td>255</td>
+            </tr>
+            <tr>
+              <td>
+                <strong>DAC</strong> <br />
+                <small>Hajrat Shahjalla</small>
+              </td>
+              <td>
+                <strong>BOM</strong> <br />
+                <small>Hajrat Shahjalla</small>
+              </td>
+              <td>Vistra</td>
+              <td>Wed, 30 August 2023, 11:45</td>
+              <td>Wed, 30 August 2023, 14:05</td>
+              <td>02 hrs,50 mins</td>
+              <td>255</td>
+            </tr>
+          </table>
         </div>
         <div className={style.passengerInfo}>
-            <h3 className={style.passenger}>Passenger Info</h3>
-            <div className={style.singlePassenger}>
-                <div>
-                <strong>Given Name</strong> <br />
-                <p>Ibrahim </p>
-                </div>
-               <div className={style.rightSide}>
-               <strong>Surname </strong>
-                <p>Sikder</p>
-               </div>
+          <h3 className={style.passenger}>Passenger Info</h3>
+          <div className={style.singlePassenger}>
+            <div>
+              <strong>Given Name</strong> <br />
+              <p>Ibrahim </p>
             </div>
-            <div className={style.singlePassenger}>
-                <div>
-                <strong>Nationality</strong> <br />
-                <p>Bangladesh</p>
-                </div>
-               <div className={style.rightSide}>
-               <strong>Date of Birth </strong>
-                <p>15 Aug 2000</p>
-               </div>
+            <div className={style.rightSide}>
+              <strong>Surname </strong>
+              <p>Sikder</p>
             </div>
-            <div className={style.singlePassenger}>
-                <div>
-                <strong>Phone Number </strong> <br />
-                <p>01825-445033</p>
-                </div>
-               <div className={style.rightSide}>
-               <strong>Email </strong>
-                <p>ghuronti@gmail.com</p>
-               </div>
+          </div>
+          <div className={style.singlePassenger}>
+            <div>
+              <strong>Nationality</strong> <br />
+              <p>Bangladesh</p>
             </div>
-            <div className={style.singlePassenger}>
-                <div>
-                <strong>Passport Number </strong> <br />
-                <p>0185033</p>
-                </div>
-               <div className={style.rightSide}>
-               <strong>Passport Expiry Date </strong>
-                <p>06 Mar 2024</p>
-               </div>
+            <div className={style.rightSide}>
+              <strong>Date of Birth </strong>
+              <p>15 Aug 2000</p>
             </div>
+          </div>
+          <div className={style.singlePassenger}>
+            <div>
+              <strong>Phone Number </strong> <br />
+              <p>01825-445033</p>
+            </div>
+            <div className={style.rightSide}>
+              <strong>Email </strong>
+              <p>ghuronti@gmail.com</p>
+            </div>
+          </div>
+          <div className={style.singlePassenger}>
+            <div>
+              <strong>Passport Number </strong> <br />
+              <p>0185033</p>
+            </div>
+            <div className={style.rightSide}>
+              <strong>Passport Expiry Date </strong>
+              <p>06 Mar 2024</p>
+            </div>
+          </div>
 
-            <div className={style.singlePassenger}>
-                <div>
-                <strong>Seat Preference </strong> <br />
-                <p>2</p>
-                </div>
-               <div className={style.rightSide}>
-               <strong>Meal Preference </strong>
-                <p>No Preference</p>
-               </div>
+          <div className={style.singlePassenger}>
+            <div>
+              <strong>Seat Preference </strong> <br />
+              <p>2</p>
             </div>
-
-
-            
-
+            <div className={style.rightSide}>
+              <strong>Meal Preference </strong>
+              <p>No Preference</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

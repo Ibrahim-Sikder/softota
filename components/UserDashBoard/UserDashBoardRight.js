@@ -1,29 +1,24 @@
 import React, { useEffect, useState } from "react";
-import styles from './UserDashBoard.module.css'
+import styles from "./UserDashBoard.module.css";
 import TourDestination from "../Tour/TourDestination";
 import RightSideTopBar from "./RightSideTopBar";
 import HeroBox from "./HeroBox";
 import MoveText from "./MoveText/MoveText";
 
-
-
 const UserDashBoardRight = () => {
-
-
   return (
-    <div className={styles.rightSideWrap}>
+    <article className={styles.rightSideWrap}>
       <div className={styles.profileTop}>
         <RightSideTopBar />
-        <MoveText/>
+        <MoveText />
       </div>
-    
-    <HeroBox/>
+
+      <HeroBox />
       <div className={styles.packageTour}>
         <TourDestination />
       </div>
-    </div>
-  )
-}
+    </article>
+  );
+};
 
-
-export default UserDashBoardRight
+export default UserDashBoardRight;

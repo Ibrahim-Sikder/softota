@@ -8,7 +8,7 @@ import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
 import Link from "next/link";
 const flight = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -60,9 +60,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -82,9 +85,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -104,9 +110,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -126,9 +135,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -148,9 +160,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -170,9 +185,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -192,9 +210,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -214,9 +235,12 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href='/b2bsearch/flight/ticketbook'> <span className="btn bg-[#26ADE2] text-white rounded p-2">
-                            View
-                          </span> </Link>
+                          <Link href="/b2bsearch/flight/ticketbook">
+                            {" "}
+                            <span className="btn bg-[#26ADE2] text-white rounded p-2">
+                              View
+                            </span>{" "}
+                          </Link>
                         </td>
                       </tr>
                     </tbody>
@@ -227,7 +251,7 @@ const flight = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

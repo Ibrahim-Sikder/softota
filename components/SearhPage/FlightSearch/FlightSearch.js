@@ -62,7 +62,7 @@ const FlightSearch = () => {
   };
 
   return (
-    <div className={style.flightSearchWrap}>
+    <section className={style.flightSearchWrap}>
       <div className={style.searchDetailHead}>
         <div>
           <div className="flex items-center justify-center">
@@ -85,40 +85,40 @@ const FlightSearch = () => {
             <small>*Price includes VAT & Tax</small>
           </div>
           <div className={style.flightSlider}>
-          <Slider {...settings}>
-            <div className={style.perFlightPerson}>
-              <h2>USA </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <div className={style.perFlightPerson}>
-              <h2>MU </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <div className={style.perFlightPerson}>
-              <h2>Am </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <div className={style.perFlightPerson}>
-              <h2>Am </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <div className={style.perFlightPerson}>
-              <h2>QS</h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <div className={style.perFlightPerson}>
-              <h2>Am </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <div className={style.perFlightPerson}>
-              <h2>IH </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-            <div className={style.perFlightPerson}>
-              <h2>HI </h2>
-              <small className="font-sm">2 Flight</small>
-            </div>
-          </Slider>
+            <Slider {...settings}>
+              <div className={style.perFlightPerson}>
+                <h2>USA </h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+              <div className={style.perFlightPerson}>
+                <h2>MU </h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+              <div className={style.perFlightPerson}>
+                <h2>Am </h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+              <div className={style.perFlightPerson}>
+                <h2>Am </h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+              <div className={style.perFlightPerson}>
+                <h2>QS</h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+              <div className={style.perFlightPerson}>
+                <h2>Am </h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+              <div className={style.perFlightPerson}>
+                <h2>IH </h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+              <div className={style.perFlightPerson}>
+                <h2>HI </h2>
+                <small className="font-sm">2 Flight</small>
+              </div>
+            </Slider>
           </div>
 
           <div className={style.flightPrice}>
@@ -762,7 +762,7 @@ const FlightSearch = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

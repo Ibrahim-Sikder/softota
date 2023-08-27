@@ -2,7 +2,7 @@ import React from "react";
 import style from "./FlightMission.module.css";
 const FlightMission = () => {
   return (
-    <div>
+    <section>
       <div className={style.missionWrap}>
         <div className={style.missionHead}>
           <h2>Our Mission & Vision</h2>
@@ -31,7 +31,7 @@ const FlightMission = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

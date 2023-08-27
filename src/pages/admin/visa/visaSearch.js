@@ -34,7 +34,7 @@ const VisaSearch = () => {
   };
 
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -248,7 +248,7 @@ const VisaSearch = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

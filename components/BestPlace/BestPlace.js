@@ -7,7 +7,7 @@ import see3 from "../../public/see3.png";
 import Link from "next/link";
 const BestPlace = () => {
   return (
-    <div className={style.bestPlaceWrap}>
+    <section className={style.bestPlaceWrap}>
       <div className={style.trendingHead}>
         <h2>Best Places To Visit In Bangladesh</h2>
         <p>
@@ -25,8 +25,6 @@ const BestPlace = () => {
                   href=""
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
-          
-
                   <Image
                     className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
@@ -63,8 +61,6 @@ const BestPlace = () => {
                   href=""
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
-          
-
                   <Image
                     className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
@@ -101,8 +97,6 @@ const BestPlace = () => {
                   href=""
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
-            
-
                   <Image
                     className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
@@ -138,7 +132,7 @@ const BestPlace = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

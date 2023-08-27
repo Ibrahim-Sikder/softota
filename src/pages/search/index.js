@@ -4,20 +4,14 @@ import HotelSearch from "../../../components/SearhPage/HotelSearch";
 import dynamic from "next/dynamic";
 import Nav from "../../../components/NavBarr/Nav";
 
-
 const SearcPage = () => {
   return (
-    <div>
+    <section>
       <Nav></Nav>
       <HotelSearch />
       <Footer />
-    </div>
+    </section>
   );
 };
 
 export default dynamic(() => Promise.resolve(SearcPage), { ssr: false });
-
-
-
-
-

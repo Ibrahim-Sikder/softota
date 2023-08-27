@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const AdminLeftSide = () => {
   return (
-    <div>
+    <section>
       <div className={style.AdminleftSide}>
         <div className="absolute left-24 top-52">
           <Image
@@ -46,7 +46,7 @@ const AdminLeftSide = () => {
           <button>Log Out</button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

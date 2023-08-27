@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../../components/UserDashBoard/UserDashBoard.module.css';
+import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import HotelTrending from "../../../components/Hotel/HotelTrending/HotelTrending";
 import Travel from "../../../components/Travel/Travel";
 import Customer from "../../../components/Customer/Customer";
@@ -10,16 +10,16 @@ import RightSideTopBar from "../../../components/SuperAdmin/RightSideTopBar";
 import UserDashBoardLeft from "../../../components/SuperAdmin/UserDashBoardLeft";
 const Hotel = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
-          <UserDashBoardLeft/>
+          <UserDashBoardLeft />
         </div>
         <div className={style.rightSideBar}>
           <div className={style.rightSideWrap}>
             <div className={style.profileTop}>
-              <RightSideTopBar/>
-              <MoveText/>
+              <RightSideTopBar />
+              <MoveText />
             </div>
             <HotelHeroBox />
             <HotelTrending />
@@ -29,7 +29,7 @@ const Hotel = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

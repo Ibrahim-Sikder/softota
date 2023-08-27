@@ -548,7 +548,7 @@ font-size:14px;
   .heroBoxMain {
     overflow: hidden;
     width: 93%;
-    border-radius: 5px;
+    border-radius: 20px;
   }
   .bannerWrap h2 {
     margin-bottom: 10px;

@@ -5,7 +5,6 @@ import { useState } from "react";
 import Image from "next/image";
 import flight from "../../../public/assets/flight.png";
 
-
 const FlightBook = () => {
   const [priceDetals, setPriceDetails] = useState(true);
   const [flightDetails, setFlightDetails] = useState(true);
@@ -16,7 +15,7 @@ const FlightBook = () => {
     setFlightDetails((flightDetails) => !flightDetails);
   };
   return (
-    <div>
+    <section>
       <div className={style.flightInfo}>
         <h2 className="text-xl font-bold">Flight Details Information !</h2>
       </div>
@@ -625,7 +624,7 @@ const FlightBook = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

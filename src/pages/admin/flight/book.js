@@ -5,11 +5,11 @@ import dynamic from "next/dynamic";
 import Nav from "../../../../components/NavBarr/Nav";
 const book = () => {
   return (
-    <div>
+    <section>
       <Nav />
       <FlightBook />
       <Footer />
-    </div>
+    </section>
   );
 };
 

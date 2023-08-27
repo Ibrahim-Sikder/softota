@@ -13,7 +13,7 @@ import Image from "next/image";
 
 const Passion = () => {
   return (
-    <div>
+    <section>
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
@@ -107,7 +107,7 @@ const Passion = () => {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-    </div>
+    </section>
     // <div className={style.timeline}>
     //      <div className={`${style.container} ${style.leftContainer}`}>
     //           <span><FaChild/></span>

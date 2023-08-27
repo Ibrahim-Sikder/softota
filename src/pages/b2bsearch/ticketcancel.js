@@ -2,9 +2,9 @@ import React from "react";
 import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import styling from "./profile.module.css";
 import dynamic from "next/dynamic";
-import RightSideTopBar from "../../../components/SuperAdmin/RightSideTopBar";
-import UserDashBoardLeft from "../../../components/SuperAdmin/UserDashBoardLeft";
-const process = () => {
+import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
+import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
+const ticketcancel = () => {
   return (
     <section>
       <div className={style.sideBarWrap}>
@@ -14,7 +14,7 @@ const process = () => {
         <div className={style.flightRightSide}>
           <RightSideTopBar />
           <div className={style.ticketListHead}>
-            <h3 className="text-2xl font-bold">Proccessing Ticket List </h3>
+            <h3 className="text-2xl font-bold">Cancel Ticket List </h3>
           </div>
 
           <div className="mt-5">
@@ -61,7 +61,7 @@ const process = () => {
                         <td>156</td>
                         <td>
                           <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
-                            Cancel
+                            Aproved
                           </span>
                         </td>
                       </tr>
@@ -83,7 +83,7 @@ const process = () => {
                         <td>156</td>
                         <td>
                           <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
-                            Cancel
+                            Aproved
                           </span>
                         </td>
                       </tr>
@@ -105,7 +105,7 @@ const process = () => {
                         <td>156</td>
                         <td>
                           <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
-                            Cancel
+                            Aproved
                           </span>
                         </td>
                       </tr>
@@ -127,7 +127,7 @@ const process = () => {
                         <td>156</td>
                         <td>
                           <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
-                            Cancel
+                            Aproved
                           </span>
                         </td>
                       </tr>
@@ -149,7 +149,7 @@ const process = () => {
                         <td>156</td>
                         <td>
                           <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
-                            Cancel
+                            Aproved
                           </span>
                         </td>
                       </tr>
@@ -171,7 +171,7 @@ const process = () => {
                         <td>156</td>
                         <td>
                           <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
-                            Cancel
+                            Aproved
                           </span>
                         </td>
                       </tr>
@@ -193,7 +193,7 @@ const process = () => {
                         <td>156</td>
                         <td>
                           <span className=" bg-[#4AB449] rounded text-white py-2 text-xs px-2 font-xs">
-                            Cancel
+                            Aproved
                           </span>
                         </td>
                       </tr>
@@ -209,4 +209,4 @@ const process = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(process), { ssr: false });
+export default dynamic(() => Promise.resolve(ticketcancel), { ssr: false });

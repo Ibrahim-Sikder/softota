@@ -7,7 +7,7 @@ import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 import dynamic from "next/dynamic";
 const partial = () => {
   return (
-    <div>
+    <section>
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
@@ -231,9 +231,8 @@ const partial = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
-
 
 export default dynamic(() => Promise.resolve(partial), { ssr: false });

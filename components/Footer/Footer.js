@@ -12,43 +12,31 @@ import {
 import Link from "next/link";
 const Footer = () => {
   return (
-    <div className={style.footer}>
+    <section className={style.footer}>
       <div className={style.footerWrap}>
         <div className="mb-10">
           <h4 className="pb-5">Bangladesh </h4>
-          <p className='flex items-center'>
-                <FaPhoneAlt className="mr-3 text-white"></FaPhoneAlt>
-              <span>+88 01885071488</span>
-            
+          <p className="flex items-center">
+            <FaPhoneAlt className="mr-3 text-white"></FaPhoneAlt>
+            <span>+88 01885071488</span>
           </p>
-          <p className='flex items-center text-white my-2'>
-                <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
-              <span>+88 01533389338</span>
+          <p className="flex items-center text-white my-2">
+            <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
+            <span>+88 01533389338</span>
           </p>
-          <p className='flex items-center text-white'>   
-                <FaMapMarkerAlt className="text-white mr-3"></FaMapMarkerAlt>{" "}
-              <span>
-                Tropicana Tower, L 12, 45 <br /> Topkhana Rd, Purana Paltan
-                Dhaka 1000
+          <p className="flex items-center text-white">
+            <FaMapMarkerAlt className="text-white mr-3"></FaMapMarkerAlt>{" "}
+            <span>
+              Tropicana Tower, L 12, 45 <br /> Topkhana Rd, Purana Paltan Dhaka
+              1000
             </span>
           </p>
         </div>
         <div className="mb-10">
           <h4 className="pb-5">USA Contact </h4>
           <p className="flex items-center text-white">
-                <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
-              <span>+17705263551</span>
+            <FaPhoneAlt className="mr-3"></FaPhoneAlt> <span>+17705263551</span>
           </p>
-          {/* <p className="flex items-center text-white my-2">
-                <FaPhoneAlt className="mr-3"></FaPhoneAlt>{" "}
-              <span>+1 470 9071527</span>
-          </p>
-          <p className="flex items-center text-white">
-                <FaMapMarkerAlt className="mr-3"></FaMapMarkerAlt>{" "}
-              <span>
-                2932 Arbor Creek Ln, <br /> Doraville, GA 30340
-              </span>
-          </p> */}
         </div>
         <div className="mb-10">
           <h4 className="pb-5">Social Media </h4>
@@ -104,7 +92,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

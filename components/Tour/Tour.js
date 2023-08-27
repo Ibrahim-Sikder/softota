@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import style from "./Tour.module.css";
 import ActiveLink from "../Banner/ActiveLink";
-import { Flight, Hotel,BookOnline, TransferWithinAStation, BusAlert,DirectionsRailway,  Add, Groups2, HorizontalRule } from '@mui/icons-material';
+import {
+  Flight,
+  Hotel,
+  BookOnline,
+  TransferWithinAStation,
+} from "@mui/icons-material";
 const Tour = () => {
   const [activePackage, setActivePackage] = useState(false);
   const handleActivePackage = () => {
     setActivePackage((activePackage) => !activePackage);
   };
   return (
-    <div>
+    <section>
       <div className={style.train}>
         <div className={style.bannerWrap}>
           <h2>
@@ -252,44 +257,42 @@ const Tour = () => {
               </ul>
             </div>
 
+            {/* for mobile menu  */}
 
-          {/* for mobile menu  */}
+            <div className={style.mobileMenuWraps}>
+              <ul className={style.menu}>
+                <div className={style.wrapMenu}>
+                  <ActiveLink href="/flight">
+                    <li className={style.activeLink}>
+                      <Flight className={style.mobileMenuIcons} />
+                      <p className="ml-3">Flight</p>
+                    </li>
+                  </ActiveLink>
+                  <ActiveLink href="/hotel">
+                    <li>
+                      <Hotel className={style.mobileMenuIcon} />
 
-          <div className={style.mobileMenuWraps}>
-            <ul className={style.menu}>
-              <div className={style.wrapMenu}>
+                      <p className="ml-3">Hotel</p>
+                    </li>
+                  </ActiveLink>
+                  <ActiveLink href="/vissa">
+                    <li>
+                      <BookOnline className={style.mobileMenuIcon} />
+                      <p className="ml-3">Vissa</p>
+                    </li>
+                  </ActiveLink>
+                  <ActiveLink href="/tours">
+                    <li>
+                      <TransferWithinAStation
+                        className={style.mobileMenuIcon}
+                      />
 
-                <ActiveLink href="/flight">
-                  <li className={style.activeLink}>
-                  <Flight className={style.mobileMenuIcons}/>
-                    <p className="ml-3">Flight</p>
-                  </li>
-                </ActiveLink>
-                <ActiveLink href="/hotel">
-                  <li>
-                   <Hotel className={style.mobileMenuIcon}/>
-
-                    <p className="ml-3">Hotel</p>
-                  </li>
-                </ActiveLink>
-                <ActiveLink href="/vissa">
-                  <li>
-                  <BookOnline className={style.mobileMenuIcon}/>
-                    <p className="ml-3">Vissa</p>
-                  </li>
-                </ActiveLink>
-                <ActiveLink href="/tours">
-                  <li>
-                  <TransferWithinAStation className={style.mobileMenuIcon}/>
-
-                    <p className="ml-3">Tours</p>
-                  </li>
-                </ActiveLink>
-              </div>
-            </ul>
-          </div>
-
-
+                      <p className="ml-3">Tours</p>
+                    </li>
+                  </ActiveLink>
+                </div>
+              </ul>
+            </div>
 
             {/* Travel banner */}
             <form>
@@ -319,7 +322,7 @@ const Tour = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

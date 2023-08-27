@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, { useState } from "react";
 import style from "./Login.module.css";
 import Image from "next/image";
 import login from "../../public/login.png";
@@ -10,17 +10,12 @@ import { useRouter } from "next/router";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
   const handleMouseDownPassword = () => {};
-
   const router = useRouter();
 
-
- 
   return (
-    <div className={style.loginWrap}>
+    <section className={style.loginWrap}>
       <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center">
         <div>
           <Image
@@ -31,7 +26,7 @@ const Login = () => {
           />
         </div>
         <div className="mt-14">
-          <form >
+          <form>
             <div className="mb-5 relative">
               <label className={style.inputLabel}>Email Address</label> <br />
               <input
@@ -94,7 +89,7 @@ const Login = () => {
                   </button>
                 </div>
                 <div className={style.circle}>
-                  <button type="button" >
+                  <button type="button">
                     <Image
                       src={facebook}
                       alt="Picture of the author"
@@ -108,7 +103,7 @@ const Login = () => {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
