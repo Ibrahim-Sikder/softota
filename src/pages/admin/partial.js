@@ -4,6 +4,7 @@ import styles from './profile.module.css'
 import MoveText from '../../../components/UserDashBoard/MoveText/MoveText';
 import RightSideTopBar from '../../../components/SuperAdmin/RightSideTopBar';
 import UserDashBoardLeft from '../../../components/SuperAdmin/UserDashBoardLeft';
+import dynamic from "next/dynamic";
 const partial = () => {
      return (
           <div>
@@ -244,4 +245,4 @@ const partial = () => {
      );
 };
 
-export default partial;
+export default dynamic(() => Promise.resolve(partial), { ssr: false });

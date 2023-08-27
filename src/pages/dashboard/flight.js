@@ -1,11 +1,7 @@
-import Image from 'next/image';
 import React from 'react';
-import { FaSistrix, FaAngleLeft, FaCalendarAlt, FaAngleRight, FaCommentAlt, FaHeadSideCoughSlash, FaUserCircle, FaEllipsisV } from 'react-icons/fa';
-import logo from '../../../public/logo.png'
 import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLeft';
 import style from '../../../components/UserDashBoard/UserDashBoard.module.css'
 import styling from './profile.module.css'
-import Link from 'next/link';
 import RightSideTopBar from '../../../components/UserDashBoard/RightSideTopBar';
 import dynamic from "next/dynamic";
 import MoveText from '../../../components/UserDashBoard/MoveText/MoveText';

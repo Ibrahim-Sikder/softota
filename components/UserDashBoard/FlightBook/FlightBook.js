@@ -132,7 +132,7 @@ const FlightBook = () => {
                 <hr className={style.line} />
                 <div className={style.singleFlight}>
                   <div>
-                    <div className="flex items-center justify-center">
+                    <div className={style.singleFlightLeft}>
                       <Image
                         src={flight}
                         width={80}
@@ -169,7 +169,7 @@ const FlightBook = () => {
                 <hr className={style.line} />
                 <div className={style.singleFlight}>
                   <div>
-                    <div className="flex items-center justify-center">
+                    <div className={style.singleFlightLeft}>
                       <Image
                         src={flight}
                         width={80}

@@ -51,6 +51,11 @@
   font-size: 14px;
   float: right;
 }
+.singleFlightLeft{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
 
 .priceIcon {
   font-size: 18px !important;
@@ -263,11 +268,33 @@
         margin-top: 10px;
       }
       .singleFlight {
-        display: block;
-        font-size: 14px;
+    font-size: 14px;
+    flex-wrap: wrap;
     }
+    .detailFlighCard {
+      padding: 30px 20px;
+  }
+  .singleFlightLeft{
+    justify-content: space-between;
+    display: flex;
+    width: 320px;
+    margin-bottom: 17px;
+    margin-left: -6px;
+  }
+  .singleFlight p {
+    font-size: 12px;
+}
+.singleFlight strong {
+  font-size: 12px;
+}
 
 
+
+}
+@media only screen and (max-width:400px){
+  .singleFlightLeft {
+    width: 285px;
+}
 
 
 
