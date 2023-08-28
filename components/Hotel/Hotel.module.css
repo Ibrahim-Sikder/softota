@@ -255,73 +255,6 @@ transform:scale(1.5)
 
 
 
-/* @media only screen and (max-width: 1024px) {
-  .heroBoxMain {
-    width: 100%;
-  }
-  .tourTrending{
-   width:245px !important;
-  }
-  .package {
-    left: 85px;
-  }
-  .package2 {
-    right: 85px;
-  }
-  .package4 {
-    right: 85px;
-  }
-  .date {
-    left: 85px;
-  }
-  .date2 {
-    left: 292px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .bannerWrap h2 {
-    font-size: 25px;
-  }
-  .wrapMenu{
-    flex-wrap: wrap;
-    justify-content: center;
-}
-  .menu {
-    background: none;
-    flex-wrap: wrap;
-    margin-bottom: 44px;
-    padding-top: 40px;
-  }
-  .menu li {
-    height: 82%;
-    width: 100%;
-    border:none;
-}
-.lastChild {
-  border-right:none !important;
-}
-
-  .heroBoxMain {
-    width: 100%;
-    height: 90%;
-  }
-  .tourTrending{
-    width:240px !important;
-   }
-  .package {
-    top: 250px;
-  }
-  .heroBoxBtn {
-    top: 363px;
-  }
-  .heroBoxMain {
-    background: none;
-  }
-  .bannerWrap h2 {
-    margin-bottom: 10px;
-  }
-} */
 
 .destination {
   margin-bottom: 94px;
@@ -409,7 +342,35 @@ transform:scale(1.5)
   width: 135px;
 }
 
+.mobileMenuWraps{
+  display: none;
+}
+
+
+
+
 @media only screen and (max-width: 1024px) {
+  .heroBoxMain {
+    width: 100%;
+  }
+  .tourTrending{
+   width:245px !important;
+  }
+  .package {
+    left: 85px;
+  }
+  .package2 {
+    right: 85px;
+  }
+  .package4 {
+    right: 85px;
+  }
+  .date {
+    left: 85px;
+  }
+  .date2 {
+    left: 292px;
+  }
   .destination {
     width: 100%;
     margin-left: 37px;
@@ -433,41 +394,57 @@ transform:scale(1.5)
   }
 }
 @media only screen and (max-width: 768px) {
-  .bannerWrap {
-    height: 490px;
-}
 
-
-
-  /* mobile menu styling  */
-  .menuWrap{
+  .bannerWrap h2 {
+    font-size: 25px;
+  }
+  .heroBoxMain {
+    height: 413px;
+    width: 93%;
+  }
+  .desktopMenu{
     display: none;
   }
-  
+
   .mobileMenuWraps{
     display: block;
   }
-  .wrapMenu {
-    justify-content: space-between !important;
-    background: transparent;
+
+
+
+  .wrapMenu{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  .menu {
+    margin-bottom: 0px;
+    padding-top: 0px;
+  }
+  .menu li {
+    height: 82%;
     width: 100%;
-    margin: 0 auto;
-    border-top-left-radius: 6px !important;
-    border-top-right-radius: 6px;
-    border-bottom: 1px solid #fff;
-    padding: 0px 0px;
-  }
-  .mobileMenuIcon{
-    font-size:25px !important;
-  }
-  .mobileMenuIcons{
-    font-size: 25px !important;
-    transform: rotate(44deg);
-  
-  }
+    border:none;
+}
+.lastChild {
+  border-right:none !important;
+}
 
 
-
+  .tourTrending{
+    width:240px !important;
+   }
+  .package {
+    top: 250px;
+  }
+  .heroBoxBtn {
+    top: 299px;
+  }
+  .bannerWrap h2 {
+    margin-bottom: 10px;
+  }
+  .bannerWrap {
+    height: 490px;
+}
 
 
   .destination {
@@ -478,24 +455,25 @@ transform:scale(1.5)
     height: 471px;
   }
 
-  .heroBoxMain {
-    height: 439px;
-  }
+
   .package2,
-  .package {
-    top: 194px;
-    width: 296px;
+  .package { 
+    top: 120px;
+    width: 269px;
+    border-radius: 3px;
   }
   .package4 {
-    width: 296px;
-    top: 281px;
+    width: 269px;
+    top: 192px;
     right: 85px;
+    border-radius: 3px
   }
   .date2 {
-    top: 281px;
-    left: 233px;
-    width: 148px;
+    top: 192px;
+    left: 220px;
+    width: 135px;
     border-left: none;
+    border-radius: 3px;
 }
 .bestPlaceHead {
   width: 80%;
@@ -503,8 +481,10 @@ transform:scale(1.5)
 }
 .date {
   left: 85px;
-  top: 281px;
-  width: 148px;
+  top: 192px;
+  width: 135px;
+  border-radius: 3px;
+
 }
 
 
@@ -516,7 +496,8 @@ transform:scale(1.5)
 
   .wrapMenu {
     justify-content: space-between !important;
-    padding: 0px 30px;
+    padding: 0px 0px;
+
 }
 .bannerWrap h2 {
   font-size: 23px;
@@ -530,11 +511,14 @@ transform:scale(1.5)
 }
 .lastChild{
   margin-left: 113px;
+  
 }
-
-
+.menu li {
+  font-size: 14px;
+}
 .menu {
   padding-top: 0px;
+  display: block;
 }
 
   .destination {
@@ -547,25 +531,24 @@ transform:scale(1.5)
     padding: 10px;
   }
   .bannerWrap {
-    height: 454px;
+    height: 508px;
   
   }
   .heroBoxMain {
-    height: 400px;
+    height: 430px;
     top: 17px;
   }
   .heroBoxBtn {
-    top: 295px;
+    top: 338px;
     width: 195px;
     margin-top: 13px;
-    font-size: 14px;
   }
   .tourTrending{
     width:290px !important;
    }
   .package4 {
-    top: 229px;
-    right: 40px;
+    top: 274px;
+    right: 38px;
     width: 80%;
     height: 53px;
     padding: 5px;
@@ -581,7 +564,7 @@ transform:scale(1.5)
   }
 
   .package {
-    top: 35px;
+    top: 88px;
     width: 80%;
     left: 41px;
     height: 53px;
@@ -590,19 +573,21 @@ transform:scale(1.5)
   }
   .date,
   .date2 {
-    top: 160px;
-    width: 40.7%;
+    top: 207px;
+    width: 40.3%;
     left: 41px;
     font-size: 13px;
 }
 .package2 {
-  top: 98px;
+
+  top: 147px;
   width: 80%;
   left: 41px;
   padding-left: 5px;
   height: 53px;
   padding: 5px;
   font-size: 13px;
+
 }
 .date input,
 .date2 input {
@@ -611,24 +596,21 @@ transform:scale(1.5)
 .date2 {
 
   position: absolute;
-  left: 210px;
+  left: 198px;
   border-left: none;
 
 }
 .bestPlaceHead h2 {
-  font-size: 28px;
+  font-size: 25px;
 }
 .tourTrending{
   width:100%;
   
   }
-
-
-
-
-
-
-
+  .bestPlaceHead{
+    width: 80%;
+    margin-top: 95px;
+}
 
 
   }
@@ -638,22 +620,22 @@ transform:scale(1.5)
 
 @media only screen and (max-width: 400px) {
   .wrapMenu {
-    padding: 0px 6px;
+    padding: 0px 0px;
 }
 
   .date2 {
-    left: 187px;
+    left: 179px;
   }
 
   
   .package4 {
-    right: 32px;
+  
+    right: 29px;
+
   }
-  .heroBoxBtn {
-    padding: 14px 15px;
-  }
-  .bannerWrap {
-    margin-bottom: 433px;
-  }
+  .bestPlaceHead {
+    width: 100%;
+    margin-top: 95px;
+}
  
 }

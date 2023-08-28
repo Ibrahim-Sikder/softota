@@ -21,6 +21,7 @@ import {
   Flight,
   BookOnline,
   TransferWithinAStation,
+  KingBed
 } from "@mui/icons-material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -100,7 +101,7 @@ const Hotel = () => {
                 <input type="date" />
               </div>
               <div className={style.date2}>
-                <h4>Check In</h4>
+                <h4>Check Out</h4>
                 <input type="date" />
               </div>
             </div>
@@ -117,7 +118,8 @@ const Hotel = () => {
 
           {/* menubar */}
 
-          <div className={style.menuWrap}>
+         <div className={style.desktopMenu}>
+         <div className={style.menuWrap}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/hajjUmra">
@@ -351,8 +353,44 @@ const Hotel = () => {
               </div>
             </ul>
           </div>
+         </div>
 
           {/* for mobile menu  */}
+
+          <div className={style.mobileMenuWraps}>
+            <ul className={style.menu}>
+              <div className={style.wrapMenu}>
+                <ActiveLink href="/flight">
+                  <li className={style.activeLink}>
+                    <Flight className={style.mobileMenuIcons} />
+                    <p className="ml-3">Flight</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/hotel">
+                  <li>
+                  
+                    <KingBed className={style.mobileMenuIcons}/>
+                    <p className="ml-3">Hotel</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/vissa">
+                  <li>
+                    <BookOnline className={style.mobileMenuIcon} />
+                    <p className="ml-3">Vissa</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/tours">
+                  <li>
+                    <TransferWithinAStation className={style.mobileMenuIcon} />
+
+                    <p className="ml-3">Tours</p>
+                  </li>
+                </ActiveLink>
+              </div>
+            </ul>
+          </div>
+
+
         </div>
       </div>
 
