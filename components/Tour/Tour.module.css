@@ -455,6 +455,13 @@
   .travelFormWrap{
     margin-top: 25px;
 }
+.bestPlaceHead h2 {
+  font-size: 25px;
+}
+
+
+
+
 }
 
 @media only screen and (max-width: 400px) {

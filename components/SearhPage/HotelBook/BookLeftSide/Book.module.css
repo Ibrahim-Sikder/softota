@@ -1,18 +1,89 @@
-.hotelReview{
-     width:100%;
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+.dateCard{
+     display: flex;
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+     width: 228px;
+     justify-content: space-between;
+     align-items: center;
+     padding: 5px 15px;
+     margin-top: 20px;
+     border-radius: 5px;
+}
+.dateCard p{
+     font-size: 13px;
+}
+.dateCard small{
+     font-size: 10px;
+}
+.hotelName{
+     width: 100%;
+     background: #4AB449;
+     color: white;
+     padding: 5px 0px;
+     text-align: center;
+     font-weight: bold;
+     font-size: 18px;
+}
+.dateIcon{
+     color: #4AB449;
+    font-size: 23px;
+}
+.passengerInformation{
+     margin: 40px 0px;
+     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
      padding:20px;
 }
-.breakfast{
-     background:#E9F6E9;
-     padding:10px;
-     width:230px;
-     height:140px;
-
-}
-.breakfast p{
+.passengerInfo label{
      font-size: 12px;
 }
+.passengerInfo select option{
+     font-size: 12px;
+}
+.formControl{
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     margin: 25px 0px; 
+}
+.passengerField{
+     width: 400px;
+     border: 1px solid #ddd;
+     margin-right: 10px;
+     height: 30px;
+     padding-left: 5px;
+}
+.passengerInfo input::placeholder , .guestField input::placeholder{
+     color:black !important;
+}
+.guestWrap{
+     display: flex;
+     padding:30px 0px;
+}
+.totalGuest{
+     display: flex;
+     align-items: center;
+     margin-top: 25px;
+     margin-left: 25px;
+     font-size: 14px;
+     width: 250px;
+     justify-content: space-between;
+}
+.totalGuest select{
+     width: 55px;
+     border: 1px solid #ddd;
+     height: 41px;
+     border-radius: 3px;
+     color: black;
+     padding: 0px 5px;
+}
+.line{
+     width: 2px;
+     height: 50px;
+     background: #ddd;
+
+}
+
+
+
 .stayInfo{
      display:flex;
      justify-content: space-between;
@@ -25,11 +96,8 @@
 .stayInfo p{
      font-size: 14px;
 }
-.guestInfoWrap{
-     width:100%;
-     border:1px solid #ddd;
-     padding:10px;
-}
+
+
 .guestField{
      width:100%;
 }
@@ -49,230 +117,51 @@
 .guestInfo label{
      font-size:13px;
 }
-.contactWrap{
-     width:100%;
-     padding:30px 10px;
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
-}
-
-.contactWrap small, .contactWrap label{
-     font-size:12px;
-}
-.primaryInfo{
-     display: flex;
-     justify-content: space-between;
-     align-items:center;
-     width:100%;
-     margin-bottom:20px;
-}
-.primaryInfo input, .primaryInfo select{
-     width: 320px;
-     height: 30px;
-     border: 1px solid #ddd;
-
-}
-
-.rewardWrap{
-     width:48%;
-     border:1px solid #ddd;
-     padding:15px;
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-     margin-bottom:20px;
-}
-.rewardInfo{
-     display: flex;
-     justify-content: space-between;
-     flex-wrap:wrap;
-}
-.gpOffer span{
-     font-size: 12px;
-}
-.gpOffer small{
-     font-size: 10px;
-     margin:20px 0px;
-     display: block;
-}
-.gpVerify{
-     display: flex;
-     justify-content: space-between;
-
-}
-.gpVerify input{
-     border:1px solid #ddd;
-     padding-left:5px;
-     
-}
-.gpVerify button{
-     font-size: 14px;
-     padding:5px 15px;
-     border-radius:5px;
-     
-}
-
-
-
-
-   .dealWrap {
-     width: 100%;
-     padding: 20px;
-     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-   }
-   .hotdetailWrap {
-     display: flex;
-     width: 100%;
-     margin: 0 auto;
-     flex-wrap: wrap;
-   }
-   .hotDeal {
-     width: 48%;
-     height: 155px;
-     background: #e9f6e9;
-     padding: 20px;
-     border: 1px solid #ddd;
-     margin-bottom: 10px;
-     margin-right: 10px;
-   }
-   .hotDeal strong {
-     font-size: 10px;
-   }
-   .couponCodeWrap {
-     width: 100%;
-     margin-top:10px;
-   }
-   .couponCode {
-     display: flex;
-     align-items: center;
-   }
-   .couponField {
-     width: 65%;
-   }
-   .apply {
-     background: #4ab449;
-     color: white;
-     margin-left: 13px;
-     padding: 13px;
-     border-radius: 5px;
-     font-size: 18px;
-   }
-   .adultBtn{
-        background: #e9f6e9;
-        margin: 0 5px;
-        font-size: 14px;
-        padding: 5px;
-   }
-   .travelerSelect{
-        width:100%;
-   }
-   .titleBtnWrap{
-        display:flex;
-   
-   }
-   .titleBtnWrap button{
-        margin-right: 5px;
-        padding: 5px;
-        width: 54px;
-        height: 38px;
-        background: transparent;
-        border: 1px solid #ddd
-   
-   }
-   .personal{
-        margin-top:15px;
-   }
-   .personal span{
-        font-size:12px;
-   }
-   .inputFieldWrap{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-top: 30px;
-   }
-   .titleInputField{
-        width:320px
-   }
-   .contactDetailWrap{
-        width:100%;
-        margin-top:30px;
-   }
-   .contactDetailWrap p{
-        font-size:12px;
-   }
-   .contactDetail{
-        display:flex;
-        justify-content: space-between;
-        margin-top:20px;
-   }
-   .contactField{
-        width: 320px;
-        border: 1px solid #ddd;
-        height: 35px;
-   }
-   .contactDetail label{
-        font-size:12px;
-        
-   }
-   .checkbox{
-        display: flex;
-       align-items: center;
-       margin-top: 40px;
-   }
-   
-   .checkbox input[type="checkbox"] {
-        margin: 0;
-        font: inherit;
-        color: currentColor;
-        width: 1.15em;
-        height: 1.15em;
-        border: 0.15em solid currentColor;
-        border-radius: 0.15em;
-        transform: translateY(-0.075em);
-        margin-right:5px;
+@media only screen and (max-width:768px){
+     .passengerField {
+          width: 300px;
+          margin-bottom: 5px;
+        }
+        .formControl {
+          margin: 10px 0px;
+        }
+        .guestWrap {
+          display: flex;
+          padding: 8px 0px;
       }
-     
-   .travelInsurance{
-        display:flex;
-        justify-content: space-between;
-        width:100%;
-        align-items:center;
+}
+@media only screen and (max-width:500px){
+        .formControl {
+          display: block;
+          margin: 10px 0px;
+        }
+        .guestWrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+      .Book_passengerField__kcVjx {
+          width: 100%;
+          margin-bottom: 5px;
+      }
+
+}
+@media only screen and (max-width:400px){
+   .passengerField {
+       width: 100%;
+   }
+   .guestField input {
+     width: 42%;
+ }
+
+}
+
+
+
+
+
+
+
    
    
-   }
-   .insurance{
-        width:100%;
-        height:200px;
-        background:#e9f6e9;
-        padding:20px;
-   }
-   .icon{
-        width: 30px;
-        height: 30px;
-        background: white;
-        color: black;
-        border-radius: 50%;
-        font-size: 24px;
-        line-height: 30px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        display: flex;
-        margin-right: 9px;
-   }
-   .insurancePackage{
-        display:flex;
-        align-items: center;
-        justify-content: space-between;
-        width:90%;
-        margin-top:20px;
-   }
-   .continueBtn{
-     width: 100%;
-     height: 35px !important;
-     color: white;
-     margin-bottom: 30px;
-     padding: 30px !important;
-        background:#4AB449 !important;
-        
-   }

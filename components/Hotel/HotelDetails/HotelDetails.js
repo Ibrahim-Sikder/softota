@@ -6,74 +6,74 @@ import hotel2 from "../../../public/assets/hotell3.jpeg";
 import hotel3 from "../../../public/assets/hotell4.jpeg";
 import hotel4 from "../../../public/assets/hotell5.jpeg";
 import hotel5 from "../../../public/assets/hotell6.jpeg";
-import style from "./detailH.module.css";
-import { AccessTime, TransferWithinAStation } from "@mui/icons-material";
+import style from './HotelDetails.module.css'
+import { CheckCircleOutline } from "@mui/icons-material";
 import travel from "../../../public/travel2.png";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
-const index = () => {
+const HotelDetails = () => {
   return (
     <section>
       <Nav />
+      <div className={style.hotelDetailWraps}>
+      <div className={style.hotelDetailTopBar}>
       <div className={style.detailHeadText}>
         <h2 className="text-3xl font-bold before:">
           Laos: Land of a Million Elephants!
         </h2>
-        <div className="flex">
-          <Image
-            alt="Picture of the author"
-            width={10}
-            height={10}
-            className="mr-3"
-          />
-          <p>Vientinane, Laos</p>
+        <div>
+          <p className="mt-3">30th August 2023 - 1st September 2023 1 Persons - 1 Rooms</p>
         </div>
+      </div>
+      <button>Modify Search</button>
       </div>
       <div className={style.hotelDetailWrap}>
         <div className={style.leftSideDetail}>
-          <div className={style.leftSideImg}>
-            <div>
+            <div className={style.topImagae}>
               <Image
-                className={style.detailImg}
+              className={style.hotelImage}
                 src={hotel}
                 alt="Picture of the author"
               />
             </div>
             <div className={style.groupImgWrap}>
               <div className={style.groupImg}>
+                <div className={style.leftSideSimg}>
                 <Image
-                  className={style.leftSideSimg}
-                  src={hotel5}
-                  alt="Picture of the author"
-                  width={200}
-                  height={100}
-                />
-                <Image
-                  className={style.leftSideSimg}
-                  src={hotel3}
-                  alt="Picture of the author"
-                  width={200}
-                  height={100}
-                />
-              </div>
-              <div className={style.groupImg}>
-                <Image
-                  className={style.leftSideSimg}
+                className={style.singleImg}
                   src={hotel2}
                   alt="Picture of the author"
-                  width={200}
-                  height={100}
                 />
+                </div>
+                <div className={style.leftSideSimg}>
                 <Image
-                  className={style.leftSideSimg}
+                className={style.singleImg}
+                width={500}
+                height={500}
                   src={hotel4}
                   alt="Picture of the author"
-                  width={200}
-                  height={100}
                 />
+                </div>
+              </div>
+              <div className={style.groupImg}>
+                <div className={style.leftSideSimg}>
+                <Image
+                className={style.singleImg}
+                  src={hotel5}
+                  alt="Picture of the author"
+                />
+                </div>
+                <div className={style.leftSideSimg}>
+                <Image
+                className={style.singleImg}
+                width={500}
+                height={500}
+                  src={hotel3}
+                  alt="Picture of the author"
+                />
+                </div>
               </div>
             </div>
-          </div>
           <div className={style.leftSideText}>
             <div className="mb-5">
               <h2 className="text-2xl">
@@ -133,85 +133,44 @@ const index = () => {
           <div className={style.rightSide}>
             <div>
               <div className="flex  mb-3">
-                <Image
-                  className={style.rightSideIcon}
-                  // src={clock}
-                  alt="Picture of the author"
-                  width={10}
-                  height={10}
-                />
+              <CheckCircleOutline className={style.checkIcon}/>
                 <p>4 Days-3 Nights</p>
               </div>
               <div className="flex  mb-3">
-                <Image
-                  className={style.rightSideIcon}
-                  // src={location}
-                  alt="Picture of the author"
-                  width={10}
-                  height={10}
-                />
+              <CheckCircleOutline className={style.checkIcon}/>
                 <p>Hotel Type: DELUXE </p>
               </div>
               <div className="flex  mb-3">
-                <Image
-                  className={style.rightSideIcon}
-                  // src={clock3}
-                  alt="Picture of the author"
-                  width={10}
-                  height={10}
-                />
+              <CheckCircleOutline className={style.checkIcon}/>
                 <p>Toyal Tulip Hotel(Vietntiane) </p>
               </div>
               <div className="flex  mb-3">
-                <Image
-                  className={style.rightSideIcon}
-                  // src={clock4}
-                  alt="Picture of the author"
-                  width={10}
-                  height={10}
-                />
+              <CheckCircleOutline className={style.checkIcon}/>
                 <p>Price includes VATE & Tax </p>
               </div>
               <div className="flex  mb-3">
-                <Image
-                  className={style.rightSideIcon}
-                  // src={clock5}
-                  alt="Picture of the author"
-                  width={10}
-                  height={10}
-                />
+              <CheckCircleOutline className={style.checkIcon}/>
                 <p>Price Per Person Doubl: 26,400TK </p>
               </div>
               <div className="flex  mb-3">
-                <Image
-                  className={style.rightSideIcon}
-                  // src={clock}
-                  alt="Picture of the author"
-                  width={10}
-                  height={10}
-                />
+              <CheckCircleOutline className={style.checkIcon}/>
                 <p>Price Per Person Twin 25,500Tk</p>
               </div>
               <div className="flex  mb-3">
-                <Image
-                  className={style.rightSideIcon}
-                  // src={clock}
-                  alt="Picture of the author"
-                  width={10}
-                  height={10}
-                />
+              <CheckCircleOutline className={style.checkIcon}/>
                 <p>Price Per Person Triple: 25,500Tk</p>
               </div>
               <p>
                 <strong className="text-[#4AB449]">Start from</strong> 20000Tk
               </p>
-              <Link href="/payment">
+              <Link href="/search/hotel/book">
                 <button className={style.rightSideBtn}> Book Now </button>
               </Link>
             </div>
           </div>
           <div className={style.rightSideImg}>
             <Image
+            className={style.travel}
               src={travel}
               alt="Picture of the author"
               width={300}
@@ -220,10 +179,11 @@ const index = () => {
           </div>
         </div>
       </div>
-      {/* <Trending></Trending> */}
+      </div>
+   
       <Footer />
     </section>
   );
 };
 
-export default index;
+export default HotelDetails;

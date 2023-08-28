@@ -4,7 +4,7 @@ const HotelBookRightSide = () => {
   return (
     <section className={style.rightSide}>
       <div className={style.rightSideWrap}>
-        <h4 className="text-xl">Your price summary</h4>
+        <h4 className=" text-[#4AB449] font-bold mb-3">Your Price Summary</h4>
         <div className="flex justify-between bg-[#E9F6E9] px-3 py-2">
           <span>Detail</span>
           <span>Amount</span>
@@ -22,6 +22,7 @@ const HotelBookRightSide = () => {
             </div>
           </div>
         </div>
+        <hr className={style.horizontalLine} />
         <div className={style.priceSummery}>
           <h6>Child x 2</h6>
           <div className="flex justify-between">
@@ -35,6 +36,7 @@ const HotelBookRightSide = () => {
             </div>
           </div>
         </div>
+        <hr className={style.horizontalLine} />
         <div className={style.priceSummery}>
           <div className="flex justify-between">
             <div>
@@ -46,7 +48,7 @@ const HotelBookRightSide = () => {
               <div>Travel Insurance Charge </div>
               <div>Baggage Protection Charge </div>
               <div>Ancillary </div>
-              <div>ST Convenience Fee</div>
+              <div>GT Convenience Fee</div>
             </div>
 
             <div>
@@ -62,7 +64,9 @@ const HotelBookRightSide = () => {
             </div>
           </div>
         </div>
-        <div className="summaryRight"></div>
+       <div className="w-full text-center mt-5">
+       <button className={style.reservationBtn}>Confirm Reservation</button>
+       </div>
       </div>
     </section>
   );

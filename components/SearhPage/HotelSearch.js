@@ -45,9 +45,9 @@ const HotelSearch = () => {
             27th August 2023 - 28th August 2023 4 Persons - 1 Rooms
           </span>
         </div>
-        <button className="bg-[#4AB449] md:mt-[16px] text-white px-8 rounded-sm h-10 border-radius text-sm">
+        <Link href='/hotel'> <button className="bg-[#4AB449] md:mt-[16px] text-white px-8 rounded-sm h-10 border-radius text-sm rounded">
           EDIT SEARCH{" "}
-        </button>
+        </button></Link>
       </div>
       <div className={style.hotelSearchBoxWrap}>
         <div className={style.hotelSearchLeftSide}>
@@ -57,11 +57,11 @@ const HotelSearch = () => {
               <small>Price includes VAT & Tax </small>
             </div>
             <div className={style.bookBtnGroup}>
-              <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm mr-3">
+              <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm mr-3 rounded">
                 Highest Price{" "}
               </button>
               <Link href="/detailHotel">
-                <button className="bg-[#26ADE2] hover:bg-[#4AB449] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
+                <button className="bg-[#26ADE2] hover:bg-[#4AB449] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold rounded">
                   Lowest Price
                 </button>
               </Link>
@@ -117,7 +117,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/search/hotel/book">
+                    <Link href="/hotel/hotelDetail">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -178,7 +178,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/search/hotel/book">
+                    <Link href="/hotel/hotelDetail">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -239,7 +239,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/search/hotel/book">
+                    <Link href="/hotel/hotelDetail">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -300,7 +300,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/search/hotel/book">
+                    <Link href="/hotel/hotelDetail">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -361,7 +361,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/search/hotel/book">
+                    <Link href="/hotel/hotelDetail">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>
@@ -423,7 +423,7 @@ const HotelSearch = () => {
                     <div>
                       <span className="text-xs">Price Includes VAT & Tax </span>
                     </div>
-                    <Link href="/detailHotel">
+                    <Link href="/hotel/hotelDetail">
                       <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                         BOOK NOW
                       </button>

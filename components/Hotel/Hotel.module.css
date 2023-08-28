@@ -12,7 +12,6 @@
   height: 450px;
   box-sizing: border-box;
   background-position: center;
-  
 }
 
 .bannerWrap h2 {
@@ -27,7 +26,7 @@
   background: #c6e8f1 0.6;
   z-index: 9999 !important;
   margin: 0 auto;
-  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  background-image: linear-gradient(168deg, #19abe3, #4ab449) !important;
   border-radius: 37px;
   position: relative;
   top: 28px;
@@ -129,33 +128,32 @@
   padding: 8px 0px;
   border: 1px solid #fff;
   width: 210px;
-  background-image: linear-gradient(90deg, #4ab449, #19ABE3);
-  transition:al .5s ease-in-out;
+  background-image: linear-gradient(90deg, #4ab449, #19abe3);
+  transition: al 0.5s ease-in-out;
 }
 .heroBoxBtn:hover {
-  background-image: linear-gradient(90deg,  #19ABE3, #4ab449);
+  background-image: linear-gradient(90deg, #19abe3, #4ab449);
 }
 
 /* menu styling  */
 
-.wrapMenu{
+.wrapMenu {
   z-index: 999 !important;
   display: flex;
 }
-.menu{
+.menu {
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-  background: #4AB449;
+  background: #4ab449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: #fff;
   z-index: 99;
-  font-size:16px;
-  position:relative;
-   
- }
- .menu li{
+  font-size: 16px;
+  position: relative;
+}
+.menu li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,69 +162,64 @@
   border: 1px solid #fff;
 }
 
- .activeMenu{
-  border-right:none;
-  background:#19ABE3 !important;
- }
-
-.firstChild{
-  border-top-left-radius: 17px !important;
-    padding-left: 25px;
+.activeMenu {
+  border-right: none;
+  background: #19abe3 !important;
 }
- .lastChild{
-  border-right:1px solid #fff !important;
+
+.firstChild {
+  border-top-left-radius: 17px !important;
+  padding-left: 25px;
+}
+.lastChild {
+  border-right: 1px solid #fff !important;
   border-top-right-radius: 17px !important;
- }
-
-
+}
 
 .menu li P {
   z-index: 999 !important;
 }
 
-
-.destination{
-  width:1100px;
- margin-left:250px;
+.destination {
+  width: 1100px;
+  margin-left: 250px;
   overflow: hidden;
-  margin-top:50px;
-  margin-bottom:50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
-.tourTrending{
-  background: #FFFFFF;
-  box-shadow: #4AB449 0px 5px 10px, #19ABE3 0px 7px 7px;
+.tourTrending {
+  background: #ffffff;
+  box-shadow: #4ab449 0px 5px 10px, #19abe3 0px 7px 7px;
   width: 262px !important;
   margin-right: 20px;
   height: 440px;
   text-align: center;
   margin-bottom: 5px;
 }
-.swiperImg{
-  height:245px !important;
-  transform:scale(1)
+.swiperImg {
+  height: 245px !important;
+  transform: scale(1);
 }
-.swiperImg:hove{
-height:300px !important;
-transform:scale(1.5)
+.swiperImg:hove {
+  height: 300px !important;
+  transform: scale(1.5);
 }
 
-.pricePackage span{
+.pricePackage span {
   font-size: 14px;
-  color:#4AB449;
+  color: #4ab449;
 }
-.pricePackage{
+.pricePackage {
   text-align: center;
   padding: 0 3px;
 }
-.pricePackage h6{
-  
+.pricePackage h6 {
   font-size: 16px;
   margin-top: 15px;
-
 }
 
-.tourDay{
-  background: #4AB449;
+.tourDay {
+  background: #4ab449;
   width: 25px;
   display: block;
   font-size: 10px;
@@ -240,21 +233,16 @@ transform:scale(1.5)
   bottom: 2px;
   color: white !important;
 }
-.viewDetailBtn button{
-  background: #4AB449;
-    place-content: center;
-    place-items: center;
-    margin-top: 16px;
-    padding: 8px 25px;
-    color: white;
-    font-size: 14px;
-    border-radius: 3px;
-
+.viewDetailBtn button {
+  background: #4ab449;
+  place-content: center;
+  place-items: center;
+  margin-top: 16px;
+  padding: 8px 25px;
+  color: white;
+  font-size: 14px;
+  border-radius: 3px;
 }
-
-
-
-
 
 .destination {
   margin-bottom: 94px;
@@ -267,7 +255,6 @@ transform:scale(1.5)
 .mySwiper {
   overflow: hidden;
 }
-
 
 .swiperImg {
   height: 280px !important;
@@ -331,7 +318,6 @@ transform:scale(1.5)
   padding-top: 10px;
 }
 
-
 .viewDetailBtn button {
   background: #4ab449;
   place-items: center;
@@ -342,19 +328,31 @@ transform:scale(1.5)
   width: 135px;
 }
 
-.mobileMenuWraps{
+.mobileMenuWraps {
   display: none;
 }
+.showModalIcon{
+  font-size: 20px;
+  margin-top: 18px;
 
-
-
+}
+.groupIcon{
+  color: black !important;
+  font-size: 30px;
+  margin-right: 10px;
+}
+.guestRoom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
     width: 100%;
   }
-  .tourTrending{
-   width:245px !important;
+  .tourTrending {
+    width: 245px !important;
   }
   .package {
     left: 85px;
@@ -394,7 +392,6 @@ transform:scale(1.5)
   }
 }
 @media only screen and (max-width: 768px) {
-
   .bannerWrap h2 {
     font-size: 25px;
   }
@@ -402,20 +399,18 @@ transform:scale(1.5)
     height: 413px;
     width: 93%;
   }
-  .desktopMenu{
+  .desktopMenu {
     display: none;
   }
 
-  .mobileMenuWraps{
+  .mobileMenuWraps {
     display: block;
   }
 
-
-
-  .wrapMenu{
+  .wrapMenu {
     flex-wrap: wrap;
     justify-content: center;
-}
+  }
   .menu {
     margin-bottom: 0px;
     padding-top: 0px;
@@ -423,16 +418,15 @@ transform:scale(1.5)
   .menu li {
     height: 82%;
     width: 100%;
-    border:none;
-}
-.lastChild {
-  border-right:none !important;
-}
+    border: none;
+  }
+  .lastChild {
+    border-right: none !important;
+  }
 
-
-  .tourTrending{
-    width:240px !important;
-   }
+  .tourTrending {
+    width: 240px !important;
+  }
   .package {
     top: 250px;
   }
@@ -444,8 +438,7 @@ transform:scale(1.5)
   }
   .bannerWrap {
     height: 490px;
-}
-
+  }
 
   .destination {
     width: 100%;
@@ -455,9 +448,8 @@ transform:scale(1.5)
     height: 471px;
   }
 
-
   .package2,
-  .package { 
+  .package {
     top: 120px;
     width: 269px;
     border-radius: 3px;
@@ -466,7 +458,7 @@ transform:scale(1.5)
     width: 269px;
     top: 192px;
     right: 85px;
-    border-radius: 3px
+    border-radius: 3px;
   }
   .date2 {
     top: 192px;
@@ -474,52 +466,43 @@ transform:scale(1.5)
     width: 135px;
     border-left: none;
     border-radius: 3px;
-}
-.bestPlaceHead {
-  width: 80%;
-  margin-top: 125px;
-}
-.date {
-  left: 85px;
-  top: 192px;
-  width: 135px;
-  border-radius: 3px;
-
-}
-
-
-
   }
-
+  .bestPlaceHead {
+    width: 80%;
+    margin-top: 125px;
+  }
+  .date {
+    left: 85px;
+    top: 192px;
+    width: 135px;
+    border-radius: 3px;
+  }
+}
 
 @media only screen and (max-width: 500px) {
-
   .wrapMenu {
     justify-content: space-between !important;
     padding: 0px 0px;
+  }
+  .bannerWrap h2 {
+    font-size: 23px;
+    text-align: center;
+  }
 
-}
-.bannerWrap h2 {
-  font-size: 23px;
-  text-align: center;
-}
-
-.firstChild{
-  border-top-left-radius: 0px !important;
-  padding-left: 0px;
-
-}
-.lastChild{
-  margin-left: 113px;
-  
-}
-.menu li {
-  font-size: 14px;
-}
-.menu {
-  padding-top: 0px;
-  display: block;
-}
+  .firstChild {
+    border-top-left-radius: 0px !important;
+    padding-left: 0px;
+  }
+  .lastChild {
+    margin-left: 113px;
+  }
+  .menu li {
+    font-size: 14px;
+  }
+  .menu {
+    padding-top: 0px;
+    display: block;
+  }
 
   .destination {
     width: 100%;
@@ -532,7 +515,6 @@ transform:scale(1.5)
   }
   .bannerWrap {
     height: 508px;
-  
   }
   .heroBoxMain {
     height: 430px;
@@ -543,9 +525,9 @@ transform:scale(1.5)
     width: 195px;
     margin-top: 13px;
   }
-  .tourTrending{
-    width:290px !important;
-   }
+  .tourTrending {
+    width: 290px !important;
+  }
   .package4 {
     top: 274px;
     right: 38px;
@@ -577,65 +559,51 @@ transform:scale(1.5)
     width: 40.3%;
     left: 41px;
     font-size: 13px;
-}
-.package2 {
-
-  top: 147px;
-  width: 80%;
-  left: 41px;
-  padding-left: 5px;
-  height: 53px;
-  padding: 5px;
-  font-size: 13px;
-
-}
-.date input,
-.date2 input {
-  width: 100%;
-}
-.date2 {
-
-  position: absolute;
-  left: 198px;
-  border-left: none;
-
-}
-.bestPlaceHead h2 {
-  font-size: 25px;
-}
-.tourTrending{
-  width:100%;
-  
   }
-  .bestPlaceHead{
+  .package2 {
+    top: 147px;
+    width: 80%;
+    left: 41px;
+    padding-left: 5px;
+    height: 53px;
+    padding: 5px;
+    font-size: 13px;
+  }
+  .date input,
+  .date2 input {
+    width: 100%;
+  }
+  .date2 {
+    position: absolute;
+    left: 198px;
+    border-left: none;
+  }
+  .bestPlaceHead h2 {
+    font-size: 25px;
+  }
+  .tourTrending {
+    width: 100%;
+  }
+  .bestPlaceHead {
     width: 80%;
     margin-top: 95px;
-}
-
-
   }
- 
-
-
+}
 
 @media only screen and (max-width: 400px) {
   .wrapMenu {
     padding: 0px 0px;
-}
+  }
 
   .date2 {
     left: 179px;
   }
 
-  
   .package4 {
-  
     right: 29px;
-
   }
   .bestPlaceHead {
     width: 100%;
     margin-top: 95px;
-}
- 
+  }
 }
