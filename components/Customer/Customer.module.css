@@ -107,9 +107,9 @@
 
 @media only screen and (max-width: 500px) {
   .customerHead h2 {
-    font-size: 26px;
-    margin-bottom: 25px;
+    font-size: 25px;
+    margin-bottom: 17px;
     line-height: 30px;
-    width: 96%;
+    width: 84%;
   }
 }

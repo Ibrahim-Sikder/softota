@@ -10,7 +10,7 @@ const UmraPackage = () => {
     <section>
       <div className={style.ummraWrap}>
         <div className={style.umraHead}>
-          <h2 className="text-3xl bold">
+          <h2 className="text-2xl bold">
             Best Hajj Packages 2023 from bangladesh
           </h2>
           <p className=" mt-3 mb-12 text-black">
@@ -126,7 +126,7 @@ const UmraPackage = () => {
         </div>
         <div className="mt-12">
           <div className={style.umraHead}>
-            <h2 className="text-3xl bold">
+            <h2 className="text-2xl bold">
               Hajj pre-registration Bangladesh 2023- 2024-2025
             </h2>
             <p className=" mt-5 mb-12 text-[#738187]">

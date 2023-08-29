@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
 import style from "./Banner.module.css";
 import Link from "next/link";
-import { Flight, Hotel,BookOnline, TransferWithinAStation, BusAlert,DirectionsRailway,  Add, Groups2, HorizontalRule } from '@mui/icons-material';
+import {
+  Flight,
+  Hotel,
+  BookOnline,
+  TransferWithinAStation,
+  BusAlert,
+  DirectionsRailway,
+  Add,
+  Groups2,
+  HorizontalRule,
+} from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import ActiveLink from "./ActiveLink";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
@@ -23,11 +33,7 @@ const Banner = ({ setResults }) => {
   const [mobActive, setMobActive] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
 
-
   // for tab
-
-
-
 
   const handleToggle = (value) => () => {
     const currentIndex = checked.indexOf(value);
@@ -384,35 +390,33 @@ const Banner = ({ setResults }) => {
             </ul>
           </div>
 
+          {/* for mobile menu  */}
 
-      {/* for mobile menu  */}
-
-      <div className={style.mobileMenuWraps}>
+          <div className={style.mobileMenuWraps}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
-
                 <ActiveLink href="/flight">
                   <li className={style.activeLink}>
-                  <Flight className={style.mobileMenuIcons}/>
+                    <Flight className={style.mobileMenuIcons} />
                     <p className="ml-3">Flight</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/hotel">
                   <li>
-                   <Hotel className={style.mobileMenuIcon}/>
+                    <Hotel className={style.mobileMenuIcon} />
 
                     <p className="ml-3">Hotel</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/vissa">
                   <li>
-                  <BookOnline className={style.mobileMenuIcon}/>
+                    <BookOnline className={style.mobileMenuIcon} />
                     <p className="ml-3">Vissa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
                   <li>
-                  <TransferWithinAStation className={style.mobileMenuIcon}/>
+                    <TransferWithinAStation className={style.mobileMenuIcon} />
 
                     <p className="ml-3">Tours</p>
                   </li>
@@ -421,8 +425,6 @@ const Banner = ({ setResults }) => {
             </ul>
           </div>
 
-
-          
           {/* tab2 */}
           <div className="flightTab">
             <Tabs
@@ -507,7 +509,6 @@ const Banner = ({ setResults }) => {
                         </div>
                       </div>
                       <div>
-                        
                         <div className={style.package4}>
                           <div className="flex justify-between">
                             <div>
@@ -612,7 +613,11 @@ const Banner = ({ setResults }) => {
                                 <option value="First class">First class</option>
                               </select>
                             </div>
-                            <input type="submit" value='Submit' className={style.modalSubmitBtn}/>
+                            <input
+                              type="submit"
+                              value="Submit"
+                              className={style.modalSubmitBtn}
+                            />
                           </div>
                         </form>
                       </dialog>
@@ -1078,9 +1083,6 @@ const Banner = ({ setResults }) => {
               <button className={style.heroBoxBtn}>Get Your Flight</button>
             </Link>
           </div>
-
-          
-
         </div>
       </div>
     </div>

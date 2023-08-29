@@ -330,7 +330,7 @@ const Vissa = () => {
                   </select>
                 </div>
                 <div className={style.visaBtn}>
-                  <Link href="/admin/visa/visaSearch">
+                  <Link href="/b2bsearch/visa/visaSearch">
                     <FaSistrix className={style.searchIcon} />
                     <span>Search</span>
                   </Link>

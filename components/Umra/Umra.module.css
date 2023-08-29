@@ -9,9 +9,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100vw !important;
-  height: 357px;
+  height: 351px;
   box-sizing: border-box;
   background-position: center;
+  margin-bottom: 118px;
 }
 
 .bannerWrap h2 {
@@ -109,12 +110,12 @@
  }
 
 .firstChild{
-  border-top-left-radius: 17px !important;
-    padding-left: 25px;
+  border-top-left-radius: 37px;
+  padding-left: 25px;
 }
  .lastChild{
-  border-right:1px solid #fff !important;
-  border-top-right-radius: 17px !important;
+  border-right: 1px solid #fff !important;
+  border-top-right-radius: 37px !important;
  }
 
 .menu li P {
@@ -267,8 +268,11 @@
 
 
 @media only screen and (max-width: 1024px) {
+  .bannerWrap {
+    height: 394px;
+}
   .heroBoxMain {
-    width: 100%;
+    width: 95%;
   }
   .singleHajj {
     width: 250px;
@@ -294,13 +298,12 @@
 }
 @media only screen and (max-width: 768px) {
   .bannerWrap {
-    height: 476px;
-  }
+    height: 450px;
+}
   .heroBoxMain {
     width: 93%;
     height: 355px;
-    background: none;
-    border-radius: 6px;
+    border-radius: 20px;
 
 
   }
@@ -342,7 +345,6 @@
     justify-content: center;
 }
   .menu {
-    background: none;
     flex-wrap: wrap;
   }
   .menu li {
@@ -389,9 +391,11 @@
 @media only screen and (max-width: 500px) {
   .bannerWrap {
     height: 395px;
+    margin-bottom: 87px;
 }
 .heroBoxMain {
   height: 308px;
+  border-radius: 20px;
 }
 .menu {
   font-size: 14px !important;

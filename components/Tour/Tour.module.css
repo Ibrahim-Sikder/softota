@@ -1,8 +1,6 @@
 .train {
-
   width: 100vw !important;
   margin-bottom: 110px;
-
 }
 .bannerWrap {
   background-image: url("../../public/banner.png");
@@ -25,11 +23,11 @@
   z-index: 9 !important;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border-radius: 30px;
+  border-radius: 37px;
   position: relative;
   top: 20px;
   opacity: 0.9;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 /* menu styling  */
@@ -63,12 +61,12 @@
 }
 
 .firstChild {
-  border-top-left-radius: 17px !important;
+  border-top-left-radius: 37px !important;
   padding-left: 25px;
 }
 .lastChild {
   border-right: 1px solid #fff !important;
-  border-top-right-radius: 17px !important;
+  border-top-right-radius: 38px !important;
 }
 
 .menu li P {
@@ -130,7 +128,7 @@
 .searchTrainBtn {
   position: absolute;
   bottom: 92px;
-  left: 36%;
+  left: 40%;
   margin: 0px auto;
 }
 .searchTrainBtn button {
@@ -238,19 +236,14 @@
   width: 150px;
   height: 29px;
 }
-.mobileMenuWraps{
+.mobileMenuWraps {
   display: none;
 }
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
-   
-
     width: 95%;
     overflow: hidden;
-    border-radius: 17px;
-
-
   }
   .bannerWrap h2 {
     text-align: center;
@@ -258,7 +251,7 @@
   .block {
     display: block;
   }
- 
+
   .destination {
     width: 100%;
     margin-left: 30px;
@@ -269,17 +262,16 @@
 }
 
 @media only screen and (max-width: 768px) {
-
   .bannerWrap {
     height: 450px;
-}
+  }
   .bannerWrap h2 {
     font-size: 25px;
   }
   .desktopMenu {
-   display: none;
+    display: none;
   }
-  .mobileMenuWraps{
+  .mobileMenuWraps {
     display: block;
   }
   .wrapMenu {
@@ -292,13 +284,12 @@
     border-bottom: 1px solid #fff;
     padding: 0px 0px;
   }
-  .mobileMenuIcon{
-    font-size:25px !important;
+  .mobileMenuIcon {
+    font-size: 25px !important;
   }
-  .mobileMenuIcons{
+  .mobileMenuIcons {
     font-size: 25px !important;
     transform: rotate(44deg);
-  
   }
 
   .menu li {
@@ -314,9 +305,8 @@
     width: 93%;
     background: none;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 20px;
     height: 394px;
-
   }
   .package {
     top: 250px;
@@ -346,7 +336,6 @@
     width: 100%;
     margin-top: 1px;
     flex-wrap: wrap;
-
   }
 
   .travelFormDouble {
@@ -360,27 +349,23 @@
   }
 
   .singleTravel {
-    width: 208px
+    width: 208px;
   }
   .destination {
     width: 100%;
     margin-left: 50px;
   }
   .bestPlaceHead {
-      bottom: 91px;
-  }
-  .searchTrainBtn{
     bottom: 91px;
-  
-}
-
-
+  }
+  .searchTrainBtn {
+    bottom: 91px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   .bannerWrap {
     height: 485px;
-
   }
   .bannerWrap h2 {
     text-align: center;
@@ -394,9 +379,13 @@
     padding: 10px 28px;
     top: 326px;
   }
+  .travelForm,
+  .travelFormDouble {
+    height: 58px;
+  }
   .menu li {
     font-size: 14px;
-}
+  }
   .package {
     width: 328px;
     top: 255px;
@@ -417,9 +406,7 @@
   }
 
   .travelFormDouble {
- 
     width: 371px;
-
   }
   .travelForm {
     width: 93%;
@@ -438,6 +425,7 @@
   }
   .bestPlaceHead {
     width: 100%;
+    margin-top: 94px;
   }
 
   .tourTrending {
@@ -452,30 +440,24 @@
   .searchTrainBtn button {
     padding: 10px 0px;
   }
-  .travelFormWrap{
+  .travelFormWrap {
     margin-top: 25px;
-}
-.bestPlaceHead h2 {
-  font-size: 25px;
-}
-
-
-
-
+  }
+  .bestPlaceHead h2 {
+    font-size: 25px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
-  .wrapMenu {
-    padding: 0px 6px;
-  }
+ 
   .travelForm {
-    width: 342px;
+    width: 329px;
   }
   .travelFormWrap {
     width: 100%;
   }
   .singleTravel {
-    width: 171px;
+    width: 160px;
     margin: 0 auto;
   }
   .menu li {
@@ -483,21 +465,19 @@
     margin-left: 15px;
   }
   .bannerWrap h2 {
-     margin: 0 auto;
-     font-size: 20px;
+    margin: 0 auto;
+    font-size: 20px;
   }
   .destination {
     margin-left: 47px;
   }
   .tourTrending {
     margin-left: -2px !important;
-}
-.searchTrainBtn {
-  left: 22%;
-}
-.train{
-  margin-bottom: -55px;
-}
-
-
+  }
+  .searchTrainBtn {
+    left: 22%;
+  }
+  .train {
+    margin-bottom: -55px;
+  }
 }

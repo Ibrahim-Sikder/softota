@@ -243,7 +243,7 @@
       width: 93%;
       height: 410px;
       top: -18px;
-      border-radius: 6px;
+      border-radius: 20px;
       
      }
 
@@ -252,66 +252,74 @@
    }
  
 
-   @media only screen and (max-width:500px){
-     .bannerWrap{
-      height: 433px;
-     }
-     .menuli {
-      font-size: 14px;
+
+
+}
+
+
+@media only screen and (max-width:500px){
+  .bannerWrap{
+   height: 433px;
   }
-     .bannerWrap h2{
-      text-align: center;
-      font-size: 23px;
-      padding-top: 20px;
-      }
-      .menuWrap{
-        display: none;
-      }
-      .wrapMenu {
-        justify-content: space-between !important;
-        padding: 0px 5px;
-    }
-    .firstChild{
-      border-top-left-radius: 0px !important;
-      padding-left: 0px;
-    
-    }
-    .lastChild{
-      margin-left: 113px;
-    }
-     .heroBoxBtn{
-       padding:10px 28px;
-       top: 326px;
+  .menuli {
+   font-size: 14px;
+}
+  .bannerWrap h2{
+   text-align: center;
+   font-size: 23px;
+   padding-top: 20px;
    }
+   .menuWrap{
+     display: none;
+   }
+   .wrapMenu {
+     justify-content: space-between !important;
+     padding: 0px 5px;
+ }
+ .firstChild{
+   border-top-left-radius: 0px !important;
+   padding-left: 0px;
  
-   .bannerWrap h2 {
-     margin-bottom: 15px;
-   }
-  
+ }
+ .lastChild{
+   margin-left: 113px;
+ }
+  .heroBoxBtn{
+    padding:10px 28px;
+    top: 326px;
+}
+
+.bannerWrap h2 {
+  margin-bottom: 15px;
+}
+
 .visaPackaj {
-  margin: 0 auto;
-  margin-bottom: 10px;
+margin: 0 auto;
+margin-bottom: 10px;
 }
 .heroBoxMain {
-  height: 350px;
+height: 350px;
 }
- 
+
 
 .visaPackaj {
-  width: 354px;
-  height: 63px;
-  font-size: 14px;
+width: 354px;
+height: 63px;
+font-size: 14px;
 }
 .visaBtn {
-  height: 59px;
-  width: 100%;
+height: 59px;
+width: 100%;
+}
+.searchIcon {
+font-size: 20px;
 }
 
-    
+ 
 }
 
 
-}
+
 @media only screen and (max-width:400px){
   .wrapMenu {
     padding: 0px 3px;

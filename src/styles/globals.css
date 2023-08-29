@@ -228,6 +228,10 @@ input::placeholder {
   background: #4AB449 !important;
 }
 
+.modalWrap .modal{
+  background: red !important;
+}
+
 
 
 

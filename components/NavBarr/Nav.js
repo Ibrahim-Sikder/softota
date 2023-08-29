@@ -24,7 +24,7 @@ const Nav = () => {
   };
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 50000);
+      setStickyMenu(window.scrollY > 5000);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -57,14 +57,14 @@ const Nav = () => {
               <div className={style.navigationLeft}>
                 <div className={style.logo}>
                   <Link href="/">
-                    <Image src={Logo} alt="Picture of the author" />
+                    <Image className={style.logoImg} src={Logo} alt="Picture of the author" />
                   </Link>
                 </div>
                 <Link
                   href="/aboutUs"
                   style={{ textDecoration: "none", color: "black" }}
                 >
-                  <p>About Us</p>
+                  <p className={style.aboutHiden}>About Us</p>
                 </Link>
               </div>
               <div className={style.inputDiv}>
@@ -91,21 +91,7 @@ const Nav = () => {
           </div>
         </div>
         {mobActive === 0 ? (
-          <div className={style.navigationMOb}>
-            <Image
-              src={Logo}
-              alt="Picture of the author"
-              width={50}
-              height={50}
-              className={style.mobLogo}
-            />
-            <div className={style.iconsMobNav}>
-              <FlightTakeoffIcon
-                className={style.takeOf}
-                onClick={() => setMobActive(1)}
-              />
-            </div>
-          </div>
+          <></>
         ) : (
           <div className={style.activeNavMob}>
             <div className={style.iconsMobNav}>
@@ -118,7 +104,7 @@ const Nav = () => {
               href="/aboutUs"
               style={{ textDecoration: "none", color: "black" }}
             >
-              <p>About Us</p>
+              <p className={style.aboutHiden}>About Us</p>
             </Link>
             <div className={style.inputDivMOb}>
               <input type="text" placeholder="Search Flight, Hotal, Visa" />

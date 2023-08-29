@@ -586,10 +586,8 @@ font-size:14px;
 
 @media only screen and (max-width: 600px) {
   .bannerWrap{
-   
-    height: 595px;
+    height: auto;
     margin-bottom: 74px;
-
 }
   .heroBoxBtn {
     top: 619px;

@@ -332,19 +332,82 @@
   display: none;
 }
 .showModalIcon{
-  font-size: 20px;
-  margin-top: 18px;
+  font-size: 25px;
+  margin-top: 17px;
+  cursor: pointer;
 
 }
 .groupIcon{
-  color: black !important;
+  color: white !important;
   font-size: 30px;
-  margin-right: 10px;
+  margin-right: 13px;
 }
 .guestRoom{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hotelModal{
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  color: white;
+  width: 405px;
+  padding-bottom: 46px;
+  margin-right: 260px;
+  margin-top: 220px;
+}
+.hotelModalCloseBtn{
+  color: white;
+  width: 32px;
+  font-size: 24px;
+}
+.guestRoomWrap{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.adultChildWrap{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.adultIncrementDecrement, .childIncrementDecrement{
+  display: flex;
+  justify-content: space-between;
+  width: 144px;
+  border: 1px solid #ddd;
+  padding: 7px 15px;
+}
+.roomSelect{
+  width: 293px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 0 auto;
+  display: flex;
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  color: white;
+}
+.roomSelect option{
+  color: white !important;
+  background: #169ACC !important;
+}
+.adultIncrementDecrement small, .childIncrementDecrement small{
+  font-size: 20px;
+  cursor: pointer;
+}
+.childIncrementDecrement{
+margin-left:5px;
+}
+.package select, .package2 select{
+  width:100%;
+  background-color: transparent;
+}
+.package select option , .package2 select option{
+  background: #169ACC;
+  color: white;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -390,13 +453,18 @@
   .bannerWrap h2 {
     font-size: 30px;
   }
+  .hotelModal{
+    margin-right: 84px;
+    margin-top: 83px;
+}
+
 }
 @media only screen and (max-width: 768px) {
   .bannerWrap h2 {
     font-size: 25px;
   }
   .heroBoxMain {
-    height: 413px;
+    height: 440px;
     width: 93%;
   }
   .desktopMenu {
@@ -588,6 +656,11 @@
     width: 80%;
     margin-top: 95px;
   }
+  .hotelModal {
+    margin-right: 34px;
+    margin-top: 91px;
+    width: 83% !important;
+}
 }
 
 @media only screen and (max-width: 400px) {

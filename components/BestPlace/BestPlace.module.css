@@ -113,15 +113,12 @@
   color: #092e3d;
 }
 .trending span {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #4ab449;
+  width: 50%;
+  border: 1px solid #fff;
+  padding: 10px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
 }
 .trending button {
   width: 160px;
@@ -164,7 +161,6 @@
     width: 100% !important;
   }
   .trendingHead {
-    margin-top: 30px;
     margin-bottom: 15px;
     width: 80%;
   }

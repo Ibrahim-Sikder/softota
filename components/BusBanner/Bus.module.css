@@ -185,7 +185,7 @@
     padding-left: 25px;
 }
  .lastChild{
-  border-right:1px solid #fff !important;
+  border-right: 1px solid #fff !important;
   border-top-right-radius: 17px !important;
  }
 
@@ -219,22 +219,28 @@
   .heroBoxMain {
     width: 95%;
     overflow: hidden;
-    border-radius: 15px;
   }
+  .lastChild{
+    border-top-right-radius: 37px !important;
+  }
+  .firstChild {
+    border-top-left-radius: 37px !important;
+}
   .package {
-    left: 85px;
+    left: 69px;
   }
   .package2 {
-    right: 85px;
+    right: 69px;
   }
   .package4 {
-    right: 85px;
+    right: 69px
   }
   .date {
-    left: 85px;
+    left: 69px;
   }
   .date2 {
-    left: 292px;
+    left: 276px;
+    border-left: none;
   }
 }
 
@@ -270,17 +276,12 @@
   transform: rotate(44deg);
 
 }
-  .menu {
-    background: none;
-  }
   .menu li {
     height: 82%;
     width: 100%;
     border:none;
 }
-.lastChild {
-  border-right:none !important;
-}
+
   .heroBoxMain {
     width: 95%;
     height: 90%;
@@ -294,20 +295,22 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .bannerWrap {
+    margin-bottom: 128px;
+}
   .destination {
     width: 100%x;
     margin-left: 0px;
   }
 
   .heroBoxMain {
-    height: 93%;
-    border-radius: 5px;
+    border-radius: 20px;
     overflow: hidden;
   }
   .package2,
   .package {
-     width: 276px;
-     border-radius: 3px;
+    width: 294px;
+    border-radius: 3px;
   }
   .package4 {
     width: 230px;
@@ -348,6 +351,7 @@
     width: 100%;
     margin-top: 129px;
   }
+
 }
 
 @media only screen and (max-width: 500px) {
@@ -362,7 +366,6 @@
 }
   .heroBoxMain {
     height: 515px;
-    border-radius: 6px;
 
   }
   .wrapMenu {
@@ -389,9 +392,12 @@
     padding: 17px 0px;
   }
   .package4 {
+   
     top: 335px;
-    right: 8px;
-    width: 96%;
+    right: 16px;
+    width: 93%;
+    height: 58px;
+
   }
   .package h4, .package2 h4 {
     font-size: 14px;
@@ -402,30 +408,33 @@
   }
 
   .package {
-      width: 96%;
-      left: 7px;
+    width: 93%;
+    left: 14px;
+    height: 58px;
   }
   .date,
   .date2 {
-   
     top: 261px;
-    width: 48%;
-    left: 7px;
+    width: 47%;
+    left: 11px;
+    height: 58px;
 
   }
   .package2 {
-    width: 96%;
-    left: 7px;
+    width: 93%;
+    left: 14px;
     padding-left: 5px;
-    top:187px;
+    top: 187px;
+    height: 58px;
   }
   .date input,
   .date2 input {
     width: 100%;
   }
   .date2 {
-    left: 202px;
-    width: 48%;
+    left: 200px;
+    width: 47%;
+    height: 58px;
 
   }
 
