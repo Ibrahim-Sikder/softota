@@ -25,3 +25,4 @@ const Book = () => {
 };
 
 export default dynamic(() => Promise.resolve(Book), { ssr: false });
+

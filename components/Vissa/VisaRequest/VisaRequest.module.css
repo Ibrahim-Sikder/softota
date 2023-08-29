@@ -1,0 +1,104 @@
+.visaRequestWrap{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.needHelp{
+    box-shadow: #4AB449 0px 5px 15px;
+    width: 100%;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+}
+.needHelpRightSide{
+    width: 204px;
+    background: #f52f0bcf;
+    height: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+}
+.needHelpLeft{
+    width: 60%;
+
+}
+.phoneIcon{
+    color: white !important;
+    margin-right: 5px;
+}
+.inputFieldWrap{
+    display: flex;
+}
+.visaRequestForm{
+    margin-top: 20px;
+}
+.formControl{
+  
+    margin-right: 12px;
+    margin-top: 20px;
+
+}
+.visaInput{
+    border: 1px solid #ddd;
+    width: 530px;
+    height: 58px;
+    padding-left: 6px;
+}
+.inputLabel{
+    display: block;
+    margin-bottom:5px;
+}
+.formControl input::placeholder{
+    color:black;
+
+}
+.textField{
+    width: 100%;
+    border: 1px solid #ddd;
+    height: 134px;
+    margin-top: 7px;
+}
+.visaSubmitBtn{
+    background: #4AB449;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: bold;
+}
+@media only screen and (max-width:1024px){
+    .visaRequestWrap {
+        width: 100%;
+    }
+    .visaInput {
+        width: 490px;
+    }
+}
+@media only screen and (max-width:768px){
+    .inputFieldWrap {
+        display: block;
+    }
+    .visaInput {
+        width: 100%;
+    }
+}
+@media only screen and (max-width:500px){
+    .needHelpLeft {
+        width: 100%;
+    }
+    .needHelp {
+        display: block;
+    }
+    .needHelpRightSide {
+        margin-top: 15px;
+    }
+}

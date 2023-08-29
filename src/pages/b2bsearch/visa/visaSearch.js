@@ -70,6 +70,7 @@ const VisaSearch = () => {
     });
   };
 
+  
   const handleShowDetail = () => {
     setShowDetail((showDetail) => !showDetail);
   };
@@ -79,6 +80,7 @@ const VisaSearch = () => {
       <div className={style.sideBarWrap}>
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
+          
         </div>
         <div className={style.rightSideBar}>
           <div className={style.rightSideWrap}>
