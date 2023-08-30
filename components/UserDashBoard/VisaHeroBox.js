@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../components/Vissa/Vissa.module.css";
+import style from "../../components/visa/visa.module.css";
 import Link from "next/link";
 import { FaSistrix } from "react-icons/fa";
 import styling from "./TourHeroBox.module.css";
@@ -141,7 +141,7 @@ const VisaHeroBox = () => {
                     </g>
                   </svg>
 
-                  <p className="ml-3">Vissa</p>
+                  <p className="ml-3">Visa</p>
                 </li>
               </ActiveLink>
               <ActiveLink href="/b2bsearch/tours">

@@ -36,6 +36,7 @@ const Hotel = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [room, setRoom] = useState("1 Room");
+  
   const childIncrement = () => {
     setChild(child + 1);
   };
@@ -196,6 +197,7 @@ const Hotel = () => {
                           <small onClick={childIncrement}> + </small>
                         </div>
                     </div>
+                    
                         <select
                         className={style.roomSelect}
                           onChange={(e) => {
@@ -326,7 +328,7 @@ const Hotel = () => {
                       <p className="ml-3">Hotel</p>
                     </li>
                   </ActiveLink>
-                  <ActiveLink href="/vissa">
+                  <ActiveLink href="/visa">
                     <li>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -347,7 +349,7 @@ const Hotel = () => {
                         </g>
                       </svg>
 
-                      <p className="ml-3">Vissa</p>
+                      <p className="ml-3">Visa</p>
                     </li>
                   </ActiveLink>
                   <ActiveLink href="/tours">
@@ -476,10 +478,10 @@ const Hotel = () => {
                     <p className="ml-3">Hotel</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/vissa">
+                <ActiveLink href="/visa">
                   <li>
                     <BookOnline className={style.mobileMenuIcon} />
-                    <p className="ml-3">Vissa</p>
+                    <p className="ml-3">Visa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">

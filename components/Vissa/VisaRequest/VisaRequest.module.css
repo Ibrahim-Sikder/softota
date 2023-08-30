@@ -14,9 +14,9 @@
     align-items: center;
 }
 .needHelpRightSide{
-    width: 204px;
-    background: #f52f0bcf;
-    height: 50px;
+    width: 201px;
+    background: #D66F00;
+    height: 45px;
     color: white;
     display: flex;
     align-items: center;
@@ -65,10 +65,10 @@
     margin-top: 7px;
 }
 .visaSubmitBtn{
-    background: #4AB449;
+    background: #D66F00;
     color: white;
-    width: 200px;
-    height: 50px;
+    width: 215px;
+    height: 45px;
     border-radius: 5px;
     text-align: center;
     margin-top: 10px;

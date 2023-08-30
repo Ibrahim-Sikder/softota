@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Vissa.module.css";
+import style from "./visa.module.css";
 import Link from "next/link";
 import { FaSistrix } from "react-icons/fa";
 import ActiveLink from "../Banner/ActiveLink";
@@ -15,9 +15,9 @@ import {
   HorizontalRule,
 } from "@mui/icons-material";
 
-const Vissa = () => {
+const visa = () => {
   return (
-    <section className={style.vissa}>
+    <section className={style.visa}>
       <div className={style.bannerWrap}>
         <h2>
           Welcome to Ghuronti! Find Tours, <br className={style.block} />{" "}
@@ -128,7 +128,7 @@ const Vissa = () => {
                     <p className="ml-3">Hotel</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/vissa">
+                <ActiveLink href="/visa">
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -278,10 +278,10 @@ const Vissa = () => {
                     <p className="ml-3">Hotel</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/vissa">
+                <ActiveLink href="/visa">
                   <li>
                     <BookOnline className={style.mobileMenuIcon} />
-                    <p className="ml-3">Vissa</p>
+                    <p className="ml-3">Visa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
@@ -330,7 +330,7 @@ const Vissa = () => {
                   </select>
                 </div>
                 <div className={style.visaBtn}>
-                  <Link href="/b2bsearch/visa/visaSearch">
+                  <Link href="/visa/visaSearch">
                     <FaSistrix className={style.searchIcon} />
                     <span>Search</span>
                   </Link>
@@ -344,4 +344,4 @@ const Vissa = () => {
   );
 };
 
-export default Vissa;
+export default visa;

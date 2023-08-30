@@ -168,7 +168,7 @@ const BusesHeroBox = () => {
                     </g>
                   </svg>
 
-                  <p className="ml-3">Vissa</p>
+                  <p className="ml-3">visa</p>
                 </li>
               </ActiveLink>
               <ActiveLink href="/b2bsearch/tours">

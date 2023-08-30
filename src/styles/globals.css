@@ -10,6 +10,7 @@ body {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .layout {
   width: 100vw;
@@ -153,7 +154,7 @@ input::placeholder {
   border-radius: 3px;
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+/* .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
   background-color: #19ABE3;
   color: #fff ;
   border-radius: 4px;
@@ -164,7 +165,7 @@ input::placeholder {
   overflow-anchor: none;
   border-radius: 0;
   margin-bottom: -22px !important;
-}
+} */
 .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
   background-color: #4AB449 ;
   padding: 0px ;

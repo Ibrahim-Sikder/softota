@@ -1,14 +1,13 @@
 import React from "react";
-import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
-import Countries from "../../../components/Countries/Countries";
-import Passion from "../../../components/Passion/Passion";
-import Travel from "../../../components/Travel/Travel";
+import style from "../../../../components/UserDashBoard/UserDashBoard.module.css";
 import dynamic from "next/dynamic";
-import VisaHeroBox from "../../../components/SuperAdmin/VisaHeroBox";
-import RightSideTopBar from "../../../components/SuperAdmin/RightSideTopBar";
-import UserDashBoardLeft from "../../../components/SuperAdmin/UserDashBoardLeft";
-import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
-
+import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
+import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
+import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
+import VisaHeroBox from "../../../../components/UserDashBoard/VisaHeroBox";
+import Countries from "../../../../components/Countries/Countries";
+import Passion from "../../../../components/Passion/Passion";
+import Travel from "../../../../components/Travel/Travel";
 const Visa = () => {
   return (
     <section>
@@ -19,9 +18,10 @@ const Visa = () => {
         <div className={style.rightSideBar}>
           <div className={style.rightSideWrap}>
             <div className={style.profileTop}>
-              <RightSideTopBar />
+              <RightSideTopBar/>
+              <MoveText/>
             </div>
-            <VisaHeroBox />
+            <VisaHeroBox/>
             <div className="mt-10">
               <Countries></Countries>
               <Passion></Passion>

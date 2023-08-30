@@ -114,7 +114,7 @@ const TrainBanner = () => {
                     <p className="ml-3">Hotel</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/vissa">
+                <ActiveLink href="/visa">
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +135,7 @@ const TrainBanner = () => {
                       </g>
                     </svg>
 
-                    <p className="ml-3">Vissa</p>
+                    <p className="ml-3">Visa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">

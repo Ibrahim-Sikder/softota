@@ -1,61 +1,19 @@
-import React, { useState } from "react";
-import style from "../../../../components/UserDashBoard/UserDashBoard.module.css";
+import React from "react";
+import styling from "../../../../components/UserDashBoard/UserDashBoard.module.css";
+import dynamic from "next/dynamic";
 import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
-import dynamic from "next/dynamic";
-import styling from "./visaSearch.module.css";
-import Paper from "@mui/material/Paper";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TablePagination from "@mui/material/TablePagination";
-import TableRow from "@mui/material/TableRow";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { styled } from "@mui/material/styles";
-import { CheckCircle } from "@mui/icons-material";
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
-import TextField from "@mui/material/TextField";
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
-
-const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 14,
-  },
-}));
-
-const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  // hide last border
-  "&:last-child td, &:last-child th": {
-    border: 0,
-  },
-}));
-
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein };
-}
-
-const rows = [
-  createData("567 BDT", "989 BDT", " 345 BDT", "456 BDT", "15,456 BDT"),
-];
-
-const VisaSearch = () => {
+import style from "../../../../components/Vissa/VisaSearch/VisaSearch.module.css";
+import { Beenhere } from '@mui/icons-material';
+import TextField from "@mui/material/TextField";
+import { useState } from "react";
+import { LocalPhone } from '@mui/icons-material';
+import Link from "next/link";
+const Visa = () => {
   const [showDetail, setShowDetail] = useState(true);
-  const [profession, setProfession] = useState("");
   const [loader, setLoader] = useState(false);
+  
   const downloadPDF = () => {
     const capture = document.querySelector(".actual-receipt");
     setLoader(true);
@@ -70,224 +28,629 @@ const VisaSearch = () => {
     });
   };
 
-  
   const handleShowDetail = () => {
     setShowDetail((showDetail) => !showDetail);
   };
 
   return (
     <section>
-      <div className={style.sideBarWrap}>
-        <div className={style.leftSideBar}>
+      <div className={styling.sideBarWrap}>
+        <div className={styling.leftSideBar}>
           <UserDashBoardLeft />
-          
         </div>
-        <div className={style.rightSideBar}>
-          <div className={style.rightSideWrap}>
-            <div className={style.profileTop}>
-              <RightSideTopBar />
-              <MoveText />
+        <div className={styling.visaSearchRight}>
+          <div className={styling.rightSideWrap}>
+            <div className={styling.profileTop}>
+              <RightSideTopBar/>
+              <MoveText/>
             </div>
-            <div className={styling.visa}>
-              <div className={styling.visaType}>
-                <div>
-                  <h4 className=" text-2xl ">
-                    Required Documents for Malaysia Tourist Visa
-                  </h4>
-                  <p className=" mb-5 mt-3">Visa Type : Studnet Visa</p>
-                  <p className=" font-bold text-xl ">
-                    Duration and Cost Details
-                  </p>
-                </div>
+            <div className={style.visaSearchWrap}>
+        <div className={style.visaSearchLeft}>
+          <div className={style.visaType}>
+            <div>
+              <h4 className=" text-2xl ">
+                Required Documents for Malaysia Tourist Visa
+              </h4>
+              <p className=" mb-5 mt-3">Visa Type : Studnet Visa</p>
+              <p className=" font-bold text-xl ">Duration and Cost Details</p>
+            </div>
 
-                <div className={styling.visaDownload}>
-                  <div className="receipt-actions-div">
-                    <div className="actions-right">
-                      <button
-                        className={styling.downloadPdf}
-                        onClick={downloadPDF}
-                        disabled={!(loader === false)}
-                      >
-                        {loader ? (
-                          <span>Downloading</span>
-                        ) : (
-                          <span>Download</span>
-                        )}
-                      </button>
-                    </div>
-                  </div>
-                  <div className={styling.visaLocation}>
-                    <TextField
-                      className={styling.location}
-                      id="standard-basic"
-                      label="Visa Submission Location"
-                      variant="standard"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div className={styling.visaDetailsWrap}>
-                <div className={styling.detailHalf}>
-                  <span>Enty</span>
-                  <span>Duration</span>
-                  <span>Maximum Stay </span>
-                  <span>Processing Time</span>
-                  <span>Interview</span>
-                  <span>Cost</span>
-                  <span>View Details</span>
-                </div>
-
-                <div className={styling.coastHalf}>
-                  <span>Single</span>
-                  <span>04 Months</span>
-                  <span>10 Days </span>
-                  <span>5 Working Day </span>
-                  <span>Embassies should catch the call </span>
-                  <span>3888 BDT </span>
-                  <span>
-                    <small
-                      className={styling.showDetailBtn}
-                      onClick={handleShowDetail}
-                    >
-                      Show
-                    </small>
-                  </span>
-                </div>
-              </div>
-              <div className={styling.pricInfo}>
-                <div
-                  className={
-                    showDetail
-                      ? "translate-y-0 bg-red-600 opacity-0 h-[0px] transition"
-                      : `${styling.allCoasInfo}`
-                  }
-                >
-                  <div>
-                    <h2 className="text-white">Depends on embassy</h2>
-                    <h3 className="text-xl mb-5 text-white">
-                      Price Break Down
-                    </h3>
-                  </div>
-                  <table>
-                    <tr>
-                      <th>Embassy Fee</th>
-                      <th>Agent Fee</th>
-                      <th>Agency Fee</th>
-                      <th>Service Charge </th>
-                      <th>Total</th>
-                    </tr>
-                    <tbody>
-                      <tr>
-                        <td>467 BDT</td>
-                        <td>2345 BDT</td>
-                        <td>789 BDT</td>
-                        <td>588 BDT</td>
-                        <td>9899 BDT</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <div className={styling.priceInfo}>
-                <h4 className="text-black">Select Your Profession:</h4>
-                <div>
-                  <select
-                    className={styling.professionType}
-                    onChange={(e) => {
-                      const profession = e.target.value;
-                      setProfession(profession);
-                    }}
+            <div className={style.visaDownload}>
+              <div className="receipt-actions-div">
+                <div className="actions-right">
+                  <button
+                    className={style.downloadPdf}
+                    onClick={downloadPDF}
+                    disabled={!(loader === false)}
                   >
-                    <option value="Business Man" selected>
-                      Business Man
-                    </option>
-                    <option value="Job Holder">Job Holder</option>
-                    <option value="Student">Student </option>
-                    <option value="Non Studnet">Non Student </option>
-                    <option value="Govt Job Holder">Govt Job Holder</option>
-                    <option value="Doctor">Doctor</option>
-                    <option value="Advocate Lawyer">Advocate Lawyer</option>
-                    <option value="House Wife">House Wife </option>
-                    <option value="Unemployment">Unemployment </option>
-                  </select>
+                    {loader ? <span>Downloading</span> : <span>Download</span>}
+                  </button>
                 </div>
               </div>
-              <div>
-                <p className="text-[#06671D] text-2xl mt-2 mb-5 ">
-                  {profession}
-                </p>
-              </div>
-              <div className={styling.visaRule}>
-                <ul>
-                  <li>
-                    {" "}
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p>
-                      {" "}
-                      Seven (07) Months Valid Passport with last two Old
-                      Passport if have. (if an OLD passport is Lost then a GD
-                      copy with a translated notary must be required). Copy of
-                      the passport ( Page no 2 & 3 ) should be attached. All old
-                      passports must be submitted with the application form.
-                    </p>
-                  </li>
-                  <li>
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p>
-                      {" "}
-                      Recent 2 copy photographs taken in the last 6 months
-                      (white background only, photo size 35 mm X 45 mm, Glossy
-                      paper or matt paper).
-                    </p>
-                  </li>
-                  <li>
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p>
-                      {" "}
-                      Proof of Financial soundness(Parents, Siblings): Personal
-                      / Company (salary account) Bank statement of last 06
-                      months (Minimum balance BDT 85,000 for each applicant)
-                      with Bank Solvency Certificate. Note : In the Case of
-                      Personal Account Statement (Savings Account) - need to
-                      provide the Salary Certificate/Pay slip last 03 months.
-                    </p>
-                  </li>
-                  <li>
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p>
-                      Profession proof(Parents, Siblings):Trade license copy,
-                      NOC, Visiting card, Id card copy.
-                    </p>
-                  </li>
-                  <li>
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p> Last Singapore visa copy (If have).</p>
-                  </li>
-                  <li>
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p> Vaccination card or certificate.</p>
-                  </li>
-                  <li>
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p>
-                      Others Documents : In case of sponsorship (Parents,
-                      Siblings) they need their bank statements, their
-                      profession proof, their NID or passport copy.
-                    </p>
-                  </li>
-                  <li>
-                    <CheckCircle className={styling.ruleIcon} />
-                    <p>
-                      {" "}
-                      Agency will support this documents: Duly completed visa
-                      application form, Return flight ticket, Hotel booking,
-                      Personnel/Cover Letter, Itinerary.
-                    </p>
-                  </li>
-                </ul>
+              <div className={style.visaLocation}>
+                <TextField
+                  className={style.location}
+                  id="standard-basic"
+                  label="Visa Submission Location"
+                  variant="standard"
+                />
               </div>
             </div>
+          </div>
+
+          <div className={style.visaDetailsWrap}>
+            <div className={style.detailHalf}>
+              <span>Enty</span>
+              <span>Duration</span>
+              <span>Maximum Stay </span>
+              <span>Processing Time</span>
+              <span>Interview</span>
+              <span>Cost</span>
+              <span>View Details</span>
+            </div>
+
+            <div className={style.coastHalf}>
+              <span>Single</span>
+              <span>04 Months</span>
+              <span>10 Days </span>
+              <span>5 Working Day </span>
+              <span>Embassies should catch the call </span>
+              <span>3888 BDT </span>
+              <span>
+                <small
+                  className={style.showDetailBtn}
+                  onClick={handleShowDetail}
+                >
+                  Show
+                </small>
+              </span>
+            </div>
+          </div> 
+
+          <div className={style.pricInfo}>
+            <div
+              className={
+                showDetail
+                  ? "translate-y-0 bg-red-600 opacity-0 h-[0px] transition"
+                  : `${style.allCoasInfo}`
+              }
+            >
+              <div>
+                <h2 className="text-white">Depends on embassy</h2>
+                <h3 className="text-xl mb-5 text-white">Price Break Down</h3>
+              </div>
+              <table>
+                <tr>
+                  <th>Embassy Fee</th>
+                  <th>Agent Fee</th>
+                  <th>Agency Fee</th>
+                  <th>Service Charge </th>
+                  <th>Total</th>
+                </tr>
+                <tbody>
+                  <tr>
+                    <td>467 BDT</td>
+                    <td>2345 BDT</td>
+                    <td>789 BDT</td>
+                    <td>588 BDT</td>
+                    <td>9899 BDT</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div className={style.visaRequiredInfoWrap}>
+        <div className={style.visaRequiredLeft}>
+         
+         
+
+            <div className={style.requiredDocument}>
+                <h2 className="text-2xl font-bold">Required Documents for E-Visa (Malaysia)</h2>
+                <h3 className="text-xl">Businessman : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Renewal trade license copy with notary public (english translated)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Marriage certificate copy (if spouse name not mentioned in the passport)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Memorandum for limited company form page XII (One photo copy)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Company letter head pad</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or company bank solvency certificate </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl">Job Holder : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>No objection certificate (NOC)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Marriage certificate copy (if spouse name not mentioned in the passport)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Employee Id card copy (One photo copy)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl">Govt Job Holder : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>GO (Government order) for official passport</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Marriage certificate copy (if spouse name not mentioned in the passport)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Employee Id card copy (One photo copy)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl">Doctor : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>BMDC certificate for doctor (Scan copy)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Marriage certificate copy (if spouse name not mentioned in the passport)</p>
+                   </div>
+                </div>
+              
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl">Advocate - Lawyer : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>BAR council certificate (One photo copy)</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Marriage certificate copy (if spouse name not mentioned in the passport)</p>
+                   </div>
+                </div>
+              
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Employee Id card copy (One photo copy) </p>
+                   </div>
+                </div>
+            </div>
+
+
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl">Student : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>ID card (Student) one photocopy both sides</p>
+                   </div>
+                </div>
+              
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+
+
+
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl"> Non-Student Child : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Birth certificate</p>
+                   </div>
+                </div>
+              
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+
+
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl"> House Wife : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Visiting card</p>
+                   </div>
+                </div>
+              
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Marriage certificate copy (if spouse name not mentioned in the passport) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl"> House Wife : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Retirement document (Retired Person) one photo copy</p>
+                   </div>
+                </div>
+              
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Marriage certificate copy (if spouse name not mentioned in the passport) </p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+
+            <div className={style.requiredDocument}>
+                <h3 className="text-xl"> Unemployed : </h3>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>07 Months Valid Passport With Old Passport (If have) </p>
+                   </div>
+                </div>
+              
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Recent 2 copy photograph taken in last 3 months (white background only, photo size 35 mm X 50 mm, Matt paper).</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>NID or birth certificate (must) one photo copy</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal bank solvency certificate</p>
+                   </div>
+                </div>
+                <div>
+                   <div className={style.visaRule}>
+                    <Beenhere className={style.checkIcon}/>
+                    <p>Personal or Company bank statement of last 06 months and minimum balance BDT 80,000 for each applicant </p>
+                   </div>
+                </div>
+            </div>
+            <div className={style.requestVisaBtn}>
+              <Link href='/b2bsearch/visa/visaRequest' passHref prefetch={false} > <button>Request Now </button></Link>
+              </div>
+
+
+
+        </div>
+        <div className={style.visaRequiredRight}>
+              <div className={style.visaGuide}>
+                <h3 className="text-xl">Looking for Expert Visa Guidance?</h3>
+                <p>Don t know where to begin? Share your details, and our experienced visa consultants will assist you on every step.</p>
+                <div className={style.requestNow}>
+                 
+                    <button>Request Now </button>
+                    <div className="flex items-center ">
+                    <LocalPhone className={style.requesIcon}/>
+                        <span className="ml-2">+88 01885071488</span>
+                    </div>
+                </div>
+              </div>
+
+              <div className={style.visaGuide}>
+                <h3 className="text-xl">E-Visa (Malaysia) Type:E-Visa </h3>
+                <div className="flex item-center justify-between w-full ">
+                    <div>
+                        <small>Validiy</small> <br />
+                        <strong>90 Days </strong>
+                    </div>
+                    <div>
+                        <small>Max Stay </small> <br />
+                        <strong>30 Days </strong>
+                    </div>
+                </div>
+                <div>
+                    <strong>BDT 5500/ <small>person</small> </strong>
+                </div>
+                <small>Visa fee & service charge can be change</small>
+                <div className="w-full flex justify-center mx-auto">
+                <button className={style.selectOfferBtn}>Select offer </button>
+                </div>
+              </div>
+              <div className={style.visaGuide}>
+               <h3 className="text-xl font-bold">Important Note</h3>
+               <p>Please contact the Visa department for Document processing after the payment. Visa rate may change without any prior notice</p>
+              </div>
+        </div>
+        </div>
+      </div>
+        
           </div>
         </div>
       </div>
@@ -295,4 +658,4 @@ const VisaSearch = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(VisaSearch), { ssr: false });
+export default dynamic(() => Promise.resolve(Visa), { ssr: false });

@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./FlightSearch.module.css";
+import style from '../../SearhPage/FlightSearch/FlightSearch.module.css';
 import TextField from "@mui/material/TextField";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -143,7 +143,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href="/flight/flightBook">
+                <Link href="/b2bsearch/flight/flightBookDetails">
                   <button className={style.flightBookBtn}>Book Now</button>
                 </Link>{" "}
                 <br />
@@ -224,7 +224,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href="/flight/flightBook">
+                <Link href="/b2bsearch/flight/flightBookDetails">
                   <button className={style.flightBookBtn}>Book Now</button>
                 </Link>{" "}
                 <br />
@@ -305,7 +305,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href="/flight/flightBook">
+                <Link href="/b2bsearch/flight/flightBookDetails">
                   <button className={style.flightBookBtn}>Book Now</button>
                 </Link>{" "}
                 <br />
@@ -386,7 +386,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href="/flight/flightBook">
+                <Link href="/b2bsearch/flight/flightBookDetails">
                   <button className={style.flightBookBtn}>Book Now</button>
                 </Link>{" "}
                 <br />
@@ -467,7 +467,7 @@ const FlightSearch = () => {
                   BDT 39,400
                 </h4>
                 <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                <Link href="/flight/flightBook">
+                <Link href="/b2bsearch/flight/flightBookDetails">
                   <button className={style.flightBookBtn}>Book Now</button>
                 </Link>{" "}
                 <br />

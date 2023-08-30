@@ -6,6 +6,7 @@ import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 const profile = () => {
+  
   return (
     <section>
       <div className={style.sideBarWrap}>

@@ -2,6 +2,7 @@ import React from 'react';
 import style from './VisaRequest.module.css'
 import { LocalPhone } from '@mui/icons-material';
 
+
 const VisaRequest = () => {
     return (
         <section >
@@ -80,7 +81,7 @@ const VisaRequest = () => {
                     <h2 className='font-bold text-xl'> Share Your Requirements  </h2>
                     <textarea className={style.textField} name="" id="" cols="30" rows="10" ></textarea>
                 </div>
-                <button className={style.visaSubmitBtn}>Confirm Visa Request</button>
+                <button className={style.visaSubmitBtn}>Confirm Request</button>
             </form>
            </div>
             </div>

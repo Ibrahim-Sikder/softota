@@ -20,7 +20,7 @@ const RightSideTopBar = () => {
           </div>
         </div>
         <div className={style.logoWrap}>
-          <Link href="/admin">
+          <Link href="/b2bsearch">
             <Image src={logo} alt="logo" width={200} height={200}></Image>
           </Link>
         </div>

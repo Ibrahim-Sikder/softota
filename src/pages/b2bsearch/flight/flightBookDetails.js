@@ -3,7 +3,8 @@ import style from "../../../../components/UserDashBoard/UserDashBoard.module.css
 import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
-import FlightBook from "../../../../components/UserDashBoard/FlightBook/FlightBook";
+import FlightBookDetails from "../../../../components/UserDashBoard/Flight/FlightBookDetails";
+import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
 
 const Book = () => {
   return (
@@ -14,10 +15,10 @@ const Book = () => {
         </div>
         <div className={style.flightBook}>
           <RightSideTopBar />
-          
 
           <div>
-            <FlightBook></FlightBook>
+            <MoveText/>
+            <FlightBookDetails/>
           </div>
         </div>
       </div>

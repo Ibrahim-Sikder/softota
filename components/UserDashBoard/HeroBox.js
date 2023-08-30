@@ -423,7 +423,7 @@ const HeroBox = () => {
                     </g>
                   </svg>
 
-                  <p className="ml-3">Vissa</p>
+                  <p className="ml-3">Visa</p>
                 </li>
               </ActiveLink>
               <ActiveLink href="/b2bsearch/tours">
@@ -1164,7 +1164,8 @@ const HeroBox = () => {
           </Tabs>
         </div>
         <div className={style.btnWrap}>
-          <Link href="/b2bsearch">
+
+          <Link href="/b2bsearch/flight/flightSearch">
             <button className={`${style.heroBoxBtn} ${styles.searchBtn}`}>
               Get Your Flight
             </button>

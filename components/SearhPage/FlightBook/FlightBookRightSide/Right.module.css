@@ -31,6 +31,7 @@
   font-weight: 700;
   border-radius: 15px;
   font-style: italic;
+  cursor:pointer;
 }
 
 @media only screen and (max-width: 768px) {

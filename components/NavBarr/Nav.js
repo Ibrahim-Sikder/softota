@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
-import FlightLandIcon from "@mui/icons-material/FlightLand";
 import Logo from "../../public/assets/logo.png";
 import Link from "next/link";
 import style from "./Nav.module.css";
@@ -16,7 +14,6 @@ import {
 } from "@mui/icons-material";
 
 const Nav = () => {
-  const [mobActive, setMobActive] = useState(0);
   const [stickyMenu, setStickyMenu] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(true);
   const toggleMobileMenu = () => {
@@ -24,7 +21,7 @@ const Nav = () => {
   };
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 5000);
+      setStickyMenu(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -57,7 +54,11 @@ const Nav = () => {
               <div className={style.navigationLeft}>
                 <div className={style.logo}>
                   <Link href="/">
-                    <Image className={style.logoImg} src={Logo} alt="Picture of the author" />
+                    <Image
+                      className={style.logoImg}
+                      src={Logo}
+                      alt="Picture of the author"
+                    />
                   </Link>
                 </div>
                 <Link
@@ -90,44 +91,6 @@ const Nav = () => {
             </div>
           </div>
         </div>
-        {mobActive === 0 ? (
-          <></>
-        ) : (
-          <div className={style.activeNavMob}>
-            <div className={style.iconsMobNav}>
-              <FlightLandIcon
-                className={style.landOf}
-                onClick={() => setMobActive(0)}
-              />
-            </div>
-            <Link
-              href="/aboutUs"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <p className={style.aboutHiden}>About Us</p>
-            </Link>
-            <div className={style.inputDivMOb}>
-              <input type="text" placeholder="Search Flight, Hotal, Visa" />
-              <div className={style.inputIcon}></div>
-            </div>
-            <div className={style.inputButtons}>
-              <Link
-                href="/login"
-                className={style.logInButton}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Log In
-              </Link>
-              <Link
-                href="/signup"
-                className={style.signUpButtonTwo}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                Sign Up
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
 
       <div>
