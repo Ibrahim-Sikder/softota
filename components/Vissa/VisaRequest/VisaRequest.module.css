@@ -15,7 +15,7 @@
 }
 .needHelpRightSide{
     width: 201px;
-    background: #D66F00;
+    background: #19ABE3;
     height: 45px;
     color: white;
     display: flex;
@@ -65,7 +65,7 @@
     margin-top: 7px;
 }
 .visaSubmitBtn{
-    background: #D66F00;
+    background: #19ABE3;
     color: white;
     width: 215px;
     height: 45px;

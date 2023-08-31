@@ -25,19 +25,6 @@ const Umra = () => {
       <div className={style.bannerWrap}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
-          <div className={style.packageWrap}>
-            <div className={style.package2}>
-              <span>Hajj Package </span>
-              <span>Umra Package </span>
-            </div>
-          </div>
-
-          <div className={style.heroBoxBtnWrap}>
-            <button className={style.heroBoxBtn}>
-              <h4>Get Your Package</h4>
-            </button>
-          </div>
-
           {/* menubar */}
           <div className={style.menuWrap}>
             <ul className={style.menu}>
@@ -307,6 +294,19 @@ const Umra = () => {
               </div>
             </ul>
           </div>
+
+
+          <div className={style.hajjUmrapackageWrap}>
+            <div className={style.hajjUmraPackage}>
+                <Link href='/hajjUmra/hajj'><button>Hajj Package </button></Link>
+                <Link href='/hajjUmra/umrahPackage'><button>Umrah Package </button></Link>
+            </div>
+            <div className={style.rightPlaceForYou}>
+           <h6>If you want to do Hajj & Umrah at the very low cost then this is the right package for you !</h6>
+            </div>
+          </div>
+
+
         </div>
       </div>
       <UmraPackage />

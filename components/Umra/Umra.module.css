@@ -35,48 +35,9 @@
   overflow: hidden;
 }
 
-.package2 {
-  width: 408px;
-  height: 48px;
-  background: transparent;
-  position: absolute;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  padding-left: 20px;
-  left: 50%;
-  transform: translate(-50%);
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 20px;
-  top: 119px;
-  color: #fff;
-  font-size: 17px;
-}
-.package2 span:nth-child(1) {
-  border-bottom: 2px solid #fff;
-  margin-bottom: 17px;
-}
 
 
 
-.heroBoxBtn:hover {
-  background-image: linear-gradient(90deg,  #19ABE3, #4ab449);
-}
-.heroBoxBtn {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 208px;
-  background: transparent;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  padding: 9px 0px;
-  width: 209px;
-  background-image: linear-gradient(90deg, #4ab449, #19ABE3);
-  transition:al .5s ease-in-out;
-}
 /* menu styling  */
 .wrapMenu{
   z-index: 999 !important;
@@ -122,8 +83,44 @@
   z-index: 999 !important;
 }
 
+.hajjUmrapackageWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.hajjUmraPackage button{
+  width: 200px;
+  background: transparent;
+  margin-right: 10px;
+  height: 55px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: white;
+  transition: all .5s cubic-bezier(0.05, -0.02, 1, 1.07);
+}
+.hajjUmraPackage button:hover{
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+}
+
+.rightPlaceForYou{
+  color: white;
+  width: 61%;
+  text-align: center;
+  line-height: 38px;
+}
+
+.rightPlaceForYou h6{
+  font-size: 23px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-top: 15px;
+}
+
 .ummraWrap {
-  width: 80%;
+  width: 75%;
   overflow: hidden;
   margin: 50px 0px;
   margin: 80px auto;
@@ -136,7 +133,7 @@
   line-height: 25px;
 }
 .singleHajj {
-  width: 310px;
+  width: 350px;
   height: 606px;
   background: #ffffff;
   box-shadow: #4AB449 0px 9px 28px, #19ABE3 0px 9px 8px;
@@ -169,7 +166,7 @@
   transform: scale(1.2);
 }
 .singleHajjmiddl {
-  width: 310px;
+  width: 350px;
   height: 606px;
   background: #ffffff;
   box-shadow: 2px 4px 16px rgba(74, 180, 73, 0.2);
@@ -265,7 +262,11 @@
 .mobileMenuWraps{
   display: none;
 }
-
+.hajjUmraPackage{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 @media only screen and (max-width: 1024px) {
   .bannerWrap {
@@ -334,9 +335,7 @@
 .menuWrap{
   display: none;
 }
-  .package2 {
-    top: 150px;
-  }
+  
   .bannerWrap h2 {
     font-size: 25px;
   }
@@ -357,12 +356,8 @@
 }
  
 
-  .package {
-    top: 250px;
-  }
-  .heroBoxBtn {
-    top: 224px;
-  }
+
+  
   .bannerWrap h2 {
     margin-bottom: 10px;
   }
@@ -387,15 +382,30 @@
     align-items: center;
     justify-content: center;
   }
+  .hajjUmrapackageWrap {
+    margin-top: 55px;
+}
+.rightPlaceForYou h6 {
+  font-size: 21px;
+  margin-top: 18px;
+}
+.hajjUmraPackage button {
+  width: 188px;
+  height: 47px;
+}
+
+
 }
 @media only screen and (max-width: 500px) {
   .bannerWrap {
-    height: 395px;
+    height: 450px;
     margin-bottom: 87px;
 }
 .heroBoxMain {
-  height: 308px;
+ 
+  height: 360px;
   border-radius: 20px;
+
 }
 .menu {
   font-size: 14px !important;
@@ -414,12 +424,7 @@
   margin-left: 113px;
 }
 
-  .heroBoxBtn {
-    padding: 10px 0px;
-    top: 192px;
-    width: 195px;
-    font-size: 14px;
-  }
+
 
   .bannerWrap h2 {
     margin-bottom: 10px;
@@ -430,21 +435,36 @@
     font-size: 23px;
 
   }
-  .package2 {
-    top: 125px;
-    width: 83%;
-    font-size: 14px;
-    border-radius: 3px;
 
-  }
   .umraHead{
     width: 100%;
   }
+  .hajjUmraPackage {
+    flex-direction: column;
+}
+.rightPlaceForYou {
+  padding: 0px 28px;
+  width: 100%;
+  line-height: 27px;
+}
+.hajjUmraPackage button {
+  margin-bottom: 10px;
+}
+.hajjUmrapackageWrap {
+  margin-top: 26px;
+}
+.rightPlaceForYou h6 {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+
+
 
 }
 @media only screen and (max-width: 400px) {
   .bannerWrap {
-    height: 430px;
+    height: 475px;
 }
   .wrapMenu {
     padding: 0px 3px;
@@ -462,9 +482,7 @@
   .package4 {
     right: 32px;
   }
-  .heroBoxBtn {
-    padding: 14px 15px;
-  }
+ 
   .clock {
     width: 100%;
 }
