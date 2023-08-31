@@ -1,7 +1,7 @@
 import React from "react";
 import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
 import style from "../../../../components/UserDashBoard/UserDashBoard.module.css";
-import styling from "../../dashboard/profile.module.css";
+
 import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
@@ -18,8 +18,8 @@ const flight = () => {
           <MoveText />
 
           <div className="mt-5">
-            <div className={styling.profileTop}>
-              <div className={styling.flightHistory}>
+            <div className={style.profileTop}>
+              <div className={style.flightHistory}>
                 <div className="overflow-x-auto ">
                   <table className="table  lg:table-auto columns-xl break-after-column">
                     <thead className={style.tableWrap}>

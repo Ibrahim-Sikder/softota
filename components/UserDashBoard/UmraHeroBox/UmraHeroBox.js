@@ -1,7 +1,6 @@
 import React from "react";
 import styling from "./UmraHeroBox.module.css";
 import style from "../../../components/Umra/Umra.module.css";
-import Link from "next/link";
 import { useState } from "react";
 import ActiveLink from "../../Banner/ActiveLink";
 const UmraHeroBox = () => {
@@ -79,7 +78,7 @@ const UmraHeroBox = () => {
                   <p className="ml-3">Hajj & Umrah</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/dashboard">
+              <ActiveLink href="/b2bsearch">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -95,7 +95,7 @@ const HotelHeroBox = () => {
                   <p className="ml-3">Hajj & Umrah</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/dashboard">
+              <ActiveLink href="/b2bsearch">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

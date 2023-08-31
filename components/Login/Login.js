@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import style from "./Login.module.css";
 import Image from "next/image";
 import login from "../../public/login.png";
@@ -7,12 +7,39 @@ import google from "../../public/google.png";
 import Link from "next/link";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useRouter } from "next/router";
+import { AuthContext } from "@/context/Auth";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
-const Login = () => {
+const Login = () => { 
+ const {signIn } = useContext(AuthContext)
+ const { register,reset, formState: { errors }, handleSubmit  } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = () => {};
+
   const router = useRouter();
+  const handleLogin = data =>{
+    console.log(data)
+    signIn( data.email, data.password)
+    .then(result=>{
+      const user = result.user;
+      console.log(user)
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'User Login Successfully !',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      reset()
+      router.push('/')
+
+    })
+    .catch(error=>console.log(error))
+  
+     
+   };
 
   return (
     <section className={style.loginWrap}>
@@ -26,7 +53,7 @@ const Login = () => {
           />
         </div>
         <div className="mt-14">
-          <form>
+          <form onSubmit={handleSubmit(handleLogin)}>
             <div className="mb-5 relative">
               <label className={style.inputLabel}>Email Address</label> <br />
               <input
@@ -34,8 +61,10 @@ const Login = () => {
                 type="email"
                 placeholder="Email"
                 className={style.loginInput}
+                {...register("email", { required: 'Email is required' })}
               />
             </div>
+            {errors.email && <p className="text-red-500" role="alert">{errors.email?.message}</p>}
             <div className="mb-5 relative">
               <label className={style.inputLabel}>Password</label> <br />
               <input
@@ -43,6 +72,7 @@ const Login = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
                 className={style.loginInput}
+                {...register("password", { required: 'Password is required' })}
               />
               <span
                 onClick={handleClickShowPassword}
@@ -52,6 +82,7 @@ const Login = () => {
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
+            {errors.password && <p className="text-red-500" role="alert">{errors.password?.message}</p>}
             <div className="mb-5">
               <button className={style.loginBtn} type="submit">
                 Login

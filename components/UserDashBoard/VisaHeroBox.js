@@ -1,8 +1,7 @@
 import React from "react";
-import style from "../../components/visa/visa.module.css";
+import style from "../Vissa/Visa.module.css";
 import Link from "next/link";
 import { FaSistrix } from "react-icons/fa";
-import styling from "./TourHeroBox.module.css";
 import { useState } from "react";
 import ActiveLink from "../Banner/ActiveLink";
 
@@ -63,7 +62,7 @@ const VisaHeroBox = () => {
                   <p className="ml-3">Hajj & Umrah</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/dashboard">
+              <ActiveLink href="/b2bsearch">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
