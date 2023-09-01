@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./visa.module.css";
+import style from "./Visa.module.css";
 import Link from "next/link";
 import { FaSistrix } from "react-icons/fa";
 import ActiveLink from "../Banner/ActiveLink";
