@@ -1,6 +1,6 @@
 "use client";
 
-import { Inter } from "next/font/google";
+
 import Banner from "../../components/Banner/Banner";
 import Travel from "../../components/Travel/Travel";
 import Customer from "../../components/Customer/Customer";
@@ -8,6 +8,7 @@ import Footer from "../../components/Footer/Footer";
 import Nav from "../../components/NavBarr/Nav";
 import TourDestination from "../../components/Tour/TourDestination";
 import FlightMission from "../../components/FlightMission/FlightMission";
+import { Helmet } from "react-helmet-async";
 
 
 export const config ={
@@ -18,6 +19,9 @@ export const config ={
 export default function Home() {
   return (
     <section>
+      <Helmet>
+            <title>Ghuronti || Flight </title>
+        </Helmet>
       <Nav />
       <Banner></Banner>
       <TourDestination></TourDestination>

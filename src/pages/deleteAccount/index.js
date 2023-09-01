@@ -3,11 +3,15 @@ import React from 'react'
 import AdminLeftSide from '../../../components/DashBoard/AdminLeftSide'
 // import style from '../../../components/DashBoard/DashBoard.module.css';
 import style from './delete.module.css';
-import deleteAccount from '../../../public/deleteAccount.png' 
+import deleteAccount from '../../../public/assets/deleteAccount.png' 
+import { Helmet } from 'react-helmet-async';
 
 const index = () => {
      return (
           <section>
+            <Helmet>
+            <title>Ghuronti || Delete Account </title>
+        </Helmet>
             <div className='grid grid-cols-12'>
                 <div>
                     <AdminLeftSide></AdminLeftSide>

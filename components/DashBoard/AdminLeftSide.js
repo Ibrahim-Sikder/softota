@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./DashBoard.module.css";
 import Image from "next/image";
-import admin from "../../public/admin.png";
+import admin from "../../public/assets/admin.png";
 import Link from "next/link";
 
 const AdminLeftSide = () => {

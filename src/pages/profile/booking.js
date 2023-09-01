@@ -4,7 +4,7 @@ import ProfileLeftSide from "./profileLeftSide/ProfileLeftSide";
 import Footer from "../../../components/Footer/Footer";
 import styles from "./booking.module.css";
 import Image from "next/image";
-import booking from "../../../public/saveCard.png";
+import booking from "../../../public/assets/saveCard.png";
 import Link from "next/link";
 import Nav from "../../../components/NavBarr/Nav";
 const Booking = () => {

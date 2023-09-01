@@ -1,16 +1,16 @@
 import React from "react";
-import Nav from "../../../../components/NavBarr/Nav";
-import Footer from "../../../../components/Footer/Footer";
 import style from '../userbooking/flightbooking.module.css'
 import { ReportProblem } from "@mui/icons-material";
-import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
 import { ArrowForwardIos, Home } from "@mui/icons-material";
-import Cancel from "../../../../components/Booking/FlightCancel/Cancel";
 import Link from "next/link";
+import Nav from "../../../../components/NavBarr/Nav";
+import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
+import Cancel from "@/pages/b2bsearch/cancel";
+import Footer from "../../../../components/Footer/Footer";
 const flightCancel = () => {
   return (
     <section>
-      <Nav />
+      <Nav/>
       <div className={style.flightBookingTo}>
         <div className={style.fTopBar}>
         <Link href='/'>
@@ -50,7 +50,7 @@ const flightCancel = () => {
       <section className={style.accounWra}>
         <div className={style.profileWrap}>
           <div className={style.userProfileLeftSide}>
-            <FlightBookingLeftSide />
+            <FlightBookingLeftSide/>
           </div>
           <div className={style.userProfileRightSide}>
            <Cancel/>

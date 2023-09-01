@@ -1,7 +1,6 @@
 import React from "react";
 import styling from "./BusesHeroBox.module.css";
 import style from "../../../components/BusBanner/Bus.module.css";
-import Link from "next/link";
 import ActiveLink from "../../Banner/ActiveLink";
 const BusesHeroBox = () => {
   return (

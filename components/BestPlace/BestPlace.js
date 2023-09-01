@@ -3,7 +3,7 @@ import style from "./BestPlace.module.css";
 import Image from "next/image";
 import cox from "../../public/assets/cox.jpg";
 import see from "../../public/assets/shylet.jpg";
-import see3 from "../../public/see3.png";
+import see3 from "../../public/assets/see3.png";
 import Link from "next/link";
 const BestPlace = () => {
   return (

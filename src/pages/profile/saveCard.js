@@ -3,7 +3,7 @@ import React from "react";
 import ProfileLeftSide from "./profileLeftSide/ProfileLeftSide";
 import Footer from "../../../components/Footer/Footer";
 import style from "./userProfile.module.css";
-import card from "../../../public/saveCard.png";
+import card from "../../../public/assets/saveCard.png";
 import Nav from "../../../components/NavBarr/Nav";
 const saveCard = () => {
   return (

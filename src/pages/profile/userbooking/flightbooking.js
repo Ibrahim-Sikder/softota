@@ -1,16 +1,17 @@
 import React from "react";
-import Nav from "../../../../components/NavBarr/Nav";
-import Footer from "../../../../components/Footer/Footer";
+
 import style from "./flightbooking.module.css";
 import Link from "next/link";
 import { ReportProblem } from "@mui/icons-material";
-import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
 import { Groups, SwapHoriz,CalendarMonth,AttachMoney } from "@mui/icons-material";
+import Nav from "../../../../components/NavBarr/Nav";
 import ProfileLeftSide from "../profileLeftSide/ProfileLeftSide";
+import Footer from "../../../../components/Footer/Footer";
+
 const flightbooking = () => {
   return (
     <section>
-      <Nav />
+      <Nav/>
       <section className={style.accounWra}>
         <div className={style.profileWrap}>
           <div className={style.userProfileLeftSide}>

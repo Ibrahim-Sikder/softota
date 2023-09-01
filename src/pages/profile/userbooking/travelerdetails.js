@@ -1,15 +1,15 @@
 import React from "react";
-import Nav from "../../../../components/NavBarr/Nav";
-import Footer from "../../../../components/Footer/Footer";
 import style from '../userbooking/flightbooking.module.css'
 import Link from "next/link";
-import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
 import { ArrowForwardIos, Home } from "@mui/icons-material";
+import Nav from "../../../../components/NavBarr/Nav";
+import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
 import TravelerDetails from "../../../../components/Booking/TravelerDetails/TravelerDetails";
+import Footer from "../../../../components/Footer/Footer";
 const travelerdetails = () => {
   return (
     <section>
-      <Nav />
+      <Nav/>
       <div className={style.flightBookingTo}>
         <div className={style.fTopBar}>
         <Link href='/'>
@@ -48,14 +48,14 @@ const travelerdetails = () => {
       <section className={style.accounWra}>
         <div className={style.profileWrap}>
           <div className={style.userProfileLeftSide}>
-            <FlightBookingLeftSide />
+            <FlightBookingLeftSide/>
           </div>
           <div className={style.userProfileRightSide}>
            <TravelerDetails></TravelerDetails>
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </section>
   );
 };

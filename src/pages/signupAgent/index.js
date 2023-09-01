@@ -1,10 +1,11 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import login from "../../../public/agent.png";
+import login from "../../../public/assets/agent.png";
 import { useRouter } from "next/router";
 import style from "./signupAgent.module.css";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
+import { Helmet } from "react-helmet-async";
 const SignUpAgent = () => {
   // const [name, setName] = useState("");
   // const [number, setNumber] = useState("");
@@ -55,6 +56,9 @@ const SignUpAgent = () => {
 
   return (
     <section>
+      <Helmet>
+            <title>Ghuronti || SignUp Agent </title>
+        </Helmet>
       <Nav />
       <div className={style.signUpAgentWrap}>
         <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">

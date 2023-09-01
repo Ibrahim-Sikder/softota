@@ -3,15 +3,15 @@
 import Image from "next/image";
 import React, { useContext, useState } from "react";
 import style from "./SignUp.module.css";
-import login from "../../public/login.png";
-import facebook from "../../public/facebook.png";
-import google from "../../public/google.png";
+import login from "../../public/assets/login.png";
+import facebook from "../../public/assets/facebook.png";
+import google from "../../public/assets/google.png";
 import Link from "next/link";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-
 import { useForm } from "react-hook-form";
-import { AuthContext } from "@/context/Auth";
 import Swal from "sweetalert2";
+import { useRouter } from "next/router";
+import { AuthContext } from "@/context/Auth";
 const SignUp = () => {
  const {createUser, loginWithGoogle } = useContext(AuthContext)
   const { register,reset, formState: { errors }, handleSubmit  } = useForm();

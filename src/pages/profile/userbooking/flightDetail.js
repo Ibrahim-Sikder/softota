@@ -1,16 +1,15 @@
 import React from "react";
-import Nav from "../../../../components/NavBarr/Nav";
-import Footer from "../../../../components/Footer/Footer";
 import style from '../userbooking/flightbooking.module.css'
 import Link from "next/link";
-import { ReportProblem } from "@mui/icons-material";
-import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
+import { Details, ReportProblem } from "@mui/icons-material";
 import { ArrowForwardIos, Home } from "@mui/icons-material";
-import Details from "../../../../components/Booking/FlightDetails/Details/Details";
+import Nav from "../../../../components/NavBarr/Nav";
+import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
+import Footer from "../../../../components/Footer/Footer";
 const flightDetail = () => {
   return (
     <section>
-      <Nav />
+      <Nav/>
       <div className={style.flightBookingTo}>
         <div className={style.fTopBar}>
         <Link href='/'>
@@ -50,14 +49,14 @@ const flightDetail = () => {
       <section className={style.accounWra}>
         <div className={style.profileWrap}>
           <div className={style.userProfileLeftSide}>
-            <FlightBookingLeftSide />
+            <FlightBookingLeftSide/>
           </div>
           <div className={style.userProfileRightSide}>
            <Details></Details>
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </section>
   );
 };

@@ -28,8 +28,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { useState } from "react";
-import ActiveLink from "../Banner/ActiveLink";
+
 import dynamic from "next/dynamic";
+import ActiveLink from "../Banner/ActiveLink";
 
 const Hotel = () => {
   const [activeToggleMenu, setActiveToggleMenu] = useState(false);

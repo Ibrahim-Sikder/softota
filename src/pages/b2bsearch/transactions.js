@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
-import logo from '../../../public/logo.png'
+import logo from '../../../public/assets/logo.png'
 import style from '../../../components/UserDashBoard/UserDashBoard.module.css'
 import { FaSistrix, FaCalendarAlt, FaAngleRight, FaCommentAlt, FaHeadSideCoughSlash, FaUserCircle, FaEllipsisV } from 'react-icons/fa';
 import UserDashBoardLeft from '../../../components/UserDashBoard/UserDashBoardLeft';

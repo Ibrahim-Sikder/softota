@@ -1,13 +1,14 @@
 import React from "react";
 import style from "./Countries.module.css";
 import Image from "next/image";
-import malasiya from "../../public/malasiya.png";
-import usa from "../../public/usa.png";
-import england from "../../public/england.png";
-import china from "../../public/china.png";
-import germany from "../../public/germany.png";
-import italy from "../../public/italy.png";
-import newzealand from "../../public/newzealand.png";
+import malasiya from "../../public/assets/malasiya.png";
+import usa from "../../public/assets/usa.png";
+import england from "../../public/assets/england.png";
+import china from "../../public/assets/china.png";
+import germany from "../../public/assets/germany.png";
+import newzealand from "../../public/assets/newzealand.png";
+import italy from "../../public/assets/italy.png";
+
 
 const Countries = () => {
   return (

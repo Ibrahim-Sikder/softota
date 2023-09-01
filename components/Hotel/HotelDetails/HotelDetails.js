@@ -8,9 +8,10 @@ import hotel4 from "../../../public/assets/hotell5.jpeg";
 import hotel5 from "../../../public/assets/hotell6.jpeg";
 import style from './HotelDetails.module.css'
 import { CheckCircleOutline } from "@mui/icons-material";
-import travel from "../../../public/travel2.png";
-import Footer from "../../../components/Footer/Footer";
-import Nav from "../../../components/NavBarr/Nav";
+import travel from "../../../public/assets/travel2.png";
+import Nav from "../../NavBarr/Nav";
+import Footer from "../../Footer/Footer";
+
 const HotelDetails = () => {
   return (
     <section>

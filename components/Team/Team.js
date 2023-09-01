@@ -1,10 +1,10 @@
 import React from "react";
 import style from "./Team.module.css";
 import Image from "next/image";
-import team from "../../public/team.png";
-import team2 from "../../public/team2.png";
-import team3 from "../../public/team3.png";
-import team4 from "../../public/team4.png";
+import team from "../../public/assets/team.png";
+import team2 from "../../public/assets/team2.png";
+import team3 from "../../public/assets/team3.png";
+import team4 from "../../public/assets/team4.png";
 import TeamSection from "../TeamSection/TeamSection";
 const Team = () => {
   return (

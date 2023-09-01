@@ -6,10 +6,14 @@ import Customer from "../../../components/Customer/Customer";
 import BestPlace from "../../../components/BestPlace/BestPlace";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
+import { Helmet } from "react-helmet-async";
 
 const index = () => {
   return (
     <section>
+      <Helmet>
+            <title>Ghuronti || Train </title>
+        </Helmet>
       <Nav />
       <Tour></Tour>
       <BestPlace></BestPlace>

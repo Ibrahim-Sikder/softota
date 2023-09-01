@@ -6,10 +6,14 @@ import BestPlace from "../../../components/BestPlace/BestPlace";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import TourDestination from "../../../components/Tour/TourDestination";
+import { Helmet } from "react-helmet-async";
 
 const TourPage = () => {
   return (
     <section>
+      <Helmet>
+            <title>Ghuronti || Tours </title>
+        </Helmet>
       <Nav />
       <Tour></Tour>
       <TourDestination/>

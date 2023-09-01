@@ -3,7 +3,7 @@ import ProfileLeftSide from "./profileLeftSide/ProfileLeftSide";
 import Footer from "../../../components/Footer/Footer";
 import style from "./userProfile.module.css";
 import Image from "next/image";
-import password from "../../../public/pass.png";
+import password from "../../../public/assets/pass.png";
 import styles from "./password.module.css";
 import TextField from "@mui/material/TextField";
 import { FaEyeSlash, FaEye } from "react-icons/fa";

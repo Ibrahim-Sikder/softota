@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import admin from "../../../../public/admin.png";
+import admin from "../../../../public/assets/admin.png";
 import Link from "next/link";
 import style from "./profile.module.css";
 

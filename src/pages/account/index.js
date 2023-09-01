@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import AdminLeftSide from "../../../components/DashBoard/AdminLeftSide";
 import style from "./account.module.css";
-import admin from "../../../public/admin.png";
+import admin from "../../../public/assets/admin.png";
 const index = () => {
   return (
     <section className={style.accounWra}>

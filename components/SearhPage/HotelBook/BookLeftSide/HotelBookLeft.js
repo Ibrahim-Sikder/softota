@@ -1,9 +1,4 @@
 import React from "react";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   FaPlane,
   FaPlaneDeparture,
@@ -18,16 +13,7 @@ import {
   FaUserTie,
   FaBed
 } from "react-icons/fa";
-import { TrendingFlat } from "@mui/icons-material";
-import Image from "next/image";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
-import Link from "next/link";
 import style from "./Book.module.css";
-import book from "../../../../public/assets/hotel11.jpg";
-import grameenphon from "../../../../public/assets/grameenphon.png";
-import lotto from "../../../../public/assets/grameenphon.png";
-import aorong from "../../../../public/assets/grameenphon.png";
 const HotelBookLeft = () => {
   return (
     <section>

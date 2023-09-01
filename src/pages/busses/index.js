@@ -6,10 +6,14 @@ import BestPlace from "../../../components/BestPlace/BestPlace";
 import BusBanner from "../../../components/BusBanner/BusBanner";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
+import { Helmet } from "react-helmet-async";
 
 const Busses = () => {
   return (
     <section>
+      <Helmet>
+            <title>Ghuronti || FAQ </title>
+        </Helmet>
       <Nav />
       <BusBanner></BusBanner>
       <BestPlace />

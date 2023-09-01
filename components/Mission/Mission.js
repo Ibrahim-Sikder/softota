@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Mission.module.css";
-import mission from "../../public/mission.png";
+import mission from "../../public/assets/mission.png";
 import Image from "next/image";
 const Mission = () => {
   return (

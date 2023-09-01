@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 import style from "./Umra.module.css";
-import hajj4 from "../../public/hajj4.png";
-import hajj2 from "../../public/hajj2.png";
-import hajj3 from "../../public/hajj3.png";
+import hajj4 from "../../public/assets/hajj4.png";
+import hajj2 from "../../public/assets/hajj2.png";
+import hajj3 from "../../public/assets/hajj3.png";
 
 const UmraPackage = () => {
   return (

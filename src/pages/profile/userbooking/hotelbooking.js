@@ -1,10 +1,10 @@
 import React from "react";
-import Nav from "../../../../components/NavBarr/Nav";
-import Footer from "../../../../components/Footer/Footer";
 import style from "./hotelbooking.module.css";
 import Link from "next/link";
-import ProfileLeftSide from "../profileLeftSide/ProfileLeftSide";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import Nav from "../../../../components/NavBarr/Nav";
+import ProfileLeftSide from "../profileLeftSide/ProfileLeftSide";
+import Footer from "../../../../components/Footer/Footer";
 const hotelbooking = () => {
   return (
     <section>

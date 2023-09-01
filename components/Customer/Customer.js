@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Customer.module.css";
-import quote2 from "../../public/quote2.png";
+import quote2 from "../../public/assets/quote2.png";
 import Image from "next/image";
 import Slider from "react-slick";
 const Customer = () => {

@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
 import style from "./Login.module.css";
 import Image from "next/image";
-import login from "../../public/login.png";
-import facebook from "../../public/facebook.png";
-import google from "../../public/google.png";
+import login from "../../public/assets/login.png";
+import facebook from "../../public/assets/facebook.png";
+import google from "../../public/assets/google.png";
 import Link from "next/link";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useRouter } from "next/router";
 import { AuthContext } from "@/context/Auth";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => { 
  const {signIn } = useContext(AuthContext)
@@ -42,7 +43,11 @@ const Login = () => {
    };
 
   return (
-    <section className={style.loginWrap}>
+   <> 
+    <Helmet>
+            <title>Ghuronti || Login </title>
+        </Helmet>
+     <section className={style.loginWrap}>
       <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center">
         <div>
           <Image
@@ -135,6 +140,8 @@ const Login = () => {
         </div>
       </div>
     </section>
+   
+   </>
   );
 };
 

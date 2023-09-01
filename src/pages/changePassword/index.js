@@ -1,9 +1,13 @@
 import React from "react";
 import AdminLeftSide from "../../../components/DashBoard/AdminLeftSide";
-import Image from "next/image";
 import style from "./Pass.module.css";
+import { Helmet } from "react-helmet-async";
 const index = () => {
   return (
+    <>
+    <Helmet>
+            <title>Ghuronti || FAQ </title>
+        </Helmet>
     <section className={style.passWordWrap}>
       <div className="grid grid-cols-12">
         <div>
@@ -63,6 +67,7 @@ const index = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

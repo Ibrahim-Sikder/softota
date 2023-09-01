@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./AboutHero.module.css";
 import Image from "next/image";
-import about from "../../public/about.png";
+import about from "../../public/assets/about.png";
 
 const AboutHero = () => {
   return (

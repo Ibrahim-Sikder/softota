@@ -1,39 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import styling from "./UmraHeroBox.module.css";
 import style from "../../../components/Umra/Umra.module.css";
-import { useState } from "react";
+import Link from "next/link";
+import {
+  Flight,
+  Hotel,
+  BookOnline,
+  TransferWithinAStation,
+  BusAlert,
+  DirectionsRailway,
+  Add,
+  Groups2,
+  HorizontalRule,
+} from "@mui/icons-material";
 import ActiveLink from "../../Banner/ActiveLink";
+
 const UmraHeroBox = () => {
   const [activeHajjButton, setActiveHajjButton] = useState();
-  const [activePackage, setActivePackage] = useState(0);
-
   const handleActiveButton = () => {
     setActiveHajjButton(!activeHajjButton);
   };
 
-  const handleActivePackage = () => {
-    setActivePackage((activePackage) => !activePackage);
-  };
-
   return (
     <section>
-      <div className={`${style.heroBoxMain} ${styling.umraHeroBoxMain}`}>
-        <div className={style.packageWrap}>
-          <div className={style.package2}>
-            <span>Hajj Package </span>
-            <span>Umra Package </span>
-          </div>
-        </div>
-
-        <div className={`${style.heroBoxBtnWrap} ${styling.tourBtn}`}>
-          <button className={style.heroBoxBtn}>
-            <h4>Get Your Package</h4>
-          </button>
-        </div>
-
+    {/* banner */}
+    <div className={style.bannerWrap}>
+      <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
+      <div className={style.heroBoxMain}>
         {/* menubar */}
-        <div>
-          <ul className={style.menu}>
+        <div className={style.menuWrap}>
+        <ul className={style.menu}>
             <div className={style.wrapMenu}>
               <ActiveLink href="/b2bsearch/umra">
                 <li className={style.firstChild}>
@@ -266,8 +262,56 @@ const UmraHeroBox = () => {
             </div>
           </ul>
         </div>
+        {/* for mobile menu  */}
+
+        <div className={style.mobileMenuWraps}>
+          <ul className={style.menu}>
+            <div className={style.wrapMenu}>
+              <ActiveLink href="/flight">
+                <li className={style.activeLink}>
+                  <Flight className={style.mobileMenuIcons} />
+                  <p className="ml-3">Flight</p>
+                </li>
+              </ActiveLink>
+              <ActiveLink href="/hotel">
+                <li>
+                  <Hotel className={style.mobileMenuIcon} />
+
+                  <p className="ml-3">Hotel</p>
+                </li>
+              </ActiveLink>
+              <ActiveLink href="/visa">
+                <li>
+                  <BookOnline className={style.mobileMenuIcon} />
+                  <p className="ml-3">Visa</p>
+                </li>
+              </ActiveLink>
+              <ActiveLink href="/tours">
+                <li>
+                  <TransferWithinAStation className={style.mobileMenuIcon} />
+
+                  <p className="ml-3">Tours</p>
+                </li>
+              </ActiveLink>
+            </div>
+          </ul>
+        </div>
+
+
+        <div className={style.hajjUmrapackageWrap}>
+          <div className={style.hajjUmraPackage}>
+              <Link href='/hajjUmra/hajj'><button>Hajj Package </button></Link>
+              <Link href='/hajjUmra/umrahPackage'><button>Umrah Package </button></Link>
+          </div>
+          <div className={style.rightPlaceForYou}>
+         <h6>If you want to do Hajj & Umrah at the very low cost then this is the right package for you !</h6>
+          </div>
+        </div>
+
+
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import agent from "../../public/agent.png";
-import facebook from "../../public/facebook.png";
-import google from "../../public/google.png";
+import agent from "../../public/assets/agent.png";
+import facebook from "../../public/assets/facebook.png";
+import google from "../../public/assets/google.png";
 import style from "./LoginAgent.module.css";
 import { useRouter } from "next/router";
 

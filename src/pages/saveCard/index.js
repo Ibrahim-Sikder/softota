@@ -2,7 +2,7 @@ import React from "react";
 import AdminLeftSide from "../../../components/DashBoard/AdminLeftSide";
 import style from "./card.module.css";
 import Image from "next/image";
-import saveCard from "../../../public/saveCard.png";
+import saveCard from "../../../public/assets/saveCard.png";
 const index = () => {
   return (
     <section className={style.saveCardWrap}>

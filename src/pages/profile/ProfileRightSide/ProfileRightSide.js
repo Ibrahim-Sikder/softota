@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./ProfileRightSide.module.css";
 import Image from "next/image";
-import admin from "../../../../public/admin.png";
+import admin from "../../../../public/assets/admin.png";
 import TextField from "@mui/material/TextField";
 const ProfileRightSide = () => {
   const [age, setAge] = React.useState("");

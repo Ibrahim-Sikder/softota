@@ -7,9 +7,13 @@ import Customer from "../../../components/Customer/Customer";
 import Footer from "../../../components/Footer/Footer";
 import HotelTrending from "../../../components/Hotel/HotelTrending/HotelTrending";
 import Nav from "../../../components/NavBarr/Nav";
+import { Helmet } from "react-helmet-async";
 const HotelPage = () => {
   return (
     <section>
+      <Helmet>
+            <title>Ghuronti || Hotel </title>
+        </Helmet>
       <Nav />
       <Hotel></Hotel>
       <Travel></Travel>

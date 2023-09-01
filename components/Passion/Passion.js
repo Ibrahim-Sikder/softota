@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./Passion.module.css";
 import { FaUserGraduate, FaBookReader, FaSnowman } from "react-icons/fa";
-import doctor from "../../public/doctor.png";
-import man from "../../public/man.png";
-import people from "../../public/people.png";
+import doctor from "../../public/assets/doctor.png";
+import man from "../../public/assets/man.png";
+import people from "../../public/assets/people.png";
 import {
   VerticalTimeline,
   VerticalTimelineElement,

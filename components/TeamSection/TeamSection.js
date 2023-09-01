@@ -2,9 +2,9 @@ import React from "react";
 import TeamCard from "./TeamCard";
 import Link from "next/link";
 import Image from "next/image";
-import man from "../../public/man2.jpg";
-import man2 from "../../public/man3.jpg";
-import man3 from "../../public/man4.jpg";
+import man from "../../public/assets/man2.jpg";
+import man2 from "../../public/assets/man3.jpg";
+import man3 from "../../public/assets/man4.jpg";
 const TeamSection = () => {
   return (
     <section>

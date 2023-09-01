@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import style from "../../components/Tour/Tour.module.css";
-import Link from "next/link";
 import styling from "./TourHeroBox.module.css";
 import ActiveLink from "../Banner/ActiveLink";
 const TourHeroBox = () => {
