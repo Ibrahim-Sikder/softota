@@ -7,14 +7,8 @@ import {
   Flight,
   Hotel,
   BookOnline,
-  TransferWithinAStation,
-  BusAlert,
-  DirectionsRailway,
-  Add,
-  Groups2,
-  HorizontalRule,
+  TransferWithinAStation
 } from "@mui/icons-material";
-
 const visa = () => {
   return (
     <section className={style.visa}>

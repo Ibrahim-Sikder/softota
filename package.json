@@ -20,6 +20,7 @@
           "firebase": "^9.23.0",
           "html2canvas": "^1.4.1",
           "jspdf": "^2.5.1",
+          "lightgallery": "^2.7.1",
           "next": "13.4.5",
           "react": "18.2.0",
           "react-dom": "18.2.0",

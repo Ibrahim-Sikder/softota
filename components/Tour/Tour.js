@@ -7,6 +7,7 @@ import {
   BookOnline,
   TransferWithinAStation,
 } from "@mui/icons-material";
+import Link from "next/link";
 const Tour = () => {
   const [activePackage, setActivePackage] = useState(false);
   const handleActivePackage = () => {
@@ -317,7 +318,8 @@ const Tour = () => {
               </div>
             </form>
             <div className={style.searchTrainBtn}>
-              <button>Search Tours </button>
+              <Link href='tours/toursSearch'>  <button>Search Tours </button> </Link>
+             
             </div>
           </div>
         </div>
