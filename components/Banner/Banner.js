@@ -129,9 +129,7 @@ const Banner = ({ setResults }) => {
     setData2([]);
   };
 
-  const [inputList, setinputList] = useState([
-    { flyingFrom: "", flyingTo: "", date: "" },
-  ]);
+  const [inputList, setinputList] = useState([{ flyingFrom: "", flyingTo: "", date: "" },]);
 
   const handleinputchange = (e, index) => {
     const { name, value } = e.target;

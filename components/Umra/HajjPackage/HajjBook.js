@@ -3,6 +3,7 @@ import { LocalPhone } from '@mui/icons-material';
 import { Beenhere } from '@mui/icons-material';
 import style from '../../Vissa/VisaRequest/VisaRequest.module.css'
 import styling from '../UmrahBook/UmrahBook.module.css'
+import TourPackage from '../../Tour/TourPackage/TourPackage';
 const HajjBook = () => {
     return (
         <section >
@@ -133,6 +134,9 @@ const HajjBook = () => {
         </form>
        </div>
         </div>
+        <div className="px-[30px]">
+       <TourPackage/>
+       </div>
     </section>
     );
 };

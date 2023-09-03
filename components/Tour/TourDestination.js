@@ -30,6 +30,7 @@ import style from "./Tour.module.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 const TourDestination = () => {
   var settings = {
     infinite: true,
@@ -69,13 +70,11 @@ const TourDestination = () => {
 
   return (
     <section>
-      <div className={style.bestPlaceHead}>
-        <h2>Trending International Destinations </h2>
-        <p>
-          The world is now just a hop, skip and jump away and here’s how you can
-          make your travel easier and better.
-        </p>
-      </div>
+      <SectionTitle
+       heading="Trending International Destinations"
+       subHeading="The world is now just a hop, skip and jump away and here’s how you can make your travel easier and better."
+      >
+      </SectionTitle>
       <div className={style.destination}>
         <div>
           <Slider {...settings}>
@@ -438,13 +437,14 @@ const TourDestination = () => {
         </div>
       </div>
       {/* trending Indian destination  */}
-      <div className={style.bestPlaceHead}>
-        <h2>Trending Indian Destinations </h2>
-        <p>
-          India’s diverse topography, history and culture offers enough
-          experiences to fulfil any type of wanderlust.
-        </p>
-      </div>
+
+      <SectionTitle
+       heading="Trending Indian Destinations"
+       subHeading="India’s diverse topography, history and culture offers enough
+       experiences to fulfil any type of wanderlust.."
+      >
+      </SectionTitle>
+      
       <div className={style.destination}>
         <div>
           <Slider {...settings}>

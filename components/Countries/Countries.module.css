@@ -2,11 +2,6 @@
   width: 100vw;
   overflow: hidden;
 }
-.countryHeadText {
-  width: 550px;
-  margin: 20px auto;
-  text-align: center;
-}
 .countryBtn{
   background: #4AB449;
   color: white;
@@ -24,20 +19,10 @@
   .countryWrap {
     width: 100%;
   }
-  .countryHeadText {
-    width: 100%;
-  }
-  .countryHeadText p {
-    width: 78%;
-    margin: 14px auto;
-  }
 }
 
 @media only screen and (max-width: 500px) {
   .countryWrap {
-    width: 100%;
-  }
-  .countryHeadText {
     width: 100%;
   }
 }

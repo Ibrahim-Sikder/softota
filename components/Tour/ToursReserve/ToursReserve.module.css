@@ -1,15 +1,16 @@
-.galleryWrap{
-    width:100%;
+.TourReserveWrap{
     padding:20px 50px;
-}
-.galleryleftSide{
-    width:60%;
-    margin-right:10px;
+    width:100%;
 }
 .galleryWraps{
     width:100%;
     display: flex;
 }
+.galleryleftSide{
+    width:60%;
+    margin-right:10px;
+}
+
 .leftSideImgWrap{
     width:100%;
     height:500px;
@@ -26,6 +27,10 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+.galleryShowImg{
+    width:500px;
+    height:500px;
 }
 .galleryRightside{
     width:40%;
@@ -134,8 +139,8 @@
     .leftSideImgWrap {
         height: 300px;
     }
-    .galleryWrap{
-        width: 100%;
+    .TourReserveWrap{
         padding: 20px 18px;
+        width: 100%;
     }
 }

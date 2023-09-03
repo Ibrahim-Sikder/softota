@@ -126,12 +126,7 @@
   margin: 80px auto;
   padding: 0 28px;
 }
-.umraHead{
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 25px;
-}
+
 .singleHajj {
   width: 310px;
   height: 606px;
@@ -148,9 +143,6 @@
 .hajjContentWrap h3{
   font-size:18px;
   font-weight: 500;
-}
-.umraHead p{
-  color:black !important;
 }
 .imgWrap {
   width: 420px;
@@ -436,9 +428,7 @@
 
   }
 
-  .umraHead{
-    width: 100%;
-  }
+
   .hajjUmraPackage {
     flex-direction: column;
 }

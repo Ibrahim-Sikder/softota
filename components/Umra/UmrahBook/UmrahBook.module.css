@@ -18,6 +18,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.formControl textarea{
+    resize:none;
+}
 .uploadDoc{
     border: 1px solid #ddd;
     width: 490px;

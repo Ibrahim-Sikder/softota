@@ -12,7 +12,7 @@ const Busses = () => {
   return (
     <section>
       <Helmet>
-            <title>Ghuronti || FAQ </title>
+            <title>Ghuronti || Busses </title>
         </Helmet>
       <Nav />
       <BusBanner></BusBanner>

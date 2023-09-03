@@ -3,6 +3,7 @@ import { LocalPhone } from '@mui/icons-material';
 import { Beenhere } from '@mui/icons-material';
 import style from '../../Vissa/VisaRequest/VisaRequest.module.css'
 import styling from './UmrahBook.module.css'
+import TourPackage from '../../Tour/TourPackage/TourPackage';
 const UmrahBook = () => {
     return (
         <section >
@@ -123,7 +124,11 @@ const UmrahBook = () => {
             <button className={style.visaSubmitBtn}>Confirm Request</button>
         </form>
        </div>
+      
         </div>
+       <div className="px-[30px]">
+       <TourPackage/>
+       </div>
     </section>
     );
 };

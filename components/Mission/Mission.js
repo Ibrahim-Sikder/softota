@@ -2,17 +2,16 @@ import React from "react";
 import style from "./Mission.module.css";
 import mission from "../../public/assets/mission.png";
 import Image from "next/image";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 const Mission = () => {
   return (
     <section className={style.missionWrap}>
-      <div className={style.missionHead}>
-        <h2>Our Mission & Vision</h2>
-        <p>
-          Serving our customer, searching their entire satisfaction and
-          providing <br /> touristic services of quality, committing to the
-          social, cultural and <br /> environmental reality of our country.
-        </p>
-      </div>
+      <SectionTitle
+      heading='Our Missin & Vision '
+      subHeading='  Serving our customer, searching their entire satisfaction and
+      providing touristic services of quality, committing to the
+      social, cultural and environmental reality of our country.'
+      ></SectionTitle>
       <div className={style.vission}>
         <div className={style.missionBox}>
           <h4 className={style.missionText}>Mission</h4>

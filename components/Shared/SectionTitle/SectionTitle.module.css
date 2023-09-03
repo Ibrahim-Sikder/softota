@@ -1,0 +1,16 @@
+.sectionTitle {
+    width: 650px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .sectionTitle h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+  }
+  .sectionTitle p {
+    color: black;
+    line-height: 26px;
+    font-size: 18px;
+    margin-top: 15px;
+  }

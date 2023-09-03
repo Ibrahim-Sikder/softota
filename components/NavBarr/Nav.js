@@ -12,6 +12,7 @@ import {
   BusAlert,
   DirectionsRailway,
 } from "@mui/icons-material";
+import Typewriter from 'typewriter-effect';
 
 const Nav = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -68,10 +69,20 @@ const Nav = () => {
                   <p className={style.aboutHiden}>About Us</p>
                 </Link>
               </div>
+             
               <div className={style.inputDiv}>
-                <input type="text" placeholder="Search Flight, Hotal, Visa" />
-                <div className={style.inputIcon}></div>
+                <Typewriter
+                className={style.typeWiter}
+                options={{
+                  strings: ['Search Flight Hotel Visa Tours & Package !', 'Search Tours, Busses, Trains , Hajj & Umrah package !'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
               </div>
+
+
+
               <div className={style.inputButtons}>
                 <Link
                   href="/login"

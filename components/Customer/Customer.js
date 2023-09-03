@@ -3,6 +3,7 @@ import style from "./Customer.module.css";
 import quote2 from "../../public/assets/quote2.png";
 import Image from "next/image";
 import Slider from "react-slick";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 const Customer = () => {
   var settings = {
     infinite: true,
@@ -15,13 +16,11 @@ const Customer = () => {
   };
   return (
     <section>
-      <div className={style.customerHead}>
-        <h2>Customer satisfaction is our top priority</h2>
-        <p>
-          Our clients praise us for our great results, personable service,
-          expert knowledge. Here are what just a few of them had to say
-        </p>
-      </div>
+      <SectionTitle
+      heading='Customer satisfaction is our top priority'
+      subHeading=' Our clients praise us for our great results, personable service,
+      expert knowledge. Here are what just a few of them had to say'
+      ></SectionTitle>
 
       <Slider {...settings}>
         <div className={style.Customers}>

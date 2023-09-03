@@ -8,6 +8,7 @@ import hajj from '../../../public/assets/hajj.png'
 import hajj2 from '../../../public/assets/hajj2.png'
 import hajj3 from '../../../public/assets/hajj4.png'
 import Link from 'next/link';
+import SectionTitle from '../../Shared/SectionTitle/SectionTitle';
 const Package = () => {
     return (
         <div>
@@ -20,11 +21,10 @@ const Package = () => {
                         className={style.umraImage}
                         />
                     </div>
-
-                    <div className='my-5'>
-                        <h3 className="text-2xl font-bold mb-2">Most Popular Hajj Packages 2024 - 2025 from Dhaka, Bangladesh</h3>
-                        <p>Holy Hajj & Umrah agency is not only offering you the best Umrah packages from Bangladesh but also ensures you perform your long desired journey to the two holy cities Makkah and Madinah. Our most knowledgeable and experienced Mu allim will guide you all the way.</p>
-                    </div>
+                    <SectionTitle
+                        heading='Most Popular Hajj Packages 2024 - 2025 from Dhaka, Bangladesh'
+                        subHeading='Holy Hajj & Umrah agency is not only offering you the best Umrah packages from Bangladesh but also ensures you perform your long desired journey to the two holy cities Makkah and Madinah. Our most knowledgeable and experienced Mu allim will guide you all the way.'
+                    ></SectionTitle>
                     <div className={style.umrahPackageCardWrap}>
                         <h3 className="text-xl font-bold">Most Affordable Hajj Packages 2023-2024 from Dhaka, Bangladesh</h3>
                         <div className={style.packageCardWrap}>

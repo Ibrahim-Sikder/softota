@@ -4,20 +4,17 @@ import style from "./Umra.module.css";
 import hajj4 from "../../public/assets/hajj4.png";
 import hajj2 from "../../public/assets/hajj2.png";
 import hajj3 from "../../public/assets/hajj3.png";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 
 const UmraPackage = () => {
   return (
     <section>
       <div className={style.ummraWrap}>
-        <div className={style.umraHead}>
-          <h2 className="text-2xl bold">
-            Best Hajj Packages 2023 from bangladesh
-          </h2>
-          <p className=" mt-3 mb-12 text-black">
-            Some of the renowned and best Hajj agencies in Bangladesh are
-            Universal Travel & Tours, Holy Hajj & Umrah
-          </p>
-        </div>
+        <SectionTitle
+        heading='Best Hajj Packages 2023 from bangladesh'
+        subHeading='Some of the renowned and best Hajj agencies in Bangladesh are
+        Universal Travel & Tours, Holy Hajj & Umrah'
+        ></SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:grid-cols-2 place-items-center">
           <div className={style.singleHajj}>
             <div className={style.imgWrap}>
@@ -125,15 +122,11 @@ const UmraPackage = () => {
           </div>
         </div>
         <div className="mt-12">
-          <div className={style.umraHead}>
-            <h2 className="text-2xl bold">
-              Hajj pre-registration Bangladesh 2023- 2024-2025
-            </h2>
-            <p className=" mt-5 mb-12 text-[#738187]">
-              Non-resident & Resident Bangladeshi adults and children can apply
-              for hajj pre-registration through the Hajj agency.
-            </p>
-          </div>
+        <SectionTitle
+        heading=' Hajj pre-registration Bangladesh 2023- 2024-2025'
+        subHeading='Non-resident & Resident Bangladeshi adults and children can apply
+        for hajj pre-registration through the Hajj agency.'
+        ></SectionTitle>
         </div>
         <div className={style.ummrahClock}>
           <div className={style.clock}>

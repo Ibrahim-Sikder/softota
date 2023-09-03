@@ -31,6 +31,7 @@ import { useState } from "react";
 
 import dynamic from "next/dynamic";
 import ActiveLink from "../Banner/ActiveLink";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 
 const Hotel = () => {
   const [activeToggleMenu, setActiveToggleMenu] = useState(false);
@@ -500,13 +501,11 @@ const Hotel = () => {
 
       {/* hotel structure */}
       <div>
-        <div className={style.bestPlaceHead}>
-          <h2>Trending International Destinations </h2>
-          <p>
-            The world is now just a hop, skip and jump away and here’s how you
-            can make your travel easier and better.
-          </p>
-        </div>
+        <SectionTitle
+        heading='Trending International Destinations '
+        subHeading='The world is now just a hop, skip and jump away and here’s how you
+        can make your travel easier and better.'
+        ></SectionTitle>
         <div className={style.destination}>
           <Slider {...settings}>
             <div className={style.tourTrending}>

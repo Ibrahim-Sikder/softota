@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import style from "../../../components/Tour/Tour.module.css";
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 const HotelTrending = () => {
   var settings = {
     infinite: true,
@@ -55,13 +56,11 @@ const HotelTrending = () => {
   };
   return (
     <section>
-      <div className={style.bestPlaceHead}>
-        <h2>Trending Indian Destinations </h2>
-        <p>
-          The world is now just a hop, skip and jump away and here’s how you can
-          make your travel easier and better.
-        </p>
-      </div>
+      <SectionTitle
+      heading='Trending Indian Destinations'
+      subHeading=' The world is now just a hop, skip and jump away and here’s how you can
+      make your travel easier and better.'
+      ></SectionTitle>
       <div className={style.destination}>
         <div>
           <Slider {...settings}>

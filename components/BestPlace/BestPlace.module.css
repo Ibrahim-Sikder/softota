@@ -2,7 +2,6 @@
   padding: 8px 0px;
   width: 100vw;
   overflow: hidden;
-  margin-top: 100px;
 
 }
 .destination {
@@ -31,11 +30,6 @@
 .swiperImg:hover {
   transform: scale(1.5);
 }
-
-.trendingHead {
-  width: 800px;
-  margin: 0px auto;
-}
 .trending {
   height: 362px;
   background: #ffffff;
@@ -55,26 +49,6 @@
 }
 .trending img {
   width: 100%;
-}
-.trendingHead {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.trendingHead h2 {
-  font-family: "Poppins";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 54px;
-    color: #092e3d;
-}
-.trendingHead p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: black;
 }
 .trending .city {
   height: 54px;
@@ -160,10 +134,6 @@
   .trending img {
     width: 100% !important;
   }
-  .trendingHead {
-    margin-bottom: 15px;
-    width: 80%;
-  }
   .singleBestPlace{
     width: 100%;
     margin-left: 100px;
@@ -195,18 +165,9 @@
     width: 100%;
     margin-left: 0px;
   }
-  .trendingHead {
-    width: 100%;
-    padding: 10px;
-  }
 }
 
 @media only screen and (max-width: 500px) {
-  .trendingHead h2 {
-    font-size: 25px;
-    line-height: 29px;
-    margin-bottom: 20px;
-  }
   .bestPlaceWrap {
     padding: 0px 0px;
 }

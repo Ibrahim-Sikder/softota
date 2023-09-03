@@ -24,13 +24,13 @@ const BusBanner = () => {
             <div className={style.package}>
               <div>
                 <h4>Travel From </h4>
-                <input type="text " placeholder="Enter your city" />
+                <input type="text " placeholder="Enter Your City " />
               </div>
             </div>
             <div className={style.package2}>
               <div>
                 <h4>Travel To </h4>
-                <input type="text " placeholder="Bangladesh" />
+                <input type="text " placeholder="Enter Your City" />
               </div>
             </div>
           </div>
@@ -52,7 +52,10 @@ const BusBanner = () => {
               </div>
             </div>
           </div>
-          <button className={style.heroBoxBtn}>Get Your Ticket</button>
+          <Link href="/busses/searchbuss">
+            {" "}
+            <button className={style.heroBoxBtn}>Get Your Ticket</button>
+          </Link>
 
           {/* menubar */}
           <div className={style.desktopMenu}>

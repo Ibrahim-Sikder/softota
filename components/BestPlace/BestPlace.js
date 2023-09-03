@@ -5,17 +5,16 @@ import cox from "../../public/assets/cox.jpg";
 import see from "../../public/assets/shylet.jpg";
 import see3 from "../../public/assets/see3.png";
 import Link from "next/link";
+import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 const BestPlace = () => {
   return (
     <section className={style.bestPlaceWrap}>
-      <div className={style.trendingHead}>
-        <h2>Best Places To Visit In Bangladesh</h2>
-        <p>
-          Bangladesh is a South Asian country with a rich cultural heritage and
-          natural beauty. It is home to the world s largest mangrove forest,
-          culture, and natural beauty.
-        </p>
-      </div>
+      <SectionTitle
+      subHeading=' Bangladesh is a South Asian country with a rich cultural heritage and
+      natural beauty. It is home to the world s largest mangrove forest,
+      culture, and natural beauty.'
+      heading='Best Places To Visit In Bangladesh'
+      ></SectionTitle>
       <div>
         <div className={style.singleBestPlace}>
           <div className="max-w-screen-xl mx-auto px-4 pt-8 pb-10">

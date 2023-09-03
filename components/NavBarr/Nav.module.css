@@ -87,30 +87,10 @@
   border-radius: 10px;
   display: flex;
   overflow: hidden;
-  justify-content: space-between;
   width: 40%;
-}
-.inputDiv input {
-  height: 43px;
-  width: 80%;
-  border: none;
-  padding-left: 20px;
-  background: transparent;
-}
-.inputDiv input:focus {
-  outline: none;
-}
-.inputDiv input::placeholder {
-  color: black !important;
-}
-
-.inputIcon {
-  width: 20%;
-  height: 100%;
-  cursor: pointer;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  padding-left: 5px;
+  font-size: 14px;
 }
 .inputButtons {
   width: 20%;
@@ -155,13 +135,6 @@
 .navigationMain {
   display: block;
 }
-.navigationMOb {
-  display: none;
-}
-.activeNavMob {
-  display: none;
-}
-
 
 .wrapMenu li{
   display: flex;
@@ -209,24 +182,12 @@
   .navigationMain {
     display: block;
   }
-  .navigationMOb {
-    display: none;
-  }
-  .activeNavMob {
-    display: none;
-  }
 }
 .bar{
   display: none;
 }
 /* Styles for tablets */
 @media (max-width: 1024px) {
-  .navigationMOb {
-    display: none;
-  }
-  .activeNavMob {
-    display: none;
-  }
   .navigationMain {
     display: block;
   }
@@ -279,64 +240,9 @@
   .inputDiv {
     display: none;
 }
-  .navigationMOb {
-    display: flex;
-    height: 69px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 5px;
-  }
-  .takeOf {
-    color: #26ade2 !important;
-    cursor: pointer;
-    font-size: 25px;
-    display: none;
-
-  }
+ 
   .aboutHiden{
     display: none;
-  }
-  .landOf {
-    color: white;
-    cursor:pointer;
-    font-size:25px ;
-  }
-  .activeNavMob {
-    width: 100%;
-    height: 100vh;
-    background: #26ade2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .iconsMobNav {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    padding: 0px 20px;
-    height: 100px;
-    display: none;
-  }
-  .inputDivMOb {
-    width: 80%;
-    height: 43px;
-    background: #e9f6e9;
-    border: 1px solid #4ab449;
-    border-radius: 10px;
-    display: flex;
-    overflow: hidden;
-    justify-content: space-between;
-  }
-  .inputDivMOb input {
-    height: 43px;
-    width: 80%;
-    border: none;
-    padding-left: 20px;
-    background: transparent;
-  }
-  .inputDivMOb input:focus {
-    outline: none;
   }
   .inputButtons {
     display: none;;

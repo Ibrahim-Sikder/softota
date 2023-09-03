@@ -6,7 +6,6 @@ import tours2 from '../../../public/assets/destination4.jpeg'
 import tours3 from '../../../public/assets/destination10.jpeg'
 import { StarOutline, Block, KeyboardBackspace } from '@mui/icons-material';
 import Link from 'next/link';
-
 const ToursSearch = () => {
     return (
         <div>

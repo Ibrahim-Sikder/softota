@@ -3,6 +3,9 @@ import style from "./ToursReserve.module.css";
 import tours from "../../../public/assets/destination8.jpeg";
 import tours2 from "../../../public/assets/tours3.jpeg";
 import tours3 from "../../../public/assets/destination16.jpg";
+import tours4 from "../../../public/assets/destination16.jpg";
+import tours5 from "../../../public/assets/destination16.jpg";
+import tours6 from "../../../public/assets/destination16.jpg";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -12,17 +15,32 @@ import {
   MobileOff,
   Language,
   CheckCircleOutline,
-  LocalPhone
+  LocalPhone,
 } from "@mui/icons-material";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import TourPackage from "../TourPackage/TourPackage";
+
+
+import LightGallery from 'lightgallery/react';
+
+// import styles
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
+
+// import plugins if you need
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
+
 
 const ToursReserve = () => {
   return (
-    <div className={style.galleryWrap}>
+    <div className={style.TourReserveWrap}>
+      <div className={style.galleryWrap}>
       <div className="my-3">
         <h3 className="font-bold text-2xl">
           Fascinating Old Dhaka and Ship Breaking Yard Day Trip
@@ -39,7 +57,38 @@ const ToursReserve = () => {
       <div className={style.galleryWraps}>
         <div className={style.galleryleftSide}>
           <div className={style.leftSideImgWrap}>
-            <Image alt="tours2" src={tours} className={style.gallaryImg} />
+
+          <div>
+            <LightGallery
+                speed={500}
+                plugins={[lgThumbnail, lgZoom]}
+            >
+                <a href="https://c1.wallpaperflare.com/preview/860/689/115/tour-packages-travel-tourism.jpg">
+                <Image alt="tours2" src={tours} className={style.gallaryImg} />
+                </a>
+                <a href="https://e7.pngegg.com/pngimages/823/324/png-clipart-package-tour-travel-agent-flight-tour-operator-travel-city-computer-wallpaper.png">
+                <Image  alt="tours3" src={tours} className='hidden'/>
+                </a>
+                <a href="https://e7.pngegg.com/pngimages/823/324/png-clipart-package-tour-travel-agent-flight-tour-operator-travel-city-computer-wallpaper.png">
+                <Image  alt="tours2" src={tours} className='hidden'/>
+                </a>
+                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm6mjKewpMkSiPyX5ToX_Nrpw6c_OEdboKAz5Gqp4osv7QRuCt-liej9G2iVD8PaAPyPc&usqp=CAU">
+                <Image  alt="tours4" src={tours} className='hidden'/>
+                </a>
+                <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
+                <Image  alt="tours5" src={tours} className='hidden'/>
+                </a>
+                <a href="https://img.freepik.com/free-photo/umbrella-chair-around-swimming-pool_1203-2419.jpg?w=2000">
+                <Image  alt="tours2" src={tours} className='hidden'/>
+                </a>
+                <a href="https://img.freepik.com/free-photo/hammocks-placed-row_1203-190.jpg">
+                <Image  alt="tours6" src={tours} className='hidden'/>
+                </a>
+            </LightGallery>
+        </div>
+
+
+           
           </div>
           <div className="mt-5">
             <strong className="mb-3">About</strong>
@@ -104,14 +153,11 @@ const ToursReserve = () => {
                       <ul>
                         <li>
                           <span>
-                            <CheckCircleOutline
-                              className={style.checkIcon}
-                            />{" "}
-                          </span>{" "}
-                          Local taxes{" "}
+                            <CheckCircleOutline className={style.checkIcon} />
+                          </span>
+                          Local taxes
                         </li>
                         <li>
-                          {" "}
                           <span>
                             {" "}
                             <CheckCircleOutline
@@ -151,13 +197,11 @@ const ToursReserve = () => {
                           Private Tour{" "}
                         </li>
                         <li>
-                          {" "}
                           <span>
-                            {" "}
                             <CheckCircleOutline
                               className={style.checkIcon}
-                            />{" "}
-                          </span>{" "}
+                            />
+                          </span>
                           transport by private vehicle{" "}
                         </li>
                       </ul>
@@ -166,7 +210,7 @@ const ToursReserve = () => {
                 </AccordionDetails>
               </Accordion>
             </div>
-            
+
             <div className="my-5">
               <Accordion className={style.accordion}>
                 <AccordionSummary
@@ -178,19 +222,22 @@ const ToursReserve = () => {
                   className={style.accordonSummary}
                 >
                   <Typography className={style.accordionTypo}>
-                  Accessibility
-
+                    Accessibility
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={style.accordionDetails}>
                   <Typography className={style.accordionTypos}>
-                  <ul>
-                    <li>Not wheelchair accessible </li>
-                    <li>Near public transportation </li>
-                  </ul>
-                  <div className="mt-3">
-                    <p>If you have questions about accessibility, we’d be happy to help. Just call the number below and reference the product code: 90303P1</p>
-                  </div>
+                    <ul>
+                      <li>Not wheelchair accessible </li>
+                      <li>Near public transportation </li>
+                    </ul>
+                    <div className="mt-3">
+                      <p>
+                        If you have questions about accessibility, we’d be happy
+                        to help. Just call the number below and reference the
+                        product code: 90303P1
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -207,38 +254,54 @@ const ToursReserve = () => {
                   className={style.accordonSummary}
                 >
                   <Typography className={style.accordionTypo}>
-                  What to expect
-
+                    What to expect
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails className={style.accordionDetails}>
                   <Typography className={style.accordionTypos}>
-                 <div>
-                  <strong>Itinerary</strong>
-                  <p>This is a typical itinerary for this product</p>
-                  <p><strong>Stop At:</strong> Shipyard Road, Shipyard Rd, Khulna, Bangladesh</p>
-                  <p>Shipbuilding is a growing industry in Bangladesh with great potentials.</p>
                     <div>
-                      <strong>Duration: 1 hour</strong>
-                      <p><strong>Stop At:</strong> Baitul Mukarram Mosque, Dhaka City Bangladesh</p>
-                      <p>See the Central Mosque of Dhaka City from inside which is 10th largest mosque in the world.</p>
+                      <strong>Itinerary</strong>
+                      <p>This is a typical itinerary for this product</p>
+                      <p>
+                        <strong>Stop At:</strong> Shipyard Road, Shipyard Rd,
+                        Khulna, Bangladesh
+                      </p>
+                      <p>
+                        Shipbuilding is a growing industry in Bangladesh with
+                        great potentials.
+                      </p>
+                      <div>
+                        <strong>Duration: 1 hour</strong>
+                        <p>
+                          <strong>Stop At:</strong> Baitul Mukarram Mosque,
+                          Dhaka City Bangladesh
+                        </p>
+                        <p>
+                          See the Central Mosque of Dhaka City from inside which
+                          is 10th largest mosque in the world.
+                        </p>
+                      </div>
+                      <div>
+                        <strong>Duration: 1 hour</strong>
+                      </div>
                     </div>
-                    <div>
-                      <strong>Duration: 1 hour</strong>
-                    </div>
-                 </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
             </div>
-<div>
-  <h3 className="text-xl font-bold">We can help</h3>
-  <p>If you have questions about this tour or need help making your booking, we’d be happy to help. Just call the number below and reference the product code: 90303P1</p>
- <div className="mt-3">
- <strong> <LocalPhone className={style.checkIcon}/> +88 01885071488</strong>
- </div>
-</div>
-
+            <div>
+              <h3 className="text-xl font-bold">We can help !</h3>
+              <p>
+                If you have questions about this tour or need help making your
+                booking, we’d be happy to help. Just call the number below and
+                reference the product code: 90303P1
+              </p>
+              <div className="mt-3">
+                <strong>
+                  <LocalPhone className={style.checkIcon} /> +88 01885071488
+                </strong>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -286,6 +349,8 @@ const ToursReserve = () => {
           </div>
         </div>
       </div>
+      </div>
+     <TourPackage/>
     </div>
   );
 };

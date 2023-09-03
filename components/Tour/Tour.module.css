@@ -163,6 +163,7 @@
   font-size: 14px;
   color: #4ab449;
 }
+
 .bestPlaceHead {
   width: 650px;
   margin: 50px auto;
@@ -355,9 +356,6 @@
     width: 100%;
     margin-left: 50px;
   }
-  .bestPlaceHead {
-    bottom: 91px;
-  }
   .searchTrainBtn {
     bottom: 91px;
   }
@@ -423,28 +421,18 @@
   .destination {
     margin-left: 40px;
   }
-  .bestPlaceHead {
-    width: 100%;
-    margin-top: 94px;
-  }
+
 
   .tourTrending {
     width: 80% !important;
     margin-left: 3px !important;
   }
-  .bestPlaceHead p {
-    width: 78%;
-    margin: 0 auto;
-    margin-top: 7px;
-  }
+
   .searchTrainBtn button {
     padding: 10px 0px;
   }
   .travelFormWrap {
     margin-top: 25px;
-  }
-  .bestPlaceHead h2 {
-    font-size: 25px;
   }
 }
 

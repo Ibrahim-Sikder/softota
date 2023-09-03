@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./Train.module.css";
 import ActiveLink from "../Banner/ActiveLink";
+import { Link } from "react-router-dom";
 const TrainBanner = () => {
   return (
     <section className={style.train}>
@@ -280,6 +281,7 @@ const TrainBanner = () => {
             </div>
           </form>
           <div className={style.searchTrainBtn}>
+            <Link href='/train/searchTrain'></Link>
             <button>Get Your Ticket </button>
           </div>
         </div>
