@@ -3,19 +3,23 @@ import Link from "next/link";
 import Image from "next/image";
 import hotel from "../../../public/assets/hotel9.jpg";
 import hotel2 from "../../../public/assets/hotell3.jpeg";
-import hotel3 from "../../../public/assets/hotell4.jpeg";
-import hotel4 from "../../../public/assets/hotell5.jpeg";
+import hotel3 from "../../../public/assets/hotel14.jpg";
+import hotel4 from "../../../public/assets/hotel12.jpg";
 import hotel5 from "../../../public/assets/hotell6.jpeg";
+import hotel6 from "../../../public/assets/hotel16.jpg";
 import style from './HotelDetails.module.css'
 import { CheckCircleOutline } from "@mui/icons-material";
 import travel from "../../../public/assets/travel2.png";
-import Nav from "../../NavBarr/Nav";
-import Footer from "../../Footer/Footer";
+import LightGallery from "lightgallery/react";
+import "lightgallery/css/lightgallery.css";
+import "lightgallery/css/lg-zoom.css";
+import "lightgallery/css/lg-thumbnail.css";
+import lgThumbnail from "lightgallery/plugins/thumbnail";
+import lgZoom from "lightgallery/plugins/zoom";
 
 const HotelDetails = () => {
   return (
     <section>
-      <Nav />
       <div className={style.hotelDetailWraps}>
       <div className={style.hotelDetailTopBar}>
       <div className={style.detailHeadText}>
@@ -31,47 +35,153 @@ const HotelDetails = () => {
       <div className={style.hotelDetailWrap}>
         <div className={style.leftSideDetail}>
             <div className={style.topImagae}>
-              <Image
-              className={style.hotelImage}
-                src={hotel}
-                alt="Picture of the author"
-              />
+               <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                  <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
+                    <Image
+                      alt="tours2"
+                      src={hotel}
+                      className={style.hotelImage}
+                    />
+                  </a>
+                  <a href="https://wallpaperaccess.com/full/2690578.jpg">
+                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                  </a>
+                  <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
+                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                  </a>
+                  <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
+                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
+                    <Image alt="tours2"  src={hotel} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
+                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                  </a>
+                </LightGallery>
             </div>
             <div className={style.groupImgWrap}>
               <div className={style.groupImg}>
                 <div className={style.leftSideSimg}>
-                <Image
-                className={style.singleImg}
-                  src={hotel2}
-                  alt="Picture of the author"
-                />
+                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                  <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
+                    <Image
+                      alt="tours2"
+                      src={hotel2}
+                      className={style.singleImg}
+                    />
+                  </a>
+                  <a href="https://wallpaperaccess.com/full/2690578.jpg">
+                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                  </a>
+                  <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
+                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                  </a>
+                  <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
+                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
+                    <Image alt="tours2"  src={hotel} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
+                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                  </a>
+                </LightGallery>
                 </div>
                 <div className={style.leftSideSimg}>
-                <Image
-                className={style.singleImg}
-                width={500}
-                height={500}
-                  src={hotel4}
-                  alt="Picture of the author"
-                />
+                <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                  <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
+                    <Image
+                      alt="tours2"
+                      src={hotel4}
+                      className={style.singleImg}
+                    />
+                  </a>
+                  <a href="https://wallpaperaccess.com/full/2690578.jpg">
+                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                  </a>
+                  <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
+                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                  </a>
+                  <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
+                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
+                    <Image alt="tours2"  src={hotel} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
+                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                  </a>
+                </LightGallery>
                 </div>
               </div>
               <div className={style.groupImg}>
                 <div className={style.leftSideSimg}>
-                <Image
-                className={style.singleImg}
-                  src={hotel5}
-                  alt="Picture of the author"
-                />
+                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                  <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
+                    <Image
+                      alt="tours2"
+                      src={hotel5}
+                      className={style.singleImg}
+                    />
+                  </a>
+                  <a href="https://wallpaperaccess.com/full/2690578.jpg">
+                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                  </a>
+                  <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
+                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                  </a>
+                  <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
+                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
+                    <Image alt="tours2"  src={hotel} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
+                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                  </a>
+                </LightGallery>
                 </div>
                 <div className={style.leftSideSimg}>
-                <Image
-                className={style.singleImg}
-                width={500}
-                height={500}
-                  src={hotel3}
-                  alt="Picture of the author"
-                />
+                <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
+                  <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
+                    <Image
+                      alt="tours2"
+                      src={hotel3}
+                      className={style.singleImg}
+                    />
+                  </a>
+                  <a href="https://wallpaperaccess.com/full/2690578.jpg">
+                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                  </a>
+                  <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
+                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
+                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                  </a>
+                  <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
+                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
+                    <Image alt="tours2"  src={hotel} className="hidden" />
+                  </a>
+                  <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
+                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                  </a>
+                </LightGallery>
                 </div>
               </div>
             </div>
@@ -181,8 +291,6 @@ const HotelDetails = () => {
         </div>
       </div>
       </div>
-   
-      <Footer />
     </section>
   );
 };

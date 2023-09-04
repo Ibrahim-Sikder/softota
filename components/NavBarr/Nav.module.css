@@ -20,6 +20,11 @@
   width:100%;
   height:100%;
 }
+.phoneIcon{
+  color: #4AB449 !important;
+  font-size: 30px;
+  font-weight:bold;
+}
 
 .navbarBanner h2 {
   font-family: PoppinsRegular;
