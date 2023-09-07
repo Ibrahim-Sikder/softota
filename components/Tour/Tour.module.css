@@ -363,7 +363,8 @@
 
 @media only screen and (max-width: 500px) {
   .bannerWrap {
-    height: 485px;
+    margin-bottom: 126px;
+
   }
   .bannerWrap h2 {
     text-align: center;

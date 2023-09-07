@@ -269,27 +269,27 @@ const Umra = () => {
                 <ActiveLink href="/flight">
                   <li className={style.activeLink}>
                     <Flight className={style.mobileMenuIcons} />
-                    <p className="ml-3">Flight</p>
+                    <p>Flight</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/hotel">
                   <li>
                     <Hotel className={style.mobileMenuIcon} />
 
-                    <p className="ml-3">Hotel</p>
+                    <p>Hotel</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
                     <BookOnline className={style.mobileMenuIcon} />
-                    <p className="ml-3">Visa</p>
+                    <p>Visa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
                   <li>
                     <TransferWithinAStation className={style.mobileMenuIcon} />
 
-                    <p className="ml-3">Tours</p>
+                    <p>Tours</p>
                   </li>
                 </ActiveLink>
               </div>
@@ -303,7 +303,7 @@ const Umra = () => {
                 <Link href='/hajjUmra/umrahPackage'><button>Umrah Package </button></Link>
             </div>
             <div className={style.rightPlaceForYou}>
-           <h6>If you want to do Hajj & Umrah at the very low cost then this is the right package for you !</h6>
+           <h6>If you want to do Hajj & Umrah at the very low cost then this is the right place for you !</h6>
             </div>
           </div>
 

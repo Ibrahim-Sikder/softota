@@ -69,17 +69,6 @@ const SignUp = () => {
             </div>
             {errors.name && <p className="text-red-500" role="alert">{errors.name?.message}</p>}
             <div className="mb-5">
-              <label className={style.inputLabel}>Photo URL</label> <br />
-              <input
-                type="text"
-                name="photo"
-                placeholder="Photo URL"
-                className={style.loginInput}
-                {...register("photo", { required: "Photo URL is required" })}
-              />
-            </div>
-            {errors.photo && <p className="text-red-500" role="alert">{errors.photo?.message}</p>}
-            <div className="mb-5">
               <label className={style.inputLabel}>Email Address</label> <br />
               <input
                 type="email"
@@ -121,7 +110,7 @@ const SignUp = () => {
             <div className="mb-5 ml-16 sm:ml-8 mt-5">
               <Link href="/signupAgent">
                 <button className={style.loginBtn2} type="submit">
-                  Sign Up as Agent
+                  Apply For Agent
                 </button>
               </Link>
             </div>

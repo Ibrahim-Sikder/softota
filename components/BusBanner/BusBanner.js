@@ -20,43 +20,7 @@ const BusBanner = () => {
       <div className={style.bannerWrap}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
-          <div className={style.packageWrap}>
-            <div className={style.package}>
-              <div>
-                <h4>Travel From </h4>
-                <input type="text " placeholder="Enter Your City " />
-              </div>
-            </div>
-            <div className={style.package2}>
-              <div>
-                <h4>Travel To </h4>
-                <input type="text " placeholder="Enter Your City" />
-              </div>
-            </div>
-          </div>
-          <div className={style.packageWrap}>
-            <div className={style.packageDate}>
-              <div className={style.date}>
-                <h4>Depart To </h4>
-                <input type="date" />
-              </div>
-              <div className={style.date2}>
-                <h4>Return To </h4>
-                <input type="date" />
-              </div>
-            </div>
-            <div className={style.package4}>
-              <div>
-                <h4>Passengers & Seat Class</h4>
-                <input type="text " placeholder="1 person" />
-              </div>
-            </div>
-          </div>
-          <Link href="/busses/searchbuss">
-            {" "}
-            <button className={style.heroBoxBtn}>Get Your Ticket</button>
-          </Link>
-
+          
           {/* menubar */}
           <div className={style.desktopMenu}>
             <ul className={style.menu}>
@@ -327,6 +291,45 @@ const BusBanner = () => {
               </div>
             </ul>
           </div>
+
+          <div className={style.packageWrap}>
+            <div className={style.package}>
+              <div>
+                <h4>Travel From </h4>
+                <input type="text " placeholder="Enter Your City " />
+              </div>
+            </div>
+            <div className={style.package2}>
+              <div>
+                <h4>Travel To </h4>
+                <input type="text " placeholder="Enter Your City" />
+              </div>
+            </div>
+          </div>
+          <div className={style.packageWrap}>
+            <div className={style.packageDate}>
+              <div className={style.date}>
+                <h4>Depart To </h4>
+                <input type="date" />
+              </div>
+              <div className={style.date2}>
+                <h4>Return To </h4>
+                <input type="date" />
+              </div>
+            </div>
+            <div className={style.package4}>
+              <div>
+                <h4>Passengers & Seat Class</h4>
+                <input type="text " placeholder="1 person" />
+              </div>
+            </div>
+          </div>
+          <Link href="/busses/searchbuss">
+            {" "}
+            <button className={style.heroBoxBtn}>Get Your Ticket</button>
+          </Link>
+
+
         </div>
       </div>
     </section>

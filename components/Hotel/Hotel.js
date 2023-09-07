@@ -471,26 +471,26 @@ const Hotel = () => {
                 <ActiveLink href="/flight">
                   <li className={style.activeLink}>
                     <Flight className={style.mobileMenuIcons} />
-                    <p className="ml-3">Flight</p>
+                    <p>Flight</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/hotel">
                   <li>
                     <KingBed className={style.mobileMenuIcons} />
-                    <p className="ml-3">Hotel</p>
+                    <p>Hotel</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
                     <BookOnline className={style.mobileMenuIcon} />
-                    <p className="ml-3">Visa</p>
+                    <p>Visa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
                   <li>
                     <TransferWithinAStation className={style.mobileMenuIcon} />
 
-                    <p className="ml-3">Tours</p>
+                    <p>Tours</p>
                   </li>
                 </ActiveLink>
               </div>

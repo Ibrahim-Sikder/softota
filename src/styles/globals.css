@@ -233,6 +233,9 @@ input::placeholder {
   z-index: 99;
   border-radius: 50%;
 }
+.mobileMenuWraps p{
+  margin-left:5px;
+ }
 
 
 
@@ -273,6 +276,10 @@ input::placeholder {
     align-items: center;
     margin-right: 199px;
   }
+  .mobileMenuWraps p{
+    margin-left:0px;
+   }
+  
   label + .css-v4u5dn-MuiInputBase-root-MuiInput-root {
     margin-top: 16px;
     width: 50% !important;

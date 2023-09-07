@@ -103,6 +103,16 @@ const SignUpAgent = () => {
                 />
               </div>
               <div className="mb-5 relative">
+                <label className={style.loginLabel}>Confirm Password</label> <br />
+                <input
+                  onChange={(event) => setPassword(event.target.value)}
+                  type="password"
+                  name="confirmPassword"
+                  placeholder="Confir Password"
+                  className={style.loginInput}
+                />
+              </div>
+              <div className="mb-5 relative">
                 <label className={style.loginLabel}>Mobile Number</label> <br />
                 <input
                   onChange={(event) => setNumber(event.target.value)}
@@ -113,11 +123,11 @@ const SignUpAgent = () => {
                 />
               </div>
               <div className="mb-5 relative">
-                <label className={style.loginLabel}>Agent Number </label> <br />
+                <label className={style.loginLabel}>Company Name </label> <br />
                 <input
                   onChange={(event) => setAnumber(event.target.value)}
                   name="anumber"
-                  type="number"
+                  type="text"
                   placeholder="Agent Number"
                   className={style.loginInput}
                 />

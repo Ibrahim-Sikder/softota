@@ -125,7 +125,6 @@ const VisaSearch = () => {
                 >
                   <option value="Govt. Job Holder">Govt. Job Holder</option>
                   <option value="Private Job Holder">Private Job Holder</option>
-                  <option value="Private Job Holder">Private Job Holder</option>
                   <option value="Student">Student</option>
                   <option value="Non Student">Non Student</option>
                   <option value="House Wife">House Wife </option>
