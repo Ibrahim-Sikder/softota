@@ -16,6 +16,8 @@ import TextField from "@mui/material/TextField";
 import ActiveLink from "./ActiveLink";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import CalendarComonent from "../Calendar/CalendarComonent";
+
 
 const Banner = ({ setResults }) => {
   const [child, setChild] = useState(0);
@@ -32,6 +34,7 @@ const Banner = ({ setResults }) => {
   const [selected2, setSelected2] = useState([]);
   const [mobActive, setMobActive] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
+
 
   // for tab
 
@@ -129,7 +132,9 @@ const Banner = ({ setResults }) => {
     setData2([]);
   };
 
-  const [inputList, setinputList] = useState([{ flyingFrom: "", flyingTo: "", date: "" },]);
+  const [inputList, setinputList] = useState([
+    { flyingFrom: "", flyingTo: "", date: "" },
+  ]);
 
   const handleinputchange = (e, index) => {
     const { name, value } = e.target;
@@ -147,6 +152,7 @@ const Banner = ({ setResults }) => {
   const handleaddclick = () => {
     setinputList([...inputList, { flyingFrom: "", flyingTo: "", date: "" }]);
   };
+
 
   return (
     <div>
@@ -691,6 +697,8 @@ const Banner = ({ setResults }) => {
                           <h4>Depart To</h4>
                           <input type="date" />
                         </div>
+                      
+
                         <div className={style.date2}>
                           <h4>Return To </h4>
                           <input type="date" />

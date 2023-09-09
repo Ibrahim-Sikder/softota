@@ -18,6 +18,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import style from "../../../components/Tour/Tour.module.css";
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
+import SeeMoreButton from "../../Shared/SeeMoreButton/SeeMoreButton";
 const HotelTrending = () => {
   var settings = {
     infinite: true,
@@ -84,7 +85,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -109,7 +110,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -134,7 +135,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -159,7 +160,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -184,7 +185,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -209,7 +210,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -234,7 +235,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -259,7 +260,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -284,7 +285,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -309,7 +310,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -334,7 +335,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -359,15 +360,17 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
             </div>
           </Slider>
+          <SeeMoreButton/>
         </div>
       </div>
-      {/* trending Indian destination  */}
+   
+      
     </section>
   );
 };

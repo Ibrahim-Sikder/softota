@@ -7,6 +7,7 @@ import TourDestination from "../../../components/Tour/TourDestination";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
+import CalendarComonent from "../../../components/Calendar/CalendarComonent";
 
 const index = () => {
   return (
@@ -16,6 +17,7 @@ const index = () => {
         </Helmet>
       <Nav />
       <Banner></Banner>
+      <CalendarComonent/>
       <TourDestination></TourDestination>
       <Travel></Travel>
       <FlightMission></FlightMission>

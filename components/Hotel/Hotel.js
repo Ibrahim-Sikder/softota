@@ -32,6 +32,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import ActiveLink from "../Banner/ActiveLink";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
+import SeeMoreButton from "../Shared/SeeMoreButton/SeeMoreButton";
 
 const Hotel = () => {
   const [activeToggleMenu, setActiveToggleMenu] = useState(false);
@@ -531,7 +532,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -558,7 +559,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -587,7 +588,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -614,7 +615,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -641,7 +642,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -670,7 +671,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -697,7 +698,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -724,7 +725,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -751,7 +752,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -778,7 +779,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -805,7 +806,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -832,7 +833,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -859,12 +860,13 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/detailHotel">
+              <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
             </div>
           </Slider>
+          <SeeMoreButton/>
         </div>
       </div>
     </section>

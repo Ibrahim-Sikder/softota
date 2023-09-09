@@ -1,8 +1,8 @@
 .seeMoreDestination{
-    width: 210px;
+    width: 165px;
     height: 40px;
-    background: #4AB449;
-    color: white;
+    border:1px solid #4AB449;
+    color: #4AB449;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,9 +10,19 @@
     float: right;
     margin-right: 20px;
     margin-top: 10px;
+    border:1px solid #4AB449;
+    transition:all .5s ease-in-out;
+  }
+  .seeMoreDestination:hover{
+    background:#4AB449;
+    color:white;
   }
   .seeMoreBtn{
     margin-left: 5px;
     font-weight: bold;
     font-size: 19px;
+    color: #4AB449 !important;
+  }
+  .seeMoreDestination:hover .seeMoreBtn{
+    color:white !important;
   }

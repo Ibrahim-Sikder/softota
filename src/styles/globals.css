@@ -132,10 +132,7 @@ input::placeholder {
   margin-bottom: 8px;
 }
 
-/* .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  background: #4ab449;
-  color: white;
-} */
+
 .css-1aquho2-MuiTabs-indicator {
   background-color: #4ab449;
 }
@@ -154,18 +151,7 @@ input::placeholder {
   border-radius: 3px;
 }
 
-/* .css-1elwnq4-MuiPaper-root-MuiAccordion-root {
-  background-color: #19ABE3;
-  color: #fff ;
-  border-radius: 4px;
-  box-shadow:none !important;
-  position: relative;
-  -webkit-transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  overflow-anchor: none;
-  border-radius: 0;
-  margin-bottom: -22px !important;
-} */
+
 .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
   background-color: #4AB449 ;
   padding: 0px ;
@@ -208,31 +194,7 @@ input::placeholder {
 }
 
 
-.slick-prev {
-  left: -25px !important;
-  color: #fff !important;
-  background: #4AB449 !important;
-  width: 35px !important;
-  height: 35px !important;
-  text-align: center;
-  top: 200px !important;
-  border: 1px solid #4AB449;
-  z-index: 99;
-  border-radius: 50%;
 
-}
-.slick-next {
-  right: -8px !important;
-  color: #fff !important;
-  background: #4AB449 !important;
-  width: 35px !important;
-  height: 35px !important;
-  text-align: center;
-  top: 200px !important;
-  border: 1px solid #4AB449;
-  z-index: 99;
-  border-radius: 50%;
-}
 .mobileMenuWraps p{
   margin-left:5px;
  }
@@ -313,10 +275,6 @@ input::placeholder {
 }
 .react-tabs__tab--selected{
   background:#4AB449 !important;
-}
-.slick-prev {
-  left: -11px !important;
-
 }
 
 }
