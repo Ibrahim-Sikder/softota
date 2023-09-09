@@ -1,5 +1,5 @@
 import React from "react";
-import style from "../../components/Vissa/Vissa.module.css";
+import style from "../../components/Vissa/Visa.module.css";
 import Link from "next/link";
 import { FaSistrix } from "react-icons/fa";
 import styling from "./TourHeroBox.module.css";

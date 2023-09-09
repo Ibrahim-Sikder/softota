@@ -8,7 +8,7 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import styles from '../manage.module.css'
 import { CloudUpload } from '@mui/icons-material';
 
-const tours = () => {
+const Train = () => {
   return (
     <section>
       <div className={style.sideBarWrap}>
@@ -22,7 +22,7 @@ const tours = () => {
           <div className="mt-5">
             <div className={styling.profileTop}>
               <div className={styling.flightHistory}>
-               <h2 className="text-3xl font-bold text-center">Tours Data Input </h2>
+               <h2 className="text-3xl font-bold text-center">Train Data Input </h2>
                <div className="w-full mx-auto">
                <form>
                     <div className={styles.formControl}>
@@ -184,4 +184,4 @@ const tours = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(tours), { ssr: false });
+export default dynamic(() => Promise.resolve(Train), { ssr: false });

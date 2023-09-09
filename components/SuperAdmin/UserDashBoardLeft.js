@@ -231,7 +231,7 @@ const UserDashBoardLeft = () => {
                         Buses Data Input</Link>
                       </li>
                       <li>
-                        <Train className={style.flightIcons} /> Trains Data Input
+                      <Link href='/admin/manage/train'>  <Train className={style.flightIcons} /> Trains Data Input</Link>
                       </li>
                       <li>
                       <Link href='/admin/manage/hajjUmrah'><Train className={style.flightIcons} /> Hajj & Umrah Data Input</Link>

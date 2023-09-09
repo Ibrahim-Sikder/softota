@@ -7,7 +7,6 @@
 }
 .packageLeftSide{
     width: 25%;
-    margin-left: 10px;
 }
 .packageRightSide{
     width:75%;
@@ -88,6 +87,21 @@
     font-size: 14px;
     margin-bottom: 5px;
 }
+.LeftSideWrap{
+    width:100%;
+    overflow: hidden;
+}
+.packages p{
+    background: #4AB449;
+    color: white;
+    margin-bottom: 5px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    padding-left: 6px;
+    border-radius: 3px;
+    width: 305px;
+}
 @media only screen and (max-width:1024px){
     .packageWrap {
         display: block;
@@ -103,6 +117,9 @@
     
 }
 @media only screen and (max-width:768px){
+    .packageCard {
+        height: 295px;
+    }
     .cardIconText p {
         font-size: 14px;
     }
@@ -117,6 +134,9 @@
     .Package_packageCard__se_zd:hover {
         box-shadow: #4AB449 0px 14px 28px, #4AB449 0px 10px 10px;
         display: block;
+    }
+    .packages p{
+        width: 100%;
     }
 }
 @media only screen and (max-width:600px){

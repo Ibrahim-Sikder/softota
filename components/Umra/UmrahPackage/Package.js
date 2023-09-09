@@ -4,14 +4,50 @@ import Image from 'next/image';
 import umrah from '../../../public/assets/umraOffer.jpg'
 import packagae from '../../../public/assets/umrah.jpg'
 import { Beenhere } from '@mui/icons-material';
-import hajj from '../../../public/assets/hajj.png'
 import hajj2 from '../../../public/assets/hajj2.png'
+import umrah2 from '../../../public/assets/umra2.jpg'
 import Link from 'next/link';
 import SectionTitle from '../../Shared/SectionTitle/SectionTitle';
 const Package = () => {
     return (
         <div>
            <div className={style.packageWrap}>
+           <div className={style.packageLeftSide}> 
+                   <div className={style.LeftSideWrap}>
+                   <div className={style.packages}>
+                        <p><Link href='/'>Home</Link></p>
+                        <p>Our Services</p>
+                        <p><Link href='/hajjUmra/hajj'>Hajj Package</Link></p>
+                        <p><Link href='/hajjUmra/umrahPackage'>Umrah Package</Link></p>
+                        <p>Facilities</p>
+                        <p>Guidance</p>
+                        <p>Blog</p>
+                        <p><Link href='/aboutUs'>About Us</Link></p>
+                    </div>
+                   <div className="leftSideOffer">
+                   <div className={style.umrahOffer}>
+                        <Image
+                        alt='umrah'
+                        src={umrah2}
+                        className={style.umraImage}
+                        />
+                        
+                    </div>
+                    <h2 className="text-xl font-bold text-center mt-2">Hajj Offer</h2>
+                   </div>
+                   <div className="leftSideOffer">
+                   <div className={style.umrahOffer}>
+                        <Image
+                        alt='umrah'
+                        src={hajj2}
+                        className={style.umraImage}
+                        />
+                        
+                    </div>
+                    <h2 className="text-xl font-bold text-center mt-2">Umrah Offer</h2>
+                   </div>
+                   </div>
+                </div>
            <div className={style.packageRightSide}> 
                     <div className={style.umraImage}>
                         <Image
@@ -204,34 +240,7 @@ const Package = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className={style.packageLeftSide}> 
-                   <div className={style.LeftSideWrap}>
-                   <div className="leftSideOffer">
-                   <div className={style.umrahOffer}>
-                        <Image
-                        alt='umrah'
-                        src={hajj}
-                        className={style.umraImage}
-                        />
-                        
-                    </div>
-                    <h2 className="text-xl font-bold text-center mt-2">Hajj Offer</h2>
-                   </div>
-                   <div className="leftSideOffer">
-                   <div className={style.umrahOffer}>
-                        <Image
-                        alt='umrah'
-                        src={hajj2}
-                        className={style.umraImage}
-                        />
-                        
-                    </div>
-                    <h2 className="text-xl font-bold text-center mt-2">Umrah Offer</h2>
-                   </div>
-                   </div>
-                </div>
-                
+            </div>
            </div>
         </div>
     );

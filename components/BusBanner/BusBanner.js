@@ -295,12 +295,29 @@ const BusBanner = () => {
           <div className={style.packageWrap}>
             <div className={style.package}>
               <div>
-                <h4>Travel From </h4>
-                <input type="text " placeholder="Enter Your City " />
+
+                <h4>Select Your Destination Country </h4>
+                <select>
+                  <option selected value="Bangladesh">Bangladesh</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Japan">Japan</option>
+                </select>
               </div>
             </div>
             <div className={style.package2}>
-              <div>
+              <div className={style.travelDestination}>
+                <h4>Travel From </h4>
+                <input type="text " placeholder="Enter Your City" />
+              </div>
+              <div className={style.travelDestination}>
                 <h4>Travel To </h4>
                 <input type="text " placeholder="Enter Your City" />
               </div>

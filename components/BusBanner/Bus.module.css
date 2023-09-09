@@ -58,13 +58,39 @@
   font-size: 14px;
   font-size: 14px;
 }
-.package input,
+.package2{
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:0px;
+}
+.package2 .travelDestination{
+  width: 50%;
+  border: 1px solid white;
+  height: 65px;
+  padding: 10px;
+  font-size: 14px;
+ 
+}
+.travelDestination:nth-child(1){
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+}
+.travelDestination:nth-child(2){
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.package select,
 .package2 input,
 .package3 input,
 .package4 input {
   width: 100%;
   background: transparent;
   font-size: 12px;
+}
+.package select option{
+  background:#19ABE3;
 }
 
 .date {
@@ -296,7 +322,9 @@
 
 @media only screen and (max-width: 768px) {
   .bannerWrap {
-    margin-bottom: 128px;
+  
+    margin-bottom: 63px;
+
 }
   .destination {
     width: 100%x;
@@ -423,7 +451,6 @@
   .package2 {
     width: 93%;
     left: 14px;
-    padding-left: 5px;
     top: 187px;
     height: 58px;
   }

@@ -1,6 +1,22 @@
 .signUpAgentWrap {
   width: 100vw;
-  text-align: center;
+  padding: 30px;
+}
+.signUpAgent{
+  display: flex;
+  justify-content: space-between;
+}
+.signUpAgenLeft{
+  width:300px;
+}
+.agentImg{
+  width:100%;
+}
+.formControl{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
 }
 .loginInput {
   width: 472px;
@@ -13,14 +29,33 @@
 .loginInput::placeholder{
   color:black !important;
 }
+.fileUpload{
+    height: 40px;
+    width: 49%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all .5 ease-in-out;
+    border: 1px solid #4AB449;
+    transition: all .5s cubic-bezier(0, -0.04, 0.99, 1.01);
+}
+.fileUpload:hover{
+  background: #4AB449;
+  color:white;
+}
+.uploadIcon{
+  font-size: 25px;
+  margin-right: 5px;
+  color:#4AB449 !important;
+}
 .loginBtn {
-  width: 323px;
+  width: 295px;
   height: 45px;
   background: #4ab449;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 50px;
   color: white;
-  transition:all .5s ease;
+  transition: all .5s ease;
 }
 .loginLabel{
   position:absolute;
@@ -58,17 +93,34 @@
   .signUpAgentWrap {
     width: 100%;
   }
+  .signUpAgent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 }
 @media only screen and (max-width: 768px) {
   .signUpAgentWrap {
     width: 100%;
   }
+  .formControl {
+    flex-direction: column;
+}
+.fileUpload {
+  width: 96%;
+}
+
+
 }
 @media only screen and (max-width: 500px) {
   .signUpAgentWrap {
     width: 100%;
   }
   .loginInput {
+    width: 100%;
+  }
+  .fileUpload {
     width: 100%;
   }
 }

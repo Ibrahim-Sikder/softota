@@ -6,54 +6,10 @@ import style from "./signupAgent.module.css";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
+import { CloudUpload } from '@mui/icons-material';
+import Link from "next/link";
+
 const SignUpAgent = () => {
-  // const [name, setName] = useState("");
-  // const [number, setNumber] = useState("");
-  // const [anumber, setAnumber] = useState("");
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const [title, setTitle] = useState("");
-  // const [loading, setLoading] = useState(false);
-
-  // const router = useRouter();
-  // const { createUser } = useContext(AuthContext);
-
-  // const handleSignUp = (event) => {
-  //   event.preventDefault();
-  //   const name = event.target.name.value;
-  //   const number = event.target.number.value;
-  //   const anumber = event.target.anumber.value;
-  //   const email = event.target.email.value;
-  //   const password = event.target.password.value;
-  //   const agent = { name, email, password, anumber, number };
-  //   createUser(email, password)
-  //     .then((result) => {
-  //       const user = result.user;
-  //       console.log(user);
-  //       toast.success("User Created Successfully");
-  //       router.push("/hotel");
-  //     })
-  //     .catch((err) => {
-  //       console.error(err);
-  //     });
-
-  //   try {
-  //     fetch("/api/blog", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(agent),
-  //     })
-  //       .then((res) => res.json())
-  //       .then((data) => setTitle(data));
-  //   } catch (err) {
-  //     console.log(err);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   return (
     <section>
       <Helmet>
@@ -61,82 +17,171 @@ const SignUpAgent = () => {
         </Helmet>
       <Nav />
       <div className={style.signUpAgentWrap}>
-        <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">
-          <div>
+        <div className={style.signUpAgent}>
+          <div className={style.signUpAgenLeft}>
             <Image
               src={login}
               alt="Picture of the author"
-              width={500}
-              height={500}
+             className={style.agentImg}
             />
           </div>
           <div>
             <form>
-              <div className="mb-5 relative">
-                <label className={style.loginLabel}>User Name</label> <br />
+             <div className={style.formControl}>
+             <div className="mb-5 md:mr-5 sm:mr-[0px] relative">
+                <label className={style.loginLabel}>Given Name</label> <br />
                 <input
-                  onChange={(event) => setName(event.target.value)}
                   name="name"
                   type="text"
-                  placeholder="User Name"
+                  placeholder="Given Name"
                   className={style.loginInput}
+                  required
+                />
+              </div>
+              <div className="mb-5 relative">
+                <label className={style.loginLabel}>Surname</label> <br />
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Surname"
+                  className={style.loginInput}
+                  required       
+
+                />
+              </div>
+             </div>
+             <div className={style.formControl}>
+             <div className="mb-5 relative">
+                <label className={style.loginLabel}>Company Name </label> <br />
+                <input
+                  name="anumber"
+                  type="text"
+                  placeholder="Company Name "
+                  className={style.loginInput}
+                  required
                 />
               </div>
               <div className="mb-5 relative">
                 <label className={style.loginLabel}>Email Address</label> <br />
                 <input
-                  onChange={(event) => setEmail(event.target.value)}
                   type="email"
                   name="email"
                   placeholder="Email"
                   className={style.loginInput}
+                  required
                 />
               </div>
+             </div>
+             <div className={style.formControl}>
+                
               <div className="mb-5 relative">
                 <label className={style.loginLabel}>Password</label> <br />
                 <input
-                  onChange={(event) => setPassword(event.target.value)}
                   type="password"
                   name="password"
                   placeholder="Password"
                   className={style.loginInput}
+                  required
                 />
               </div>
               <div className="mb-5 relative">
                 <label className={style.loginLabel}>Confirm Password</label> <br />
                 <input
-                  onChange={(event) => setPassword(event.target.value)}
                   type="password"
                   name="confirmPassword"
                   placeholder="Confir Password"
                   className={style.loginInput}
+                  required
                 />
               </div>
-              <div className="mb-5 relative">
+             </div>
+             <div className={style.formControl}>
+             <div className="mb-5 relative">
+                <label className={style.loginLabel}>Country Name</label> <br />
+                <select   className={style.loginInput}>
+                  <option selected value="Bangladesh">Bangladesh</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Japan">Japan</option>
+                </select>
+              </div>
+             <div className="mb-5 relative">
+                <label className={style.loginLabel}>City Name</label> <br />
+                <select    className={style.loginInput}>
+                  <option value="Dhaka">Dhaka</option>
+                  <option value="Bangkok">Bangkok</option>
+                  <option value="Tokyo">Tokyo</option>
+                  <option value="Kuala Lumpur">Kuala Lumpur</option>
+                  <option value="Jakarta">Jakarta</option>
+                  <option value="Beijing">Beijing</option>
+                  <option value="Singapore Island">Singapore Island</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Hanoi">Hanoi</option>
+                  <option value="Tehran">Tehran</option>
+                  <option value="Islamabad">Islamabad</option>
+                </select>
+              </div>
+             </div>
+             <div className={style.formControl}>
+                
+             <div className="mb-5 relative">
                 <label className={style.loginLabel}>Mobile Number</label> <br />
                 <input
-                  onChange={(event) => setNumber(event.target.value)}
                   name="number"
                   type="number"
                   placeholder="Number"
                   className={style.loginInput}
+                  required
                 />
               </div>
               <div className="mb-5 relative">
-                <label className={style.loginLabel}>Company Name </label> <br />
+                <label className={style.loginLabel}>Zip/Postal Code </label> <br />
                 <input
-                  onChange={(event) => setAnumber(event.target.value)}
-                  name="anumber"
+                  name="postcode"
                   type="text"
-                  placeholder="Agent Number"
+                  placeholder="Postal Code"
                   className={style.loginInput}
+                  required
                 />
               </div>
-              <div className="mb-5  mt-10">
+             </div>
+             <div className={style.fileUpload}>
+                      <div className={style.uploadFile}>
+                        <label for="files">
+                          {" "}
+                          <CloudUpload className={style.uploadIcon} /> Image
+                          Upload{" "}
+                        </label>
+                        <input
+                          name="image"
+                          className={style.inputField}
+                          type="file"
+                          id="files"
+                          class="hidden"
+                        />
+                      </div>
+                    </div>
+                    <div className="mt-5 flex">
+                      <input type="checkbox" />
+                     <small className="ml-2"> I agree with sharing the above mentioned information with Ghuronti.</small>
+                    </div>
+             <div className="text-center">
+             <div className="mb-5  mt-10">
                 <button className={style.loginBtn} type="submit">
                   Sign Up as Agent
                 </button>
               </div>
+              <div className="">
+                <small>Already a Partern?<Link href='/loginAgent'> <span className="text-[#4AB449]">Login Now</span></Link></small>
+              </div>
+             </div>
             </form>
           </div>
         </div>

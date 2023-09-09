@@ -13,6 +13,7 @@ import {
   Add,
   Groups2,
   HorizontalRule,
+  Search
 } from "@mui/icons-material";
 
 const Umra = () => {
@@ -299,12 +300,21 @@ const Umra = () => {
 
           <div className={style.hajjUmrapackageWrap}>
             <div className={style.hajjUmraPackage}>
-                <Link href='/hajjUmra/hajj'><button>Hajj Package </button></Link>
-                <Link href='/hajjUmra/umrahPackage'><button>Umrah Package </button></Link>
+                <select>
+                  <option value="Hajj Package">Hajj Package</option>
+                  <option value="Umrah Package">Umrah Package</option>
+                </select>
+                <Link href='hajjUmra/umrahPackage'>
+                <div className={style.searchBtnWrap}>
+                  <button> Search</button>
+                  <Search className={style.searchIcon}/> 
+               </div>
+                </Link>
+              
             </div>
-            <div className={style.rightPlaceForYou}>
+            {/* <div className={style.rightPlaceForYou}>
            <h6>If you want to do Hajj & Umrah at the very low cost then this is the right place for you !</h6>
-            </div>
+            </div> */}
           </div>
 
 

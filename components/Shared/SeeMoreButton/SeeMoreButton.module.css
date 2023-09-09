@@ -1,0 +1,18 @@
+.seeMoreDestination{
+    width: 210px;
+    height: 40px;
+    background: #4AB449;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 10px;
+  }
+  .seeMoreBtn{
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 19px;
+  }

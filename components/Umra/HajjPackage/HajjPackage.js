@@ -4,15 +4,51 @@ import Image from 'next/image';
 import umrah from '../../../public/assets/hajj3.jpg'
 import packagae from '../../../public/assets/umrah.jpg'
 import { Beenhere } from '@mui/icons-material';
-import hajj from '../../../public/assets/hajj.png'
 import hajj2 from '../../../public/assets/hajj2.png'
 import hajj3 from '../../../public/assets/hajj4.png'
 import Link from 'next/link';
-import SectionTitle from '../../Shared/SectionTitle/SectionTitle';
 const Package = () => {
     return (
         <div>
            <div className={style.packageWrap}>
+           <div className={style.packageLeftSide}> 
+                   <div className={style.LeftSideWrap}>
+                    <div className={style.packages}>
+                        <p><Link href='/'>Home</Link></p>
+                        <p><Link href='/'>Our Services</Link></p>
+                        <p><Link href='/hajjUmra/hajj'>Hajj Package</Link></p>
+                        <p><Link href='/hajjUmra/umrahPackage'>Umrah Package</Link></p>
+                        <p><Link href='/'>Facilities</Link></p>
+                        <p><Link href='/'>Guidance</Link></p>
+                        <p><Link href='/'>Blog</Link></p>
+                        <p><Link href='/aboutUs'>About Us</Link></p>
+                    </div>
+
+
+                   <div className="leftSideOffer">
+                   <div className={style.umrahOffer}>
+                        <Image
+                        alt='hajj3'
+                        src={hajj3}
+                        className={style.umraImage}
+                        />
+                        
+                    </div>
+                    <h2 className="text-xl font-bold text-center mt-2">Hajj Offer</h2>
+                   </div>
+                   <div className="leftSideOffer">
+                   <div className={style.umrahOffer}>
+                        <Image
+                        alt='umrah'
+                        src={hajj2}
+                        className={style.umraImage}
+                        />
+                        
+                    </div>
+                    <h2 className="text-xl font-bold text-center mt-2">Umrah Offer</h2>
+                   </div>
+                   </div>
+                </div>
            <div className={style.packageRightSide}> 
                     <div className={style.umraImage}>
                         <Image
@@ -21,12 +57,8 @@ const Package = () => {
                         className={style.umraImage}
                         />
                     </div>
-                    <SectionTitle
-                        heading='Most Popular Hajj Packages 2024 - 2025 from Dhaka, Bangladesh'
-                        subHeading='Holy Hajj & Umrah agency is not only offering you the best Umrah packages from Bangladesh but also ensures you perform your long desired journey to the two holy cities Makkah and Madinah. Our most knowledgeable and experienced Mu allim will guide you all the way.'
-                    ></SectionTitle>
                     <div className={style.umrahPackageCardWrap}>
-                        <h3 className="text-xl font-bold">Most Affordable Hajj Packages 2023-2024 from Dhaka, Bangladesh</h3>
+                        <h3 className="text-xl font-bold my-5">Most Affordable Hajj Packages 2023-2024 from Dhaka, Bangladesh</h3>
                         <div className={style.packageCardWrap}>
                             <div className={style.packageCard}>
                                 <div className={style.cardLeft}>
@@ -204,34 +236,7 @@ const Package = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className={style.packageLeftSide}> 
-                   <div className={style.LeftSideWrap}>
-                   <div className="leftSideOffer">
-                   <div className={style.umrahOffer}>
-                        <Image
-                        alt='hajj3'
-                        src={hajj3}
-                        className={style.umraImage}
-                        />
-                        
-                    </div>
-                    <h2 className="text-xl font-bold text-center mt-2">Hajj Offer</h2>
-                   </div>
-                   <div className="leftSideOffer">
-                   <div className={style.umrahOffer}>
-                        <Image
-                        alt='umrah'
-                        src={hajj2}
-                        className={style.umraImage}
-                        />
-                        
-                    </div>
-                    <h2 className="text-xl font-bold text-center mt-2">Umrah Offer</h2>
-                   </div>
-                   </div>
-                </div>
-                
+            </div>
            </div>
         </div>
     );

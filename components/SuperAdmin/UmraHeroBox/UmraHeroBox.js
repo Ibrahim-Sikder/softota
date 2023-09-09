@@ -16,23 +16,10 @@ const UmraHeroBox = () => {
 
   return (
     <section>
-      <div className={`${style.heroBoxMain} ${styling.umraHeroBoxMain}`}>
-        <div className={style.packageWrap}>
-          <div className={style.package2}>
-            <span>Hajj Package </span>
-            <span>Umra Package </span>
-          </div>
-        </div>
-
-        <div className={`${style.heroBoxBtnWrap} ${styling.tourBtn}`}>
-          <button className={style.heroBoxBtn}>
-            <h4>Get Your Package</h4>
-          </button>
-        </div>
-
-        {/* menubar */}
-        <div>
-          <ul className={style.menu}>
+       <div className={style.heroBoxMain}>
+          {/* menubar */}
+          <div className={style.menuWrap}>
+             <ul className={style.menu}>
             <div className={style.wrapMenu}>
               <ActiveLink href="/admin/umra">
                 <li className={style.firstChild}>
@@ -264,8 +251,19 @@ const UmraHeroBox = () => {
               </ActiveLink>
             </div>
           </ul>
+          </div>
+          <div className={style.hajjUmrapackageWrap}>
+            <div className={style.hajjUmraPackage}>
+                <Link href='/hajjUmra/hajj'><button>Hajj Package </button></Link>
+                <Link href='/hajjUmra/umrahPackage'><button>Umrah Package </button></Link>
+            </div>
+            <div className={style.rightPlaceForYou}>
+           <h6>If you want to do Hajj & Umrah at the very low cost then this is the right place for you !</h6>
+            </div>
+          </div>
+
+
         </div>
-      </div>
     </section>
   );
 };

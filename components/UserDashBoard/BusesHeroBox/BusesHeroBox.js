@@ -2,48 +2,14 @@ import React from "react";
 import styling from "./BusesHeroBox.module.css";
 import style from "../../../components/BusBanner/Bus.module.css";
 import ActiveLink from "../../Banner/ActiveLink";
+import Link from "next/link";
 const BusesHeroBox = () => {
   return (
     <section>
-      <div className={`${style.heroBoxMain} ${styling.busBtn}`}>
-        <div className={style.packageWrap}>
-          <div className={style.package}>
-            <div>
-              <h4>Travel From </h4>
-              <input type="text " placeholder="Enter your city" />
-            </div>
-          </div>
-          <div className={style.package2}>
-            <div>
-              <h4>Travel To </h4>
-              <input type="text " placeholder="Bangladesh" />
-            </div>
-          </div>
-        </div>
-        <div className={style.packageWrap}>
-          <div className={style.packageDate}>
-            <div className={style.date}>
-              <h4>Depart To </h4>
-              <input type="date" />
-            </div>
-            <div className={style.date2}>
-              <h4>Return To </h4>
-              <input type="date" />
-            </div>
-          </div>
-          <div className={style.package4}>
-            <div>
-              <h4>Passengers & Seat Class</h4>
-              <input type="text " placeholder="1 person" />
-            </div>
-          </div>
-        </div>
-        <button className={`${style.heroBoxBtn} ${styling.busBtn}`}>
-          Get Your Ticket
-        </button>
-
-        {/* menubar */}
-        <div>
+      <div className={style.heroBoxMain}>
+          
+          {/* menubar */}
+          <div className={style.desktopMenu}>
           <ul className={style.menu}>
             <div className={style.wrapMenu}>
               <ActiveLink href="/b2bsearch/umra">
@@ -167,7 +133,7 @@ const BusesHeroBox = () => {
                     </g>
                   </svg>
 
-                  <p className="ml-3">visa</p>
+                  <p className="ml-3">Visa</p>
                 </li>
               </ActiveLink>
               <ActiveLink href="/b2bsearch/tours">
@@ -276,8 +242,64 @@ const BusesHeroBox = () => {
               </ActiveLink>
             </div>
           </ul>
+          </div>
+
+          <div className={style.packageWrap}>
+            <div className={style.package}>
+              <div>
+
+                <h4>Select Your Destination Country </h4>
+                <select>
+                  <option selected value="Bangladesh">Bangladesh</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Japan">Japan</option>
+                </select>
+              </div>
+            </div>
+            <div className={style.package2}>
+              <div className={style.travelDestination}>
+                <h4>Travel From </h4>
+                <input type="text " placeholder="Enter Your City" />
+              </div>
+              <div className={style.travelDestination}>
+                <h4>Travel To </h4>
+                <input type="text " placeholder="Enter Your City" />
+              </div>
+            </div>
+          </div>
+          <div className={style.packageWrap}>
+            <div className={style.packageDate}>
+              <div className={style.date}>
+                <h4>Depart To </h4>
+                <input type="date" />
+              </div>
+              <div className={style.date2}>
+                <h4>Return To </h4>
+                <input type="date" />
+              </div>
+            </div>
+            <div className={style.package4}>
+              <div>
+                <h4>Passengers & Seat Class</h4>
+                <input type="text " placeholder="1 person" />
+              </div>
+            </div>
+          </div>
+          <Link href="/busses/searchbuss">
+            {" "}
+            <button className={style.heroBoxBtn}>Get Your Ticket</button>
+          </Link>
+
+
         </div>
-      </div>
     </section>
   );
 };

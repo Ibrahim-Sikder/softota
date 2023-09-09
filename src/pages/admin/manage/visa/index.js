@@ -22,7 +22,7 @@ const visa = () => {
           <div className="mt-5">
             <div className={styling.profileTop}>
               <div className={styling.flightHistory}>
-               <h2 className="text-3xl font-bold text-center">Hotel Data Input </h2>
+               <h2 className="text-3xl font-bold text-center">Visa Data Input </h2>
                <div className="w-full mx-auto">
                <form>
                     <div className={styles.formControl}>
@@ -116,10 +116,50 @@ const visa = () => {
                         />
                       </div>
                       <div>
-                        <label>Total Coast </label>
+                        <label>Embassy Fee </label>
                         <input
                           name="coast"
-                          placeholder="Total Coast "
+                          placeholder="Embassy Fee"
+                          type="text"
+                          className={styles.inputField}
+                        />
+                      </div>
+                    </div>
+                    <div className={styles.formControl}>
+                      <div>
+                        <label>Agent Fee </label>
+                        <input
+                          name="process"
+                          placeholder="Agent Fee"
+                          type="text"
+                          className={styles.inputField}
+                        />
+                      </div>
+                      <div>
+                        <label>Agency Fee </label>
+                        <input
+                          name="coast"
+                          placeholder="Agency Fee"
+                          type="text"
+                          className={styles.inputField}
+                        />
+                      </div>
+                    </div>
+                    <div className={styles.formControl}>
+                      <div>
+                        <label>Service Charge </label>
+                        <input
+                          name="process"
+                          placeholder="Service Charge"
+                          type="text"
+                          className={styles.inputField}
+                        />
+                      </div>
+                      <div>
+                        <label>Stya </label>
+                        <input
+                          name="stay"
+                          placeholder="Stay"
                           type="text"
                           className={styles.inputField}
                         />
@@ -144,18 +184,6 @@ const visa = () => {
                           className={styles.inputField}
                         />
                       </div>
-                    </div>
-                    <div className={styles.formControl}>
-                    <div>
-                        <label> Stay </label>
-                        <input
-                          name="tay"
-                          placeholder="Stay"
-                          type="text"
-                          className={styles.inputField}
-                        />
-                      </div>
-                     
                     </div>
                     <div className={styles.formControl}>
                       <div>

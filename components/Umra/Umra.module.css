@@ -84,25 +84,50 @@
 
 .hajjUmrapackageWrap{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 32px;
+  margin-top: 78px;
+}
+.hajjUmraPackage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hajjUmraPackage select{
+  width: 400px;
+  background: transparent;
+  border: 1px solid white;
+  height: 50px;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+}
+.hajjUmraPackage select option{
+  background:#2DAEA2;
+}
+.searchIcon{
+  font-size: 30px;
+  display: block;
+  font-weight: bold;
+
+}
+.searchBtnWrap{
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  color: white;
+  border: 1px solid white;
+  height: 50px;
+  border-radius: 5px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 6px;
+  transition:all .5s ease;
+}
+.searchBtnWrap:hover{
+  background-image: linear-gradient( 168deg,#4AB449, #19abe3) !important;
 }
 
-.hajjUmraPackage button{
-  width: 200px;
-  background: transparent;
-  margin-right: 10px;
-  height: 55px;
-  border-radius: 5px;
-  border: 1px solid #fff;
-  color: white;
-  transition: all .5s cubic-bezier(0.05, -0.02, 1, 1.07);
-}
-.hajjUmraPackage button:hover{
-  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
-}
 
 .rightPlaceForYou{
   color: white;
@@ -256,11 +281,7 @@
 .mobileMenuWraps{
   display: none;
 }
-.hajjUmraPackage{
-  display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 @media only screen and (max-width: 1024px) {
   .bannerWrap {
@@ -381,14 +402,6 @@
     align-items: center;
     justify-content: center;
   }
-  .hajjUmrapackageWrap {
-    margin-top: 55px;
-}
-.hajjUmraPackage button {
-  width: 188px;
-  height: 47px;
-}
-
 
 }
 @media only screen and (max-width: 500px) {
@@ -431,21 +444,11 @@
   }
 
 
-  .hajjUmraPackage {
-    flex-direction: column;
-}
 .rightPlaceForYou {
   padding: 0px 28px;
   width: 100%;
   line-height: 27px;
 }
-.hajjUmraPackage button {
-  margin-bottom: 10px;
-}
-.hajjUmrapackageWrap {
-  margin-top: 26px;
-}
-
 
 
 
