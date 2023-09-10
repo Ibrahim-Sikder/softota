@@ -1,11 +1,11 @@
 import React from "react";
 import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
 import style from "../../../../components/UserDashBoard/UserDashBoard.module.css";
-
 import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
 import Link from "next/link";
+import Footer from "../../../../components/Footer/Footer";
 const flight = () => {
   return (
     <section>
@@ -251,6 +251,7 @@ const flight = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

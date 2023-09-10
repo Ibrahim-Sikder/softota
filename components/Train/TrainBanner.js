@@ -2,7 +2,37 @@ import React from "react";
 import style from "./Train.module.css";
 import ActiveLink from "../Banner/ActiveLink";
 import { Link } from "react-router-dom";
+import {
+  Groups2,
+} from "@mui/icons-material";
+
+
+
 const TrainBanner = () => {
+  const [child, setChild] = useState(0);
+  const [adult, setAdult] = useState(0);
+  const [room, setRoom] = useState("1 Room");
+  
+  const childIncrement = () => {
+    setChild(child + 1);
+  };
+  const childDecrement = () => {
+    if (child < 1) {
+      setChild(0);
+    } else {
+      setChild(child - 1);
+    }
+  };
+  const incrementAdult = () => {
+    setAdult(adult + 1);
+  };
+  const decrementAdult = () => {
+    if (child < 1) {
+      setAdult(0);
+    } else {
+      setAdult(child - 1);
+    }
+  };
   return (
     <section className={style.train}>
       <div className={style.bannerWrap}>

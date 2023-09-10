@@ -5,19 +5,14 @@
 }
 .bannerWrap {
   position: relative;
-  background-image: url("../../public/assets/banner.png");
+  background-image: url(/_next/static/media/banner.f7be9e77.png);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100vw !important;
-  height: 433px;
+  height: 453px;
   box-sizing: border-box;
   background-position: center;
-  /* background: linear-gradient(
-          180deg,
-          rgba(230, 248, 255, 0.3) 0%,
-          rgba(230, 248, 255, 0.18) 0.01%,
-          rgba(38, 173, 226, 0.5) 100%
-        ); */
+  margin-bottom: 33px;
 }
 
 .bannerWrap h2 {
@@ -36,6 +31,7 @@
   border-radius: 37px;
   position: relative;
   top: 26px;
+  overflow: hidden;
 }
 .packageWrap {
   display: flex;
@@ -161,7 +157,7 @@ border-bottom-left-radius: 5px;
   left: 50%;
   transform: translateX(-50%);
   top: 290px;
-  background-image: linear-gradient(135deg, #278526, #4997b5);
+  background-image: linear-gradient(90deg, #4ab449, #19abe3) !important;
   color: white;
   font-size: 18px;
   border-radius: 5px;
@@ -170,7 +166,7 @@ border-bottom-left-radius: 5px;
   transition: all .5s cubic-bezier(0.32, 0.25, 0.5, 0.5);
 }
 .heroBoxBtn:hover{
-  background-image: linear-gradient(-135deg, #278526, #4997b5);
+  background-image: linear-gradient(90deg, #19abe3, #4ab449) !important;
 
 }
 /* menu styling  */
@@ -212,7 +208,7 @@ border-bottom-left-radius: 5px;
 }
  .lastChild{
   border-right: 1px solid #fff !important;
-  border-top-right-radius: 17px !important;
+  border-top-right-radius: 39px !important;
  }
 
 
@@ -241,6 +237,74 @@ border-bottom-left-radius: 5px;
   display: none;
  }
 
+/* modal styling */
+ .hotelModal{
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  color: white;
+  width: 405px;
+  padding-bottom: 46px;
+  margin-right: 260px;
+  margin-top: 220px;
+}
+.hotelModalCloseBtn{
+  color: white;
+  width: 32px;
+  font-size: 24px;
+}
+.guestRoomWrap{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.showModalIcon{
+  font-size: 25px;
+  margin-top: 17px;
+  cursor: pointer;
+
+}
+.groupIcon{
+  color: white !important;
+  font-size: 30px !important;
+  margin-right: 13px;
+  cursor:pointer;
+}
+.adultChildWrap{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 10px 0px;
+}
+.adultIncrementDecrement, .childIncrementDecrement{
+  display: flex;
+  justify-content: space-between;
+  width: 144px;
+  border: 1px solid #ddd;
+  padding: 7px 15px;
+}
+.childIncrementDecrement{
+  margin-left:5px;
+  }
+.adultIncrementDecrement small, .childIncrementDecrement small{
+  font-size: 20px;
+  cursor: pointer;
+}
+.roomSelect{
+  width: 293px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 0 auto;
+  display: flex;
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  color: white;
+}
+.roomSelect option{
+  color: white !important;
+  background: #169ACC !important;
+}
+
+
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
     width: 95%;
@@ -268,6 +332,14 @@ border-bottom-left-radius: 5px;
     left: 276px;
     border-left: none;
   }
+  
+  .hotelModal{
+    margin-right: 84px;
+    margin-top: 83px;
+}
+
+
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -379,6 +451,12 @@ border-bottom-left-radius: 5px;
     width: 100%;
     margin-top: 129px;
   }
+  
+  .hotelModal {
+    margin-right: 34px;
+    margin-top: 91px;
+    width: 83% !important;
+}
 
 }
 

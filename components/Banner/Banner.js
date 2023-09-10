@@ -16,7 +16,6 @@ import TextField from "@mui/material/TextField";
 import ActiveLink from "./ActiveLink";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import CalendarComonent from "../Calendar/CalendarComonent";
 
 
 const Banner = ({ setResults }) => {

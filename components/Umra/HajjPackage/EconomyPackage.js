@@ -1,20 +1,21 @@
-import style from "../UmrahPackage/Package.module.css";
-import umrah from "../../../public/assets/hajj3.jpg";
+import React from "react";
+import economy from "../../../public/assets/hajj5.jpeg";
 import HajjUmrahCard from "../../Shared/HajjUmraCard/HajjUmrahCard";
+import style from "../UmrahPackage/Package.module.css";
 import PackageLeftSide from "../UmrahPackage/PackageLeftSide";
-const HajjPackage = ({ heading, subheading }) => {
+const EconomyPackage = () => {
   return (
     <div>
       <div className={style.packageWrap}>
         <div className={style.packageLeftSide}>
-          <PackageLeftSide/>
+          <PackageLeftSide />
         </div>
         <div className={style.packageRightSide}>
           <HajjUmrahCard
-            img={umrah}
-            heading="Premium - Hajj Packages ( Non-Shifting)"
+            img={economy}
+            heading="Economy - Hajj Packages ( Non-Shifting)"
             subheading=""
-            title="Most Affordable Hajj Packages 2023-2024 from Dhaka, Bangladesh"
+            title="Offer Low-Cost Hajj Packages 2024 - 2025 from Bangladesh"
           ></HajjUmrahCard>
         </div>
       </div>
@@ -22,4 +23,4 @@ const HajjPackage = ({ heading, subheading }) => {
   );
 };
 
-export default HajjPackage;
+export default EconomyPackage;

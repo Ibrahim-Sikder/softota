@@ -8,6 +8,7 @@ import VisaHeroBox from "../../../../components/UserDashBoard/VisaHeroBox";
 import Countries from "../../../../components/Countries/Countries";
 import Passion from "../../../../components/Passion/Passion";
 import Travel from "../../../../components/Travel/Travel";
+import Footer from "../../../../components/Footer/Footer";
 const Visa = () => {
   return (
     <section>
@@ -30,6 +31,7 @@ const Visa = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

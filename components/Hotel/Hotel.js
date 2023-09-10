@@ -61,6 +61,7 @@ const Hotel = () => {
     }
   };
 
+
   const handleActiveMenu = () => {
     setActiveToggleMenu((activeToggleMenu) => !activeToggleMenu);
   };

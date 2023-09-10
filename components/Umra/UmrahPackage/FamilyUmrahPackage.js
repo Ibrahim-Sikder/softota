@@ -1,9 +1,9 @@
 import React from "react";
 import style from "./Package.module.css";
-import umrah from "../../../public/assets/umraOffer.jpg";
-import HajjUmrahCard from "../../Shared/HajjUmraCard/HajjUmrahCard";
 import UmrahPackageLeftSide from "./UmrahPackageLeftSide";
-const Package = () => {
+import HajjUmrahCard from "../../Shared/HajjUmraCard/HajjUmrahCard";
+import umrah from '../../../public/assets/umrah6.jpg'
+const FamilyUmrahPackage = () => {
   return (
     <div>
       <div className={style.packageWrap}>
@@ -13,9 +13,9 @@ const Package = () => {
         <div className={style.packageRightSide}>
           <HajjUmrahCard
             img={umrah}
-            heading="Economy Umrah Package "
+            heading="Family Umrah Package 2023"
             subheading=""
-            title="Available 7-10-14 days Umrah Packages 2023 - 2024"
+            title=" Family People Umrah Package from Bangladesh"
           ></HajjUmrahCard>
         </div>
       </div>
@@ -23,4 +23,4 @@ const Package = () => {
   );
 };
 
-export default Package;
+export default FamilyUmrahPackage;

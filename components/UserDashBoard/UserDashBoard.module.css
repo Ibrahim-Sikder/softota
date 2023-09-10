@@ -225,7 +225,7 @@
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
   position: fixed;
-  left: -192px;
+  left: -180px;
   z-index: 999 !important;
 }
 .iconsBarHide {

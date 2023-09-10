@@ -59,6 +59,7 @@ const AboutHero = () => {
           </div>
         </div>
       </section>
+
     </section>
   );
 };

@@ -44,10 +44,14 @@
   background: #4AB449;
   color:white;
 }
+.fileUpload:hover .uploadIcon{
+  color:white !important;
+}
 .uploadIcon{
   font-size: 25px;
   margin-right: 5px;
   color:#4AB449 !important;
+  transition: all .5s cubic-bezier(0, -0.04, 0.99, 1.01);
 }
 .loginBtn {
   width: 295px;

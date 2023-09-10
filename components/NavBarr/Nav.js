@@ -63,7 +63,7 @@ const Nav = () => {
                 <Typewriter
                 className={style.typeWiter}
                 options={{
-                  strings: ['Search Flight, Hotel, Visa, & Tours package !', 'Search Tours, Busses, Trains , Hajj & Umrah package !'],
+                  strings: ['Search Flight, Hotel, Visa, & Tours package !', 'Search Tours, Buses, Trains , Hajj & Umrah package !'],
                   autoStart: true,
                   loop: true,
                 }}
