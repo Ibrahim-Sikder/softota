@@ -5,6 +5,7 @@ import styles from "./profile.module.css";
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 import dynamic from "next/dynamic";
+import Footer from "../../../components/Footer/Footer";
 const partial = () => {
   return (
     <section>
@@ -231,6 +232,7 @@ const partial = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

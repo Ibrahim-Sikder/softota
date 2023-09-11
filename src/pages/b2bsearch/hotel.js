@@ -8,6 +8,7 @@ import Customer from "../../../components/Customer/Customer";
 import dynamic from "next/dynamic";
 import HotelHeroBox from "../../../components/UserDashBoard/HotelHeroBox/HotelHeroBox";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
+import Footer from "../../../components/Footer/Footer";
 const Hotel = () => {
   return (
     <section>
@@ -26,9 +27,11 @@ const Hotel = () => {
             <Travel></Travel>
             <HotelTrending />
             <Customer></Customer>
+            
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

@@ -37,7 +37,6 @@ const BusBanner = () => {
     }
   };
 
-
   return (
     <section>
       {/* banner */}

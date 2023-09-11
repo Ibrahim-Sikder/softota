@@ -6,6 +6,7 @@ import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBa
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
 import style from "../../../../components/Vissa/VisaRequest/VisaRequest.module.css";
 import { LocalPhone } from "@mui/icons-material";
+import Footer from "../../../../components/Footer/Footer";
 
 const Visa = () => {
   return (
@@ -161,6 +162,7 @@ const Visa = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

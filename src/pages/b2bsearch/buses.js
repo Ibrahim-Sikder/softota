@@ -10,6 +10,7 @@ import TourDestination from "../../../components/Tour/TourDestination";
 import dynamic from "next/dynamic";
 import BusesHeroBox from "../../../components/UserDashBoard/BusesHeroBox/BusesHeroBox";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
+import Footer from "../../../components/Footer/Footer";
 
 const Buses = () => {
   return (
@@ -33,6 +34,7 @@ const Buses = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

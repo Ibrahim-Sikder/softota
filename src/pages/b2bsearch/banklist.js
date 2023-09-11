@@ -18,6 +18,7 @@ import Link from "next/link";
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
+import Footer from "../../../components/Footer/Footer";
 const banklist = () => {
   return (
     <section>
@@ -166,6 +167,7 @@ const banklist = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

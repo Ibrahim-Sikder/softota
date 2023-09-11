@@ -5,6 +5,7 @@ import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 import B2BHotelSearch from "../../../components/SearhPage/B2BHotelSearch";
+import Footer from "../../../components/Footer/Footer";
 
 const Hotel = () => {
   return (
@@ -25,6 +26,7 @@ const Hotel = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

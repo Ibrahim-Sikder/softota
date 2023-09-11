@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 import TourPackage from "../../../components/Tour/TourPackage/TourPackage";
 import B2BHotelDetail from "../../../components/Hotel/HotelDetails/B2BHotelDetail";
+import Footer from "../../../components/Footer/Footer";
 const Hotel = () => {
   return (
     <section>
@@ -26,6 +27,7 @@ const Hotel = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

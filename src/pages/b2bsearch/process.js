@@ -4,6 +4,7 @@ import styling from "./profile.module.css";
 import dynamic from "next/dynamic";
 import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
+import Footer from "../../../components/Footer/Footer";
 const process = () => {
   return (
     <section>
@@ -205,6 +206,7 @@ const process = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

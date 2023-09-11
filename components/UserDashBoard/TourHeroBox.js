@@ -1,17 +1,45 @@
 import React, { useState } from "react";
-import style from "../../components/Tour/Tour.module.css";
-import styling from "./TourHeroBox.module.css";
+import style from "../BusBanner/Bus.module.css";
 import ActiveLink from "../Banner/ActiveLink";
+import {
+  Groups2,
+} from "@mui/icons-material";
+import Link from "next/link";
+
+
 const TourHeroBox = () => {
-  const [activePackage, setActivePackage] = useState(true);
-  const handleActivePackage = () => {
-    setActivePackage((activePackage) => !activePackage);
+  const [child, setChild] = useState(0);
+  const [adult, setAdult] = useState(0);
+  const [room, setRoom] = useState("1 Room");
+  
+  const childIncrement = () => {
+    setChild(child + 1);
   };
+  const childDecrement = () => {
+    if (child < 1) {
+      setChild(0);
+    } else {
+      setChild(child - 1);
+    }
+  };
+  const incrementAdult = () => {
+    setAdult(adult + 1);
+  };
+  const decrementAdult = () => {
+    if (child < 1) {
+      setAdult(0);
+    } else {
+      setAdult(child - 1);
+    }
+  };
+ 
+
   return (
     <section>
-      <div className={`${style.heroBoxMain} ${styling.tourHeroBox}`}>
-        {/* menubar */}
-        <div>
+       <div className={style.heroBoxMain}>
+          
+          {/* menubar */}
+          <div className={style.desktopMenu}>
           <ul className={style.menu}>
             <div className={style.wrapMenu}>
               <ActiveLink href="/b2bsearch/umrah">
@@ -244,33 +272,125 @@ const TourHeroBox = () => {
               </ActiveLink>
             </div>
           </ul>
-        </div>
-        {/* Travel banner */}
-        <form>
-          <div className={style.travelFormWrap}>
-            <div className={style.travelFormDouble}>
-              <div className={style.singleTravel}>
-                <label>Depart To </label>
-                <br />
-                <input type="date" />
-              </div>
-              <div className={style.singleTravel}>
-                <label>Return To </label>
-                <br />
-                <input type="date" />
+          </div>
+
+          <div className={style.packageWrap}>
+            <div className={style.package}>
+              <div>
+
+                <h4>Select Your Destination Country </h4>
+                <select>
+                  <option selected value="Bangladesh">Bangladesh</option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Japan">Japan</option>
+                </select>
               </div>
             </div>
-            <div className={style.travelForm}>
-              <label>Where To? </label>
-              <br />
-              <input type="text" placeholder="Enter your city" />
+            <div className={style.package2}>
+              <div className={style.travelDestination}>
+                <h4>Travel From </h4>
+                <input type="text " placeholder="Enter Your City" />
+              </div>
+              <div className={style.travelDestination}>
+                <h4>Travel To </h4>
+                <input type="text " placeholder="Enter Your City" />
+              </div>
             </div>
           </div>
-        </form>
-        <div className={`${style.searchTrainBtn} ${styling.tourBtn}`}>
-          <button>Search Tours </button>
+          <div className={style.packageWrap}>
+            <div className={style.packageDate}>
+              <div className={style.date}>
+                <h4>Depart To </h4>
+                <input type="date" />
+              </div>
+              <div className={style.date2}>
+                <h4>Return To </h4>
+                <input type="date" />
+              </div>
+            </div>
+            <div className={style.package4}>
+            <div className="flex justify-between item-center">
+                <div>
+                  <h4>Guests & Room</h4>
+                  <small>
+                    {child + adult} Guest & {room}{" "}
+                  </small>
+                  <input type="text"/>
+                </div>
+                <Groups2
+                  onClick={() => window.busModal.showModal()}
+                  className={style.showModalIcon}
+                />
+              </div>
+              {/* <div>
+                <h4>Passengers & Seat Class</h4>
+                <input type="text " placeholder="1 person" />
+              </div> */}
+            </div>
+            {/* Modal  */}
+            <div className={style.modalWrap}>
+
+                <dialog id="busModal" className={style.hotelModal}>
+                  <form method="dialog" className="modal-box">
+                    <button className={style.hotelModalCloseBtn}>✕</button>
+                    <div className={style.guestRoomWrap}>
+                      <Groups2 className={style.groupIcon} />
+                      <div>
+                        <small>Guest & Room </small> <br />
+                        <p className="text-xl font-bold">
+                          {" "}
+                          {child + adult} Guest & {room}{" "}
+                        </p>
+                      </div>
+                    </div>
+                    <div className={style.adultChildWrap}>
+                    <div className={style.adultIncrementDecrement}>
+                          <small onClick={decrementAdult}> - </small>
+                          <span>{adult} Adult </span>
+                          <small onClick={incrementAdult}> + </small>
+                        </div>
+                        <div className={style.childIncrementDecrement}>
+                          <small onClick={childDecrement}> - </small>
+                          <span> {child} Child </span>
+                          <small onClick={childIncrement}> + </small>
+                        </div>
+                    </div>
+                    
+                        <select
+                        className={style.roomSelect}
+                          onChange={(e) => {
+                            const classes = e.target.value;
+                            setRoom(classes);
+                          }}
+                        >
+                          <option value="1 Room" selected>
+                            1 Room
+                          </option>
+                          <option value="2 Room">2 Room</option>
+                          <option value="3 Room">3 Room</option>
+                          <option value="4 Room">4 Room</option>
+                          <option value="5 Room">5 Room</option>
+                        </select>
+                  </form>
+                </dialog>
+              </div>
+
+          </div>
+          <Link href="/b2bsearch/tours/tourSearch">
+           
+            <button className={style.heroBoxBtn}>Get Your Ticket</button>
+          </Link>
+
+
         </div>
-      </div>
     </section>
   );
 };

@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
 import HotelBookLeft from "../../../components/SearhPage/HotelBook/BookLeftSide/HotelBookLeft";
 import HotelBookRightSide from "../../../components/SearhPage/HotelBook/RightSide/HotelBookRightSide";
+import Footer from "../../../components/Footer/Footer";
 const Hotel = () => {
   return (
     <section>
@@ -31,6 +32,7 @@ const Hotel = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

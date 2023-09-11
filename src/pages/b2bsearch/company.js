@@ -6,6 +6,7 @@ import styling from "../../../components/UserDashBoard/UserDashBoard.module.css"
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
+import Footer from "../../../components/Footer/Footer";
 const company = () => {
   return (
     <section>
@@ -144,6 +145,7 @@ const company = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };

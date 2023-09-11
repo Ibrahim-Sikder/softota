@@ -1,9 +1,37 @@
-import React from "react";
-import styling from "./BusesHeroBox.module.css";
+import React, { useState } from "react";
 import style from "../../../components/BusBanner/Bus.module.css";
 import ActiveLink from "../../Banner/ActiveLink";
 import Link from "next/link";
+import {
+  Groups2,
+} from "@mui/icons-material";
+
 const BusesHeroBox = () => {
+  const [child, setChild] = useState(0);
+  const [adult, setAdult] = useState(0);
+  const [room, setRoom] = useState("1 Room");
+  
+  const childIncrement = () => {
+    setChild(child + 1);
+  };
+  const childDecrement = () => {
+    if (child < 1) {
+      setChild(0);
+    } else {
+      setChild(child - 1);
+    }
+  };
+  const incrementAdult = () => {
+    setAdult(adult + 1);
+  };
+  const decrementAdult = () => {
+    if (child < 1) {
+      setAdult(0);
+    } else {
+      setAdult(child - 1);
+    }
+  };
+
   return (
     <section>
       <div className={style.heroBoxMain}>
@@ -12,7 +40,7 @@ const BusesHeroBox = () => {
           <div className={style.desktopMenu}>
           <ul className={style.menu}>
             <div className={style.wrapMenu}>
-              <ActiveLink href="/b2bsearch/umra">
+              <ActiveLink href="/b2bsearch/umrah">
                 <li className={style.firstChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -287,13 +315,74 @@ const BusesHeroBox = () => {
               </div>
             </div>
             <div className={style.package4}>
-              <div>
+            <div className="flex justify-between item-center">
+                <div>
+                  <h4>Guests & Room</h4>
+                  <small>
+                    {child + adult} Guest & {room}{" "}
+                  </small>
+                  <input type="text"/>
+                </div>
+                <Groups2
+                  onClick={() => window.busModal.showModal()}
+                  className={style.showModalIcon}
+                />
+              </div>
+              {/* <div>
                 <h4>Passengers & Seat Class</h4>
                 <input type="text " placeholder="1 person" />
-              </div>
+              </div> */}
             </div>
+            {/* Modal  */}
+            <div className={style.modalWrap}>
+
+                <dialog id="busModal" className={style.hotelModal}>
+                  <form method="dialog" className="modal-box">
+                    <button className={style.hotelModalCloseBtn}>✕</button>
+                    <div className={style.guestRoomWrap}>
+                      <Groups2 className={style.groupIcon} />
+                      <div>
+                        <small>Guest & Room </small> <br />
+                        <p className="text-xl font-bold">
+                          {" "}
+                          {child + adult} Guest & {room}{" "}
+                        </p>
+                      </div>
+                    </div>
+                    <div className={style.adultChildWrap}>
+                    <div className={style.adultIncrementDecrement}>
+                          <small onClick={decrementAdult}> - </small>
+                          <span>{adult} Adult </span>
+                          <small onClick={incrementAdult}> + </small>
+                        </div>
+                        <div className={style.childIncrementDecrement}>
+                          <small onClick={childDecrement}> - </small>
+                          <span> {child} Child </span>
+                          <small onClick={childIncrement}> + </small>
+                        </div>
+                    </div>
+                    
+                        <select
+                        className={style.roomSelect}
+                          onChange={(e) => {
+                            const classes = e.target.value;
+                            setRoom(classes);
+                          }}
+                        >
+                          <option value="1 Room" selected>
+                            1 Room
+                          </option>
+                          <option value="2 Room">2 Room</option>
+                          <option value="3 Room">3 Room</option>
+                          <option value="4 Room">4 Room</option>
+                          <option value="5 Room">5 Room</option>
+                        </select>
+                  </form>
+                </dialog>
+              </div>
+
           </div>
-          <Link href="/busses/searchbuss">
+          <Link href="/b2bsearch/tours/tourSearch">
             {" "}
             <button className={style.heroBoxBtn}>Get Your Ticket</button>
           </Link>

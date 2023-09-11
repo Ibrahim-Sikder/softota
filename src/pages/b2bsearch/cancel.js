@@ -5,6 +5,7 @@ import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import AgencyCancel from "../../../components/UserDashBoard/Agent/Cancel/AgencyCancel";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
+import Footer from "../../../components/Footer/Footer";
 const Completed = () => {
   return (
     <section>
@@ -22,6 +23,7 @@ const Completed = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </section>
   );
 };
