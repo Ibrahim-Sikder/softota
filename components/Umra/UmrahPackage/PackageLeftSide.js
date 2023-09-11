@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import hajj2 from "../../../public/assets/hajj2.png";
-import hajj3 from "../../../public/assets/hajj4.png";
 import umrah2 from '../../../public/assets/umra2.jpg'
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -16,7 +15,7 @@ const PackageLeftSide = () => {
                 <div className={style.LeftSideWrap}>
                    <Accordion className={style.hajjAccordion}>
                 <AccordionSummary
-                className={style.hajjSummary}
+                className={style.hajjSummarries}
                   expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
@@ -64,7 +63,7 @@ const PackageLeftSide = () => {
                 </AccordionDetails>
                 
               </Accordion>
-              <div className="bg-[#19ABE3] text-white w-full py-2  mt-3 mb-10 text-[14px]">
+              <div className="bg-[#19ABE3] text-white w-full py-2 pl-3 mt-3 mb-10 rounded text-[14px]">
               <Link href='/hajjUmra/umrahPackage'><p>Umrah Management </p> </Link>
               </div>
                    <div className="leftSideOffer">

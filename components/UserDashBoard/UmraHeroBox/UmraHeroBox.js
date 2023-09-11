@@ -7,19 +7,12 @@ import {
   Hotel,
   BookOnline,
   TransferWithinAStation,
-  BusAlert,
-  DirectionsRailway,
-  Add,
-  Groups2,
-  HorizontalRule,
+  Search
 } from "@mui/icons-material";
 import ActiveLink from "../../Banner/ActiveLink";
 
 const UmraHeroBox = () => {
-  const [activeHajjButton, setActiveHajjButton] = useState();
-  const handleActiveButton = () => {
-    setActiveHajjButton(!activeHajjButton);
-  };
+
 
   return (
     <section>
@@ -27,11 +20,11 @@ const UmraHeroBox = () => {
     <div className={style.bannerWrap}>
       <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
       <div className={style.heroBoxMain}>
-        {/* menubar */}
-        <div className={style.menuWrap}>
-        <ul className={style.menu}>
+          {/* menubar */}
+          <div className={style.menuWrap}>
+          <ul className={style.menu}>
             <div className={style.wrapMenu}>
-              <ActiveLink href="/b2bsearch/umra">
+              <ActiveLink href="/b2bsearch/umrah">
                 <li className={style.firstChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -261,55 +254,29 @@ const UmraHeroBox = () => {
               </ActiveLink>
             </div>
           </ul>
-        </div>
-        {/* for mobile menu  */}
+          </div>
 
-        <div className={style.mobileMenuWraps}>
-          <ul className={style.menu}>
-            <div className={style.wrapMenu}>
-              <ActiveLink href="/flight">
-                <li className={style.activeLink}>
-                  <Flight className={style.mobileMenuIcons} />
-                  <p className="ml-3">Flight</p>
-                </li>
-              </ActiveLink>
-              <ActiveLink href="/hotel">
-                <li>
-                  <Hotel className={style.mobileMenuIcon} />
-
-                  <p className="ml-3">Hotel</p>
-                </li>
-              </ActiveLink>
-              <ActiveLink href="/visa">
-                <li>
-                  <BookOnline className={style.mobileMenuIcon} />
-                  <p className="ml-3">Visa</p>
-                </li>
-              </ActiveLink>
-              <ActiveLink href="/tours">
-                <li>
-                  <TransferWithinAStation className={style.mobileMenuIcon} />
-
-                  <p className="ml-3">Tours</p>
-                </li>
-              </ActiveLink>
+          <div className={style.hajjUmrapackageWrap}>
+            <div className={style.hajjUmraPackage}>
+                <select>
+                  <option value="Hajj Package">Hajj Package</option>
+                  <option value="Umrah Package">Umrah Package</option>
+                </select>
+                <Link href='/b2bsearch/umrah/hajj'>
+                <div className={style.searchBtnWrap}>
+                  <button> Search</button>
+                  <Search className={style.searchIcon}/> 
+               </div>
+                </Link>
+              
             </div>
-          </ul>
-        </div>
-
-
-        <div className={style.hajjUmrapackageWrap}>
-          <div className={style.hajjUmraPackage}>
-              <Link href='/hajjUmra/hajj'><button>Hajj Package </button></Link>
-              <Link href='/hajjUmra/umrahPackage'><button>Umrah Package </button></Link>
+            {/* <div className={style.rightPlaceForYou}>
+           <h6>If you want to do Hajj & Umrah at the very low cost then this is the right place for you !</h6>
+            </div> */}
           </div>
-          <div className={style.rightPlaceForYou}>
-         <h6>If you want to do Hajj & Umrah at the very low cost then this is the right package for you !</h6>
-          </div>
+
+
         </div>
-
-
-      </div>
     </div>
   </section>
   );

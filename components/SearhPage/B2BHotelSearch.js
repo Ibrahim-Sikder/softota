@@ -15,7 +15,8 @@ import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "next/link";
 
-const HotelSearch = () => {
+
+const B2BHotelSearch = () => {
   const hotelData = [
     {
       id: 1,
@@ -157,7 +158,7 @@ const HotelSearch = () => {
                             Price Includes VAT & Tax{" "}
                           </span>
                         </div>
-                        <Link href="/hotel/hotelDetail">
+                        <Link href="/b2bsearch/hotelDetail">
                           <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                             BOOK NOW
                           </button>
@@ -445,4 +446,4 @@ const HotelSearch = () => {
   );
 };
 
-export default HotelSearch;
+export default B2BHotelSearch;

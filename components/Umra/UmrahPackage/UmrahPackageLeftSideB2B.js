@@ -9,7 +9,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import style from './Package.module.css'
-const UmrahPackageLeftSide = () => {
+const UmrahPackageLeftSideB2B = () => {
     return (
         <div>
             <div className={style.LeftSideWrap}>
@@ -39,14 +39,14 @@ const UmrahPackageLeftSide = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className={style.hajjTypograpy}>
-                  <Link href="/hajjUmra/umrah/umrahInRamada"><p>Umrah In Ramadan </p> </Link>
+                  <Link href="/b2bsearch/umrah/umrah/umrahInRamadan"><p>Umrah In Ramadan </p> </Link>
                   </Typography>
                   <Typography className={style.hajjTypograpy}>
-                  <Link href="/hajjUmra/umrah/umrahInRamada"><p>Premium Umrah Packages </p> </Link>
+                  <Link href="/b2bsearch/umrah/umrah/premium"><p>Premium Umrah Packages </p> </Link>
                   </Typography>
                   <Typography className={style.hajjTypograpy}>
-                  <Link href="/hajjUmra/umrah/platinum"><p>Platinum Umrah Packages  </p> </Link>
-                  <Link href="/hajjUmra/umrah/family"><p>Family Umrah Packages  </p> </Link>
+                  <Link href="/b2bsearch/umrah/umrah/platinum/"><p>Platinum Umrah Packages  </p> </Link>
+                  <Link href="/b2bsearch/umrah/umrah/family"><p>Family Umrah Packages  </p> </Link>
                   </Typography>
                 </AccordionDetails>
                 
@@ -64,7 +64,7 @@ const UmrahPackageLeftSide = () => {
                 
               </Accordion>
               <div className="bg-[#19ABE3] text-white w-full rounded py-2 pl-3 mt-3 mb-10 text-[14px]">
-              <Link href='/hajjUmra/hajj'><p>Hajj Management </p> </Link>
+              <Link href='/b2bsearch/umrah/hajj'><p>Hajj Management </p> </Link>
               </div>
                    <div className="leftSideOffer">
                    <div className={style.umrahOffer}>
@@ -93,4 +93,4 @@ const UmrahPackageLeftSide = () => {
     );
 };
 
-export default UmrahPackageLeftSide;
+export default UmrahPackageLeftSideB2B;

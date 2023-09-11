@@ -17,6 +17,7 @@ const PlatinumUmrahPackage = () => {
             subheading=""
             title="Platinum Umrah Package 2023 - 2024 from Bangladesh"
           ></HajjUmrahCard>
+          
         </div>
       </div>
     </div>

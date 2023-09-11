@@ -4,8 +4,8 @@ import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLe
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
-import B2BHotelSearch from "../../../components/SearhPage/B2BHotelSearch";
-
+import TourPackage from "../../../components/Tour/TourPackage/TourPackage";
+import B2BHotelDetail from "../../../components/Hotel/HotelDetails/B2BHotelDetail";
 const Hotel = () => {
   return (
     <section>
@@ -13,15 +13,16 @@ const Hotel = () => {
         <div className={style.leftSideBar}>
           <UserDashBoardLeft />
         </div>
-        <div className={style.hotelRightSideBar}>
+        <div className='w-full'>
           <div className={style.rightSideWrap}>
             <div className={style.profileTop}>
               <RightSideTopBar />
               <MoveText />
             </div>
-            <div>
-              <B2BHotelSearch/>
-            </div>
+            <B2BHotelDetail/>
+           <div className="pl-[50px]">
+           <TourPackage />
+           </div>
           </div>
         </div>
       </div>

@@ -3,10 +3,10 @@ import style from "../../../components/UserDashBoard/UserDashBoard.module.css";
 import UserDashBoardLeft from "../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../components/UserDashBoard/RightSideTopBar";
 import UmraPackage from "../../../components/Umra/UmraPackage";
-import HeroBox from "../../../components/UserDashBoard/HeroBox";
 import dynamic from "next/dynamic";
 import UmraHeroBox from "../../../components/UserDashBoard/UmraHeroBox/UmraHeroBox";
 import MoveText from "../../../components/UserDashBoard/MoveText/MoveText";
+import Footer from "../../../components/Footer/Footer";
 
 const Umra = () => {
   return (
@@ -24,6 +24,7 @@ const Umra = () => {
             <div></div>
             <UmraHeroBox />
             <UmraPackage />
+            <Footer/>
           </div>
         </div>
       </div>

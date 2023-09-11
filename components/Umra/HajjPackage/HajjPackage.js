@@ -20,6 +20,7 @@ const HajjPackage = ({ heading, subheading }) => {
       </div>
     </div>
   );
+  
 };
 
 export default HajjPackage;

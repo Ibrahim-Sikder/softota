@@ -60,24 +60,30 @@
     overflow: hidden;
 }
 .hajjAccordion{
-    background: #19ABE3;
+    background: #19ABE3 !important;
     font-size: 30px !important;
-    color: white;
+
     font-weight:bold !important;
 }
 .hajjSummary{
-background:#19ABE3 !important;
-box-shadow: 0px !important;
+    background: #19ABE3 !important;
+    min-height: 16px !important;
+    border-radius: 5px !important;
 }
+
 .expandIcon{
     font-size: 25px !important;
     color:white !important;
 }
 .hajjTypograpy{
-font-size: 14px !important;
+    font-size: 14px !important;
+    padding-left: 10px;
+    background: #19ABE3 !important;
+    color: white !important;
 }
-
-
+.hajjSummarries{
+    min-height: 20px !important;
+}
 
 
 @media only screen and (max-width:1024px){

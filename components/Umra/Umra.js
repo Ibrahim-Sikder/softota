@@ -8,11 +8,6 @@ import {
   Hotel,
   BookOnline,
   TransferWithinAStation,
-  BusAlert,
-  DirectionsRailway,
-  Add,
-  Groups2,
-  HorizontalRule,
   Search
 } from "@mui/icons-material";
 
@@ -320,6 +315,7 @@ const Umra = () => {
 
         </div>
       </div>
+
       <UmraPackage />
     </section>
   );

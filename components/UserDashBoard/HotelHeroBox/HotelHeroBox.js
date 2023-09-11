@@ -52,7 +52,7 @@ const HotelHeroBox = () => {
         <div>
           <ul className={style.menu}>
             <div className={style.wrapMenu}>
-              <ActiveLink href="/b2bsearch/umra">
+              <ActiveLink href="/b2bsearch/umrah">
                 <li className={style.firstChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

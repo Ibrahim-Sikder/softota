@@ -12,6 +12,7 @@ const HotelBooking = () => {
         <div className={style.flightBookRightSide}>
           <HotelBookRightSide />
         </div>
+        
       </div>
     </section>
   );
