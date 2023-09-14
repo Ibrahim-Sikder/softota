@@ -178,7 +178,8 @@ const UserDashBoardLeft = () => {
           <div className={toggleSideBar ? `${style.leftSideIconWrap}` : `${style.iconsBarHide}`} >
             <div>
               <p className={style.showToolTip}><Replay5 className={style.icon} />
-                <Link href=''><div className={`${style.toolTip} ${style.mainToolTip}`}>
+                <Link href=''>
+                  <div className={`${style.toolTip} ${style.mainToolTip}`}>
                 <Accordion className={style.bookingHistory}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon className='mt-5' />}
@@ -234,6 +235,7 @@ const UserDashBoardLeft = () => {
                 </div> </Link>
 
               </p>
+
               <p className={style.showToolTip}><FaAcquisitionsIncorporated className={style.icon} />
                 <Link href='/b2bsearch/partial'><div className={style.toolTip}>Partial Payment</div> </Link>
               </p>

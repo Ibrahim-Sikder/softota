@@ -2,8 +2,7 @@ import React from "react";
 import style from "./FlightBook.module.css";
 import FlightBookLeftSide from "./FlightBookLeftSide/FlightBookLeftSide";
 import RightBook from "./FlightBookRightSide/RightBook";
-
-const FlightBook = () => {
+const FlightBookB2B = () => {
   return (
     <section>
       <div className={style.flightBookWrap}>
@@ -11,11 +10,11 @@ const FlightBook = () => {
           <FlightBookLeftSide />
         </div>
         <div className={style.flightBookRightSide}>
-          <RightBook/>
+          <RightBook />
         </div>
       </div>
     </section>
   );
 };
 
-export default FlightBook;
+export default FlightBookB2B;

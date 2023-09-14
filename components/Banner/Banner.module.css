@@ -76,12 +76,32 @@
   background:#19ABE3;
   color:white;
 }
+.searchAirport{
+  display: none !important;
+}
 .searchTop input{
   width:100%;
   height:100%;
   background:transparent;
 }
+.calendar{
+  position:absolute;
+  top:0px;
+}
+.calendarIcon{
+  font-size: 22px !important;
+}
+.calendarInput{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor:pointer;
 
+}
+.calendarInput input{
+  font-size: 12px !important;
+  cursor:pointer;
+}
 .airport{
   display:flex;
   flex-wrap: wrap;
@@ -282,6 +302,22 @@ font-size:14px;
   margin-right: 10px;
   border: 1px solid #fff;
 }
+.package input[type='text'],
+.package2 input[type='text'],
+.package3 input[type='text'],
+.package4 input[type='text'], .date input[type='text'], .date2 input[type='text'] {
+  border:0;
+outline:none;
+box-shadow:none;
+}
+.package input:focus,
+.package2 input:focus,
+.package3 input:focus,
+.package4 input:focus, .date input:focus, .date2 input:focus {
+  background-color: transparent; 
+  border: none; 
+  outline: none; 
+}
 
 .package input{
   background:transparent;
@@ -359,6 +395,7 @@ font-size:14px;
 .package2 input, .package3 input, .package4 input, .packageDate input{
   width:100%;
   background:transparent;
+  height: 100%;
 }
 .package3 {
   top: 248px;

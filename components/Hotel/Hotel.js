@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import style from "./Hotel.module.css";
 import destination from "../../public/assets/destination.jpeg";
 import destination2 from "../../public/assets/destination6.jpeg";
@@ -23,6 +23,7 @@ import {
   TransferWithinAStation,
   KingBed,
   Groups2,
+  CalendarMonth,
 } from "@mui/icons-material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -33,13 +34,18 @@ import dynamic from "next/dynamic";
 import ActiveLink from "../Banner/ActiveLink";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import SeeMoreButton from "../Shared/SeeMoreButton/SeeMoreButton";
+import { Calendar } from "react-date-range";
+import format from "date-fns/format";
+
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 
 const Hotel = () => {
   const [activeToggleMenu, setActiveToggleMenu] = useState(false);
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [room, setRoom] = useState("1 Room");
-  
+
   const childIncrement = () => {
     setChild(child + 1);
   };
@@ -61,9 +67,49 @@ const Hotel = () => {
     }
   };
 
-
   const handleActiveMenu = () => {
     setActiveToggleMenu((activeToggleMenu) => !activeToggleMenu);
+  };
+
+  // date state
+  const [calendar, setCalendar] = useState("");
+
+  // open close
+  const [open, setOpen] = useState(false);
+
+  // get the target element to toggle
+  const refOne = useRef(null);
+
+  useEffect(() => {
+    // set current date on component load
+    setCalendar(format(new Date(), "MM/dd/yyyy"));
+    // event listeners
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+
+  // hide dropdown on ESC press
+  const hideOnEscape = (e) => {
+    // console.log(e.key)
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  };
+
+  // Hide on outside click
+  const hideOnClickOutside = (e) => {
+    // console.log(refOne.current)
+    // console.log(e.target)
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setOpen(false);
+    }
+  };
+
+  // on date change, store date in state
+  const handleSelect = (date) => {
+    // console.log(date)
+    // console.log(format(date, 'MM/dd/yyyy'))
+    setCalendar(format(date, "MM/dd/yyyy"));
   };
 
   var settings = {
@@ -112,10 +158,11 @@ const Hotel = () => {
           <div className={style.packageWrap}>
             <div className={style.package}>
               <div>
-                
                 <h4>Enter Your Destination Country</h4>
                 <select>
-                  <option selected value="Bangladesh">Bangladesh</option>
+                  <option selected value="Bangladesh">
+                    Bangladesh
+                  </option>
                   <option value="Thailand">Thailand</option>
                   <option value="Malaysia">Malaysia</option>
                   <option value="Indonesia">Indonesia</option>
@@ -150,13 +197,38 @@ const Hotel = () => {
           </div>
           <div className={style.packageWrap}>
             <div className={style.packageDate}>
-              <div className={style.date}>
+              <div
+                onClick={() => setOpen((open) => !open)}
+                className={style.date}
+              >
                 <h4>Check In</h4>
-                <input type="date" />
+                <div className={style.calendarInput}>
+                  <input value={calendar} readOnly />
+                  <CalendarMonth className={style.calendarIcon} />
+                </div>
+
+                <div ref={refOne}>
+                  {open && (
+                    <Calendar
+                      date={new Date()}
+                      onChange={handleSelect}
+                      className="calendarElement"
+                    />
+                  )}
+                </div>
               </div>
-              <div className={style.date2}>
+              <div
+                onClick={() => setOpen((open) => !open)}
+                className={style.date2}
+              >
                 <h4>Check Out</h4>
-                <input type="date" />
+                <div className={style.calendarInput}>
+                  <input
+                     value={calendar}
+                    readOnly
+                  />
+                  <CalendarMonth className={style.calendarIcon} />
+                </div>
               </div>
             </div>
             <div className={style.package4}>
@@ -166,7 +238,7 @@ const Hotel = () => {
                   <small>
                     {child + adult} Guest & {room}{" "}
                   </small>
-                  <input type="text"/>
+                  <input type="text" />
                 </div>
                 <Groups2
                   onClick={() => window.my_modal_3.showModal()}
@@ -191,33 +263,33 @@ const Hotel = () => {
                       </div>
                     </div>
                     <div className={style.adultChildWrap}>
-                    <div className={style.adultIncrementDecrement}>
-                          <small onClick={decrementAdult}> - </small>
-                          <span>{adult} Adult </span>
-                          <small onClick={incrementAdult}> + </small>
-                        </div>
-                        <div className={style.childIncrementDecrement}>
-                          <small onClick={childDecrement}> - </small>
-                          <span> {child} Child </span>
-                          <small onClick={childIncrement}> + </small>
-                        </div>
+                      <div className={style.adultIncrementDecrement}>
+                        <small onClick={decrementAdult}> - </small>
+                        <span>{adult} Adult </span>
+                        <small onClick={incrementAdult}> + </small>
+                      </div>
+                      <div className={style.childIncrementDecrement}>
+                        <small onClick={childDecrement}> - </small>
+                        <span> {child} Child </span>
+                        <small onClick={childIncrement}> + </small>
+                      </div>
                     </div>
-                    
-                        <select
-                        className={style.roomSelect}
-                          onChange={(e) => {
-                            const classes = e.target.value;
-                            setRoom(classes);
-                          }}
-                        >
-                          <option value="1 Room" selected>
-                            1 Room
-                          </option>
-                          <option value="2 Room">2 Room</option>
-                          <option value="3 Room">3 Room</option>
-                          <option value="4 Room">4 Room</option>
-                          <option value="5 Room">5 Room</option>
-                        </select>
+
+                    <select
+                      className={style.roomSelect}
+                      onChange={(e) => {
+                        const classes = e.target.value;
+                        setRoom(classes);
+                      }}
+                    >
+                      <option value="1 Room" selected>
+                        1 Room
+                      </option>
+                      <option value="2 Room">2 Room</option>
+                      <option value="3 Room">3 Room</option>
+                      <option value="4 Room">4 Room</option>
+                      <option value="5 Room">5 Room</option>
+                    </select>
                   </form>
                 </dialog>
               </div>
@@ -505,9 +577,9 @@ const Hotel = () => {
       {/* hotel structure */}
       <div>
         <SectionTitle
-        heading='Trending International Destinations '
-        subHeading='The world is now just a hop, skip and jump away and here’s how you
-        can make your travel easier and better.'
+          heading="Trending International Destinations "
+          subHeading="The world is now just a hop, skip and jump away and here’s how you
+        can make your travel easier and better."
         ></SectionTitle>
         <div className={style.destination}>
           <Slider {...settings}>
@@ -560,7 +632,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -589,7 +661,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -616,7 +688,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -643,7 +715,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -672,7 +744,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -699,7 +771,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -726,7 +798,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -753,7 +825,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -780,7 +852,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -807,7 +879,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -834,7 +906,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -861,13 +933,13 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+                <Link href="/hotel/hotelDetail">
                   <button>View Details </button>
                 </Link>
               </div>
             </div>
           </Slider>
-          <SeeMoreButton/>
+          <SeeMoreButton />
         </div>
       </div>
     </section>

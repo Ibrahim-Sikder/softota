@@ -134,9 +134,6 @@ const HajjBook = () => {
         </form>
        </div>
         </div>
-        <div className="px-[30px]">
-       <TourPackage/>
-       </div>
     </section>
     );
 };

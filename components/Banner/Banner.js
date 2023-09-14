@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import style from "./Banner.module.css";
 import Link from "next/link";
 import {
@@ -6,17 +6,22 @@ import {
   Hotel,
   BookOnline,
   TransferWithinAStation,
-  BusAlert,
-  DirectionsRailway,
   Add,
   Groups2,
   HorizontalRule,
+  CalendarMonth,
 } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import ActiveLink from "./ActiveLink";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
+import { DateRange } from "react-date-range";
 
+import format from "date-fns/format";
+import { addDays } from "date-fns";
+
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
 
 const Banner = ({ setResults }) => {
   const [child, setChild] = useState(0);
@@ -34,6 +39,43 @@ const Banner = ({ setResults }) => {
   const [mobActive, setMobActive] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
 
+  // date state
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  // open close
+  const [open, setOpen] = useState(false);
+
+  // get the target element to toggle
+  const refOne = useRef(null);
+
+  useEffect(() => {
+    // event listeners
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+
+  // hide dropdown on ESC press
+  const hideOnEscape = (e) => {
+    // console.log(e.key)
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  };
+
+  // Hide on outside click
+  const hideOnClickOutside = (e) => {
+    // console.log(refOne.current)
+    // console.log(e.target)
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setOpen(false);
+    }
+  };
 
   // for tab
 
@@ -151,7 +193,6 @@ const Banner = ({ setResults }) => {
   const handleaddclick = () => {
     setinputList([...inputList, { flyingFrom: "", flyingTo: "", date: "" }]);
   };
-
 
   return (
     <div>
@@ -455,7 +496,7 @@ const Banner = ({ setResults }) => {
                           placeholder="City or Airport "
                         />
 
-                        <div className={style.searchResult}>
+                        {/* <div className={style.searchResult}>
                           {data?.map((d, i) => (
                             <div key={i}>
                               <div
@@ -470,7 +511,7 @@ const Banner = ({ setResults }) => {
                               </div>
                             </div>
                           ))}
-                        </div>
+                        </div> */}
                       </div>
                     </div>
 
@@ -484,7 +525,7 @@ const Banner = ({ setResults }) => {
                           type="text "
                           placeholder="City or Airport "
                         />
-                        <div className={style.searchResult}>
+                        {/* <div className={style.searchResult}>
                           {data2?.map((d, i) => (
                             <div key={i}>
                               <div
@@ -499,7 +540,7 @@ const Banner = ({ setResults }) => {
                               </div>
                             </div>
                           ))}
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -508,7 +549,33 @@ const Banner = ({ setResults }) => {
                       <div className={style.packageDate}>
                         <div className={style.departDate}>
                           <h4>Depart To</h4>
-                          <input type="date" />
+                          <div
+                            onClick={() => setOpen((open) => !open)}
+                            className={style.calendarInput}
+                          >
+                            <input
+                              value={`${format(
+                                range[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
+
+                          <div className={style.calendar} ref={refOne}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range}
+                                months={1}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
                         </div>
                       </div>
                       <div>
@@ -641,7 +708,7 @@ const Banner = ({ setResults }) => {
                           type="text"
                           placeholder="City or Airport "
                         />
-                        <div className={style.searchResult}>
+                        {/* <div className={`${style.searchResult} ${style.searchAirport}`}>
                           {data?.map((d, i) => (
                             <div key={i}>
                               <div
@@ -656,12 +723,12 @@ const Banner = ({ setResults }) => {
                               </div>
                             </div>
                           ))}
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                     <div className={style.package2}>
                       <div className={style.searchTop}>
-                        <h4>Flying From</h4>
+                        <h4>Flying To</h4>
                         <input
                           value={selected2}
                           id="searchAirport"
@@ -669,7 +736,7 @@ const Banner = ({ setResults }) => {
                           type="text "
                           placeholder="City or Airport "
                         />
-                        <div className={style.searchResult}>
+                        {/* <div className={`${style.searchResult} ${style.searchAirport}`}>
                           {data2?.map((d, i) => (
                             <div key={i}>
                               <div
@@ -684,7 +751,7 @@ const Banner = ({ setResults }) => {
                               </div>
                             </div>
                           ))}
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -692,15 +759,52 @@ const Banner = ({ setResults }) => {
                   <div className={style.packageWrap}>
                     <div className={style.packageDate}>
                       <div className={style.roundTripWrap}>
-                        <div className={style.date}>
+                        <div
+                          onClick={() => setOpen((open) => !open)}
+                          className={style.date}
+                        >
                           <h4>Depart To</h4>
-                          <input type="date" />
+                          <div className={style.calendarInput}>
+                            <input
+                              value={`${format(
+                                range[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
                         </div>
-                      
 
-                        <div className={style.date2}>
+                        <div
+                          onClick={() => setOpen((open) => !open)}
+                          className={`${style.date2}`}
+                        >
                           <h4>Return To </h4>
-                          <input type="date" />
+                          <div className={style.calendarInput}>
+                            <input
+                              value={`${format(
+                                range[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
+
+                          <div className={style.calendar} ref={refOne}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range}
+                                months={1}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
                         </div>
                         <div
                           onClick={() => window.my_modal_3.showModal()}
@@ -829,7 +933,7 @@ const Banner = ({ setResults }) => {
                         type="text "
                         placeholder="City or Airport "
                       />
-                      <div className={style.searchResult}>
+                      {/* <div className={style.searchResult}>
                         {data?.map((d, i) => (
                           <div key={i}>
                             <div
@@ -844,7 +948,7 @@ const Banner = ({ setResults }) => {
                             </div>
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className={style.multiplePackage}>
@@ -857,54 +961,65 @@ const Banner = ({ setResults }) => {
                         type="text "
                         placeholder="City or Airport "
                       />
-                      <div className={style.searchResult}>
-                        {data2?.map((d, i) => (
+                      {/* <div className={style.searchResult}>
+                        {data2?.map((airport, i) => (
                           <div key={i}>
                             <div
                               onClick={() =>
-                                handleSelect2(d.iata, d.name, d.country)
+                                handleSelect2(
+                                  airport.iata,
+                                  airport.name,
+                                  airport.country
+                                )
                               }
                               className={style.airport}
                             >
-                              <h6 className="mr-3">{d.iata}</h6>
-                              <p>,{d.country}</p>
-                              <p>,{d.name}</p>
+                              <h6 className="mr-3">{airport.iata}</h6>
+                              <p>,{airport.country}</p>
+                              <p>,{airport.name}</p>
                             </div>
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className={style.multiplePackage}>
                     <div>
                       <h4>Select Date </h4>
-                      <input type="date" />
+                      <div
+                        onClick={() => setOpen((open) => !open)}
+                        className={style.calendarInput}
+                      >
+                        <input
+                          value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                          readOnly
+                        />
+                        <CalendarMonth className={style.calendarIcon} />
+                      </div>
+                    </div>
+
+                    <div className={style.calendar} ref={refOne}>
+                      {open && (
+                        <DateRange
+                          onChange={(item) => setRange([item.selection])}
+                          editableDateInputs={true}
+                          moveRangeOnFirstSelection={false}
+                          ranges={range}
+                          months={1}
+                          direction="horizontal"
+                          className="calendarElement"
+                        />
+                      )}
                     </div>
                   </div>
 
-                  <div
-                    onClick={() => window.my_modal_3.showModal()}
-                    className={style.multiplePackage}
-                  >
-                    <div>
-                      <h4>
-                        Passenger &{" "}
-                        <small>{child + infant + adult} Person</small>{" "}
-                      </h4>
-                      <small>Economy class</small>
-                    </div>
-
-                    <div className="modal">
+                {/* Open modala  */}
+                <div className={style.modalWrap}>
                       {/* You can open the modal using ID.showModal() method */}
-                      <button
-                        className="btn"
-                        onClick={() => window.my_modal_3.showModal()}
-                      ></button>
-                      <dialog id="my_modal_3" className="modal">
+
+                      <dialog id="multipleModal" className="modal">
                         <form method="dialog" className="modal-box">
-                          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-                            ✕
-                          </button>
+                          <button className={style.modalCloseBtn}>✕</button>
                           <div>
                             <h3 className="font-bold text-lg">Passenger</h3>
                             <div className={style.passengerWrap}>
@@ -964,16 +1079,36 @@ const Banner = ({ setResults }) => {
                             </div>
 
                             <div className={style.classType}>
-                              <p>Cabin class</p>
-                              <p>Premium Economy</p>
-                              <p>Business class</p>
-                              <p>First class</p>
+                              <select
+                                onChange={(e) => {
+                                  const classes = e.target.value;
+                                  setClasses(classes);
+                                }}
+                              >
+                                <option value="Premium" selected>
+                                  Cabin Class
+                                </option>
+                                <option value="Premium Econom">
+                                  Premium Economy
+                                </option>
+                                <option value="Economy class">
+                                  Economy class
+                                </option>
+                                <option value="Business class">
+                                  Business class
+                                </option>
+                                <option value="First class">First class</option>
+                              </select>
                             </div>
+                            <input
+                              type="submit"
+                              value="Submit"
+                              className={style.modalSubmitBtn}
+                            />
                           </div>
                         </form>
                       </dialog>
                     </div>
-                  </div>
                 </div>
 
                 {inputList.map((x, i) => {
@@ -1002,10 +1137,19 @@ const Banner = ({ setResults }) => {
                       <div className={style.multiplePackage}>
                         <div>
                           <h4>Select Date </h4>
-                          <input
-                            onChange={(e) => handleinputchange(e, i)}
-                            type="date"
-                          />
+                          <div
+                            onClick={() => setOpen((open) => !open)}
+                            className={style.calendarInput}
+                          >
+                            <input
+                              value={`${format(
+                                range[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
                         </div>
                       </div>
                       <div className={style.multipleCityBtnGroup}>

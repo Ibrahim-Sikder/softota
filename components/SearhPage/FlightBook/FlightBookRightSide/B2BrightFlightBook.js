@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Right.module.css'
 import { useState } from 'react';
 import Link from 'next/link';
-const RightBook = () => {
+const B2BrightFlightBook = () => {
      const [disabled, setDisabled] = useState(true)
      const handleDisable = ()=>{
           setDisabled(false)
@@ -87,11 +87,11 @@ const RightBook = () => {
                    <input onClick={handleDisable} className={style.checkbox} type="checkbox" />
                    <p>I aggree to the <strong>Terms & Condition</strong> and <strong>Privacy Policy</strong> </p>
                     </div>
-                   <Link href='/flight/book'> <input  disable={disabled} className={style.paymentBtn} type="submit" value='Pay Now' /></Link>
+                   <Link href='/b2bsearch/flight/book'> <input  disable={disabled} className={style.paymentBtn} type="submit" value='Pay Now' /></Link>
                    
                </div>
           </div>
      );
 };
 
-export default RightBook;
+export default B2BrightFlightBook;

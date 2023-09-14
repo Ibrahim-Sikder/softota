@@ -193,14 +193,16 @@ input::placeholder {
   border:none !important;
 }
 
-
+.rdrStaticRange:hover .rdrStaticRangeLabel, .rdrStaticRange:focus .rdrStaticRangeLabel {
+  background: #eff2f7;
+}
 
 .mobileMenuWraps p{
   margin-left:5px;
  }
-
-
-
+ .rdrStaticRange, .rdrDefinedRangesWrapper {
+  background: #19ABE3 !important;
+}
 
 @media only screen and (max-width: 1024px) {
   .css-1ujnqem-MuiTabs-root {

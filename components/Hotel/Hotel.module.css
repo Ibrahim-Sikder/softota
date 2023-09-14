@@ -86,6 +86,27 @@
 .date2 h4 {
   font-size: 14px;
 }
+
+.calendarInput{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor:pointer;
+
+}
+.calendarInput input{
+  font-size: 12px !important;
+  cursor:pointer;
+}
+
+.calendarIcon{
+  font-size: 22px !important;
+}
+
+.calendar{
+  position: absolute;
+  z-index: 99 !important;
+}
 .package {
   top: 100px;
   left: 134px;
