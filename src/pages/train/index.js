@@ -7,6 +7,7 @@ import BestPlace from "../../../components/BestPlace/BestPlace";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
+import TrainBanner from "../../../components/Train/TrainBanner";
 
 const index = () => {
   return (
@@ -15,7 +16,7 @@ const index = () => {
             <title>Ghuronti || Train </title>
         </Helmet>
       <Nav />
-      <Tour></Tour>
+      <TrainBanner/>
       <BestPlace></BestPlace>
       <Travel></Travel>
       <TourDestination></TourDestination>

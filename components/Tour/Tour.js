@@ -9,6 +9,8 @@ import {
   Groups2,
 } from "@mui/icons-material";
 import Link from "next/link";
+
+
 const Tour = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);

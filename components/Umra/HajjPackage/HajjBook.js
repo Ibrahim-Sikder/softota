@@ -5,6 +5,7 @@ import style from '../../Vissa/VisaRequest/VisaRequest.module.css'
 import styling from '../UmrahBook/UmrahBook.module.css'
 import TourPackage from '../../Tour/TourPackage/TourPackage';
 const HajjBook = () => {
+    
     return (
         <section >
         <div className={style.visaRequestWrap}>

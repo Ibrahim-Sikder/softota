@@ -1,16 +1,15 @@
 import React from 'react';
 import Nav from '../../../components/NavBarr/Nav';
-import ToursReserve from '../../../components/Tour/ToursReserve/ToursReserve';
 import Footer from '../../../components/Footer/Footer';
-
+import BusReserve from '../../../components/Buses/BusReserve/BusReserve';
+import dynamic from "next/dynamic";
 const reserve = () => {
     return (
         <div>
             <Nav/>
-            <ToursReserve/>
+           <BusReserve/>
             <Footer/>
         </div>
     );
 };
-
-export default reserve;
+export default dynamic(() => Promise.resolve(reserve), { ssr: false });

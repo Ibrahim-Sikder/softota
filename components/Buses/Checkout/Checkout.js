@@ -1,11 +1,7 @@
 import React from 'react';
-import style from './VisaRequest.module.css'
-import { LocalPhone } from '@mui/icons-material';
-
-
-const VisaRequest = () => {
-    
-    
+import style from '../../../components/Vissa/VisaRequest/VisaRequest.module.css'
+import { LocalPhone,CloudUpload } from '@mui/icons-material';
+const Checkout = () => {
     return (
         <section >
             <div className={style.visaRequestWrap}>
@@ -79,6 +75,17 @@ const VisaRequest = () => {
                     <input placeholder='Email' type="text" className={style.visaInput} required/>
                 </div>
             </div>
+            <div className={`${style.formControl} ${style.uploadDoc}`}>
+            <div className='flex items-center '>
+                <div>
+                <input type="file" id="files" className="hidden"/>
+             <label for="files">Upload Your Doc</label>
+                </div>
+                <CloudUpload className={style.uploadIcon}/>
+            </div>
+           
+            </div>
+
             <div className={style.formControl}>
                     <h2 className='font-bold text-xl'> Share Your Requirements  </h2>
                     <textarea className={style.textField} name="" id="" cols="30" rows="10" ></textarea>
@@ -91,4 +98,4 @@ const VisaRequest = () => {
     );
 };
 
-export default VisaRequest;
+export default Checkout;

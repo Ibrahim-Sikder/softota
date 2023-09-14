@@ -1,11 +1,8 @@
 import React from "react";
-import style from "./ToursReserve.module.css";
+import style from "../../Tour/ToursReserve/ToursReserve.module.css";
 import tours from "../../../public/assets/tour5.jpg";
 import tours2 from "../../../public/assets/tours3.jpeg";
 import tours3 from "../../../public/assets/destination16.jpg";
-import tours4 from "../../../public/assets/destination16.jpg";
-import tours5 from "../../../public/assets/destination16.jpg";
-import tours6 from "../../../public/assets/destination16.jpg";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -22,15 +19,15 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import TourPackage from "../TourPackage/TourPackage";
 import LightGallery from "lightgallery/react";
 import "lightgallery/css/lightgallery.css";
 import "lightgallery/css/lg-zoom.css";
 import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
+import TrainPackage from "../../Tour/TourPackage/TrainPackage";
 
-const ToursReserve = () => {
+const TrainReserve = () => {
   return (
     <div className={style.TourReserveWrap}>
       <div className={style.galleryWrap}>
@@ -383,7 +380,7 @@ const ToursReserve = () => {
                   <small>(No additional taxes or booking fees)</small>
                   <div className={style.checkout}>
                  
-                   <Link href='/tours/checkout'> <button>Checkout</button></Link>
+                   <Link href='/train/book'> <button>Checkout</button></Link>
                   </div>
                 </div>
               </div>
@@ -391,9 +388,11 @@ const ToursReserve = () => {
           </div>
         </div>
       </div>
-      <TourPackage />
+      <div>
+        <TrainPackage/>
+      </div>
     </div>
   );
 };
 
-export default ToursReserve;
+export default TrainReserve;

@@ -20,7 +20,7 @@ import Slider from "react-slick";
 import Link from 'next/link';
 import { StarOutline } from '@mui/icons-material';
 
-const TourPackage = () => {
+const BusPackage = () => {
     var settings = {
         infinite: true,
         slidesToShow: 4,
@@ -59,7 +59,7 @@ const TourPackage = () => {
     return (
        <section>
             <div className={style.packageWrap}>
-                <h3 className="text-2xl font-bold mb-5">Similar Tour Package </h3>
+                <h3 className="text-2xl font-bold mb-5">Similar More Package </h3>
                 <Slider  {...settings}>
                 <Link href='/tours/toursReserve'>
                 <div className={style.package}>
@@ -84,7 +84,7 @@ const TourPackage = () => {
                   </div>
                 </div>
                 </Link>
-                <Link href='/tours/toursReserve'>
+                <Link href='/busses/reserve'>
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -107,7 +107,7 @@ const TourPackage = () => {
                   </div>
                 </div> 
                 </Link>
-                  <Link href='/tours/toursReserve'>
+                  <Link href='/busses/reserve'>
                   <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -130,7 +130,7 @@ const TourPackage = () => {
                   </div>
                 </div>  
                   </Link>
-                <Link href='/tours/toursReserve'>
+                <Link href='/busses/reserve'>
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -152,7 +152,7 @@ const TourPackage = () => {
                    <strong > from $666.67 per adult (price varies by group size)</strong>
                   </div>
                 </div>  </Link>
-                 <Link href='/tours/toursReserve'>
+                 <Link href='/busses/reserve'>
                  <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -176,7 +176,7 @@ const TourPackage = () => {
                 </div>
                   </Link>
                
-                  <Link href='/tours/toursReserve'>
+                  <Link href='/busses/reserve'>
                   <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -199,7 +199,7 @@ const TourPackage = () => {
                   </div>
                 </div> 
                   </Link>
-                  <Link href='/tours/toursReserve'>
+                  <Link href='/busses/reserve'>
                   <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -222,7 +222,7 @@ const TourPackage = () => {
                   </div>
                 </div> 
                   </Link>
-                 <Link href='/tours/toursReserve'>
+                 <Link href='/busses/reserve'>
                  <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -245,7 +245,7 @@ const TourPackage = () => {
                   </div>
                 </div> 
                  </Link>
-                 <Link href='/tours/toursReserve'>
+                 <Link href='/busses/reserve'>
                  <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -269,7 +269,7 @@ const TourPackage = () => {
                 </div> 
                  </Link>
                
-                  <Link href='/tours/toursReserve'> 
+                  <Link href='/busses/reserve'> 
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -292,7 +292,7 @@ const TourPackage = () => {
                   </div>
                 </div>
                 </Link>
-                 <Link href='/tours/toursReserve'>
+                 <Link href='/busses/reserve'>
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -315,6 +315,7 @@ const TourPackage = () => {
                   </div>
                 </div>  
                 </Link>
+                <Link href='/busses/reserve'>
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -335,8 +336,10 @@ const TourPackage = () => {
                    <small className='block mb-2'>Transportation Services</small> 
                    <strong > from $666.67 per adult (price varies by group size)</strong>
                   </div>
-                </div>   
-                <Link href='/tours/toursReserve'>
+                </div> 
+                </Link>
+                
+                <Link href='/busses/reserve'>
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -359,7 +362,7 @@ const TourPackage = () => {
                   </div>
                 </div> 
                    </Link>
-                   <Link href='/tours/toursReserve'>
+                   <Link href='/busses/reserve'>
                    <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
@@ -389,4 +392,4 @@ const TourPackage = () => {
     );
 };
 
-export default TourPackage;
+export default BusPackage;
