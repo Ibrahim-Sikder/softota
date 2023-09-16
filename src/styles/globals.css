@@ -200,9 +200,13 @@ input::placeholder {
 .mobileMenuWraps p{
   margin-left:5px;
  }
- .rdrStaticRange, .rdrDefinedRangesWrapper {
+ .rdrStaticRange, .rdrDefinedRangesWrapper, .rdrDateDisplayItem, .rdrDateDisplayItemActive {
   background: #19ABE3 !important;
 }
+.rdrDateDisplayItemActive input {
+  color: #fff !important;
+}
+
 
 @media only screen and (max-width: 1024px) {
   .css-1ujnqem-MuiTabs-root {

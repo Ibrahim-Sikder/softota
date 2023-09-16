@@ -5,7 +5,7 @@ import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBa
 import dynamic from "next/dynamic";
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
 import Footer from "../../../../components/Footer/Footer";
-import B2BTourReserve from "../../../../components/Tour/ToursReserve/B2BTourReserve";
+import B2BCheckout from "../../../../components/Tour/Checkout/B2BCheckout";
 const TourReserve = () => {
   return (
     <div>
@@ -19,7 +19,7 @@ const TourReserve = () => {
               <RightSideTopBar />
               <MoveText />
             </div>
-           <B2BTourReserve/>
+           <B2BCheckout/>
 
           </div>
         </div>

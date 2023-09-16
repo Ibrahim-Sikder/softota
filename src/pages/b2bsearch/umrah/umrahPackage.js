@@ -4,11 +4,11 @@ import dynamic from "next/dynamic";
 import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
-import HajjUmrahCard from "../../../../components/Shared/HajjUmraCard/HajjUmrahCard";
 import style from "../../../../components/Umra/UmrahPackage/Package.module.css";
 import umrah from "../../../../public/assets/umraOffer.jpg";
 import Footer from "../../../../components/Footer/Footer";
 import UmrahPackageLeftSideB2B from "../../../../components/Umra/UmrahPackage/UmrahPackageLeftSideB2B";
+import B2BHajjCard from "../../../../components/Shared/HajjUmraCard/B2BHajjCard";
 const Hajj = () => {
   return (
     <section>
@@ -27,12 +27,13 @@ const Hajj = () => {
                 <UmrahPackageLeftSideB2B/>
               </div>
               <div className={style.packageRightSide}>
-                <HajjUmrahCard
-                   img={umrah}
-                   heading="Economy Umrah Package "
-                   subheading=""
-                   title="Available 7-10-14 days Umrah Packages 2023 - 2024"
-                ></HajjUmrahCard>
+              <B2BHajjCard
+                    img={umrah}
+                    heading="Economy Umrah Package "
+                    subheading=""
+                    title="Available 7-10-14 days Umrah Packages 2023 - 2024"
+                >
+                </B2BHajjCard>
               </div>
             </div>
           </div>

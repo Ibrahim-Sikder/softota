@@ -8,7 +8,16 @@ import {
   BookOnline,
   TransferWithinAStation,
   Groups2,
+  CalendarMonth,
 } from "@mui/icons-material";
+import { DateRange } from "react-date-range";
+import format from "date-fns/format";
+import { addDays } from "date-fns";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { useRef } from "react";
+import { useEffect } from "react";
+
 
 
 const BusBanner = () => {
@@ -34,6 +43,64 @@ const BusBanner = () => {
       setAdult(0);
     } else {
       setAdult(child - 1);
+    }
+  };
+
+  // date state
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  const [range2, setRange2] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  // open close
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+  // get the target element to toggle
+  const refOne = useRef(null);
+  const refTow = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape2, true);
+    document.addEventListener("click", hideOnClickOutside2, true);
+  }, []);
+
+  // hide dropdown on ESC press
+  const hideOnEscape = (e) => {
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  };
+  const hideOnEscape2 = (e) => {
+    if (e.key === "Escape") {
+      setOpen2(false);
+    }
+  };
+
+  // Hide on outside click
+  const hideOnClickOutside = (e) => {
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setOpen(false);
+    }
+  };
+  const hideOnClickOutside2 = (e) => {
+    if (refTow.current && !refTow.current.contains(e.target)) {
+      setOpen2(false);
     }
   };
 
@@ -348,13 +415,56 @@ const BusBanner = () => {
           </div>
           <div className={style.packageWrap}>
             <div className={style.packageDate}>
-              <div className={style.date}>
+              <div   onClick={() => setOpen((open) => !open)} className={style.date}>
                 <h4>Depart To </h4>
-                <input type="date" />
+                <div className="flex items-center justify-center">
+                  <input
+                    value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                    readOnly
+                  />
+                  <CalendarMonth className={style.calendarIcon} />
+                </div>
               </div>
-              <div className={style.date2}>
+              <div className={style.calendarTow} ref={refOne}>
+                {open && (
+                  <DateRange
+                    onChange={(item) => setRange([item.selection])}
+                    editableDateInputs={true}
+                    moveRangeOnFirstSelection={false}
+                    ranges={range}
+                    months={2}
+                    direction="horizontal"
+                    className="calendarElement"
+                  />
+                )}
+              </div>
+
+              <div onClick={() => setOpen2((open2) => !open2)} className={style.date2}>
                 <h4>Return To </h4>
-                <input type="date" />
+                <div className="flex items-center justify-center">
+                  <input
+                    value={`${format(range2[0].startDate, "MM/dd/yyyy")}`}
+                    readOnly
+                  />
+                  <CalendarMonth className={style.calendarIcon} />
+                </div>
+
+                
+              <div className={style.calendarThree} ref={refTow}>
+                {open2 && (
+                  <DateRange
+                    onChange={(item) => setRange2([item.selection])}
+                    editableDateInputs={true}
+                    moveRangeOnFirstSelection={false}
+                    ranges={range2}
+                    months={2}
+                    direction="horizontal"
+                    className="calendarElement"
+                  />
+                )}
+              </div>
+
+
               </div>
             </div>
             <div className={style.package4}>

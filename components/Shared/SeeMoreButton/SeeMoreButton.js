@@ -5,7 +5,7 @@ import Link from 'next/link';
 const SeeMoreButton = () => {
     return (
         <div>
-             <Link href='/hotel/hotelDetail'><div  className={style.seeMoreDestination}>
+             <Link href='/details'><div  className={style.seeMoreDestination}>
           <button>See More</button>
           <East className={style.seeMoreBtn}/>
         </div></Link>

@@ -4,11 +4,11 @@ import dynamic from "next/dynamic";
 import UserDashBoardLeft from "../../../../../components/UserDashBoard/UserDashBoardLeft";
 import RightSideTopBar from "../../../../../components/UserDashBoard/RightSideTopBar";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
-import HajjUmrahCard from "../../../../../components/Shared/HajjUmraCard/HajjUmrahCard";
 import style from "../../../../../components/Umra/UmrahPackage/Package.module.css";
 import shifting from "../../../../../public/assets/hajj6.jpg";
 import HajjLeftSide from "../../../../../components/Umra/HajjPackage/HajjLeftSide";
 import Footer from "../../../../../components/Footer/Footer";
+import B2BHajjCard from "../../../../../components/Shared/HajjUmraCard/B2BHajjCard";
 const Hajj = () => {
   return (
     <section>
@@ -27,12 +27,13 @@ const Hajj = () => {
                 <HajjLeftSide />
               </div>
               <div className={style.packageRightSide}>
-                <HajjUmrahCard
+                <B2BHajjCard
                   img={shifting}
                   heading="Economy - Hajj Packages ( Non-Shifting)"
                   subheading=""
                   title="Offer Low-Cost Hajj Packages 2024 - 2025 from Bangladesh"
-                ></HajjUmrahCard>
+                >
+                </B2BHajjCard>
               </div>
             </div>
           </div>

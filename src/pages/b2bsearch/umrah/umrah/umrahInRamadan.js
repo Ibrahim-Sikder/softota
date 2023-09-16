@@ -9,6 +9,7 @@ import umrah from "../../../../../public/assets/umra3.jpeg";
 import Footer from "../../../../../components/Footer/Footer";
 import UmrahPackageLeftSideB2B from "../../../../../components/Umra/UmrahPackage/UmrahPackageLeftSideB2B";
 import HajjUmrahCard from "../../../../../components/Shared/HajjUmraCard/HajjUmrahCard";
+import B2BHajjCard from "../../../../../components/Shared/HajjUmraCard/B2BHajjCard";
 const umrahInRamadan = () => {
   return (
     <section>
@@ -27,12 +28,13 @@ const umrahInRamadan = () => {
                 <UmrahPackageLeftSideB2B/>
               </div>
               <div className={style.packageRightSide}>
-                <HajjUmrahCard
+              <B2BHajjCard
                     img={umrah}
                     heading="Ramadan Umrah Package 2023"
                     subheading=""
                     title="Ramadan Umrah Packages 2023-24 from Dhaka Bangladesh"
-                ></HajjUmrahCard>
+                >
+                </B2BHajjCard>
               </div>
             </div>
           </div>

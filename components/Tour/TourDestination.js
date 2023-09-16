@@ -103,7 +103,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -130,7 +130,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -159,7 +159,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -186,7 +186,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -213,7 +213,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -242,7 +242,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -269,7 +269,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -296,7 +296,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -323,7 +323,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -350,7 +350,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -377,7 +377,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -404,7 +404,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -431,7 +431,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -475,7 +475,7 @@ const TourDestination = () => {
               </div>
 
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -502,7 +502,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -529,7 +529,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -556,7 +556,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -583,7 +583,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -610,7 +610,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -637,7 +637,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -664,7 +664,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -691,7 +691,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -718,7 +718,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -745,7 +745,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -772,7 +772,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -799,7 +799,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/hotel/hotelDetail">
+              <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>

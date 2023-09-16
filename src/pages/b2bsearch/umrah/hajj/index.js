@@ -9,6 +9,7 @@ import style from "../../../../../components/Umra/UmrahPackage/Package.module.cs
 import umrah from "../../../../../public/assets/umra3.jpeg";
 import HajjLeftSide from "../../../../../components/Umra/HajjPackage/HajjLeftSide";
 import Footer from "../../../../../components/Footer/Footer";
+import B2BHajjCard from "../../../../../components/Shared/HajjUmraCard/B2BHajjCard";
 const Hajj = () => {
   return (
     <section>
@@ -27,12 +28,13 @@ const Hajj = () => {
                 <HajjLeftSide />
               </div>
               <div className={style.packageRightSide}>
-                <HajjUmrahCard
-                  img={umrah}
-                  heading="Premium - Hajj Packages ( Non-Shifting)"
-                  subheading=""
-                  title="Most Affordable Hajj Packages 2023-2024 from Dhaka, Bangladesh"
-                ></HajjUmrahCard>
+                <B2BHajjCard
+                 img={umrah}
+                 heading="Premium - Hajj Packages ( Non-Shifting)"
+                 subheading=""
+                 title="Most Affordable Hajj Packages 2023-2024 from Dhaka, Bangladesh"
+                >
+                </B2BHajjCard>
               </div>
             </div>
           </div>

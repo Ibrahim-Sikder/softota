@@ -382,7 +382,7 @@ const BusesHeroBox = () => {
               </div>
 
           </div>
-          <Link href="/b2bsearch/tours/tourSearch">
+          <Link href="/b2bsearch/buses/search">
             {" "}
             <button className={style.heroBoxBtn}>Get Your Ticket</button>
           </Link>

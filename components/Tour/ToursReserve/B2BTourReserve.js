@@ -30,7 +30,7 @@ import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
-const ToursReserve = () => {
+const B2BTourReserve = () => {
   return (
     <div className={style.TourReserveWrap}>
       <div className={style.galleryWrap}>
@@ -396,4 +396,4 @@ const ToursReserve = () => {
   );
 };
 
-export default ToursReserve;
+export default B2BTourReserve;

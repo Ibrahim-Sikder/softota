@@ -7,8 +7,9 @@ import Customer from "../../components/Customer/Customer";
 import Footer from "../../components/Footer/Footer";
 import Nav from "../../components/NavBarr/Nav";
 import TourDestination from "../../components/Tour/TourDestination";
-import FlightMission from "../../components/FlightMission/FlightMission";
+
 import { Helmet } from "react-helmet-async";
+import Mission from "../../components/Mission/Mission";
 
 
 export const config ={
@@ -26,7 +27,7 @@ export default function Home() {
       <Banner></Banner>
       <TourDestination></TourDestination>
       <Travel></Travel>
-      <FlightMission></FlightMission>
+      <Mission/>
       <Customer></Customer>
       <Footer />
     </section>

@@ -32,6 +32,17 @@
   top: 28px;
 }
 
+
+
+.calendarTow{
+  position: absolute;
+  left: 92%;
+  transform: translate(-50%);
+  top: -224px;
+  z-index: 99999 !important;
+  background: red !important;
+
+}
 .package,
 .package2,
 .package3,

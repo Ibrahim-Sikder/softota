@@ -1,8 +1,8 @@
-'use client'
-
+"use client";
 
 import React, { useState } from "react";
 import style from "../BusBanner/Bus.module.css";
+import styling from './Train.module.css'
 import ActiveLink from "../Banner/ActiveLink";
 import {
   Flight,
@@ -10,15 +10,22 @@ import {
   BookOnline,
   TransferWithinAStation,
   Groups2,
+  CalendarMonth,
 } from "@mui/icons-material";
 import Link from "next/link";
-
+import { DateRange } from "react-date-range";
+import format from "date-fns/format";
+import { addDays } from "date-fns";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { useRef } from "react";
+import { useEffect } from "react";
 
 const TrainBanner = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [room, setRoom] = useState("1 Room");
-  
+
   const childIncrement = () => {
     setChild(child + 1);
   };
@@ -40,13 +47,70 @@ const TrainBanner = () => {
     }
   };
 
+  // date state
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  const [range2, setRange2] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  // open close
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+  // get the target element to toggle
+  const refOne = useRef(null);
+  const refTow = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape2, true);
+    document.addEventListener("click", hideOnClickOutside2, true);
+  }, []);
+
+  // hide dropdown on ESC press
+  const hideOnEscape = (e) => {
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  };
+  const hideOnEscape2 = (e) => {
+    if (e.key === "Escape") {
+      setOpen2(false);
+    }
+  };
+
+  // Hide on outside click
+  const hideOnClickOutside = (e) => {
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setOpen(false);
+    }
+  };
+  const hideOnClickOutside2 = (e) => {
+    if (refTow.current && !refTow.current.contains(e.target)) {
+      setOpen2(false);
+    }
+  };
+
   return (
     <section>
       {/* banner */}
       <div className={style.bannerWrap}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
-          
           {/* menubar */}
           <div className={style.desktopMenu}>
             <ul className={style.menu}>
@@ -321,10 +385,11 @@ const TrainBanner = () => {
           <div className={style.packageWrap}>
             <div className={style.package}>
               <div>
-
                 <h4>Select Your Destination Country </h4>
                 <select>
-                  <option selected value="Bangladesh">Bangladesh</option>
+                  <option selected value="Bangladesh">
+                    Bangladesh
+                  </option>
                   <option value="Thailand">Thailand</option>
                   <option value="Malaysia">Malaysia</option>
                   <option value="Indonesia">Indonesia</option>
@@ -351,23 +416,69 @@ const TrainBanner = () => {
           </div>
           <div className={style.packageWrap}>
             <div className={style.packageDate}>
-              <div className={style.date}>
+              <div
+                onClick={() => setOpen((open) => !open)}
+                className={style.date}
+              >
                 <h4>Depart To </h4>
-                <input type="date" />
+                <div className="flex items-center justify-center">
+                  <input
+                    value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                    readOnly
+                  />
+                  <CalendarMonth className={style.calendarIcon} />
+                </div>
+
+                <div className={styling.calendarTow} ref={refOne}>
+                  {open && (
+                    <DateRange
+                      onChange={(item) => setRange([item.selection])}
+                      editableDateInputs={true}
+                      moveRangeOnFirstSelection={false}
+                      ranges={range}
+                      months={2}
+                      direction="horizontal"
+                      className="calendarElement"
+                    />
+                  )}
+                </div>
               </div>
-              <div className={style.date2}>
+
+              <div
+                onClick={() => setOpen2((open2) => !open2)}
+                className={style.date2}
+              >
                 <h4>Return To </h4>
-                <input type="date" />
+                <div className="flex items-center justify-center">
+                  <input
+                    value={`${format(range2[0].startDate, "MM/dd/yyyy")}`}
+                    readOnly
+                  />
+                  <CalendarMonth className={style.calendarIcon} />
+                </div>
+                <div className={styling.calendarTow} ref={refTow}>
+                  {open2 && (
+                    <DateRange
+                      onChange={(item) => setRange2([item.selection])}
+                      editableDateInputs={true}
+                      moveRangeOnFirstSelection={false}
+                      ranges={range2}
+                      months={2}
+                      direction="horizontal"
+                      className="calendarElement"
+                    />
+                  )}
+                </div>
               </div>
             </div>
             <div className={style.package4}>
-            <div className="flex justify-between item-center">
+              <div className="flex justify-between item-center">
                 <div>
                   <h4>Guests & Room</h4>
                   <small>
                     {child + adult} Guest & {room}{" "}
                   </small>
-                  <input type="text"/>
+                  <input type="text" />
                 </div>
                 <Groups2
                   onClick={() => window.toursModal.showModal()}
@@ -381,58 +492,54 @@ const TrainBanner = () => {
             </div>
             {/* Modal  */}
             <div className={style.modalWrap}>
-
-                <dialog id="toursModal" className={style.hotelModal}>
-                  <form method="dialog" className="modal-box">
-                    <button className={style.hotelModalCloseBtn}>✕</button>
-                    <div className={style.guestRoomWrap}>
-                      <Groups2 className={style.groupIcon} />
-                      <div>
-                        <small>Guest & Room </small> <br />
-                        <p className="text-xl font-bold">
-                          {" "}
-                          {child + adult} Guest & {room}{" "}
-                        </p>
-                      </div>
+              <dialog id="toursModal" className={style.hotelModal}>
+                <form method="dialog" className="modal-box">
+                  <button className={style.hotelModalCloseBtn}>✕</button>
+                  <div className={style.guestRoomWrap}>
+                    <Groups2 className={style.groupIcon} />
+                    <div>
+                      <small>Guest & Room </small> <br />
+                      <p className="text-xl font-bold">
+                        {" "}
+                        {child + adult} Guest & {room}{" "}
+                      </p>
                     </div>
-                    <div className={style.adultChildWrap}>
+                  </div>
+                  <div className={style.adultChildWrap}>
                     <div className={style.adultIncrementDecrement}>
-                          <small onClick={decrementAdult}> - </small>
-                          <span>{adult} Adult </span>
-                          <small onClick={incrementAdult}> + </small>
-                        </div>
-                        <div className={style.childIncrementDecrement}>
-                          <small onClick={childDecrement}> - </small>
-                          <span> {child} Child </span>
-                          <small onClick={childIncrement}> + </small>
-                        </div>
+                      <small onClick={decrementAdult}> - </small>
+                      <span>{adult} Adult </span>
+                      <small onClick={incrementAdult}> + </small>
                     </div>
-                    
-                        <select
-                        className={style.roomSelect}
-                          onChange={(e) => {
-                            const classes = e.target.value;
-                            setRoom(classes);
-                          }}
-                        >
-                          <option value="1 Room" selected>
-                            1 Room
-                          </option>
-                          <option value="2 Room">2 Room</option>
-                          <option value="3 Room">3 Room</option>
-                          <option value="4 Room">4 Room</option>
-                          <option value="5 Room">5 Room</option>
-                        </select>
-                  </form>
-                </dialog>
-              </div>
+                    <div className={style.childIncrementDecrement}>
+                      <small onClick={childDecrement}> - </small>
+                      <span> {child} Child </span>
+                      <small onClick={childIncrement}> + </small>
+                    </div>
+                  </div>
 
+                  <select
+                    className={style.roomSelect}
+                    onChange={(e) => {
+                      const classes = e.target.value;
+                      setRoom(classes);
+                    }}
+                  >
+                    <option value="1 Room" selected>
+                      1 Room
+                    </option>
+                    <option value="2 Room">2 Room</option>
+                    <option value="3 Room">3 Room</option>
+                    <option value="4 Room">4 Room</option>
+                    <option value="5 Room">5 Room</option>
+                  </select>
+                </form>
+              </dialog>
+            </div>
           </div>
-          <Link href='/train/search'>
+          <Link href="/train/search">
             <button className={style.heroBoxBtn}>Get Your Ticket </button>
           </Link>
-
-
         </div>
       </div>
     </section>

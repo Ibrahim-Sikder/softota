@@ -16,10 +16,8 @@ import ActiveLink from "./ActiveLink";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { DateRange } from "react-date-range";
-
 import format from "date-fns/format";
 import { addDays } from "date-fns";
-
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 
@@ -36,7 +34,6 @@ const Banner = ({ setResults }) => {
   const [data2, setData2] = useState([]);
   const [filterData2, setFilterData2] = useState([]);
   const [selected2, setSelected2] = useState([]);
-  const [mobActive, setMobActive] = useState(0);
   const [tabIndex, setTabIndex] = useState(0);
 
   // date state
@@ -48,35 +45,55 @@ const Banner = ({ setResults }) => {
     },
   ]);
 
+  const [range2, setRange2] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+
   // open close
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
 
   // get the target element to toggle
   const refOne = useRef(null);
+  const refTow = useRef(null);
 
   useEffect(() => {
-    // event listeners
     document.addEventListener("keydown", hideOnEscape, true);
     document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape2, true);
+    document.addEventListener("click", hideOnClickOutside2, true);
   }, []);
 
   // hide dropdown on ESC press
   const hideOnEscape = (e) => {
-    // console.log(e.key)
     if (e.key === "Escape") {
       setOpen(false);
+    }
+  };
+  const hideOnEscape2 = (e) => {
+    if (e.key === "Escape") {
+      setOpen2(false);
     }
   };
 
   // Hide on outside click
   const hideOnClickOutside = (e) => {
-    // console.log(refOne.current)
-    // console.log(e.target)
     if (refOne.current && !refOne.current.contains(e.target)) {
       setOpen(false);
     }
   };
-
+  const hideOnClickOutside2 = (e) => {
+    if (refTow.current && !refTow.current.contains(e.target)) {
+      setOpen2(false);
+    }
+  };
   // for tab
 
   const handleToggle = (value) => () => {
@@ -570,7 +587,7 @@ const Banner = ({ setResults }) => {
                                 editableDateInputs={true}
                                 moveRangeOnFirstSelection={false}
                                 ranges={range}
-                                months={1}
+                                months={2}
                                 direction="horizontal"
                                 className="calendarElement"
                               />
@@ -774,17 +791,33 @@ const Banner = ({ setResults }) => {
                             />
                             <CalendarMonth className={style.calendarIcon} />
                           </div>
+                          
+                          <div className={style.calendar} ref={refTow}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range2}
+                                months={2}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
+
+
                         </div>
 
                         <div
-                          onClick={() => setOpen((open) => !open)}
+                          onClick={() => setOpen2((open2) => !open2)}
                           className={`${style.date2}`}
                         >
                           <h4>Return To </h4>
                           <div className={style.calendarInput}>
                             <input
                               value={`${format(
-                                range[0].startDate,
+                                range2[0].startDate,
                                 "MM/dd/yyyy"
                               )}`}
                               readOnly
@@ -792,14 +825,14 @@ const Banner = ({ setResults }) => {
                             <CalendarMonth className={style.calendarIcon} />
                           </div>
 
-                          <div className={style.calendar} ref={refOne}>
-                            {open && (
+                          <div className={style.calendar} ref={refTow}>
+                            {open2 && (
                               <DateRange
-                                onChange={(item) => setRange([item.selection])}
+                                onChange={(item) => setRange2([item.selection])}
                                 editableDateInputs={true}
                                 moveRangeOnFirstSelection={false}
                                 ranges={range}
-                                months={1}
+                                months={2}
                                 direction="horizontal"
                                 className="calendarElement"
                               />
@@ -998,14 +1031,14 @@ const Banner = ({ setResults }) => {
                       </div>
                     </div>
 
-                    <div className={style.calendar} ref={refOne}>
+                    <div className={style.calendarTow} ref={refOne}>
                       {open && (
                         <DateRange
                           onChange={(item) => setRange([item.selection])}
                           editableDateInputs={true}
                           moveRangeOnFirstSelection={false}
                           ranges={range}
-                          months={1}
+                          months={2}
                           direction="horizontal"
                           className="calendarElement"
                         />
@@ -1138,18 +1171,31 @@ const Banner = ({ setResults }) => {
                         <div>
                           <h4>Select Date </h4>
                           <div
-                            onClick={() => setOpen((open) => !open)}
+                            onClick={() => setOpen2((open2) => !open2)}
                             className={style.calendarInput}
                           >
                             <input
                               value={`${format(
-                                range[0].startDate,
+                                range2[0].startDate,
                                 "MM/dd/yyyy"
                               )}`}
                               readOnly
                             />
                             <CalendarMonth className={style.calendarIcon} />
                           </div>
+                          <div className={style.calendarTow} ref={refOne}>
+                      {open2 && (
+                        <DateRange
+                          onChange={(item) => setRange2([item.selection])}
+                          editableDateInputs={true}
+                          moveRangeOnFirstSelection={false}
+                          ranges={range2}
+                          months={2}
+                          direction="horizontal"
+                          className="calendarElement"
+                        />
+                      )}
+                    </div>
                         </div>
                       </div>
                       <div className={style.multipleCityBtnGroup}>

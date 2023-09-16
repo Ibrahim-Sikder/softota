@@ -84,9 +84,14 @@
   height:100%;
   background:transparent;
 }
-.calendar{
+.calendar, .calendarTow{
   position:absolute;
   top:0px;
+}
+.calendarTow{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
 .calendarIcon{
   font-size: 22px !important;

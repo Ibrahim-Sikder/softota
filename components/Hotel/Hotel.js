@@ -34,8 +34,10 @@ import dynamic from "next/dynamic";
 import ActiveLink from "../Banner/ActiveLink";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
 import SeeMoreButton from "../Shared/SeeMoreButton/SeeMoreButton";
-import { Calendar } from "react-date-range";
+import { DateRange } from "react-date-range";
+
 import format from "date-fns/format";
+import { addDays } from "date-fns";
 
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
@@ -71,46 +73,70 @@ const Hotel = () => {
     setActiveToggleMenu((activeToggleMenu) => !activeToggleMenu);
   };
 
+
   // date state
-  const [calendar, setCalendar] = useState("");
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  const [range2, setRange2] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
 
   // open close
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
 
   // get the target element to toggle
   const refOne = useRef(null);
+  const refTow = useRef(null);
 
   useEffect(() => {
-    // set current date on component load
-    setCalendar(format(new Date(), "MM/dd/yyyy"));
-    // event listeners
     document.addEventListener("keydown", hideOnEscape, true);
     document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape2, true);
+    document.addEventListener("click", hideOnClickOutside2, true);
   }, []);
 
   // hide dropdown on ESC press
   const hideOnEscape = (e) => {
-    // console.log(e.key)
     if (e.key === "Escape") {
       setOpen(false);
+    }
+  };
+  const hideOnEscape2 = (e) => {
+    if (e.key === "Escape") {
+      setOpen2(false);
     }
   };
 
   // Hide on outside click
   const hideOnClickOutside = (e) => {
-    // console.log(refOne.current)
-    // console.log(e.target)
     if (refOne.current && !refOne.current.contains(e.target)) {
       setOpen(false);
     }
   };
-
-  // on date change, store date in state
-  const handleSelect = (date) => {
-    // console.log(date)
-    // console.log(format(date, 'MM/dd/yyyy'))
-    setCalendar(format(date, "MM/dd/yyyy"));
+  const hideOnClickOutside2 = (e) => {
+    if (refTow.current && !refTow.current.contains(e.target)) {
+      setOpen2(false);
+    }
   };
+
+
+
+
+
 
   var settings = {
     infinite: true,
@@ -203,32 +229,62 @@ const Hotel = () => {
               >
                 <h4>Check In</h4>
                 <div className={style.calendarInput}>
-                  <input value={calendar} readOnly />
+                  <input
+                   value={`${format(
+                    range[0].startDate,
+                    "MM/dd/yyyy"
+                  )}`}
+                  readOnly
+                  />
                   <CalendarMonth className={style.calendarIcon} />
                 </div>
+                    
+                <div className={style.calendarTow} ref={refOne}>
+                      {open && (
+                        <DateRange
+                          onChange={(item) => setRange2([item.selection])}
+                          editableDateInputs={true}
+                          moveRangeOnFirstSelection={false}
+                          ranges={range}
+                          months={2}
+                          direction="horizontal"
+                          className="calendarElement"
+                        />
+                      )}
+                    </div>
+               
 
-                <div ref={refOne}>
-                  {open && (
-                    <Calendar
-                      date={new Date()}
-                      onChange={handleSelect}
-                      className="calendarElement"
-                    />
-                  )}
-                </div>
               </div>
               <div
-                onClick={() => setOpen((open) => !open)}
+                onClick={() => setOpen2((open2) => !open2)}
                 className={style.date2}
               >
                 <h4>Check Out</h4>
                 <div className={style.calendarInput}>
                   <input
-                     value={calendar}
+                     value={`${format(
+                      range2[0].startDate,
+                      "MM/dd/yyyy"
+                    )}`}
                     readOnly
                   />
                   <CalendarMonth className={style.calendarIcon} />
                 </div>
+
+                <div className={style.calendarTow} ref={refTow}>
+                      {open2 && (
+                        <DateRange
+                          onChange={(item) => setRange2([item.selection])}
+                          editableDateInputs={true}
+                          moveRangeOnFirstSelection={false}
+                          ranges={range2}
+                          months={2}
+                          direction="horizontal"
+                          className="calendarElement"
+                        />
+                      )}
+                    </div>
+
               </div>
             </div>
             <div className={style.package4}>
@@ -605,7 +661,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -632,7 +688,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -661,7 +717,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -688,7 +744,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -715,7 +771,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -744,7 +800,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -771,7 +827,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -798,7 +854,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -825,7 +881,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -852,7 +908,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -879,7 +935,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -906,7 +962,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -933,7 +989,7 @@ const Hotel = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-                <Link href="/hotel/hotelDetail">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>

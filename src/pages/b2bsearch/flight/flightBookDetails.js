@@ -5,6 +5,7 @@ import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBa
 import dynamic from "next/dynamic";
 import FlightBookDetails from "../../../../components/UserDashBoard/Flight/FlightBookDetails";
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
+import B2BFlightDetails from "../../../../components/UserDashBoard/Flight/B2BFlightDetails";
 
 const Book = () => {
   return (
@@ -18,7 +19,7 @@ const Book = () => {
 
           <div>
             <MoveText/>
-            <FlightBookDetails/>
+            <B2BFlightDetails/>
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import umrah from "../../../../../public/assets/umrah4.webp";
 import Footer from "../../../../../components/Footer/Footer";
 import UmrahPackageLeftSideB2B from "../../../../../components/Umra/UmrahPackage/UmrahPackageLeftSideB2B";
 import HajjUmrahCard from "../../../../../components/Shared/HajjUmraCard/HajjUmrahCard";
+import B2BHajjCard from "../../../../../components/Shared/HajjUmraCard/B2BHajjCard";
 const Platinum = () => {
   return (
     <section>
@@ -27,12 +28,13 @@ const Platinum = () => {
                 <UmrahPackageLeftSideB2B/>
               </div>
               <div className={style.packageRightSide}>
-                <HajjUmrahCard
-                     img={umrah}
-                     heading="Platinum Umrah Package 2023"
-                     subheading=""
-                     title="Platinum Umrah Package 2023 - 2024 from Bangladesh"
-                ></HajjUmrahCard>
+              <B2BHajjCard
+                  img={umrah}
+                  heading="Platinum Umrah Package 2023"
+                  subheading=""
+                  title="Platinum Umrah Package 2023 - 2024 from Bangladesh"
+                >
+                </B2BHajjCard>
               </div>
             </div>
           </div>
