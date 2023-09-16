@@ -383,7 +383,7 @@ const ToursReserve = () => {
                   <small>(No additional taxes or booking fees)</small>
                   <div className={style.checkout}>
                  
-                   <Link href='/b2bsearch/tours/checkout'> <button>Checkout</button></Link>
+                   <Link href='/tours/checkout'> <button>Checkout</button></Link>
                   </div>
                 </div>
               </div>

@@ -1,56 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./UserDashBoard.module.css";
 import style from "../../components/Banner/Banner.module.css";
 import Link from "next/link";
-import { Add, Groups2, HorizontalRule } from "@mui/icons-material";
+import { Add, Groups2, HorizontalRule, CalendarMonth,} from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import ActiveLink from "../Banner/ActiveLink";
 import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-
-const handleToggle = (value) => () => {
-  const currentIndex = checked.indexOf(value);
-  const newChecked = [...checked];
-
-  if (currentIndex === -1) {
-    newChecked.push(value);
-  } else {
-    newChecked.splice(currentIndex, 1);
-  }
-
-  setChecked(newChecked);
-};
-
-const childIncrement = () => {
-  setChild(child + 1);
-};
-const childDecrement = () => {
-  if (child < 1) {
-    setChild(0);
-  } else {
-    setChild(child - 1);
-  }
-};
-const incrementAdult = () => {
-  setAdult(adult + 1);
-};
-const decrementAdult = () => {
-  if (child < 1) {
-    setAdult(0);
-  } else {
-    setAdult(child - 1);
-  }
-};
-const incrementInfant = () => {
-  setInfant(infant + 1);
-};
-const decrementInfant = () => {
-  if (child < 1) {
-    setInfant(0);
-  } else {
-    setInfant(child - 1);
-  }
-};
+import { DateRange } from "react-date-range";
+import format from "date-fns/format";
+import { addDays } from "date-fns";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+ 
 
 const HeroBox = () => {
   const [child, setChild] = useState(0);
@@ -294,6 +256,66 @@ const HeroBox = () => {
 
   const handleaddclick = () => {
     setinputList([...inputList, { flyingFrom: "", flyingTo: "", date: "" }]);
+  };
+
+
+   // date state
+   const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  const [range2, setRange2] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+
+  // open close
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+  // get the target element to toggle
+  const refOne = useRef(null);
+  const refTow = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape2, true);
+    document.addEventListener("click", hideOnClickOutside2, true);
+  }, []);
+
+  // hide dropdown on ESC press
+  const hideOnEscape = (e) => {
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  };
+  const hideOnEscape2 = (e) => {
+    if (e.key === "Escape") {
+      setOpen2(false);
+    }
+  };
+
+  // Hide on outside click
+  const hideOnClickOutside = (e) => {
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setOpen(false);
+    }
+  };
+  const hideOnClickOutside2 = (e) => {
+    if (refTow.current && !refTow.current.contains(e.target)) {
+      setOpen2(false);
+    }
   };
 
   return (
@@ -609,11 +631,37 @@ const HeroBox = () => {
                 </div>
                 <div className={style.packageWrap}>
                   <div className={style.oneWayPackage}>
-                    <div className={style.packageDate}>
-                      <div className={style.departDate}>
+                    <div  onClick={() => setOpen((open) => !open)} className={style.packageDate}>
+                      <div  className={style.departDate}>
                         <h4>Depart To</h4>
-                        <input type="date" />
+                        <div
+                           
+                            className={style.calendarInput}
+                          >
+                            <input
+                              value={`${format(
+                                range[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
                       </div>
+                      
+                      <div className={style.calendar} ref={refOne}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range}
+                                months={2}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
                     </div>
                     <div>
                       <div className={style.package4}>

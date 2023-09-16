@@ -93,6 +93,9 @@
   left: 50%;
   transform: translate(-50%);
 }
+.hiddenCalendar{
+  display: none;
+}
 .calendarIcon{
   font-size: 22px !important;
 }
@@ -619,8 +622,14 @@ box-shadow:none;
   font-size: 14px;
 }
 
-
-
+.hiddenCalendar{
+  display: block;
+  z-index: 99999;
+  top: 23px;
+}
+.showCalendar{
+  display: none;
+}
 
 
 
@@ -741,6 +750,10 @@ box-shadow:none;
 }
 .heroBoxBtn {
   margin-top: 8px;
+}
+
+.hiddenCalendar{
+  left: 8px;
 }
 
 

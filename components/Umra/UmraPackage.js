@@ -5,8 +5,33 @@ import hajj4 from "../../public/assets/hajj4.png";
 import hajj2 from "../../public/assets/hajj2.png";
 import hajj3 from "../../public/assets/hajj3.png";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
+import Link from "next/link";
 
 const UmraPackage = () => {
+  const hajjData= [
+    {
+      id: 1,
+      title: 'Economy Hajj Package',
+      image: hajj3,
+      day: 50,
+      price: '66,500',
+    },
+    {
+      id: 2,
+      title: 'Platinum Hajj Package',
+      image: hajj4,
+      day: 30,
+      price: '33,500',
+    },
+    {
+      id: 3,
+      title: 'Premium Hajj Package',
+      image: hajj2,
+      day: 60,
+      price: '55,500',
+    },
+
+  ]
   return (
     <section>
       <div className={style.ummraWrap}>
@@ -16,110 +41,43 @@ const UmraPackage = () => {
         Universal Travel & Tours, Holy Hajj & Umrah'
         ></SectionTitle>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:grid-cols-2 place-items-center">
-          <div className={style.singleHajj}>
-            <div className={style.imgWrap}>
-              <Image
-                src={hajj2}
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className={style.hajjImg}
-              />
-            </div>
-            <div className={style.hajjContentWrap}>
-              <div className="flex justify-between">
-                <h3>Economy Package</h3>
-                <p className={style.day}>40D </p>
+          {
+            hajjData.map(hajj=> <div key={hajj.id} className={style.singleHajj}>
+              <div className={style.imgWrap}>
+                <Image
+                  src={hajj.image}
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                  className={style.hajjImg}
+                />
               </div>
-              <ul>
-                <li>3* Hotel In Mecca.</li>
-                <li>3* Hotel In Madinah.</li>
-                <li>Hotel Distance, 300 – 400 Meter.</li>
-                <li>5-6 Persons In Every Room.</li>
-                <li>Saudi / Biman Airlines Ticket.</li>
-                <li>Travel By Ac Bus.</li>
-              </ul>
-            </div>
-            <div className="flex justify-between w-48 ">
-              <span className="text-[#4AB449]">Starts From</span>
-              <span>979999TK</span>
-            </div>
-            <div className={style.viewDetailBtn}>
-              <button className={style.hajjBtn}>
-                <h4>View Details</h4>
-              </button>
-            </div>
-          </div>
-          <div className={style.singleHajjmiddl}>
-            <div className={style.imgWrap}>
-              <Image
-                src={hajj3}
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className={style.hajjImg}
-              />
-            </div>
-            <div className={style.hajjContentWrap}>
-              <div className="flex justify-between">
-                <h3>Economy Package</h3>
-                <p className={style.day}>40D </p>
+              <div className={style.hajjContentWrap}>
+                <div className="flex justify-between">
+                  <h3>{hajj.title}</h3>
+                  <p className={style.day}>{hajj.day} </p>
+                </div>
+                <ul>
+                  <li>3* Hotel In Mecca.</li>
+                  <li>3* Hotel In Madinah.</li>
+                  <li>Hotel Distance, 300 – 400 Meter.</li>
+                  <li>5-6 Persons In Every Room.</li>
+                  <li>Saudi / Biman Airlines Ticket.</li>
+                  <li>Travel By Ac Bus.</li>
+                </ul>
               </div>
-              <ul>
-                <li>3* Hotel In Mecca.</li>
-                <li>3* Hotel In Madinah.</li>
-                <li>Hotel Distance, 300 – 400 Meter.</li>
-                <li>5-6 Persons In Every Room.</li>
-                <li>Saudi / Biman Airlines Ticket.</li>
-                <li>Travel By Ac Bus.</li>
-              </ul>
-            </div>
-            <div className="flex justify-between w-48 ">
-              <span className="text-[#4AB449]">Starts From</span>
-              <span>979999TK</span>
-            </div>
-            <div className={style.viewDetailBtn}>
-              <button className={style.hajjBtn}>
-                <h4>View Details</h4>
-              </button>
-            </div>
-          </div>
-          <div className={style.singleHajj}>
-            <div className={style.imgWrap}>
-              <Image
-                src={hajj4}
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className={style.hajjImg}
-              />
-            </div>
-            <div className={style.hajjContentWrap}>
-              <div className="flex justify-between">
-                <h3>Economy Package</h3>
-                <p className={style.day}>40D </p>
+              <div className="flex justify-between w-48 ">
+                <span className="text-[#4AB449]">Starts From</span>
+                <span>{hajj.price}</span>
               </div>
-              <ul>
-                <li className="flex items-center">
-                  <p>3* Hotel In Mecca.</p>
-                </li>
-                <li>3* Hotel In Madinah.</li>
-                <li>Hotel Distance, 300 – 400 Meter.</li>
-                <li>5-6 Persons In Every Room.</li>
-                <li>Saudi / Biman Airlines Ticket.</li>
-                <li>Travel By Ac Bus.</li>
-              </ul>
-            </div>
-            <div className="flex justify-between w-48 ">
-              <span className="text-[#4AB449]">Starts From</span>
-              <span>979999TK</span>
-            </div>
-            <div className={style.viewDetailBtn}>
-              <button className={style.hajjBtn}>
-                <h4>View Details</h4>
-              </button>
-            </div>
-          </div>
+              <div className={style.viewDetailBtn}>
+                <button className={style.hajjBtn}>
+                  <Link href='/hajjUmra/hajj/economy'>  <h4>View Details</h4></Link>
+                 
+                </button>
+              </div>
+            </div>)
+          }
         </div>
         <div className="mt-12">
         <SectionTitle

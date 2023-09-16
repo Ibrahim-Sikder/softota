@@ -92,6 +92,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .hajjUmraPackage select{
   width: 400px;
@@ -448,6 +449,13 @@
   padding: 0px 28px;
   width: 100%;
   line-height: 27px;
+}
+.searchBtnWrap {
+  width: 161px;
+  margin-top: 10px;
+}
+.hajjUmraPackage select {
+  width: 100%;
 }
 
 

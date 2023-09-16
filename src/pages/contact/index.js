@@ -31,7 +31,7 @@ const index = () => {
               <div className="flex items-center">
                 <Image alt="phone" src={phone} className=" w-20" />
                 <div className="ml-3">
-                  <h2 className="text-3xl font-bold">
+                  <h2 className="text-3xl font-bold capitalize">
                     Need assistance? call us 24/7
                   </h2>
                   <span className="mt-2">+88 01885071488</span>

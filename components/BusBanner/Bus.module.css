@@ -12,7 +12,7 @@
   height: 453px;
   box-sizing: border-box;
   background-position: center;
-  margin-bottom: 33px;
+  margin-bottom: 100px;
 }
 
 .bannerWrap h2 {
@@ -416,7 +416,7 @@ border-bottom-left-radius: 5px;
 @media only screen and (max-width: 768px) {
   .bannerWrap {
   
-    margin-bottom: 63px;
+    margin-bottom: 165px;
 
 }
   .destination {
@@ -484,6 +484,7 @@ border-bottom-left-radius: 5px;
 @media only screen and (max-width: 500px) {
   .bannerWrap {
     height: 583px;
+    margin-bottom:130px;
   }
   .bannerWrap h2 {
     font-size: 23px;

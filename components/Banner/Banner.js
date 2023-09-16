@@ -36,6 +36,7 @@ const Banner = ({ setResults }) => {
   const [selected2, setSelected2] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
 
+  
   // date state
   const [range, setRange] = useState([
     {
@@ -580,7 +581,7 @@ const Banner = ({ setResults }) => {
                             <CalendarMonth className={style.calendarIcon} />
                           </div>
 
-                          <div className={style.calendar} ref={refOne}>
+                          <div className={`${style.calendar} ${style.showCalendar}`} ref={refOne}>
                             {open && (
                               <DateRange
                                 onChange={(item) => setRange([item.selection])}
@@ -588,6 +589,20 @@ const Banner = ({ setResults }) => {
                                 moveRangeOnFirstSelection={false}
                                 ranges={range}
                                 months={2}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
+                          
+                          <div className={`${style.calendar} ${style.hiddenCalendar}`} ref={refOne}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range}
+                                months={1}
                                 direction="horizontal"
                                 className="calendarElement"
                               />

@@ -5,13 +5,15 @@
 }
 .bannerWrap {
   position: relative;
-  background-image: url("../../public/assets/banner.png");
+  background-image: url(/_next/static/media/banner.f7be9e77.png);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100vw !important;
   height: 450px;
   box-sizing: border-box;
   background-position: center;
+  margin-bottom: 112px;
+
 }
 
 .bannerWrap h2 {
@@ -679,6 +681,8 @@ margin-left:5px;
   }
 
   .package4 {
-    right: 29px;
-  }
+   
+    right: 25px;
+}
+
 }
