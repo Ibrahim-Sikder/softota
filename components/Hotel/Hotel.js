@@ -294,7 +294,9 @@ const Hotel = () => {
                   <small>
                     {child + adult} Guest & {room}{" "}
                   </small>
-                  <input type="text" />
+                  <input
+                  autoComplete="off"
+                  type="text" />
                 </div>
                 <Groups2
                   onClick={() => window.my_modal_3.showModal()}
@@ -437,7 +439,8 @@ const Hotel = () => {
                     </li>
                   </ActiveLink>
                   <ActiveLink href="/hotel">
-                    <li>
+                    <li  className={style.activeLink}>
+
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width={35}

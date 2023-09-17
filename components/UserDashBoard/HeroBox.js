@@ -574,6 +574,7 @@ const HeroBox = () => {
                       <h4>Flying From</h4>
 
                       <input
+                         autoComplete="off"
                         value={selected}
                         onChange={(e) => handleFilter(e.target.value)}
                         id="searchAirport"
@@ -604,6 +605,7 @@ const HeroBox = () => {
                     <div className={style.searchTop}>
                       <h4>Flying To</h4>
                       <input
+                         autoComplete="off"
                         value={selected2}
                         id="searchAirport"
                         onChange={(e) => handleFilter2(e.target.value)}
@@ -778,6 +780,7 @@ const HeroBox = () => {
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
+                         autoComplete="off"
                         value={selected}
                         id="searchAirport"
                         onChange={(e) => handleFilter(e.target.value)}
@@ -806,6 +809,7 @@ const HeroBox = () => {
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
+                         autoComplete="off"
                         value={selected2}
                         id="searchAirport"
                         onChange={(e) => handleFilter2(e.target.value)}
@@ -1013,6 +1017,7 @@ const HeroBox = () => {
                   <div className={style.searchTop}>
                     <h4>Flying From</h4>
                     <input
+                       autoComplete="off"
                       value={selected}
                       id="searchAirport"
                       onChange={(e) => handleFilter(e.target.value)}
@@ -1041,6 +1046,7 @@ const HeroBox = () => {
                   <div className={style.searchTop}>
                     <h4>Flying To</h4>
                     <input
+                       autoComplete="off"
                       value={selected2}
                       id="searchAirport"
                       onChange={(e) => handleFilter2(e.target.value)}
@@ -1187,6 +1193,7 @@ const HeroBox = () => {
                       <div className={style.searchTop}>
                         <h4>Flying From</h4>
                         <input
+                           autoComplete="off"
                           id="searchAirport"
                           type="text "
                           placeholder="City or Airport "
@@ -1197,6 +1204,7 @@ const HeroBox = () => {
                       <div className={style.searchTop}>
                         <h4>Flying To</h4>
                         <input
+                           autoComplete="off"
                           id="searchAirport"
                           type="text "
                           placeholder="City or Airport "
@@ -1260,6 +1268,7 @@ const HeroBox = () => {
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
+                         autoComplete="off"
                         id="searchAirport"
                         type="text "
                         placeholder="City or Airport "
@@ -1270,6 +1279,7 @@ const HeroBox = () => {
                     <div className={style.searchTop}>
                       <h4>Flying To</h4>
                       <input
+                         autoComplete="off"
                         id="searchAirport"
                         type="text "
                         placeholder="City or Airport "
@@ -1292,7 +1302,7 @@ const HeroBox = () => {
                       <div className={style.package4}>
                         <div>
                           <h4>Passengers & Cabin Class</h4>
-                          <input type="text " placeholder="1 person" />
+                          <input    autoComplete="off" type="text " placeholder="1 person" />
                         </div>
                       </div>
                     </div>

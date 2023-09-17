@@ -206,6 +206,9 @@ input::placeholder {
 .rdrDateDisplayItemActive input {
   color: #fff !important;
 }
+.css-1fx8m19.Mui-expanded {
+  color: white !important;
+}
 
 
 @media only screen and (max-width: 1024px) {

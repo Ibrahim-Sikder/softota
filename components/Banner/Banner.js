@@ -508,6 +508,7 @@ const Banner = ({ setResults }) => {
                         <h4>Flying From</h4>
 
                         <input
+                          autoComplete="off"
                           value={selected}
                           onChange={(e) => handleFilter(e.target.value)}
                           id="searchAirport"
@@ -538,6 +539,7 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying To</h4>
                         <input
+                        autoComplete="off"
                           value={selected2}
                           id="searchAirport"
                           onChange={(e) => handleFilter2(e.target.value)}
@@ -573,6 +575,7 @@ const Banner = ({ setResults }) => {
                             className={style.calendarInput}
                           >
                             <input
+                              autoComplete="off"
                               value={`${format(
                                 range[0].startDate,
                                 "MM/dd/yyyy"
@@ -717,6 +720,7 @@ const Banner = ({ setResults }) => {
                               </select>
                             </div>
                             <input
+                              autoComplete="off"
                               type="submit"
                               value="Submit"
                               className={style.modalSubmitBtn}
@@ -735,6 +739,7 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying From</h4>
                         <input
+                          autoComplete="off"
                           value={selected}
                           id="searchAirport"
                           onChange={(e) => handleFilter(e.target.value)}
@@ -763,6 +768,7 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying To</h4>
                         <input
+                          autoComplete="off"
                           value={selected2}
                           id="searchAirport"
                           onChange={(e) => handleFilter2(e.target.value)}
@@ -799,6 +805,7 @@ const Banner = ({ setResults }) => {
                           <h4>Depart To</h4>
                           <div className={style.calendarInput}>
                             <input
+                              autoComplete="off"
                               value={`${format(
                                 range[0].startDate,
                                 "MM/dd/yyyy"
@@ -976,6 +983,7 @@ const Banner = ({ setResults }) => {
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
                       <input
+                        autoComplete="off"
                         value={selected}
                         id="searchAirport"
                         onChange={(e) => handleFilter(e.target.value)}
@@ -1004,6 +1012,7 @@ const Banner = ({ setResults }) => {
                     <div className={style.searchTop}>
                       <h4>Flying To</h4>
                       <input
+                        autoComplete="off"
                         value={selected2}
                         id="searchAirport"
                         onChange={(e) => handleFilter2(e.target.value)}
@@ -1167,6 +1176,7 @@ const Banner = ({ setResults }) => {
                         <div className={style.searchTop}>
                           <h4>Flying From</h4>
                           <input
+                            autoComplete="off"
                             id="searchAirport"
                             type="text "
                             placeholder="City or Airport "
@@ -1177,6 +1187,7 @@ const Banner = ({ setResults }) => {
                         <div className={style.searchTop}>
                           <h4>Flying To</h4>
                           <input
+                            autoComplete="off"
                             id="searchAirport"
                             type="text "
                             placeholder="City or Airport "
@@ -1244,6 +1255,7 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying From</h4>
                         <input
+                          autoComplete="off"
                           id="searchAirport"
                           type="text "
                           placeholder="City or Airport "
@@ -1254,6 +1266,7 @@ const Banner = ({ setResults }) => {
                       <div className={style.searchTop}>
                         <h4>Flying To</h4>
                         <input
+                          autoComplete="off"
                           id="searchAirport"
                           type="text "
                           placeholder="City or Airport "

@@ -9,7 +9,13 @@ import {
   BookOnline,
   TransferWithinAStation
 } from "@mui/icons-material";
+
+
+
+
 const visa = () => {
+
+
   return (
     <section className={style.visa}>
       <div className={style.bannerWrap}>
@@ -22,7 +28,7 @@ const visa = () => {
           <div className={style.menuWrap}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
-                <ActiveLink href="/hajjUumra">
+                <ActiveLink href="/hajjUmra">
                   <li className={style.firstChild}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
