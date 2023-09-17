@@ -20,6 +20,8 @@ import format from "date-fns/format";
 import { addDays } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import bg from '../../public/assets/banner.png'
+
 
 const Banner = ({ setResults }) => {
   const [child, setChild] = useState(0);
@@ -214,7 +216,9 @@ const Banner = ({ setResults }) => {
 
   return (
     <div>
-      <div className={style.bannerWrap}>
+      <div className={style.bannerWrap} style={{
+      backgroundImage: `url(${bg.src})`,
+    }}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
           <div className={style.menuWraps}>
