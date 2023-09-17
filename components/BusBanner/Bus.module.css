@@ -362,6 +362,25 @@ border-bottom-left-radius: 5px;
 
 
 }
+.calendar, .calendar2, .calendar3{
+  position: absolute;
+  z-index: 999;
+  left: 11px;
+  top: 0px;
+}
+.calendar2, .calendar3{
+  left: 50%;
+  transform: translate(-50%);
+}
+.calendar3{
+  top:-160px;
+}
+.calendarInput{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 @media only screen and (max-width: 768px) {
   .bannerWrap h2 {

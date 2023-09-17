@@ -38,11 +38,10 @@
 
 .calendarTow{
   position: absolute;
-  left: 92%;
+  left: 0px;
   transform: translate(-50%);
   top: -224px;
   z-index: 99999 !important;
-  background: red !important;
 
 }
 .package,

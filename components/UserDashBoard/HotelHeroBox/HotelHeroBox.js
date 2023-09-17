@@ -1,12 +1,72 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import style from "../../../components/Hotel/Hotel.module.css";
 import Link from "next/link";
 import styling from "./HotelHeroBox.module.css";
 import ActiveLink from "../../Banner/ActiveLink";
+import { DateRange } from "react-date-range";
+import format from "date-fns/format";
+import { addDays } from "date-fns";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { CalendarMonth } from "@mui/icons-material";
+
 const HotelHeroBox = () => {
-  const [activePackage, setActivePackage] = useState(true);
-  const handleActivePackage = () => {
-    setActivePackage((activePackage) => !activePackage);
+  // date state
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  const [range2, setRange2] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
+
+  // open close
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
+  // get the target element to toggle
+  const refOne = useRef(null);
+  const refTow = useRef(null);
+
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
+  useEffect(() => {
+    document.addEventListener("keydown", hideOnEscape2, true);
+    document.addEventListener("click", hideOnClickOutside2, true);
+  }, []);
+
+  // hide dropdown on ESC press
+  const hideOnEscape = (e) => {
+    if (e.key === "Escape") {
+      setOpen(false);
+    }
+  };
+  const hideOnEscape2 = (e) => {
+    if (e.key === "Escape") {
+      setOpen2(false);
+    }
+  };
+
+  // Hide on outside click
+  const hideOnClickOutside = (e) => {
+    if (refOne.current && !refOne.current.contains(e.target)) {
+      setOpen(false);
+    }
+  };
+  const hideOnClickOutside2 = (e) => {
+    if (refTow.current && !refTow.current.contains(e.target)) {
+      setOpen2(false);
+    }
   };
 
   return (
@@ -28,13 +88,51 @@ const HotelHeroBox = () => {
         </div>
         <div className={style.packageWrap}>
           <div className={style.packageDate}>
-            <div className={style.date}>
+            <div onClick={() => setOpen2((open2) => !open2)} className={style.date}>
               <h4>Check In</h4>
-              <input type="date" />
+              <div className={style.calendarInput}>
+                <input
+                  value={`${format(range2[0].startDate, "MM/dd/yyyy")}`}
+                  readOnly
+                />
+                <CalendarMonth className={style.calendarIcon} />
+              </div>
             </div>
-            <div className={style.date2}>
-              <h4>Check In</h4>
-              <input type="date" />
+            <div className={style.calendar} ref={refTow}>
+              {open2 && (
+                <DateRange
+                  onChange={(item) => setRange2([item.selection])}
+                  editableDateInputs={true}
+                  moveRangeOnFirstSelection={false}
+                  ranges={range2}
+                  months={2}
+                  direction="horizontal"
+                  className="calendarElement"
+                />
+              )}
+            </div>
+            <div onClick={() => setOpen((open) => !open)} className={style.date2}>
+              <h4>Check Out</h4>
+              <div className={style.calendarInput}>
+                <input
+                  value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                  readOnly
+                />
+                <CalendarMonth className={style.calendarIcon} />
+              </div>
+            </div>
+            <div className={style.calendar} ref={refOne}>
+              {open && (
+                <DateRange
+                  onChange={(item) => setRange([item.selection])}
+                  editableDateInputs={true}
+                  moveRangeOnFirstSelection={false}
+                  ranges={range}
+                  months={2}
+                  direction="horizontal"
+                  className="calendarElement"
+                />
+              )}
             </div>
           </div>
           <div className={style.package4}>

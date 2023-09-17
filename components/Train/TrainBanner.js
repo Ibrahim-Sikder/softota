@@ -429,14 +429,14 @@ const TrainBanner = () => {
                   <CalendarMonth className={style.calendarIcon} />
                 </div>
 
-                <div className={styling.calendarTow} ref={refOne}>
+                <div className={styling.calendarthree} ref={refOne}>
                   {open && (
                     <DateRange
                       onChange={(item) => setRange([item.selection])}
                       editableDateInputs={true}
                       moveRangeOnFirstSelection={false}
                       ranges={range}
-                      months={2}
+                      months={1}
                       direction="horizontal"
                       className="calendarElement"
                     />
@@ -463,7 +463,7 @@ const TrainBanner = () => {
                       editableDateInputs={true}
                       moveRangeOnFirstSelection={false}
                       ranges={range2}
-                      months={2}
+                      months={1}
                       direction="horizontal"
                       className="calendarElement"
                     />

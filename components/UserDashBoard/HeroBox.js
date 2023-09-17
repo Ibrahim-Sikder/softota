@@ -631,37 +631,37 @@ const HeroBox = () => {
                 </div>
                 <div className={style.packageWrap}>
                   <div className={style.oneWayPackage}>
-                    <div  onClick={() => setOpen((open) => !open)} className={style.packageDate}>
-                      <div  className={style.departDate}>
+                    <div
+                      onClick={() => setOpen((open) => !open)}
+                      className={style.packageDate}
+                    >
+                      <div className={style.departDate}>
                         <h4>Depart To</h4>
-                        <div
-                           
-                            className={style.calendarInput}
-                          >
-                            <input
-                              value={`${format(
-                                range[0].startDate,
-                                "MM/dd/yyyy"
-                              )}`}
-                              readOnly
-                            />
-                            <CalendarMonth className={style.calendarIcon} />
-                          </div>
+                        <div className={style.calendarInput}>
+                          <input
+                            value={`${format(
+                              range[0].startDate,
+                              "MM/dd/yyyy"
+                            )}`}
+                            readOnly
+                          />
+                          <CalendarMonth className={style.calendarIcon} />
+                        </div>
                       </div>
-                      
+
                       <div className={style.calendar} ref={refOne}>
-                            {open && (
-                              <DateRange
-                                onChange={(item) => setRange([item.selection])}
-                                editableDateInputs={true}
-                                moveRangeOnFirstSelection={false}
-                                ranges={range}
-                                months={2}
-                                direction="horizontal"
-                                className="calendarElement"
-                              />
-                            )}
-                          </div>
+                        {open && (
+                          <DateRange
+                            onChange={(item) => setRange([item.selection])}
+                            editableDateInputs={true}
+                            moveRangeOnFirstSelection={false}
+                            ranges={range}
+                            months={2}
+                            direction="horizontal"
+                            className="calendarElement"
+                          />
+                        )}
+                      </div>
                     </div>
                     <div>
                       <div className={style.package4}>
@@ -784,7 +784,7 @@ const HeroBox = () => {
                         type="text"
                         placeholder="City or Airport "
                       />
-                      <div className={style.searchResult}>
+                      {/* <div className={style.searchResult}>
                         {data?.map((d, i) => (
                           <div key={i}>
                             <div
@@ -799,7 +799,7 @@ const HeroBox = () => {
                             </div>
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                   <div className={style.package2}>
@@ -812,7 +812,7 @@ const HeroBox = () => {
                         type="text "
                         placeholder="City or Airport "
                       />
-                      <div className={style.searchResult}>
+                      {/* <div className={style.searchResult}>
                         {data2?.map((d, i) => (
                           <div key={i}>
                             <div
@@ -827,7 +827,7 @@ const HeroBox = () => {
                             </div>
                           </div>
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -835,14 +835,67 @@ const HeroBox = () => {
                 <div className={style.packageWrap}>
                   <div className={style.packageDate}>
                     <div className={style.roundTripWrap}>
-                      <div className={style.date}>
+                      <div
+                        onClick={() => setOpen((open) => !open)}
+                        className={style.date}
+                      >
                         <h4>Depart To</h4>
-                        <input type="date" />
+                        <div className={style.calendarInput}>
+                          <input
+                            value={`${format(
+                              range[0].startDate,
+                              "MM/dd/yyyy"
+                            )}`}
+                            readOnly
+                          />
+                          <CalendarMonth className={style.calendarIcon} />
+                        </div>
                       </div>
-                      <div className={style.date2}>
+                      <div className={style.calendar} ref={refOne}>
+                        {open && (
+                          <DateRange
+                            onChange={(item) => setRange([item.selection])}
+                            editableDateInputs={true}
+                            moveRangeOnFirstSelection={false}
+                            ranges={range}
+                            months={2}
+                            direction="horizontal"
+                            className="calendarElement"
+                          />
+                        )}
+                      </div>
+
+                      <div
+                        onClick={() => setOpen2((open2) => !open2)}
+                        className={style.date2}
+                      >
                         <h4>Return To </h4>
-                        <input type="date" />
+                        <div className={style.calendarInput}>
+                          <input
+                            value={`${format(
+                              range2[0].startDate,
+                              "MM/dd/yyyy"
+                            )}`}
+                            readOnly
+                          />
+                          <CalendarMonth className={style.calendarIcon} />
+                        </div>
                       </div>
+
+                      <div className={style.calendar} ref={refTow}>
+                        {open2 && (
+                          <DateRange
+                            onChange={(item) => setRange2([item.selection])}
+                            editableDateInputs={true}
+                            moveRangeOnFirstSelection={false}
+                            ranges={range2}
+                            months={2}
+                            direction="horizontal"
+                            className="calendarElement"
+                          />
+                        )}
+                      </div>
+
                       <div
                         onClick={() => window.my_modal_3.showModal()}
                         className={style.package4}
@@ -966,7 +1019,7 @@ const HeroBox = () => {
                       type="text "
                       placeholder="City or Airport "
                     />
-                    <div className={style.searchResult}>
+                    {/* <div className={style.searchResult}>
                       {data?.map((d, i) => (
                         <div key={i}>
                           <div
@@ -981,7 +1034,7 @@ const HeroBox = () => {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className={style.multiplePackage}>
@@ -994,7 +1047,7 @@ const HeroBox = () => {
                       type="text "
                       placeholder="City or Airport "
                     />
-                    <div className={style.searchResult}>
+                    {/* <div className={style.searchResult}>
                       {data2?.map((d, i) => (
                         <div key={i}>
                           <div
@@ -1009,13 +1062,32 @@ const HeroBox = () => {
                           </div>
                         </div>
                       ))}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
                 <div className={style.multiplePackage}>
-                  <div>
+                  <div onClick={() => setOpen2((open2) => !open2)}>
                     <h4>Select Date </h4>
-                    <input type="date" />
+                    <div className={style.calendarInput}>
+                      <input
+                        value={`${format(range2[0].startDate, "MM/dd/yyyy")}`}
+                        readOnly
+                      />
+                      <CalendarMonth className={style.calendarIcon} />
+                    </div>
+                  </div>
+                  <div className={style.calendar} ref={refTow}>
+                    {open2 && (
+                      <DateRange
+                        onChange={(item) => setRange2([item.selection])}
+                        editableDateInputs={true}
+                        moveRangeOnFirstSelection={false}
+                        ranges={range2}
+                        months={2}
+                        direction="horizontal"
+                        className="calendarElement"
+                      />
+                    )}
                   </div>
                 </div>
 
@@ -1132,12 +1204,31 @@ const HeroBox = () => {
                       </div>
                     </div>
                     <div className={style.multiplePackage}>
-                      <div>
+                      <div onClick={() => setOpen((open) => !open)}>
                         <h4>Select Date </h4>
-                        <input
-                          onChange={(e) => handleinputchange(e, i)}
-                          type="date"
-                        />
+                        <div className={style.calendarInput}>
+                          <input
+                            value={`${format(
+                              range[0].startDate,
+                              "MM/dd/yyyy"
+                            )}`}
+                            readOnly
+                          />
+                          <CalendarMonth className={style.calendarIcon} />
+                        </div>
+                      </div>
+                      <div className={style.calendar} ref={refOne}>
+                        {open && (
+                          <DateRange
+                            onChange={(item) => setRange([item.selection])}
+                            editableDateInputs={true}
+                            moveRangeOnFirstSelection={false}
+                            ranges={range}
+                            months={2}
+                            direction="horizontal"
+                            className="calendarElement"
+                          />
+                        )}
                       </div>
                     </div>
 
@@ -1212,7 +1303,6 @@ const HeroBox = () => {
           </Tabs>
         </div>
         <div className={style.btnWrap}>
-
           <Link href="/b2bsearch/flight/flightSearch">
             <button className={`${style.heroBoxBtn} ${styles.searchBtn}`}>
               Get Your Flight

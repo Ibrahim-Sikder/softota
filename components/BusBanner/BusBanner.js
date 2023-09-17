@@ -432,7 +432,7 @@ const BusBanner = () => {
                     editableDateInputs={true}
                     moveRangeOnFirstSelection={false}
                     ranges={range}
-                    months={2}
+                    months={1}
                     direction="horizontal"
                     className="calendarElement"
                   />
@@ -457,7 +457,7 @@ const BusBanner = () => {
                     editableDateInputs={true}
                     moveRangeOnFirstSelection={false}
                     ranges={range2}
-                    months={2}
+                    months={1}
                     direction="horizontal"
                     className="calendarElement"
                   />
@@ -497,8 +497,7 @@ const BusBanner = () => {
                       <div>
                         <small>Guest & Room </small> <br />
                         <p className="text-xl font-bold">
-                          {" "}
-                          {child + adult} Guest & {room}{" "}
+                          {child + adult} Guest & {room}
                         </p>
                       </div>
                     </div>
@@ -536,7 +535,6 @@ const BusBanner = () => {
 
           </div>
           <Link href="/busses/searchbuss">
-            {" "}
             <button className={style.heroBoxBtn}>Get Your Ticket</button>
           </Link>
 

@@ -246,7 +246,7 @@ const Hotel = () => {
                           editableDateInputs={true}
                           moveRangeOnFirstSelection={false}
                           ranges={range}
-                          months={2}
+                          months={1}
                           direction="horizontal"
                           className="calendarElement"
                         />
@@ -278,7 +278,7 @@ const Hotel = () => {
                           editableDateInputs={true}
                           moveRangeOnFirstSelection={false}
                           ranges={range2}
-                          months={2}
+                          months={1}
                           direction="horizontal"
                           className="calendarElement"
                         />

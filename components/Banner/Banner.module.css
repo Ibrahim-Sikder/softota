@@ -756,6 +756,11 @@ box-shadow:none;
 .hiddenCalendar{
   left: 8px;
 }
+.calendar, .calendarTow {
+  left: 2px;
+  top: 75px;
+  z-index: 999;
+}
 
 
 }
