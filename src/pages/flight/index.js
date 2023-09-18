@@ -7,6 +7,7 @@ import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
 import Mission from "../../../components/Mission/Mission";
+import DisCount from "../../../components/DisCount/DisCount";
 
 const index = () => {
   return (
@@ -17,6 +18,7 @@ const index = () => {
       <Nav />
       <Banner></Banner>
       <TourDestination></TourDestination>
+      <DisCount/>
       <Travel></Travel>
       <Mission/>
       <Customer></Customer>

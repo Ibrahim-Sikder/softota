@@ -10,11 +10,14 @@ import TourDestination from "../../components/Tour/TourDestination";
 
 import { Helmet } from "react-helmet-async";
 import Mission from "../../components/Mission/Mission";
+import DisCount from "../../components/DisCount/DisCount";
+
 
 
 export const config ={
   unstable_runtimeJS: false
 }
+
 
 
 export default function Home() {
@@ -23,9 +26,10 @@ export default function Home() {
       <Helmet>
             <title>Ghuronti || Flight </title>
         </Helmet>
-      <Nav />
+        <Nav/>
       <Banner></Banner>
       <TourDestination></TourDestination>
+      <DisCount/>
       <Travel></Travel>
       <Mission/>
       <Customer></Customer>

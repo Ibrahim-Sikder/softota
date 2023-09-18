@@ -167,7 +167,7 @@
 .heroBoxMain {
   width: 1105px;
   height: auto;
-  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  /* background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important; */
   z-index: 9999 !important;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -175,6 +175,8 @@
   position: relative;
   top: 34px;
   overflow: hidden;
+
+  background-image: linear-gradient(to right, #0bb811 0%, #0bb811 100%);
 }
 .departDate{
   background: transparent;
@@ -435,7 +437,7 @@ box-shadow:none;
 }
 .heroBoxBtn {
   top: 346px;
-  background-image: linear-gradient(90deg, #4ab449, #19ABE3);
+  background-image: linear-gradient(90deg, #0BB811, #19ABE3);
   color: white;
   border-radius: 5px;
   padding: 12px 0px;
@@ -446,7 +448,7 @@ box-shadow:none;
   transition:al .5s ease-in-out;
 }
 .heroBoxBtn:hover {
-  background-image: linear-gradient(90deg,  #19ABE3, #4ab449);
+  background-image: linear-gradient(90deg,  #19ABE3, #0BB811);
 }
 .flightWay{
   width:100%;
@@ -465,7 +467,7 @@ box-shadow:none;
 .menu{
   display: flex;
   justify-content: space-between;
-  background: #4AB449;
+  background: #0ab6f7;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   color: #fff;
@@ -504,7 +506,7 @@ box-shadow:none;
   z-index: 999 !important;
 }
 .activeLink{
-  background:#19ABE3 !important;
+  background: #0BB811;
 }
 
 /* modal styling  */

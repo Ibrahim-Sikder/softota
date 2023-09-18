@@ -1,5 +1,5 @@
 .activeLink{
-  background: #19ABE3 !important;
+  background: #0BB811 !important;
   width: 158px !important;
   height: 68px !important;
   z-index: 99 !important;
@@ -11,15 +11,15 @@
   }
  
   .active{
-    background: #4AB449 !important;
+    background: #19ABE3 !important;
     width: 158px !important;
     height: 68px !important;
     z-index: 99 !important;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top-right-radius: 17px;
-    border-top-left-radius: 17px;
+    /* border-top-right-radius: 17px;
+    border-top-left-radius: 17px; */
   }
 .active:nth-child(1){
   border-right:none;

@@ -24,7 +24,7 @@
 .heroBoxMain {
   width: 1105px;
   height: 381px;
-  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  background:#0BB811;
   z-index: 9999 !important;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -178,7 +178,7 @@ border-bottom-left-radius: 5px;
   left: 50%;
   transform: translateX(-50%);
   top: 290px;
-  background-image: linear-gradient(90deg, #4ab449, #19abe3) !important;
+  background-image: linear-gradient(358deg, #0BB811, #0aacec) !important;
   color: white;
   font-size: 18px;
   border-radius: 5px;
@@ -187,7 +187,7 @@ border-bottom-left-radius: 5px;
   transition: all .5s cubic-bezier(0.32, 0.25, 0.5, 0.5);
 }
 .heroBoxBtn:hover{
-  background-image: linear-gradient(90deg, #19abe3, #4ab449) !important;
+  background-image: linear-gradient(90deg, #19abe3, #0BB811) !important;
 
 }
 /* menu styling  */
