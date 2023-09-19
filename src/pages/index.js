@@ -1,6 +1,5 @@
 "use client";
 
-
 import Banner from "../../components/Banner/Banner";
 import Travel from "../../components/Travel/Travel";
 import Customer from "../../components/Customer/Customer";
@@ -12,26 +11,22 @@ import { Helmet } from "react-helmet-async";
 import Mission from "../../components/Mission/Mission";
 import DisCount from "../../components/DisCount/DisCount";
 
-
-
-export const config ={
-  unstable_runtimeJS: false
-}
-
-
+export const config = {
+  unstable_runtimeJS: false,
+};
 
 export default function Home() {
   return (
     <section>
       <Helmet>
-            <title>Ghuronti || Flight </title>
-        </Helmet>
-        <Nav/>
+        <title>Ghuronti || Flight </title>
+      </Helmet>
+      <Nav />
       <Banner></Banner>
       <TourDestination></TourDestination>
-      <DisCount/>
+      <DisCount />
       <Travel></Travel>
-      <Mission/>
+      <Mission />
       <Customer></Customer>
       <Footer />
     </section>

@@ -32,14 +32,15 @@
   border-radius: 37px;
   position: relative;
   top: 28px;
+  overflow: hidden;
 }
 
 
 .calendarTow{
   position: absolute;
-  left: 0px;
+  left: 50%;
   transform: translate(-50%);
-  top: -224px;
+  top: -186px;
   z-index: 99999 !important;
 
 }

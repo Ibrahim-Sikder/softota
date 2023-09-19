@@ -1,23 +1,25 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import plane from '../../public/plane.json'
+import loading from '../../public/loading.json'
 
-const Plane = () => {
+const Loader = () => {
     const defaultOptions = {
         loop: true,
         autoplay: true, 
-        animationData: plane,
+        animationData: loading,
         rendererSettings: {
           preserveAspectRatio: 'xMidYMid slice'
         }
       };
     return (
-        <div>
+        <div className='min-h-screen w-full flex items-center justify-center text-center'>
+             <div>
             <Lottie options={defaultOptions}
-              height={1000}
-              width={1000}/>
+              height={300}
+              width={300}/>
+        </div>
         </div>
     );
 };
 
-export default Plane;
+export default Loader;
