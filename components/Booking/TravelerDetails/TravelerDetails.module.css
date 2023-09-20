@@ -5,11 +5,14 @@
 }
 .passport button{
      background: #4AB449;
-     padding: 8px 5px;
      margin-right: 15px;
      border-radius: 3px;
      margin-top: 5px;
-     width: 105px;;
+     width: 125px;
+     height: 28px;
+     border-radius: 25px;
+     color: white;
+     font-size: 14px;
  
 }
 .travelerInfo{

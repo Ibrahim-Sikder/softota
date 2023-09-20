@@ -5,8 +5,9 @@ import { ArrowForwardIos, Home } from "@mui/icons-material";
 import Link from "next/link";
 import Nav from "../../../../components/NavBarr/Nav";
 import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
-import Cancel from "@/pages/b2bsearch/cancel";
+
 import Footer from "../../../../components/Footer/Footer";
+import Cancel from "../../../../components/Booking/FlightCancel/Cancel";
 const flightCancel = () => {
   return (
     <section>
@@ -53,7 +54,7 @@ const flightCancel = () => {
             <FlightBookingLeftSide/>
           </div>
           <div className={style.userProfileRightSide}>
-           <Cancel/>
+            <Cancel/>
           </div>
         </div>
       </section>

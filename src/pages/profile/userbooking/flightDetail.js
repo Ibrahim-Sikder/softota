@@ -1,10 +1,10 @@
 import React from "react";
 import style from '../userbooking/flightbooking.module.css'
 import Link from "next/link";
-import { Details, ReportProblem } from "@mui/icons-material";
 import { ArrowForwardIos, Home } from "@mui/icons-material";
 import Nav from "../../../../components/NavBarr/Nav";
 import FlightBookingLeftSide from "../../../../components/Booking/FlightBooking/FlightBookingLeftSide";
+import Details from '../../../../components/Booking/FlightDetails/Details/Details'
 import Footer from "../../../../components/Footer/Footer";
 const flightDetail = () => {
   return (
@@ -52,7 +52,8 @@ const flightDetail = () => {
             <FlightBookingLeftSide/>
           </div>
           <div className={style.userProfileRightSide}>
-           <Details></Details>
+          <Details/>
+
           </div>
         </div>
       </section>

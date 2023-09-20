@@ -63,7 +63,7 @@ const HajjLeftSide = () => {
                 </AccordionDetails>
                 
               </Accordion>
-              <div className="bg-[#19ABE3] text-white w-full py-2 pl-3 mt-3 mb-10 rounded text-[14px]">
+              <div className="bg-[#0BB811] text-white w-full py-2 pl-3 mt-3 mb-10 rounded text-[14px]">
               <Link href='/b2bsearch/umrah/umrahPackage'><p>Umrah Management </p> </Link>
               </div>
                    <div className="leftSideOffer">

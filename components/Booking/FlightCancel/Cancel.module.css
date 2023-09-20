@@ -11,10 +11,12 @@
 }
 .cancelBtn button{
      background: #4AB449;
-     padding: 10px 0px;
      font-size: 14px;
-     width: 176px;
+     width: 250px;
      margin-top: 20px;
+     color: white;
+     height: 45px;
+     border-radius: 25px;
 }
 .cancelImg{
      text-align: center;

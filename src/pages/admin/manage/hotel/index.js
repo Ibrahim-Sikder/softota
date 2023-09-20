@@ -8,12 +8,12 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 
-
 const hotel = () => {
   const handleEditorChange = (event, editor) => {
     const data = editor.getData();
     console.log(data);
   };
+
 
   return (
     <section>

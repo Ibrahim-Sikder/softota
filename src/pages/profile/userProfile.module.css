@@ -19,11 +19,12 @@
 .deleteBtn {
   background: #26ade2;
   color: white;
-  padding: 8px 5px;
   font-size: 18px;
   margin-top: 31px;
-  width: 190px;
+  width: 250px;
   border-radius: 3px;
+  height: 50px;
+  border-radius: 25px;
 }
 
 @media only screen and (max-width: 768px) {

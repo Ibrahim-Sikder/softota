@@ -1,19 +1,11 @@
 import React from "react";
-
-import style from "./flightbooking.module.css";
+import style from "./hotelbooking.module.css";
 import Link from "next/link";
-import { ReportProblem } from "@mui/icons-material";
-import {
-  Groups,
-  SwapHoriz,
-  CalendarMonth,
-  AttachMoney,
-} from "@mui/icons-material";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import Nav from "../../../../components/NavBarr/Nav";
 import ProfileLeftSide from "../profileLeftSide/ProfileLeftSide";
 import Footer from "../../../../components/Footer/Footer";
-
-const flightbooking = () => {
+const toursbooking = () => {
   return (
     <section>
       <Nav />
@@ -41,6 +33,7 @@ const flightbooking = () => {
                       fillOpacity={0.5}
                       d="M24.669 10.44 21 9.422l-7.825 7.282 2.758 2.257 8.736-8.52ZM29.85 15.49l1.379 3.42-7.768 7.23-2.346-2.08 8.735-8.57Z"
                     />
+
                     <path
                       fill="#4AB449"
                       fillOpacity={0.5}
@@ -52,7 +45,7 @@ const flightbooking = () => {
                       d="M21.236 25.215c-.285 0-.57-.106-.787-.32a1.072 1.072 0 0 1 0-1.537l8.836-8.639a1.13 1.13 0 0 1 1.574 0 1.069 1.069 0 0 1 0 1.539l-8.837 8.638c-.216.213-.501.32-.786.32ZM15.94 20.28c-.285 0-.57-.106-.787-.318a1.07 1.07 0 0 1 0-1.539l8.95-8.751a1.13 1.13 0 0 1 1.573 0 1.07 1.07 0 0 1 0 1.538l-8.95 8.751a1.124 1.124 0 0 1-.786.319Z"
                     />
                   </svg>
-                  <button className={style.none}>Flight </button>
+                  <button className="ml-1">Flight </button>
                 </div>
               </Link>
               <Link href="/profile/userbooking/hotelbooking">
@@ -76,10 +69,9 @@ const flightbooking = () => {
                       clipRule="evenodd"
                     />
                   </svg>
-                  <button className={style.none}>Hotel </button>
+                  <button className="ml-1">Hotel </button>
                 </div>
               </Link>
-
               <Link href="/profile/userbooking/visabooking">
                 <div className={style.bookingHistory}>
                   <svg
@@ -100,11 +92,10 @@ const flightbooking = () => {
                       />
                     </g>
                   </svg>
-                  <button className={style.none}>Visa </button>
+                  <button className="ml-1">Visa </button>
                 </div>
               </Link>
-
-              <Link href='/profile/userbooking/toursbooking'>
+                <Link href='/profile/userbooking/toursbooking'>
                 <div className={style.bookingHistory}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -127,68 +118,62 @@ const flightbooking = () => {
                 <button className="ml-1">Tours </button>
               </div>
                 </Link>
+             
             </div>
 
-            <div className={style.flightBooking}>
-              <div className="flex w-full justify-between mb-8">
-                <strong>
-                  DAC <SwapHoriz className="mx-3" /> CXB{" "}
-                </strong>
-                <strong>BDT 12,445 </strong>
+            <div className={style.userHotelBookingInfoWrap}>
+              <div className={style.userHotelBookingInfo}>
+                <div className={style.left}>
+                  <div className=" pl-3 pt-3">
+                    <h6>BOOKING ID: HB-DP2307290102</h6>
+                    <hr className="w-full my-5" />
+                  </div>
+                  <div className={style.payHistory}>
+                    <div>
+                      <h6>Hotel The Cox Today</h6>
+                      <div className="flex items-center">
+                        <FaMapMarkerAlt />
+                        <small>Kolatoli Cox s Bazar</small>
+                      </div>
+                    </div>
+                    <div>
+                      <small>Total</small> <br />
+                      <strong>BDT 45,900</strong>
+                    </div>
+                    <div>
+                      <small>Paid</small> <br />
+                      <strong>BDT 00</strong>
+                    </div>
+                  </div>
+                </div>
+                <div className={style.pending}>
+                  <p>Pending </p>
+                </div>
               </div>
-              <div className={style.traveler}>
-                <div className="flex items-center mb-3 ">
-                  <Groups className="mr-3 " />
-                  <span> 1 Travelers</span>
+              <div className={style.userContactInfo}>
+                <div>
+                  <small>Contact Name</small> <br />
+                  <span>MD Rofique</span>
                 </div>
-                <div className="flex items-center w-[200px] text-left ">
-                  <span> Airline PNR: </span>
-                  <strong>MXRHIF</strong>
+                <div>
+                  <small>Guest </small> <br />
+                  <span>3 Adults</span>
                 </div>
-              </div>
-              <div className={style.travelerDate}>
-                <div className="flex items-center">
-                  <CalendarMonth className="mr-3 mb-3" />
-                  <span>21 Aug 23 - 24 Dev 23</span>
+                <div>
+                  <small>Check In </small> <br />
+                  <span>Sat, Aug 05, 2023</span>
                 </div>
-                <div className="flex items-center  w-[200px] text-left">
-                  <span> Reservation PNR:</span>
-                  <strong>540K9C</strong>
+                <div>
+                  <small>Check Out </small> <br />
+                  <span>Sat, Aug 12, 2023</span>
                 </div>
-              </div>
-              <div className={style.detailBtnGroup}>
-                <Link href="/profile/userbooking/flightDetail">
-                  <button>Flight Details</button>
-                </Link>
-                <Link href="profile/userbooking/travelerdetails">
-                  <button>Traveller</button>
-                </Link>
-                <Link href="/profile/userbooking/fareDetail">
-                  <button>Pricing</button>
-                </Link>
-                <Link href="/profile/userbooking/flightCancel">
-                  <button>Cancellation Policy</button>
-                </Link>
-                <Link href="/profile/userbooking/baggage">
-                  <button>Baggages</button>
-                </Link>
-              </div>
-              <div className="flex justify-between mt-5">
-                <div className={style.payments}>
-                  <span>Payment:</span>
-                  <strong> Unpaid - </strong>
-                  <span> Booking:</span>
-                  <strong>Canacelled:</strong>
-                </div>
-                <div className="flex items-center">
-                  <small className={style.dollars}>
-                    {" "}
-                    <AttachMoney className={style.dollarIcons} />
-                  </small>
-                  <strong>240</strong>
+                <div>
+                  <small>5 Nights x 1 Room</small> <br />
+                  <span>Family </span>
                 </div>
               </div>
             </div>
+           
           </div>
         </div>
       </section>
@@ -197,4 +182,4 @@ const flightbooking = () => {
   );
 };
 
-export default flightbooking;
+export default toursbooking;

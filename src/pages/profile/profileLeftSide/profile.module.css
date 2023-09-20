@@ -32,10 +32,11 @@
   color: white;
   margin-bottom: 12px;
   text-align: center;
-  padding: 8px 1px;
   font-size: 18px;
   width: 200px;
-  transition:all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  height: 45px;
+  border-radius: 20px;
 }
 .userLogoutBtn:hover {
   background: #19abe3;
