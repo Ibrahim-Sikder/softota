@@ -209,6 +209,7 @@ const Banner = ({ setResults }) => {
     setinputList(list);
   };
 
+  
   const handleaddclick = () => {
     setinputList([...inputList, { flyingFrom: "", flyingTo: "", date: "" }]);
   };

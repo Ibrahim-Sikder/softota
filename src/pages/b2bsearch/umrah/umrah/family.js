@@ -22,6 +22,7 @@ const Premium = () => {
             <MoveText />
           </div>
           <div>
+            
             <div className={style.packageWrap}>
               <div className={style.packageLeftSide}>
                 <UmrahPackageLeftSideB2B/>

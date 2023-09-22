@@ -158,7 +158,7 @@ const B2BHotelSearch = () => {
                             Price Includes VAT & Tax{" "}
                           </span>
                         </div>
-                        <Link href="/b2bsearch/hotelDetail">
+                        <Link href="/b2bdashboard/hotel/details">
                           <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
                             BOOK NOW
                           </button>

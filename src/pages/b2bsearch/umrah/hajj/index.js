@@ -37,6 +37,7 @@ const Hajj = () => {
                 </B2BHajjCard>
               </div>
             </div>
+            
           </div>
           <Footer/>
         </div>

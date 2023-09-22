@@ -70,7 +70,8 @@ const HotelHeroBox = () => {
   };
 
   return (
-    <section>
+    <section className={style.bannerWrap}>
+      <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
       <div className={`${style.heroBoxMain} ${styling.hotelHeroBoxMain}`}>
         <div className={style.packageWrap}>
           <div className={style.package}>
@@ -142,15 +143,15 @@ const HotelHeroBox = () => {
             </div>
           </div>
         </div>
-        <Link href="/b2bsearch/hotelSearch">
+        <Link href="/b2bdashboard/hotel/search">
           <button className={style.heroBoxBtn}>Get Your Hotel</button>
         </Link>
 
         {/* menubar */}
         <div>
-          <ul className={style.menu}>
+        <ul className={style.menu}>
             <div className={style.wrapMenu}>
-              <ActiveLink href="/b2bsearch/umrah">
+              <ActiveLink href="/b2bdashboard/hajj">
                 <li className={style.firstChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +194,7 @@ const HotelHeroBox = () => {
                   <p className="ml-3">Hajj & Umrah</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch">
+              <ActiveLink href="/b2bdashboard">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -225,7 +226,7 @@ const HotelHeroBox = () => {
                   <p className="ml-3">Flight</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/hotel">
+              <ActiveLink href="/b2bdashboard/hotel">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -250,7 +251,7 @@ const HotelHeroBox = () => {
                   <p className="ml-3">Hotel</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/visa">
+              <ActiveLink href="/b2bdashboard/visa">
                 <li>
                 <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -274,7 +275,7 @@ const HotelHeroBox = () => {
                   <p className="ml-3">Visa</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/tours">
+              <ActiveLink href="/b2bdashboard/tours">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -297,7 +298,7 @@ const HotelHeroBox = () => {
                   <p className="ml-3">Tours</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/buses">
+              <ActiveLink href="/b2bdashboard/buses">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -320,7 +321,7 @@ const HotelHeroBox = () => {
                   <p className="ml-3">Buses</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/train">
+              <ActiveLink href="/b2bdashboard/train">
                 <li className={style.lastChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

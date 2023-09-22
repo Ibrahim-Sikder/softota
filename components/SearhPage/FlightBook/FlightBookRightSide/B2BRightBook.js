@@ -87,7 +87,7 @@ const B2BRightBook = () => {
                    <input onClick={handleDisable} className={style.checkbox} type="checkbox" />
                    <p>I aggree to the <strong>Terms & Condition</strong> and <strong>Privacy Policy</strong> </p>
                     </div>
-                   <Link href='/b2bsearch/flight/passengerInfo'> <input  disable={disabled} className={style.paymentBtn} type="submit" value='Pay Now' /></Link>
+                   <Link href='/b2bdashboard/flight/passengerInfo'> <input  disable={disabled} className={style.paymentBtn} type="submit" value='Pay Now' /></Link>
                    
                </div>
           </div>

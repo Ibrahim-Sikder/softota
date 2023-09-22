@@ -72,7 +72,7 @@ const UmraPackage = () => {
               </div>
               <div className={style.viewDetailBtn}>
                 <button className={style.hajjBtn}>
-                  <Link href='/hajjUmra/hajj/economy'>  <h4>View Details</h4></Link>
+                  <Link href='/hajj/economy'>  <h4>View Details</h4></Link>
                  
                 </button>
               </div>

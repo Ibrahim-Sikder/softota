@@ -1,27 +1,17 @@
-import React from "react";
-import style from "./userProfile.module.css";
-import ProfileLeftSide from "./profileLeftSide/ProfileLeftSide";
-import Footer from "../../../components/Footer/Footer";
-import ProfileRightSide from "./ProfileRightSide/ProfileRightSide";
-import Nav from "../../../components/NavBarr/Nav";
+import React from 'react';
 
-const Profile = () => {
-  return (
-    <section>
-      <Nav />
-      <section className={style.accounWra}>
-        <div className={style.profileWrap}>
-          <div className={style.userProfileLeftSide}>
-            <ProfileLeftSide></ProfileLeftSide>
-          </div>
-          <div className={style.userProfileRightSide}>
+import ProfileRightSide from './ProfileRightSide/ProfileRightSide';
+import B2CDashboardLayout from '../../../components/Layout/B2CDashboardLayout/B2CDashboardLayout';
+
+
+const index = () => {
+    return (
+        <div>
+            <B2CDashboardLayout>
             <ProfileRightSide></ProfileRightSide>
-          </div>
+            </B2CDashboardLayout>
         </div>
-      </section>
-      <Footer />
-    </section>
-  );
+    );
 };
 
-export default Profile;
+export default index;

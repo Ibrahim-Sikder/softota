@@ -7,24 +7,22 @@ import {
   Hotel,
   BookOnline,
   TransferWithinAStation,
-  Search
+  Search,
 } from "@mui/icons-material";
 import ActiveLink from "../../Banner/ActiveLink";
 
 const UmraHeroBox = () => {
-
-
   return (
     <section>
-    {/* banner */}
-    <div className={style.bannerWrap}>
-      <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
-      <div className={style.heroBoxMain}>
+      {/* banner */}
+      <div className={style.bannerWrap}>
+        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
+        <div className={style.heroBoxMain}>
           {/* menubar */}
           <div className={style.menuWrap}>
           <ul className={style.menu}>
             <div className={style.wrapMenu}>
-              <ActiveLink href="/b2bsearch/umrah">
+              <ActiveLink href="/b2bdashboard/hajj">
                 <li className={style.firstChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +65,7 @@ const UmraHeroBox = () => {
                   <p className="ml-3">Hajj & Umrah</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch">
+              <ActiveLink href="/b2bdashboard">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +97,7 @@ const UmraHeroBox = () => {
                   <p className="ml-3">Flight</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/hotel">
+              <ActiveLink href="/b2bdashboard/hotel">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +122,7 @@ const UmraHeroBox = () => {
                   <p className="ml-3">Hotel</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/visa">
+              <ActiveLink href="/b2bdashboard/visa">
                 <li>
                 <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +146,7 @@ const UmraHeroBox = () => {
                   <p className="ml-3">Visa</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/tours">
+              <ActiveLink href="/b2bdashboard/tours">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +169,7 @@ const UmraHeroBox = () => {
                   <p className="ml-3">Tours</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/buses">
+              <ActiveLink href="/b2bdashboard/buses">
                 <li>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -194,7 +192,7 @@ const UmraHeroBox = () => {
                   <p className="ml-3">Buses</p>
                 </li>
               </ActiveLink>
-              <ActiveLink href="/b2bsearch/train">
+              <ActiveLink href="/b2bdashboard/train">
                 <li className={style.lastChild}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -258,27 +256,21 @@ const UmraHeroBox = () => {
 
           <div className={style.hajjUmrapackageWrap}>
             <div className={style.hajjUmraPackage}>
-                <select>
-                  <option value="Hajj Package">Hajj Package</option>
-                  <option value="Umrah Package">Umrah Package</option>
-                </select>
-                <Link href='/b2bsearch/umrah/hajj'>
+              <select>
+                <option value="Hajj Package">Hajj Package</option>
+                <option value="Umrah Package">Umrah Package</option>
+              </select>
+              <Link href="/b2bdashboard/hajj/search">
                 <div className={style.searchBtnWrap}>
                   <button> Search</button>
-                  <Search className={style.searchIcon}/> 
-               </div>
-                </Link>
-              
+                  <Search className={style.searchIcon} />
+                </div>
+              </Link>
             </div>
-            {/* <div className={style.rightPlaceForYou}>
-           <h6>If you want to do Hajj & Umrah at the very low cost then this is the right place for you !</h6>
-            </div> */}
           </div>
-
-
         </div>
-    </div>
-  </section>
+      </div>
+    </section>
   );
 };
 

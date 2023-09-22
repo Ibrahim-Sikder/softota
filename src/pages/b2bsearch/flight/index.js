@@ -3,6 +3,7 @@ import UserDashBoardLeft from "../../../../components/UserDashBoard/UserDashBoar
 import style from "../../../../components/UserDashBoard/UserDashBoard.module.css";
 import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBar";
 import dynamic from "next/dynamic";
+
 import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
 import Link from "next/link";
 import Footer from "../../../../components/Footer/Footer";
@@ -257,3 +258,4 @@ const flight = () => {
 };
 
 export default dynamic(() => Promise.resolve(flight), { ssr: false });
+

@@ -1,5 +1,5 @@
-.activeLink{
-  background: #0BB811 !important;
+.activeLink {
+  background: #0bb811 !important;
   width: 158px !important;
   height: 68px !important;
   z-index: 99 !important;
@@ -8,79 +8,73 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.active {
+  background: #19abe3 !important;
+  width: 158px !important;
+  height: 68px !important;
+  z-index: 99 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active:nth-child(1) {
+  border-right: none;
+}
+.active:nth-child(2) {
+  border-right: none;
+}
+.active:nth-child(3) {
+  border-right: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .activeLink {
+    width: 138px !important;
   }
- 
-  .active{
-    background: #19ABE3 !important;
-    width: 158px !important;
+
+  .active {
+    width: 139px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .activeLink {
+    width: 175px !important;
+  }
+
+  .active {
+    background: transparent !important;
+    width: 175px !important;
     height: 68px !important;
     z-index: 99 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border-top-right-radius: 17px;
-    border-top-left-radius: 17px; */
   }
-.active:nth-child(1){
-  border-right:none;
-}
-.active:nth-child(2){
-  border-right:none;
-}
-.active:nth-child(3){
-  border-right:none;
-}
-
-@media only screen and (max-width:1024px){
-  .activeLink{
-    width: 138px !important;
-    }
-   
-    .active{
-      width: 139px !important;
-    }
-
-}
-@media only screen and (max-width:768px){
-  .activeLink{
-    width: 175px !important;
-    }
-   
-    .active{
-      background: transparent !important;
-       width: 175px !important;
-      height: 68px !important; 
-      z-index: 99 !important;
-    }
-    .astChild {
-      border-right: none !important;
+  .astChild {
+    border-right: none !important;
   }
-
 }
-@media only screen and (max-width:600px){
-  .activeLink, .active{
+@media only screen and (max-width: 600px) {
+  .activeLink,
+  .active {
     width: 90px !important;
     height: 50px !important;
-    }
-    .activeLink{
-      background: #19ABE3 !important;
-      border: none;
-      width: 85px!important;
-    }
-    .activeLink{
-      width: 85px !important;
-      }
-     
-      .active{
-        width: 85px !important;
-      }
-  
-   
-   
+  }
+  .activeLink {
+    background: #19abe3 !important;
+    border: none;
+    width: 85px !important;
+  }
+  .activeLink {
+    width: 85px !important;
+  }
+
+  .active {
+    width: 85px !important;
+  }
 }
 
-@media only screen and (max-width:375px){
+@media only screen and (max-width: 375px) {
   .active {
     width: 80px !important;
-}
+  }
 }
