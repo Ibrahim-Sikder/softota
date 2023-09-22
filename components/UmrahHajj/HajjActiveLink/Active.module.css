@@ -1,0 +1,10 @@
+.hajjActive{
+    background:red !important;
+    width: 200px !important;
+    height: 40px !important;
+}
+.noActive{
+    background:yellow !important;
+    width: 200px;
+    height: 40px;
+}

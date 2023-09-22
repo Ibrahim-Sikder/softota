@@ -35,10 +35,10 @@ const ProfileLeftSide = () => {
             <Link href="/profile/password">
               <p>Change Password </p>
             </Link>
-            <Link href="/profile/saveCard">
+            <Link href="/profile/savecard">
               <p>Save Cards </p>
             </Link>
-            <Link href="/profile/manageData">
+            <Link href="/profile/manage">
               <p>Manage Your Data </p>
             </Link>
           </div>
@@ -48,6 +48,7 @@ const ProfileLeftSide = () => {
         </div>
       </div>
     </section>
+    
   );
 };
 

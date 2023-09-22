@@ -123,7 +123,7 @@ const B2BHajjCard = ({heading, subheading, title, img, }) => {
                     </div>
                     <div className={style.cardPrice}>
                       <p>{data.price}</p>
-                      <Link href="/b2bsearch/umrah/hajj/bookHajj">
+                      <Link href="/b2bdashboard/hajj/book">
                         <button>Details</button>
                       </Link>
                     </div>

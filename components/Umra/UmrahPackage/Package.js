@@ -1,11 +1,12 @@
 import React from "react";
 import style from "./Package.module.css";
-import umrah from "../../../public/assets/umraOffer.jpg";
+import umrah from "../../../public/assets/umrahOffer.jpg";
 import HajjUmrahCard from "../../Shared/HajjUmraCard/HajjUmrahCard";
 import UmrahPackageLeftSide from "./UmrahPackageLeftSide";
 const Package = () => {
   return (
     <div>
+      
       <div className={style.packageWrap}>
         <div className={style.packageLeftSide}>
           <UmrahPackageLeftSide/>

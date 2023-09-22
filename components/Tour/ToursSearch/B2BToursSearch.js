@@ -137,7 +137,7 @@ const B2BToursSearch = () => {
                                     <div className={style.cardPrice}>
                                         <p>$ {tour.price}</p>
                                         <p>Per adults</p>
-                                        <Link href='/b2bsearch/tours/reserve'> <button>Reserve</button></Link>
+                                        <Link href='/b2bdashboard/tours/reserve'> <button>Reserve</button></Link>
                                        
                                     </div>
                                     </div>

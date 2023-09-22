@@ -274,7 +274,7 @@ const B2BHotelDetail = () => {
               <p>
                 <strong className="text-[#4AB449]">Start from</strong> 20000Tk
               </p>
-              <Link href="/b2bsearch/hotelBook">
+              <Link href="/b2bdashboard/hotel/book">
                 <button className={style.rightSideBtn}> Book Now </button>
               </Link>
             </div>

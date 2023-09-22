@@ -3,6 +3,7 @@ import style from "./Package.module.css";
 import UmrahPackageLeftSide from "./UmrahPackageLeftSide";
 import HajjUmrahCard from "../../Shared/HajjUmraCard/HajjUmrahCard";
 import umrah from '../../../public/assets/umra3.jpeg'
+
 const UmrahInRamadn = () => {
   return (
     <div>

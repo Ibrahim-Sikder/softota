@@ -3,9 +3,6 @@ import style from "./ToursReserve.module.css";
 import tours from "../../../public/assets/tour5.jpg";
 import tours2 from "../../../public/assets/tours3.jpeg";
 import tours3 from "../../../public/assets/destination16.jpg";
-import tours4 from "../../../public/assets/destination16.jpg";
-import tours5 from "../../../public/assets/destination16.jpg";
-import tours6 from "../../../public/assets/destination16.jpg";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -383,7 +380,7 @@ const B2BTourReserve = () => {
                   <small>(No additional taxes or booking fees)</small>
                   <div className={style.checkout}>
                  
-                   <Link href='/b2bsearch/tours/checkout'> <button>Checkout</button></Link>
+                   <Link href='/b2bdashboard/tours/checkout'> <button>Checkout</button></Link>
                   </div>
                 </div>
               </div>

@@ -298,7 +298,7 @@ const Umra = () => {
                   <option value="Hajj Package">Hajj Package</option>
                   <option value="Umrah Package">Umrah Package</option>
                 </select>
-                <Link href='hajjUmra/umrahPackage'>
+                <Link href='/hajj'>
                 <div className={style.searchBtnWrap}>
                   <button> Search</button>
                   <Search className={style.searchIcon}/> 

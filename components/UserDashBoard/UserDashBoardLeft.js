@@ -5,6 +5,7 @@ import {
   FaUserAlt,
   FaPlane,
   FaCommentDollar,
+  
   FaAmazonPay,
   FaHospitalUser,
   FaSkating,
@@ -90,9 +91,9 @@ const UserDashBoardLeft = () => {
                 <AccordionDetails  className={style.ticketSubMenu}>
                   <Typography>
                     <ul>
-                    <li className='flex'><Link href='/b2bsearch/flight'><AirplaneTicket className={style.flightIcons} />Confirm Ticket </Link></li>
-                    <li className='flex'><Link href='/b2bsearch/process'><Spellcheck className={style.flightIcons} />On Hold Process</Link></li>
-                      <li className='flex'><Link href='/b2bsearch/ticketcancel'><CancelScheduleSend className={style.flightIcons} />Cancel Ticket</Link></li>
+                    <li className='flex'><Link href='/b2bdashboard/flight/confirmTicket'><AirplaneTicket className={style.flightIcons} />Confirm Ticket </Link></li>
+                    <li className='flex'><Link href='/b2bdashboard/flight/process'><Spellcheck className={style.flightIcons} />On Hold Process</Link></li>
+                      <li className='flex'><Link href='/b2bdashboard/flight/cancelTicket'><CancelScheduleSend className={style.flightIcons} />Cancel Ticket</Link></li>
                     </ul>
                   </Typography>
                 </AccordionDetails>
@@ -114,49 +115,49 @@ const UserDashBoardLeft = () => {
               <ul className={style.profileInfo}>
                 <li>
                   <FaAcquisitionsIncorporated />
-                  <Link href="/b2bsearch/partial">
+                  <Link href="/b2bdashboard/partial">
                     <span>Partial Payment</span>
                   </Link>
                 </li>
                 <li>
                   <FaPlane className="text-white" />
-                  <Link href="/b2bsearch/returnChange">
+                  <Link href="/b2bdashboard/returnChange">
                     <span>Void/Return/Change</span>
                   </Link>
                 </li>
                 <li>
                   <FaCommentDollar className="text-white" />
-                  <Link href="/b2bsearch/transactions">
+                  <Link href="/b2bdashboard/transactions">
                     <span>Transactions</span>
                   </Link>
                 </li>
                 <li>
                   <FaAmazonPay className="text-white" />
-                  <Link href="/b2bsearch/payment">
+                  <Link href="/b2bdashboard/payment">
                     <span>Payment</span>
                   </Link>
                 </li>
                 <li>
                   <FaHospitalUser className="text-white" />
-                  <Link href="/b2bsearch/banklist">
+                  <Link href="/b2bdashboard/banklist">
                     <span>Bank List </span>
                   </Link>
                 </li>
                 <li>
                   <FaUserAlt />
-                  <Link href="/b2bsearch/profile">
+                  <Link href="/b2bdashboard/profile">
                     <span>Profile</span>
                   </Link>
                 </li>
                 <li>
                   <FaSkating className="text-white" />
-                  <Link href="/b2bsearch/passenger">
+                  <Link href="/b2bdashboard/passenger">
                     <span>Quick Passengers</span>
                   </Link>
                 </li>
                 <li>
                   <FaRegBuilding className="text-white" />
-                  <Link href="/b2bsearch/company">
+                  <Link href="/b2bdashboard/company">
                     <span>Company</span>
                   </Link>
                 </li>

@@ -89,6 +89,7 @@ const UmrahPackageLeftSide = () => {
                     <h2 className="text-xl font-bold text-center mt-2">Umrah Offer</h2>
                    </div>
           </div>
+          
         </div>
     );
 };

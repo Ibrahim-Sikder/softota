@@ -123,7 +123,7 @@ const HajjUmrahCard = ({heading, subheading, title, img, }) => {
                     </div>
                     <div className={style.cardPrice}>
                       <p>{data.price}</p>
-                      <Link href="/hajjUmra/hajj/bookHajj">
+                      <Link href="/hajj/hajjbook">
                         <button>Details</button>
                       </Link>
                     </div>

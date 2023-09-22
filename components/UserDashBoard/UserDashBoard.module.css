@@ -87,7 +87,7 @@
 }
 
 /* admin dashboard right side styling  */
-.flightRightSide, .hotelSearchRightSideBara, .flightBook{
+.flightRightSide, .hotelSearchRightSideBara, .flightBook, .dashboardRight{
   width:100% !important;
 }
 
