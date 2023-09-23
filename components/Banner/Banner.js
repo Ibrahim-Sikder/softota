@@ -265,7 +265,7 @@ const Banner = ({ setResults }) => {
                     <p className="ml-3">Hajj & Umrah</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/flight">
+                <ActiveLink href="/">
                   <li className={style.activeLink}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

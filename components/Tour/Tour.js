@@ -153,7 +153,7 @@ const Tour = () => {
                     <p className="ml-3">Hajj & Umrah</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/flight">
+                <ActiveLink href="/">
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
