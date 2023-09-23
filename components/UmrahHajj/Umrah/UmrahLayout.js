@@ -48,7 +48,7 @@ const UmrahLayout = ({ children }) => {
                       <AccordionDetails>
 
                         <Typography className={style.hajjTypograpy}>
-                          <Link href="/umrah/umrah-in-ramdan">
+                          <Link href="/umrah/umrah-in-ramadan">
                             <p>Umrah In Ramadan </p>
                           </Link>
                         </Typography>

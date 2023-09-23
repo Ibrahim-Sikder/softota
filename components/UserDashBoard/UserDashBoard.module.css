@@ -62,12 +62,12 @@
   font-size: 22px !important;
 }
 .bookingHistory{
-  background: #0BB811 !important;
+  background: #4AB449 !important;
   color:white !important;
 }
 .subAccordion{
   width: 154px !important;
-  background: #0BB811 !important;
+  background: #4AB449 !important;
   color: white !important;
   text-align: left;
   margin-left: -14px !important;
@@ -119,13 +119,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #0BB811;
+  background: #4AB449;
   /* box-shadow: #4AB449 0px 14px 28px, #4AB449 0px 10px 10px; */
   margin-bottom:10px;
 }
 
 .adminLeftInfo p {
-  color: #0BB811;
+  color: #4AB449;
   font-size: 14px;
   margin-top: 3px;
 }
@@ -140,7 +140,7 @@
   font-size:14px;
 }
 .adminLeftInfo strong{
-  color: #0BB811;
+  color: #4AB449;
 }
 
 .customerInfo {
@@ -185,7 +185,7 @@
 }
 
 .menubar {
-  background: #0BB811 !important;
+  background: #4AB449 !important;
 }
 .searchBox,
 .dateBox,
@@ -193,7 +193,7 @@
   border: 1px solid #fff !important;
 }
 .removecity {
-  background: #0BB811;
+  background: #4AB449;
 }
 .searchBtn {
   border: 1px solid #fff !important;
@@ -204,14 +204,14 @@
 
 }
 .searchBtn:hover {
-  background: #0BB811;
+  background: #4AB449;
 }
 .packageTour {
   width: 100%;
 }
 
 .active {
-  background: #0BB811;
+  background: #4AB449;
   display: flex;
   padding-left: 0px;
   justify-content: space-between;
@@ -225,7 +225,7 @@
 }
 
 .toolTip{
-  background: #0BB811;
+  background: #4AB449;
   width: 146px;
   padding: 5px;
   position: absolute;
@@ -286,7 +286,7 @@ z-index: 9999999999 !important;
 
 /* dashboard left side styling  */
 .dashBoardLeftSide {
-  background: #0BB811;
+  background: #4AB449;
   width: 253px;
   display: flex;
   padding-left: 10px;
@@ -319,7 +319,7 @@ z-index: 9999999999 !important;
   transition: all 0.3s ease-in-out;
 }
 .bar {
-  background: #0BB811;
+  background: #4AB449;
   padding: 0px !important;
   text-align: left !important;
   width: 49px;
@@ -371,7 +371,7 @@ z-index: 9999999999 !important;
   transition: all .5s linear(-0.47 -53.68%, 1 100%);
 }
 .bookingList ul li:hover {
-  background: #0BB811;
+  background: #4AB449;
   padding: 5px 5px;
 }
 .flightIcon {

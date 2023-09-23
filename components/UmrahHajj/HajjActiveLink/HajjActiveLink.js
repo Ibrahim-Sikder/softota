@@ -14,6 +14,7 @@ const HajjActiveLink = ({ router, href, children }) => {
     router.push(href);
   };
 
+  
   const isCurrentPath = router?.pathname === href || router?.asPath === href;
 
   return (

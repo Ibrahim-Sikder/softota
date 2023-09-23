@@ -1,7 +1,7 @@
 import React from 'react';
 import HajjLayout from '../../../components/UmrahHajj/Hajj/HajjLayout';
 import HajjUmrahCard from '../../../components/Shared/HajjUmraCard/HajjUmrahCard';
-import hajj from "../../../public/assets/hajj3.jpg"
+import hajj from "../../../public/assets/hajj5.jpeg"
 const Hajj = () => {
     return (
         <HajjLayout>

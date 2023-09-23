@@ -167,7 +167,6 @@
 .heroBoxMain {
   width: 1105px;
   height: auto;
-  /* background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important; */
   z-index: 9999 !important;
   margin: 0 auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -175,8 +174,7 @@
   position: relative;
   top: 34px;
   overflow: hidden;
-
-  background-image: linear-gradient(to right, #0bb811 0%, #0bb811 100%);
+background:#19abe3;
 }
 .departDate{
   background: transparent;
@@ -505,9 +503,7 @@ box-shadow:none;
 .menu li P {
   z-index: 999 !important;
 }
-.activeLink{
-  background: #0BB811;
-}
+
 
 /* modal styling  */
 
