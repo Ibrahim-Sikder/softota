@@ -21,7 +21,7 @@ const BestPlace = () => {
             <div className="flex flex-col flex-wrap md:flex-row md:-mx-2">
               <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0">
                 <Link
-                  href=""
+                  href="/details"
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
                   <Image
@@ -57,7 +57,7 @@ const BestPlace = () => {
               </div>
               <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0">
                 <Link
-                  href=""
+                  href="/details"
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
                   <Image
@@ -93,7 +93,7 @@ const BestPlace = () => {
               </div>
               <div className="h-72 md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-0">
                 <Link
-                  href=""
+                  href="/details"
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
                   <Image

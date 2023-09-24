@@ -3,9 +3,11 @@
     width: 200px !important;
     z-index: 99999999 !important;
     position: relative !important;
-    padding: 3px !important;
     color: black !important;
     display: block;
+    padding-top: 4px !important;
+    padding-left: 4px !important;
+    padding-bottom: 1px;
 }
 .noActive{
 }

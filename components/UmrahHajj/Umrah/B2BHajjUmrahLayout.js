@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./Umraha.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import hajj2 from "../../../public/assets/hajj2.png";
 import umrah2 from "../../../public/assets/umra2.jpg";
 import Accordion from "@mui/material/Accordion";
@@ -33,7 +32,7 @@ const UmrahLayout = ({ children }) => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={style.umrahTypograpy}>
-                  <div className={style.hajjAccordion}>
+                  <Accordion className={style.hajjAccordion}>
                     <AccordionSummary
                       className={style.hajjSummary}
                       expandIcon={
@@ -68,7 +67,7 @@ const UmrahLayout = ({ children }) => {
                         </HajjActiveLink>
                       </Typography>
                     </AccordionDetails>
-                  </div>
+                  </Accordion>
                 </Typography>
                 <Typography className={style.umrahTypograpy}>
                   <HajjActiveLink href="/b2bdashboard/umrah/benefit-umrah">
@@ -108,7 +107,7 @@ const UmrahLayout = ({ children }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className={style.umrahTypograpy}>
-                    <div className={style.hajjAccordion}>
+                    <Accordion className={style.hajjAccordion}>
                       <AccordionSummary
                         className={style.hajjSummary}
                         expandIcon={
@@ -140,7 +139,7 @@ const UmrahLayout = ({ children }) => {
                           </HajjActiveLink>
                         </Typography>
                       </AccordionDetails>
-                    </div>
+                    </Accordion>
                   </Typography>
 
                   <Typography className={style.umrahTypograpy}>
