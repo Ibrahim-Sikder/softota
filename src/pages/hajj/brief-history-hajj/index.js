@@ -1,13 +1,12 @@
 import React from "react";
-import B2BHajjUmrahLayout from "../../../../../components/UmrahHajj/Umrah/B2BHajjUmrahLayout";
-import umrah from "../../../../../public/assets/hajj10.jpg";
-import style from "../hajj.module.css";
+import HajjLayout from "../../../../components/UmrahHajj/Hajj/HajjLayout";
+import umrah from "../../../../public/assets/hajj10.jpg";
+import style from "../../b2bdashboard/hajj/hajj.module.css";
 import Image from "next/image";
-const BriefHistory = () => {
+const BriefHistoryHajj = () => {
   return (
-    <section>
-      <B2BHajjUmrahLayout>
-        <div className={style.visaRequirment}>
+    <HajjLayout>
+      <div className={style.visaRequirment}>
           <div className={style.visaRequirmentImg}>
             <Image className={style.requireImg} alt="requirement" src={umrah} />
           </div>
@@ -70,10 +69,13 @@ const BriefHistory = () => {
 (Surah Al-Baqarah, Verses no 129)</p>
           </div>
         </div>
-      </B2BHajjUmrahLayout>
-    </section>
+    </HajjLayout>
   );
 };
 
+export default BriefHistoryHajj;
 
-export default BriefHistory;
+
+
+
+

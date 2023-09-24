@@ -1,14 +1,12 @@
 import React from "react";
-import B2BHajjUmrahLayout from "../../../../../components/UmrahHajj/Umrah/B2BHajjUmrahLayout";
-import umrah from "../../../../../public/assets/umra8.jpg";
-import style from "../umrah-visa-requirement/requirement.module.css";
+import umrah from "../../../../public/assets/umra8.jpg";
+import style from "../../b2bdashboard/umrah/umrah-visa-requirement/requirement.module.css";
 import Image from "next/image";
-
-const Benefit = () => {
+import HajjLayout from "../../../../components/UmrahHajj/Hajj/HajjLayout";
+const BenefitUmrah = () => {
   return (
-    <section>
-      <B2BHajjUmrahLayout>
-        <div className={style.visaRequirment}>
+    <HajjLayout>
+      <div className={style.visaRequirment}>
           <div className={style.visaRequirmentImg}>
             <Image className={style.requireImg} alt="requirement" src={umrah} />
           </div>
@@ -84,10 +82,13 @@ const Benefit = () => {
             </p>
           </div>
         </div>
-        
-      </B2BHajjUmrahLayout>
-    </section>
+    </HajjLayout>
   );
 };
 
-export default Benefit;
+export default BenefitUmrah;
+
+
+
+
+

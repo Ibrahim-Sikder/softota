@@ -1,10 +1,9 @@
 import React from "react";
 import B2BHajjUmrahLayout from "../../../../../components/UmrahHajj/Umrah/B2BHajjUmrahLayout";
-import umrah from "../../../../../public/assets/umrah7.jpg";
 import style from "../umrah-visa-requirement/requirement.module.css";
-import Image from "next/image";
 
 const UmrahFAQ = () => {
+
   return (
     <section>
       <B2BHajjUmrahLayout>
