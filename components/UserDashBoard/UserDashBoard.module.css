@@ -217,7 +217,7 @@
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
   position: fixed;
-  left: -180px;
+  left: -190px;
   z-index: 999 !important;
 }
 .iconsBarHide {
@@ -229,7 +229,7 @@
   width: 146px;
   padding: 5px;
   position: absolute;
-  left: 210px;
+  left: 227px;
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
   top: 169px;
@@ -245,7 +245,7 @@
    z-index:99999 !important;
 }
 .toolTip2{
-  top: 215px !important;
+  top: 218px !important;
   width: 161px !important;
   z-index: 999999 !important;
   position:absolute;
@@ -293,7 +293,7 @@ z-index: 9999999999 !important;
   left: 0px;
   justify-content: space-between;
   transition: all 0.5s ease-in-out;
-  position: fixed;
+  position: absolute;
   z-index: 999 !important;
 }
 .leftSideWrap {

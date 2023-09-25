@@ -40,7 +40,7 @@ table {
   border-right: 1px solid #ddd;
   text-align: center;
   font-size: 12px;
-  border-bottom:1px solid #0BB811;
+  border-bottom:1px solid #4AB449;
 }
 .table :where(td):nth-last-of-type() {
   border-bottom: 3px solid #ddd !important;
@@ -48,7 +48,7 @@ table {
 .table :where(th) {
   border: 1px solid #fff;
   text-align: center;
-  background: #0BB811;
+  background: #4AB449;
   font-size: 14px;
   color: white;
 
@@ -61,7 +61,7 @@ table {
   border-radius: var(--rounded-box, 1rem);
 }
 .vertical-timeline::before {
-  background: #0BB811 !important;
+  background: #4AB449 !important;
 }
 .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
   color: #fff !important;
@@ -80,7 +80,7 @@ table {
   margin: 0 auto;
 }
 input[type="range"] {
-  accent-color: #0BB811;
+  accent-color: #4AB449;
   -webkit-appearance: none;
   width: 80%;
   height: 7px;
@@ -95,7 +95,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 20px;
   width: 20px;
   border-radius: 50%;
-  background: #0BB811;
+  background: #4AB449;
   cursor: ew-resize;
   box-shadow: 0 0 2px 0 #555;
   transition: background 0.3s ease-in-out;
@@ -134,7 +134,7 @@ input::placeholder {
 
 
 .css-1aquho2-MuiTabs-indicator {
-  background-color: #0BB811;
+  background-color: #4AB449;
 }
 .modal {
   width: 430px;
@@ -153,7 +153,7 @@ input::placeholder {
 
 
 .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root {
-  background-color: #0BB811 ;
+  background-color: #4AB449 ;
   padding: 0px ;
   text-align: left !important;
 }
@@ -283,7 +283,7 @@ input::placeholder {
    
 }
 .react-tabs__tab--selected{
-  background:#0BB811 !important;
+  background:#4AB449 !important;
 }
 
 

@@ -30,7 +30,8 @@ import {
   Replay5,
   AirplaneTicket,
   Spellcheck,
-  CancelScheduleSend
+  CancelScheduleSend,
+  ManageAccounts
 } from "@mui/icons-material";
 
 const UserDashBoardLeft = () => {
@@ -154,6 +155,55 @@ const UserDashBoardLeft = () => {
                   <Link href="/b2bdashboard/passenger">
                     <span>Quick Passengers</span>
                   </Link>
+                </li>
+                <li>
+                        
+            <Accordion className={style.bookingHistory}>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <Typography>
+                  <div className={style.bookHistory}>
+                    <h6>
+                      <ManageAccounts className={style.historyIcon} />Data Management
+                    </h6>
+                  </div>
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography>
+                  <div className={style.bookingList}>
+                    <ul>
+                      <Link href='/b2bdashboard/manage/hotel'>
+                      <li>
+                        <Hotel className={style.flightIcons} /> Hotel
+                      </li>
+                      </Link>
+                     <Link href='/b2bdashboard/manage/visa'>
+                     <li>
+                        <Beenhere className={style.flightIcons} /> Visa
+                      </li>
+                     </Link>
+                      <li>
+                      <Link href='/b2bdashboard/manage/tours'><Diversity2 className={style.flightIcons} /> Tours</Link>
+                      </li>
+                      <li>
+                        <Link href='/b2bdashboard/manage/buses'><DirectionsBusFilled className={style.flightIcons} />{" "}
+                        Buses</Link>
+                      </li>
+                      <li>
+                      <Link href='/b2bdashboard/manage/train'>  <Train className={style.flightIcons} /> Trains</Link>
+                      </li>
+                      <li>
+                      <Link href='/b2bdashboard/manage/hajjUmrah'><Train className={style.flightIcons} /> Hajj & Umrah</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
                 </li>
                 <li>
                   <FaRegBuilding className="text-white" />
