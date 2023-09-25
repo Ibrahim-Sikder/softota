@@ -40,12 +40,12 @@
 }
 @media only screen and (max-width: 768px) {
   .activeLink {
-    width: 175px !important;
+    width: 180px !important;
   }
 
   .active {
     background: transparent !important;
-    width: 175px !important;
+    width: 178px !important;
     height: 68px !important;
     z-index: 99 !important;
   }
@@ -60,7 +60,6 @@
     height: 50px !important;
   }
   .activeLink {
-    background: #19abe3 !important;
     border: none;
     width: 85px !important;
   }

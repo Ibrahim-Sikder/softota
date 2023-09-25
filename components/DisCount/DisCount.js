@@ -11,7 +11,7 @@ const DisCount = () => {
 
   return (
     <div className={style.discountWrap}>
-        <div>
+        <div  className={style.planeAnimation}>
      <lottie-player
           id="firstLottie"
           ref={ref}
@@ -20,6 +20,7 @@ const DisCount = () => {
           mode="normal"
           src='/flight3.json'
           style={{ width: "450px", height: "400px" }}
+         
         ></lottie-player>
      </div>
      <div>

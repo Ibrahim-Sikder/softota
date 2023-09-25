@@ -45,7 +45,7 @@
 .menu{
   display: flex;
   justify-content: space-between;
-  background: #19ABE3 !important;
+  background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: #fff;
@@ -409,8 +409,7 @@
     height: 394px;
 }
 .heroBoxMain {
- 
-  height: 360px;
+  height: 320px;
   border-radius: 20px;
 
 }
@@ -454,7 +453,7 @@
   margin-top: 10px;
 }
 .hajjUmraPackage select {
-  width: 100%;
+  width: 90%;
 }
 
 

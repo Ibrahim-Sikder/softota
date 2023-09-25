@@ -12,7 +12,7 @@
   height: 453px;
   box-sizing: border-box;
   background-position: center;
-  margin-bottom: 100px;
+  margin-bottom: 71px;
 }
 
 .bannerWrap h2 {
@@ -178,16 +178,17 @@ border-bottom-left-radius: 5px;
   left: 50%;
   transform: translateX(-50%);
   top: 290px;
-  background-image: linear-gradient(358deg, #0BB811, #0aacec) !important;
+  background-image: linear-gradient(90deg, #0BB811, #19ABE3);
   color: white;
   font-size: 18px;
   border-radius: 5px;
   width: 200px;
   height: 50px;
   transition: all .5s cubic-bezier(0.32, 0.25, 0.5, 0.5);
+  border: 1px solid #fff;
 }
 .heroBoxBtn:hover{
-  background-image: linear-gradient(90deg, #19abe3, #0BB811) !important;
+  background-image: linear-gradient(90deg,  #19ABE3, #0BB811);
 
 }
 /* menu styling  */
@@ -424,20 +425,13 @@ border-bottom-left-radius: 5px;
     width: 95%;
     height: 90%;
   }
-  .heroBoxMain {
-    background: none;
-  }
   .bannerWrap h2 {
     margin-bottom: 10px;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .bannerWrap {
-  
-    margin-bottom: 165px;
 
-}
   .destination {
     width: 100%x;
     margin-left: 0px;
@@ -503,7 +497,6 @@ border-bottom-left-radius: 5px;
 @media only screen and (max-width: 500px) {
   .bannerWrap {
     height: 583px;
-    margin-bottom:130px;
   }
   .bannerWrap h2 {
     font-size: 23px;
@@ -541,9 +534,9 @@ border-bottom-left-radius: 5px;
   .package4 {
    
     top: 335px;
-    right: 16px;
+    right: 13px;
     width: 93%;
-    height: 58px;
+    height: 65px;
 
   }
   .package h4, .package2 h4 {
@@ -557,14 +550,13 @@ border-bottom-left-radius: 5px;
   .package {
     width: 93%;
     left: 14px;
-    height: 58px;
+    height: 65px;
   }
   .date,
   .date2 {
     top: 261px;
     width: 47%;
-    left: 11px;
-    height: 58px;
+    left: 13px;
 
   }
   .package2 {
@@ -580,7 +572,6 @@ border-bottom-left-radius: 5px;
   .date2 {
     left: 200px;
     width: 47%;
-    height: 58px;
 
   }
 
@@ -588,12 +579,20 @@ border-bottom-left-radius: 5px;
 }
 
 @media only screen and (max-width: 400px) {
-  .wrapMenu {
-    padding: 0px 6px;
-}
 .date2 {
-  left: 179px;
-  width: 48%;
+  left: 177px;
+  width: 47%;
+
 }
  
+}
+@media only screen and (max-width: 370px){
+.date2 {
+    left: 168px;
+}
+.package4 {
+  right: 9px;
+}
+
+
 }

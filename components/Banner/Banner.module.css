@@ -266,11 +266,12 @@ font-size:14px;
   background: #19ABE3;
   color: white;
   width: 104px;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 12px;
   border: 1px solid #fff;
   margin-top: 3px;
+  height:30px
 }
 
 .removeCity{
@@ -279,10 +280,11 @@ font-size:14px;
   background: #19ABE3;
   color: white;
   width: 104px;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 13px !important;
   border: 1px solid #fff;
+  height:30px
 }
 .oneWayPackage, .roundTripWrap, .groupFlight{
   display: flex;
@@ -431,6 +433,7 @@ box-shadow:none;
   padding-bottom: 35px;
   width: 100%;
 }
+
 .heroBoxBtn {
   top: 346px;
   background-image: linear-gradient(90deg, #0BB811, #19ABE3);
@@ -463,7 +466,7 @@ box-shadow:none;
 .menu{
   display: flex;
   justify-content: space-between;
-  background: #0ab6f7;
+  background: #4AB449;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   color: #fff;
@@ -567,11 +570,11 @@ box-shadow:none;
     padding: 0px 0px;
   }
   .mobileMenuIcon{
-    font-size:22px !important;
-  }
-  .mobileMenuIcons{
-    font-size:22px !important;
     transform:rotate(34deg)
+  }
+  .mobileMenuIcons, .mobileMenuIcon{
+    font-size:30px !important;
+    margin-right:5px;
   }
   .wrapMenu{
     flex-wrap: wrap;
@@ -626,6 +629,10 @@ box-shadow:none;
 }
 .showCalendar{
   display: none;
+}
+
+.package, .package2{
+  width:300px
 }
 
 
@@ -694,8 +701,7 @@ box-shadow:none;
   width: 98%;
 }
 .departDate, .package4 {
-  width: 90%;
-  margin: 0 auto;
+  width: 85%;
 }
 .oneWayPackage, .roundTripWrap, .groupFlight {
   margin-bottom:0px;
@@ -704,8 +710,8 @@ box-shadow:none;
   margin: 5px auto;
 }
 .package, .package2, .package3, .package4 {
-  width: 90%;
-  margin: 5px auto;
+  width: 85%;
+  margin: 8px auto;
 }
 
   .bestPlaceHead {
@@ -724,7 +730,7 @@ box-shadow:none;
     top: 233px;
   }
   .date, .date2 {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
 }
 .date2{
@@ -735,7 +741,7 @@ box-shadow:none;
   display: block;
 }
 .multiplePackage {
-  width: 95%;
+  width: 83%;
   margin: 8px auto;
 }
 .tabsWrap {
@@ -757,6 +763,11 @@ box-shadow:none;
   top: 75px;
   z-index: 999;
 }
+.addCity , .removeCity {
+  width: 130px;
+  height: 30px;
+  border-radius: 20px;
+}
 
 
 }
@@ -769,7 +780,12 @@ box-shadow:none;
     font-size: 16px;
     padding: 11px 30px;
   }
+  .mobileMenuIcons, .mobileMenuIcon{
+    font-size:25px !important;
+    margin-right:0px;
+  }
   .flightGroup span {
     font-size: 12px;
   }
+ 
 }

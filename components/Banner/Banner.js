@@ -463,26 +463,26 @@ const Banner = ({ setResults }) => {
               <div className={style.wrapMenu}>
                 <ActiveLink href="/">
                   <li className={style.activeLink}>
-                    <Flight className={style.mobileMenuIcons} />
+                    <Flight className={style.mobileMenuIcon} />
                     <p>Flight</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/hotel">
                   <li>
-                    <Hotel className={style.mobileMenuIcon} />
+                    <Hotel className={style.mobileMenuIcons} />
 
                     <p>Hotel</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
-                    <BookOnline className={style.mobileMenuIcon} />
+                    <BookOnline className={style.mobileMenuIcons} />
                     <p>Visa</p>
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/tours">
                   <li>
-                    <TransferWithinAStation className={style.mobileMenuIcon} />
+                    <TransferWithinAStation className={style.mobileMenuIcons} />
 
                     <p>Tours</p>
                   </li>

@@ -275,7 +275,7 @@
   }
 
   .visaPackaj {
-    width: 354px;
+    width: 330px;
     height: 63px;
     font-size: 14px;
   }
@@ -290,10 +290,10 @@
 
 @media only screen and (max-width: 400px) {
   .wrapMenu {
-    padding: 0px 3px;
+    padding: 0px 0px;
   }
   .visaPackaj {
-    width: 332px;
+    width: 290px;
   }
 
   .bannerWrap h2 {
@@ -306,4 +306,7 @@
   .mobileMenuIcons {
     font-size: 22px !important;
   }
+  .bannerWrap{
+    margin-bottom: 27px;
+}
 }

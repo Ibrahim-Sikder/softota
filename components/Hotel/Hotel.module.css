@@ -177,7 +177,7 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  background: #26ADE2;
+  background: #4AB449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: #fff;
@@ -425,6 +425,13 @@ margin-left:5px;
   background: #169ACC;
   color: white;
 }
+.mobileMenuIcon{
+  transform: rotate(50deg);
+}
+.mobileMenuIcons, .mobileMenuIcon{
+  font-size: 30px !important;
+  margin-right:5px;
+}
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
@@ -501,9 +508,9 @@ margin-left:5px;
     padding-top: 0px;
   }
   .menu li {
-    height: 82%;
+    height: 100%;
     width: 100%;
-    border: none;
+    border:none;
   }
   .lastChild {
     border-right: none !important;
@@ -667,6 +674,12 @@ margin-left:5px;
     margin-top: 91px;
     width: 83% !important;
 }
+.mobileMenuIcons, .mobileMenuIcon{
+  font-size: 20px !important;
+  margin-right:0px;
+}
+
+
 }
 
 @media only screen and (max-width: 400px) {
@@ -679,8 +692,17 @@ margin-left:5px;
   }
 
   .package4 {
-   
-    right: 25px;
+    right: 30px;
+  
 }
+
+}
+
+@media only screen and (max-width:370px){
+  .date2{
+    left: 171px;
+}
+
+
 
 }

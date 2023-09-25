@@ -106,20 +106,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   border: none;
   background: transparent;
 }
-/* button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  background: #26ade2;
-  color: #fff;
-}
-button,
-[type="button"],
-[type="reset"],
-[type="submit"]:hover {
-  background: #19abe3;
-  color: white;
-} */
 
 input::placeholder {
   font-size: 12px;
@@ -277,9 +263,8 @@ input::placeholder {
   }
  
   .react-tabs__tab, .react-tabs__tab--selected {
-    font-size: 13px !important;
-    padding: 5px;
-    padding: 5px 5px !important;
+    font-size: 12px !important;
+    padding: 5px 3px !important;
    
 }
 .react-tabs__tab--selected{

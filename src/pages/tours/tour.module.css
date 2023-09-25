@@ -1,0 +1,13 @@
+.tour{
+margin-top:100px;
+}
+@media only screen and (max-width:768px){
+    .tour{
+        margin-top: 150px;
+    }
+}
+@media only screen and (max-width:500px){
+    .tour{
+        margin-top: 100px;
+    }
+}
