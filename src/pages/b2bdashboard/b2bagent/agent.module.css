@@ -1,0 +1,8 @@
+.alluserList th{
+background-color: #E6F8FF !important;
+color:black !important
+}
+.modal{
+    width:1200px !important;
+    border-radius: 20px !important;
+}

@@ -5,7 +5,8 @@
   width: 420px;
   border: 1px solid #4ab449;
   height: 42px;
-  border-radius: 3px;
+  border-radius: 20px;
+  padding: 5px;
 }
 .formControl {
   display: flex;
@@ -30,7 +31,7 @@
   border: 1px solid #4ab449;
   height: 50px;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 20px;
   justify-content: center;
   align-items: center;
   transition: all 0.5s ease-in-out;
@@ -48,7 +49,7 @@
   background: #19abe3;
   color: white;
   height: 50px;
-  border-radius: 5px;
+  border-radius: 20px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -57,6 +58,8 @@
   height: 180px;
   border: 1px solid #4AB449;
   resize: none;
+  border-radius: 20px;
+  padding: 9px;
 }
 @media only screen and (max-width:768px){
   .formControl {
