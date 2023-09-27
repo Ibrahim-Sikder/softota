@@ -6,7 +6,7 @@ import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
 
-const busses = () => {
+const About = () => {
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -14,13 +14,13 @@ const busses = () => {
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
             <h2 className="text-3xl font-bold text-center">
-              Buses Data Input{" "}
+              About Us data Input{" "}
             </h2>
             <div className="w-full mx-auto">
               <form>
                 <div className={styles.formControl}>
                   <div>
-                    <label>Title </label>
+                    <label>Main Title </label>
                     <input
                       name="category"
                       placeholder="Title"
@@ -29,10 +29,10 @@ const busses = () => {
                     />
                   </div>
                   <div>
-                    <label>Sub Title</label>
+                    <label>Team Sub Title </label>
                     <input
                       name="productCategory"
-                      placeholder="Product Category "
+                      placeholder="Team sub title"
                       type="text"
                       className={styles.inputField}
                     />
@@ -40,19 +40,19 @@ const busses = () => {
                 </div>
                 <div className={styles.formControl}>
                   <div>
-                    <label>Date</label>
+                    <label>Team Member Name </label>
                     <input
                       name="date"
-                      placeholder="Date "
-                      type="date"
+                      placeholder="Team Member Name  "
+                      type="text"
                       className={styles.inputField}
                     />
                   </div>
                   <div>
-                    <label>Person </label>
+                    <label>Team Member Designation </label>
                     <input
                       name="price"
-                      placeholder="Person"
+                      placeholder="Team Member Designation "
                       type="text"
                       className={styles.inputField}
                     />
@@ -60,19 +60,19 @@ const busses = () => {
                 </div>
                 <div className={styles.formControl}>
                   <div>
-                    <label> Price </label>
+                    <label> Mission Title </label>
                     <input
                       name="title"
-                      placeholder="Price"
+                      placeholder=" Mission Title"
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
                   <div>
-                    <label> Discount</label>
+                    <label>  Mission Description </label>
                     <input
                       name="subTitle"
-                      placeholder="Discount"
+                      placeholder=" Mission Description"
                       type="text"
                       className={styles.inputField}
                     />
@@ -117,4 +117,4 @@ const busses = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(busses), { ssr: false });
+export default dynamic(() => Promise.resolve(About), { ssr: false });

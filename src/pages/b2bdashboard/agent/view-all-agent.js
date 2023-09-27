@@ -2,6 +2,7 @@ import React from "react";
 import B2BdashboardLayout from "../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
 import style from "../manage/manage.module.css";
 import styles from '../b2bagent/agent.module.css'
+import Link from "next/link";
 const ViewAllAgent = () => {
     const users = [
         {
@@ -79,9 +80,11 @@ const ViewAllAgent = () => {
                   </span>
                 </td>
                 <td>
-                  <span className="bg-[#19ABE3] text-white font-xs text-xs p-2 rounded">
+                 <Link href='/b2bdashboard/agent/edit'>
+                 <span className="bg-[#19ABE3] text-white font-xs text-xs p-2 rounded">
                     Edit
                   </span>
+                 </Link>
                 </td>
                 <td>
                   <span className="bg-[#19ABE3] text-white font-xs text-xs p-2 rounded">

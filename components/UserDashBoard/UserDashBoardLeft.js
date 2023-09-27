@@ -34,8 +34,15 @@ import {
   SupervisedUserCircle,
   Badge,
   RuleFolder,
-  Backup
+  Backup,
+  Mosque,
+  Security,
+  LiveHelp,
+  ContactPhone,
+  Gavel,
+  Info,
 } from "@mui/icons-material";
+import Active from "../ActiveLink/Active";
 
 const UserDashBoardLeft = () => {
   const [toggleSideBar, setToggleSideBar] = useState(true);
@@ -135,15 +142,14 @@ const UserDashBoardLeft = () => {
                         <Diversity2 className={style.flightIcons} /> Tours
                       </li>
                       <li>
-                        {" "}
-                        <DirectionsBusFilled
-                          className={style.flightIcons}
-                        />{" "}
+                        <DirectionsBusFilled className={style.flightIcons} />
                         Buses
                       </li>
                       <li>
-                        {" "}
                         <Train className={style.flightIcons} /> Trains
+                      </li>
+                      <li>
+                        <Mosque className={style.flightIcons} /> Hajj & Umrah
                       </li>
                     </ul>
                   </div>
@@ -154,46 +160,60 @@ const UserDashBoardLeft = () => {
             <div>
               <ul className={style.profileInfo}>
                 <li>
-                  <FaAcquisitionsIncorporated />
-                  <Link href="/b2bdashboard/partial">
-                    <span>Partial Payment</span>
-                  </Link>
+                  <Active href="/b2bdashboard/partial">
+                    <div className="flex items-center justify-center">
+                      <FaAcquisitionsIncorporated />{" "}
+                      <span>Partial Payment</span>
+                    </div>
+                  </Active>
                 </li>
                 <li>
-                  <FaPlane className="text-white" />
-                  <Link href="/b2bdashboard/returnChange">
-                    <span>Void/Return/Change</span>
-                  </Link>
+                  <Active href="/b2bdashboard/returnChange">
+                    <div className="flex items-center justify-center">
+                      <FaPlane className="text-white" />{" "}
+                      <span>Void/Return/Change</span>
+                    </div>
+                  </Active>
                 </li>
                 <li>
-                  <FaCommentDollar className="text-white" />
-                  <Link href="/b2bdashboard/transactions">
-                    <span>Transactions</span>
-                  </Link>
+                  <Active href="/b2bdashboard/transactions">
+                    <div className="flex items-center justify-center">
+                      <FaCommentDollar className="text-white" />
+                      <span>Transactions</span>
+                    </div>
+                  </Active>
                 </li>
                 <li>
-                  <FaAmazonPay className="text-white" />
-                  <Link href="/b2bdashboard/payment">
-                    <span>Payment</span>
-                  </Link>
+                  <Active href="/b2bdashboard/payment">
+                    <div className="flex items-center justify-center">
+                      <FaAmazonPay className="text-white" />
+                      <span>Payment</span>
+                    </div>
+                  </Active>
                 </li>
                 <li>
-                  <FaHospitalUser className="text-white" />
-                  <Link href="/b2bdashboard/banklist">
-                    <span>Bank List </span>
-                  </Link>
+                  <Active href="/b2bdashboard/banklist">
+                    <div className="flex items-center justify-center">
+                      <FaHospitalUser className="text-white" />{" "}
+                      <span>Bank List </span>
+                    </div>
+                  </Active>
                 </li>
                 <li>
-                  <FaUserAlt />
-                  <Link href="/b2bdashboard/profile">
-                    <span>Profile</span>
-                  </Link>
+                  <Active href="/b2bdashboard/profile">
+                    <div className="flex items-center justify-center">
+                      <FaUserAlt />
+                      <span>Profile</span>
+                    </div>
+                  </Active>
                 </li>
                 <li>
-                  <FaSkating className="text-white" />
-                  <Link href="/b2bdashboard/passenger">
-                    <span>Quick Passengers</span>
-                  </Link>
+                  <Active href="/b2bdashboard/passenger">
+                    <div className="flex items-center justify-center">
+                      <FaSkating className="text-white" />
+                      <span>Quick Passengers</span>
+                    </div>
+                  </Active>
                 </li>
                 <li>
                   <Accordion className={style.bookingHistory}>
@@ -215,41 +235,70 @@ const UserDashBoardLeft = () => {
                       <Typography>
                         <div className={style.bookingList}>
                           <ul>
-                            <Link href="/b2bdashboard/manage/hotel">
+                            <Active href="/b2bdashboard/manage/hotel">
                               <li>
-                                <Hotel className={style.flightIcons} /> Hotel
+                              <Hotel className={style.flightIcons} /> Hotel
+                                
                               </li>
-                            </Link>
-                            <Link href="/b2bdashboard/manage/visa">
+                            </Active>
+                            <Active href="/b2bdashboard/manage/visa">
                               <li>
                                 <Beenhere className={style.flightIcons} /> Visa
                               </li>
-                            </Link>
+                            </Active>
                             <li>
-                              <Link href="/b2bdashboard/manage/tours">
+                              <Active href="/b2bdashboard/manage/tours">
                                 <Diversity2 className={style.flightIcons} />{" "}
                                 Tours
-                              </Link>
+                              </Active>
                             </li>
                             <li>
-                              <Link href="/b2bdashboard/manage/buses">
+                              <Active href="/b2bdashboard/manage/buses">
                                 <DirectionsBusFilled
                                   className={style.flightIcons}
                                 />{" "}
                                 Buses
-                              </Link>
+                              </Active>
                             </li>
                             <li>
-                              <Link href="/b2bdashboard/manage/train">
+                              <Active href="/b2bdashboard/manage/train">
                                 {" "}
                                 <Train className={style.flightIcons} /> Trains
-                              </Link>
+                              </Active>
                             </li>
                             <li>
-                              <Link href="/b2bdashboard/manage/hajjUmrah">
-                                <Train className={style.flightIcons} /> Hajj &
+                              <Active href="/b2bdashboard/manage/hajjUmrah">
+                                <Mosque className={style.flightIcons} /> Hajj &
                                 Umrah
-                              </Link>
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/about">
+                                <Info className={style.flightIcons} /> About Us
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/contact">
+                                <ContactPhone className={style.flightIcons} />{" "}
+                                Contact Us
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/termCondition">
+                                <Gavel className={style.flightIcons} /> Term &
+                                Condition
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/faq">
+                                <LiveHelp className={style.flightIcons} /> FAQ
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/privacy">
+                                <Security className={style.flightIcons} />{" "}
+                                Privacy policy
+                              </Active>
                             </li>
                           </ul>
                         </div>
@@ -283,7 +332,7 @@ const UserDashBoardLeft = () => {
                       <Typography>
                         <div className={style.bookingList}>
                           <ul>
-                            <Link href="/b2bdashboard/b2bagent/add-user">
+                            <Active href="/b2bdashboard/b2bagent/add-user">
                               <li>
                                 <div className="flex items-center">
                                   <SupervisedUserCircle
@@ -292,8 +341,8 @@ const UserDashBoardLeft = () => {
                                   <span> Create User</span>
                                 </div>
                               </li>
-                            </Link>
-                            <Link href="/b2bdashboard/b2bagent/view-user">
+                            </Active>
+                            <Active href="/b2bdashboard/b2bagent/view-user">
                               <li>
                                 <div className="flex items-center">
                                   <SupervisedUserCircle
@@ -302,23 +351,23 @@ const UserDashBoardLeft = () => {
                                   <span> View All User</span>
                                 </div>
                               </li>
-                            </Link>
-                            <Link href="/b2bdashboard/b2bagent/employee">
+                            </Active>
+                            <Active href="/b2bdashboard/b2bagent/employee">
                               <li>
                                 <div className="flex items-center">
                                   <Badge className={style.flightIcons} />
                                   <span> Employee </span>
                                 </div>
                               </li>
-                            </Link>
-                           <Link href="/b2bdashboard/b2bagent/role">
-                           <li>
-                              <div className="flex items-center">
-                                <RuleFolder className={style.flightIcons} />
-                                <span> Admin Role </span>
-                              </div>
-                            </li>
-                           </Link>
+                            </Active>
+                            <Active href="/b2bdashboard/b2bagent/role">
+                              <li>
+                                <div className="flex items-center">
+                                  <RuleFolder className={style.flightIcons} />
+                                  <span> Role </span>
+                                </div>
+                              </li>
+                            </Active>
                           </ul>
                         </div>
                       </Typography>
@@ -345,7 +394,7 @@ const UserDashBoardLeft = () => {
                       <Typography>
                         <div className={style.bookingList}>
                           <ul>
-                            <Link href="/b2bdashboard/agent/create-agent">
+                            <Active href="/b2bdashboard/agent/create-agent">
                               <li>
                                 <div className="flex items-center">
                                   <SupervisedUserCircle
@@ -354,8 +403,8 @@ const UserDashBoardLeft = () => {
                                   <span> Add Agent</span>
                                 </div>
                               </li>
-                            </Link>
-                            <Link href="/b2bdashboard/agent/view-all-agent">
+                            </Active>
+                            <Active href="/b2bdashboard/agent/view-all-agent">
                               <li>
                                 <div className="flex items-center">
                                   <SupervisedUserCircle
@@ -364,23 +413,21 @@ const UserDashBoardLeft = () => {
                                   <span> View All Agent</span>
                                 </div>
                               </li>
-                            </Link>
-                            <Link href='/b2bdashboard/agent/role'>
-                            <li>
-                              <div className="flex items-center">
-                                <RuleFolder className={style.flightIcons} />
-                                <span> Admin Role </span>
-                              </div>
-                            </li> 
-                            </Link>
-                            
+                            </Active>
+                            <Active href="/b2bdashboard/agent/role">
+                              <li>
+                                <div className="flex items-center">
+                                  <RuleFolder className={style.flightIcons} />
+                                  <span> Admin Role </span>
+                                </div>
+                              </li>
+                            </Active>
                           </ul>
                         </div>
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
                 </li>
-                
               </ul>
             </div>
             <div className={style.userService}>
@@ -394,10 +441,10 @@ const UserDashBoardLeft = () => {
                   <span>Sign Out</span>
                 </li>
                 <li>
-                <div className="flex items-center">
-                  <Backup className={style.flightIcons} />
-                  <span> Database Backup</span>
-                </div>
+                  <div className="flex items-center">
+                    <Backup className={style.flightIcons} />
+                    <span> Database Backup</span>
+                  </div>
                 </li>
               </ul>
             </div>
