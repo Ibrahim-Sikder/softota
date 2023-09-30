@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
 import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
+import TextEditor from "../../../../../components/TextEditor/TextEditor";
 
-const busses = () => {
+const Busses = () => {
+  const [editorValue, setEditorValue] = useState('');
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -94,13 +96,7 @@ const busses = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  <div>
-                    <label> Description </label>
-                    <textarea
-                      name="description"
-                      placeholder="Description"
-                    ></textarea>
-                  </div>
+                <TextEditor  value={editorValue} onChange={setEditorValue}/>
                 </div>
                
                 <div className={styles.formControl}>
@@ -117,4 +113,4 @@ const busses = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(busses), { ssr: false });
+export default dynamic(() => Promise.resolve(Busses), { ssr: false });

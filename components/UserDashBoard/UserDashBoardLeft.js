@@ -235,6 +235,12 @@ const UserDashBoardLeft = () => {
                       <Typography>
                         <div className={style.bookingList}>
                           <ul>
+                          <Active href="/b2bdashboard/manage/flight">
+                              <li>
+                              <Flight className={style.flightIcons} /> Flight
+                                
+                              </li>
+                            </Active>
                             <Active href="/b2bdashboard/manage/hotel">
                               <li>
                               <Hotel className={style.flightIcons} /> Hotel

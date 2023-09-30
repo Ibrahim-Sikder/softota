@@ -5,8 +5,11 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
+import TextEditor from "../../../../../components/TextEditor/TextEditor";
+import { useState } from "react";
 
-const tours = () => {
+const Tours = () => {
+  const [editorValue, setEditorValue] = useState('');
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -158,15 +161,9 @@ const tours = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  <div>
-                    <label> Description </label>
-                    <textarea
-                      name="description"
-                      placeholder="Description"
-                    ></textarea>
-                  </div>
+                  <TextEditor value={editorValue} onChange={setEditorValue} />
                 </div>
-               
+
                 <div className={styles.formControl}>
                   <button className={styles.submitBtn} type="submit">
                     Submit
@@ -181,4 +178,4 @@ const tours = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(tours), { ssr: false });
+export default dynamic(() => Promise.resolve(Tours), { ssr: false });

@@ -8,7 +8,7 @@ import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLay
 import { useState } from "react";
 import TextEditor from "../../../../../components/TextEditor/TextEditor";
 
-const Hotel = () => {
+const Flight = () => {
   const [editorValue, setEditorValue] = useState("");
 
   return (
@@ -25,27 +25,7 @@ const Hotel = () => {
               <form>
                 <div className={styles.formControl}>
                   <div>
-                    <label>Input Country </label>
-                    <input
-                      name="country"
-                      placeholder="Input Country "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Input City </label>
-                    <input
-                      name="city"
-                      placeholder="Input City "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Day/Night </label>
+                    <label>Title </label>
                     <input
                       name="day"
                       placeholder="Day/Night "
@@ -54,7 +34,7 @@ const Hotel = () => {
                     />
                   </div>
                   <div>
-                    <label> Price Per Person </label>
+                    <label> Price </label>
                     <input
                       name="price"
                       placeholder="Price Person "
@@ -211,4 +191,4 @@ const Hotel = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(Hotel), { ssr: false });
+export default dynamic(() => Promise.resolve(Flight), { ssr: false });

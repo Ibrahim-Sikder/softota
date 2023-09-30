@@ -195,7 +195,16 @@ input::placeholder {
 .css-1fx8m19.Mui-expanded {
   color: white !important;
 }
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  height: 250px !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
+}
+.ql-toolbar.ql-snow {
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
 
 @media only screen and (max-width: 1024px) {
   .css-1ujnqem-MuiTabs-root {

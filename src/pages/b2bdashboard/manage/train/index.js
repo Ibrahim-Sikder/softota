@@ -5,8 +5,11 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
+import TextEditor from "../../../../../components/TextEditor/TextEditor";
+import { useState } from "react";
 
 const Train = () => {
+  const [editorValue, setEditorValue] = useState('');
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -158,13 +161,7 @@ const Train = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  <div>
-                    <label> Description </label>
-                    <textarea
-                      name="description"
-                      placeholder="Description"
-                    ></textarea>
-                  </div>
+                <TextEditor value={editorValue} onChange={setEditorValue} />
                 </div>
                
                 <div className={styles.formControl}>
