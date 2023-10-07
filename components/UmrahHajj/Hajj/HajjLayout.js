@@ -77,7 +77,7 @@ const HajjLayout = ({ children }) => {
                 </Typography>
                 <Typography className={style.umrahTypograpy}>
                   <HajjActiveLink href="/umrah/umrah-visa-requirement">
-                    <p>Umrah Visa REquirement </p>
+                    <p>Umrah Visa Requirement </p>
                   </HajjActiveLink>
                 </Typography>
 
@@ -147,7 +147,7 @@ const HajjLayout = ({ children }) => {
 
                   <Typography className={style.umrahTypograpy}>
                     <HajjActiveLink href="/hajj/visa-requirement">
-                      <p>Hajj Visa REquirement </p>
+                      <p>Hajj Visa Requirement </p>
                     </HajjActiveLink>
                   </Typography>
 

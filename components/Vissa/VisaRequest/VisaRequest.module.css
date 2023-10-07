@@ -46,7 +46,8 @@
 
 }
 .visaInput{
-    border: 1px solid #ddd;
+    border: 1px solid #0BB811;
+    border-radius: 20px;
     width: 530px;
     height: 58px;
     padding-left: 6px;
@@ -61,10 +62,11 @@
 }
 .textField{
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #0BB811;
     height: 134px;
     margin-top: 7px;
     resize: none;
+    border-radius: 20px;
 }
 .visaSubmitBtn{
     background: #19ABE3;
@@ -86,7 +88,8 @@
     align-items: center;
     justify-content: center;
     color: white;
-    border-radius: 5px;
+    border: 1px solid #0BB811;
+    border-radius: 20px;
     transition: all .5s cubic-bezier(0.23, 0.15, 0.3, 0.26);
 }
 .uploadDoc:hover{

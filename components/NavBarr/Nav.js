@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Logo from "../../public/assets/logo.png";
 import Link from "next/link";
 import style from "./Nav.module.css";

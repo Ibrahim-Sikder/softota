@@ -279,6 +279,41 @@ const UserDashBoardLeft = () => {
                               </Active>
                             </li>
                             <li>
+                              <Active href="/b2bdashboard/manage/benefit">
+                                <Mosque className={style.flightIcons} /> Benefit Umrah
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/umrah-visa-requirement">
+                                <Mosque className={style.flightIcons} /> Umrah Visa Requirement
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/perform-umrah">
+                                <Mosque className={style.flightIcons} /> Perform Umrah
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/umrah-faq">
+                                <Mosque className={style.flightIcons} />Umrah FAQ
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/hajj-visa-requirement">
+                                <Mosque className={style.flightIcons} />Hajj Visa REquirement
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/pre-registration-process">
+                                <Mosque className={style.flightIcons} />Pre Registration Process
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/brief-history-of-hajj">
+                                <Mosque className={style.flightIcons} />Brief History Of Hajj
+                              </Active>
+                            </li>
+                            <li>
                               <Active href="/b2bdashboard/manage/about">
                                 <Info className={style.flightIcons} /> About Us
                               </Active>

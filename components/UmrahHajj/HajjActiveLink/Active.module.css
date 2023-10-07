@@ -5,9 +5,9 @@
     position: relative !important;
     color: black !important;
     display: block;
-    padding-top: 4px !important;
     padding-left: 4px !important;
-    padding-bottom: 1px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 29px;
 }
 .noActive{
 }
