@@ -113,7 +113,7 @@ const TrainBanner = () => {
         <div className={style.heroBoxMain}>
           {/* menubar */}
           <div className={style.desktopMenu}>
-            <ul className={style.menu}>
+          <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/hajjUmra">
                   <li className={style.firstChild}>
@@ -159,7 +159,7 @@ const TrainBanner = () => {
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/">
-                  <li>
+                  <li className={style.activeLink}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={40}
@@ -264,7 +264,7 @@ const TrainBanner = () => {
                     <p className="ml-3">Tours</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/busses">
+                <ActiveLink href="/bus">
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

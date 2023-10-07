@@ -16,11 +16,11 @@ import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
 const HajjLayout = ({ children }) => {
   return (
     <div>
-      <Nav />
       <div className={style.packageWrap}>
         <aside className={style.packageLeftSide}>
           <div className={style.LeftSideWrap}>
             <div className={style.umrahAccordion}>
+
               <AccordionSummary
                 className={style.umrahSummary}
                 expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
@@ -33,7 +33,7 @@ const HajjLayout = ({ children }) => {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={style.umrahTypograpy}>
-                  <div className={style.hajjAccordion}>
+                  <Accordion className={style.hajjAccordion}>
                     <AccordionSummary
                       className={style.hajjSummary}
                       expandIcon={
@@ -68,7 +68,7 @@ const HajjLayout = ({ children }) => {
                         </HajjActiveLink>
                       </Typography>
                     </AccordionDetails>
-                  </div>
+                  </Accordion>
                 </Typography>
                 <Typography className={style.umrahTypograpy}>
                   <HajjActiveLink href="/umrah/benefit-umrah">
@@ -106,7 +106,7 @@ const HajjLayout = ({ children }) => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className={style.umrahTypograpy}>
-                    <div className={style.hajjAccordion}>
+                    <Accordion className={style.hajjAccordion}>
                       <AccordionSummary
                         className={style.hajjSummary}
                         expandIcon={
@@ -136,7 +136,7 @@ const HajjLayout = ({ children }) => {
                           </HajjActiveLink>
                         </Typography>
                       </AccordionDetails>
-                    </div>
+                    </Accordion>
                   </Typography>
 
                   <Typography className={style.umrahTypograpy}>
@@ -160,25 +160,28 @@ const HajjLayout = ({ children }) => {
               </div>
             </div>
 
-            <div className="leftSideOffer">
-              <div className={style.umrahOffer}>
-                <Image alt="umrah" src={umrah2} className={style.umraImage} />
-              </div>
-              <h2 className="text-xl font-bold text-center mt-2">Hajj Offer</h2>
+            <div className={style.latestHajjOffer}>
+              <h2 className="text-xl font-bold mt-2">Latest Hajj Package </h2>
+              <ul>
+                <li>Economy Hajj Package </li>
+                <li>Premium Hajj Package </li>
+                <li>Platinum Hajj Package </li>
+              </ul>
             </div>
-            <div className="leftSideOffer">
-              <div className={style.umrahOffer}>
-                <Image alt="umrah" src={hajj2} className={style.umraImage} />
-              </div>
-              <h2 className="text-xl font-bold text-center mt-2">
-                Umrah Offer
-              </h2>
+                        
+            <div className={style.latestHajjOffer}>
+              <h2 className="text-xl font-bold mt-2">Latest Umrah Package </h2>
+              <ul>
+                <li>Family Hajj Package </li>
+                <li>Premium Hajj Package </li>
+                <li>Platinum Hajj Package </li>
+              </ul>
             </div>
+
           </div>
         </aside>
         <main className={style.packageRightSide}>{children}</main>
       </div>
-      <Footer />
     </div>
   );
 };

@@ -6,7 +6,6 @@ import Footer from "../../Footer/Footer";
 const B2CDashboardLayout = ({ children }) => {
   return (
     <div>
-      <Nav/>
       <div className={style.profileWrap}>
         <aside className={style.userProfileLeftSide}>
           <ProfileLeftSide></ProfileLeftSide>
@@ -15,8 +14,6 @@ const B2CDashboardLayout = ({ children }) => {
         {children}
         </main>
       </div>
-      <Footer
-       />
     </div>
   );
 };

@@ -9,6 +9,7 @@ const index = () => {
             <Nav/>
             <HajjBook/>
             <Footer/>
+            
         </div>
     );
 };

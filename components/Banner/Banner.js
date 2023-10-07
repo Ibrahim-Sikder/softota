@@ -371,7 +371,7 @@ const Banner = ({ setResults }) => {
                     <p className="ml-3">Tours</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/busses">
+                <ActiveLink href="/bus">
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -634,7 +634,6 @@ const Banner = ({ setResults }) => {
                         </div>
                       </div>
                     </div>
-
                     {/* Open modala  */}
                     <div className={style.modalWrap}>
                       {/* You can open the modal using ID.showModal() method */}

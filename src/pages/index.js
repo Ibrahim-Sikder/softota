@@ -21,14 +21,12 @@ export default function Home() {
       <Helmet>
         <title>Ghuronti || Flight </title>
       </Helmet>
-      <Nav />
       <Banner></Banner>
       <TourDestination></TourDestination>
       <DisCount />
       <Travel></Travel>
       <Mission />
       <Customer></Customer>
-      <Footer />
     </section>
   );
 }

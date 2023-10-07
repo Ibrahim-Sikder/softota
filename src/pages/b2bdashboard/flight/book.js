@@ -5,7 +5,6 @@ import RightSideTopBar from "../../../../components/UserDashBoard/RightSideTopBa
 import dynamic from "next/dynamic";
 import B2bFlightBook from "../../../../components/UserDashBoard/FlightBook/B2bFlightBook";
 
-
 const Book = () => {
   return (
     <section>

@@ -133,11 +133,6 @@ const Hotel = () => {
     }
   };
 
-
-
-
-
-
   var settings = {
     infinite: true,
     slidesToShow: 4,
@@ -305,7 +300,7 @@ const Hotel = () => {
               </div>
               {/* Open modala  */}
               <div className={style.modalWrap}>
-                {/* You can open the modal using ID.showModal() method */}
+            
 
                 <dialog id="my_modal_3" className={style.hotelModal}>
                   <form method="dialog" className="modal-box">
