@@ -8,6 +8,7 @@ const DisCount = () => {
     import("@lottiefiles/lottie-player");
   });
 
+  
 
   return (
     <div className={style.discountWrap}>

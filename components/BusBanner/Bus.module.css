@@ -236,6 +236,15 @@
   background: #169ACC !important;
 }
 
+.formControl select{
+  width:100%;
+  background: transparent;
+  height: 100%;
+}
+.formControl select option{
+background: #4AB449 !important;
+color: white !important;
+}
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {

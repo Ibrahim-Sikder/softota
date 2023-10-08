@@ -327,7 +327,6 @@ const Hotel = () => {
                         <small onClick={childIncrement}> + </small>
                       </div>
                     </div>
-
                     <select
                       className={style.roomSelect}
                       onChange={(e) => {

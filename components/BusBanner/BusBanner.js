@@ -19,12 +19,11 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
 
-
 const BusBanner = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [seat, setSeat] = useState("1 Class");
-  
+
   const childIncrement = () => {
     setChild(child + 1);
   };
@@ -54,8 +53,6 @@ const BusBanner = () => {
       key: "selection",
     },
   ]);
-
-
 
   // open close
   const [open, setOpen] = useState(false);
@@ -88,7 +85,6 @@ const BusBanner = () => {
       <div className={style.bannerWrap}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
-          
           {/* menubar */}
           <div className={style.desktopMenu}>
             <ul className={style.menu}>
@@ -195,7 +191,7 @@ const BusBanner = () => {
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={45}
                       height={45}
@@ -242,7 +238,7 @@ const BusBanner = () => {
                     <p className="ml-3">Tours</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/busses">
+                <ActiveLink href="/bus">
                   <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -363,8 +359,8 @@ const BusBanner = () => {
           </div>
 
           <form className={style.packageWrap}>
-             <div className={style.singleForm}>
-             <div className={style.formControl}>
+            <div className={style.singleForm}>
+              <div className={style.formControl}>
                 <h4>From </h4>
                 <input type="text " placeholder="Enter City" />
               </div>
@@ -372,106 +368,98 @@ const BusBanner = () => {
                 <h4> To </h4>
                 <input type="text " placeholder="Enter City" />
               </div>
-             </div>
-             <div className={style.singleForm}>
-             <div className={style.formControl}>
-              <div   onClick={() => setOpen((open) => !open)} className={style.date}>
-                <h4>Journey Date </h4>
-                <div className="flex items-center justify-between ">
-                  <input
-                    value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
-                    readOnly
-                  />
-                  <CalendarMonth className={style.calendarIcon} />
+            </div>
+            <div className={style.singleForm}>
+              <div className={style.formControl}>
+                <div
+                  onClick={() => setOpen((open) => !open)}
+                  className={style.date}
+                >
+                  <h4>Journey Date </h4>
+                  <div className="flex items-center justify-between ">
+                    <input
+                      value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                      readOnly
+                    />
+                    <CalendarMonth className={style.calendarIcon} />
+                  </div>
+                </div>
+                <div className={style.calendarTow} ref={refOne}>
+                  {open && (
+                    <DateRange
+                      onChange={(item) => setRange([item.selection])}
+                      editableDateInputs={true}
+                      moveRangeOnFirstSelection={false}
+                      ranges={range}
+                      months={1}
+                      direction="horizontal"
+                      className="calendarElement"
+                    />
+                  )}
                 </div>
               </div>
-              <div className={style.calendarTow} ref={refOne}>
-                {open && (
-                  <DateRange
-                    onChange={(item) => setRange([item.selection])}
-                    editableDateInputs={true}
-                    moveRangeOnFirstSelection={false}
-                    ranges={range}
-                    months={1}
-                    direction="horizontal"
-                    className="calendarElement"
-                  />
-                )}
+              <div className={style.formControl}>
+                <div className={style.package4}>
+                  <div className="flex justify-between items-center">
+                    <div>
+                      <h4>Passenger Number </h4>
+                      <small> 0 Passenger</small>
+                    </div>
+                    <Groups2
+                      onClick={() => window.busModal.showModal()}
+                      className={style.showModalIcon}
+                    />
+                  </div>
+                </div>
+                {/* Modal  */}
+                <div className={style.modalWrap}>
+                  <dialog id="busModal" className={style.hotelModal}>
+                    <form method="dialog" className="modal-box">
+                      <button className={style.hotelModalCloseBtn}>✕</button>
+                      <div className={style.guestRoomWrap}>
+                        <Groups2 className={style.groupIcon} />
+                        <div>
+                          <small>Passenger & Class </small> <br />
+                          <p className="text-xl font-bold">
+                            {child + adult} Passenger & {seat}
+                          </p>
+                        </div>
+                      </div>
+                      <div className={style.adultChildWrap}>
+                        <div className={style.adultIncrementDecrement}>
+                          <small onClick={decrementAdult}> - </small>
+                          <span>{adult} Adult </span>
+                          <small onClick={incrementAdult}> + </small>
+                        </div>
+                        <div className={style.childIncrementDecrement}>
+                          <small onClick={childDecrement}> - </small>
+                          <span> {child} Child </span>
+                          <small onClick={childIncrement}> + </small>
+                        </div>
+                      </div>
+
+                      <select
+                        className={style.roomSelect}
+                        onChange={(e) => {
+                          const classes = e.target.value;
+                          setSeat(classes);
+                        }}
+                      >
+                        <option value="Class" selected>
+                         Economy
+                        </option>
+                        <option value="Premium">Premium</option>
+                      </select>
+                    </form>
+                  </dialog>
+                </div>
               </div>
             </div>
-            <div className={style.formControl}>
-           
-           <div className={style.package4}>
-           <div className="flex justify-between items-center">
-               <div>
-                 <h4>Passenger Number </h4>
-              <small> 0 Passenger</small>
-               </div>
-               <Groups2
-                 onClick={() => window.busModal.showModal()}
-                 className={style.showModalIcon}
-               />
-             </div>
-             
-           </div>
-           {/* Modal  */}
-           <div className={style.modalWrap}>
-
-               <dialog id="busModal" className={style.hotelModal}>
-                 <form method="dialog" className="modal-box">
-                   <button className={style.hotelModalCloseBtn}>✕</button>
-                   <div className={style.guestRoomWrap}>
-                     <Groups2 className={style.groupIcon} />
-                     <div>
-                       <small>Passenger & Class </small> <br />
-                       <p className="text-xl font-bold">
-                         {child + adult} Passenger & {seat}
-                       </p>
-                     </div>
-                   </div>
-                   <div className={style.adultChildWrap}>
-                   <div className={style.adultIncrementDecrement}>
-                         <small onClick={decrementAdult}> - </small>
-                         <span>{adult} Adult </span>
-                         <small onClick={incrementAdult}> + </small>
-                       </div>
-                       <div className={style.childIncrementDecrement}>
-                         <small onClick={childDecrement}> - </small>
-                         <span> {child} Child </span>
-                         <small onClick={childIncrement}> + </small>
-                       </div>
-                   </div>
-                   
-                       <select
-                       className={style.roomSelect}
-                         onChange={(e) => {
-                           const classes = e.target.value;
-                           setSeat(classes);
-                         }}
-                       >
-                         <option value="Class" selected>
-                           1 Room
-                         </option>
-                         <option value="2 Room">2 Room</option>
-                         <option value="3 Room">3 Room</option>
-                         <option value="4 Room">4 Room</option>
-                         <option value="5 Room">5 Room</option>
-                       </select>
-                 </form>
-               </dialog>
-             </div>
-
-         </div>
-             </div>
-
-          
           </form>
-         
+
           <Link href="/bus/search">
             <button className={style.heroBoxBtn}>Get Your Ticket</button>
           </Link>
-
-
         </div>
       </div>
     </section>

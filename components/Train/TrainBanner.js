@@ -1,8 +1,6 @@
-"use client";
-
+import Link from "next/link";
 import React, { useState } from "react";
-import style from "../BusBanner/Bus.module.css";
-import styling from './Train.module.css'
+import style from "../../components/BusBanner/Bus.module.css";
 import ActiveLink from "../Banner/ActiveLink";
 import {
   Flight,
@@ -12,7 +10,6 @@ import {
   Groups2,
   CalendarMonth,
 } from "@mui/icons-material";
-import Link from "next/link";
 import { DateRange } from "react-date-range";
 import format from "date-fns/format";
 import { addDays } from "date-fns";
@@ -20,11 +17,12 @@ import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import { useRef } from "react";
 import { useEffect } from "react";
+import dynamic from "next/dynamic";
 
-const TrainBanner = () => {
+const BusBanner = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
-  const [room, setRoom] = useState("1 Room");
+  const [seat, setSeat] = useState("1 Class");
 
   const childIncrement = () => {
     setChild(child + 1);
@@ -56,29 +54,15 @@ const TrainBanner = () => {
     },
   ]);
 
-  const [range2, setRange2] = useState([
-    {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
-      key: "selection",
-    },
-  ]);
-
   // open close
   const [open, setOpen] = useState(false);
-  const [open2, setOpen2] = useState(false);
 
   // get the target element to toggle
   const refOne = useRef(null);
-  const refTow = useRef(null);
 
   useEffect(() => {
     document.addEventListener("keydown", hideOnEscape, true);
     document.addEventListener("click", hideOnClickOutside, true);
-  }, []);
-  useEffect(() => {
-    document.addEventListener("keydown", hideOnEscape2, true);
-    document.addEventListener("click", hideOnClickOutside2, true);
   }, []);
 
   // hide dropdown on ESC press
@@ -87,21 +71,11 @@ const TrainBanner = () => {
       setOpen(false);
     }
   };
-  const hideOnEscape2 = (e) => {
-    if (e.key === "Escape") {
-      setOpen2(false);
-    }
-  };
 
   // Hide on outside click
   const hideOnClickOutside = (e) => {
     if (refOne.current && !refOne.current.contains(e.target)) {
       setOpen(false);
-    }
-  };
-  const hideOnClickOutside2 = (e) => {
-    if (refTow.current && !refTow.current.contains(e.target)) {
-      setOpen2(false);
     }
   };
 
@@ -113,7 +87,7 @@ const TrainBanner = () => {
         <div className={style.heroBoxMain}>
           {/* menubar */}
           <div className={style.desktopMenu}>
-          <ul className={style.menu}>
+            <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/hajjUmra">
                   <li className={style.firstChild}>
@@ -159,7 +133,7 @@ const TrainBanner = () => {
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/">
-                  <li className={style.activeLink}>
+                  <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={40}
@@ -217,7 +191,7 @@ const TrainBanner = () => {
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={45}
                       height={45}
@@ -384,54 +358,33 @@ const TrainBanner = () => {
             </ul>
           </div>
 
-          <div className={style.packageWrap}>
-            <div className={style.package}>
-              <div>
-                <h4>Select Your Destination Country </h4>
-                <select>
-                  <option selected value="Bangladesh">
-                    Bangladesh
-                  </option>
-                  <option value="Thailand">Thailand</option>
-                  <option value="Malaysia">Malaysia</option>
-                  <option value="Indonesia">Indonesia</option>
-                  <option value="India">India</option>
-                  <option value="China">China</option>
-                  <option value="Singapore">Singapore</option>
-                  <option value="Iran">Iran</option>
-                  <option value="Vietnam">Vietnam</option>
-                  <option value="Pakistan">Pakistan</option>
-                  <option value="Japan">Japan</option>
-                </select>
+          <form className={style.packageWrap}>
+            <div className={style.singleForm}>
+              <div className={style.formControl}>
+                <h4>From </h4>
+                <input type="text " placeholder="Enter City" />
+              </div>
+              <div className={style.formControl}>
+                <h4> To </h4>
+                <input type="text " placeholder="Enter City" />
               </div>
             </div>
-            <div className={style.package2}>
-              <div className={style.travelDestination}>
-                <h4>Travel From </h4>
-                <input type="text " placeholder="Enter Your City" />
-              </div>
-              <div className={style.travelDestination}>
-                <h4>Travel To </h4>
-                <input type="text " placeholder="Enter Your City" />
-              </div>
-            </div>
-          </div>
-          <div className={style.packageWrap}>
-            <div className={style.packageDate}>
-              <div
-                onClick={() => setOpen((open) => !open)}
-                className={style.date}
-              >
-                <h4>Depart To </h4>
-                <div className="flex items-center justify-center">
-                  <input
-                    value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
-                    readOnly
-                  />
-                  <CalendarMonth className={style.calendarIcon} />
+            <div className={style.singleForm}>
+              <div className={style.formControl}>
+                <div
+                  onClick={() => setOpen((open) => !open)}
+                  className={style.date}
+                >
+                  <h4>Journey Date </h4>
+                  <div className="flex items-center justify-between ">
+                    <input
+                      value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                      readOnly
+                    />
+                    <CalendarMonth className={style.calendarIcon} />
+                  </div>
                 </div>
-
-                <div className={styling.calendarthree} ref={refOne}>
+                <div className={style.calendarTow} ref={refOne}>
                   {open && (
                     <DateRange
                       onChange={(item) => setRange([item.selection])}
@@ -445,102 +398,24 @@ const TrainBanner = () => {
                   )}
                 </div>
               </div>
-
-              <div
-                onClick={() => setOpen2((open2) => !open2)}
-                className={style.date2}
-              >
-                <h4>Return To </h4>
-                <div className="flex items-center justify-center">
-                  <input
-                    value={`${format(range2[0].startDate, "MM/dd/yyyy")}`}
-                    readOnly
-                  />
-                  <CalendarMonth className={style.calendarIcon} />
-                </div>
-                <div className={styling.calendarTow} ref={refTow}>
-                  {open2 && (
-                    <DateRange
-                      onChange={(item) => setRange2([item.selection])}
-                      editableDateInputs={true}
-                      moveRangeOnFirstSelection={false}
-                      ranges={range2}
-                      months={1}
-                      direction="horizontal"
-                      className="calendarElement"
-                    />
-                  )}
+              <div className={style.formControl}>
+                <div className={style.package4}>
+                      <select name="" id="">
+                      <option value="Choos a class">Choos a class</option>
+                      <option value="AC_B">AC_B</option>
+                      <option value="S_CHAIR">S_CHAIR</option>
+                      <option value="F_BERTH">F_BERTH</option>
+                      <option value="SHULOV">SHULOV</option>
+                      <option value="SNIGDHA">SNIGDHA</option>
+                      <option value="AC_CHAIR">AC_CHAIR</option>
+                      </select>
                 </div>
               </div>
             </div>
-            <div className={style.package4}>
-              <div className="flex justify-between item-center">
-                <div>
-                  <h4>Guests & Room</h4>
-                  <small>
-                    {child + adult} Guest & {room}{" "}
-                  </small>
-                  <input type="text" />
-                </div>
-                <Groups2
-                  onClick={() => window.toursModal.showModal()}
-                  className={style.showModalIcon}
-                />
-              </div>
-              {/* <div>
-                <h4>Passengers & Seat Class</h4>
-                <input type="text " placeholder="1 person" />
-              </div> */}
-            </div>
-            {/* Modal  */}
-            <div className={style.modalWrap}>
-              <dialog id="toursModal" className={style.hotelModal}>
-                <form method="dialog" className="modal-box">
-                  <button className={style.hotelModalCloseBtn}>✕</button>
-                  <div className={style.guestRoomWrap}>
-                    <Groups2 className={style.groupIcon} />
-                    <div>
-                      <small>Guest & Room </small> <br />
-                      <p className="text-xl font-bold">
-                        {" "}
-                        {child + adult} Guest & {room}{" "}
-                      </p>
-                    </div>
-                  </div>
-                  <div className={style.adultChildWrap}>
-                    <div className={style.adultIncrementDecrement}>
-                      <small onClick={decrementAdult}> - </small>
-                      <span>{adult} Adult </span>
-                      <small onClick={incrementAdult}> + </small>
-                    </div>
-                    <div className={style.childIncrementDecrement}>
-                      <small onClick={childDecrement}> - </small>
-                      <span> {child} Child </span>
-                      <small onClick={childIncrement}> + </small>
-                    </div>
-                  </div>
+          </form>
 
-                  <select
-                    className={style.roomSelect}
-                    onChange={(e) => {
-                      const classes = e.target.value;
-                      setRoom(classes);
-                    }}
-                  >
-                    <option value="1 Room" selected>
-                      1 Room
-                    </option>
-                    <option value="2 Room">2 Room</option>
-                    <option value="3 Room">3 Room</option>
-                    <option value="4 Room">4 Room</option>
-                    <option value="5 Room">5 Room</option>
-                  </select>
-                </form>
-              </dialog>
-            </div>
-          </div>
-          <Link href="/train/search">
-            <button className={style.heroBoxBtn}>Get Your Ticket </button>
+          <Link href="/bus/search">
+            <button className={style.heroBoxBtn}>Get Your Ticket</button>
           </Link>
         </div>
       </div>
@@ -548,4 +423,4 @@ const TrainBanner = () => {
   );
 };
 
-export default TrainBanner;
+export default dynamic(() => Promise.resolve(BusBanner), { ssr: false });

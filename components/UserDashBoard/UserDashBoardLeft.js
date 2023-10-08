@@ -235,16 +235,14 @@ const UserDashBoardLeft = () => {
                       <Typography>
                         <div className={style.bookingList}>
                           <ul>
-                          <Active href="/b2bdashboard/manage/flight">
+                            <Active href="/b2bdashboard/manage/flight">
                               <li>
-                              <Flight className={style.flightIcons} /> Flight
-                                
+                                <Flight className={style.flightIcons} /> Flight
                               </li>
                             </Active>
                             <Active href="/b2bdashboard/manage/hotel">
                               <li>
-                              <Hotel className={style.flightIcons} /> Hotel
-                                
+                                <Hotel className={style.flightIcons} /> Hotel
                               </li>
                             </Active>
                             <Active href="/b2bdashboard/manage/visa">
@@ -273,97 +271,99 @@ const UserDashBoardLeft = () => {
                               </Active>
                             </li>
                             <li>
-                            <Accordion className={style.subAccordion}>
-                          <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                          >
-                            <Typography>
-                            <div className="flex items-center">
-                            <Mosque className={style.flightIcons} /> Hajj
-                            </div>
-                            </Typography>
-                          </AccordionSummary>
-                          <AccordionDetails className={style.ticketSubMenu}>
-                            <Typography>
-                              <ul>
-                                <li className="flex">
-                                <Active href="/b2bdashboard/manage/hajjUmrah">
-                                Hajj Package
-                              </Active>
-                                </li>
-                                <li className="flex">
-                                <Active href="/b2bdashboard/manage/hajj-visa-requirement">
-                                Hajj Visa REquirement
-                              </Active>
-                                </li>
-                                <li>
-                              <Active href="/b2bdashboard/manage/pre-registration-process">
-                               Pre Registration Process
-                              </Active>
+                              <Accordion className={style.subAccordion}>
+                                <AccordionSummary
+                                  expandIcon={<ExpandMoreIcon />}
+                                  aria-controls="panel1a-content"
+                                  id="panel1a-header"
+                                >
+                                  <Typography>
+                                    <div className="flex items-center">
+                                      <Mosque className={style.flightIcons} />{" "}
+                                      Hajj
+                                    </div>
+                                  </Typography>
+                                </AccordionSummary>
+                                <AccordionDetails
+                                  className={style.ticketSubMenu}
+                                >
+                                  <Typography>
+                                    <ul>
+                                      <li className="flex">
+                                        <Active href="/b2bdashboard/manage/hajjUmrah">
+                                          Hajj Package
+                                        </Active>
+                                      </li>
+                                      <li className="flex">
+                                        <Active href="/b2bdashboard/manage/hajj-visa-requirement">
+                                          Hajj Visa REquirement
+                                        </Active>
+                                      </li>
+                                      <li>
+                                        <Active href="/b2bdashboard/manage/pre-registration-process">
+                                          Pre Registration Process
+                                        </Active>
+                                      </li>
+                                      <li>
+                                        <Active href="/b2bdashboard/manage/brief-history-of-hajj">
+                                          Brief History Of Hajj
+                                        </Active>
+                                      </li>
+                                    </ul>
+                                  </Typography>
+                                </AccordionDetails>
+                              </Accordion>
                             </li>
                             <li>
-                              <Active href="/b2bdashboard/manage/brief-history-of-hajj">
-                                Brief History Of Hajj
-                              </Active>
+                              <Accordion className={style.subAccordion}>
+                                <AccordionSummary
+                                  expandIcon={<ExpandMoreIcon />}
+                                  aria-controls="panel1a-content"
+                                  id="panel1a-header"
+                                >
+                                  <Typography>
+                                    <div className="flex items-center">
+                                      <Mosque className={style.flightIcons} />{" "}
+                                      Umrah
+                                    </div>
+                                  </Typography>
+                                </AccordionSummary>
+                                <AccordionDetails
+                                  className={style.ticketSubMenu}
+                                >
+                                  <Typography>
+                                    <ul>
+                                      <li>
+                                        <Active href="/b2bdashboard/manage/umrah-package">
+                                          Umrah Package
+                                        </Active>
+                                      </li>
+                                      <li>
+                                        <Active href="/b2bdashboard/manage/benefit">
+                                          Benefit Umrah
+                                        </Active>
+                                      </li>
+                                      <li>
+                                        <Active href="/b2bdashboard/manage/umrah-visa-requirement">
+                                          Umrah Visa Requirement
+                                        </Active>
+                                      </li>
+                                      <li>
+                                        <Active href="/b2bdashboard/manage/perform-umrah">
+                                          Perform Umrah
+                                        </Active>
+                                      </li>
+                                      <li>
+                                        <Active href="/b2bdashboard/manage/umrah-faq">
+                                          Umrah FAQ
+                                        </Active>
+                                      </li>
+                                    </ul>
+                                  </Typography>
+                                </AccordionDetails>
+                              </Accordion>
                             </li>
-                              </ul>
-                            </Typography>
-                          </AccordionDetails>
-                        </Accordion>
 
-                      
-
-                            </li>
-                          <li>
-                          <Accordion className={style.subAccordion}>
-                          <AccordionSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                          >
-                            <Typography>
-                            <div className="flex items-center">
-                            <Mosque className={style.flightIcons} /> Umrah
-                            </div>
-                            </Typography>
-                          </AccordionSummary>
-                          <AccordionDetails className={style.ticketSubMenu}>
-                            <Typography>
-                              <ul>
-                              <li>
-                              <Active href="/b2bdashboard/manage/umrah-package">
-                            Umrah Package
-                              </Active>
-                            </li>
-                              <li>
-                              <Active href="/b2bdashboard/manage/benefit">
-                              Benefit Umrah
-                              </Active>
-                            </li>
-                            <li>
-                              <Active href="/b2bdashboard/manage/umrah-visa-requirement">
-                                 Umrah Visa Requirement
-                              </Active>
-                            </li>
-                            <li>
-                              <Active href="/b2bdashboard/manage/perform-umrah">
-                                 Perform Umrah
-                              </Active>
-                            </li>
-                            <li>
-                              <Active href="/b2bdashboard/manage/umrah-faq">
-                                Umrah FAQ
-                              </Active>
-                            </li>
-                              </ul>
-                            </Typography>
-                          </AccordionDetails>
-                        </Accordion>
-
-                          </li>
-                           
                             <li>
                               <Active href="/b2bdashboard/manage/about">
                                 <Info className={style.flightIcons} /> About Us

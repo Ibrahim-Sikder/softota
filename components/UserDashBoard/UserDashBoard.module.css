@@ -228,7 +228,6 @@
   background: #4AB449;
   width: 146px;
   padding: 5px;
-  position: absolute;
   left: 227px;
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
@@ -280,6 +279,7 @@ display:block;
 transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
 z-index: 9999999999 !important;
 }
+
 .tabLeft{
   margin-left: 307px !important;
 }
