@@ -21,6 +21,7 @@ const TourPage = () => {
       <BestPlace></BestPlace>
       <div className="mb-10">
         <Travel></Travel>
+        
       </div>
       <Footer />
     </section>

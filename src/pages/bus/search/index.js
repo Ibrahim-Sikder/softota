@@ -13,11 +13,6 @@ import {
   PriorityHigh,
 } from "@mui/icons-material";
 import dynamic from "next/dynamic";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-
-import img from "../../../../public/assets/bus2.jpeg";
-import img2 from "../../../../public/assets/bus3.jpg";
 
 
 const Search = () => {
@@ -543,7 +538,7 @@ const Search = () => {
                               <span className="text-red-500"> *</span>
                             </small>
                           </div>
-                          <div>
+                          <form>
                             <select className={style.boardingSelect}>
                               <option value=" -- Boarding points -- ">
                                 {" "}
@@ -577,7 +572,11 @@ const Search = () => {
                                 Sayedabad Bus Point (11:55 PM){" "}
                               </option>
                             </select>
-                          </div>
+                            <input className={style.phoneNumber} type="text" placeholder="Phone Number" />
+                          </form>
+                       
+                           
+                          
                           <div className="flex items-center justify-between my-5">
                             <button className={style.continoueBtn}>
                               Continoue{" "}

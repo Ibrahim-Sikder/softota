@@ -21,7 +21,7 @@ const B2BCheckout = () => {
             <form>
             <div className={style.inputFieldWrap}>
             <div className={style.formControl}>
-                    <label className={style.inputLabel}> Select a destination from list</label> 
+                    <label className={style.inputLabel}> Select a destination from list <small className='text-red-500 text-xl'>*</small>  </label> 
                    <select className={style.visaInput}>
                    <option selected value="Bangladesh">Bangladesh</option>
                   <option value="Thailand">Thailand</option>
@@ -43,12 +43,12 @@ const B2BCheckout = () => {
             </div>
            <div className={style.inputFieldWrap}>
            <div className={style.formControl}>
-                    <label  className={style.inputLabel}>When do you want to go?</label>
+                    <label  className={style.inputLabel}>When do you want to go?  <small className='text-red-500 text-xl'>*</small> </label>
                     <input placeholder='Date ' type="date" className={style.visaInput}  required/>
                 </div>
                 <div className={style.formControl}>
-                    <label  className={style.inputLabel}>Passport Number </label>
-                    <input placeholder='Passport Number ' type="text" className={style.visaInput} required/>
+                    <label  className={style.inputLabel}>Passenger Number </label>
+                    <input placeholder='Passenger Number ' type="text" className={style.visaInput} required/>
                 </div>
            </div>
                 <div className='mt-5'>
@@ -57,22 +57,22 @@ const B2BCheckout = () => {
                 <div className={style.inputFieldWrap}>
                   
             <div className={style.formControl}>
-                    <label className={style.inputLabel}>Given Name </label> 
-                    <input placeholder='Given Name ' type="text" className={style.visaInput} required/>
+                    <label className={style.inputLabel}>Given Name  <small className='text-red-500 text-xl'>*</small></label> 
+                    <input placeholder='Given Name ' type="text" className={style.visaInput} />
                 </div>
                 <div className={style.formControl}>
-                    <label placeholder='Surname'  className={style.inputLabel}> Surname </label>
+                    <label className={style.inputLabel}> Surname </label>
                     <input placeholder='Surname' type="text" className={style.visaInput} required/>
                 </div>
             </div>
             <div className={style.inputFieldWrap}>
             <div className={style.formControl}>
-                    <label className={style.inputLabel}>Movile Number </label> 
-                    <input placeholder='Phone Number' type="text" className={style.visaInput} required/>
+                    <label className={style.inputLabel}>Mobile Number <small className='text-red-500 text-xl'>*</small> </label> 
+                    <input placeholder='Mobile Number' type="text" className={style.visaInput} required/>
                 </div>
                 <div className={style.formControl}>
-                    <label  className={style.inputLabel}> Email  </label>
-                    <input placeholder='Email' type="text" className={style.visaInput} required/>
+                    <label  className={style.inputLabel}> Email <small className='text-red-500 text-xl'>*</small> </label>
+                    <input placeholder='Email' type="email" className={style.visaInput} required/>
                 </div>
             </div>
             <div className={`${style.formControl} ${style.uploadDoc}`}>

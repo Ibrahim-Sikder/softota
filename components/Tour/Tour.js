@@ -22,7 +22,7 @@ import dynamic from "next/dynamic";
 const BusBanner = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
-  const [seat, setSeat] = useState("1 Class");
+  const [room, setRoom] = useState("1 Room");
 
   const childIncrement = () => {
     setChild(child + 1);
@@ -361,12 +361,26 @@ const BusBanner = () => {
           <form className={style.packageWrap}>
             <div className={style.singleForm}>
               <div className={style.formControl}>
-                <h4>From </h4>
+                <h4>Travel From </h4>
                 <input type="text " placeholder="Enter City" />
               </div>
               <div className={style.formControl}>
-                <h4> To </h4>
-                <input type="text " placeholder="Enter City" />
+                <label> Your Destination Country</label>
+                <select>
+                  <option selected value="Bangladesh">
+                    Bangladesh
+                  </option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Japan">Japan</option>
+                </select>
               </div>
             </div>
             <div className={style.singleForm}>
@@ -400,21 +414,71 @@ const BusBanner = () => {
               </div>
               <div className={style.formControl}>
                 <div className={style.package4}>
-                      <select name="" id="">
-                      <option value="Choos a class">Choos a class</option>
-                      <option value="AC_B">AC_B</option>
-                      <option value="S_CHAIR">S_CHAIR</option>
-                      <option value="F_BERTH">F_BERTH</option>
-                      <option value="SHULOV">SHULOV</option>
-                      <option value="SNIGDHA">SNIGDHA</option>
-                      <option value="AC_CHAIR">AC_CHAIR</option>
-                      </select>
+                  <div className="flex justify-between item-center">
+                    <div>
+                      <h4>Guests & Room</h4>
+                      <small>
+                        {child + adult} Guest & {room}{" "}
+                      </small>
+                      <input type="text" />
+                    </div>
+                    <Groups2
+                      onClick={() => window.busModal.showModal()}
+                      className={style.showModalIcon}
+                    />
+                  </div>
                 </div>
+
+                <div className={style.modalWrap}>
+            <dialog id="busModal" className={style.hotelModal}>
+              <form method="dialog" className="modal-box">
+                <button className={style.hotelModalCloseBtn}>✕</button>
+                <div className={style.guestRoomWrap}>
+                  <Groups2 className={style.groupIcon} />
+                  <div>
+                    <small>Guest & Room </small> <br />
+                    <p className="text-xl font-bold">
+                      {" "}
+                      {child + adult} Guest & {room}{" "}
+                    </p>
+                  </div>
+                </div>
+                <div className={style.adultChildWrap}>
+                  <div className={style.adultIncrementDecrement}>
+                    <small onClick={decrementAdult}> - </small>
+                    <span>{adult} Adult </span>
+                    <small onClick={incrementAdult}> + </small>
+                  </div>
+                  <div className={style.childIncrementDecrement}>
+                    <small onClick={childDecrement}> - </small>
+                    <span> {child} Child </span>
+                    <small onClick={childIncrement}> + </small>
+                  </div>
+                </div>
+
+                <select
+                  className={style.roomSelect}
+                  onChange={(e) => {
+                    const classes = e.target.value;
+                    setRoom(classes);
+                  }}
+                >
+                  <option value="1 Room" selected>
+                    1 Room
+                  </option>
+                  <option value="2 Room">2 Room</option>
+                  <option value="3 Room">3 Room</option>
+                  <option value="4 Room">4 Room</option>
+                  <option value="5 Room">5 Room</option>
+                </select>
+              </form>
+            </dialog>
+          </div>
               </div>
             </div>
           </form>
 
-          <Link href="/bus/search">
+          <Link href="/tours/search">
             <button className={style.heroBoxBtn}>Get Your Ticket</button>
           </Link>
         </div>

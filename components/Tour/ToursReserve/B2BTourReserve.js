@@ -207,14 +207,18 @@ const B2BTourReserve = () => {
                     className={style.accordonSummary}
                   >
                     <Typography className={style.accordionTypo}>
-                      Accessibility
+                      What is Excluded
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails className={style.accordionDetails}>
                     <Typography className={style.accordionTypos}>
                       <ul>
-                        <li>Not wheelchair accessible </li>
-                        <li>Near public transportation </li>
+                        <li>Anything that is not mentioned in the inclusion</li>
+                        <li>Photo and video shooting tickets </li>
+                        <li>Train and flight tickets (incl. domestic)</li>
+                        <li>Tips </li>
+                        <li>Meals and beverages except mentioned </li>
+                        <li>Meals and beverages except mentioned </li>
                       </ul>
                       <div className="mt-3">
                         <p>
@@ -239,13 +243,13 @@ const B2BTourReserve = () => {
                     className={style.accordonSummary}
                   >
                     <Typography className={style.accordionTypo}>
-                      What to expect
+                    <strong>Itinerary</strong>
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails className={style.accordionDetails}>
                     <Typography className={style.accordionTypos}>
                       <div>
-                        <strong>Itinerary</strong>
+                    
                         <p>This is a typical itinerary for this product</p>
                         <p>
                           <strong>Stop At:</strong> Shipyard Road, Shipyard Rd,
@@ -353,34 +357,23 @@ const B2BTourReserve = () => {
             </div>
             <div className={style.galleryTextRightSide}>
               <div>
-                <h3 className="text-bold text-xl mb-3">Reserve your spot</h3>
-                <div className="flex justify-between">
-                  <div className={style.reserveLeft}>
-                    <label> Select Date</label>
-                    <input type="date" />
-                  </div>
+                    <h2 className="text-2xl font-bold"> Saint Petersburg Package</h2>
+                <div className={style.allTraveller}>
+                    <strong>Traveller </strong>
                   <div className={style.reserveRight}>
                     <PeopleOutline className={style.passengerIcon} />
                     <span>3</span>
                   </div>
                 </div>
-                <div className="my-3">
-                  <p>Choose your tour type and time:</p>
-                  <small>1 option available for 9/3</small>
-                </div>
                 <div className={style.priceCard}>
-                  <h6>Fascinating Old Dhaka and Ship Breaking Yard Day Trip</h6>
-                  <small>Pickup included</small> <br />
-                  <button className={style.timeBtn}>10.00 am</button>
-                  <hr className="my-3" />
                   <div className="flex mt-3 justify-between w-full ">
-                    <span>2 Adults x $108.77</span>
+                    <span>3 Adults x $108.77</span>
                     <strong>Total $217.54</strong>
                   </div>
                   <small>(No additional taxes or booking fees)</small>
                   <div className={style.checkout}>
                  
-                   <Link href='/b2bdashboard/tours/checkout'> <button>Checkout</button></Link>
+                   <Link href='/b2bdashboard/tours/checkout'> <button> Continoue </button></Link>
                   </div>
                 </div>
               </div>

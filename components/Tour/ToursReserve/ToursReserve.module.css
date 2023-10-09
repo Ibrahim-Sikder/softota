@@ -51,32 +51,31 @@
 .checkIcon{
     color: #4AB449 !important;
     font-size: 18px !important;
+    margin-right: 6px;
+
 }
 .star{
     color: #4AB449 !important;
     font-size: 25px !important; 
 }
-.reserveLeft{
+.allTraveller{
     display: flex;
-    flex-direction: column;
-    width: 291px;
+    justify-content: space-between;
+    margin: 15px 0;
     border: 1px solid #ddd;
-    height: 55px;
-    border-radius: 50px;
-    justify-content: center;
+    padding: 10px;
     align-items: center;
-    font-size: 14px;
-
+    border-radius: 5px;
 }
 .reserveRight{
-    width: 94px;
-    height: 50px;
-    border: 1px solid #ddd;
-    border-radius: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    width: 80px;
+    border: 1px solid #4AB449;
+    border-radius: 8px;
+    height: 34px;
+
 }
 .galleryTextWrap{
     width:100%;
@@ -85,10 +84,10 @@
     margin-top:20px;
 }
 .priceCard{
-
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 18px;
+    box-shadow: #0000003d 0px 3px 8px;
+    padding: 33px 18px;
     border-radius: 10px;
+    margin-top: 20px;
 
 }
 .timeBtn{
@@ -101,7 +100,7 @@
 }
 .checkout button{
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid #4AB449;
     height: 44px;
     margin-top: 20px;
     border-radius: 20px;

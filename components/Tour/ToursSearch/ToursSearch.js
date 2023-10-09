@@ -92,7 +92,7 @@ const ToursSearch = () => {
                                 <div className={style.cardPrice}>
                                     <p>$989</p>
                                     <p>Per adults</p>
-                                    <Link href='/tours/toursReserve'> <button>Reserve</button></Link>
+                                    <Link href='/tours/book'> <button>Reserve</button></Link>
                                    
                                 </div>
                                 </div>

@@ -239,7 +239,6 @@
 .formControl select{
   width:100%;
   background: transparent;
-  height: 100%;
 }
 .formControl select option{
 background: #4AB449 !important;

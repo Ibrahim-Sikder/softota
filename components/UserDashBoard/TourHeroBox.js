@@ -1,14 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 import style from "../BusBanner/Bus.module.css";
 import ActiveLink from "../Banner/ActiveLink";
-import { CalendarMonth, Groups2 } from "@mui/icons-material";
-import Link from "next/link";
-import { Calendar } from "react-date-range";
+import {
+  Flight,
+  Hotel,
+  BookOnline,
+  TransferWithinAStation,
+  Groups2,
+  CalendarMonth,
+} from "@mui/icons-material";
+import { DateRange } from "react-date-range";
 import format from "date-fns/format";
+import { addDays } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
+import { useRef } from "react";
+import { useEffect } from "react";
+import dynamic from "next/dynamic";
 
-const TourHeroBox = () => {
+const BusBanner = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [room, setRoom] = useState("1 Room");
@@ -35,50 +46,31 @@ const TourHeroBox = () => {
   };
 
   // date state
-  const [calendar, setCalendar] = useState("");
-  const [calendar2, setCalendar2] = useState("");
+  const [range, setRange] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: "selection",
+    },
+  ]);
 
   // open close
   const [open, setOpen] = useState(false);
-  const [open2, setOpen2] = useState(false);
 
   // get the target element to toggle
   const refOne = useRef(null);
-  const refTow = useRef(null);
 
   useEffect(() => {
-    // set current date on component load
-    setCalendar(format(new Date(), "MM/dd/yyyy"));
-    // event listeners
     document.addEventListener("keydown", hideOnEscape, true);
     document.addEventListener("click", hideOnClickOutside, true);
   }, []);
 
-  
-  useEffect(() => {
-    // set current date on component load
-    setCalendar2(format(new Date(), "MM/dd/yyyy"));
-    // event listeners
-    document.addEventListener("keydown", hideOnEscape2, true);
-    document.addEventListener("click", hideOnClickOutside2, true);
-  }, []);
-
-
   // hide dropdown on ESC press
   const hideOnEscape = (e) => {
-    // console.log(e.key)
     if (e.key === "Escape") {
       setOpen(false);
     }
   };
-  const hideOnEscape2 = (e) => {
-    // console.log(e.key)
-    if (e.key === "Escape") {
-      setOpen2(false);
-    }
-  };
-
-
 
   // Hide on outside click
   const hideOnClickOutside = (e) => {
@@ -86,27 +78,16 @@ const TourHeroBox = () => {
       setOpen(false);
     }
   };
-  const hideOnClickOutside2 = (e) => {
-    if (refTow.current && !refTow.current.contains(e.target)) {
-      setOpen2(false);
-    }
-  };
-
-  // on date change, store date in state
-  const handleSelect = (date) => {
-    setCalendar(format(date, "MM/dd/yyyy"));
-  };
-  const handleSelect2 = (date) => {
-    setCalendar2(format(date, "MM/dd/yyyy"));
-  };
 
   return (
-    <section className={style.bannerWrap}>
-            <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2> 
-      <div className={style.heroBoxMain}>
-        {/* menubar */}
-        <div className={style.desktopMenu}>
-        <ul className={style.menu}>
+    <section>
+      {/* banner */}
+      <div className={style.bannerWrap}>
+        <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
+        <div className={style.heroBoxMain}>
+          {/* menubar */}
+          <div className={style.desktopMenu}>
+          <ul className={style.menu}>
             <div className={style.wrapMenu}>
               <ActiveLink href="/b2bdashboard/hajj">
                 <li className={style.firstChild}>
@@ -340,105 +321,115 @@ const TourHeroBox = () => {
               </ActiveLink>
             </div>
           </ul>
-        </div>
+          </div>
 
-        <div className={style.packageWrap}>
-          <div className={style.package}>
-            <div>
-              <h4>Select Your Destination Country </h4>
-              <select>
-                <option selected value="Bangladesh">
-                  Bangladesh
-                </option>
-                <option value="Thailand">Thailand</option>
-                <option value="Malaysia">Malaysia</option>
-                <option value="Indonesia">Indonesia</option>
-                <option value="India">India</option>
-                <option value="China">China</option>
-                <option value="Singapore">Singapore</option>
-                <option value="Iran">Iran</option>
-                <option value="Vietnam">Vietnam</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Japan">Japan</option>
-              </select>
-            </div>
+          {/* for mobile menu  */}
+
+          <div className={style.mobileMenuWraps}>
+            <ul className={style.menu}>
+              <div className={style.wrapMenu}>
+                <ActiveLink href="/">
+                  <li className={style.activeLink}>
+                    <Flight className={style.mobileMenuIcons} />
+                    <p className="ml-3">Flight</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/hotel">
+                  <li>
+                    <Hotel className={style.mobileMenuIcon} />
+
+                    <p className="ml-3">Hotel</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/visa">
+                  <li>
+                    <BookOnline className={style.mobileMenuIcon} />
+                    <p className="ml-3">Visa</p>
+                  </li>
+                </ActiveLink>
+                <ActiveLink href="/tours">
+                  <li>
+                    <TransferWithinAStation className={style.mobileMenuIcon} />
+
+                    <p className="ml-3">Tours</p>
+                  </li>
+                </ActiveLink>
+              </div>
+            </ul>
           </div>
-          <div className={style.package2}>
-            <div className={style.travelDestination}>
-              <h4>Travel From </h4>
-              <input type="text " placeholder="Enter Your City" />
-            </div>
-            <div className={style.travelDestination}>
-              <h4>Travel To </h4>
-              <input type="text " placeholder="Enter Your City" />
-            </div>
-          </div>
-        </div>
-        <div className={style.packageWrap}>
-          <div className={style.packageDate}>
-            <div  onClick={() => setOpen((open) => !open)} className={style.date}>
-              <h4>Depart To </h4>
-              <div className={style.calendarInput}>
-                <input
-                  value={calendar}
-                  readOnly
-                />
-                <CalendarMonth className={style.calendarIcon} />
+
+          <form className={style.packageWrap}>
+            <div className={style.singleForm}>
+              <div className={style.formControl}>
+                <h4>Travel From </h4>
+                <input type="text " placeholder="Enter City" />
+              </div>
+              <div className={style.formControl}>
+                <label> Your Destination Country</label>
+                <select>
+                  <option selected value="Bangladesh">
+                    Bangladesh
+                  </option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Japan">Japan</option>
+                </select>
               </div>
             </div>
-            <div className={style.calendar} ref={refOne}>
-              {open && (
-                <Calendar
-                  date={new Date()}
-                  onChange={handleSelect}
-                  className="calendarElement"
-                />
-              )}
-            </div>
-            <div onClick={() => setOpen2((open2) => !open2)} className={style.date2}>
-              <h4>Return To </h4>
-              <div className={style.calendarInput}>
-                <input
-                  value={calendar2}
-                  readOnly
-                />
-                <CalendarMonth className={style.calendarIcon} />
+            <div className={style.singleForm}>
+              <div className={style.formControl}>
+                <div
+                  onClick={() => setOpen((open) => !open)}
+                  className={style.date}
+                >
+                  <h4>Journey Date </h4>
+                  <div className="flex items-center justify-between ">
+                    <input
+                      value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                      readOnly
+                    />
+                    <CalendarMonth className={style.calendarIcon} />
+                  </div>
+                </div>
+                <div className={style.calendarTow} ref={refOne}>
+                  {open && (
+                    <DateRange
+                      onChange={(item) => setRange([item.selection])}
+                      editableDateInputs={true}
+                      moveRangeOnFirstSelection={false}
+                      ranges={range}
+                      months={1}
+                      direction="horizontal"
+                      className="calendarElement"
+                    />
+                  )}
+                </div>
               </div>
-            </div>
+              <div className={style.formControl}>
+                <div className={style.package4}>
+                  <div className="flex justify-between item-center">
+                    <div>
+                      <h4>Guests & Room</h4>
+                      <small>
+                        {child + adult} Guest & {room}{" "}
+                      </small>
+                      <input type="text" />
+                    </div>
+                    <Groups2
+                      onClick={() => window.busModal.showModal()}
+                      className={style.showModalIcon}
+                    />
+                  </div>
+                </div>
 
-            <div className={style.calendar2} ref={refTow}>
-              {open2 && (
-                <Calendar
-                  date={new Date()}
-                  onChange={handleSelect2}
-                  className="calendarElement"
-                />
-              )}
-            </div>
-
-
-          </div>
-          <div className={style.package4}>
-            <div className="flex justify-between item-center">
-              <div>
-                <h4>Guests & Room</h4>
-                <small>
-                  {child + adult} Guest & {room}{" "}
-                </small>
-                <input type="text" />
-              </div>
-              <Groups2
-                onClick={() => window.busModal.showModal()}
-                className={style.showModalIcon}
-              />
-            </div>
-            {/* <div>
-                <h4>Passengers & Seat Class</h4>
-                <input type="text " placeholder="1 person" />
-              </div> */}
-          </div>
-          {/* Modal  */}
-          <div className={style.modalWrap}>
+                <div className={style.modalWrap}>
             <dialog id="busModal" className={style.hotelModal}>
               <form method="dialog" className="modal-box">
                 <button className={style.hotelModalCloseBtn}>✕</button>
@@ -483,13 +474,17 @@ const TourHeroBox = () => {
               </form>
             </dialog>
           </div>
+              </div>
+            </div>
+          </form>
+
+          <Link href="/b2bdashboard/tours/search">
+            <button className={style.heroBoxBtn}>Get Your Ticket</button>
+          </Link>
         </div>
-        <Link href="/b2bdashboard/tours/search">
-          <button className={style.heroBoxBtn}>Get Your Ticket</button>
-        </Link>
       </div>
     </section>
   );
 };
 
-export default TourHeroBox;
+export default dynamic(() => Promise.resolve(BusBanner), { ssr: false });
