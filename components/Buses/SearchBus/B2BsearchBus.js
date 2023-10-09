@@ -10,59 +10,60 @@ import {
   Warning,
   PriorityHigh,
 } from "@mui/icons-material";
-const SearchBus = () => {
-  const [chooseSeat, setChooseSeat] = useState("A1", "৳1500", "Economy");
-  const [showDetails, setShowDetails] = useState(false);
-  const handleShowDetails = () => {
-    setShowDetails(!showDetails);
-  };
-  const busData = [
-    {
-      id: 1,
-      name: "SHYAMOLI NR TRAVELS",
-      price: 900.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 33,
-    },
-    {
-      id: 1,
-      name: "Saintmartin Hyundai (Robi Express)",
-      price: 1500.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 20,
-    },
+const B2BsearchBus = () => {
+    const [chooseSeat, setChooseSeat] = useState("A1", "৳1500", "Economy");
+    const [showDetails, setShowDetails] = useState(false);
+    const handleShowDetails = () => {
+      setShowDetails(!showDetails);
+    };
+    const busData = [
+      {
+        id: 1,
+        name: "SHYAMOLI NR TRAVELS",
+        price: 900.0,
+        departureTime: "10.30AM",
+        arrivalTime: "12.20PM",
+        seats: 33,
+      },
+      {
+        id: 1,
+        name: "Saintmartin Hyundai (Robi Express)",
+        price: 1500.0,
+        departureTime: "10.30AM",
+        arrivalTime: "12.20PM",
+        seats: 20,
+      },
+  
+      {
+        id: 1,
+        name: "Hanif Enterprise",
+        price: 800.0,
+        departureTime: "10.30AM",
+        arrivalTime: "12.20PM",
+        seats: 40,
+      },
+  
+      {
+        id: 1,
+        name: "SHYAMOLI NR TRAVELS",
+        price: 900.0,
+        departureTime: "10.30AM",
+        arrivalTime: "12.20PM",
+        seats: 24,
+      },
+  
+      {
+        id: 1,
+        name: "SHYAMOLI NR TRAVELS",
+        price: 900.0,
+        departureTime: "10.30AM",
+        arrivalTime: "12.20PM",
+        seats: 33,
+      },
+    ];
+    return (
 
-    {
-      id: 1,
-      name: "Hanif Enterprise",
-      price: 800.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 40,
-    },
-
-    {
-      id: 1,
-      name: "SHYAMOLI NR TRAVELS",
-      price: 900.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 24,
-    },
-
-    {
-      id: 1,
-      name: "SHYAMOLI NR TRAVELS",
-      price: 900.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 33,
-    },
-  ];
-  return (
-    <main>
+      <main>
       <div className={style.busTopBar}>
         <div>
           <strong className="block">Departure </strong>
@@ -562,7 +563,7 @@ const SearchBus = () => {
         </div>
       </div>
     </main>
-  );
+    );
 };
 
-export default SearchBus;
+export default B2BsearchBus;

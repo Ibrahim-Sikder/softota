@@ -8,7 +8,7 @@ import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLay
 import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import { useState } from "react";
 
-const UmrahFaq = () => {
+const Add = () => {
   const [editorValue, setEditorValue] = useState('');
   return (
     <B2BdashboardLayout>
@@ -162,4 +162,4 @@ const UmrahFaq = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(UmrahFaq), { ssr: false });
+export default dynamic(() => Promise.resolve(Add), { ssr: false });

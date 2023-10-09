@@ -400,8 +400,8 @@ const BusBanner = () => {
               </div>
               <div className={style.formControl}>
                 <div className={style.package4}>
+                  <label htmlFor="">Choos a class</label>
                       <select name="" id="">
-                      <option value="Choos a class">Choos a class</option>
                       <option value="AC_B">AC_B</option>
                       <option value="S_CHAIR">S_CHAIR</option>
                       <option value="F_BERTH">F_BERTH</option>
@@ -413,8 +413,9 @@ const BusBanner = () => {
               </div>
             </div>
           </form>
+          
 
-          <Link href="/bus/search">
+          <Link href="/train/search">
             <button className={style.heroBoxBtn}>Get Your Ticket</button>
           </Link>
         </div>

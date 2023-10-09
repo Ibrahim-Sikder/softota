@@ -1,0 +1,27 @@
+.editIcon,
+.deleteIcon {
+  font-size: 25px;
+  color: #4ab449;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 auto;
+}
+.editIconWrap{
+
+}
+.deleteIcon {
+  color: red;
+}
+.addHotel button {
+    background: #4ab449;
+    color: white;
+    border: 1px solid #fff;
+    transition: all 0.5s cubic-bezier(0, 0.01, 0.98, 0.93);
+    border-radius: 25px;
+    padding: 10px 15px;
+}
+.addHotel button:hover {
+  background: #fff;
+  color: #4ab449;
+  border: 1px solid #4ab449;
+}

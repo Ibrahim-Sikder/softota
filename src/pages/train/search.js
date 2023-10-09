@@ -1,8 +1,8 @@
 import React from 'react';
 import Nav from '../../../components/NavBarr/Nav';
-import TrainSearch from '../../../components/Train/TrainSearch/TrainSearch';
 import Footer from '../../../components/Footer/Footer';
-
+import TrainSearch from '../../../components/Buses/SearchBus/TrainSearch';
+import dynamic from "next/dynamic";
 
 const search = () => {
     return (
@@ -14,4 +14,4 @@ const search = () => {
     );
 };
 
-export default search;
+export default dynamic(() => Promise.resolve(search), { ssr: false });

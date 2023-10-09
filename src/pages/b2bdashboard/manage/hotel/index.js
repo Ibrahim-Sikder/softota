@@ -1,210 +1,76 @@
 import React from "react";
-import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
-import styles from "../manage.module.css";
-import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import { useState } from "react";
-import TextEditor from "../../../../../components/TextEditor/TextEditor";
-
+import style from "./hotel.module.css";
+import { FaTrashAlt, FaEdit } from "react-icons/fa";
+import img from "../../../../../public/assets/hotel.jpg";
+import Image from "next/image";
+import TextField from "@mui/material/TextField";
+import Link from "next/link";
 const Hotel = () => {
-  const [editorValue, setEditorValue] = useState("");
-
   return (
     <B2BdashboardLayout>
       <MoveText />
-
-      <div className="mt-5">
-        <div className={styling.profileTop}>
-          <div className={styling.flightHistory}>
-            <h2 className="text-3xl font-bold text-center">
-              Hotel Data Input{" "}
-            </h2>
-            <div className="w-full mx-auto">
-              <form>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Input Country </label>
-                    <input
-                      name="country"
-                      placeholder="Input Country "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Input City </label>
-                    <input
-                      name="city"
-                      placeholder="Input City "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Day/Night </label>
-                    <input
-                      name="day"
-                      placeholder="Day/Night "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Price Per Person </label>
-                    <input
-                      name="price"
-                      placeholder="Price Person "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Price Twin Person</label>
-                    <input
-                      name="price"
-                      placeholder="Price Twin Person "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Price Triple Person </label>
-                    <input
-                      name="price"
-                      placeholder="Price Triple Person"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Highest Price </label>
-                    <input
-                      name="highestPrice"
-                      placeholder="Highest Price "
-                      type="number"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Lowest Price </label>
-                    <input
-                      name="lowestPrice"
-                      placeholder="Lowest Price "
-                      type="number"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Start Price </label>
-                    <input
-                      name="startPrice"
-                      placeholder="Start Price "
-                      type="number"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Discount Price </label>
-                    <input
-                      name="discountPrice"
-                      placeholder="Discount Price "
-                      type="number"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Date</label>
-                    <input
-                      name="date"
-                      placeholder="Date "
-                      type="date"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Address</label>
-                    <input
-                      name="address"
-                      placeholder="Address"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Title </label>
-                    <input
-                      name="title"
-                      placeholder="Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Sub Title </label>
-                    <input
-                      name="subtitle"
-                      placeholder="Sub Title "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Hotel Name </label>
-                    <input
-                      name="name"
-                      placeholder="Hotel Name "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div className={styles.uploadFile}>
-                    <label for="files">
-                      {" "}
-                      <CloudUpload className={styles.uploadIcon} /> Image Upload{" "}
-                    </label>
-                    <input
-                      name="image"
-                      className={styles.inputField}
-                      type="file"
-                      id="files"
-                      class="hidden"
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  {/* <div>
-            <label> Description </label> 
-            <textarea name='description' placeholder="Description"></textarea>
-            </div> */}
-                  <TextEditor value={editorValue} onChange={setEditorValue} />
-                </div>
-
-                <div className={styles.formControl}>
-                  <button className={styles.submitBtn} type="submit">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
+      <div className="mt-5 mb-24">
+        <div className="flex items-center justify-between px-8 mb-5">
+          <TextField id="outlined-basic" label="Search " variant="outlined" />
+          <div className={style.addHotel}>
+            <Link href='/b2bdashboard/manage/hotel/add'>
+            <button>
+              <span className="text-xl font-bold">+</span> Add Hotel{" "}
+            </button>
+            </Link>
           </div>
+        </div>
+        <div className="overflow-x-auto ">
+          <table className="table ">
+            <thead className={style.tableWrap}>
+              <tr>
+                <th>Image</th>
+                <th>Hotel Name</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Title</th>
+                <th>Sub title </th>
+                <th>Date</th>
+                <th colSpan={2}>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div className="mask   h-[100px] w-[100px] mx-auto ">
+                    <Image
+                      className=" h-full w-full object-cover text-center"
+                      src={img}
+                      alt="img"
+                    />
+                  </div>
+                </td>
+                <td>Four Seasons Hotels and Resorts </td>
+                <td>Bangladesh </td>
+                <td>Dhaka </td>
+                <td>This is best hotel in the world </td>
+                <td>This is best hotel </td>
+                <td>3/6/23</td>
+                <td >
+                 <div className={style.editIconWrap}>
+                 <Link href='/b2bdashboard/manage/hotel/update'> 
+                  <FaEdit className={style.editIcon} />
+                 </Link>
+                 </div>
+                </td>
+                <td>
+                  <div className={style.editIconWrap}>
+                  <FaTrashAlt className={style.deleteIcon} />
+                  </div>
+                  
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
         </div>
       </div>
     </B2BdashboardLayout>

@@ -1,165 +1,76 @@
 import React from "react";
-import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
-import styles from "../manage.module.css";
-import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import TextEditor from "../../../../../components/TextEditor/TextEditor";
-import { useState } from "react";
-
-const UmrahPackage = () => {
-  const [editorValue, setEditorValue] = useState('');
+import style from "../hotel/hotel.module.css";
+import { FaTrashAlt, FaEdit } from "react-icons/fa";
+import img from "../../../../../public/assets/hotel.jpg";
+import Image from "next/image";
+import TextField from "@mui/material/TextField";
+import Link from "next/link";
+const Hotel = () => {
   return (
     <B2BdashboardLayout>
       <MoveText />
-
-      <div className="mt-5">
-        <div className={styling.profileTop}>
-          <div className={styling.flightHistory}>
-            <h2 className="text-3xl font-bold text-center">
-               Umrah Package Data Input{" "}
-            </h2>
-            <div className="w-full mx-auto">
-              <form>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Enter Country </label>
-                    <select className={styles.inputField}>
-                      <option selected value="Bangladesh">
-                        Bangladesh
-                      </option>
-                      <option value="Thailand">Thailand</option>
-                      <option value="Malaysia">Malaysia</option>
-                      <option value="Indonesia">Indonesia</option>
-                      <option value="India">India</option>
-                      <option value="China">China</option>
-                      <option value="Singapore">Singapore</option>
-                      <option value="Iran">Iran</option>
-                      <option value="Vietnam">Vietnam</option>
-                      <option value="Pakistan">Pakistan</option>
-                      <option value="Japan">Japan</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label> Enter City </label>
-                    <select className={styles.inputField}>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Bangkok">Bangkok</option>
-                      <option value="Tokyo">Tokyo</option>
-                      <option value="Kuala Lumpur">Kuala Lumpur</option>
-                      <option value="Jakarta">Jakarta</option>
-                      <option value="Beijing">Beijing</option>
-                      <option value="Singapore Island">Singapore Island</option>
-                      <option value="Iran">Iran</option>
-                      <option value="Hanoi">Hanoi</option>
-                      <option value="Tehran">Tehran</option>
-                      <option value="Islamabad">Islamabad</option>
-                    </select>
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Hajj Package </label>
-                    <select className={styles.inputField}>
-                      <option value="Select Hajj Package">
-                        Select Hajj Package
-                      </option>
-                      <option value="Economy Hajj Package">
-                        Economy Hajj Package
-                      </option>
-                      <option value="Shifting Hajj Package">
-                        Shifting Hajj Package
-                      </option>
-                      <option value="Non Shifting Hajj Package">
-                        Non Shifting Hajj Package
-                      </option>
-                    </select>
-                  </div>
-                  <div>
-                    <label> Umrah Package </label>
-                    <select className={styles.inputField}>
-                      <option value="Prmium Package">Prmium Package</option>
-                      <option value="Economy Package">Economy Package</option>
-                      <option value="Platinum Package">Platinum Package</option>
-                      <option value="Family Package">Family Package</option>
-                      <option value="Group People Package">
-                        Group People Package
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Date</label>
-                    <input
-                      name="date"
-                      placeholder="Date "
-                      type="date"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Price </label>
-                    <input
-                      name="price"
-                      placeholder="Price"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Title </label>
-                    <input
-                      name="title"
-                      placeholder="Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Sub Title </label>
-                    <input
-                      name="subTitle"
-                      placeholder=" Sub Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div className={styles.uploadFile}>
-                    <label for="files">
-                      {" "}
-                      <CloudUpload className={styles.uploadIcon} /> Image Upload{" "}
-                    </label>
-                    <input
-                      name="image"
-                      className={styles.inputField}
-                      type="file"
-                      id="files"
-                      class="hidden"
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                <TextEditor  value={editorValue} onChange={setEditorValue}/>
-                </div>
-               
-                <div className={styles.formControl}>
-                  <button className={styles.submitBtn} type="submit">
-                    Submit
-                  </button>
-                </div>
-              </form>
-            </div>
+      <div className="mt-5 mb-24">
+        <div className="flex items-center justify-between px-8 mb-5">
+          <TextField id="outlined-basic" label="Search " variant="outlined" />
+          <div className={style.addHotel}>
+            <Link href='/b2bdashboard/manage/umrah-package/add'>
+            <button>
+              <span className="text-xl font-bold">+</span> Add Umrah Package</button>
+            </Link>
           </div>
+        </div>
+        <div className="overflow-x-auto ">
+          <table className="table ">
+            <thead className={style.tableWrap}>
+              <tr>
+                <th>Image</th>
+                <th>Umrah Package </th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Title</th>
+                <th>Sub title </th>
+                <th>Date</th>
+                <th>Price</th>
+                <th colSpan={2}>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                <div className="mask   h-[100px] w-[100px] mx-auto ">
+                    <Image
+                      className=" h-full w-full object-cover text-center"
+                      src={img}
+                      alt="img"
+                    />
+                  </div>
+                </td>
+                <td>Premium Umrah Package  </td>
+                <td>Bangladesh </td>
+                <td>Dhaka </td>
+                <td>It is the best Umrah Package  </td>
+                <td>Top package  </td>
+                <td>20-05-23  </td>
+                <td> ৳10400  </td>
+                <td >
+                 <Link href='/b2bdashboard/manage/umrah-package/update'> 
+                  <FaEdit className={style.editIcon} />
+                 </Link>
+                </td>
+                <td>
+                  <FaTrashAlt className={style.deleteIcon} />
+                </td>
+              </tr>
+            
+            </tbody>
+          </table>
         </div>
       </div>
     </B2BdashboardLayout>
   );
 };
 
-export default dynamic(() => Promise.resolve(UmrahPackage), { ssr: false });
+export default dynamic(() => Promise.resolve(Hotel), { ssr: false });

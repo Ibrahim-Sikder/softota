@@ -8,8 +8,7 @@
 }
 .busTopBar h6{
      font-weight: bold;
-     font-size: 20px;
-     color:#4AB449   
+     font-size: 20px;   
 }
 
 .searchBusLeftSide{
@@ -37,7 +36,22 @@
     justify-content: space-between;
   
 }
-.viewBtn, .modifyBtn{
+.modifyBtn{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    margin-top: 2px;
+    font-size: 12px;
+    transition: all .5s cubic-bezier(0.27, 0.26, 0.67, 0.62);
+    background: white;
+    color: #4AB449;
+}
+.modifyBtn:hover{
+    background-color: #4AB449;
+    color:white;
+    border:1px solid white;
+}
+.viewBtn{
     width: 100px;
     height: 30px;
     border-radius: 20px;
@@ -46,7 +60,7 @@
     border: 1px solid #0BB811;
     transition: all .5s cubic-bezier(0.27, 0.26, 0.67, 0.62);
 }
-.viewBtn:hover, .modifyBtn:hover{
+.viewBtn:hover{
     background: #0BB811;
     color:white;
 }
@@ -59,6 +73,9 @@ height: 40px !important;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background: #4AB449;
+    padding: 20px 50px;
+    color: white;
 }
 .policy{
     display: flex;
