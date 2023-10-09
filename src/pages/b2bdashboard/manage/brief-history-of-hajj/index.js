@@ -49,7 +49,6 @@ const BriefHistoryHajj = () => {
                       name="image"
                       className={styles.inputField}
                       type="file"
-                      id="files"
                       class="hidden"
                     />
                   </div>
