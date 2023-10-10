@@ -20,9 +20,9 @@ const Benefit = () => {
         <div className="flex items-center justify-between px-8 mb-5">
           <TextField id="outlined-basic" label="Search " variant="outlined" />
           <div className={style.addHotel}>
-            <Link href='/b2bdashboard/manage/benefit/add'>
+            <Link href='/b2bdashboard/manage/hajj/add'>
             <button>
-              <span className="text-xl font-bold">+</span> Add Umrah Package</button>
+              <span className="text-xl font-bold">+</span> Add Hajj Package </button>
             </Link>
           </div>
         </div>
@@ -56,7 +56,7 @@ const Benefit = () => {
                   20-05-23
                 </td>
                 <td >
-                 <Link href='/b2bdashboard/manage/benefit/update'> 
+                 <Link href='/b2bdashboard/manage/hajj/update'> 
                   <FaEdit className={style.editIcon} />
                  </Link>
                 </td>

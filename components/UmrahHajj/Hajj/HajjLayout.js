@@ -16,6 +16,7 @@ import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
 const HajjLayout = ({ children }) => {
   return (
     <div>
+      <Nav/>
       <div className={style.packageWrap}>
         <aside className={style.packageLeftSide}>
           <div className={style.LeftSideWrap}>
@@ -182,6 +183,7 @@ const HajjLayout = ({ children }) => {
         </aside>
         <main className={style.packageRightSide}>{children}</main>
       </div>
+      <Footer/>
     </div>
   );
 };

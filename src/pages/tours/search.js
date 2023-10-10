@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer/Footer';
 import ToursSearch from '../../../components/Tour/ToursSearch/ToursSearch';
 
 
-const details = () => {
+const Search = () => {
     return (
         <section>
             <Nav/>
@@ -14,4 +14,4 @@ const details = () => {
     );
 };
 
-export default details;
+export default Search;

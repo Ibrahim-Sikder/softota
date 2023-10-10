@@ -82,7 +82,7 @@ const HajjBook = () => {
         <form>
         <div className={style.inputFieldWrap}>
         <div className={style.formControl}>
-                <label  className={style.inputLabel}>Write down Your City</label>
+                <label  className={style.inputLabel}>Write down Your City <small className='text-red-500 text-xl'>*</small> </label>
                 <input type="text" className={style.visaInput} />
             </div>
             <div className={style.formControl}>
@@ -106,7 +106,7 @@ const HajjBook = () => {
             <div className={style.inputFieldWrap}>
               
         <div className={style.formControl}>
-                <label className={style.inputLabel}>Given Name </label> 
+                <label className={style.inputLabel}>Given Name <small className='text-red-500 text-xl'>*</small> </label> 
                 <input placeholder='Given Name ' type="text" className={style.visaInput} required/>
             </div>
             <div className={style.formControl}>
@@ -116,11 +116,11 @@ const HajjBook = () => {
         </div>
         <div className={style.inputFieldWrap}>
         <div className={style.formControl}>
-                <label className={style.inputLabel}>Mobile Number </label> 
+                <label className={style.inputLabel}>Mobile Number <small className='text-red-500 text-xl'>*</small>  </label> 
                 <input placeholder='Phone Number' type="text" className={style.visaInput} required/>
             </div>
             <div className={style.formControl}>
-                <label  className={style.inputLabel}> Email  </label>
+                <label  className={style.inputLabel}> Email <small className='text-red-500 text-xl'>*</small>  </label>
                 <input placeholder='Email' type="text" className={style.visaInput} required/>
             </div>
         </div>

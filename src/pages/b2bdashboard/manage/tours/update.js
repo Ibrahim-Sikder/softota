@@ -8,7 +8,7 @@ import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLay
 import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import { useState } from "react";
 
-const Update = () => {
+const Tours = () => {
   const [editorValue, setEditorValue] = useState('');
   return (
     <B2BdashboardLayout>
@@ -18,45 +18,25 @@ const Update = () => {
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
             <h2 className="text-3xl font-bold text-center">
-              Update Umrah Package
+              Update Tours Data 
             </h2>
             <div className="w-full mx-auto">
               <form>
                 <div className={styles.formControl}>
                   <div>
-                    <label> Title </label>
+                    <label>Title </label>
                     <input
-                      name="title"
-                      placeholder="Title"
+                      name="category"
+                      placeholder="Title "
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
                   <div>
-                    <label>Sub Title </label>
+                    <label>Sub Title</label>
                     <input
-                      name="title"
-                      placeholder="Sub Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Latest Umrah Package </label>
-                    <input
-                      name="title"
-                      placeholder="Latest Umrah Package"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Day/Night</label>
-                    <input
-                      name="title"
-                      placeholder=" Day/Night "
+                      name="productCategory"
+                      placeholder="Sub Title "
                       type="text"
                       className={styles.inputField}
                     />
@@ -83,6 +63,77 @@ const Update = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
+                  <div>
+                    <label> What is included </label>
+                    <input
+                      name="title"
+                      placeholder="What is included "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label> What is excluded </label>
+                    <input
+                      name="subTitle"
+                      placeholder="What is excluded "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label> Itinary </label>
+                    <input
+                      name="title"
+                      placeholder="Itinary"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Category Type </label>
+                    <input
+                      name="subTitle"
+                      placeholder="Category Type  "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label> Product Category  </label>
+                    <input
+                      name="title"
+                      placeholder="Product Category "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Price Low To Hight  </label>
+                    <input
+                      name="subTitle"
+                      placeholder="Price Low To Hight "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label> Price Hight To Low  </label>
+                    <input
+                      name="title"
+                      placeholder=" Price Hight To Low  "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     <label for="files">
                       {" "}
@@ -98,9 +149,9 @@ const Update = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                <TextEditor  value={editorValue} onChange={setEditorValue}/>
+                  <TextEditor value={editorValue} onChange={setEditorValue} />
                 </div>
-               
+
                 <div className={styles.formControl}>
                   <button className={styles.submitBtn} type="submit">
                     Update
@@ -115,4 +166,4 @@ const Update = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(Update), { ssr: false });
+export default dynamic(() => Promise.resolve(Tours), { ssr: false });

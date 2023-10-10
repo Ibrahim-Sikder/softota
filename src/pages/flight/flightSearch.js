@@ -8,8 +8,8 @@ const SearcPage = () => {
   return (
     <section>
       <Nav/>
-      <FlightSearch/>
-      <Footer/>
+        <FlightSearch/>
+        <Footer/>
     </section>
   );
 };

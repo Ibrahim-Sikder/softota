@@ -18,46 +18,10 @@ const HajjUmrah = () => {
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
             <h2 className="text-3xl font-bold text-center">
-              Hajj Umrah Data Input{" "}
+              Hajj Package Data Input
             </h2>
             <div className="w-full mx-auto">
               <form>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Enter Country </label>
-                    <select className={styles.inputField}>
-                      <option selected value="Bangladesh">
-                        Bangladesh
-                      </option>
-                      <option value="Thailand">Thailand</option>
-                      <option value="Malaysia">Malaysia</option>
-                      <option value="Indonesia">Indonesia</option>
-                      <option value="India">India</option>
-                      <option value="China">China</option>
-                      <option value="Singapore">Singapore</option>
-                      <option value="Iran">Iran</option>
-                      <option value="Vietnam">Vietnam</option>
-                      <option value="Pakistan">Pakistan</option>
-                      <option value="Japan">Japan</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label> Enter City </label>
-                    <select className={styles.inputField}>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Bangkok">Bangkok</option>
-                      <option value="Tokyo">Tokyo</option>
-                      <option value="Kuala Lumpur">Kuala Lumpur</option>
-                      <option value="Jakarta">Jakarta</option>
-                      <option value="Beijing">Beijing</option>
-                      <option value="Singapore Island">Singapore Island</option>
-                      <option value="Iran">Iran</option>
-                      <option value="Hanoi">Hanoi</option>
-                      <option value="Tehran">Tehran</option>
-                      <option value="Islamabad">Islamabad</option>
-                    </select>
-                  </div>
-                </div>
                 <div className={styles.formControl}>
                   <div>
                     <label> Hajj Package </label>
@@ -77,40 +41,6 @@ const HajjUmrah = () => {
                     </select>
                   </div>
                   <div>
-                    <label> Umrah Package </label>
-                    <select className={styles.inputField}>
-                      <option value="Prmium Package">Prmium Package</option>
-                      <option value="Economy Package">Economy Package</option>
-                      <option value="Platinum Package">Platinum Package</option>
-                      <option value="Family Package">Family Package</option>
-                      <option value="Group People Package">
-                        Group People Package
-                      </option>
-                    </select>
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Date</label>
-                    <input
-                      name="date"
-                      placeholder="Date "
-                      type="date"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Price </label>
-                    <input
-                      name="price"
-                      placeholder="Price"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
                     <label> Title </label>
                     <input
                       name="title"
@@ -119,6 +49,9 @@ const HajjUmrah = () => {
                       className={styles.inputField}
                     />
                   </div>
+                </div>
+                <div className={styles.formControl}>
+                  
                   <div>
                     <label> Sub Title </label>
                     <input
@@ -128,7 +61,38 @@ const HajjUmrah = () => {
                       className={styles.inputField}
                     />
                   </div>
+                  <div>
+                    <label>Date</label>
+                    <input
+                      name="date"
+                      placeholder="Date "
+                      type="date"
+                      className={styles.inputField}
+                    />
+                  </div>
                 </div>
+                <div className={styles.formControl}>
+                  
+                  <div>
+                    <label>Price </label>
+                    <input
+                      name="price"
+                      placeholder="Price"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Day/Night </label>
+                    <input
+                      name="price"
+                      placeholder="Day/Night"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+               
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     <label for="files">

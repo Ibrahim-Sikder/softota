@@ -537,6 +537,7 @@ const FlightSearch = () => {
               </div>
             </div>
           </div>
+          
           <div className={style.pagination}>
             <p className="text-[#4AB449] font-bold">TOP OF PAGE</p>
             <p>Showing Results 11 - 20 of 301</p>

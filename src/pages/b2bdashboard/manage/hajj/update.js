@@ -18,11 +18,28 @@ const Update = () => {
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
             <h2 className="text-3xl font-bold text-center">
-              Update Umrah Package
+            Update Hajj Package
             </h2>
             <div className="w-full mx-auto">
               <form>
                 <div className={styles.formControl}>
+                  <div>
+                    <label> Hajj Package </label>
+                    <select className={styles.inputField}>
+                      <option value="Select Hajj Package">
+                        Select Hajj Package
+                      </option>
+                      <option value="Economy Hajj Package">
+                        Economy Hajj Package
+                      </option>
+                      <option value="Shifting Hajj Package">
+                        Shifting Hajj Package
+                      </option>
+                      <option value="Non Shifting Hajj Package">
+                        Non Shifting Hajj Package
+                      </option>
+                    </select>
+                  </div>
                   <div>
                     <label> Title </label>
                     <input
@@ -32,37 +49,18 @@ const Update = () => {
                       className={styles.inputField}
                     />
                   </div>
-                  <div>
-                    <label>Sub Title </label>
-                    <input
-                      name="title"
-                      placeholder="Sub Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
                 </div>
                 <div className={styles.formControl}>
+                  
                   <div>
-                    <label> Latest Umrah Package </label>
+                    <label> Sub Title </label>
                     <input
-                      name="title"
-                      placeholder="Latest Umrah Package"
+                      name="subTitle"
+                      placeholder=" Sub Title"
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
-                  <div>
-                    <label>Day/Night</label>
-                    <input
-                      name="title"
-                      placeholder=" Day/Night "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
                   <div>
                     <label>Date</label>
                     <input
@@ -72,6 +70,9 @@ const Update = () => {
                       className={styles.inputField}
                     />
                   </div>
+                </div>
+                <div className={styles.formControl}>
+                  
                   <div>
                     <label>Price </label>
                     <input
@@ -81,7 +82,17 @@ const Update = () => {
                       className={styles.inputField}
                     />
                   </div>
+                  <div>
+                    <label>Day/Night </label>
+                    <input
+                      name="price"
+                      placeholder="Day/Night"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
                 </div>
+               
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     <label for="files">

@@ -8,6 +8,10 @@ import img from "../../../../../public/assets/hotel.jpg";
 import Image from "next/image";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
+import {
+  ArrowForward,
+  ArrowBack,
+} from "@mui/icons-material";
 const Hotel = () => {
   return (
     <B2BdashboardLayout>
@@ -68,6 +72,21 @@ const Hotel = () => {
             </tbody>
           </table>
         </div>
+        <div className={style.pagination}>
+            <div className={style.paginationBtn}>
+              <button>
+                <ArrowBack className={style.arrowLeft} />
+              </button>
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>
+                <ArrowForward className={style.arrowRight} />
+              </button>
+            </div>
+          </div>
       </div>
     </B2BdashboardLayout>
   );

@@ -4,6 +4,10 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
 import style from "./hotel.module.css";
 import { FaTrashAlt, FaEdit } from "react-icons/fa";
+import {
+  ArrowForward,
+  ArrowBack,
+} from "@mui/icons-material";
 import img from "../../../../../public/assets/hotel.jpg";
 import Image from "next/image";
 import TextField from "@mui/material/TextField";
@@ -18,7 +22,7 @@ const Hotel = () => {
           <div className={style.addHotel}>
             <Link href='/b2bdashboard/manage/hotel/add'>
             <button>
-              <span className="text-xl font-bold">+</span> Add Hotel{" "}
+              <span className="text-xl font-bold">+</span> Add Hotel
             </button>
             </Link>
           </div>
@@ -72,6 +76,21 @@ const Hotel = () => {
             </tbody>
           </table>
         </div>
+        <div className={style.pagination}>
+            <div className={style.paginationBtn}>
+              <button>
+                <ArrowBack className={style.arrowLeft} />
+              </button>
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button>4</button>
+              <button>5</button>
+              <button>
+                <ArrowForward className={style.arrowRight} />
+              </button>
+            </div>
+          </div>
       </div>
     </B2BdashboardLayout>
   );
