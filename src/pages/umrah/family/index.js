@@ -1,6 +1,6 @@
 import React from 'react';
 import HajjUmrahCard from '../../../../components/Shared/HajjUmraCard/HajjUmrahCard';
-import umrah from "../../../../public/assets/umrah6.jpg";
+import umrah from "../../../../public/assets/umrah6.webp";
 import HajjLayout from '../../../../components/UmrahHajj/Hajj/HajjLayout';
 const index = () => {
     return (

@@ -1,13 +1,14 @@
 import React from 'react';
 import { Beenhere } from "@mui/icons-material";
 import Image from "next/image";
-import img1 from "../../../public/assets/umrah6.jpg";
+import img1 from "../../../public/assets/umrah6.webp";
 import img2 from "../../../public/assets/umra2.jpg";
 import img3 from "../../../public/assets/umra3.jpeg";
 import img4 from "../../../public/assets/umrah4.webp";
 import Link from 'next/link';
 import style from './HajjUmrah.module.css'
 const HajjUmrahCard = ({heading, subheading, title, img, }) => {
+
   const datas = [
     {
       id: 1,
