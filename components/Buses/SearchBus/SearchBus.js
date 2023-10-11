@@ -4,12 +4,9 @@ import React, { useRef, useState } from "react";
 import style from "./SearchBus.module.css";
 import bus from "../../../public/assets/bus.png";
 import Image from "next/image";
-import {
-  EventSeat,
-  CrisisAlert,
-  Warning,
-  PriorityHigh,
-} from "@mui/icons-material";
+
+import Seats from "../Seats/Seats";
+import SelectedSeats from "../Seats/SelectedSeat";
 const SearchBus = () => {
   const [chooseSeat, setChooseSeat] = useState("A1", "৳1500", "Economy");
   const [showDetails, setShowDetails] = useState(false);
@@ -61,6 +58,17 @@ const SearchBus = () => {
       seats: 33,
     },
   ];
+
+  const [selectedSeats, setSelectedSeats] = useState([]);
+
+  const handleSeatSelection = (seat) => {
+    if (selectedSeats.includes(seat)) {
+      setSelectedSeats(selectedSeats.filter((s) => s !== seat));
+    } else {
+      setSelectedSeats([...selectedSeats, seat]);
+    }
+  };
+
   return (
     <main>
       <div className={style.busTopBar}>
@@ -237,321 +245,15 @@ const SearchBus = () => {
                   <div
                     className={showDetails ? `${style.show}` : `${style.hide}`}
                   >
-                    <strong>Choose your seat(s)</strong>
-                    <hr className="my-2" />
-                    <div className={style.availableSeat}>
-                      <div className={style.seatLeftSide}>
-                        <small>
-                          Hold the cursor on seats for seat numbers, click to
-                          select or deselect.
-                        </small>
-                        <div className={style.bus}>
-                          <div className="flex items-center justify-between ">
-                            <span></span>
-                            <span>
-                              <CrisisAlert className={style.seatIcon} />
-                            </span>
-                          </div>
-                          <div className={style.seatSelect}>
-                            <div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[A1]</small>
-                                </div>
-
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[A2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[B1]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[B2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[C1]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[C2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[D2]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[D2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[E1]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[E2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[F1]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[F2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[G1]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[G2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[H1]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[H2]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[I1]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[I2]</small>
-                                </div>
-                              </div>
-                            </div>
-                            <div>
-                              <div className="flex items-center">
-                                <div
-                                  // onChange={(e) => {
-                                  //   const classes = e.target.value;
-                                  //   setRoom(classes);
-                                  // }}
-                                  className={style.showToolTip}
-                                >
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[A3]</small>
-                                </div>
-
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[A4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[B3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[B4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[C3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[C4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[D3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[D4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[E3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[E4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[F3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[F4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[G3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[G4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[H3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[H4]</small>
-                                </div>
-                              </div>
-                              <div className="flex items-center">
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[I3]</small>
-                                </div>
-                                <div className={style.showToolTip}>
-                                  <EventSeat className={style.seatIcon} />
-                                  <small className={style.toolTip}>[I4]</small>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex items-center mt-3">
-                          <Warning className={style.warningIcon} />
-                          <small>
-                            Maximum of 4 seat(s) can be booked at-a-time
-                          </small>
-                        </div>
-                      </div>
-                      <div className={style.seatRightSide}>
-                        <div className={style.allBookedSeat}>
-                          <div className="flex items-center">
-                            <EventSeat className={style.seatIcon} />
-                            <small> Available Seats</small>
-                          </div>
-                          <div className="flex items-center mx-5">
-                            <EventSeat className={style.seatIcon} />
-                            <small> Booked Seats </small>
-                          </div>
-                          <div className="flex items-center">
-                            <EventSeat className={style.seatIcon} />
-                            <small>Selected Seats</small>
-                          </div>
-                        </div>
-
-                        <div>
-                          <table className={style.selectedSeat}>
-                            <tr>
-                              <th>Seats</th>
-                              <th>Fare</th>
-                              <th>Class</th>
-                            </tr>
-                            <tr>
-                              <td> A1</td>
-                              <td> ৳1500 </td>
-                              <td> Economy </td>
-                            </tr>
-                          </table>
-                          <div>
-                            <strong>Total: ৳30,000</strong>
-                          </div>
-                          <div>
-                            <small>
-                              Choose Boarding Point{" "}
-                              <span className="text-red-500"> *</span>
-                            </small>
-                          </div>
-                          <form>
-                            <select className={style.boardingSelect}>
-                              <option value=" -- Boarding points -- ">
-                                {" "}
-                                -- Boarding points --{" "}
-                              </option>
-                              <option value="Abdullahpur Bus Point (11:15 PM)">
-                                Abdullahpur Bus Point (11:15 PM)
-                              </option>
-                              <option value=".Norda Bus Point. (11:15 PM) ">
-                                {" "}
-                                .Norda Bus Point. (11:15 PM)
-                              </option>
-                              <option value=" Panthapath Bus Point (11:30 PM) ">
-                                {" "}
-                                Panthapath Bus Point (11:30 PM){" "}
-                              </option>
-                              <option value=" Fokirapool Bus Point (11:45 PM) ">
-                                {" "}
-                                Fokirapool Bus Point (11:45 PM){" "}
-                              </option>
-                              <option value=" Eden(Arambag) Bus Point (11:45 PM) ">
-                                {" "}
-                                Eden(Arambag) Bus Point (11:45 PM){" "}
-                              </option>
-                              <option value=" Badda (11:55 PM) ">
-                                {" "}
-                                Badda (11:55 PM){" "}
-                              </option>
-                              <option value=" Sayedabad Bus Point (11:55 PM) ">
-                                {" "}
-                                Sayedabad Bus Point (11:55 PM){" "}
-                              </option>
-                            </select>
-                            <input
-                              className={style.phoneNumber}
-                              type="text"
-                              placeholder="Phone Number"
-                            />
-                          </form>
-
-                          <div className="flex items-center justify-between my-5">
-                            <button className={style.continoueBtn}>
-                              Continoue{" "}
-                            </button>
-                            <small
-                              onClick={handleShowDetails}
-                              className="underline cursor-pointer hover:text-[#0BB811]"
-                            >
-                              Close
-                            </small>
-                          </div>
-                          <div className="flex items-center">
-                            <PriorityHigh className={style.conditonIcon} />
-                            <small>
-                              Due to traffic condition, the trip may get
-                              canceled.
-                            </small>
-                          </div>
-                        </div>
+                    <div className=" my-5">
+                     <b>Choose your seat</b>
+                     <hr className="mt-2"/>
+                      <div className="mt-5 grid grid-cols-2 gap-4">
+                        <Seats
+                          handleSeatSelection={handleSeatSelection}
+                          selectedSeats={selectedSeats}
+                        />
+                        <SelectedSeats selectedSeats={selectedSeats} />
                       </div>
                     </div>
                   </div>

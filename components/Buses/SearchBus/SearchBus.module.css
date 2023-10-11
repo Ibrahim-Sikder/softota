@@ -63,6 +63,7 @@
 .viewBtn:hover{
     background: #0BB811;
     color:white;
+
 }
 .modifyBtn{
 width: 130px !important;
@@ -159,34 +160,14 @@ height: 40px !important;
 .allBookedSeat small{
     margin-left:5px;
 }
-.boardingSelect{
-    border: 1px solid #19ABE3;
-    margin-top: 10px;
-    padding: 5px;
-    width: 100%;
-    border-radius: 5px;;
-}
+
 .warningIcon{
     color:red !important;
     margin-right: 5px;
     font-size: 20px !important;
 }
-.conditonIcon{
-    color: #0BB811 !important;
-    font-size: 30px !important;
-}
-.continoueBtn{
-    transition:all .5s ease-in-out;
-    width: 100px;
-    height: 32px;
-    border-radius: 20px;
-    font-size: 14px;
-    border:1px solid #4AB449;
-}
-.continoueBtn:hover{
-    background: #4AB449;    
-    color: white;
-}
+
+
 .show{
 display: block;
 }
@@ -194,17 +175,7 @@ display: block;
 display: none;
 }
 
-.phoneNumber{
-    width: 50%;
-    border: 1px solid #4AB449;
-    border-radius: 5px;
-    margin-top: 19px;
-    height: 33px;
-    padding-left: 5px;
-}
-.phoneNumber::placeholder{
-    color: black !important;
-}
+
 
 @media only screen and (max-width:1024px){
     .allBusCardWrap{
