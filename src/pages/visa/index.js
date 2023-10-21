@@ -21,6 +21,7 @@ const index = () => {
         <Travel></Travel>
       </div>
       <Footer></Footer>
+      
     </section>
   );
 };

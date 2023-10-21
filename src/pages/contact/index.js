@@ -156,6 +156,7 @@ const index = () => {
       </section>
       </div>
       <Footer />
+      
     </section>
   );
 };
