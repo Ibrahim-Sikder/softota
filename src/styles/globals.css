@@ -205,6 +205,9 @@ input::placeholder {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
+.css-1aquho2-MuiTabs-indicator {
+  background-color: white !important;
+}
 
 
 

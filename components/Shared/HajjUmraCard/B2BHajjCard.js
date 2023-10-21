@@ -1,7 +1,6 @@
 import React from 'react';
 import { Beenhere } from "@mui/icons-material";
 import Image from "next/image";
-import img1 from "../../../public/assets/umrah6.jpg";
 import img2 from "../../../public/assets/umra2.jpg";
 import img3 from "../../../public/assets/umra3.jpeg";
 import img4 from "../../../public/assets/umrah4.webp";
@@ -12,7 +11,7 @@ const B2BHajjCard = ({heading, subheading, title, img, }) => {
     {
       id: 1,
       title: 'Platinum Umrah Package 2023 - 2024 from Bangladesh',
-      image: img1,
+      image: img2,
       heading: 'Platinum Umrah Package 2023',
       subheading: '',
       price: '150,000',

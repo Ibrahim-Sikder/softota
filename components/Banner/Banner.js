@@ -451,14 +451,808 @@ const Banner = ({ setResults }) => {
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="Item One" value="1" />
-            <Tab label="Item Two" value="2" />
-            <Tab label="Item Three" value="3" />
+            <Tab label="One Way " value="1" />
+            <Tab label="Round Trip" value="2" />
+            <Tab label="Multiple City" value="3" />
+            <Tab label="Group Flight" value="4" />
           </TabList>
         </Box>
-        <TabPanel value="1">Item One</TabPanel>
-        <TabPanel value="2">Item Two</TabPanel>
-        <TabPanel value="3">Item Three</TabPanel>
+        <TabPanel value="1">
+        <div>
+                  <div className={style.oneWayPackage}>
+                    <div className={style.package}>
+                      <div className={style.searchTop}>
+                        <h4>Flying From</h4>
+
+                        <input
+                          autoComplete="off"
+                          value={selected}
+                          onChange={(e) => handleFilter(e.target.value)}
+                          id="searchAirport"
+                          type="text"
+                          placeholder="City or Airport "
+                        />
+
+                        {/* <div className={style.searchResult}>
+                          {data?.map((d, i) => (
+                            <div key={i}>
+                              <div
+                                onClick={() =>
+                                  handleSelect(d.iata, d.name, d.country)
+                                }
+                                className={style.airport}
+                              >
+                                <h6 className="mr-3">{d.iata}</h6>
+                                <p>,{d.country}</p>
+                                <p>,{d.name}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+
+                    <div className={style.package2}>
+                      <div className={style.searchTop}>
+                        <h4>Flying To</h4>
+                        <input
+                        autoComplete="off"
+                          value={selected2}
+                          id="searchAirport"
+                          onChange={(e) => handleFilter2(e.target.value)}
+                          type="text "
+                          placeholder="City or Airport "
+                        />
+                        {/* <div className={style.searchResult}>
+                          {data2?.map((d, i) => (
+                            <div key={i}>
+                              <div
+                                onClick={() =>
+                                  handleSelect2(d.iata, d.name, d.country)
+                                }
+                                className={style.airport}
+                              >
+                                <h6 className="mr-3">{d.iata}</h6>
+                                <p>,{d.country}</p>
+                                <p>,{d.name}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+                  <div className={style.packageWrap}>
+                    <div className={style.oneWayPackage}>
+                      <div className={style.packageDate}>
+                        <div className={style.departDate}>
+                          <h4>Depart To</h4>
+                          <div
+                            onClick={() => setOpen((open) => !open)}
+                            className={style.calendarInput}
+                          >
+                            <input
+                              autoComplete="off"
+                              value={`${format(
+                                range[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
+
+                          <div className={`${style.calendar} ${style.showCalendar}`} ref={refOne}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range}
+                                months={2}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
+                          
+                          <div className={`${style.calendar} ${style.hiddenCalendar}`} ref={refOne}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range}
+                                months={1}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <div className={style.package4}>
+                          <div className="flex justify-between">
+                            <div>
+                              <h4>
+                                Passengers & {child + infant + adult} Person
+                              </h4>
+                              <span>{classes}</span>
+                            </div>
+                            <Groups2
+                              onClick={() => window.my_modal_3.showModal()}
+                              className={style.showModalIcon}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Open modala  */}
+                    <div className={style.modalWrap}>
+                      {/* You can open the modal using ID.showModal() method */}
+
+                      <dialog id="my_modal_3" className="modal">
+                        <form method="dialog" className="modal-box">
+                          <button className={style.modalCloseBtn}>✕</button>
+                          <div>
+                            <h3 className="font-bold text-lg">Passenger</h3>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{child}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Adults</span> <br />
+                                  <small>12 Years and above </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={childDecrement}>-</span>
+                                <span onClick={childIncrement}>+</span>
+                              </div>
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{adult}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span>{" "}
+                                  <br />
+                                  <small>
+                                    2- 11 year at the time of travel{" "}
+                                  </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementAdult}>-</span>
+                                <span onClick={incrementAdult}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <TextField
+                                className={style.dateOfChild}
+                                id="outlined-required"
+                                type="date"
+                              />
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{infant}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span>{" "}
+                                  <br />
+                                  <small>
+                                    0 - 23 month at the time of travel{" "}
+                                  </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementInfant}>-</span>
+                                <span onClick={incrementInfant}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <hr className="w-full my-5" />
+                            </div>
+
+                            <div className={style.classType}>
+                              <select
+                                onChange={(e) => {
+                                  const classes = e.target.value;
+                                  setClasses(classes);
+                                }}
+                              >
+                                <option value="Premium" selected>
+                                  Cabin Class
+                                </option>
+                                <option value="Premium Econom">
+                                  Premium Economy
+                                </option>
+                                <option value="Economy class">
+                                  Economy class
+                                </option>
+                                <option value="Business class">
+                                  Business class
+                                </option>
+                                <option value="First class">First class</option>
+                              </select>
+                            </div>
+                            <input
+                              autoComplete="off"
+                              type="submit"
+                              value="Submit"
+                              className={style.modalSubmitBtn}
+                            />
+                          </div>
+                        </form>
+                      </dialog>
+                    </div>
+                  </div>
+                </div>
+        </TabPanel>
+        <TabPanel value="2">
+        <div>
+                  <div className={style.roundTripWrap}>
+                    <div className={style.package}>
+                      <div className={style.searchTop}>
+                        <h4>Flying From</h4>
+                        <input
+                          autoComplete="off"
+                          value={selected}
+                          id="searchAirport"
+                          onChange={(e) => handleFilter(e.target.value)}
+                          type="text"
+                          placeholder="City or Airport "
+                        />
+                        {/* <div className={`${style.searchResult} ${style.searchAirport}`}>
+                          {data?.map((d, i) => (
+                            <div key={i}>
+                              <div
+                                onClick={() =>
+                                  handleSelect(d.iata, d.name, d.country)
+                                }
+                                className={style.airport}
+                              >
+                                <h6 className="mr-3">{d.iata}</h6>
+                                <p>,{d.country}</p>
+                                <p>,{d.name}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                    <div className={style.package2}>
+                      <div className={style.searchTop}>
+                        <h4>Flying To</h4>
+                        <input
+                          autoComplete="off"
+                          value={selected2}
+                          id="searchAirport"
+                          onChange={(e) => handleFilter2(e.target.value)}
+                          type="text "
+                          placeholder="City or Airport "
+                        />
+                        {/* <div className={`${style.searchResult} ${style.searchAirport}`}>
+                          {data2?.map((d, i) => (
+                            <div key={i}>
+                              <div
+                                onClick={() =>
+                                  handleSelect2(d.iata, d.name, d.country)
+                                }
+                                className={style.airport}
+                              >
+                                <h6 className="mr-3">{d.iata}</h6>
+                                <p>,{d.country}</p>
+                                <p>,{d.name}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div> */}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={style.packageWrap}>
+                    <div className={style.packageDate}>
+                      <div className={style.roundTripWrap}>
+                        <div
+                          onClick={() => setOpen((open) => !open)}
+                          className={style.date}
+                        >
+                          <h4>Depart To</h4>
+                          <div className={style.calendarInput}>
+                            <input
+                              autoComplete="off"
+                              value={`${format(
+                                range[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
+                          
+                          <div className={style.calendar} ref={refTow}>
+                            {open && (
+                              <DateRange
+                                onChange={(item) => setRange([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range2}
+                                months={2}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
+
+
+                        </div>
+
+                        <div
+                          onClick={() => setOpen2((open2) => !open2)}
+                          className={`${style.date2}`}
+                        >
+                          <h4>Return To </h4>
+                          <div className={style.calendarInput}>
+                            <input
+                              value={`${format(
+                                range2[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
+
+                          <div className={style.calendar} ref={refTow}>
+                            {open2 && (
+                              <DateRange
+                                onChange={(item) => setRange2([item.selection])}
+                                editableDateInputs={true}
+                                moveRangeOnFirstSelection={false}
+                                ranges={range}
+                                months={2}
+                                direction="horizontal"
+                                className="calendarElement"
+                              />
+                            )}
+                          </div>
+                        </div>
+                        <div
+                          onClick={() => window.my_modal_3.showModal()}
+                          className={style.package4}
+                        >
+                          <div className="flex justify-between">
+                            <div>
+                              <span>
+                                Passenger & {child + infant + adult} Person
+                              </span>{" "}
+                              <br />
+                              <span>{classes}</span>
+                            </div>
+                            <Groups2
+                              onClick={() => window.my_modal_3.showModal()}
+                              className={style.showModalIcon}
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* open modal */}
+                    <div className={style.modal}>
+                      {/* You can open the modal using ID.showModal() method */}
+
+                      <dialog id="my_modal_3" className="modal">
+                        <form method="dialog" className="modal-box">
+                          <button className={style.modalCloseBtn}>✕</button>
+                          <div>
+                            <h3 className="font-bold text-lg">Passenger</h3>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{child}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Adults</span> <br />
+                                  <small>12 Years and above </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={childDecrement}>-</span>
+                                <span onClick={childIncrement}>+</span>
+                              </div>
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{adult}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span>{" "}
+                                  <br />
+                                  <small>
+                                    2- 11 year at the time of travel{" "}
+                                  </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementAdult}>-</span>
+                                <span onClick={incrementAdult}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <TextField
+                                className={style.dateOfChild}
+                                id="outlined-required"
+                                type="date"
+                              />
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{infant}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span>{" "}
+                                  <br />
+                                  <small>
+                                    0 - 23 month at the time of travel{" "}
+                                  </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementInfant}>-</span>
+                                <span onClick={incrementInfant}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <hr className="w-full my-5" />
+                            </div>
+
+                            <div className={style.classType}>
+                              <select
+                                onChange={(e) => {
+                                  const classes = e.target.value;
+                                  setClasses(classes);
+                                }}
+                              >
+                                <option value="Premium" selected>
+                                  Cabin Class
+                                </option>
+                                <option value="Premium Econom">
+                                  Premium Economy
+                                </option>
+                                <option value="Economy class">
+                                  Economy class
+                                </option>
+                                <option value="Business class">
+                                  Business class
+                                </option>
+                                <option value="First class">First class</option>
+                              </select>
+                            </div>
+                          </div>
+                        </form>
+                      </dialog>
+                    </div>
+                  </div>
+                </div>
+        </TabPanel>
+        <TabPanel value="3">
+        <div className={style.multiplePackageWrap}>
+                  <div className={style.multiplePackage}>
+                    <div className={style.searchTop}>
+                      <h4>Flying From</h4>
+                      <input
+                        autoComplete="off"
+                        value={selected}
+                        id="searchAirport"
+                        onChange={(e) => handleFilter(e.target.value)}
+                        type="text "
+                        placeholder="City or Airport "
+                      />
+                      {/* <div className={style.searchResult}>
+                        {data?.map((d, i) => (
+                          <div key={i}>
+                            <div
+                              onClick={() =>
+                                handleSelect(d.iata, d.name, d.country)
+                              }
+                              className={style.airport}
+                            >
+                              <h6 className="mr-3">{d.iata}</h6>
+                              <p>,{d.country}</p>
+                              <p>,{d.name}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div> */}
+                    </div>
+                  </div>
+                  <div className={style.multiplePackage}>
+                    <div className={style.searchTop}>
+                      <h4>Flying To</h4>
+                      <input
+                        autoComplete="off"
+                        value={selected2}
+                        id="searchAirport"
+                        onChange={(e) => handleFilter2(e.target.value)}
+                        type="text "
+                        placeholder="City or Airport "
+                      />
+                      {/* <div className={style.searchResult}>
+                        {data2?.map((airport, i) => (
+                          <div key={i}>
+                            <div
+                              onClick={() =>
+                                handleSelect2(
+                                  airport.iata,
+                                  airport.name,
+                                  airport.country
+                                )
+                              }
+                              className={style.airport}
+                            >
+                              <h6 className="mr-3">{airport.iata}</h6>
+                              <p>,{airport.country}</p>
+                              <p>,{airport.name}</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div> */}
+                    </div>
+                  </div>
+                  <div className={style.multiplePackage}>
+                    <div>
+                      <h4>Select Date </h4>
+                      <div
+                        onClick={() => setOpen((open) => !open)}
+                        className={style.calendarInput}
+                      >
+                        <input
+                          value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
+                          readOnly
+                        />
+                        <CalendarMonth className={style.calendarIcon} />
+                      </div>
+                    </div>
+
+                    <div className={style.calendarTow} ref={refOne}>
+                      {open && (
+                        <DateRange
+                          onChange={(item) => setRange([item.selection])}
+                          editableDateInputs={true}
+                          moveRangeOnFirstSelection={false}
+                          ranges={range}
+                          months={2}
+                          direction="horizontal"
+                          className="calendarElement"
+                        />
+                      )}
+                    </div>
+                  </div>
+
+                {/* Open modala  */}
+                <div className={style.modalWrap}>
+                      {/* You can open the modal using ID.showModal() method */}
+
+                      <dialog id="multipleModal" className="modal">
+                        <form method="dialog" className="modal-box">
+                          <button className={style.modalCloseBtn}>✕</button>
+                          <div>
+                            <h3 className="font-bold text-lg">Passenger</h3>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{child}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Adults</span> <br />
+                                  <small>12 Years and above </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={childDecrement}>-</span>
+                                <span onClick={childIncrement}>+</span>
+                              </div>
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{adult}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span>{" "}
+                                  <br />
+                                  <small>
+                                    2- 11 year at the time of travel{" "}
+                                  </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementAdult}>-</span>
+                                <span onClick={incrementAdult}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <TextField
+                                className={style.dateOfChild}
+                                id="outlined-required"
+                                type="date"
+                              />
+                            </div>
+                            <div className={style.passengerWrap}>
+                              <div className={style.pLeftSide}>
+                                <strong>{infant}</strong>
+                                <div className="ml-5">
+                                  <span className="text-xs">Children</span>{" "}
+                                  <br />
+                                  <small>
+                                    0 - 23 month at the time of travel{" "}
+                                  </small>
+                                </div>
+                              </div>
+                              <div className={style.adultsBtn}>
+                                <span onClick={decrementInfant}>-</span>
+                                <span onClick={incrementInfant}>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <hr className="w-full my-5" />
+                            </div>
+
+                            <div className={style.classType}>
+                              <select
+                                onChange={(e) => {
+                                  const classes = e.target.value;
+                                  setClasses(classes);
+                                }}
+                              >
+                                <option value="Premium" selected>
+                                  Cabin Class
+                                </option>
+                                <option value="Premium Econom">
+                                  Premium Economy
+                                </option>
+                                <option value="Economy class">
+                                  Economy class
+                                </option>
+                                <option value="Business class">
+                                  Business class
+                                </option>
+                                <option value="First class">First class</option>
+                              </select>
+                            </div>
+                            <input
+                              type="submit"
+                              value="Submit"
+                              className={style.modalSubmitBtn}
+                            />
+                          </div>
+                        </form>
+                      </dialog>
+                    </div>
+                </div>
+
+                {inputList.map((x, i) => {
+                  return (
+                    <div key={i} className={style.multiplePackageWrap}>
+                      <div className={style.multiplePackage}>
+                        <div className={style.searchTop}>
+                          <h4>Flying From</h4>
+                          <input
+                            autoComplete="off"
+                            id="searchAirport"
+                            type="text "
+                            placeholder="City or Airport "
+                          />
+                        </div>
+                      </div>
+                      <div className={style.multiplePackage}>
+                        <div className={style.searchTop}>
+                          <h4>Flying To</h4>
+                          <input
+                            autoComplete="off"
+                            id="searchAirport"
+                            type="text "
+                            placeholder="City or Airport "
+                          />
+                        </div>
+                      </div>
+                      <div className={style.multiplePackage}>
+                        <div>
+                          <h4>Select Date </h4>
+                          <div
+                            onClick={() => setOpen2((open2) => !open2)}
+                            className={style.calendarInput}
+                          >
+                            <input
+                              value={`${format(
+                                range2[0].startDate,
+                                "MM/dd/yyyy"
+                              )}`}
+                              readOnly
+                            />
+                            <CalendarMonth className={style.calendarIcon} />
+                          </div>
+                          <div className={style.calendarTow} ref={refOne}>
+                      {open2 && (
+                        <DateRange
+                          onChange={(item) => setRange2([item.selection])}
+                          editableDateInputs={true}
+                          moveRangeOnFirstSelection={false}
+                          ranges={range2}
+                          months={2}
+                          direction="horizontal"
+                          className="calendarElement"
+                        />
+                      )}
+                    </div>
+                        </div>
+                      </div>
+                      <div className={style.multipleCityBtnGroup}>
+                        {inputList.length !== 1 && (
+                          <div onClick={() => handleremove(i)}>
+                            <div className={style.removeCity}>
+                              <HorizontalRule />
+                              <span>Remove City </span>
+                            </div>
+                          </div>
+                        )}
+
+                        {inputList.length - 1 === i && (
+                          <div onClick={handleaddclick}>
+                            <div className={style.addCity}>
+                              <Add />
+                              <span>Add City</span>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
+        </TabPanel>
+        <TabPanel value="4">
+        <div>
+                  <div className={style.groupFlight}>
+                    <div className={style.package}>
+                      <div className={style.searchTop}>
+                        <h4>Flying From</h4>
+                        <input
+                          autoComplete="off"
+                          id="searchAirport"
+                          type="text "
+                          placeholder="City or Airport "
+                        />
+                      </div>
+                    </div>
+                    <div className={style.package2}>
+                      <div className={style.searchTop}>
+                        <h4>Flying To</h4>
+                        <input
+                          autoComplete="off"
+                          id="searchAirport"
+                          type="text "
+                          placeholder="City or Airport "
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={style.packageWrap}>
+                    <div className={style.packageDate}>
+                      <div className={style.groupFlight}>
+                        <div className={style.date}>
+                          <h4>Depart To</h4>
+                          <input type="date" />
+                        </div>
+                        <div className={style.date2}>
+                          <h4>Return To </h4>
+                          <input type="date" />
+                        </div>
+                        <div className={style.package4}>
+                          <div>
+                            <h4>Passengers & Cabin Class</h4>
+                            <input type="text " placeholder="1 person" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        </TabPanel>
       </TabContext>
     </Box>
           {/* tab2 */}
