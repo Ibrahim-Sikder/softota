@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import style from "./Login.module.css";
 import Image from "next/image";
 import login from "../../public/assets/login.png";
@@ -7,40 +7,17 @@ import google from "../../public/assets/google.png";
 import Link from "next/link";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useRouter } from "next/router";
-import { AuthContext } from "@/context/Auth";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 
 const Login = () => { 
- const {signIn } = useContext(AuthContext)
  const { register,reset, formState: { errors }, handleSubmit  } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = () => {};
 
   const router = useRouter();
-  const handleLogin = data =>{
-    console.log(data)
-    signIn( data.email, data.password)
-    .then(result=>{
-      const user = result.user;
-      console.log(user)
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Login Successfully !',
-        showConfirmButton: false,
-        timer: 1500
-      })
-      reset()
-      router.push('/')
-
-    })
-    .catch(error=>console.log(error))
-  
-     
-   };
 
   return (
    <> 
@@ -58,7 +35,7 @@ const Login = () => {
           />
         </div>
         <div className="mt-14">
-          <form onSubmit={handleSubmit(handleLogin)}>
+          <form>
             <div className="mb-5 relative">
               <label className={style.inputLabel}>Email Address</label> <br />
               <input

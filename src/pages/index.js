@@ -16,6 +16,8 @@ export const config = {
 };
 
 export default function Home() {
+
+
   return (
     <section>
       <Helmet>
@@ -29,6 +31,7 @@ export default function Home() {
       <Mission />
       <Customer></Customer>
       <Footer/>
+      
     </section>
   );
 }

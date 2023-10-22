@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useContext, useState } from "react";
+import React, {useState } from "react";
 import style from "./SignUp.module.css";
 import login from "../../public/assets/login.png";
 import facebook from "../../public/assets/facebook.png";
@@ -11,41 +11,14 @@ import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { useRouter } from "next/router";
-import { AuthContext } from "@/context/Auth";
 const SignUp = () => {
- const {createUser, loginWithGoogle } = useContext(AuthContext)
   const { register,reset, formState: { errors }, handleSubmit  } = useForm();
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = () => {};
   const router = useRouter();
-  const handleSignUp = data =>{
-    console.log(data)
-    createUser( data.email, data.password)
-    .then(result=>{
-      const user = result.user;
-      console.log(user)
-      Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'User Created Successfully !',
-        showConfirmButton: false,
-        timer: 1500
-      })
-      reset()
-      router.push('/')
-    })
-    .catch(error=>console.log(error))
-  
-     
-   };
-   const handleGoogleLogin = () =>{
-    loginWithGoogle()
-    .then(()=>{})
-    .catch(error => console.log(error))
-   }
   return (
-    <section className={style.SignupWrap}>
+    <section>
       <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">
         <div>
           <Image
@@ -56,7 +29,7 @@ const SignUp = () => {
           />
         </div>
         <div className="mt-10">
-          <form onSubmit={handleSubmit(handleSignUp)}>
+          <form>
             <div className="mb-5">
               <label className={style.inputLabel}>User Name</label> <br />
               <input
@@ -124,8 +97,7 @@ const SignUp = () => {
             <div className={style.loginWithProvider}>
               <div className={style.providerLoginWrap}>
                 <div className={style.circle}>
-                  <button 
-                  onClick={handleGoogleLogin}
+                  <button
                   type="button">
                     <Image
                       src={google}
