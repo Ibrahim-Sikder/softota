@@ -13,18 +13,14 @@ import {
 } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
 import ActiveLink from "./ActiveLink";
-// import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
+import { TabList, TabPanel, Tabs, Tab } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { DateRange } from "react-date-range";
 import format from "date-fns/format";
 import { addDays } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import TabContext from '@mui/lab/TabContext';
-import TabList from '@mui/lab/TabList';
-import TabPanel from '@mui/lab/TabPanel';
+
 
 const Banner = ({ setResults }) => {
   const [child, setChild] = useState(0);
@@ -40,14 +36,6 @@ const Banner = ({ setResults }) => {
   const [filterData2, setFilterData2] = useState([]);
   const [selected2, setSelected2] = useState([]);
   const [tabIndex, setTabIndex] = useState(0);
-
-
-  // tabs 
-
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   
   // date state
@@ -110,7 +98,22 @@ const Banner = ({ setResults }) => {
   };
   // for tab
 
-  
+  const handleToggle = (value) => () => {
+    const currentIndex = checked.indexOf(value);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(value);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+
+    setChecked(newChecked);
+  };
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
 
   const childIncrement = () => {
     setChild(child + 1);
@@ -143,9 +146,52 @@ const Banner = ({ setResults }) => {
     }
   };
 
+  useEffect(() => {
+    fetch("search.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setFilterData(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
+  const handleFilter = (value) => {
+    const res = filterData.filter((airport) =>
+      airport.iata.toLowerCase().includes(value)
+    );
+    setData(res);
+  };
 
-  
+  useEffect(() => {
+    fetch("search.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setFilterData2(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+
+  const handleFilter2 = (value) => {
+    const res = filterData2.filter((airport) =>
+      airport.iata.toLowerCase().includes(value)
+    );
+    setData2(res);
+  };
+
+  const handleSelect = (iata, name, country) => {
+    const text = iata + " , " + country + ", " + name;
+    console.log(text);
+    setSelected(text);
+    setData([]);
+  };
+
+  const handleSelect2 = (iata, name, country) => {
+    const text = iata + " , " + country + ", " + name;
+    console.log(text);
+    setSelected2(text);
+    setData2([]);
+  };
+
   const [inputList, setinputList] = useState([
     { flyingFrom: "", flyingTo: "", date: "" },
   ]);
@@ -446,19 +492,19 @@ const Banner = ({ setResults }) => {
           </div>
 
           {/* tab2 */}
-         {/* tab content here */}
-         <Box sx={{ width: '100%', typography: 'body1' }}>
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
-            <Tab label="One Way " value="1" />
-            <Tab label="Round Trip" value="2" />
-            <Tab label="Multiple City" value="3" />
-            <Tab label="Group Flight" value="4" />
-          </TabList>
-        </Box>
-        <TabPanel value="1">
-        <div>
+          <div className="flightTab">
+            <Tabs
+              defaultTabIndex={tabIndex}
+              onSelect={(index) => setTabIndex(index)}
+            >
+              <TabList className={style.tabWrap}>
+                <Tab>One Way</Tab>
+                <Tab>Round Trip</Tab>
+                <Tab>Multiple City</Tab>
+                <Tab>Group Flight</Tab>
+              </TabList>
+              <TabPanel>
+                <div>
                   <div className={style.oneWayPackage}>
                     <div className={style.package}>
                       <div className={style.searchTop}>
@@ -687,9 +733,9 @@ const Banner = ({ setResults }) => {
                     </div>
                   </div>
                 </div>
-        </TabPanel>
-        <TabPanel value="2">
-        <div>
+              </TabPanel>
+              <TabPanel>
+                <div>
                   <div className={style.roundTripWrap}>
                     <div className={style.package}>
                       <div className={style.searchTop}>
@@ -932,9 +978,9 @@ const Banner = ({ setResults }) => {
                     </div>
                   </div>
                 </div>
-        </TabPanel>
-        <TabPanel value="3">
-        <div className={style.multiplePackageWrap}>
+              </TabPanel>
+              <TabPanel>
+                <div className={style.multiplePackageWrap}>
                   <div className={style.multiplePackage}>
                     <div className={style.searchTop}>
                       <h4>Flying From</h4>
@@ -1203,9 +1249,9 @@ const Banner = ({ setResults }) => {
                     </div>
                   );
                 })}
-        </TabPanel>
-        <TabPanel value="4">
-        <div>
+              </TabPanel>
+              <TabPanel>
+                <div>
                   <div className={style.groupFlight}>
                     <div className={style.package}>
                       <div className={style.searchTop}>
@@ -1252,9 +1298,10 @@ const Banner = ({ setResults }) => {
                     </div>
                   </div>
                 </div>
-        </TabPanel>
-      </TabContext>
-    </Box>
+              </TabPanel>
+            </Tabs>
+          </div>
+
           {/* tab2 */}
 
           <div className={style.btnWrap}>
