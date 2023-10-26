@@ -507,7 +507,7 @@ const Hotel = () => {
                       <p className="ml-3">Tours</p>
                     </li>
                   </ActiveLink>
-                  <ActiveLink href="/busses">
+                  <ActiveLink href="/bus">
                     <li>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
