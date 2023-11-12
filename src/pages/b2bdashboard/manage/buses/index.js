@@ -8,10 +8,7 @@ import img from "../../../../../public/assets/hotel.jpg";
 import Image from "next/image";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
-import {
-  ArrowForward,
-  ArrowBack,
-} from "@mui/icons-material";
+import { ArrowForward, ArrowBack } from "@mui/icons-material";
 const Benefit = () => {
   return (
     <B2BdashboardLayout>
@@ -20,9 +17,10 @@ const Benefit = () => {
         <div className="flex items-center justify-between px-8 mb-5">
           <TextField id="outlined-basic" label="Search " variant="outlined" />
           <div className={style.addHotel}>
-            <Link href='/b2bdashboard/manage/buses/add'>
-            <button>
-              <span className="text-xl font-bold">+</span> Add Bus Data </button>
+            <Link href="/b2bdashboard/manage/buses/add">
+              <button>
+                <span className="text-xl font-bold">+</span> Add Bus Data{" "}
+              </button>
             </Link>
           </div>
         </div>
@@ -41,7 +39,7 @@ const Benefit = () => {
             <tbody>
               <tr>
                 <td>
-                <div className="mask   h-[100px] w-[100px] mx-auto ">
+                  <div className="mask   h-[100px] w-[100px] mx-auto ">
                     <Image
                       className=" h-full w-full object-cover text-center"
                       src={img}
@@ -50,40 +48,36 @@ const Benefit = () => {
                   </div>
                 </td>
                 <td>SHYAMOLI NR TRAVELS </td>
-                <td>
-Non AC  </td>
+                <td>Non AC </td>
                 <td>Arambag Bus Point</td>
+                <td>20-05-23</td>
                 <td>
-                  20-05-23
-                </td>
-                <td >
-                 <Link href='/b2bdashboard/manage/buses/update'> 
-                  <FaEdit className={style.editIcon} />
-                 </Link>
+                  <Link href="/b2bdashboard/manage/buses/update">
+                    <FaEdit className={style.editIcon} />
+                  </Link>
                 </td>
                 <td>
                   <FaTrashAlt className={style.deleteIcon} />
                 </td>
               </tr>
-            
             </tbody>
           </table>
         </div>
         <div className={style.pagination}>
-            <div className={style.paginationBtn}>
-              <button>
-                <ArrowBack className={style.arrowLeft} />
-              </button>
-              <button>1</button>
-              <button>2</button>
-              <button>3</button>
-              <button>4</button>
-              <button>5</button>
-              <button>
-                <ArrowForward className={style.arrowRight} />
-              </button>
-            </div>
+          <div className={style.paginationBtn}>
+            <button>
+              <ArrowBack className={style.arrowLeft} />
+            </button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>
+              <ArrowForward className={style.arrowRight} />
+            </button>
           </div>
+        </div>
       </div>
     </B2BdashboardLayout>
   );

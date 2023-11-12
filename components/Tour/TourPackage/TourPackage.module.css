@@ -12,7 +12,7 @@
   width: 305px !important;
   overflow: hidden;
   height: 510px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border:1px solid #ddd;
   border-radius: 5px;
 }
 .packageImgWrap {

@@ -436,10 +436,9 @@ const BusBanner = () => {
                 <div className={style.guestRoomWrap}>
                   <Groups2 className={style.groupIcon} />
                   <div>
-                    <small>Guest & Room </small> <br />
                     <p className="text-xl font-bold">
                       {" "}
-                      {child + adult} Guest & {room}{" "}
+                      {child + adult} Traveller 
                     </p>
                   </div>
                 </div>
@@ -455,8 +454,8 @@ const BusBanner = () => {
                     <small onClick={childIncrement}> + </small>
                   </div>
                 </div>
-
-                <select
+                    {/* room select */}
+                {/* <select
                   className={style.roomSelect}
                   onChange={(e) => {
                     const classes = e.target.value;
@@ -470,7 +469,7 @@ const BusBanner = () => {
                   <option value="3 Room">3 Room</option>
                   <option value="4 Room">4 Room</option>
                   <option value="5 Room">5 Room</option>
-                </select>
+                </select> */}
               </form>
             </dialog>
           </div>
@@ -479,7 +478,7 @@ const BusBanner = () => {
           </form>
 
           <Link href="/tours/search">
-            <button className={style.heroBoxBtn}>Get Your Ticket</button>
+            <button className={style.heroBoxBtn}>Get Your Package</button>
           </Link>
         </div>
       </div>
