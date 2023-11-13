@@ -139,7 +139,6 @@
   height: 29px;
 }
 
-
 @media only screen and (max-width: 1024px) {
   
   .destination {
@@ -184,6 +183,9 @@
     width: 100%;
     margin-left: 50px;
   }
+  .seeMoreDestination {
+    margin-right: 65px;
+}
 }
 
 @media only screen and (max-width: 500px) {
@@ -217,6 +219,10 @@
   .travelFormWrap {
     margin-top: 25px;
   }
+  .seeMoreDestination {
+    width: 125px;
+    height: 30px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -241,3 +247,5 @@
     margin-bottom: -55px;
   }
 }
+
+

@@ -143,7 +143,7 @@ const Nav = () => {
                     <p className="ml-3">Tours</p>
                   </li>
                 </Link>
-                <Link href="/busses">
+                <Link href="/buss">
                   <li>
                     <BusAlert className={style.menuIcon} />
 

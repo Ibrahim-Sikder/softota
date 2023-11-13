@@ -158,7 +158,7 @@
   width: 310px;
   height: 606px;
   background: #ffffff;
-  box-shadow: #4AB449 0px 9px 28px, #19ABE3 0px 9px 8px;
+  box-shadow: #4AB449 0px 8px 0px, #19ABE3 0px 9px 8px;
   border-radius: 5px;
   padding: 10px;
   overflow: hidden;
@@ -291,10 +291,10 @@
     width: 95%;
   }
   .singleHajj {
-    width: 250px;
+    width: 240px;
   }
   .singleHajjmiddl {
-    width: 250px;
+    width: 240px;
   }
   .imgWrap {
     width: 312px;
@@ -385,12 +385,7 @@
   .ummraWrap {
     width: 100%;
   }
-  .singleHajj {
-    width: 350px;
-  }
-  .singleHajjmiddl {
-    width: 350px;
-  }
+
   .ummrahClock {
     display: flex;
   }
@@ -429,7 +424,12 @@
 .lastChild{
   margin-left: 113px;
 }
-
+.singleHajj {
+  width: 100%;
+}
+.singleHajjmiddl {
+  width: 100%;
+}
 
 
   .bannerWrap h2 {
@@ -454,6 +454,10 @@
 }
 .hajjUmraPackage select {
   width: 90%;
+}
+  
+.imgWrap {
+  width: 100%;
 }
 
 

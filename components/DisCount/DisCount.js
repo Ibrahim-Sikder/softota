@@ -18,10 +18,9 @@ const DisCount = () => {
           loop
           mode="normal"
           src="/flight3.json"
-          style={{ width: "450px", height: "400px" }}
         ></lottie-player>
       </div>
-      <div>
+      <div className={style.planeAnimation}>
         <lottie-player
           id="firstLottie"
           ref={ref}
@@ -29,7 +28,6 @@ const DisCount = () => {
           loop
           mode="normal"
           src="/flight2.json"
-          style={{ width: "500px", height: "500px" }}
         ></lottie-player>
       </div>
     </div>

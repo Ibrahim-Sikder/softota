@@ -631,11 +631,10 @@ const Hotel = () => {
 
       {/* hotel structure */}
       <div>
-        <SectionTitle
-          heading="Trending International Destinations "
-          subHeading="The world is now just a hop, skip and jump away and here’s how you
-        can make your travel easier and better."
-        ></SectionTitle>
+      <SectionTitle
+        heading="Inbound Tour Packages "
+        subHeading="The world is now just a hop, skip and jump away and here’s how you can make your travel easier and better."
+      ></SectionTitle>
         <div className={style.destination}>
           <Slider {...settings}>
             <div className={style.tourTrending}>
@@ -994,7 +993,7 @@ const Hotel = () => {
               </div>
             </div>
           </Slider>
-          <SeeMoreButton />
+          <Link href='/tours/package'><SeeMoreButton/></Link>
         </div>
       </div>
     </section>

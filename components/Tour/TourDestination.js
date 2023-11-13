@@ -24,6 +24,17 @@ import india9 from "../../public/assets/india9.jpeg";
 import india10 from "../../public/assets/india10.jpeg";
 import india11 from "../../public/assets/india4.jpeg";
 import india12 from "../../public/assets/destination9.jpeg";
+import tour from "../../public/assets/tourImage3.jpg";
+import tour2 from "../../public/assets/tourImage4.jpg";
+import tour3 from "../../public/assets/tourImage5.jpg";
+import tour4 from "../../public/assets/tourImage6.jpg";
+import tour5 from "../../public/assets/tourImage7.jpg";
+import tour6 from "../../public/assets/tourImage8.jpg";
+import tour7 from "../../public/assets/tourImage9.jpg";
+import tour8 from "../../public/assets/tourImage10.jpg";
+import tour9 from "../../public/assets/tourImage11.jpg";
+import tour10 from "../../public/assets/tourImage12.jpg";
+import tour11 from "../../public/assets/tourImage13.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import style from "./Tour.module.css";
@@ -31,8 +42,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SectionTitle from "../Shared/SectionTitle/SectionTitle";
+import { East } from "@mui/icons-material";
 import SeeMoreButton from "../Shared/SeeMoreButton/SeeMoreButton";
-
 
 const TourDestination = () => {
   var settings = {
@@ -74,10 +85,9 @@ const TourDestination = () => {
   return (
     <section>
       <SectionTitle
-       heading="Trending International Destinations"
-       subHeading="The world is now just a hop, skip and jump away and here’s how you can make your travel easier and better."
-      >
-      </SectionTitle>
+        heading="Inbound Tour Packages "
+        subHeading="Explore breathtaking landscapes and cultural wonders with our immersive inbound tour packages, curated for an unforgettable journey into the heart of diverse destinations."
+      ></SectionTitle>
       <div className={style.destination}>
         <div>
           <Slider {...settings}>
@@ -103,7 +113,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -130,7 +140,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -159,7 +169,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -186,7 +196,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -213,7 +223,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -242,7 +252,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -269,7 +279,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -296,7 +306,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -323,7 +333,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -350,7 +360,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -377,7 +387,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -404,7 +414,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -431,24 +441,22 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
             </div>
           </Slider>
         </div>
-       <SeeMoreButton/>
+        <Link href='/tours/package'><SeeMoreButton/></Link>
       </div>
       {/* trending Indian destination  */}
 
       <SectionTitle
-       heading="Trending Indian Destinations"
-       subHeading="India’s diverse topography, history and culture offers enough
-       experiences to fulfil any type of wanderlust.."
-      >
-      </SectionTitle>
-      
+        heading="Outbound Tour Packages "
+        subHeading="The world is now just a hop, skip and jump away and here’s how you can make your travel easier and better."
+      ></SectionTitle>
+
       <div className={style.destination}>
         <div>
           <Slider {...settings}>
@@ -502,7 +510,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -529,7 +537,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -556,7 +564,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -583,7 +591,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -610,7 +618,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -637,7 +645,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -664,7 +672,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -691,7 +699,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -718,7 +726,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -745,7 +753,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -772,7 +780,7 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -799,14 +807,381 @@ const TourDestination = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
             </div>
           </Slider>
         </div>
-        <SeeMoreButton/>
+        <Link href='/tours/package'><SeeMoreButton/></Link>
+      </div>
+
+      {/* outbond tour package */}
+      <SectionTitle
+        heading="Indian Tour Packages "
+        subHeading="India’s diverse topography, history and culture offers enough
+       experiences to fulfil any type of wanderlust.."
+      ></SectionTitle>
+
+      <div className={style.destination}>
+        <div>
+          <Slider {...settings}>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6>Radisson Blu Plaza Delhi Airport </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">504$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour2}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">The Corinthians Resort & Club </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">1344$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour3}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Roseate House</h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">454$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour4}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Kaldan Samudhra Palace</h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">124$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour5}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Gokulam Grand Turtle on the Beach </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">774$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour6}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Caravela Beach Resort </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour6}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">The Lalit New Delhi </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour7}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Trident Udaipur</h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour8}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Taj Resort & Convention Centre, Goa </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour9}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Country Inn Mysore </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour9}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3"> The Leela Kovalam, A Raviz Hotel</h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour10}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">Chandys Windy Woods </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+            <div className={style.tourTrending}>
+              <Image
+                src={tour11}
+                alt="Picture of the author"
+                width={500}
+                height={500}
+                className={style.swiperImg}
+              />
+              <div>
+                <div className={style.pricePackage}>
+                  <h6 className="mb-3">New York City Hotels </h6>
+                  <div className="relative">
+                    <span>
+                      Starts From <span className="text-black">184$</span>
+                    </span>
+                    <span className={style.tourDay}>
+                      <small>3D</small>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className={style.viewDetailBtn}>
+                <Link href="/details">
+                  <button>View Details </button>
+                </Link>
+              </div>
+            </div>
+          </Slider>
+        </div>
+        <Link href='/tours/package'><SeeMoreButton/></Link>
       </div>
     </section>
   );

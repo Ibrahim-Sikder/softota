@@ -440,20 +440,16 @@ margin-left:5px;
   .tourTrending {
     width: 245px !important;
   }
-  .package {
-    left: 85px;
+  .package, .date {
+    left: 70px;
   }
-  .package2 {
-    right: 85px;
+  .package2, .package4 {
+    right: 70px;
   }
-  .package4 {
-    right: 85px;
-  }
-  .date {
-    left: 85px;
-  }
+
+
   .date2 {
-    left: 292px;
+    left: 278px;
   }
   .destination {
     width: 100%;
@@ -521,6 +517,7 @@ margin-left:5px;
   }
   .package {
     top: 250px;
+    left:85px;
   }
   .heroBoxBtn {
     top: 299px;
@@ -539,7 +536,9 @@ margin-left:5px;
   .trending {
     height: 471px;
   }
-
+.package2{
+  right:85px;
+}
   .package2,
   .package {
     top: 120px;
@@ -701,6 +700,10 @@ margin-left:5px;
 @media only screen and (max-width:370px){
   .date2{
     left: 171px;
+}
+.package4 {
+  right: 24px;
+
 }
 
 
