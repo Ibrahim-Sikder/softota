@@ -61,6 +61,7 @@ const RelatedTourPackage = () => {
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india}
                     className={style.packageImg}
@@ -83,6 +84,7 @@ const RelatedTourPackage = () => {
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india2}
                     className={style.packageImg}
@@ -106,6 +108,7 @@ const RelatedTourPackage = () => {
                   <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india3}
                     className={style.packageImg}
@@ -129,6 +132,7 @@ const RelatedTourPackage = () => {
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india4}
                     className={style.packageImg}
@@ -151,6 +155,7 @@ const RelatedTourPackage = () => {
                  <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india5}
                     className={style.packageImg}
@@ -175,6 +180,7 @@ const RelatedTourPackage = () => {
                   <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india6}
                     className={style.packageImg}
@@ -198,6 +204,7 @@ const RelatedTourPackage = () => {
                   <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india7}
                     className={style.packageImg}
@@ -221,6 +228,7 @@ const RelatedTourPackage = () => {
                  <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india8}
                     className={style.packageImg}
@@ -244,6 +252,7 @@ const RelatedTourPackage = () => {
                  <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india9}
                     className={style.packageImg}
@@ -268,6 +277,7 @@ const RelatedTourPackage = () => {
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india11}
                     className={style.packageImg}
@@ -291,6 +301,7 @@ const RelatedTourPackage = () => {
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india11}
                     className={style.packageImg}
@@ -313,6 +324,7 @@ const RelatedTourPackage = () => {
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={destination11}
                     className={style.packageImg}
@@ -335,6 +347,7 @@ const RelatedTourPackage = () => {
                 <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india10}
                     className={style.packageImg}
@@ -358,6 +371,7 @@ const RelatedTourPackage = () => {
                    <div className={style.package}>
                    <div className={style.packageImgWrap}>
                    <Image
+                   loading="lazy"
                     alt='tour'
                     src={india12}
                     className={style.packageImg}

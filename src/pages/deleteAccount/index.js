@@ -19,6 +19,7 @@ const index = () => {
                 <div className='col-span-9'>
                     <div className={style.delete}>
                     <Image
+                    loading="lazy"
                     src={deleteAccount}
                     alt="Picture of the author"
                     width={500}

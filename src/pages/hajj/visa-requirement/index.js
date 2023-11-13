@@ -9,7 +9,7 @@ const VisaRequirement = () => {
     <HajjLayout>
       <div className={style.visaRequirment}>
           <div className={style.visaRequirmentImg}>
-            <Image className={style.requireImg} alt="requirement" src={umrah} />
+            <Image loading="lazy" className={style.requireImg} alt="requirement" src={umrah} />
           </div>
           <h3 className="text-4xl font-bold mt-5">
             Hajj Visa Requirements 2023 from Bangladesh

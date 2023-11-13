@@ -20,6 +20,7 @@ const SignUpAgent = () => {
         <div className={style.signUpAgent}>
           <div className={style.signUpAgenLeft}>
             <Image
+            loading="lazy"
               src={login}
               alt="Picture of the author"
              className={style.agentImg}

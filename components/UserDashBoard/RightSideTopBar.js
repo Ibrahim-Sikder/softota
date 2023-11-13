@@ -21,7 +21,7 @@ const RightSideTopBar = () => {
         </div>
         <div className={style.logoWrap}>
           <Link href="/b2bdashboard">
-            <Image src={logo} alt="logo" width={200} height={200}></Image>
+            <Image loading="lazy" src={logo} alt="logo" width={200} height={200}></Image>
           </Link>
         </div>
       </div>

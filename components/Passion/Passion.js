@@ -17,13 +17,13 @@ const Passion = () => {
       <VerticalTimeline>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          // contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
           date="2011 - present"
           iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           icon={<FaUserGraduate />}
         >
           <Image
+           loading="lazy"
             src={people}
             alt="Picture of the author"
             width={500}
@@ -49,6 +49,7 @@ const Passion = () => {
           icon={<FaSnowman />}
         >
           <Image
+           loading="lazy"
             src={doctor}
             alt="Picture of the author"
             width={500}
@@ -83,6 +84,7 @@ const Passion = () => {
           icon={<FaBookReader />}
         >
           <Image
+           loading="lazy"
             src={man}
             alt="Picture of the author"
             width={500}
@@ -108,128 +110,7 @@ const Passion = () => {
         </VerticalTimelineElement>
       </VerticalTimeline>
     </section>
-    // <div className={style.timeline}>
-    //      <div className={`${style.container} ${style.leftContainer}`}>
-    //           <span><FaChild/></span>
-    //           <div className={style.textBox}>
-    //                <h2>For Student </h2>
-    //                <p>Student ID card Photo Copy</p>
-    //                <p>Birth Certificate (Only for Child & infant)</p>
-    //                <p>Travel Letter or Leave letter from the Educational Institute.</p>
-    //                <small className={style.leftContentArrow}></small>
-    //           </div>
-    //      </div>
-    //      <div className={`${style.container} ${style.rightContainer}`}>
-    //      <span><FaChild/></span>
-    //           <div className={style.textBox}>
-    //                <h2>For Student </h2>
-    //                <p>Student ID card Photo Copy</p>
-    //                <p>Birth Certificate (Only for Child & infant)</p>
-    //                <p>Travel Letter or Leave letter from the Educational Institute.</p>
-    //                <small className={style.rightContentArrow}></small>
-    //           </div>
-    //      </div>
-    //      <div className={`${style.container} ${style.leftContainer}`}>
-    //      <span><FaChild/></span>
-    //           <div className={style.textBox}>
-    //                <h2>For Student </h2>
-    //                <p>Student ID card Photo Copy</p>
-    //                <p>Birth Certificate (Only for Child & infant)</p>
-    //                <p>Travel Letter or Leave letter from the Educational Institute.</p>
-    //                <small className={style.leftContentArrow}></small>
-    //           </div>
-    //      </div>
-    //      <div className={`${style.container} ${style.rightContainer}`}>
-    //      <span><FaChild/></span>
-    //           <div className={style.textBox}>
-    //                <h2>For Student </h2>
-    //                <p>Student ID card Photo Copy</p>
-    //                <p>Birth Certificate (Only for Child & infant)</p>
-    //                <p>Travel Letter or Leave letter from the Educational Institute.</p>
-    //                <small className={style.rightContentArrow}></small>
-    //           </div>
-    //      </div>
-    //      <div className={`${style.container} ${style.leftContainer}`}>
-    //      <span><FaChild/></span>
-    //           <div className={style.textBox}>
-    //                <h2>For Student </h2>
-    //                <p>Student ID card Photo Copy</p>
-    //                <p>Birth Certificate (Only for Child & infant)</p>
-    //                <p>Travel Letter or Leave letter from the Educational Institute.</p>
-    //                <small className={style.leftContentArrow}></small>
-    //           </div>
-    //      </div>
-    //       <div className={`${style.container} ${style.rightContainer}`}>
-    //       <span><FaChild/></span>
-    //           <div className={style.textBox}>
-    //                <h2>For Student </h2>
-    //                <p>Student ID card Photo Copy</p>
-    //                <p>Birth Certificate (Only for Child & infant)</p>
-    //                <p>Travel Letter or Leave letter from the Educational Institute.</p>
-    //                <small className={style.rightContentArrow}></small>
-    //           </div>
-    //      </div>
-    // </div>
-    //     <div className={style.passionWrap}>
-    //       <div className={style.singlePassion}>
-    //      <div className={style.passionImgWrap}>
-    //      <Image
-    //           className={style.tourImg}
-    //           src={people}
-    //           alt="Picture of the author"
-    //           width={500}
-    //           height={500}
-    //      />
-    //      </div>
-    //      <div className='ml-[52px]'>
-    //           <h4 className='text-2xl'>For Studnet</h4>
-    //           <ul>
-    //                <li className='text-black'>Student ID card Photo Copy</li>
-    //                <li className='text-black'>Birth Certificate (Only for Child & infant)</li>
-    //                <li className='text-black'>Travel Letter or Leave letter from the Educational Institute.</li>
-    //           </ul>
-    //      </div>
-    //       </div>
-    //       <div className={style.singlePassion}>
-    //       <div className={style.passionImgWrap}>
-    //      <Image
-    //           className={style.tourImg}
-    //           src={doctor}
-    //           alt="Picture of the author"
-    //           width={500}
-    //           height={500}
-    //      />
-    //      </div>
-    //      <div className='ml-5'>
-    //           <h4 className='text-2xl'>For Medical</h4>
-    //           <ul>
-    //                <li className='text-black'>Student ID card Photo Copy</li>
-    //                <li className='text-black'>Birth Certificate (Only for Child & infant)</li>
-    //                <li className='text-black'>Travel Letter or Leave letter from the Educational Institute.</li>
-    //           </ul>
-    //      </div>
-    //       </div>
-    //       <div className={style.singlePassion}>
-    //       <div className={style.passionImgWrap}>
-    //      <Image
-    //           className={style.tourImg}
-    //           src={man}
-    //           alt="Picture of the author"
-    //           width={500}
-    //           height={500}
-    //      />
-    //      </div>
-    //      <div className='ml-5'>
-    //           <h4 className='text-2xl'>For Job Holder</h4>
-    //           <ul>
-    //                <li className='text-black'> In case of medical treatment, a copy of the appointment letter from a hospital in Thailand and if applicable, an original letter from a local doctor/hospital if the applicant is a first-time traveler.</li>
-    //                <li className='text-black'>Recent case summary of the patient’s medical reports issued by the local hospital.</li>
-    //                <li className='text-black'>Booking confirmation letter (such as Med letter & Action Plan) of an Air Ambulance.</li>
-
-    //           </ul>
-    //      </div>
-    //       </div>
-    //     </div>
+   
   );
 };
 

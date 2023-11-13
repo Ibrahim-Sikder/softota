@@ -75,7 +75,7 @@ const SearchBus = () => {
         <div>
           <strong className="block">Departure </strong>
           <div className="flex items-center">
-            <Image alt="bus" src={bus} width={50} height={50} />
+            <Image  loading="lazy" alt="bus" src={bus} width={50} height={50} />
             <div>
               <h6>Dhaka - Bandarban</h6>
               <small className="block">19 October, 2023</small>

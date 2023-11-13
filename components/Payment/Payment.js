@@ -136,6 +136,7 @@ const Payment = () => {
               <div className="flex items-center justify-center mb-8 flex-wrap">
                 <div className={style.method}>
                   <Image
+                  loading="lazy"
                     src={payment}
                     alt="Picture of the author"
                     width={50}
@@ -144,6 +145,7 @@ const Payment = () => {
                 </div>
                 <div className={style.method}>
                   <Image
+                  loading="lazy"
                     src={payment2}
                     alt="Picture of the author"
                     width={50}
@@ -152,6 +154,7 @@ const Payment = () => {
                 </div>
                 <div className={style.method}>
                   <Image
+                  loading="lazy"
                     src={payment3}
                     alt="Picture of the author"
                     width={50}
@@ -160,6 +163,7 @@ const Payment = () => {
                 </div>
                 <div className={style.method}>
                   <Image
+                  loading="lazy"
                     src={payment4}
                     alt="Picture of the author"
                     width={50}
@@ -168,6 +172,7 @@ const Payment = () => {
                 </div>
                 <div className={style.method}>
                   <Image
+                  loading="lazy"
                     src={payment5}
                     alt="Picture of the author"
                     width={50}
@@ -194,6 +199,7 @@ const Payment = () => {
             </div>
             <div className="flex mb-5  items-center justify-center mt-5">
               <Image
+              loading="lazy"
                 src={term}
                 alt="Picture of the author"
                 width={20}

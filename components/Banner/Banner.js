@@ -518,23 +518,6 @@ const Banner = ({ setResults }) => {
                           type="text"
                           placeholder="City or Airport "
                         />
-
-                        {/* <div className={style.searchResult}>
-                          {data?.map((d, i) => (
-                            <div key={i}>
-                              <div
-                                onClick={() =>
-                                  handleSelect(d.iata, d.name, d.country)
-                                }
-                                className={style.airport}
-                              >
-                                <h6 className="mr-3">{d.iata}</h6>
-                                <p>,{d.country}</p>
-                                <p>,{d.name}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div> */}
                       </div>
                     </div>
 
@@ -549,22 +532,6 @@ const Banner = ({ setResults }) => {
                           type="text "
                           placeholder="City or Airport "
                         />
-                        {/* <div className={style.searchResult}>
-                          {data2?.map((d, i) => (
-                            <div key={i}>
-                              <div
-                                onClick={() =>
-                                  handleSelect2(d.iata, d.name, d.country)
-                                }
-                                className={style.airport}
-                              >
-                                <h6 className="mr-3">{d.iata}</h6>
-                                <p>,{d.country}</p>
-                                <p>,{d.name}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -748,22 +715,6 @@ const Banner = ({ setResults }) => {
                           type="text"
                           placeholder="City or Airport "
                         />
-                        {/* <div className={`${style.searchResult} ${style.searchAirport}`}>
-                          {data?.map((d, i) => (
-                            <div key={i}>
-                              <div
-                                onClick={() =>
-                                  handleSelect(d.iata, d.name, d.country)
-                                }
-                                className={style.airport}
-                              >
-                                <h6 className="mr-3">{d.iata}</h6>
-                                <p>,{d.country}</p>
-                                <p>,{d.name}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div> */}
                       </div>
                     </div>
                     <div className={style.package2}>
@@ -777,22 +728,6 @@ const Banner = ({ setResults }) => {
                           type="text "
                           placeholder="City or Airport "
                         />
-                        {/* <div className={`${style.searchResult} ${style.searchAirport}`}>
-                          {data2?.map((d, i) => (
-                            <div key={i}>
-                              <div
-                                onClick={() =>
-                                  handleSelect2(d.iata, d.name, d.country)
-                                }
-                                className={style.airport}
-                              >
-                                <h6 className="mr-3">{d.iata}</h6>
-                                <p>,{d.country}</p>
-                                <p>,{d.name}</p>
-                              </div>
-                            </div>
-                          ))}
-                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -992,22 +927,6 @@ const Banner = ({ setResults }) => {
                         type="text "
                         placeholder="City or Airport "
                       />
-                      {/* <div className={style.searchResult}>
-                        {data?.map((d, i) => (
-                          <div key={i}>
-                            <div
-                              onClick={() =>
-                                handleSelect(d.iata, d.name, d.country)
-                              }
-                              className={style.airport}
-                            >
-                              <h6 className="mr-3">{d.iata}</h6>
-                              <p>,{d.country}</p>
-                              <p>,{d.name}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div> */}
                     </div>
                   </div>
                   <div className={style.multiplePackage}>
@@ -1021,26 +940,6 @@ const Banner = ({ setResults }) => {
                         type="text "
                         placeholder="City or Airport "
                       />
-                      {/* <div className={style.searchResult}>
-                        {data2?.map((airport, i) => (
-                          <div key={i}>
-                            <div
-                              onClick={() =>
-                                handleSelect2(
-                                  airport.iata,
-                                  airport.name,
-                                  airport.country
-                                )
-                              }
-                              className={style.airport}
-                            >
-                              <h6 className="mr-3">{airport.iata}</h6>
-                              <p>,{airport.country}</p>
-                              <p>,{airport.name}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div> */}
                     </div>
                   </div>
                   <div className={style.multiplePackage}>

@@ -15,6 +15,7 @@ const LoginAgent = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">
         <div>
           <Image
+           loading="lazy"
             src={agent}
             alt="Picture of the author"
             width={500}
@@ -74,6 +75,7 @@ const LoginAgent = () => {
               <div className={style.circle}>
                 <button type="submit">
                   <Image
+                   loading="lazy"
                     src={google}
                     alt="Picture of the author"
                     width={40}
@@ -84,6 +86,7 @@ const LoginAgent = () => {
               <div className={style.circle}>
                 <button type="submit">
                   <Image
+                   loading="lazy"
                     src={facebook}
                     alt="Picture of the author"
                     width={40}

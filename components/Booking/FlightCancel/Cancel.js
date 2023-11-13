@@ -11,7 +11,7 @@ const Cancel = () => {
   return (
     <section className={style.cancelWrap}>
       <div className={style.cancelImg}>
-        <Image src={cancel} alt="cancel" width={250} height={250}></Image>
+        <Image  loading="lazy" src={cancel} alt="cancel" width={250} height={250}></Image>
       </div>
       <strong className="text-2xl text-[#4AB449]">Cancel My Booking</strong>
       <p className="my-5">

@@ -37,29 +37,29 @@ const HotelDetails = () => {
             <div className={style.topImagae}>
                <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
-                    <Image
+                    <Image  loading="lazy"
                       alt="tours2"
                       src={hotel}
                       className={style.hotelImage}
                     />
                   </a>
                   <a href="https://wallpaperaccess.com/full/2690578.jpg">
-                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                    <Image  loading="lazy" alt="tours3"  src={hotel2} className="hidden" />
                   </a>
                   <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
-                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel3} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
-                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                    <Image  loading="lazy" alt="tours4"  src={hotel4} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                    <Image  loading="lazy" alt="tours5"  src={hotel5} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
-                    <Image alt="tours2"  src={hotel} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
-                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                    <Image  loading="lazy" alt="tours6"  src={hotel6} className="hidden" />
                   </a>
                 </LightGallery>
             </div>
@@ -68,58 +68,58 @@ const HotelDetails = () => {
                 <div className={style.leftSideSimg}>
                  <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
-                    <Image
+                    <Image  loading="lazy"
                       alt="tours2"
                       src={hotel2}
                       className={style.singleImg}
                     />
                   </a>
                   <a href="https://wallpaperaccess.com/full/2690578.jpg">
-                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                    <Image  loading="lazy" alt="tours3"  src={hotel2} className="hidden" />
                   </a>
                   <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
-                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel3} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
-                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                    <Image  loading="lazy" alt="tours4"  src={hotel4} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                    <Image  loading="lazy" alt="tours5"  src={hotel5} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
-                    <Image alt="tours2"  src={hotel} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
-                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                    <Image  loading="lazy" alt="tours6"  src={hotel6} className="hidden" />
                   </a>
                 </LightGallery>
                 </div>
                 <div className={style.leftSideSimg}>
                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
-                    <Image
+                    <Image  loading="lazy"
                       alt="tours2"
                       src={hotel4}
                       className={style.singleImg}
                     />
                   </a>
                   <a href="https://wallpaperaccess.com/full/2690578.jpg">
-                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                    <Image  loading="lazy" alt="tours3"  src={hotel2} className="hidden" />
                   </a>
                   <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
-                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel3} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
-                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                    <Image  loading="lazy" alt="tours4"  src={hotel4} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                    <Image  loading="lazy" alt="tours5"  src={hotel5} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
-                    <Image alt="tours2"  src={hotel} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
-                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                    <Image  loading="lazy" alt="tours6"  src={hotel6} className="hidden" />
                   </a>
                 </LightGallery>
                 </div>
@@ -128,58 +128,58 @@ const HotelDetails = () => {
                 <div className={style.leftSideSimg}>
                  <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
-                    <Image
+                    <Image  loading="lazy"
                       alt="tours2"
                       src={hotel5}
                       className={style.singleImg}
                     />
                   </a>
                   <a href="https://wallpaperaccess.com/full/2690578.jpg">
-                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                    <Image  loading="lazy" alt="tours3"  src={hotel2} className="hidden" />
                   </a>
                   <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
-                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel3} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
-                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                    <Image  loading="lazy" alt="tours4"  src={hotel4} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                    <Image  loading="lazy" alt="tours5"  src={hotel5} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
-                    <Image alt="tours2"  src={hotel} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
-                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                    <Image  loading="lazy" alt="tours6"  src={hotel6} className="hidden" />
                   </a>
                 </LightGallery>
                 </div>
                 <div className={style.leftSideSimg}>
                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG90ZWxzfGVufDB8fDB8fHww&w=1000&q=80">
-                    <Image
+                    <Image  loading="lazy"
                       alt="tours2"
                       src={hotel3}
                       className={style.singleImg}
                     />
                   </a>
                   <a href="https://wallpaperaccess.com/full/2690578.jpg">
-                    <Image alt="tours3"  src={hotel2} className="hidden" />
+                    <Image  loading="lazy" alt="tours3"  src={hotel2} className="hidden" />
                   </a>
                   <a href="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8aG90ZWx8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
-                    <Image alt="tours2"  src={hotel3} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel3} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1299710067/photo/double-bedroom-with-sea-view.jpg?s=612x612&w=0&k=20&c=LPNC-aqrsOsgxU8eqPcR38ACIOIjqAmh0VSKclIa2gs=">
-                    <Image alt="tours4"  src={hotel4} className="hidden" />
+                    <Image  loading="lazy" alt="tours4"  src={hotel4} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5"  src={hotel5} className="hidden" />
+                    <Image  loading="lazy" alt="tours5"  src={hotel5} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357648/photo/luxury-villa-with-sea-view.jpg?s=612x612&w=0&k=20&c=8Zo0cxUkfwDzjq2m39IoMHQllWXLfn3e_fEKSWSxZng=">
-                    <Image alt="tours2"  src={hotel} className="hidden" />
+                    <Image  loading="lazy" alt="tours2"  src={hotel} className="hidden" />
                   </a>
                   <a href="https://media.istockphoto.com/id/1198357651/photo/room-with-sea-view.jpg?s=612x612&w=0&k=20&c=nWgr44k1ncmDYaOsO4S-638c7r07jocn6_c_HvJthfw=">
-                    <Image alt="tours6"  src={hotel6} className="hidden" />
+                    <Image  loading="lazy" alt="tours6"  src={hotel6} className="hidden" />
                   </a>
                 </LightGallery>
                 </div>
@@ -280,7 +280,7 @@ const HotelDetails = () => {
             </div>
           </div>
           <div className={style.rightSideImg}>
-            <Image
+            <Image  loading="lazy"
             className={style.travel}
               src={travel}
               alt="Picture of the author"

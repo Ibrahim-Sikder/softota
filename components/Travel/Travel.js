@@ -6,6 +6,7 @@ const Travel = () => {
   return (
     <section className={style.travel}>
       <Image
+      loading="lazy"
         src={travel}
         alt="Picture of the author"
         className={style.travelImg}

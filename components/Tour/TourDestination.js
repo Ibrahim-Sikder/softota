@@ -93,6 +93,7 @@ const TourDestination = () => {
           <Slider {...settings}>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination}
                 alt="Picture of the author"
                 width={500}
@@ -120,6 +121,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination2}
                 alt="Picture of the author"
                 width={500}
@@ -147,6 +149,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination3}
                 alt="Picture of the author"
                 width={500}
@@ -176,6 +179,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination4}
                 alt="Picture of the author"
                 width={500}
@@ -203,6 +207,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination5}
                 alt="Picture of the author"
                 width={500}
@@ -230,6 +235,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination6}
                 alt="Picture of the author"
                 width={500}
@@ -259,6 +265,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination7}
                 alt="Picture of the author"
                 width={500}
@@ -286,6 +293,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination8}
                 alt="Picture of the author"
                 width={500}
@@ -313,6 +321,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination9}
                 alt="Picture of the author"
                 width={500}
@@ -340,6 +349,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination10}
                 alt="Picture of the author"
                 width={500}
@@ -367,6 +377,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination12}
                 alt="Picture of the author"
                 width={500}
@@ -394,6 +405,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination13}
                 alt="Picture of the author"
                 width={500}
@@ -421,6 +433,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination11}
                 alt="Picture of the author"
                 width={500}
@@ -462,6 +475,7 @@ const TourDestination = () => {
           <Slider {...settings}>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india}
                 alt="Picture of the author"
                 width={500}
@@ -490,6 +504,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india2}
                 alt="Picture of the author"
                 width={500}
@@ -517,6 +532,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india3}
                 alt="Picture of the author"
                 width={500}
@@ -544,6 +560,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india4}
                 alt="Picture of the author"
                 width={500}
@@ -571,6 +588,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india5}
                 alt="Picture of the author"
                 width={500}
@@ -598,6 +616,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india6}
                 alt="Picture of the author"
                 width={500}
@@ -625,6 +644,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india7}
                 alt="Picture of the author"
                 width={500}
@@ -652,6 +672,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india8}
                 alt="Picture of the author"
                 width={500}
@@ -679,6 +700,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india9}
                 alt="Picture of the author"
                 width={500}
@@ -706,6 +728,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india10}
                 alt="Picture of the author"
                 width={500}
@@ -733,6 +756,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india11}
                 alt="Picture of the author"
                 width={500}
@@ -760,6 +784,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={india12}
                 alt="Picture of the author"
                 width={500}
@@ -787,6 +812,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={destination11}
                 alt="Picture of the author"
                 width={500}
@@ -829,6 +855,7 @@ const TourDestination = () => {
           <Slider {...settings}>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={tour}
                 alt="Picture of the author"
                 width={500}
@@ -857,6 +884,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={tour2}
                 alt="Picture of the author"
                 width={500}
@@ -884,6 +912,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={tour3}
                 alt="Picture of the author"
                 width={500}
@@ -911,6 +940,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={tour4}
                 alt="Picture of the author"
                 width={500}
@@ -938,6 +968,7 @@ const TourDestination = () => {
             </div>
             <div className={style.tourTrending}>
               <Image
+              loading="lazy"
                 src={tour5}
                 alt="Picture of the author"
                 width={500}
@@ -964,7 +995,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour6}
                 alt="Picture of the author"
                 width={500}
@@ -991,7 +1022,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour6}
                 alt="Picture of the author"
                 width={500}
@@ -1018,7 +1049,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour7}
                 alt="Picture of the author"
                 width={500}
@@ -1045,7 +1076,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour8}
                 alt="Picture of the author"
                 width={500}
@@ -1072,7 +1103,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour9}
                 alt="Picture of the author"
                 width={500}
@@ -1099,7 +1130,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour9}
                 alt="Picture of the author"
                 width={500}
@@ -1126,7 +1157,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour10}
                 alt="Picture of the author"
                 width={500}
@@ -1153,7 +1184,7 @@ const TourDestination = () => {
               </div>
             </div>
             <div className={style.tourTrending}>
-              <Image
+              <Image loading="lazy"
                 src={tour11}
                 alt="Picture of the author"
                 width={500}

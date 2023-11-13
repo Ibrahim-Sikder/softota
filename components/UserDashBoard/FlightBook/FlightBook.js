@@ -133,6 +133,7 @@ const FlightBook = () => {
                   <div>
                     <div className={style.singleFlightLeft}>
                       <Image
+                      loading="lazy"
                         src={flight}
                         width={80}
                         height={80}
@@ -170,6 +171,7 @@ const FlightBook = () => {
                   <div>
                     <div className={style.singleFlightLeft}>
                       <Image
+                      loading="lazy"
                         src={flight}
                         width={80}
                         height={80}

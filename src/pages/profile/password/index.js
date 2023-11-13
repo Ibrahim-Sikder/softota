@@ -20,6 +20,7 @@ const Password = () => {
              <div className={styles.changePassWrap}>
               <div>
                 <Image
+                loading="lazy"
                   src={password}
                   alt="Picture of the author"
                   width={400}

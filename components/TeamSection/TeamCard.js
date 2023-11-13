@@ -7,7 +7,9 @@ const TeamCard = () => {
       <div className="flex justify-between p-4">
         <div className="flex space-x-4 items-center">
           <div>
+            
             <Image
+            loading="lazy"
               src={reviewerImage}
               alt=""
               className="object-cover w-16 h-16 rounded-full bg-gray-400 shadow-2xl transform  group-hover:scale-110 duration-500"

@@ -12,7 +12,7 @@ const VisaRequirement = () => {
             Get Umrah Visa 2023 | Online Requirements for Bangladeshi Citizen
           </h3>
           <div className={style.visaRequirmentImg}>
-            <Image className={style.requireImg} alt="requirement" src={umrah} />
+            <Image loading="lazy" className={style.requireImg} alt="requirement" src={umrah} />
           </div>
 
           <div className="w-9/12 mt-5 ">

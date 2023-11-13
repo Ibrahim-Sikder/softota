@@ -45,6 +45,7 @@ const Nav = () => {
                 <div className={style.logo}>
                   <Link href="/">
                     <Image
+                     loading="lazy"
                       className={style.logoImg}
                       src={Logo}
                       alt="Picture of the author"

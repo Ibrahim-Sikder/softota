@@ -8,6 +8,7 @@ const AboutHero = () => {
     <section className={style.aboutWrap}>
       <section className={style.aboutHero}>
         <Image
+         loading="lazy"
           src={about}
           alt="Picture of the author"
           className={style.aboutHeroImg}

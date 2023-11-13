@@ -45,6 +45,7 @@ const UmraPackage = () => {
             hajjData.map(hajj=> <div key={hajj.id} className={style.singleHajj}>
               <div className={style.imgWrap}>
                 <Image
+                loading="lazy"
                   src={hajj.image}
                   alt="Picture of the author"
                   width={500}

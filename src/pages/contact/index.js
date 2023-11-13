@@ -76,6 +76,7 @@ const index = () => {
         </div>
         <div className={style.getInTouchRight}>
             <Image
+            loading="lazy"
             src={contact}
             alt='contact'
            className={style.contactImg}

@@ -13,6 +13,7 @@ const TeamSection = () => {
           <div className="bg-[#62C370] block rounded-lg shadow-lg h-full text-white">
             <div className="relative overflow-hidden bg-no-repeat bg-cover">
               <Image
+              loading="lazy"
                 className="w-full rounded-t-lg h-72"
                 alt="house"
                 src={man}
@@ -73,6 +74,7 @@ const TeamSection = () => {
           <div className="bg-[#62C370] block rounded-lg shadow-lg h-full text-white">
             <div className="relative overflow-hidden bg-no-repeat bg-cover">
               <Image
+              loading="lazy"
                 className="w-full rounded-t-lg h-72"
                 alt="house"
                 src={man2}
@@ -132,6 +134,7 @@ const TeamSection = () => {
           <div className="bg-[#62C370] block rounded-lg shadow-lg h-full text-white">
             <div className="relative overflow-hidden bg-no-repeat bg-cover">
               <Image
+              loading="lazy"
                 className="w-full rounded-t-lg h-72"
                 alt="house"
                 src={man3}

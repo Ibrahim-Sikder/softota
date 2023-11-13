@@ -22,6 +22,7 @@ const TourPackage = () => {
       <div>
         <div className={style.tourImgWrap}>
           <Image
+          loading="lazy"
             className={style.tourImg}
             src={tour}
             alt="tour7"
@@ -41,6 +42,7 @@ const TourPackage = () => {
                   className="h-72 md:h-96 shadow-2xl block group rounded-3xl  relative mx-2 overflow-hidden "
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour2}
@@ -75,6 +77,7 @@ const TourPackage = () => {
                   className="h-72 md:h-96 block group relative mx-2 rounded-3xl overflow-hidden shadow-lg"
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour}
@@ -109,6 +112,7 @@ const TourPackage = () => {
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour3}
@@ -143,6 +147,7 @@ const TourPackage = () => {
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour4}
@@ -177,6 +182,7 @@ const TourPackage = () => {
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour5}
@@ -211,6 +217,7 @@ const TourPackage = () => {
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour6}
@@ -245,6 +252,7 @@ const TourPackage = () => {
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={see}
@@ -279,6 +287,7 @@ const TourPackage = () => {
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
+                  loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={see3}

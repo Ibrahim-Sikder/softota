@@ -9,6 +9,7 @@ const Manage = () => {
              <div className={style.saveCard}>
               <div>
                 <Image
+                loading="lazy"
                   src={card}
                   alt="Picture of the author"
                   width={500}

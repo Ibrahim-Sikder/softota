@@ -119,6 +119,7 @@ const B2BHotelSearch = () => {
                 <div className={style.detailBoxWrap}>
                   <div className={style.searchLeftSideImg}>
                     <Image
+                    loading="lazy"
                       src={hotel.image}
                       alt="Picture of the author"
                       className={style.searchLeftImg}

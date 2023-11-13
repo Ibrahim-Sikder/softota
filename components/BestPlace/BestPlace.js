@@ -10,10 +10,10 @@ const BestPlace = () => {
   return (
     <section className={style.bestPlaceWrap}>
       <SectionTitle
-      subHeading=' Bangladesh is a South Asian country with a rich cultural heritage and
+        subHeading=" Bangladesh is a South Asian country with a rich cultural heritage and
       natural beauty. It is home to the world s largest mangrove forest,
-      culture, and natural beauty.'
-      heading='Best Places To Visit In Bangladesh'
+      culture, and natural beauty."
+        heading="Best Places To Visit In Bangladesh"
       ></SectionTitle>
       <div>
         <div className={style.singleBestPlace}>
@@ -25,13 +25,11 @@ const BestPlace = () => {
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
                   <Image
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={cox}
                   />
-                  {/* width={40}
-                               height={20} */}
-
                   <div className="absolute gradient transition duration-500 group-hover:bg-[#19ABE3] group-hover:opacity-90 w-full h-72 md:h-96 z-100"></div>
                   <div className="absolute left-0 right-0 bottom-0 p-6 z-30 transform translate-y-1/2 transition duration-500 h-full group-hover:translate-y-0 delay-100">
                     <div className="h-1/2 relative">
@@ -61,12 +59,11 @@ const BestPlace = () => {
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
                   <Image
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={see}
                   />
-                  {/* width={40}
-                               height={20} */}
 
                   <div className="absolute gradient transition duration-500 group-hover:bg-[#19ABE3] group-hover:opacity-90 w-full h-72 md:h-96 z-100"></div>
                   <div className="absolute left-0 right-0 bottom-0 p-6 z-30 transform translate-y-1/2 transition duration-500 h-full group-hover:translate-y-0 delay-100">
@@ -97,12 +94,11 @@ const BestPlace = () => {
                   className="h-72 md:h-96 block group relative mx-2 overflow-hidden shadow-lg border-b-8 border-[#4AB449]"
                 >
                   <Image
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={see3}
                   />
-                  {/* width={40}
-                               height={20} */}
 
                   <div className="absolute gradient transition duration-500 group-hover:bg-[#19ABE3] group-hover:opacity-90 w-full h-72 md:h-96 z-100"></div>
                   <div className="absolute left-0 right-0 bottom-0 p-6 z-30 transform translate-y-1/2 transition duration-500 h-full group-hover:translate-y-0 delay-100">

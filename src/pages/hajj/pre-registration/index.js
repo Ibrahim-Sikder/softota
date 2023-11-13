@@ -8,7 +8,7 @@ const PreRegistration = () => {
     <HajjLayout>
       <div className={style.visaRequirment}>
           <div className={style.visaRequirmentImg}>
-            <Image className={style.requireImg} alt="requirement" src={umrah} />
+            <Image loading="lazy" className={style.requireImg} alt="requirement" src={umrah} />
           </div>
           <div className="mt-5">
             <strong className="text-2xl">হজ - প্রাক-নিবন্ধন সিস্টেম</strong>

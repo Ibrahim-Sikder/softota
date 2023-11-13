@@ -8,7 +8,7 @@ const BriefHistoryHajj = () => {
     <HajjLayout>
       <div className={style.visaRequirment}>
           <div className={style.visaRequirmentImg}>
-            <Image className={style.requireImg} alt="requirement" src={umrah} />
+            <Image loading="lazy" className={style.requireImg} alt="requirement" src={umrah} />
           </div>
           <div className="mt-5">
             <h2 className="text-3xl font-bold">

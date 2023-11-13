@@ -68,7 +68,7 @@ const HotelTrending = () => {
   };
   return (
     <section>
-       <SectionTitle
+      <SectionTitle
         heading="Inbound Tour Packages "
         subHeading="Explore breathtaking landscapes and cultural wonders with our immersive inbound tour packages, curated for an unforgettable journey into the heart of diverse destinations."
       ></SectionTitle>
@@ -82,6 +82,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -95,7 +96,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -107,6 +108,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -120,7 +122,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -132,6 +134,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -145,7 +148,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -157,6 +160,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -170,7 +174,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -182,6 +186,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -195,7 +200,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -207,6 +212,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -220,7 +226,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -232,6 +238,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -245,7 +252,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -257,6 +264,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -270,7 +278,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -282,6 +290,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -295,7 +304,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -307,6 +316,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -320,7 +330,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -332,6 +342,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -345,7 +356,7 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
@@ -357,6 +368,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -370,13 +382,15 @@ const HotelTrending = () => {
                 </div>
               </div>
               <div className={style.viewDetailBtn}>
-              <Link href="/details">
+                <Link href="/details">
                   <button>View Details </button>
                 </Link>
               </div>
             </div>
           </Slider>
-          <Link href='/tours/package'><SeeMoreButton/></Link>
+          <Link href="/tours/package">
+            <SeeMoreButton />
+          </Link>
         </div>
       </div>
       <SectionTitle
@@ -395,6 +409,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -423,6 +438,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -450,6 +466,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -477,6 +494,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -504,6 +522,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -531,6 +550,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -558,6 +578,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -585,6 +606,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -612,6 +634,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -639,6 +662,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -666,6 +690,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -693,6 +718,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -720,6 +746,7 @@ const HotelTrending = () => {
                 width={500}
                 height={500}
                 className={style.swiperImg}
+                loading="lazy"
               />
               <div>
                 <div className={style.pricePackage}>
@@ -742,9 +769,10 @@ const HotelTrending = () => {
             </div>
           </Slider>
         </div>
-        <Link href='/tours/package'><SeeMoreButton/></Link>
+        <Link href="/tours/package">
+          <SeeMoreButton />
+        </Link>
       </div>
-      
     </section>
   );
 };

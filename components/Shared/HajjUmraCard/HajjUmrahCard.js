@@ -86,7 +86,7 @@ const HajjUmrahCard = ({heading, subheading, title, img, }) => {
         <section>
             <div>
             <div className={style.umrahImgWrap}>
-            <Image src={img} alt="umra" className={style.umraImage} />
+            <Image loading="lazy" src={img} alt="umra" className={style.umraImage} />
           </div>
           <h3 className="text-3xl font-bold my-8">{title}</h3>
             {
@@ -94,7 +94,7 @@ const HajjUmrahCard = ({heading, subheading, title, img, }) => {
               <div className={style.packageCardWrap}>
                 <div className={style.packageCard}>
                   <div className={style.cardLeft}>
-                    <Image src={data.image} alt="umra" className={style.leftImg} />
+                    <Image loading="lazy" src={data.image} alt="umra" className={style.leftImg} />
                   </div>
                   <div className={style.cardRight}>
                     <div className={style.rightText}>

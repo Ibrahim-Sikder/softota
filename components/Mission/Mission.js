@@ -16,6 +16,7 @@ const Mission = () => {
         <div className={style.missionBox}>
           <h4 className={style.missionText}>Mission</h4>
           <Image
+           loading="lazy"
             src={mission}
             alt="Picture of the author"
             width={500}
@@ -30,6 +31,7 @@ const Mission = () => {
         <div className={style.missionBox}>
           <h4 className={style.missionText}>Vission</h4>
           <Image
+           loading="lazy"
             src={mission}
             alt="Picture of the author"
             width={500}

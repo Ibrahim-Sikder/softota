@@ -23,6 +23,7 @@ const Countries = () => {
         <div className="w-9/12 h-3/4 mx-auto p-10 bg-[#DBF0DB]">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-10 place-items-center">
             <Image
+             loading="lazy"
               className={style.countryImg}
               src={malasiya}
               alt="Picture of the author"
@@ -30,6 +31,7 @@ const Countries = () => {
               height={500}
             />
             <Image
+             loading="lazy"
               className={style.countryImg}
               src={italy}
               alt="Picture of the author"
@@ -37,6 +39,7 @@ const Countries = () => {
               height={500}
             />
             <Image
+             loading="lazy"
               className={style.countryImg}
               src={china}
               alt="Picture of the author"
@@ -65,6 +68,7 @@ const Countries = () => {
               height={500}
             />
             <Image
+             loading="lazy"
               className={style.countryImg}
               src={italy}
               alt="Picture of the author"
@@ -72,6 +76,7 @@ const Countries = () => {
               height={500}
             />
             <Image
+             loading="lazy"
               className={style.countryImg}
               src={usa}
               alt="Picture of the author"

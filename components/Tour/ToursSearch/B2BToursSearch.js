@@ -111,6 +111,7 @@ const B2BToursSearch = () => {
                             tourData.map(tour=><div key={tour.id} className={style.toursCard}>
                                 <div className={style.toursCardLeft}>
                                     <Image
+                                    loading="lazy"
                                     alt='tours'
                                     src={tour.image}
                                     width={500}

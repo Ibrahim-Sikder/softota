@@ -16,6 +16,7 @@ const ProfileLeftSide = () => {
         <div className={style.userImg}>
           <div>
             <Image
+            loading="lazy"
               src={admin}
               alt="Picture of the author"
               width={100}

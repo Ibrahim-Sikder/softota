@@ -10,6 +10,7 @@ const AdminLeftSide = () => {
       <div className={style.AdminleftSide}>
         <div className="absolute left-24 top-52">
           <Image
+           loading="lazy"
             src={admin}
             alt="Picture of the author"
             width={100}

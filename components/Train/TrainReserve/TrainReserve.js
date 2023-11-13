@@ -50,29 +50,29 @@ const TrainReserve = () => {
               <div>
                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://c1.wallpaperflare.com/preview/860/689/115/tour-packages-travel-tourism.jpg">
-                    <Image
+                    <Image loading="lazy"
                       alt="tours2"
                       src={tours}
                       className={style.gallaryImg}
                     />
                   </a>
                   <a href="https://e7.pngegg.com/pngimages/823/324/png-clipart-package-tour-travel-agent-flight-tour-operator-travel-city-computer-wallpaper.png">
-                    <Image alt="tours3" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours3" src={tours} className="hidden" />
                   </a>
                   <a href="https://c8.alamy.com/comp/C6530P/edinburgh-scotland-busy-city-centre-fringe-festival-performer-balancing-C6530P.jpg">
-                    <Image alt="tours2" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours2" src={tours} className="hidden" />
                   </a>
                   <a href="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/1b/b7/a8.jpg">
-                    <Image alt="tours4" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours4" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours5" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/umbrella-chair-around-swimming-pool_1203-2419.jpg?w=2000">
-                    <Image alt="tours2" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours2" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/hammocks-placed-row_1203-190.jpg">
-                    <Image alt="tours6" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours6" src={tours} className="hidden" />
                   </a>
                 </LightGallery>
               </div>
@@ -295,58 +295,58 @@ const TrainReserve = () => {
               <div className={style.leftsideGalleryImg}>
                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://www.jumpdesign.co.uk/wp-content/uploads/2022/11/HD-GRABS-2.jpg">
-                    <Image
+                    <Image loading="lazy"
                       alt="tours2"
                       src={tours3}
                       className={style.gallaryImg}
                     />
                   </a>
                   <a href="https://e7.pngegg.com/pngimages/823/324/png-clipart-package-tour-travel-agent-flight-tour-operator-travel-city-computer-wallpaper.png">
-                    <Image alt="tours3" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours3" src={tours} className="hidden" />
                   </a>
                   <a href="https://www.itl.cat/pngfile/big/65-653470_leh-ladakh-leh-ladakh-hd.jpg">
-                    <Image alt="tours2" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours2" src={tours} className="hidden" />
                   </a>
                   <a href="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsbGluZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80">
-                    <Image alt="tours4" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours4" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours5" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/umbrella-chair-around-swimming-pool_1203-2419.jpg?w=2000">
-                    <Image alt="tours2" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours2" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/hammocks-placed-row_1203-190.jpg">
-                    <Image alt="tours6" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours6" src={tours} className="hidden" />
                   </a>
                 </LightGallery>
               </div>
               <div className={style.leftsideGalleryImg}>
                 <LightGallery speed={500} plugins={[lgThumbnail, lgZoom]}>
                   <a href="https://c1.wallpaperflare.com/preview/860/689/115/tour-packages-travel-tourism.jpg">
-                    <Image
+                    <Image loading="lazy"
                       alt="tours2"
                       src={tours2}
                       className={style.gallaryImg}
                     />
                   </a>
                   <a href="https://wallpaperaccess.com/full/873423.jpg">
-                    <Image alt="tours3" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours3" src={tours} className="hidden" />
                   </a>
                   <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqShZZmMfkz9paZkKmyxk4jnkJXksXxvLLY4LqWUD9wZNz5X3m684TawuHH7Hyg-qscUg&usqp=CAU">
-                    <Image alt="tours2" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours2" src={tours} className="hidden" />
                   </a>
                   <a href="https://images.unsplash.com/photo-1569949381669-ecf31ae8e613?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG91cnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80">
-                    <Image alt="tours4" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours4" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/chair-table-dinning-beach-sea-with-blue-sky_74190-6094.jpg">
-                    <Image alt="tours5" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours5" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/umbrella-chair-around-swimming-pool_1203-2419.jpg?w=2000">
-                    <Image alt="tours2" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours2" src={tours} className="hidden" />
                   </a>
                   <a href="https://img.freepik.com/free-photo/hammocks-placed-row_1203-190.jpg">
-                    <Image alt="tours6" src={tours} className="hidden" />
+                    <Image loading="lazy" alt="tours6" src={tours} className="hidden" />
                   </a>
                 </LightGallery>
               </div>

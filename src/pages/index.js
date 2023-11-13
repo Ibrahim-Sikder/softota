@@ -16,22 +16,19 @@ export const config = {
 };
 
 export default function Home() {
-
-
   return (
     <section>
       <Helmet>
         <title>Ghuronti || Flight </title>
       </Helmet>
-      <Nav/>
+      <Nav />
       <Banner></Banner>
       <TourDestination></TourDestination>
       <DisCount />
       <Travel></Travel>
       <Mission />
       <Customer></Customer>
-      <Footer/>
-      
+      <Footer />
     </section>
   );
 }

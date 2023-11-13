@@ -43,6 +43,7 @@ const Benefit = () => {
                 <td>
                 <div className="mask   h-[100px] w-[100px] mx-auto ">
                     <Image
+                    loading="lazy"
                       className=" h-full w-full object-cover text-center"
                       src={img}
                       alt="img"

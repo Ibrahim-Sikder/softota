@@ -73,13 +73,13 @@ const HajjUmrahLeftSide = () => {
 
             <div className="leftSideOffer">
               <div className={style.umrahOffer}>
-                <Image alt="hajj3" src={hajj3} className={style.umraImage} />
+                <Image loading="lazy" alt="hajj3" src={hajj3} className={style.umraImage} />
               </div>
               <h2 className="text-xl font-bold text-center mt-2">Hajj Offer</h2>
             </div>
             <div className="leftSideOffer">
               <div className={style.umrahOffer}>
-                <Image alt="umrah" src={hajj2} className={style.umraImage} />
+                <Image loading="lazy" alt="umrah" src={hajj2} className={style.umraImage} />
               </div>
               <h2 className="text-xl font-bold text-center mt-2">
                 Umrah Offer

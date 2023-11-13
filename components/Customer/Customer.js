@@ -31,6 +31,7 @@ const Customer = () => {
               to assure you that your confidence in Ghuronti will be justified.
             </p>
             <Image
+             loading="lazy"
               src={quote2}
               alt="Picture of the author"
               width={100}
@@ -47,6 +48,7 @@ const Customer = () => {
               to assure you that your confidence in Ghuronti will be justified.
             </p>
             <Image
+             loading="lazy"
               src={quote2}
               alt="Picture of the author"
               width={100}
@@ -63,6 +65,7 @@ const Customer = () => {
               to assure you that your confidence in Ghuronti will be justified.
             </p>
             <Image
+             loading="lazy"
               src={quote2}
               alt="Picture of the author"
               width={100}

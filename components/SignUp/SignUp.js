@@ -22,6 +22,7 @@ const SignUp = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 place-content-center place-items-center">
         <div>
           <Image
+          loading="lazy"
             src={login}
             alt="Picture of the author"
             width={600}
@@ -100,6 +101,7 @@ const SignUp = () => {
                   <button
                   type="button">
                     <Image
+                    loading="lazy"
                       src={google}
                       alt="Picture of the author"
                       width={40}
@@ -110,6 +112,7 @@ const SignUp = () => {
                 <div className={style.circle}>
                   <button type="button">
                     <Image
+                    loading="lazy"
                       src={facebook}
                       alt="Picture of the author"
                       width={40}

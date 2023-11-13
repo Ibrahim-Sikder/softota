@@ -16,12 +16,11 @@ import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
 const HajjLayout = ({ children }) => {
   return (
     <div>
-      <Nav/>
+      <Nav />
       <div className={style.packageWrap}>
         <aside className={style.packageLeftSide}>
           <div className={style.LeftSideWrap}>
             <div className={style.umrahAccordion}>
-
               <AccordionSummary
                 className={style.umrahSummary}
                 expandIcon={<ExpandMoreIcon className={style.expandIcon} />}
@@ -169,7 +168,7 @@ const HajjLayout = ({ children }) => {
                 <li>Platinum Hajj Package </li>
               </ul>
             </div>
-                        
+
             <div className={style.latestHajjOffer}>
               <h2 className="text-xl font-bold mt-2">Latest Umrah Package </h2>
               <ul>
@@ -178,12 +177,11 @@ const HajjLayout = ({ children }) => {
                 <li>Platinum Hajj Package </li>
               </ul>
             </div>
-
           </div>
         </aside>
         <main className={style.packageRightSide}>{children}</main>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
