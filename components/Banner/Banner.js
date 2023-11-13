@@ -146,14 +146,6 @@ const Banner = ({ setResults }) => {
     }
   };
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFilterData(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
 
   const handleFilter = (value) => {
     const res = filterData.filter((airport) =>
@@ -162,14 +154,7 @@ const Banner = ({ setResults }) => {
     setData(res);
   };
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setFilterData2(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+
 
   const handleFilter2 = (value) => {
     const res = filterData2.filter((airport) =>

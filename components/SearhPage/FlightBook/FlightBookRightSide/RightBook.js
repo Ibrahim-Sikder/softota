@@ -87,7 +87,7 @@ const RightBook = () => {
                    <input onClick={handleDisable} className={style.checkbox} type="checkbox" />
                    <p>I aggree to the <strong>Terms & Condition</strong> and <strong>Privacy Policy</strong> </p>
                     </div>
-                   <Link href='/flight/book'> <input  disable={disabled} className={style.paymentBtn} type="submit" value='Pay Now' /></Link>
+                   <Link href='/flight/book'> <input  disable={disabled} className={style.paymentBtn} type="submit" value='Book Now ' /></Link>
                    
                </div>
           </div>

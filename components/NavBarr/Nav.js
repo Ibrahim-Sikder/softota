@@ -24,7 +24,7 @@ const Nav = () => {
   };
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 500000);
+      setStickyMenu(window.scrollY > 250);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -144,7 +144,7 @@ const Nav = () => {
                     <p className="ml-3">Tours</p>
                   </li>
                 </Link>
-                <Link href="/buss">
+                <Link href="/bus">
                   <li>
                     <BusAlert className={style.menuIcon} />
 

@@ -309,12 +309,13 @@
   }
   .bar span {
     width: 30px;
-    height: 2px;
+    height: 3px;
     background: #4AB449;
     margin-bottom: 6px;
     display: block;
     transition: all .5s linear(-0.47 -53.68%, 1 100%);
   }
+
   .bar1{
     transform: rotate(-45deg);
       position: absolute;

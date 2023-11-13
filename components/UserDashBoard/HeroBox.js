@@ -94,15 +94,7 @@ const HeroBox = () => {
     }
   };
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setFilterData(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+
 
   const handleFilter = (value) => {
     const res = filterData.filter((airport) =>
@@ -111,15 +103,6 @@ const HeroBox = () => {
     setData(res);
   };
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setFilterData2(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
 
   const handleFilter2 = (value) => {
     const res = filterData2.filter((airport) =>
@@ -128,15 +111,7 @@ const HeroBox = () => {
     setData2(res);
   };
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setFilterData3(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+
 
   const handleFilter3 = (value) => {
     const res = filterData3.filter((airport) =>
@@ -145,15 +120,6 @@ const HeroBox = () => {
     setData3(res);
   };
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setFilterData4(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
 
   const handleFilter4 = (value) => {
     const res = filterData4.filter((airport) =>
@@ -161,17 +127,8 @@ const HeroBox = () => {
     );
     setData4(res);
   };
-  // const [passengerClass, setPassengerClass] = useState([{First: 'Cabin', Second: 'Premium', Third: 'Economy'}]);
 
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setFilterData5(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+
 
   const handleFilter5 = (value) => {
     const res = filterData5.filter((airport) =>
@@ -179,16 +136,6 @@ const HeroBox = () => {
     );
     setData5(res);
   };
-
-  useEffect(() => {
-    fetch("search.json")
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setFilterData6(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
 
   const handleFilter6 = (value) => {
     const res = filterData6.filter((airport) =>
@@ -790,22 +737,6 @@ const HeroBox = () => {
                         type="text"
                         placeholder="City or Airport "
                       />
-                      {/* <div className={style.searchResult}>
-                        {data?.map((d, i) => (
-                          <div key={i}>
-                            <div
-                              onClick={() =>
-                                handleSelect(d.iata, d.name, d.country)
-                              }
-                              className={style.airport}
-                            >
-                              <h6 className="mr-3">{d.iata}</h6>
-                              <p>,{d.country}</p>
-                              <p>,{d.name}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div> */}
                     </div>
                   </div>
                   <div className={style.package2}>
@@ -819,22 +750,6 @@ const HeroBox = () => {
                         type="text "
                         placeholder="City or Airport "
                       />
-                      {/* <div className={style.searchResult}>
-                        {data2?.map((d, i) => (
-                          <div key={i}>
-                            <div
-                              onClick={() =>
-                                handleSelect2(d.iata, d.name, d.country)
-                              }
-                              className={style.airport}
-                            >
-                              <h6 className="mr-3">{d.iata}</h6>
-                              <p>,{d.country}</p>
-                              <p>,{d.name}</p>
-                            </div>
-                          </div>
-                        ))}
-                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -1027,22 +942,7 @@ const HeroBox = () => {
                       type="text "
                       placeholder="City or Airport "
                     />
-                    {/* <div className={style.searchResult}>
-                      {data?.map((d, i) => (
-                        <div key={i}>
-                          <div
-                            onClick={() =>
-                              handleSelect(d.iata, d.name, d.country)
-                            }
-                            className={style.airport}
-                          >
-                            <h6 className="mr-3">{d.iata}</h6>
-                            <p>,{d.country}</p>
-                            <p>,{d.name}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div> */}
+                
                   </div>
                 </div>
                 <div className={style.multiplePackage}>
@@ -1056,22 +956,6 @@ const HeroBox = () => {
                       type="text "
                       placeholder="City or Airport "
                     />
-                    {/* <div className={style.searchResult}>
-                      {data2?.map((d, i) => (
-                        <div key={i}>
-                          <div
-                            onClick={() =>
-                              handleSelect2(d.iata, d.name, d.country)
-                            }
-                            className={style.airport}
-                          >
-                            <h6 className="mr-3">{d.iata}</h6>
-                            <p>,{d.country}</p>
-                            <p>,{d.name}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div> */}
                   </div>
                 </div>
                 <div className={style.multiplePackage}>

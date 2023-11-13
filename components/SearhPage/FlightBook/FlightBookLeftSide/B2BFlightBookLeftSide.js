@@ -154,6 +154,7 @@ const B2BFlightBookLeftSide = () => {
         </AccordionDetails>
       </Accordion>
       <div className={style.dealWrap}>
+        
         <p className={style.mandatory}>
           *It is mandatory to upload copy of your valid passport and visa
         </p>

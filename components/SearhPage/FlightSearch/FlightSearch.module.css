@@ -67,10 +67,11 @@
 .flightBookBtn {
   color: white;
   background: #26ade2;
-  padding: 5px 15px;
   font-size: 14px;
   margin: 5px 0px;
   border-radius: 5px;
+  width: 100px;
+  height: 30px;
 }
 .flightDurationWrap {
   display: flex;

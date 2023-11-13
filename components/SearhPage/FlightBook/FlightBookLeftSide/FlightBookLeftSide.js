@@ -161,20 +161,26 @@ const FlightBookLeftSide = () => {
           <div>
             <p className="mb-2">Passport Copy (max 2MB)</p>
             <div className={style.upload}>
-              <span className={style.fileUploadIcon}>
-                <FileUpload className={style.uploadIcon} />
-              </span>
-              <button>Upload</button>
+              <input type="file" id="files" className="hidden" />
+              <label for="files">
+                <span className={style.fileUploadIcon}>
+                  <FileUpload className={style.uploadIcon} />
+                </span>
+                Upload
+              </label>
             </div>
             <button className={style.viewbtn}>View Passport </button>
           </div>
           <div>
             <p className="mb-2">Visa Copy (max 2MB)</p>
             <div className={style.upload}>
-              <span className={style.fileUploadIcon}>
-                <FileUpload className={style.uploadIcon} />
-              </span>
-              <button>Upload</button>
+              <input type="file" id="files" className="hidden" />
+              <label for="files">
+                <span className={style.fileUploadIcon}>
+                  <FileUpload className={style.uploadIcon} />
+                </span>
+                Upload
+              </label>
             </div>
             <button className={style.viewbtn}>View Visa </button>
           </div>
