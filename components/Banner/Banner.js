@@ -480,7 +480,7 @@ const Banner = ({ setResults }) => {
           <div className="flightTab">
             <Tabs
               defaultTabIndex={tabIndex}
-              onSelect={(index) => setTabIndex(index)}
+              onClick={(index) => setTabIndex(index)}
             >
               <TabList className={style.tabWrap}>
                 <Tab>One Way</Tab>

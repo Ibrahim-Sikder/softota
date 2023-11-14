@@ -6,8 +6,10 @@ import Vissa from "../../../components/Vissa/Visa";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
+import Reveiw from "../../../components/Vissa/Review/Reveiw";
 
 const index = () => {
+
   return (
     <section>
       <Helmet>
@@ -19,6 +21,7 @@ const index = () => {
       <Passion></Passion>
       <div className="my-10">
         <Travel></Travel>
+        <Reveiw></Reveiw>
       </div>
       <Footer></Footer>
       
