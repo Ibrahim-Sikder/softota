@@ -8,6 +8,7 @@ import Footer from "../../../components/Footer/Footer";
 import HotelTrending from "../../../components/Hotel/HotelTrending/HotelTrending";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
+import Reveiw from "../../../components/Vissa/Review/Reveiw";
 const HotelPage = () => {
   return (
     <section>
@@ -19,6 +20,7 @@ const HotelPage = () => {
       <Travel></Travel>
       <HotelTrending />
       <Customer></Customer>
+      <Reveiw/>
       <Footer />
     </section>
   );

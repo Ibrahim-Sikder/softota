@@ -8,6 +8,7 @@ import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
 import TrainBanner from "../../../components/Train/TrainBanner";
+import Reveiw from "../../../components/Vissa/Review/Reveiw";
 
 const index = () => {
   return (
@@ -21,6 +22,7 @@ const index = () => {
       <Travel></Travel>
       <TourDestination></TourDestination>
       <Customer></Customer>
+      <Reveiw/>
       <Footer />
     </section>
   );

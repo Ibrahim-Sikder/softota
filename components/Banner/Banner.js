@@ -479,7 +479,7 @@ const Banner = ({ setResults }) => {
           {/* tab2 */}
           <div className="flightTab">
             <Tabs
-              defaultTabIndex={tabIndex}
+          
               onClick={(index) => setTabIndex(index)}
             >
               <TabList className={style.tabWrap}>
@@ -653,12 +653,13 @@ const Banner = ({ setResults }) => {
 
                             <div className={style.classType}>
                               <select
+                              defaultValue={selected}
                                 onChange={(e) => {
                                   const classes = e.target.value;
                                   setClasses(classes);
                                 }}
                               >
-                                <option value="Premium" selected>
+                                <option value="Premium" >
                                   Cabin Class
                                 </option>
                                 <option value="Premium Econom">
@@ -872,12 +873,13 @@ const Banner = ({ setResults }) => {
 
                             <div className={style.classType}>
                               <select
+                              defaultValue={selected}
                                 onChange={(e) => {
                                   const classes = e.target.value;
                                   setClasses(classes);
                                 }}
                               >
-                                <option value="Premium" selected>
+                                <option value="Premium">
                                   Cabin Class
                                 </option>
                                 <option value="Premium Econom">
@@ -1024,12 +1026,13 @@ const Banner = ({ setResults }) => {
 
                             <div className={style.classType}>
                               <select
+                              defaultValue={selected}
                                 onChange={(e) => {
                                   const classes = e.target.value;
                                   setClasses(classes);
                                 }}
                               >
-                                <option value="Premium" selected>
+                                <option value="Premium">
                                   Cabin Class
                                 </option>
                                 <option value="Premium Econom">

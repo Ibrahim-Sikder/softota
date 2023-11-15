@@ -7,6 +7,7 @@ import BusBanner from "../../../components/BusBanner/BusBanner";
 import Footer from "../../../components/Footer/Footer";
 import Nav from "../../../components/NavBarr/Nav";
 import { Helmet } from "react-helmet-async";
+import Reveiw from "../../../components/Vissa/Review/Reveiw";
 
 const Busses = () => {
   return (
@@ -20,6 +21,7 @@ const Busses = () => {
       <Travel></Travel>
       <TourDestination></TourDestination>
       <Customer></Customer>
+      <Reveiw/>
       <Footer />
     </section>
   );
