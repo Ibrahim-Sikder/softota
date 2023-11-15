@@ -182,7 +182,7 @@ const Reveiw = () => {
                 className={style.swiperImg}
                 />
                 <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
                   <small>Business Man </small>
                 </div>
                </div>

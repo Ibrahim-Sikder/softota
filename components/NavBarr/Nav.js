@@ -11,7 +11,7 @@ import {
   TransferWithinAStation,
   BusAlert,
   DirectionsRailway,
-  LocalPhone
+  LocalPhone,
 } from "@mui/icons-material";
 import Typewriter from 'typewriter-effect';
 import { useRef } from "react";
@@ -133,7 +133,7 @@ const Nav = () => {
                     <p className="ml-3">Hotel</p>
                   </li>
                 </Link>
-                <Link href="/vissa">
+                <Link href="/visa">
                   <li>
                     <BookOnline className={style.menuIcon} />
 

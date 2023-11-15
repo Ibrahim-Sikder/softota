@@ -10,6 +10,8 @@ import TourDestination from "../../components/Tour/TourDestination";
 import { Helmet } from "react-helmet-async";
 import Mission from "../../components/Mission/Mission";
 import DisCount from "../../components/DisCount/DisCount";
+import Umra from "../../components/Umra/Umra";
+import Reveiw from "../../components/Vissa/Review/Reveiw";
 
 export const config = {
   unstable_runtimeJS: false,
@@ -22,12 +24,9 @@ export default function Home() {
         <title>Ghuronti || Flight </title>
       </Helmet>
       <Nav />
-      <Banner></Banner>
-      <TourDestination></TourDestination>
-      <DisCount />
-      <Travel></Travel>
-      <Mission />
-      <Customer></Customer>
+      <Umra></Umra>
+      <Reveiw/>
+      <Customer/>
       <Footer />
     </section>
   );

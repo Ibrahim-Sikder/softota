@@ -19,11 +19,11 @@
 .testimonialBox {
   position: relative;
   width: 100%;
-  color: #999;
+
 }
 .quoteIcon{
   font-size:45px;
-  color:#4AB449;
+  color:#fff;
 }
 .swiperImg{
   width:80px;

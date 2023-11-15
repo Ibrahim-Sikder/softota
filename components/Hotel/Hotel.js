@@ -357,7 +357,7 @@ const Hotel = () => {
             <div className={style.menuWrap}>
               <ul className={style.menu}>
                 <div className={style.wrapMenu}>
-                  <ActiveLink href="/hajjUmra">
+                  <ActiveLink href="/">
                     <li className={style.firstChild}>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -400,7 +400,7 @@ const Hotel = () => {
                       <p className="ml-3">Hajj & Umrah</p>
                     </li>
                   </ActiveLink>
-                  <ActiveLink href="/">
+                  <ActiveLink href="/flight">
                     <li>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -598,7 +598,7 @@ const Hotel = () => {
           <div className={style.mobileMenuWraps}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
-                <ActiveLink href="/">
+                <ActiveLink href="/flight">
                   <li className={style.activeLink}>
                     <Flight className={style.mobileMenuIcon} />
                     <p>Flight</p>

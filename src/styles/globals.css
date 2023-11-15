@@ -231,6 +231,8 @@ input::placeholder {
 .swiper-slide-active{
   filter:blur(0px) !important;
   z-index: 999 !important;
+  background-color: #4AB449 !important;
+ color:#fff !important;
 }
 
 
