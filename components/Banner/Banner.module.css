@@ -237,7 +237,7 @@ background:#19abe3;
 .adultsBtn span{
   width: 40px;
   height: 40px;
-  border: 1px solid #4ab449;
+  border: 1px solid #fff;
   font-size: 20px;
   margin-right: 10px;
   line-height: 20px;
@@ -245,8 +245,9 @@ background:#19abe3;
   display: flex;
   align-items: center;
   justify-content: center;
-  background:#fff;
+  background:#4ab449;
   cursor:pointer;
+  border-radius: 5px;
 }
 .dateOfChild{
   margin-top: 20px;
@@ -259,7 +260,11 @@ background:#19abe3;
  border:1px solid #ddd;
  padding:10px;
 font-size:14px;
+background-color: transparent;
 }
+.classType option{
+  background: #33AF8F;
+ }
 .addCity{
   display: flex;
   align-items: center;
@@ -295,8 +300,12 @@ font-size:14px;
 
 }
 
-
-
+.flightModal{
+  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  color: white;
+  width: 405px;
+  padding:30px;
+}
 .package,
 .package2,
 .package3,
@@ -511,10 +520,10 @@ box-shadow:none;
 .modalCloseBtn{
   background: transparent;
   position: absolute;
-  color: #42A242 !important;
+  color: #fff !important;
   right: 22px;
   top: 2px;
-  font-size: 20px !important;
+  font-size: 25px !important;
 }
 .modalSubmitBtn{
   background-image: linear-gradient(90deg, #4ab449, #19ABE3);

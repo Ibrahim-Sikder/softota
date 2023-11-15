@@ -14,6 +14,7 @@ import {
   LocalPhone
 } from "@mui/icons-material";
 import Typewriter from 'typewriter-effect';
+import { useRef } from "react";
 
 
 const Nav = () => {
@@ -21,7 +22,9 @@ const Nav = () => {
   const [mobileMenu, setMobileMenu] = useState(true);
   const toggleMobileMenu = () => {
     setMobileMenu((mobileMenu) => !mobileMenu);
+    navRef.current.classList.toggle("active");
   };
+  const navRef = useRef();
   useEffect(() => {
     const handleScroll = () => {
       setStickyMenu(window.scrollY > 250);
@@ -96,7 +99,7 @@ const Nav = () => {
 
       <div>
         {/* mobile menu */}
-        <div onClick={toggleMobileMenu} className={style.bar}>
+        <div onClick={toggleMobileMenu} ref={navRef}  className={style.bar}>
           <div>
             <span className={mobileMenu ? ` ` : `${style.bar1}`}></span>
             <span className={mobileMenu ? ` ` : `${style.bar2}`}></span>

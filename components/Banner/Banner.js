@@ -590,7 +590,8 @@ const Banner = ({ setResults }) => {
                     <div className={style.modalWrap}>
                       {/* You can open the modal using ID.showModal() method */}
 
-                      <dialog id="my_modal_3" className="modal">
+                      <dialog id="my_modal_3" className={style.flightModal}>
+                        <div className={style.modalWraps}>
                         <form method="dialog" className="modal-box">
                           <button className={style.modalCloseBtn}>✕</button>
                           <div>
@@ -682,6 +683,7 @@ const Banner = ({ setResults }) => {
                             />
                           </div>
                         </form>
+                        </div>
                       </dialog>
                     </div>
                   </div>

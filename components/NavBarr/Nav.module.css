@@ -317,9 +317,13 @@
   }
 
   .bar1{
-    transform: rotate(-45deg);
+    transform:translateY(8px) rotate(45deg);
+		-webkit-transform:translateY(8px) rotate(45deg);
+		-moz-transform:translateY(8px) rotate(45deg);
+		-ms-transform:translateY(8px) rotate(45deg);
+		-o-transform:translateY(8px) rotate(45deg);
       position: absolute;
-      top: -2px;
+      top: -14px;
       left: -12px;
       transition: all .5s linear(-0.47 -53.68%, 1 100%);
   }
@@ -330,12 +334,17 @@
     transition: all .5s linear(-0.47 -53.68%, 1 100%);
   }
   .bar3{
-    transform: rotate(45deg);
+		transform:translateY(-8px) rotate(-45deg)	;
+		-webkit-transform:translateY(-8px) rotate(-45deg)	;
+		-moz-transform:translateY(-8px) rotate(-45deg)	;
+		-ms-transform:translateY(-8px) rotate(-45deg)	;
+		-o-transform:translateY(-8px) rotate(-45deg)	;
     position: absolute;
-    top: -2px;
+    top: 1px;
     right: -18px;
     transition: all .5s linear(-0.47 -53.68%, 1 100%);
   }
+
 }
 @media only screen and (max-width: 500px) {
   .navigationMOb {
