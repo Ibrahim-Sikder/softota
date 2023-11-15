@@ -141,6 +141,44 @@
   .timelineArticle .content-right:before {
     display: none;
   }
+  .conferenceTimeline .conferenceCenterLine {
+    left: 51px;
+}
+.contentRightContainer:nth-child(2){
+  width:500px;
+}
+.contentLeftContainer:nth-child(3){
+  width:300px !important;
+}
+}
+@media only screen and (max-width: 500px) {
+  .contentRightContainer:nth-child(2){
+    width:330px;
+    padding-right:30px;
+  }
+  .contentLeftContainer:nth-child(3){
+    width:100% !important;
+  }
+  .timeLineImg{
+    width: 330px;
+}
+.timelineArticle .contentLeftContainer,
+.timelineArticle .contentRightContainer {
+  margin-left:45px;
+}
+.studentIcon {
+  font-size: 18px;
+}
+.timelineArticle .metaDate {
+  width: 35px;
+  height: 35px
+}
+.conferenceTimeline .conferenceCenterLine {
+  left: 39px;
+}
+
+
+
 }
 
 @media only screen and (max-width: 400px) {
