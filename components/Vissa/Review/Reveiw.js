@@ -44,122 +44,7 @@ const Reveiw = () => {
                 className={style.swiperImg}
                 />
                 <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
-                  <small>Business Man </small>
-                </div>
-               </div>
-              </div>
-            </div>
-          </div>
-         </div>
-        </SwiperSlide>
-        <SwiperSlide className={style.swiperSlide}>
-         <div className={style.testimonialBox}>
-          <FaQuoteLeft className={style.quoteIcon} />
-          <div className={style.content}>
-            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
-            <div className={style.details}>
-              <div className={style.imgBx}>
-               <div className="flex items-center">
-               <Image
-                alt='swiper'
-                src={user}
-                className={style.swiperImg}
-                />
-                <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
-                  <small>Business Man </small>
-                </div>
-               </div>
-              </div>
-            </div>
-          </div>
-         </div>
-        </SwiperSlide>
-        <SwiperSlide className={style.swiperSlide}>
-         <div className={style.testimonialBox}>
-          <FaQuoteLeft className={style.quoteIcon} />
-          <div className={style.content}>
-            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
-            <div className={style.details}>
-              <div className={style.imgBx}>
-               <div className="flex items-center">
-               <Image
-                alt='swiper'
-                src={user}
-                className={style.swiperImg}
-                />
-                <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
-                  <small>Business Man </small>
-                </div>
-               </div>
-              </div>
-            </div>
-          </div>
-         </div>
-        </SwiperSlide>
-        <SwiperSlide className={style.swiperSlide}>
-         <div className={style.testimonialBox}>
-          <FaQuoteLeft className={style.quoteIcon} />
-          <div className={style.content}>
-            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
-            <div className={style.details}>
-              <div className={style.imgBx}>
-               <div className="flex items-center">
-               <Image
-                alt='swiper'
-                src={user}
-                className={style.swiperImg}
-                />
-                <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
-                  <small>Business Man </small>
-                </div>
-               </div>
-              </div>
-            </div>
-          </div>
-         </div>
-        </SwiperSlide>
-        <SwiperSlide className={style.swiperSlide}>
-         <div className={style.testimonialBox}>
-          <FaQuoteLeft className={style.quoteIcon} />
-          <div className={style.content}>
-            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
-            <div className={style.details}>
-              <div className={style.imgBx}>
-               <div className="flex items-center">
-               <Image
-                alt='swiper'
-                src={user}
-                className={style.swiperImg}
-                />
-                <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
-                  <small>Business Man </small>
-                </div>
-               </div>
-              </div>
-            </div>
-          </div>
-         </div>
-        </SwiperSlide>
-        <SwiperSlide className={style.swiperSlide}>
-         <div className={style.testimonialBox}>
-          <FaQuoteLeft className={style.quoteIcon} />
-          <div className={style.content}>
-            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
-            <div className={style.details}>
-              <div className={style.imgBx}>
-               <div className="flex items-center">
-               <Image
-                alt='swiper'
-                src={user}
-                className={style.swiperImg}
-                />
-                <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
                   <small>Business Man </small>
                 </div>
                </div>
@@ -205,7 +90,122 @@ const Reveiw = () => {
                 className={style.swiperImg}
                 />
                 <div>
-                  <b className='block text-[#4AB449]'>Aminul Hoque </b>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
+                  <small>Business Man </small>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </SwiperSlide>
+        <SwiperSlide className={style.swiperSlide}>
+         <div className={style.testimonialBox}>
+          <FaQuoteLeft className={style.quoteIcon} />
+          <div className={style.content}>
+            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
+            <div className={style.details}>
+              <div className={style.imgBx}>
+               <div className="flex items-center">
+               <Image
+                alt='swiper'
+                src={user}
+                className={style.swiperImg}
+                />
+                <div>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
+                  <small>Business Man </small>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </SwiperSlide>
+        <SwiperSlide className={style.swiperSlide}>
+         <div className={style.testimonialBox}>
+          <FaQuoteLeft className={style.quoteIcon} />
+          <div className={style.content}>
+            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
+            <div className={style.details}>
+              <div className={style.imgBx}>
+               <div className="flex items-center">
+               <Image
+                alt='swiper'
+                src={user}
+                className={style.swiperImg}
+                />
+                <div>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
+                  <small>Business Man </small>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </SwiperSlide>
+        <SwiperSlide className={style.swiperSlide}>
+         <div className={style.testimonialBox}>
+          <FaQuoteLeft className={style.quoteIcon} />
+          <div className={style.content}>
+            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
+            <div className={style.details}>
+              <div className={style.imgBx}>
+               <div className="flex items-center">
+               <Image
+                alt='swiper'
+                src={user}
+                className={style.swiperImg}
+                />
+                <div>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
+                  <small>Business Man </small>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </SwiperSlide>
+        <SwiperSlide className={style.swiperSlide}>
+         <div className={style.testimonialBox}>
+          <FaQuoteLeft className={style.quoteIcon} />
+          <div className={style.content}>
+            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
+            <div className={style.details}>
+              <div className={style.imgBx}>
+               <div className="flex items-center">
+               <Image
+                alt='swiper'
+                src={user}
+                className={style.swiperImg}
+                />
+                <div>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
+                  <small>Business Man </small>
+                </div>
+               </div>
+              </div>
+            </div>
+          </div>
+         </div>
+        </SwiperSlide>
+        <SwiperSlide className={style.swiperSlide}>
+         <div className={style.testimonialBox}>
+          <FaQuoteLeft className={style.quoteIcon} />
+          <div className={style.content}>
+            <p className='my-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab voluptatibus velit non eos, unde omnis temporibus totam cupiditate doloremque distinctio quidem sed, rerum delectus eaque quae? Pariatur sint tempora rem, facere .</p>
+            <div className={style.details}>
+              <div className={style.imgBx}>
+               <div className="flex items-center">
+               <Image
+                alt='swiper'
+                src={user}
+                className={style.swiperImg}
+                />
+                <div>
+                  <b className='block text-[#fff]'>Aminul Hoque </b>
                   <small>Business Man </small>
                 </div>
                </div>

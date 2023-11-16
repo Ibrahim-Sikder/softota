@@ -1,3 +1,6 @@
+.trainSearchWrap{
+    background:#ddd;
+}
 .busWrap{
     width: 100%;
     padding: 20px 50px;
@@ -10,10 +13,44 @@
      font-weight: bold;
      font-size: 20px;   
 }
+.topBtnGroup{
+    display: flex;
+    width: 215px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.nextBtn, .prevBtn{
+    width: 105px;
+    background: #fff;
+    height: 35px;
+    color: black;
+    display: flex;
+    align-items: center;
+    color:#4AB449;
+   
+}
+.prevBtn{
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 13px;
+}
+.nextBtn{
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 13px;
+    display: flex;
+    justify-content: flex-end;
+}
 
 .searchBusLeftSide{
     width:25%;;
 }
+.seatTypeWrap{
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 280px;
+    margin-bottom:20px;
+}
+
 .searchBusRightSide{
     width:75%;
 }
@@ -25,7 +62,7 @@
     margin-bottom: 8px;
 }
 .allBusCardWrap{
-
+    background:#fff;
     box-shadow: #0BB811 0px 1px 1px;
     padding: 20px;
     border-radius: 10px;

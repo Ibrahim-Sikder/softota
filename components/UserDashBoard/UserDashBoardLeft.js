@@ -392,6 +392,12 @@ const UserDashBoardLeft = () => {
                                 Privacy policy
                               </Active>
                             </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/review">
+                                <Security className={style.flightIcons} />
+                               Review
+                              </Active>
+                            </li>
                           </ul>
                         </div>
                       </Typography>

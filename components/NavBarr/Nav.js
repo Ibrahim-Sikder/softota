@@ -27,7 +27,7 @@ const Nav = () => {
   const navRef = useRef();
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 250);
+      setStickyMenu(window.scrollY > 2500000);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
