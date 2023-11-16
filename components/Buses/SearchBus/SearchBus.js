@@ -21,42 +21,7 @@ const SearchBus = () => {
       departureTime: "10.30AM",
       arrivalTime: "12.20PM",
       seats: 33,
-    },
-    {
-      id: 1,
-      name: "Saintmartin Hyundai (Robi Express)",
-      price: 1500.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 20,
-    },
-
-    {
-      id: 1,
-      name: "Hanif Enterprise",
-      price: 800.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 40,
-    },
-
-    {
-      id: 1,
-      name: "SHYAMOLI NR TRAVELS",
-      price: 900.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 24,
-    },
-
-    {
-      id: 1,
-      name: "SHYAMOLI NR TRAVELS",
-      price: 900.0,
-      departureTime: "10.30AM",
-      arrivalTime: "12.20PM",
-      seats: 33,
-    },
+    }
   ];
 
   const [selectedSeats, setSelectedSeats] = useState([]);
@@ -248,7 +213,7 @@ const SearchBus = () => {
                     <div className=" my-5">
                      <b>Choose your seat</b>
                      <hr className="mt-2"/>
-                      <div className="mt-5 grid grid-cols-2 gap-4">
+                      <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
                         <Seats
                           handleSeatSelection={handleSeatSelection}
                           selectedSeats={selectedSeats}

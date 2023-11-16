@@ -80,11 +80,7 @@ const SelectedSeats = ({ selectedSeats }) => {
             Sayedabad Bus Point (11:55 PM){" "}
           </option>
         </select>
-        <input
-          className={style.phoneNumber}
-          type="text"
-          placeholder="Phone Number"
-        />
+       
       </form>
 
       <div className="flex items-center justify-between my-5">

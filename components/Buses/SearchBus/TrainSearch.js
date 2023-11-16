@@ -2,7 +2,7 @@
 
 import React, { useRef, useState } from "react";
 import style from "./SearchBus.module.css";
-import bus from "../../../public/assets/bus.png";
+import train from "../../../public/assets/train.png";
 import Image from "next/image";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import SelectedSeats from "../../Train/SearcTrain/Seats/SelectedSeat";
@@ -40,7 +40,7 @@ const TrainSearch = () => {
         <div>
           <strong className="block">Departure </strong>
           <div className="flex items-center">
-            <Image loading="lazy" alt="bus" src={bus} width={50} height={50} />
+            <Image loading="lazy" alt="bus" src={train} width={60} height={50} />
             <div>
               <h6>Dhaka - Bandarban</h6>
               <small className="block">19 October, 2023</small>
@@ -49,13 +49,13 @@ const TrainSearch = () => {
         </div>
         <div className={style.topBtnGroup}>
           <div className={style.prevBtn}>
-            <FaAngleLeft  />
+            <FaAngleLeft className={style.trainIcon}/>
             <button>PREV DAY</button>
           </div>
 
          <div className={style.nextBtn}>
          <button>NEXT DAY</button>
-          <FaAngleRight />
+          <FaAngleRight className={style.trainIcon}/>
          </div>
         </div>
         <button className={style.modifyBtn}>Modify Search</button>

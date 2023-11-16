@@ -1,17 +1,8 @@
-.phoneNumber{
-    width: 50%;
-    border: 1px solid #4AB449;
-    border-radius: 5px;
-    margin-top: 19px;
-    height: 33px;
-    padding-left: 5px;
-}
-.phoneNumber::placeholder{
-    color: black !important;
-}
+
+
 .continoueBtn{
     transition:all .5s ease-in-out;
-    width: 100px;
+    width: 300px;
     height: 32px;
     border-radius: 20px;
     font-size: 14px;

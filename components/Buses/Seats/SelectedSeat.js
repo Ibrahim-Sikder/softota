@@ -82,6 +82,16 @@ const SelectedSeats = ({ selectedSeats }) => {
         <input
           className={style.phoneNumber}
           type="text"
+          placeholder="Name"
+        />
+        <input
+          className={style.phoneNumber}
+          type="email"
+          placeholder="Email"
+        />
+         <input
+          className={style.phoneNumber}
+          type="text"
           placeholder="Phone Number"
         />
       </form>

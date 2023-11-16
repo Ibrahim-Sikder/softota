@@ -18,7 +18,7 @@ const Seats = ({ handleSeatSelection, selectedSeats }) => {
 
   return (
     <div className='w-1/3 mx-auto'>
-      <div className='mt-5 grid grid-cols-2 gap-4 border p-4 rounded-lg shadow'>
+      <div className='mt-5 grid grid-cols-2 gap-2 md:gap-4 border p-4 rounded-lg shadow'>
         {seats.map((seat, index) => {
           return (
             <div

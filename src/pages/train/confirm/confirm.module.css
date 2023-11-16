@@ -1,5 +1,4 @@
 .purchasWrap{
-
     width:800px;
     margin:0 auto;
     padding:30px;
@@ -11,16 +10,13 @@
     align-items: center;
 }
 .journyDetails{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: #4AB449 0px 5px 15px;
     padding:20px;
     margin-bottom:10px;
 }
 .journyDetails small{
     display: block;
     margin-bottom:10px;
-}
-.passengerInfoRightSide{
-    
 }
 .passengerInfoRightSide label{
     display: block;
@@ -30,5 +26,24 @@
     border-radius: 5px;
     width: 299px;
     height: 35px;
+    padding-left:5px;
 
+}
+.confirmBtn{
+    background-color: #4AB449;
+    width: 300px;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+
+}
+
+@media only screen and (max-width:768px){
+    .purchasWrap{
+        width:100%;
+    }
+    .passengerInforWrap{
+        display: block;
+    }
 }

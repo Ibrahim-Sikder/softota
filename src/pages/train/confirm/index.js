@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../../../../components/NavBarr/Nav";
 import Footer from "../../../../components/Footer/Footer";
 import style from "./confirm.module.css";
+import { FaInfo } from "react-icons/fa";
 const confirm = () => {
   return (
     <div>
@@ -23,7 +24,7 @@ const confirm = () => {
               <hr />
               <div>
                 <small>
-                  Cash : <strong>TA</strong>
+                  Coach : <strong>TA</strong>
                 </small>
                 <small>
                   Seat Type: <strong>SHOVAN</strong>
@@ -36,8 +37,25 @@ const confirm = () => {
               <div className={style.journyDetails}>
                 <h3 className="text-xl font-bold">Fare Details </h3>
                 <div className="flex items-center justify-between">
-                    <strong>Total Price</strong>
-                    <span>300Tk</span>
+                    <small>Total Price</small>
+                    <small>300৳</small>
+                </div>
+                <div className="flex items-center justify-between">
+                    <small>VAT</small>
+                    <small>30৳</small>
+                </div>
+                <div className="flex items-center justify-between">
+                    <small>Service Charge</small>
+                    <small>30৳</small>
+                </div>
+                <hr className="my-3"/>
+                <div className="flex items-center justify-between">
+                    <small>Total</small>
+                    <small>3300৳</small>
+                </div>
+                <div className="flex items-center">
+                <FaInfo/>
+                <small className="text-red-500 mt-3">Please note that service charge is non refundable.</small>
                 </div>
               </div>
             </div>
@@ -65,6 +83,7 @@ const confirm = () => {
                   <label>Email </label>
                   <input type="Email" />
                 </div>
+                <button className={style.confirmBtn}>Confirm Purchase</button>
               </div>
             </div>
           </div>

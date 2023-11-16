@@ -18,6 +18,7 @@
     width: 215px;
     margin: 0 auto;
     justify-content: space-between;
+    font-size: 14px;
 }
 .nextBtn, .prevBtn{
     width: 105px;
@@ -114,6 +115,9 @@ height: 40px !important;
     background: #4AB449;
     padding: 20px 50px;
     color: white;
+}
+.trainIcon{
+    font-size: 20px;
 }
 .policy{
     display: flex;
