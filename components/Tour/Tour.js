@@ -87,7 +87,7 @@ const BusBanner = () => {
         <div className={style.heroBoxMain}>
           {/* menubar */}
           <div className={style.desktopMenu}>
-            <ul className={style.menu}>
+          <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/">
                   <li className={style.firstChild}>
@@ -191,7 +191,7 @@ const BusBanner = () => {
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
-                    <svg
+                  <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={45}
                       height={45}
@@ -329,7 +329,7 @@ const BusBanner = () => {
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/flight">
-                  <li className={style.activeLink}>
+                  <li>
                     <Flight className={style.mobileMenuIcons} />
                     <p className="ml-3">Flight</p>
                   </li>

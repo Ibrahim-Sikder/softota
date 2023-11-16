@@ -205,7 +205,7 @@ const Banner = ({ setResults }) => {
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
           <div className={style.menuWraps}>
-            <ul className={style.menu}>
+          <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/">
                   <li className={style.firstChild}>
@@ -251,7 +251,7 @@ const Banner = ({ setResults }) => {
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/flight">
-                  <li className={style.activeLink}>
+                  <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={40}
@@ -447,7 +447,7 @@ const Banner = ({ setResults }) => {
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/flight">
-                  <li className={style.activeLink}>
+                  <li>
                     <Flight className={style.mobileMenuIcon} />
                     <p>Flight</p>
                   </li>

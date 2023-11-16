@@ -26,7 +26,7 @@ const Umra = () => {
           <div className={style.menuWrap}>
           <ul className={style.menu}>
               <div className={style.wrapMenu}>
-                <ActiveLink href="/hajjUmra">
+                <ActiveLink href="/">
                   <li className={style.firstChild}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -69,8 +69,8 @@ const Umra = () => {
                     <p className="ml-3">Hajj & Umrah</p>
                   </li>
                 </ActiveLink>
-                <ActiveLink href="/">
-                  <li className={style.activeLink}>
+                <ActiveLink href="/flight">
+                  <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={40}
@@ -264,8 +264,8 @@ const Umra = () => {
           <div className={style.mobileMenuWraps}>
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
-                <ActiveLink href="/">
-                  <li className={style.activeLink}>
+                <ActiveLink href="/flight">
+                  <li>
                     <Flight className={style.mobileMenuIcons} />
                     <p>Flight</p>
                   </li>

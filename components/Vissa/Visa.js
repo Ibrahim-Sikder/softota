@@ -72,7 +72,7 @@ const visa = () => {
                   </li>
                 </ActiveLink>
                 <ActiveLink href="/flight">
-                  <li className={style.activeLink}>
+                  <li>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={40}
@@ -268,7 +268,7 @@ const visa = () => {
             <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/flight">
-                  <li className={style.activeLink}>
+                  <li>
                     <Flight className={style.mobileMenuIcons} />
                     <p>Flight</p>
                   </li>
