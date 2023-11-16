@@ -2,6 +2,7 @@ import { LuArmchair } from "react-icons/lu";
 import PropTypes from "prop-types";
 import { PriorityHigh } from "@mui/icons-material";
 import style from "./Seats.module.css";
+import Link from "next/link";
 const SelectedSeats = ({ selectedSeats }) => {
   return (
     <div className="">
@@ -87,7 +88,7 @@ const SelectedSeats = ({ selectedSeats }) => {
       </form>
 
       <div className="flex items-center justify-between my-5">
-        <button className={style.continoueBtn}>Continoue </button>
+       <Link href='/train/confirm'> <button className={style.continoueBtn}>Continoue Purchase</button></Link>
         <small className="underline cursor-pointer hover:text-[#0BB811]">
           Close
         </small>

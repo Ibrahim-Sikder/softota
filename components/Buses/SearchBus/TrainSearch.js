@@ -5,8 +5,8 @@ import style from "./SearchBus.module.css";
 import bus from "../../../public/assets/bus.png";
 import Image from "next/image";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import Seats from "../Seats/Seats";
-import SelectedSeats from "../Seats/SelectedSeat";
+import SelectedSeats from "../../Train/SearcTrain/Seats/SelectedSeat";
+import Seats from "../../Train/SearcTrain/Seats/Seats";
 const TrainSearch = () => {
   const [chooseSeat, setChooseSeat] = useState("A1", "৳1500", "Economy");
   const [showDetails, setShowDetails] = useState(false);
@@ -197,7 +197,7 @@ const TrainSearch = () => {
                           handleSeatSelection={handleSeatSelection}
                           selectedSeats={selectedSeats}
                         />
-                        <SelectedSeats selectedSeats={selectedSeats} />
+                        <SelectedSeats selectedSeats={selectedSeats}/>
                       </div>
                     </div>
                   </div>
