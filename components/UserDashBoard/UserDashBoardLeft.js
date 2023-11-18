@@ -290,7 +290,7 @@ const UserDashBoardLeft = () => {
                                   <Typography>
                                     <ul>
                                       <li className="flex">
-                                        <Active href="/b2bdashboard/manage/hajjUmrah">
+                                        <Active href="/b2bdashboard/manage/hajj">
                                           Hajj Package
                                         </Active>
                                       </li>
@@ -395,7 +395,7 @@ const UserDashBoardLeft = () => {
                             <li>
                               <Active href="/b2bdashboard/manage/review">
                                 <Security className={style.flightIcons} />
-                               Review
+                                Review
                               </Active>
                             </li>
                           </ul>

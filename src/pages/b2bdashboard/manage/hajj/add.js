@@ -9,7 +9,7 @@ import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import { useState } from "react";
 
 const HajjUmrah = () => {
-  const [editorValue, setEditorValue] = useState('');
+  const [editorValue, setEditorValue] = useState("");
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -51,7 +51,6 @@ const HajjUmrah = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  
                   <div>
                     <label> Sub Title </label>
                     <input
@@ -72,7 +71,6 @@ const HajjUmrah = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  
                   <div>
                     <label>Price </label>
                     <input
@@ -92,7 +90,26 @@ const HajjUmrah = () => {
                     />
                   </div>
                 </div>
-               
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Requirement List </label>
+                    <input
+                      name="price"
+                      placeholder="Requirement List "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Popular Hajj Package </label>
+                    <input
+                      name="price"
+                      placeholder="Popular Hajj Package"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     <label for="files">
@@ -109,9 +126,9 @@ const HajjUmrah = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                <TextEditor  value={editorValue} onChange={setEditorValue}/>
+                  <TextEditor value={editorValue} onChange={setEditorValue} />
                 </div>
-               
+
                 <div className={styles.formControl}>
                   <button className={styles.submitBtn} type="submit">
                     Submit
