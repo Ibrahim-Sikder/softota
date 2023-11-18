@@ -1,7 +1,6 @@
-
-.hotelDetailWraps{
-    width:1250px;
-    padding: 0px 50px;
+.hotelDetailWraps {
+  width: 1250px;
+  padding: 0px 50px;
 }
 .hotelDetailWrap {
   display: grid;
@@ -12,21 +11,20 @@
   text-align: center;
 }
 .detailRightSide {
- 
-    grid-column: span 3 / span 3;
-    margin-left: 10px;
+  grid-column: span 3 / span 3;
+  margin-left: 10px;
+}
+.hotelDetailTopBar {
+  width: 1250px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0px;
+  align-items: center;
+}
 
-}
-.hotelDetailTopBar{
-    width: 1250px;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0px;
-    align-items: center;
-}
-.hotelDetailTopBar button{
+.hotelDetailTopBar button {
   width: 200px;
-  background: #4AB449;
+  background: #4ab449;
   height: 50px;
   color: white;
   border-radius: 25px;
@@ -51,13 +49,11 @@
 }
 
 .leftSideSimg {
- 
-    width: 50%;
-    height: 205px;
-    margin-bottom: 0px;
-    border-radius: 5px;
-    overflow: hidden;
-
+  width: 50%;
+  height: 205px;
+  margin-bottom: 0px;
+  border-radius: 5px;
+  overflow: hidden;
 }
 .leftSideSimg:nth-child(1) {
   margin-right: 10px;
@@ -75,24 +71,21 @@
   height: 415px;
 }
 .leftSideText {
-    text-align: left;
-    font-size: 14px;
-    margin-top: 36px;
-    margin: 40px auto;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 36px;
+  margin: 40px auto;
   padding-top: 50px;
-
 }
 
 .rightSide {
- 
-    background: white;
-    padding: 20px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 407px;
-    padding: 25px 20px;
-    margin: 0 auto;
-    border-radius: 5px;
-
+  background: white;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 407px;
+  padding: 25px 20px;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 .rightSideIcon {
   width: 15px !important;
@@ -112,10 +105,10 @@
   border-radius: 3px;
 }
 .rightSideImg {
-    width: 410px;
-    margin: 0 auto;
-    margin-top: 25px;
-    border-radius: 5px;
+  width: 410px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 5px;
 }
 .checkIcon {
   color: #4ab449 !important;
@@ -123,19 +116,18 @@
   margin-right: 4px;
   font-size: 18px;
 }
-.travel{
-    width:100%;
+.travel {
+  width: 100%;
 }
 
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 1024px) {
+  .hotelDetailWraps {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .hotelDetailTopBar {
+    width: 100%;
+  }
   .leftSideDetail {
     grid-column: span 7 / span 7;
     text-align: center;
@@ -160,8 +152,7 @@
     margin: 0 auto;
   }
   .rightSideImg {
-    margin-top: 80px;
-    margin-left: 66px;
+    width: 308px;
   }
   .groupImg {
     width: 100%;
@@ -182,15 +173,6 @@
     padding: 30px 20px;
     margin: 27px auto;
   }
-  .rightSideImg {
-    margin-top: 20px;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
-  .rightSideImg {
-    margin-left: 0px;
-  }
 }
 @media only screen and (max-width: 500px) {
   .groupImgWrap {
@@ -198,5 +180,18 @@
   }
   .groupImg {
     flex-wrap: wrap;
+  }
+  .rightSide {
+    width: 100%;
+  }
+  .hotelDetailTopBar {
+    display: block;
+  }
+  .topImagae {
+    height: auto;
+  }
+  .hotelDetailTopBar button {
+    width: 140px;
+    height: 39px;
   }
 }
