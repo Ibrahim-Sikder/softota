@@ -4,22 +4,22 @@
 .flightToggle {
   background: #e6f8ff !important;
   color: black !important;
-  font-size:14px !important;
+  font-size: 14px !important;
 }
-.bookingReview{
+.bookingReview {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin: 20px 0px;
-  padding-right:5px;
+  padding-right: 5px;
 }
-.flightSection{
+.flightSection {
   display: flex;
   justify-content: space-between;
 }
-.searchAllFlight{
+.searchAllFlight {
   display: flex;
   justify-content: space-between;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 .paymentMethod {
   width: 100%;
@@ -63,12 +63,10 @@
 .reviewIcon {
   font-size: 14px !important;
 }
-.policy{
- 
+.policy {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
-
 }
 .flightDetail {
   display: flex;
@@ -205,7 +203,6 @@
   width: 100%;
   background: #e9f6e9;
   padding: 20px;
-
 }
 .icon {
   width: 30px;
@@ -235,25 +232,25 @@
   color: white;
   margin-bottom: 30px;
 }
-.uploadWrap{
+.uploadWrap {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 21px auto;
 }
-.fileUploadIcon{
+.fileUploadIcon {
   color: #fff;
-  background: #19ABE3;
+  background: #19abe3;
   border-radius: 50%;
   width: 25px !important;
   height: 25px !important;
   margin-right: 5px;
   line-height: 25px;
 }
-.upload{
+.upload {
   width: 300px;
   margin-right: 19px;
-  background: #E6F8FF;
+  background: #e6f8ff;
   text-align: center;
   height: 49px;
   display: flex;
@@ -262,19 +259,19 @@
   border-radius: 5px;
   font-weight: bold;
 }
-.mandatory{
+.mandatory {
   text-align: center;
-  background-color: #FFF6ED;
+  background-color: #fff6ed;
   width: 90%;
   margin: 0 auto;
   padding: 18px 0px;
   font-size: 20px;
 }
-.uploadIcon{
+.uploadIcon {
   font-size: 20px !important;
 }
-.viewbtn{
-  background: #4AB449;
+.viewbtn {
+  background: #4ab449;
   color: white;
   font-size: 14px;
   width: 135px;
@@ -282,130 +279,119 @@
   height: 32px;
   border-radius: 3px;
 }
-.expandIcon{
-  color:black !important;
+.expandIcon {
+  color: black !important;
 }
-.policyWrap{
-  width:100%px;
+.policyWrap {
+  width: 100%px;
 }
-.upload label{
+.upload label {
   cursor: pointer;
 }
-@media only screen and (max-width:1024px){
+@media only screen and (max-width: 1024px) {
   .uploadWrap {
     display: block;
+  }
+  .upload {
+    width: 100%;
+  }
+  .contactField {
+    width: 260px;
+    margin-right: 5px;
+  }
 }
-.upload {
-  width: 100%;
-}
-.contactField{
-  width: 260px;
-  margin-right: 5px;
-}
-
-
-}
-@media only screen and (max-width:768px){
-  .passengerInfo{
+@media only screen and (max-width: 768px) {
+  .passengerInfo {
     display: block;
   }
   .contactField {
     width: 267px;
     margin-right: 5px;
+  }
+  .insurancePackage {
+    width: 100%;
+  }
 }
-.insurancePackage {
-  width: 100%;
-}
-
-
-}
-@media only screen and (max-width:600px){
+@media only screen and (max-width: 600px) {
   .dealWrap {
+    width: 100%;
+  }
+  .flightToggle {
     width: 400px;
-    margin-left: -90px;
-}
-.travalerInfoWrap{
-  margin-left: -71px !important;
-}
-.flightToggle{
-  width: 400px;
-  margin-left: -88px !important;
-}
-.inputFieldWrap {
-  display: block;
-}
-.contactField {
-  width: 336px;
-}
-.contactDetail {
- display: block;
-}
-.inputLabel{
-  font-size:14px;
-}
-.hotDeal {
-  width: 100%;
-}
-.bookingReview{
-  display: block;
-  margin-left: -84px;
-
-}
-.flightSection{
-  display: block;
-}
-.searchAllFlight {
-  width: 359px;
-  margin-left: -80px;
-  margin-top: 6px;
-}
-.policyWrap{
-  width: 348px;
-  margin-left: -80px;
-}
-.mandatory {
-  font-size: 14px;
-}
-.insurance {
-  width: 397px;
-  margin-left: -103px;
-}
-.insurancePackage {
-  display: block;
-}
-.flightBookDetail {
-  width: 420px !important;
+  }
+  .inputFieldWrap {
+    display: block;
+  }
+  .contactField {
+    width: 330px;
+  }
+  .contactDetail {
+    display: block;
+  }
+  .inputLabel {
+    font-size: 14px;
+  }
+  .hotDeal {
+    width: 100%;
+  }
+  .bookingReview {
+    display: block;
+  }
+  .flightSection {
+    display: block;
+  }
+  .searchAllFlight {
+    width: 359px;
+    margin-top: 6px;
+    padding-left: 10px;
+  }
+  .policyWrap {
+    width: 348px;
+    padding-left: 10px;
+  }
+  .mandatory {
+    font-size: 14px;
+  }
+  .insurance {
+    width: 397px;
+  }
+  .insurancePackage {
+    display: block;
+  }
+  .flightBookDetail {
+    width: 420px !important;
+    box-shadow: none !important;
+  }
 }
 
-}
-
-@media only screen and (max-width:400px){
+@media only screen and (max-width: 400px) {
   .flightToggle {
     width: 351px;
-}
-.searchAllFlight {
-  width: 350px;
-  margin-left: -102px;
-}
-.nonStop{
-  display: flex;
-  justify-content: space-between;
-  width: 418px;
-  margin-left: 23px;
-}
-.policyWrap{
-  width: 315px;
-}
-.dealWrap {
-  width: 370px;
-  margin-left: -92px;
-}
-.viewbtn {
-  font-size: 12px;
-  width: 97px;
-  height: 29px;
-}
+  }
+  .searchAllFlight {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+  .nonStop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .policyWrap,
+  .dealWrap,
+  .insurance {
+    width: 100% !important;
+  }
 
-
-
+  .viewbtn {
+    font-size: 12px;
+    width: 97px;
+    height: 29px;
+  }
+  .contactField {
+    width: 300px;
+  }
+  .flightBookDetail {
+    width: 100% !important;
+  }
 }

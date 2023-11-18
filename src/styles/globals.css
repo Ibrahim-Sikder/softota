@@ -278,7 +278,9 @@ input::placeholder {
   .mobileMenuWraps p{
     margin-left:0px;
    }
-  
+   .css-15v22id-MuiAccordionDetails-root {
+    padding: 1px 0px 3px;
+}
   label + .css-v4u5dn-MuiInputBase-root-MuiInput-root {
     margin-top: 16px;
     width: 50% !important;

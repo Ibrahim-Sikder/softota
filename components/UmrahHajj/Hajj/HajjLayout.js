@@ -13,7 +13,9 @@ import Nav from "../../NavBarr/Nav";
 import Footer from "../../Footer/Footer";
 import dynamic from "next/dynamic";
 import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
+import { useEffect } from "react";
 const HajjLayout = ({ children }) => {
+
   return (
     <div>
       <Nav />
@@ -179,6 +181,7 @@ const HajjLayout = ({ children }) => {
             </div>
           </div>
         </aside>
+
         <main className={style.packageRightSide}>{children}</main>
       </div>
       <Footer />

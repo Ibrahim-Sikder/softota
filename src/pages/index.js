@@ -6,6 +6,7 @@ import Nav from "../../components/NavBarr/Nav";
 
 import { Helmet } from "react-helmet-async";
 import Umra from "../../components/Umra/Umra";
+import Reveiw from "../../components/Vissa/Review/Reveiw";
 
 export const config = {
   unstable_runtimeJS: false,
@@ -19,7 +20,7 @@ export default function Home() {
       </Helmet>
       <Nav />
       <Umra></Umra>
-      <Customer/>
+      <Reveiw />
       <Footer />
     </section>
   );

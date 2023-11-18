@@ -365,6 +365,7 @@ const FlightBookLeftSide = () => {
             </AccordionDetails>
           </Accordion>
         </div>
+
         <div className="my-8">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
@@ -522,7 +523,7 @@ const FlightBookLeftSide = () => {
                   </div>
                 </div>
                 <div className="mt-10">
-                  <div className="w-full flex  justify-between">
+                  <div className="w-full  flex  justify-between">
                     <div className="flex items-center">
                       <input className="mr-2" type="checkbox" />
                       <small>Yes, I want to secure my journey</small>
