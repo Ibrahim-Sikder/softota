@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./ToursReserve.module.css";
-import tours from "../../../public/assets/tourImage11.jpg";
-import tours2 from "../../../public/assets/tourImage5.jpg";
-import tours3 from "../../../public/assets/tourImage9.jpg";
+import tours from "../../../public/assets/tourImage3.jpg";
+import tours2 from "../../../public/assets/tourImage4.jpg";
+import tours3 from "../../../public/assets/tourImage12.jpg";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -27,7 +27,7 @@ import "lightgallery/css/lg-thumbnail.css";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 
-const ToursReserve = () => {
+const TourPackageBook = () => {
   return (
     <div className={style.TourReserveWrap}>
       <div className={style.galleryWrap}>
@@ -467,7 +467,7 @@ const ToursReserve = () => {
                   </div>
                   <small>(No additional taxes or booking fees)</small>
                   <div className={style.checkout}>
-                    <Link href="/tours/checkout">
+                    <Link href="/tours/package-checkout">
                       {" "}
                       <button> Continoue </button>
                     </Link>
@@ -483,4 +483,4 @@ const ToursReserve = () => {
   );
 };
 
-export default ToursReserve;
+export default TourPackageBook;

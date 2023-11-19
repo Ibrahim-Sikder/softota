@@ -13,9 +13,8 @@ import {
   DirectionsRailway,
   LocalPhone,
 } from "@mui/icons-material";
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
 import { useRef } from "react";
-
 
 const Nav = () => {
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -27,7 +26,7 @@ const Nav = () => {
   const navRef = useRef();
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 2500000);
+      setStickyMenu(window.scrollY > 250);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -37,9 +36,11 @@ const Nav = () => {
     <section className={style.navBarMainWrap}>
       <div className={style.navbarMain}>
         <div className={style.navbarBanner}>
-         <LocalPhone className={style.phoneIcon}/>
+          <LocalPhone className={style.phoneIcon} />
           <h2>+88-01885-071-488</h2>
-          <Link href='/contact'><p>Contact Us</p></Link>
+          <Link href="/contact">
+            <p>Contact Us</p>
+          </Link>
         </div>
         <div className={`${stickyMenu ? `${style.sticky}` : ` `}`}>
           <div className={style.navigationMain}>
@@ -48,7 +49,7 @@ const Nav = () => {
                 <div className={style.logo}>
                   <Link href="/">
                     <Image
-                     loading="lazy"
+                      loading="lazy"
                       className={style.logoImg}
                       src={Logo}
                       alt="Picture of the author"
@@ -62,19 +63,20 @@ const Nav = () => {
                   <p className={style.aboutHiden}>About Us</p>
                 </Link>
               </div>
-             
+
               <div className={style.inputDiv}>
                 <Typewriter
-                className={style.typeWiter}
-                options={{
-                  strings: ['Search Flight, Hotel, Visa, & Tours package !', 'Search Tours, Buses, Trains , Hajj & Umrah package !'],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+                  className={style.typeWiter}
+                  options={{
+                    strings: [
+                      "Search Flight, Hotel, Visa, & Tours package !",
+                      "Search Tours, Buses, Trains , Hajj & Umrah package !",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
               </div>
-
-
 
               <div className={style.inputButtons}>
                 <Link
@@ -99,7 +101,7 @@ const Nav = () => {
 
       <div>
         {/* mobile menu */}
-        <div onClick={toggleMobileMenu} ref={navRef}  className={style.bar}>
+        <div onClick={toggleMobileMenu} ref={navRef} className={style.bar}>
           <div>
             <span className={mobileMenu ? ` ` : `${style.bar1}`}></span>
             <span className={mobileMenu ? ` ` : `${style.bar2}`}></span>

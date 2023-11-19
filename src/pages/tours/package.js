@@ -22,7 +22,7 @@ const TourPackage = () => {
       <div>
         <div className={style.tourImgWrap}>
           <Image
-          loading="lazy"
+            loading="lazy"
             className={style.tourImg}
             src={tour}
             alt="tour7"
@@ -42,7 +42,7 @@ const TourPackage = () => {
                   className="h-72 md:h-96 shadow-2xl block group rounded-3xl  relative mx-2 overflow-hidden "
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour2}
@@ -73,11 +73,11 @@ const TourPackage = () => {
               </div>
               <div className="h-72  tourPackag md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-3 rounded-3xl  ">
                 <Link
-                  href="/details"
+                  href="/tours/book-tours-package"
                   className="h-72 md:h-96 block group relative mx-2 rounded-3xl overflow-hidden shadow-lg"
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour}
@@ -108,11 +108,11 @@ const TourPackage = () => {
               </div>
               <div className="h-72  tourPackag md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-3 rounded-3xl  ">
                 <Link
-                  href="/details"
+                  href="/tours/book-tours-package"
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour3}
@@ -143,11 +143,11 @@ const TourPackage = () => {
               </div>
               <div className="h-72   tourPackag md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-3 rounded-3xl  ">
                 <Link
-                  href="/details"
+                  href="/tours/book-tours-package"
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour4}
@@ -178,11 +178,11 @@ const TourPackage = () => {
               </div>
               <div className="h-72  tourPackag md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-3 rounded-3xl  ">
                 <Link
-                  href="/details"
+                  href="/tours/book-tours-package"
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour5}
@@ -213,11 +213,11 @@ const TourPackage = () => {
               </div>
               <div className="h-72  tourPackag md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-3 rounded-3xl  ">
                 <Link
-                  href="/details"
+                  href="/tours/book-tours-package"
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={tour6}
@@ -248,11 +248,11 @@ const TourPackage = () => {
               </div>
               <div className="h-72  tourPackag md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-3 rounded-3xl  ">
                 <Link
-                  href="/details"
+                  href="/tours/book-tours-package"
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={see}
@@ -283,11 +283,11 @@ const TourPackage = () => {
               </div>
               <div className="h-72  tourPackag md:h-96 w-full md:w-1/2 lg:w-1/4 mb-4 lg:mb-3 rounded-3xl  ">
                 <Link
-                  href="/details"
+                  href="/tours/book-tours-package"
                   className="h-72 rounded-3xl  md:h-96 block group relative mx-2 overflow-hidden shadow-lg"
                 >
                   <Image
-                  loading="lazy"
+                    loading="lazy"
                     className="absolute z-0 object-cover w-full rounded-3xl h-72 md:h-96 transform duration-500 group-hover:scale-150"
                     alt="house"
                     src={see3}
@@ -318,32 +318,32 @@ const TourPackage = () => {
               </div>
             </div>
             <div className={style.pagination}>
-          <div className={style.paginationBtn}>
-            <button>
-              <ArrowBack className={style.arrowLeft} />
-            </button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>
-              <ArrowForward className={style.arrowRight} />
-            </button>
-          </div>
-        </div>
-          </div>
-          <div className="px-4 mb-5 ">
-            <h3 className="text-3xl md:text-left text-center font-bold">Related Package </h3>
-            <RelatedTourPackage/>
-            <div className={style.seeMore}>
-                <button>See More </button>
-                <ArrowForward className={style.seeMorIcon} />
+              <div className={style.paginationBtn}>
+                <button>
+                  <ArrowBack className={style.arrowLeft} />
+                </button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+                <button>
+                  <ArrowForward className={style.arrowRight} />
+                </button>
+              </div>
             </div>
           </div>
-        
+          <div className="px-4 mb-5 ">
+            <h3 className="text-3xl md:text-left text-center font-bold">
+              Related Package{" "}
+            </h3>
+            <RelatedTourPackage />
+            <div className={style.seeMore}>
+              <button>See More </button>
+              <ArrowForward className={style.seeMorIcon} />
+            </div>
+          </div>
         </div>
-     
       </div>
       <Footer />
     </div>
