@@ -143,7 +143,7 @@ const UserDashBoardLeft = () => {
                       </li>
                       <li>
                         <DirectionsBusFilled className={style.flightIcons} />
-                        Buses
+                        Bus
                       </li>
                       <li>
                         <Train className={style.flightIcons} /> Trains
@@ -261,7 +261,7 @@ const UserDashBoardLeft = () => {
                                 <DirectionsBusFilled
                                   className={style.flightIcons}
                                 />{" "}
-                                Buses
+                                Bus
                               </Active>
                             </li>
                             <li>
@@ -646,7 +646,7 @@ const UserDashBoardLeft = () => {
                                 <DirectionsBusFilled
                                   className={style.flightIcons}
                                 />{" "}
-                                Buses
+                                Bus
                               </li>
                               <li>
                                 {" "}

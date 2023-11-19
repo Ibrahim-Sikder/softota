@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic'; // Import dynamic from Next.js
-
-// Use dynamic import to load react-quill only on the client-side
+import dynamic from 'next/dynamic';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
-import 'react-quill/dist/quill.snow.css'; // Import styles
+import 'react-quill/dist/quill.snow.css'; 
 
 const TextEditor = ({ value, onChange }) => {
   const [quill, setQuill] = useState(null);

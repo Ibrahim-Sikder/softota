@@ -4,10 +4,11 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
+import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import React, { useState, useEffect } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
-const Update = ({ value, onChange }) => {
+const Train = ({ value, onChange }) => {
   const [editorValue, setEditorValue] = useState("");
   const [quill, setQuill] = useState(null);
   return (
@@ -18,25 +19,88 @@ const Update = ({ value, onChange }) => {
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
             <h2 className="text-3xl font-bold text-center">
-              Tours Data Update
+              Train Data Input{" "}
             </h2>
             <div className="w-full mx-auto">
               <form>
                 <div className={styles.formControl}>
                   <div>
-                    <label>Title </label>
+                    <label> Enter Country </label>
+                    <select className={styles.inputField}>
+                      <option selected value="Bangladesh">
+                        Bangladesh
+                      </option>
+                      <option value="Thailand">Thailand</option>
+                      <option value="Malaysia">Malaysia</option>
+                      <option value="Indonesia">Indonesia</option>
+                      <option value="India">India</option>
+                      <option value="China">China</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="Iran">Iran</option>
+                      <option value="Vietnam">Vietnam</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="Japan">Japan</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label> Enter City </label>
+                    <select className={styles.inputField}>
+                      <option value="Dhaka">Dhaka</option>
+                      <option value="Bangkok">Bangkok</option>
+                      <option value="Tokyo">Tokyo</option>
+                      <option value="Kuala Lumpur">Kuala Lumpur</option>
+                      <option value="Jakarta">Jakarta</option>
+                      <option value="Beijing">Beijing</option>
+                      <option value="Singapore Island">Singapore Island</option>
+                      <option value="Iran">Iran</option>
+                      <option value="Hanoi">Hanoi</option>
+                      <option value="Tehran">Tehran</option>
+                      <option value="Islamabad">Islamabad</option>
+                    </select>
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label> Enter City </label>
+                    <select className={styles.inputField}>
+                      <option value="Dhaka">Dhaka</option>
+                      <option value="Bangkok">Bangkok</option>
+                      <option value="Tokyo">Tokyo</option>
+                      <option value="Kuala Lumpur">Kuala Lumpur</option>
+                      <option value="Jakarta">Jakarta</option>
+                      <option value="Beijing">Beijing</option>
+                      <option value="Singapore Island">Singapore Island</option>
+                      <option value="Iran">Iran</option>
+                      <option value="Hanoi">Hanoi</option>
+                      <option value="Tehran">Tehran</option>
+                      <option value="Islamabad">Islamabad</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label> Address </label>
+                    <input
+                      name="address"
+                      placeholder="Address"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Category Type </label>
                     <input
                       name="category"
-                      placeholder="Title "
+                      placeholder="Category Type "
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
                   <div>
-                    <label>Sub Title</label>
+                    <label>Product Category</label>
                     <input
                       name="productCategory"
-                      placeholder="Sub Title "
+                      placeholder="Product Category "
                       type="text"
                       className={styles.inputField}
                     />
@@ -64,70 +128,19 @@ const Update = ({ value, onChange }) => {
                 </div>
                 <div className={styles.formControl}>
                   <div>
-                    <label> What is included </label>
+                    <label> Title </label>
                     <input
                       name="title"
-                      placeholder="What is included "
+                      placeholder="Title"
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
                   <div>
-                    <label> What is excluded </label>
+                    <label> Sub Title </label>
                     <input
                       name="subTitle"
-                      placeholder="What is excluded "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Itinary </label>
-                    <input
-                      name="title"
-                      placeholder="Itinary"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Category Type </label>
-                    <input
-                      name="subTitle"
-                      placeholder="Category Type  "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Product Category </label>
-                    <input
-                      name="title"
-                      placeholder="Product Category "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Price Low To Hight </label>
-                    <input
-                      name="subTitle"
-                      placeholder="Price Low To Hight "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Price Hight To Low </label>
-                    <input
-                      name="title"
-                      placeholder=" Price Hight To Low  "
+                      placeholder=" Sub Title"
                       type="text"
                       className={styles.inputField}
                     />
@@ -178,7 +191,7 @@ const Update = ({ value, onChange }) => {
 
                 <div className={styles.formControl}>
                   <button className={styles.submitBtn} type="submit">
-                    Update
+                    Submit
                   </button>
                 </div>
               </form>
@@ -190,4 +203,4 @@ const Update = ({ value, onChange }) => {
   );
 };
 
-export default dynamic(() => Promise.resolve(Update), { ssr: false });
+export default dynamic(() => Promise.resolve(Train), { ssr: false });

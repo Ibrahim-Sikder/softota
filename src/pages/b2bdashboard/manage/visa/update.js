@@ -10,6 +10,7 @@ import "react-quill/dist/quill.snow.css";
 const Update = ({ value, onChange }) => {
   const [editorValue, setEditorValue] = useState("");
   const [quill, setQuill] = useState(null);
+
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -17,26 +18,152 @@ const Update = ({ value, onChange }) => {
       <div className="mt-5">
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
-            <h2 className="text-3xl font-bold text-center">
-              Tours Data Update
-            </h2>
+            <h2 className="text-3xl font-bold text-center">Visa Data Input </h2>
             <div className="w-full mx-auto">
               <form>
                 <div className={styles.formControl}>
                   <div>
-                    <label>Title </label>
+                    <label> Enter Country </label>
+                    <select className={styles.inputField}>
+                      <option selected value="Bangladesh">
+                        Bangladesh
+                      </option>
+                      <option value="Thailand">Thailand</option>
+                      <option value="Malaysia">Malaysia</option>
+                      <option value="Indonesia">Indonesia</option>
+                      <option value="India">India</option>
+                      <option value="China">China</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="Iran">Iran</option>
+                      <option value="Vietnam">Vietnam</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="Japan">Japan</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label> Enter City </label>
+                    <select className={styles.inputField}>
+                      <option value="Dhaka">Dhaka</option>
+                      <option value="Bangkok">Bangkok</option>
+                      <option value="Tokyo">Tokyo</option>
+                      <option value="Kuala Lumpur">Kuala Lumpur</option>
+                      <option value="Jakarta">Jakarta</option>
+                      <option value="Beijing">Beijing</option>
+                      <option value="Singapore Island">Singapore Island</option>
+                      <option value="Iran">Iran</option>
+                      <option value="Hanoi">Hanoi</option>
+                      <option value="Tehran">Tehran</option>
+                      <option value="Islamabad">Islamabad</option>
+                    </select>
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label> Visa Type </label>
+                    <select className={styles.inputField}>
+                      <option value="Select Visa Type ">
+                        Select Visa Type
+                      </option>
+                      <option value="Tourist Visa">Tourist Visa</option>
+                      <option value="Student Visa">Student Visa</option>
+                      <option value="Business Visa">Business Visa</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label> Traveller Type </label>
+                    <select className={styles.inputField}>
+                      <option value="Select Traveller Type">
+                        Select Traveller Type{" "}
+                      </option>
+                      <option value="Govt. Job Holder">Govt. Job Holder</option>
+                      <option value="Private Job Holder">
+                        Private Job Holder
+                      </option>
+                      <option value="Student">Student</option>
+                      <option value="Non Student">Non Student</option>
+                      <option value="House Wife">House Wife </option>
+                      <option value="Advocate Lawyer">Advocate Lawyer </option>
+                      <option value="Doctor">Doctor </option>
+                      <option value="Unemployment">Unemployment </option>
+                      <option value="Business Man">Business Man </option>
+                    </select>
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Entry </label>
                     <input
-                      name="category"
-                      placeholder="Title "
+                      name="Entry"
+                      placeholder="Entry"
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
                   <div>
-                    <label>Sub Title</label>
+                    <label>Duration </label>
                     <input
-                      name="productCategory"
-                      placeholder="Sub Title "
+                      name="Duration"
+                      placeholder="Duration"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Processing Time </label>
+                    <input
+                      name="process"
+                      placeholder="Processing Time "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Embassy Fee </label>
+                    <input
+                      name="coast"
+                      placeholder="Embassy Fee"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Agent Fee </label>
+                    <input
+                      name="process"
+                      placeholder="Agent Fee"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Agency Fee </label>
+                    <input
+                      name="coast"
+                      placeholder="Agency Fee"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Service Charge </label>
+                    <input
+                      name="process"
+                      placeholder="Service Charge"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Stya </label>
+                    <input
+                      name="stay"
+                      placeholder="Stay"
                       type="text"
                       className={styles.inputField}
                     />
@@ -53,81 +180,10 @@ const Update = ({ value, onChange }) => {
                     />
                   </div>
                   <div>
-                    <label>Price </label>
+                    <label>Requirement</label>
                     <input
-                      name="price"
-                      placeholder="Price"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> What is included </label>
-                    <input
-                      name="title"
-                      placeholder="What is included "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> What is excluded </label>
-                    <input
-                      name="subTitle"
-                      placeholder="What is excluded "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Itinary </label>
-                    <input
-                      name="title"
-                      placeholder="Itinary"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Category Type </label>
-                    <input
-                      name="subTitle"
-                      placeholder="Category Type  "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Product Category </label>
-                    <input
-                      name="title"
-                      placeholder="Product Category "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Price Low To Hight </label>
-                    <input
-                      name="subTitle"
-                      placeholder="Price Low To Hight "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Price Hight To Low </label>
-                    <input
-                      name="title"
-                      placeholder=" Price Hight To Low  "
+                      name="requirement"
+                      placeholder="Requirement"
                       type="text"
                       className={styles.inputField}
                     />
@@ -178,7 +234,7 @@ const Update = ({ value, onChange }) => {
 
                 <div className={styles.formControl}>
                   <button className={styles.submitBtn} type="submit">
-                    Update
+                    Submit
                   </button>
                 </div>
               </form>
