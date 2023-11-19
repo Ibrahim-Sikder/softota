@@ -5,4 +5,8 @@
 .modal {
   width: 1200px !important;
   border-radius: 20px !important;
+  padding: 50px !important;
+}
+.employModalWrap {
+  padding: 50px;
 }
