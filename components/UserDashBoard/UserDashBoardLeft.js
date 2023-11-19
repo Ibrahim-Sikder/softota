@@ -512,7 +512,7 @@ const UserDashBoardLeft = () => {
                                 </div>
                               </li>
                             </Active>
-                            <Active href="/b2bdashboard/agent/role">
+                            <Active href="/b2bdashboard/agent/admin">
                               <li>
                                 <div className="flex items-center">
                                   <RuleFolder className={style.flightIcons} />

@@ -2,6 +2,7 @@ import React from "react";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
 import styles from "../../manage/manage.module.css";
 import style from "../agent.module.css";
+import Link from "next/link";
 const Employ = () => {
   const users = [
     {
@@ -241,9 +242,11 @@ const Employ = () => {
                 </span>
               </td>
               <td>
-                <span className="bg-[#19ABE3] text-white font-xs text-xs p-2 rounded">
-                  Edit
-                </span>
+                <Link href="/b2bdashboard/b2bagent/employee/edit">
+                  <span className="bg-[#19ABE3] text-white font-xs text-xs p-2 rounded">
+                    Edit
+                  </span>
+                </Link>
               </td>
               <td>
                 <span className="bg-[#19ABE3] text-white font-xs text-xs p-2 rounded">

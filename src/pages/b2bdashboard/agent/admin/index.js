@@ -1,10 +1,10 @@
 import React from "react";
-import B2BdashboardLayout from "../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import styles from "../manage/manage.module.css";
-import style from "../b2bagent/agent.module.css";
+import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
+import styles from "../../manage/manage.module.css";
+import style from "../../b2bagent/agent.module.css";
 import TextField from "@mui/material/TextField";
 
-const Role = () => {
+const Admin = () => {
   const users = [
     {
       id: "01",
@@ -108,7 +108,7 @@ const Role = () => {
   return (
     <B2BdashboardLayout>
       <div className="w-full h-[50px] bg-[#19ABE3] text-white flex items-center justify-center ">
-        <h2 className="text-center text-2xl font-bold">Make Role </h2>
+        <h2 className="text-center text-2xl font-bold">Make Admin </h2>
       </div>
       <div className="flex items-center justify-between w-full px-5">
         <div>
@@ -121,7 +121,7 @@ const Role = () => {
               className="flex items-center justify-center font-bold  mb-5 mt-10 w-32 rounded text-white h-10 bg-[#4AB449]"
               onClick={() => window.my_modal_3.showModal()}
             >
-              + Add role
+              + Add Admin
             </button>
           </div>
         </div>
@@ -129,7 +129,7 @@ const Role = () => {
 
       {/* show modal */}
       <div className={styles.modal}>
-        <dialog id="my_modal_3" className="">
+        <dialog id="my_modal_3" className={style.employModalWrap}>
           <h3 className="text-center font-bold text-2xl">Create Role </h3>
           <form method="dialog" className="modal-box">
             <button className="w-10 h-10 rounded bg-[#19ABE3] text-white">
@@ -214,7 +214,6 @@ const Role = () => {
           </form>
         </dialog>
       </div>
-      
 
       <table className="table  lg:table-auto columns-xl break-after-column mt-8 mb-24 ">
         <thead className={styles.tableWrap}>
@@ -262,4 +261,4 @@ const Role = () => {
   );
 };
 
-export default Role;
+export default Admin;
