@@ -1,8 +1,9 @@
 import React from "react";
-import B2BdashboardLayout from "../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import styles from "../manage/manage.module.css";
-import style from "../b2bagent/agent.module.css";
+import styles from "../../manage/manage.module.css";
+import style from "../../b2bagent/agent.module.css";
 import TextField from "@mui/material/TextField";
+import Link from "next/link";
+import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
 
 const Role = () => {
   const users = [
@@ -117,104 +118,14 @@ const Role = () => {
         </div>
         <div>
           <div className="flex items-center justify-center w-full">
-            <button
-              className="flex items-center justify-center font-bold  mb-5 mt-10 w-32 rounded text-white h-10 bg-[#4AB449]"
-              onClick={() => window.my_modal_3.showModal()}
-            >
-              + Add role
-            </button>
+            <Link href="/b2bdashboard/b2bagent/role/add">
+              <button className="flex items-center justify-center font-bold  mb-5 mt-10 w-32 rounded text-white h-10 bg-[#4AB449]">
+                + Add role
+              </button>
+            </Link>
           </div>
         </div>
       </div>
-
-      {/* show modal */}
-      <div className={styles.modal}>
-        <dialog id="my_modal_3" className="">
-          <h3 className="text-center font-bold text-2xl">Create Role </h3>
-          <form method="dialog" className="modal-box">
-            <button className="w-10 h-10 rounded bg-[#19ABE3] text-white">
-              ✕
-            </button>
-            <form>
-              <div className={styles.formControl}>
-                <div>
-                  <label>Role Name </label>
-                  <input
-                    name="code"
-                    placeholder="Role Name"
-                    type="text"
-                    className={styles.inputField}
-                  />
-                </div>
-                <div>
-                  <label>Status</label>
-                  <select className={styles.inputField}>
-                    <option selected value="Select Status">
-                      Select Status
-                    </option>
-                    <option value="Manager">Active</option>
-                    <option value="Team Lead">Inactive</option>
-                  </select>
-                </div>
-              </div>
-
-              <table className="table  lg:table-auto columns-xl break-after-column mt-8 mb-10 ">
-                <thead className={styles.tableWrap}>
-                  <tr className={style.alluserList}>
-                    <th>
-                      <input type="checkbox" />
-                    </th>
-                    <th>SL No </th>
-                    <th> Page Access </th>
-                    <th>Create </th>
-                    <th>Edit </th>
-                    <th>View </th>
-                    <th>Delete </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {accessData.map((access, i) => (
-                    <tr key={access.id}>
-                      <td>
-                        {" "}
-                        <input type="checkbox" />
-                      </td>
-                      <td> {i + 1} </td>
-                      <td> {access.page}</td>
-                      <td>
-                        {" "}
-                        <input type="checkbox" />
-                      </td>
-                      <td>
-                        {" "}
-                        <input type="checkbox" />
-                      </td>
-                      <td>
-                        {" "}
-                        <input type="checkbox" />
-                      </td>
-                      <td>
-                        {" "}
-                        <input type="checkbox" />
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-
-              <div className="flex items-center justify-center">
-                <button
-                  className="w-56 h-10 text-center border text-white bg-[#19ABE3] rounded-full"
-                  type="submit"
-                >
-                  Create Role
-                </button>
-              </div>
-            </form>
-          </form>
-        </dialog>
-      </div>
-
       <table className="table  lg:table-auto columns-xl break-after-column mt-8 mb-24 ">
         <thead className={styles.tableWrap}>
           <tr className={style.alluserList}>
