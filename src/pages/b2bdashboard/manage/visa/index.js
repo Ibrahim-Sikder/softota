@@ -19,7 +19,7 @@ const Visa = () => {
           <div className={style.addHotel}>
             <Link href="/b2bdashboard/manage/visa/add">
               <button>
-                <span className="text-xl font-bold">+</span> Add Hotel
+                <span className="text-xl font-bold">+</span> Add Visa
               </button>
             </Link>
           </div>
