@@ -13,7 +13,6 @@
   box-sizing: border-box;
   background-position: center;
   margin-bottom: 112px;
-
 }
 
 .bannerWrap h2 {
@@ -28,21 +27,19 @@
   background: #c6e8f1 0.6;
   z-index: 9999 !important;
   margin: 0 auto;
-  background:#19ABE3;
+  background: #19abe3;
   border-radius: 37px;
   position: relative;
   top: 28px;
   overflow: hidden;
 }
 
-
-.calendarTow{
+.calendarTow {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   top: -186px;
   z-index: 99999 !important;
-
 }
 .package,
 .package2,
@@ -99,23 +96,22 @@
   font-size: 14px;
 }
 
-.calendarInput{
+.calendarInput {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor:pointer;
-
+  cursor: pointer;
 }
-.calendarInput input{
+.calendarInput input {
   font-size: 12px !important;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-.calendarIcon{
+.calendarIcon {
   font-size: 22px !important;
 }
 
-.calendar{
+.calendar {
   position: absolute;
   z-index: 99 !important;
 }
@@ -177,7 +173,7 @@
 .menu {
   display: flex;
   justify-content: space-between;
-  background: #4AB449;
+  background: #4ab449;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   color: #fff;
@@ -212,74 +208,6 @@
   z-index: 999 !important;
 }
 
-.destination {
-  width: 1100px;
-  margin-left: 250px;
-  overflow: hidden;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-.tourTrending {
-  background: #ffffff;
-  box-shadow: #4ab449 0px 5px 10px, #19abe3 0px 7px 7px;
-  width: 262px !important;
-  margin-right: 20px;
-  height: 440px;
-  text-align: center;
-  margin-bottom: 5px;
-}
-.swiperImg {
-  height: 245px !important;
-  transform: scale(1);
-}
-.swiperImg:hove {
-  height: 300px !important;
-  transform: scale(1.5);
-}
-
-.pricePackage span {
-  font-size: 14px;
-  color: #4ab449;
-}
-.pricePackage {
-  text-align: center;
-  padding: 0 3px;
-}
-.pricePackage h6 {
-  font-size: 16px;
-  margin-top: 15px;
-}
-
-.tourDay {
-  background: #4ab449;
-  width: 25px;
-  display: block;
-  font-size: 10px;
-  height: 25px;
-  text-align: center;
-  line-height: 25px;
-  position: absolute;
-  right: 37px;
-  color: white;
-  border-radius: 50%;
-  bottom: 2px;
-  color: white !important;
-}
-.viewDetailBtn button {
-  background: #4ab449;
-  place-content: center;
-  place-items: center;
-  margin-top: 16px;
-  padding: 8px 25px;
-  color: white;
-  font-size: 14px;
-  border-radius: 3px;
-}
-
-.destination {
-  margin-bottom: 94px;
-  height: auto;
-}
 .trendingHead {
   width: 800px;
   margin: 50px auto;
@@ -288,172 +216,117 @@
   overflow: hidden;
 }
 
-.swiperImg {
-  height: 280px !important;
-  transform: scale(1);
-}
-.swiperImg:hove {
-  height: 300px !important;
-  transform: scale(1.5);
-}
 
-.trending img {
-  width: 100%;
-}
-.trendingHead {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.trendingHead h2 {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 54px;
-  color: #092e3d;
-  justify-content: center;
-}
-.trendingHead p {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  color: #738187;
-}
-
-.pricePackage {
-  text-align: center;
-}
-.pricePackage h6 {
-  font-size: 16px;
-  font-size: 16px;
-  height: 50px;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 10px;
-}
-
-.viewDetailBtn button {
-  background: #4ab449;
-  place-items: center;
-  padding: 8px 0px;
-  color: white;
-  border-radius: 5px;
-  font-size: 14px;
-  width: 135px;
-}
 
 .mobileMenuWraps {
   display: none;
 }
-.showModalIcon{
+.showModalIcon {
   font-size: 25px;
   margin-top: 17px;
   cursor: pointer;
-
 }
-.groupIcon{
+.groupIcon {
   color: white !important;
   font-size: 30px;
   margin-right: 13px;
 }
-.guestRoom{
+.guestRoom {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hotelModal{
-  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+.hotelModal {
+  background-image: linear-gradient(168deg, #19abe3, #4ab449) !important;
   color: white;
   width: 405px;
   padding-bottom: 46px;
   margin-right: 260px;
   margin-top: 220px;
 }
-.hotelModalCloseBtn{
+.hotelModalCloseBtn {
   color: white;
   width: 32px;
   font-size: 24px;
 }
-.guestRoomWrap{
+.guestRoomWrap {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.adultChildWrap{
+.adultChildWrap {
   display: flex;
   width: 100%;
   justify-content: center;
   margin: 10px 0px;
 }
 
-.adultIncrementDecrement, .childIncrementDecrement{
+.adultIncrementDecrement,
+.childIncrementDecrement {
   display: flex;
   justify-content: space-between;
   width: 144px;
   border: 1px solid #ddd;
   padding: 7px 15px;
 }
-.roomSelect{
+.roomSelect {
   width: 293px;
   border: 1px solid #ddd;
   padding: 5px;
   margin: 0 auto;
   display: flex;
-  background-image: linear-gradient( 168deg,#19abe3, #4AB449) !important;
+  background-image: linear-gradient(168deg, #19abe3, #4ab449) !important;
   color: white;
 }
-.roomSelect option{
+.roomSelect option {
   color: white !important;
-  background: #169ACC !important;
+  background: #169acc !important;
 }
-.adultIncrementDecrement small, .childIncrementDecrement small{
+.adultIncrementDecrement small,
+.childIncrementDecrement small {
   font-size: 20px;
   cursor: pointer;
 }
-.childIncrementDecrement{
-margin-left:5px;
+.childIncrementDecrement {
+  margin-left: 5px;
 }
-.package select, .package2 select{
-  width:100%;
+.package select,
+.package2 select {
+  width: 100%;
   background-color: transparent;
 }
-.package select option , .package2 select option{
-  background: #169ACC;
+.package select option,
+.package2 select option {
+  background: #169acc;
   color: white;
 }
-.mobileMenuIcon{
+.mobileMenuIcon {
   transform: rotate(50deg);
 }
-.mobileMenuIcons, .mobileMenuIcon{
+.mobileMenuIcons,
+.mobileMenuIcon {
   font-size: 30px !important;
-  margin-right:5px;
+  margin-right: 5px;
 }
 
 @media only screen and (max-width: 1024px) {
   .heroBoxMain {
     width: 95%;
   }
-  .tourTrending {
-    width: 245px !important;
-  }
-  .package, .date {
+
+  .package,
+  .date {
     left: 70px;
   }
-  .package2, .package4 {
+  .package2,
+  .package4 {
     right: 70px;
   }
 
-
   .date2 {
     left: 278px;
-  }
-  .destination {
-    width: 100%;
-    margin-left: 37px;
   }
 
   .trending {
@@ -472,12 +345,10 @@ margin-left:5px;
   .bannerWrap h2 {
     font-size: 30px;
   }
-  .hotelModal{
+  .hotelModal {
     margin-right: 84px;
     margin-top: 83px;
-}
-
-
+  }
 }
 @media only screen and (max-width: 768px) {
   .bannerWrap h2 {
@@ -506,18 +377,15 @@ margin-left:5px;
   .menu li {
     height: 100%;
     width: 100%;
-    border:none;
+    border: none;
   }
   .lastChild {
     border-right: none !important;
   }
 
-  .tourTrending {
-    width: 240px !important;
-  }
   .package {
     top: 250px;
-    left:85px;
+    left: 85px;
   }
   .heroBoxBtn {
     top: 299px;
@@ -529,16 +397,12 @@ margin-left:5px;
     height: 490px;
   }
 
-  .destination {
-    width: 100%;
-    margin-left: 58px;
-  }
   .trending {
     height: 471px;
   }
-.package2{
-  right:85px;
-}
+  .package2 {
+    right: 85px;
+  }
   .package2,
   .package {
     top: 120px;
@@ -591,11 +455,6 @@ margin-left:5px;
     display: block;
   }
 
-  .destination {
-    width: 100%;
-    margin-left: 13px;
-    text-align: center;
-  }
   .trendingHead {
     width: 100%;
     padding: 10px;
@@ -612,9 +471,7 @@ margin-left:5px;
     width: 195px;
     margin-top: 13px;
   }
-  .tourTrending {
-    width: 290px !important;
-  }
+
   .package4 {
     top: 274px;
     right: 38px;
@@ -665,20 +522,17 @@ margin-left:5px;
     left: 198px;
     border-left: none;
   }
-  .tourTrending {
-    width: 100%;
-  }
+
   .hotelModal {
     margin-right: 34px;
     margin-top: 91px;
     width: 83% !important;
-}
-.mobileMenuIcons, .mobileMenuIcon{
-  font-size: 20px !important;
-  margin-right:0px;
-}
-
-
+  }
+  .mobileMenuIcons,
+  .mobileMenuIcon {
+    font-size: 20px !important;
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -692,20 +546,14 @@ margin-left:5px;
 
   .package4 {
     right: 30px;
-  
+  }
 }
 
-}
-
-@media only screen and (max-width:370px){
-  .date2{
+@media only screen and (max-width: 370px) {
+  .date2 {
     left: 171px;
-}
-.package4 {
-  right: 24px;
-
-}
-
-
-
+  }
+  .package4 {
+    right: 24px;
+  }
 }

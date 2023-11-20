@@ -1,17 +1,17 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import user from "../../../public/assets/review.png";
-import style from "./Review.module.css";
-import { EffectCoverflow, Pagination } from "swiper/modules";
-import { FaQuoteLeft } from "react-icons/fa";
-import Image from "next/image";
-import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
+import React, { useRef, useState } from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import "swiper/css"
+import "swiper/css/effect-coverflow"
+import "swiper/css/pagination"
+import user from "../../../public/assets/review.png"
+import style from "./Review.module.css"
+import { EffectCoverflow, Pagination } from "swiper/modules"
+import { FaQuoteLeft } from "react-icons/fa"
+import Image from "next/image"
+import SectionTitle from "../../Shared/SectionTitle/SectionTitle"
 const Reveiw = () => {
   return (
-    <section className="my-24">
+    <section className="mb-10">
       <div className={style.swiperSliderWrap}>
         <SectionTitle heading="What Our Client Say "></SectionTitle>
         <Swiper
@@ -257,7 +257,7 @@ const Reveiw = () => {
         </Swiper>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Reveiw;
+export default Reveiw

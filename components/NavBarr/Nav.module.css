@@ -104,10 +104,10 @@
   background: #4ab449;
   color: #fff;
   border-radius: 5px;
-  transition: all 0.5s ease;
+  transition: all 0.5s cubic-bezier(0.07, 0.09, 0.82, 1.02);
 }
 .signUpBtn button:hover {
-  border-radius: 25px;
+  border-radius: 20px;
 }
 .userIcon {
   font-size: 50px;
@@ -118,19 +118,20 @@
   z-index: 99999999;
 }
 .userInfo {
-  width: 300px;
-  background-image: linear-gradient(168deg, #19abe3, #4ab449) !important;
+  width: 270px;
+  box-shadow: #4ab449 0px 5px 15px;
   position: absolute;
   z-index: 999999 !important;
   padding: 13px 15px 7px 15px;
   top: 50px;
-  left: -167px;
+  left: -70px;
   border-radius: 5px;
-  color: #fff;
   border: 1px solid #fff;
-  visibility: hidden;
+  background: #fff;
+  display: none;
+  transition: all 0.5s cubic-bezier(0.07, 0.09, 0.82, 1.02);
 }
-.iconWrap:hover .userInfo {
+.accountWrap:hover .userInfo {
   display: block !important;
 }
 .userInfo ul li {
