@@ -7,6 +7,7 @@ import Travel from "../../../components/Travel/Travel";
 import Mission from "../../../components/Mission/Mission";
 import Customer from "../../../components/Customer/Customer";
 import Footer from "../../../components/Footer/Footer";
+import Reveiw from "../../../components/Vissa/Review/Reveiw";
 
 const index = () => {
   return (
@@ -17,6 +18,7 @@ const index = () => {
       <DisCount />
       <Travel></Travel>
       <Mission />
+      <Reveiw/>
       <Customer></Customer>
       <Footer />
     </div>

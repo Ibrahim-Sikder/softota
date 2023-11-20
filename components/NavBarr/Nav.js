@@ -1,9 +1,9 @@
-import React, { useContext, useState } from "react";
-import Logo from "../../public/assets/logo.png";
-import Link from "next/link";
-import style from "./Nav.module.css";
-import Image from "next/image";
-import { useEffect } from "react";
+import React, { useContext, useState } from "react"
+import Logo from "../../public/assets/logo.png"
+import Link from "next/link"
+import style from "./Nav.module.css"
+import Image from "next/image"
+import { useEffect } from "react"
 import {
   Flight,
   Hotel,
@@ -12,25 +12,25 @@ import {
   BusAlert,
   DirectionsRailway,
   LocalPhone,
-} from "@mui/icons-material";
-import Typewriter from "typewriter-effect";
-import { useRef } from "react";
+} from "@mui/icons-material"
+import Typewriter from "typewriter-effect"
+import { useRef } from "react"
 
 const Nav = () => {
-  const [stickyMenu, setStickyMenu] = useState(false);
-  const [mobileMenu, setMobileMenu] = useState(true);
+  const [stickyMenu, setStickyMenu] = useState(false)
+  const [mobileMenu, setMobileMenu] = useState(true)
   const toggleMobileMenu = () => {
-    setMobileMenu((mobileMenu) => !mobileMenu);
-    navRef.current.classList.toggle("active");
-  };
-  const navRef = useRef();
+    setMobileMenu((mobileMenu) => !mobileMenu)
+    navRef.current.classList.toggle("active")
+  }
+  const navRef = useRef()
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 250);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      setStickyMenu(window.scrollY > 200)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <section className={style.navBarMainWrap}>
@@ -179,7 +179,7 @@ const Nav = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Nav;
+export default Nav

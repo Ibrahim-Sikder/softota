@@ -50,7 +50,7 @@
     border-radius: 20px;
     width: 530px;
     height: 58px;
-    padding-left: 6px;
+    padding-left: 15px;
 }
 .inputLabel{
     display: block;
@@ -67,6 +67,7 @@
     margin-top: 7px;
     resize: none;
     border-radius: 20px;
+    padding: 15px 0 0 15px;
 }
 .visaSubmitBtn{
     background: #19ABE3;

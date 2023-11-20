@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import style from "./UserDashBoard.module.css";
-import Link from "next/link";
+import React, { useState } from "react"
+import style from "./UserDashBoard.module.css"
+import Link from "next/link"
 import {
   FaUserAlt,
   FaPlane,
@@ -12,12 +12,12 @@ import {
   FaHeadset,
   FaSignOutAlt,
   FaAcquisitionsIncorporated,
-} from "react-icons/fa";
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+} from "react-icons/fa"
+import Accordion from "@mui/material/Accordion"
+import AccordionSummary from "@mui/material/AccordionSummary"
+import AccordionDetails from "@mui/material/AccordionDetails"
+import Typography from "@mui/material/Typography"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import {
   Beenhere,
   NotificationsActive,
@@ -41,14 +41,14 @@ import {
   ContactPhone,
   Gavel,
   Info,
-} from "@mui/icons-material";
-import Active from "../ActiveLink/Active";
+} from "@mui/icons-material"
+import Active from "../ActiveLink/Active"
 
 const UserDashBoardLeft = () => {
-  const [toggleSideBar, setToggleSideBar] = useState(true);
+  const [toggleSideBar, setToggleSideBar] = useState(true)
   const showSidebar = () => {
-    setToggleSideBar((toggleSideBar) => !toggleSideBar);
-  };
+    setToggleSideBar((toggleSideBar) => !toggleSideBar)
+  }
 
   return (
     <aside>
@@ -254,6 +254,12 @@ const UserDashBoardLeft = () => {
                               <Active href="/b2bdashboard/manage/tours">
                                 <Diversity2 className={style.flightIcons} />{" "}
                                 Tours
+                              </Active>
+                            </li>
+                            <li>
+                              <Active href="/b2bdashboard/manage/tour-package">
+                                <Diversity2 className={style.flightIcons} />{" "}
+                                Tours Package
                               </Active>
                             </li>
                             <li>
@@ -739,7 +745,7 @@ const UserDashBoardLeft = () => {
         </div>
       </div>
     </aside>
-  );
-};
+  )
+}
 
-export default UserDashBoardLeft;
+export default UserDashBoardLeft
