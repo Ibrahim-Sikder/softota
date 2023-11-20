@@ -1,10 +1,8 @@
 .navbarMain {
   width: 100%;
-
 }
-.navBarMainWrap{
-  overflow: hidden;
-  width:100vw
+.navBarMainWrap {
+  width: 100vw;
 }
 
 .navbarBanner {
@@ -14,16 +12,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-.logoImg{
-  width:100%;
-  height:100%;
+.logoImg {
+  width: 100%;
+  height: 100%;
 }
-.phoneIcon{
-  color: #4AB449 !important;
+.phoneIcon {
+  color: #4ab449 !important;
   font-size: 30px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .navbarBanner h2 {
@@ -41,20 +38,18 @@
   height: 90px;
   background: #e6f8ff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
-
 }
-.sticky{
+.sticky {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 999999 !important;
-  box-shadow: #4AB449 0px 5px 15px;
-  transition: all .5s cubic-bezier(0, -0.07, 1, 1.02);
-  border-bottom: 1px solid #4AB449;
-  width:100%;
+  box-shadow: #4ab449 0px 5px 15px;
+  transition: all 0.5s cubic-bezier(0, -0.07, 1, 1.02);
+  border-bottom: 1px solid #4ab449;
+  width: 100%;
   height: 90px;
-
 }
 
 .logo {
@@ -62,14 +57,13 @@
   width: 180px;
   object-fit: cover;
 }
-.logo img{
-  width:100%;
+.logo img {
+  width: 100%;
 }
 .navigationContent {
   display: flex;
-  display: flex;
   height: 100%;
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
   align-items: center;
   justify-content: space-between;
@@ -78,12 +72,11 @@
   display: flex;
   height: 100%;
   align-items: center;
-  width: 30%;
 }
 .navigationLeft p {
   font-family: PoppinsRegular;
   font-size: 18px;
-  margin-left: 46px;
+  margin-left: 10px;
 }
 .inputDiv {
   height: 43px;
@@ -94,7 +87,7 @@
   overflow: hidden;
   width: 40%;
   align-items: center;
-  padding-left: 5px;
+  padding-left: 10px;
   font-size: 14px;
 }
 .inputButtons {
@@ -105,57 +98,65 @@
   align-items: center;
 }
 
-.logInButton {
-  font-size: 14px;
-  color: white;
-  font-family: PoppinsRegular;
-  width: 102px;
-  height: 46px;
-  background: #4AB449;
-  border: none;
+.signUpBtn button {
+  width: 130px;
+  height: 45px;
+  background: #4ab449;
+  color: #fff;
   border-radius: 5px;
-  cursor: pointer;
-  margin-top: 0;
-  margin-bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: all 0.5s ease;
 }
-
-.signUpButtonTwo {
-  font-size: 14px;
-  color: white;
-  font-family: PoppinsRegular;
-  width: 102px;
-  height: 46px;
-  background: #19ABE3;
-  border: none;
+.signUpBtn button:hover {
+  border-radius: 25px;
+}
+.userIcon {
+  font-size: 50px;
+  color: #4ab449 !important;
+}
+.accountWrap {
+  position: relative;
+  z-index: 99999999;
+}
+.userInfo {
+  width: 300px;
+  background-image: linear-gradient(168deg, #19abe3, #4ab449) !important;
+  position: absolute;
+  z-index: 999999 !important;
+  padding: 13px 15px 7px 15px;
+  top: 50px;
+  left: -167px;
   border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #fff;
+  border: 1px solid #fff;
+  visibility: hidden;
+}
+.iconWrap:hover .userInfo {
+  display: block !important;
+}
+.userInfo ul li {
+  margin-bottom: 5px;
+  font-size: 14px;
 }
 .navigationMain {
-  display: block;
+  visibility: visible;
 }
 
-.wrapMenu li{
+.wrapMenu li {
   display: flex;
   align-items: center;
   font-size: 14px;
   margin-bottom: 15px;
 }
-.menuIcon, .menuFlightIcon{
+.menuIcon,
+.menuFlightIcon {
   color: #4ab449 !important;
   font-size: 25px;
 }
-.menuFlightIcon{
+.menuFlightIcon {
   transform: rotate(41deg);
 }
 
-.securityInfo{
+.securityInfo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,20 +166,18 @@
   font-size: 14px;
   margin-left: 5px;
 }
-.securityInfo p{
-  font-size:14px;
+.securityInfo p {
+  font-size: 14px;
 }
-.securityInfo button{
-  background: #4AB449;
+.securityInfo button {
+  background: #4ab449;
   color: white;
   width: 70px;
   border-radius: 3px;
   padding: 3px 0px;
 }
-.signUpBtn{
-  background: #19ABE3 !important;
-}
-.mobileToggleSideMenu{
+
+.mobileToggleSideMenu {
   display: none;
 }
 
@@ -188,7 +187,7 @@
     display: block;
   }
 }
-.bar{
+.bar {
   display: none;
 }
 /* Styles for tablets */
@@ -212,7 +211,7 @@
     width: 36%;
   }
   .navigationContent {
-   width:100%;
+    width: 100%;
   }
   .inputButtons {
     width: 22%;
@@ -234,9 +233,9 @@
 @media (max-width: 768px) {
   .navigationMain {
     height: 78px;
-}
-  .sticky{
-    display:none;
+  }
+  .sticky {
+    display: none;
   }
   .mobLogo {
     height: 65px;
@@ -244,22 +243,19 @@
   }
   .inputDiv {
     display: none;
-}
- 
-  .aboutHiden{
-    display: none;
   }
+
   .inputButtons {
-    display: none;;
+    display: none;
   }
   .signUpButtonTwo {
     background-color: white;
     color: black !important;
   }
-  .mobileToggleSideMenu{
+  .mobileToggleSideMenu {
     display: block;
   }
-  .menuWraps{
+  .menuWraps {
     background: #fff;
     position: fixed;
     z-index: 999999;
@@ -267,12 +263,12 @@
     top: 115px;
     right: -300px;
     color: black;
-    transition: all .5s cubic-bezier(0.52, 0.48, 0.78, 0.71);
+    transition: all 0.5s cubic-bezier(0.52, 0.48, 0.78, 0.71);
     height: 100vh;
     padding-top: 9px;
     padding-left: 15px;
   }
-  .hideMenu{
+  .hideMenu {
     background: #fff;
     position: fixed;
     z-index: 999999;
@@ -280,13 +276,12 @@
     top: 123px;
     right: 0px;
     color: black;
-    transition: all .5s cubic-bezier(0.52, 0.48, 0.78, 0.71);
+    transition: all 0.5s cubic-bezier(0.52, 0.48, 0.78, 0.71);
     height: 100vh;
     padding-left: 15px;
     padding-top: 9px;
   }
-  
-  
+
   .bar {
     padding: 0px !important;
     text-align: left !important;
@@ -298,67 +293,65 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all .5s linear(-0.47 -53.68%, 1 100%);
+    transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
     position: absolute;
     top: 64px;
     right: 5px;
   }
-  .bar div{
-    position:relative;
-  
+  .bar div {
+    position: relative;
   }
   .bar span {
     width: 30px;
     height: 3px;
-    background: #4AB449;
+    background: #4ab449;
     margin-bottom: 6px;
     display: block;
-    transition: all .5s linear(-0.47 -53.68%, 1 100%);
+    transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
   }
 
-  .bar1{
-    transform:translateY(8px) rotate(45deg);
-		-webkit-transform:translateY(8px) rotate(45deg);
-		-moz-transform:translateY(8px) rotate(45deg);
-		-ms-transform:translateY(8px) rotate(45deg);
-		-o-transform:translateY(8px) rotate(45deg);
-      position: absolute;
-      top: -14px;
-      left: -12px;
-      transition: all .5s linear(-0.47 -53.68%, 1 100%);
+  .bar1 {
+    transform: translateY(8px) rotate(45deg);
+    -webkit-transform: translateY(8px) rotate(45deg);
+    -moz-transform: translateY(8px) rotate(45deg);
+    -ms-transform: translateY(8px) rotate(45deg);
+    -o-transform: translateY(8px) rotate(45deg);
+    position: absolute;
+    top: -14px;
+    left: -12px;
+    transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
   }
-  .bar2{
+  .bar2 {
     display: none;
     position: absolute !important;
     display: none !important;
-    transition: all .5s linear(-0.47 -53.68%, 1 100%);
+    transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
   }
-  .bar3{
-		transform:translateY(-8px) rotate(-45deg)	;
-		-webkit-transform:translateY(-8px) rotate(-45deg)	;
-		-moz-transform:translateY(-8px) rotate(-45deg)	;
-		-ms-transform:translateY(-8px) rotate(-45deg)	;
-		-o-transform:translateY(-8px) rotate(-45deg)	;
+  .bar3 {
+    transform: translateY(-8px) rotate(-45deg);
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    -moz-transform: translateY(-8px) rotate(-45deg);
+    -ms-transform: translateY(-8px) rotate(-45deg);
+    -o-transform: translateY(-8px) rotate(-45deg);
     position: absolute;
     top: 1px;
     right: -18px;
-    transition: all .5s linear(-0.47 -53.68%, 1 100%);
+    transition: all 0.5s linear(-0.47 -53.68%, 1 100%);
   }
-
 }
 @media only screen and (max-width: 500px) {
   .navigationMOb {
     height: 55px;
   }
-  .bar{
+  .bar {
     top: 56px;
   }
-  .navigationMain{
+  .navigationMain {
     height: 65px;
-}
-
-  .hideMenu, .menuWraps{
-   top:101px;
   }
-  
+
+  .hideMenu,
+  .menuWraps {
+    top: 101px;
+  }
 }

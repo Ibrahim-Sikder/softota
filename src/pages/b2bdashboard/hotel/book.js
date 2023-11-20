@@ -1,24 +1,24 @@
-import React from "react";
-import style from "../../../../components/SearhPage/HotelBook/HotelBook.module.css";
-import dynamic from "next/dynamic";
-import B2BdashboardLayout from "../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText";
-import HotelBookLeft from "../../../../components/SearhPage/HotelBook/BookLeftSide/HotelBookLeft";
-import HotelBookRightSide from "../../../../components/SearhPage/HotelBook/RightSide/HotelBookRightSide";
+import React from "react"
+import style from "../../../../components/SearhPage/HotelBook/HotelBook.module.css"
+import dynamic from "next/dynamic"
+import B2BdashboardLayout from "../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout"
+import MoveText from "../../../../components/UserDashBoard/MoveText/MoveText"
+import B2bHotelBookLeftSide from "../../../../components/SearhPage/HotelBook/BookLeftSide/B2bHotelBookLeftSide"
+import B2bHotelBookRightSide from "../../../../components/SearhPage/HotelBook/RightSide/B2bHotelBookRightSide"
 const Hotel = () => {
   return (
     <B2BdashboardLayout>
-      <MoveText/>
+      <MoveText />
       <div className={style.flightBookWrap}>
         <div className={style.flightBookLeftSide}>
-          <HotelBookLeft/>
+          <B2bHotelBookLeftSide />
         </div>
         <div className={style.flightBookRightSide}>
-          <HotelBookRightSide/>
+          <B2bHotelBookRightSide />
         </div>
       </div>
     </B2BdashboardLayout>
-  );
-};
+  )
+}
 
-export default dynamic(() => Promise.resolve(Hotel), { ssr: false });
+export default dynamic(() => Promise.resolve(Hotel), { ssr: false })

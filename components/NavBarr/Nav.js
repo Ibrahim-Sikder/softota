@@ -12,10 +12,11 @@ import {
   BusAlert,
   DirectionsRailway,
   LocalPhone,
+  AccountCircle,
 } from "@mui/icons-material"
 import Typewriter from "typewriter-effect"
 import { useRef } from "react"
-
+import ibrahim from "../../public/assets/ibrahim.jpg"
 const Nav = () => {
   const [stickyMenu, setStickyMenu] = useState(false)
   const [mobileMenu, setMobileMenu] = useState(true)
@@ -26,11 +27,13 @@ const Nav = () => {
   const navRef = useRef()
   useEffect(() => {
     const handleScroll = () => {
-      setStickyMenu(window.scrollY > 200)
+      setStickyMenu(window.scrollY > 50)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  const user = true
 
   return (
     <section className={style.navBarMainWrap}>
@@ -40,6 +43,9 @@ const Nav = () => {
           <h2>+88-01885-071-488</h2>
           <Link href="/contact">
             <p>Contact Us</p>
+          </Link>
+          <Link href="/aboutUs">
+            <p>About Us</p>
           </Link>
         </div>
         <div className={`${stickyMenu ? `${style.sticky}` : ` `}`}>
@@ -56,12 +62,6 @@ const Nav = () => {
                     />
                   </Link>
                 </div>
-                <Link
-                  href="/aboutUs"
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  <p className={style.aboutHiden}>About Us</p>
-                </Link>
               </div>
 
               <div className={style.inputDiv}>
@@ -77,8 +77,49 @@ const Nav = () => {
                   }}
                 />
               </div>
+              <div className={style.accountWrap}>
+                {user ? (
+                  <div className={style.buttonWrap}>
+                    <div className={style.signUpBtn}>
+                      <Link href="/signup">
+                        <button>Sign Up</button>
+                      </Link>
+                    </div>
+                  </div>
+                ) : (
+                  <div className={style.iconWrap}>
+                    <AccountCircle className={style.userIcon} />
+                  </div>
+                )}
 
-              <div className={style.inputButtons}>
+                <div className={style.userInfo}>
+                  <ul>
+                    <li>
+                      <div className="flex items-center">
+                        <div className="w-[50px] h-[50px] mr-2">
+                          <Image
+                            src={ibrahim}
+                            alt="user"
+                            className="w-full h-full rounded-full"
+                          />
+                        </div>
+                        <div>
+                          <h4>Ibrahim Sikder</h4>
+                          <small>ibrahimsikder5033@gmail.com</small>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      {" "}
+                      <hr className="mb-2 mt-1 " />
+                    </li>
+                    <li>My Booking</li>
+                    <li>Dashboard</li>
+                    <li>Log Out </li>
+                  </ul>
+                </div>
+              </div>
+              {/* <div className={style.inputButtons}>
                 <Link
                   href="/login"
                   className={style.logInButton}
@@ -93,7 +134,7 @@ const Nav = () => {
                 >
                   Sign Up
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

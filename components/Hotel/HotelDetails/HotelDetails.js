@@ -1,21 +1,21 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import hotel from "../../../public/assets/hotel9.jpg";
-import hotel2 from "../../../public/assets/hotell3.jpeg";
-import hotel3 from "../../../public/assets/hotel14.jpg";
-import hotel4 from "../../../public/assets/hotel12.jpg";
-import hotel5 from "../../../public/assets/hotell6.jpeg";
-import hotel6 from "../../../public/assets/hotel16.jpg";
-import style from "./HotelDetails.module.css";
-import { CheckCircleOutline } from "@mui/icons-material";
-import travel from "../../../public/assets/travel2.png";
-import LightGallery from "lightgallery/react";
-import "lightgallery/css/lightgallery.css";
-import "lightgallery/css/lg-zoom.css";
-import "lightgallery/css/lg-thumbnail.css";
-import lgThumbnail from "lightgallery/plugins/thumbnail";
-import lgZoom from "lightgallery/plugins/zoom";
+import React from "react"
+import Link from "next/link"
+import Image from "next/image"
+import hotel from "../../../public/assets/hotel9.jpg"
+import hotel2 from "../../../public/assets/hotell3.jpeg"
+import hotel3 from "../../../public/assets/hotel14.jpg"
+import hotel4 from "../../../public/assets/hotel12.jpg"
+import hotel5 from "../../../public/assets/hotell6.jpeg"
+import hotel6 from "../../../public/assets/hotel16.jpg"
+import style from "./HotelDetails.module.css"
+import { CheckCircleOutline } from "@mui/icons-material"
+import travel from "../../../public/assets/travel2.png"
+import LightGallery from "lightgallery/react"
+import "lightgallery/css/lightgallery.css"
+import "lightgallery/css/lg-zoom.css"
+import "lightgallery/css/lg-thumbnail.css"
+import lgThumbnail from "lightgallery/plugins/thumbnail"
+import lgZoom from "lightgallery/plugins/zoom"
 
 const HotelDetails = () => {
   return (
@@ -435,7 +435,9 @@ const HotelDetails = () => {
                 <p>
                   <strong className="text-[#4AB449]">Start from</strong> 20000Tk
                 </p>
-                <button className={style.rightSideBtn}> Book Now </button>
+                <Link href="/hotel/book">
+                  <button className={style.rightSideBtn}> Book Now </button>
+                </Link>
               </div>
             </div>
             <div className={style.rightSideImg}>
@@ -452,7 +454,7 @@ const HotelDetails = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HotelDetails;
+export default HotelDetails
