@@ -113,8 +113,8 @@ const Nav = () => {
                       {" "}
                       <hr className="mb-2 mt-1 " />
                     </li>
-                    <li>My Booking</li>
-                    <li>Dashboard</li>
+                    <li><Link href='/profile/booking'>My Booking</Link></li>
+                    <li><Link href='/profile'>Dashboard</Link></li>
                     <li>Log Out </li>
                   </ul>
                 </div>
