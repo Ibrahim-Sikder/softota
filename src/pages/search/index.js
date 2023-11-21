@@ -9,6 +9,7 @@ const SearcPage = () => {
     <section>
       <Nav></Nav>
       <HotelSearch />
+      
       <Footer />
     </section>
   );

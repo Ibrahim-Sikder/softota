@@ -15,7 +15,6 @@ import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "next/link";
 
-
 const B2BHotelSearch = () => {
   const hotelData = [
     {
@@ -88,12 +87,7 @@ const B2BHotelSearch = () => {
             27th August 2023 - 28th August 2023 4 Persons - 1 Rooms
           </span>
         </div>
-        <Link href="/hotel">
-          {" "}
-          <button className="bg-[#4AB449] md:mt-[16px] text-white px-8 rounded-sm h-10 border-radius text-sm rounded">
-            EDIT SEARCH{" "}
-          </button>
-        </Link>
+        <button>EDIT SEARCH</button>
       </div>
       <div className={style.hotelSearchBoxWrap}>
         <div className={style.hotelSearchLeftSide}>
@@ -103,14 +97,8 @@ const B2BHotelSearch = () => {
               <small>Price includes VAT & Tax </small>
             </div>
             <div className={style.bookBtnGroup}>
-              <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm mr-3 rounded">
-                Highest Price{" "}
-              </button>
-              <Link href="/detailHotel">
-                <button className="bg-[#26ADE2] hover:bg-[#4AB449] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold rounded">
-                  Lowest Price
-                </button>
-              </Link>
+              <button>Highest Price </button>
+              <button>Lowest Price</button>
             </div>
           </div>
           <div>
@@ -119,7 +107,7 @@ const B2BHotelSearch = () => {
                 <div className={style.detailBoxWrap}>
                   <div className={style.searchLeftSideImg}>
                     <Image
-                    loading="lazy"
+                      loading="lazy"
                       src={hotel.image}
                       alt="Picture of the author"
                       className={style.searchLeftImg}
@@ -160,9 +148,7 @@ const B2BHotelSearch = () => {
                           </span>
                         </div>
                         <Link href="/b2bdashboard/hotel/details">
-                          <button className="bg-[#4AB449] hover:bg-[#26ADE2] transition ease-in-out delay-150 transition-shadow text-white px-5 rounded-sm h-10 border-radius text-sm font-bold">
-                            BOOK NOW
-                          </button>
+                          <button className={style.bookBtn}>See Details </button>
                         </Link>
                       </div>
                     </div>

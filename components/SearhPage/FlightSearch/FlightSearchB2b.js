@@ -174,7 +174,7 @@ const FlightSearchB2b = () => {
                     BDT 39,400
                   </h4>
                   <del className="text-[#26ADE2]">BDT {data.price}</del> <br />
-                  <Link href="/flight/b2bdashboard/flight/details">
+                  <Link href="/b2bdashboard/flight/details">
                     <button className={style.flightBookBtn}>See Details</button>
                   </Link>{" "}
                   <br />

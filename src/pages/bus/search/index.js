@@ -11,6 +11,7 @@ const Search = () => {
     <div>
       <Nav />
       <SearchBus />
+      
       <Footer />
     </div>
   );
