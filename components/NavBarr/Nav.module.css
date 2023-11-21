@@ -90,13 +90,7 @@
   padding-left: 10px;
   font-size: 14px;
 }
-.inputButtons {
-  width: 20%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .signUpBtn button {
   width: 130px;
@@ -214,14 +208,7 @@
   .navigationContent {
     width: 100%;
   }
-  .inputButtons {
-    width: 22%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
-  }
+
   .navigationLeft {
     display: flex;
     height: 100%;
@@ -246,13 +233,10 @@
     display: none;
   }
 
-  .inputButtons {
-    display: none;
-  }
-  .signUpButtonTwo {
-    background-color: white;
-    color: black !important;
-  }
+.accountWrap, .aboutUs{
+  display: none;
+}
+
   .mobileToggleSideMenu {
     display: block;
   }

@@ -44,7 +44,7 @@ const Nav = () => {
           <Link href="/contact">
             <p>Contact Us</p>
           </Link>
-          <Link href="/aboutUs">
+          <Link href="/aboutUs" className={style.aboutUs}>
             <p>About Us</p>
           </Link>
         </div>
@@ -119,22 +119,6 @@ const Nav = () => {
                   </ul>
                 </div>
               </div>
-              {/* <div className={style.inputButtons}>
-                <Link
-                  href="/login"
-                  className={style.logInButton}
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Log In
-                </Link>
-                <Link
-                  href="/signup"
-                  className={style.signUpButtonTwo}
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  Sign Up
-                </Link>
-              </div> */}
             </div>
           </div>
         </div>
