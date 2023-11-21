@@ -46,13 +46,10 @@
   
 }
 .leftSideIconWrap {
-  /* width: 60px !important; */
-  /* background: red; */
   height: 100vh;
-  /* position: relative; */
   display: flex;
   justify-content: center;
-  margin-top: 129px;
+  margin-top: 80px;
 }
 .leftSideIconWrap p {
   margin-bottom: 23px;
@@ -120,7 +117,6 @@
   justify-content: center;
   align-items: center;
   background: #4AB449;
-  /* box-shadow: #4AB449 0px 14px 28px, #4AB449 0px 10px 10px; */
   margin-bottom:10px;
 }
 
@@ -228,10 +224,10 @@
   background: #4AB449;
   width: 146px;
   padding: 5px;
-  left: 227px;
+  left: 228px;
   border-bottom-right-radius: 25px;
   border-top-right-radius: 25px;
-  top: 169px;
+  top: 125px;
   transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
   font-size:12px;
   display:none;
@@ -244,7 +240,7 @@
    z-index:99999 !important;
 }
 .toolTip2{
-  top: 218px !important;
+  top: 170px !important;
   width: 161px !important;
   z-index: 999999 !important;
   position:absolute;

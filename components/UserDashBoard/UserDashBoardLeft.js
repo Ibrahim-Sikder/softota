@@ -724,11 +724,44 @@ const UserDashBoardLeft = () => {
                 </Link>
               </p>
               <p className={style.showToolTip}>
+                <ManageAccounts className={style.icon}  />
+                <Link href="#">
+                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                
+                            Data Management
+                  </div>{" "}
+                </Link>
+              </p>
+              <p className={style.showToolTip}>
                 <FaSkating className={style.icon} />
                 <Link href="/b2bsearch/company">
                   <div className={`${style.toolTip} ${style.toolTip8}`}>
                     Company
                   </div>{" "}
+                </Link>
+              </p>
+              <p className={style.showToolTip}>
+                <FaHeadset className={style.icon} />
+                <Link href="#">
+                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  Customer Service
+                  </div>{" "}
+                </Link>
+              </p>
+              <p className={style.showToolTip}>
+                <FaSignOutAlt className={style.icon}/>
+                <Link href="#">
+                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  Sign Out
+                  </div>{" "}
+                </Link>
+              </p>
+              <p className={style.showToolTip}>
+                <Backup className={style.icon} />
+                <Link href="#">
+                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  Database Backup
+                  </div>
                 </Link>
               </p>
             </div>
