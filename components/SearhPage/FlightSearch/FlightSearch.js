@@ -19,6 +19,7 @@ import {
   ArrowForward,
   ArrowBack,
 } from "@mui/icons-material";
+
 import { FaFighterJet } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import Slider from "react-slick";

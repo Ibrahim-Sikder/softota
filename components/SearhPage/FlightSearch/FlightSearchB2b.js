@@ -1,5 +1,5 @@
 import React from "react";
-import style from '../../SearhPage/FlightSearch/FlightSearch.module.css';
+import style from "./FlightSearch.module.css";
 import TextField from "@mui/material/TextField";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -8,9 +8,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Link from "next/link";
 import "react-photo-view/dist/react-photo-view.css";
 import {
-  ChevronLeftRounded,
   FlightLand,
-  ChevronRightRounded,
   AirplanemodeInactive,
   Airlines,
   KeyboardArrowDown,
@@ -21,13 +19,14 @@ import {
   ArrowForward,
   ArrowBack,
 } from "@mui/icons-material";
+
 import { FaFighterJet } from "react-icons/fa";
 import dynamic from "next/dynamic";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const FlightSearch = () => {
+const FlightSearchB2b = () => {
   var settings = {
     infinite: true,
     slidesToShow: 5,
@@ -60,41 +59,39 @@ const FlightSearch = () => {
       },
     ],
   };
+  const flightData = [
+    {
+      id: 1,
+      price: "55000",
+      title: "Partially Refundable",
+      airportName: "Hazrat Shahjalal Internation Airport",
+    },
+    {
+      id: 1,
+      price: "58000",
+      title: "Partially Refundable",
+      airportName: "Hazrat Shahjalal Internation Airport",
+    },
+    {
+      id: 1,
+      price: "105000",
+      title: "Partially Refundable",
+      airportName: "Hazrat Shahjalal Internation Airport",
+    },
+    {
+      id: 1,
+      price: "105000",
+      title: "Partially Refundable",
+      airportName: "Hazrat Shahjalal Internation Airport",
+    },
+    {
+      id: 1,
+      price: "105000",
+      title: "Partially Refundable",
+      airportName: "Hazrat Shahjalal Internation Airport",
+    },
+  ];
 
-  const data = [
-    {
-      id: 1,
-      title:'',
-      price: ' 39,400',
-      name: '',
-      fromAirportName: 'Hazrat Shahjalal Internation',
-      toAirportName: 'Shah Mokhdum Airport29Th'
-    },
-    {
-      id: 1,
-      title:'',
-      price: ' 55,400',
-      name: '',
-      fromAirportName: 'Hazrat Shahjalal Internation',
-      toAirportName: 'Shah Mokhdum Airport29Th'
-    },
-    {
-      id: 1,
-      title:'',
-      price: ' 100,400',
-      name: '',
-      fromAirportName: 'Hazrat Shahjalal Internation',
-      toAirportName: 'Shah Mokhdum Airport29Th'
-    },
-    {
-      id: 1,
-      title:'',
-      price: ' 39,400',
-      name: '',
-      fromAirportName: 'Hazrat Shahjalal Internation',
-      toAirportName: 'Shah Mokhdum Airport29Th'
-    },
-  ]
   return (
     <section className={style.flightSearchWrap}>
       <div className={style.searchDetailHead}>
@@ -166,21 +163,20 @@ const FlightSearch = () => {
               <Airlines className="mr-2" /> Earliest Flight
             </div>
           </div>
-          {
-            data.map(flight=> 
-            <div key={flight.id} className={style.flightSearch}>
+          {flightData.map((data) => (
+            <div key={data.id} className={style.flightSearch}>
               <div className={style.detailBoxWrap}>
                 <div className={style.flightSearchLeftSide}>
                   <div className={style.deal}>
                     <LocalOffer className={style.dealIcon} /> Best Deal
                   </div>
-                  <span>Partially Refundable</span>
+                  <span>{data.title}</span>
                   <h4 className="text-2xl font-bold text-[#26ADE2]">
-                   {flight.price}
+                    BDT 39,400
                   </h4>
-                  <del className="text-[#26ADE2]">BDT 33,500</del> <br />
-                  <Link href="/b2bdashboard/flight/details">
-                    <button className={style.flightBookBtn}>Book Now</button>
+                  <del className="text-[#26ADE2]">BDT {data.price}</del> <br />
+                  <Link href="/flight/flightBook">
+                    <button className={style.flightBookBtn}>See Details</button>
                   </Link>{" "}
                   <br />
                   <span className="text-[#26ADE2] mt-16 block">
@@ -198,7 +194,7 @@ const FlightSearch = () => {
                           {" "}
                           DAC - <strong>07:30</strong>
                         </h2>
-                        <p>Hazrat Shahjalal Internation Airport</p>
+                        <p>{data.airportName}</p>
                         <small>29Th Jul 2023</small>
                       </div>
                     </div>
@@ -248,8 +244,9 @@ const FlightSearch = () => {
                   </div>
                 </div>
               </div>
-            </div>)
-          }
+            </div>
+          ))}
+
           <div className={style.pagination}>
             <p className="text-[#4AB449] font-bold">TOP OF PAGE</p>
             <p>Showing Results 11 - 20 of 301</p>
@@ -479,4 +476,4 @@ const FlightSearch = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(FlightSearch), { ssr: false });
+export default dynamic(() => Promise.resolve(FlightSearchB2b), { ssr: false });

@@ -8,6 +8,7 @@ const book = () => {
     <section>
       <Nav/>
       <FlightBook/>
+      
       <Footer/>
     </section>
   );

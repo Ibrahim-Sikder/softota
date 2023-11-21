@@ -19,7 +19,6 @@ import {
 } from "react-icons/fa";
 import { ArrowForwardIos, FileUpload } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
-import Link from "next/link";
 const B2BFlightBookLeftSide = () => {
   return (
     <section>
