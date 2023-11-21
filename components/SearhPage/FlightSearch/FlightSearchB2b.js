@@ -25,7 +25,6 @@ import dynamic from "next/dynamic";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 const FlightSearchB2b = () => {
   var settings = {
     infinite: true,
@@ -175,7 +174,7 @@ const FlightSearchB2b = () => {
                     BDT 39,400
                   </h4>
                   <del className="text-[#26ADE2]">BDT {data.price}</del> <br />
-                  <Link href="/flight/flightBook">
+                  <Link href="/flight/b2bdashboard/flight/details">
                     <button className={style.flightBookBtn}>See Details</button>
                   </Link>{" "}
                   <br />

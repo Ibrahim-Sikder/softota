@@ -91,6 +91,7 @@ const FlightSearch = () => {
       airportName: "Hazrat Shahjalal Internation Airport",
     },
   ];
+  
 
   return (
     <section className={style.flightSearchWrap}>

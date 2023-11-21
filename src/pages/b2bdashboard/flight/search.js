@@ -10,6 +10,7 @@ const flightSearch = () => {
       <MoveText />
       <FlightSearchB2b/>
     </B2BdashboardLayout>
+    
   );
 };
 

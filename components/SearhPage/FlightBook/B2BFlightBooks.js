@@ -1,7 +1,5 @@
-"use client";
-
-import React from "react";
-import style from "./FlightBookLeftSide.module.css";
+import React, {useState} from "react";
+import style from "./FlightBook.module.css";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -19,9 +17,19 @@ import {
 } from "react-icons/fa";
 import { ArrowForwardIos, FileUpload } from "@mui/icons-material";
 import TextField from "@mui/material/TextField";
-const B2BFlightBookLeftSide = () => {
+import Link from "next/link";
+const B2BFlightBooks = () => {
+  const [disabled, setDisabled] = useState(true)
+  const handleDisable = ()=>{
+       setDisabled(false)
+  }
+  
   return (
     <section>
+      <div className={style.flightBookWrap}>
+        <div className={style.flightBookLeftSide}>
+          
+        <section>
       <div className={style.bookingReview}>
         <h3 className="text-[#4AB449] text-xl">Review Your Booking</h3>
         <div className={style.flightSection}>
@@ -153,7 +161,6 @@ const B2BFlightBookLeftSide = () => {
         </AccordionDetails>
       </Accordion>
       <div className={style.dealWrap}>
-        
         <p className={style.mandatory}>
           *It is mandatory to upload copy of your valid passport and visa
         </p>
@@ -161,20 +168,26 @@ const B2BFlightBookLeftSide = () => {
           <div>
             <p className="mb-2">Passport Copy (max 2MB)</p>
             <div className={style.upload}>
-              <span className={style.fileUploadIcon}>
-                <FileUpload className={style.uploadIcon} />
-              </span>
-              <button>Upload</button>
+              <input type="file" id="files" className="hidden" />
+              <label for="files">
+                <span className={style.fileUploadIcon}>
+                  <FileUpload className={style.uploadIcon} />
+                </span>
+                Upload
+              </label>
             </div>
             <button className={style.viewbtn}>View Passport </button>
           </div>
           <div>
             <p className="mb-2">Visa Copy (max 2MB)</p>
             <div className={style.upload}>
-              <span className={style.fileUploadIcon}>
-                <FileUpload className={style.uploadIcon} />
-              </span>
-              <button>Upload</button>
+              <input type="file" id="files" className="hidden" />
+              <label for="files">
+                <span className={style.fileUploadIcon}>
+                  <FileUpload className={style.uploadIcon} />
+                </span>
+                Upload
+              </label>
             </div>
             <button className={style.viewbtn}>View Visa </button>
           </div>
@@ -359,6 +372,7 @@ const B2BFlightBookLeftSide = () => {
             </AccordionDetails>
           </Accordion>
         </div>
+
         <div className="my-8">
           <Accordion className={style.flightBookDetail}>
             <AccordionSummary
@@ -516,7 +530,7 @@ const B2BFlightBookLeftSide = () => {
                   </div>
                 </div>
                 <div className="mt-10">
-                  <div className="w-full flex  justify-between">
+                  <div className="w-full  flex  justify-between">
                     <div className="flex items-center">
                       <input className="mr-2" type="checkbox" />
                       <small>Yes, I want to secure my journey</small>
@@ -543,7 +557,96 @@ const B2BFlightBookLeftSide = () => {
         </div>
       </div>
     </section>
+        </div>
+        <div className={style.flightBookRightSide}>
+        <div className={style.rightSide}>
+               <div className={style.rightSideWrap}>
+                    <h4 className='text-xl'>Your price summary</h4>
+                    <div className='flex justify-between bg-[#E9F6E9] px-3 py-2'>
+                         <span>Detail</span>
+                         <span>Amount</span>
+                    </div>
+                    <div className={style.priceSummery}>
+                         <h6>ADULT x 2</h6>
+                         <div className='flex justify-between'>
+                              <div>
+                                   <div>Base Fare X 2</div>
+                                   <div>Tax X 2</div>
+                              </div>
+                              <div>
+                                   <strong>BDT5,590</strong> <br />
+                                   <strong>BDT3,590</strong>
+                              </div>
+                         </div>
+                    </div>
+                    <div className={style.priceSummery}>
+                         <h6>Child x 2</h6>
+                         <div className='flex justify-between'>
+                              <div>
+                                   <div>Base Fare X 2</div>
+                                   <div>Tax X 2</div>
+                              </div>
+                              <div>
+                                   <strong>BDT3,590</strong>
+                                   <strong>BDT2,590</strong>
+                              </div>
+                         </div>
+                    </div>
+                    <div className={style.priceSummery}>
+                         <div className='flex justify-between'>
+                              <div>
+                                   <div>Total Airfare:</div>
+                                   <div>Discount</div>
+                                   <div>Coupon Discount </div>
+                                   <div>Coupon </div>
+                                   <div>Covid-19 Test </div>
+                                   <div>Travel Insurance Charge </div>
+                                   <div>Baggage Protection Charge </div>
+                                   <div>Ancillary </div>
+                                   <div>GT Convenience Fee</div>
+                              </div>
+                              
+                              <div>
+                                   <strong>BDT9,590</strong>
+                                   <strong>-BDT1,590</strong>
+                                   <strong>-BDT1,590</strong>
+                                   <strong>FLYNOW0723</strong>
+                                   <strong>BDT 0</strong>
+                                   <strong>BDt 80</strong>
+                                   <strong>BDt 380</strong>
+                                   <strong>BDt 0</strong>
+                                   <strong>BDt 426</strong>
+                              </div>
+                         </div>
+                    </div>
+                    <div>
+                         <hr />
+                    </div>
+                    <div className={style.priceSummery}>
+                         <div className='flex justify-between'>
+                              <div>
+                                   <div>Total Payable:</div>
+                                   
+                              </div>
+                              
+                              <div>
+                                   <strong>BDT 1,99,590</strong>
+                              </div>
+                         </div>
+                    </div>
+                    <div className={style.payment}>
+                   <input onClick={handleDisable} className={style.checkbox} type="checkbox" />
+                   <p>I aggree to the <strong>Terms & Condition</strong> and <strong>Privacy Policy</strong> </p>
+                    </div>
+                   <Link href='/b2bdashboard/flight/book'> <input  disable={disabled} className={style.paymentBtn} type="submit" value='Book Now ' /></Link>
+                   
+               </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default B2BFlightBookLeftSide;
+export default B2BFlightBooks;

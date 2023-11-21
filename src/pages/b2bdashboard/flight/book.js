@@ -14,10 +14,9 @@ const Book = () => {
         </div>
         <div className={style.flightBook}>
           <RightSideTopBar />
-          
-
           <div>
             <B2bFlightBook/>
+            
           </div>
         </div>
       </div>

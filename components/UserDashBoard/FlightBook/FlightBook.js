@@ -14,6 +14,7 @@ const FlightBook = () => {
   const handleFlightDetails = () => {
     setFlightDetails((flightDetails) => !flightDetails);
   };
+  
   return (
     <section>
       <div className={style.flightInfo}>
@@ -29,6 +30,7 @@ const FlightBook = () => {
             </small>
             <strong>BDT 87,007</strong>
           </div>
+          
         </div>
         <div className={style.flightDetailWrap}>
           <div className={style.flightDetail}>

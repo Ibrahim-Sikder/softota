@@ -10,7 +10,6 @@ const SearcPage = () => {
       <Nav/>
         <FlightSearch/>
         <Footer/>
-        
     </section>
   );
 };
