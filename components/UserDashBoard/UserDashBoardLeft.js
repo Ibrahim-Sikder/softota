@@ -53,8 +53,7 @@ const UserDashBoardLeft = () => {
   }
 
   return (
-    <aside>
-      <div
+      <aside
         className={toggleSideBar ? `${style.sidebar}` : `${style.sideBarLeft}`}
       >
         <div
@@ -778,8 +777,7 @@ const UserDashBoardLeft = () => {
             </div>
           </div>
         </div>
-      </div>
-    </aside>
+      </aside>
   )
 }
 

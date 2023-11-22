@@ -1,9 +1,5 @@
 import React from "react";
 import style from "../Umrah/Umraha.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import hajj2 from "../../../public/assets/hajj2.png";
-import umrah2 from "../../../public/assets/umra2.jpg";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -13,7 +9,6 @@ import Nav from "../../NavBarr/Nav";
 import Footer from "../../Footer/Footer";
 import dynamic from "next/dynamic";
 import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
-import { useEffect } from "react";
 const HajjLayout = ({ children }) => {
 
   return (
