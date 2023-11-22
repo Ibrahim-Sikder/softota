@@ -12,6 +12,7 @@ import {
   FaHeadset,
   FaSignOutAlt,
   FaAcquisitionsIncorporated,
+  PersonPin
 } from "react-icons/fa"
 import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
@@ -716,7 +717,7 @@ const UserDashBoardLeft = () => {
                 </Link>
               </p>
               <p className={style.showToolTip}>
-                <FaUserAlt className={style.icon} />
+                <PersonPin className={style.icon} />
                 <Link href="/b2bsearch/passenger">
                   <div className={`${style.toolTip} ${style.toolTip7}`}>
                     Quick Passengers
@@ -735,7 +736,7 @@ const UserDashBoardLeft = () => {
               <p className={style.showToolTip}>
                 <FaSkating className={style.icon} />
                 <Link href="/b2bsearch/company">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  <div className={`${style.toolTip} ${style.toolTip9}`}>
                     Company
                   </div>{" "}
                 </Link>
@@ -743,7 +744,7 @@ const UserDashBoardLeft = () => {
               <p className={style.showToolTip}>
                 <FaHeadset className={style.icon} />
                 <Link href="#">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  <div className={`${style.toolTip} ${style.toolTip10}`}>
                   Customer Service
                   </div>{" "}
                 </Link>
@@ -751,7 +752,7 @@ const UserDashBoardLeft = () => {
               <p className={style.showToolTip}>
                 <FaSignOutAlt className={style.icon}/>
                 <Link href="#">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  <div className={`${style.toolTip} ${style.toolTip11}`}>
                   Sign Out
                   </div>{" "}
                 </Link>
@@ -759,7 +760,7 @@ const UserDashBoardLeft = () => {
               <p className={style.showToolTip}>
                 <Backup className={style.icon} />
                 <Link href="#">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  <div className={`${style.toolTip} ${style.toolTip12}`}>
                   Database Backup
                   </div>
                 </Link>

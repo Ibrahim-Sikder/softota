@@ -52,7 +52,7 @@
   margin-top: 80px;
 }
 .leftSideIconWrap p {
-  margin-bottom: 23px;
+  margin-bottom: 20px;
   color: #fff !important;
 }
 .icon {
@@ -147,7 +147,6 @@
 .customerInfo button {
   background: transparent;
   color: white;
- 
   font-size: 12px;
   width: 132px;
   padding: 3px 0px;
@@ -235,7 +234,7 @@
   position:absolute;
 }
 .mainToolTip{
-  top:123px !important;
+  top:70px !important;
   width:300px !important;
    z-index:99999 !important;
 }
@@ -246,30 +245,41 @@
   position:absolute;
 }
 .toolTip3{
-top:261px;
+top:215px;
 z-index: 999999999 !important;
 }
 .toolTip4{
-  top:307px;
+  top:257px;
   z-index: 999999999 !important;
 }
 .toolTip5{
-  top:353px;
+  top:300px;
   z-index: 999999999 !important;
 }
 .toolTip6{
-  top:399px;
+  top:340px;
   z-index: 9999999999 !important;
 }
 .toolTip7{
-  top:445px;
+  top:380px;
   z-index: 999999999 !important;
 }
 .toolTip8{
-  top:491px;
+  top:425px;
   z-index: 9999999999 !important;
 }
-
+.toolTip9{
+  top:460px;
+}
+.toolTip10{
+  top:510px;
+}
+.toolTip11{
+  top:550px;
+}
+.toolTip12{
+  top:600px;
+}
 .showToolTip:hover .toolTip{
 display:block;
 transition: all .5s cubic-bezier(0.11, -0.04, 0.96, 1.06);
