@@ -1,25 +1,27 @@
 .hajjUmrah{
-    width:100vw;
     display: flex;
+  height: 100vh;
     
 }
 .packageWrap{
-    width: 100%;
-    margin: 0 auto;
+    gap:1rem;
     display: flex;
-    padding: 20px 40px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding:20px;
+    align-items: start;
+   
 }
 .packageLeftSide{
-    width: 25%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 0 0 auto; 
+    width: 300px;
+    position: sticky;
+    top:0px;
+    overflow-y: auto; 
+
 }
 .packageRightSide{
-    width: 75%;
-    padding-left: 15px;
+    flex: 0 0 auto;
+    overflow-y: auto;
+    width:75%;
 }
 .umrahImgWrap{
     width:100%;
