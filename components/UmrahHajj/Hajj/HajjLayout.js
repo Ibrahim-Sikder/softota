@@ -14,8 +14,10 @@ import Footer from "../../Footer/Footer";
 import dynamic from "next/dynamic";
 import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
 import { useEffect } from "react";
+import { useContext } from "react";
+import { DataContext } from "@/Context/DataContext";
 const HajjLayout = ({ children }) => {
-
+  const { handleGetHajjData, handleGetUmrahData } = useContext(DataContext);
   return (
     <div>
       <Nav />
@@ -49,22 +51,40 @@ const HajjLayout = ({ children }) => {
                       </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Typography className={style.hajjTypograpy}>
+                      <Typography
+                        onClick={() => handleGetUmrahData("Umrah In Ramadan")}
+                        className={style.hajjTypograpy}
+                      >
                         <HajjActiveLink href="/umrah/umrah-in-ramadan">
                           <p>Umrah In Ramadan </p>
                         </HajjActiveLink>
                       </Typography>
-                      <Typography className={style.hajjTypograpy}>
+                      <Typography
+                        onClick={() =>
+                          handleGetUmrahData("Premium Umrah Packages")
+                        }
+                        className={style.hajjTypograpy}
+                      >
                         <HajjActiveLink href="/umrah/premium">
                           <p>Premium Umrah Packages </p>
                         </HajjActiveLink>
                       </Typography>
-                      <Typography className={style.hajjTypograpy}>
+                      <Typography
+                        onClick={() =>
+                          handleGetUmrahData("Platinum Umrah Packages")
+                        }
+                        className={style.hajjTypograpy}
+                      >
                         <HajjActiveLink href="/umrah/platinum">
                           <p>Platinum Umrah Packages </p>
                         </HajjActiveLink>
                       </Typography>
-                      <Typography className={style.hajjTypograpy}>
+                      <Typography
+                        onClick={() =>
+                          handleGetUmrahData("Family Umrah Packages")
+                        }
+                        className={style.hajjTypograpy}
+                      >
                         <HajjActiveLink href="/umrah/family">
                           <p>Family Umrah Packages </p>
                         </HajjActiveLink>
@@ -120,19 +140,34 @@ const HajjLayout = ({ children }) => {
                         </Typography>
                       </AccordionSummary>
                       <AccordionDetails>
-                        <Typography className={style.hajjTypograpy}>
+                        <Typography
+                          onClick={() =>
+                            handleGetHajjData("Economy Hajj Package")
+                          }
+                          className={style.hajjTypograpy}
+                        >
                           <HajjActiveLink href="/hajj/economy">
-                            <p>Economy hajj package</p>
+                            <p>Economy Hajj Package</p>
                           </HajjActiveLink>
                         </Typography>
 
-                        <Typography className={style.hajjTypograpy}>
+                        <Typography
+                          onClick={() =>
+                            handleGetHajjData("Non Shifting Hajj Package")
+                          }
+                          className={style.hajjTypograpy}
+                        >
                           <HajjActiveLink href="/hajj/nonshifting">
                             <p>Non shifting hajj package </p>
                           </HajjActiveLink>
                         </Typography>
 
-                        <Typography className={style.hajjTypograpy}>
+                        <Typography
+                          onClick={() =>
+                            handleGetHajjData("Shifting Hajj Package")
+                          }
+                          className={style.hajjTypograpy}
+                        >
                           <HajjActiveLink href="/hajj/shifting">
                             <p>Shifting hajj package </p>
                           </HajjActiveLink>
