@@ -9,36 +9,8 @@ import React, { useState, useEffect } from 'react';
 const ReactQuill = dynamic(() => import('react-quill'), { ssr: false });
 import 'react-quill/dist/quill.snow.css'; 
 const Hotel = ({ value, onChange }) => {
-  const [child, setChild] = useState(0)
-  const [adult, setAdult] = useState(0)
-  const [room, setRoom] = useState("1 Room")
   const [editorValue, setEditorValue] = useState("");
   const [quill, setQuill] = useState(null);
-
-  const childIncrement = () => {
-    setChild(child + 1)
-  }
-  const childDecrement = () => {
-    if (child < 1) {
-      setChild(0)
-    } else {
-      setChild(child - 1)
-    }
-  }
-  const incrementAdult = () => {
-    setAdult(adult + 1)
-  }
-  const decrementAdult = () => {
-    if (child < 1) {
-      setAdult(0)
-    } else {
-      setAdult(child - 1)
-    }
-  }
-
-
-
-
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -51,12 +23,12 @@ const Hotel = ({ value, onChange }) => {
             </h2>
             <div className="w-full mx-auto">
               <form>
-              <div className={styles.formControl}>
+                <div className={styles.formControl}>
                   <div>
                     <label>Hotel Name </label>
                     <input
-                      name="name"
-                      placeholder="Hotel Name "
+                      name="country"
+                      placeholder="Input Country "
                       type="text"
                       className={styles.inputField}
                     />
@@ -64,8 +36,8 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label> Title </label>
                     <input
-                      name="title"
-                      placeholder="Title"
+                      name="city"
+                      placeholder="Input City "
                       type="text"
                       className={styles.inputField}
                     />
@@ -133,6 +105,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label>Day/Night </label>
                     <input
+                      onChange={(e) => setDayNight(e.target.value)}
                       name="day"
                       placeholder="Day/Night "
                       type="text"
@@ -142,6 +115,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label> Price Per Person </label>
                     <input
+                      onChange={(e) => setPricePerson(e.target.value)}
                       name="price"
                       placeholder="Price Person "
                       type="text"
@@ -153,6 +127,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label>Price Twin Person</label>
                     <input
+                      onChange={(e) => setPriceTwinPerson(e.target.value)}
                       name="price"
                       placeholder="Price Twin Person "
                       type="text"
@@ -162,6 +137,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label> Price Triple Person </label>
                     <input
+                      onChange={(e) => setPriceTriplePerson(e.target.value)}
                       name="price"
                       placeholder="Price Triple Person"
                       type="text"
@@ -252,6 +228,7 @@ const Hotel = ({ value, onChange }) => {
                   </form>
                 </dialog>
               </div>
+              
             </div>
                   <div>
                     <label>Hotel Type </label>
@@ -268,6 +245,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label>Highest Price </label>
                     <input
+                      onChange={(e) => setHighestPrice(e.target.value)}
                       name="highestPrice"
                       placeholder="Highest Price "
                       type="number"
@@ -277,6 +255,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label> Lowest Price </label>
                     <input
+                      onChange={(e) => setLowestPrice(e.target.value)}
                       name="lowestPrice"
                       placeholder="Lowest Price "
                       type="number"
@@ -288,6 +267,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label>Start Price </label>
                     <input
+                      onChange={(e) => setStartPrice(e.target.value)}
                       name="startPrice"
                       placeholder="Start Price "
                       type="number"
@@ -297,6 +277,7 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label> Discount Price </label>
                     <input
+                      onChange={(e) => setDiscountPrice(e.target.value)}
                       name="discountPrice"
                       placeholder="Discount Price "
                       type="number"
@@ -308,34 +289,84 @@ const Hotel = ({ value, onChange }) => {
                   <div>
                     <label>Date</label>
                     <input
+                      onChange={(e) => setGetDate(e.target.value)}
                       name="date"
                       placeholder="Date "
                       type="date"
                       className={styles.inputField}
                     />
                   </div>
-                 
+                  <div>
+                    <label>Address</label>
+                    <input
+                      name="address"
+                      placeholder="Address"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
                 </div>
-                
+                <div className={styles.formControl}>
+                  <div>
+                    <label> Title </label>
+                    <input
+                      name="title"
+                      placeholder="Title"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Sub Title </label>
+                    <input
+                      name="subtitle"
+                      placeholder="Sub Title "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Hotel Name </label>
+                    <input
+                      name="name"
+                      placeholder="Hotel Name "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
-                    <label for="files">
-                      {" "}
-                      <CloudUpload className={styles.uploadIcon} /> Image Upload{" "}
-                    </label>
+                    {getFile[0]?.name ? (
+                      <label for="files">{getFile[0]?.name}</label>
+                    ) : (
+                      <label for="files">
+                        {" "}
+                        <CloudUpload className={styles.uploadIcon} /> Image
+                        Upload{" "}
+                      </label>
+                    )}
+
                     <input
+                      onChange={handlePdf}
                       name="image"
+                      // accept=".jpg/.jpeg/.png"
                       className={styles.inputField}
                       type="file"
                       id="files"
                       class="hidden"
+                      multiple
                     />
                   </div>
                 </div>
-                <div className={styles.formControl}> <div>
+                <div className={styles.formControl}>
+                  {" "}
+                  <div>
                     <ReactQuill
                       value={value}
-                      onChange={onChange}
+                      onChange={setValue}
                       modules={{
                         toolbar: [
                           [{ font: [] }],

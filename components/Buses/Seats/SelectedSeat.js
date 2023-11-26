@@ -2,7 +2,71 @@ import { LuArmchair } from "react-icons/lu";
 import PropTypes from "prop-types";
 import { PriorityHigh } from "@mui/icons-material";
 import style from "./Seats.module.css";
+import toast from "react-hot-toast";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
 const SelectedSeats = ({ selectedSeats }) => {
+  const [selectedSeatNumber, setSelectedSeatNumber] = useState(null);
+  const [fareAmount, setFareAmount] = useState(null);
+  const [className, setClassName] = useState(null);
+  const [getTotalAmount, setGetTotalAmount] = useState(null);
+  const [getName, setGetName] = useState(null);
+  const [getEmail, setGetEmail] = useState(null);
+  const [getPhoneNumber, setGetPhoneNumber] = useState(null);
+  const [getBoardingPoint, setGetBoardingPoint] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const allSeatNumbers = selectedSeats.map((seat) => seat.number).join(", ");
+    const allSeatFare = selectedSeats.map((seat) => seat.fare).join(", ");
+    const allSeatClass = selectedSeats.map((seat) => seat.class).join(", ");
+    const totalAmount = selectedSeats.reduce(
+      (price, next) => price + next.fare,
+      0
+    );
+
+    setSelectedSeatNumber(allSeatNumbers);
+    setFareAmount(allSeatFare);
+    setClassName(allSeatClass);
+    setGetTotalAmount(totalAmount);
+  }, [selectedSeats]);
+
+ 
+
+  const  handleConfirmBus = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+    const data = {
+      Seats: selectedSeatNumber,
+      fare: fareAmount,
+      class: className,
+      total: getTotalAmount,
+      boarding_point: getBoardingPoint,
+      name: getName,
+      email: getEmail,
+      mobile_number: getPhoneNumber,
+    };
+    setLoading(true);
+    axios
+      .post("http://localhost:5000/api/v1/bus", data)
+      .then(function (response) {
+        console.log(response.data)
+        if (response.data.message === "Send request for bus confirmation.") {
+          toast.success(
+            "Confirmation request accepted. Please wait to confirm."
+          );
+        }
+      })
+      .catch((error) => {
+        toast.error(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  console.log(getTotalAmount);
   return (
     <div className="">
       <div className="flex justify-between items-center">
@@ -33,6 +97,7 @@ const SelectedSeats = ({ selectedSeats }) => {
           <th>Class</th>
         </tr>
         {selectedSeats.map((seat, index) => {
+          //  setSelectedSeatNumber(seat.number);
           return (
             <tr key={index} className="text-center">
               <td>{seat.number}</td>
@@ -48,8 +113,11 @@ const SelectedSeats = ({ selectedSeats }) => {
         </h1>
       </div>
 
-      <form>
-        <select className={style.boardingSelect}>
+      <form onSubmit={ handleConfirmBus}>
+        <select
+          onChange={(e) => setGetBoardingPoint(e.target.value)}
+          className={style.boardingSelect}
+        >
           <option value=" -- Boarding points -- ">
             {" "}
             -- Boarding points --{" "}
@@ -80,28 +148,31 @@ const SelectedSeats = ({ selectedSeats }) => {
           </option>
         </select>
         <input
+          onChange={(e) => setGetName(e.target.value)}
           className={style.phoneNumber}
           type="text"
           placeholder="Name"
         />
         <input
+          onChange={(e) => setGetEmail(e.target.value)}
           className={style.phoneNumber}
           type="email"
           placeholder="Email"
         />
-         <input
+        <input
+          onChange={(e) => setGetPhoneNumber(e.target.value)}
           className={style.phoneNumber}
           type="text"
           placeholder="Phone Number"
         />
+        <div className="flex items-center justify-between my-5">
+          <button disabled={loading ? true : false} className={style.continoueBtn}>Continoue </button>
+          <small className="underline cursor-pointer hover:text-[#0BB811]">
+            Close
+          </small>
+        </div>
       </form>
 
-      <div className="flex items-center justify-between my-5">
-        <button className={style.continoueBtn}>Continoue </button>
-        <small className="underline cursor-pointer hover:text-[#0BB811]">
-          Close
-        </small>
-      </div>
       <div className="flex items-center">
         <PriorityHigh className={style.conditonIcon} />
         <small>Due to traffic condition, the trip may get canceled.</small>

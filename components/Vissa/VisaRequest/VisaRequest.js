@@ -1,8 +1,99 @@
 import React from "react";
 import style from "./VisaRequest.module.css";
 import { LocalPhone, CloudUpload } from "@mui/icons-material";
+import toast from "react-hot-toast";
+import axios from "axios";
+import { useState } from "react";
+import { useRef } from "react";
 
 const VisaRequest = () => {
+  const [getFile, setGetFile] = useState({});
+  const [getPdfLinks, setGetPdfLinks] = useState([]);
+  const [country, setCountry] = useState("");
+  const [writeDownCountry, setWriteDownCountry] = useState(0);
+  const [getDate, setGetDate] = useState("");
+  const [passportNumber, setPassportNumber] = useState(0);
+  const [name, setName] = useState("");
+  const [surname, setSurname] = useState("");
+  const [mobileNumber, setMobileNumber] = useState();
+  const [email, setEmail] = useState("");
+  const [requirements, setRequirements] = useState("");
+  const [loading, setLoading] = useState(false);
+  const formRef = useRef();
+
+  let files;
+  const handlePdf = async (e) => {
+    setGetFile(e.target.files);
+    try {
+      files = e.target.files;
+      const formData = new FormData();
+      for (let i = 0; i < files.length; i++) {
+        formData.append("pdfFiles", files[i]);
+      }
+      const response = await fetch("http://localhost:5000/api/v1/uploads/pdf", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.message === "success") {
+        setGetPdfLinks(data.imageLinks);
+        // console.log(data.imageLinks);
+      }
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
+  };
+
+  const handleConfirmVisaRequest = (e) => {
+    e.preventDefault();
+    const data = {
+      country: country,
+      write_down_country: writeDownCountry,
+      journey_date: getDate,
+      passport: passportNumber,
+      given_name: name,
+      surname: surname,
+      mobile_number: mobileNumber,
+      email: email,
+      pdf: getPdfLinks,
+      requirements: requirements,
+    };
+    setLoading(true);
+    axios
+      .post("http://localhost:5000/api/v1/visa", data)
+      .then(function (response) {
+        console.log(response.data);
+        if (response.data.message === "Send request for Visa Confirmation.") {
+          toast.success(
+            "Confirmation request accepted. Please wait to confirm."
+          );
+          formRef.current.reset();
+          setCountry("");
+          setWriteDownCountry("");
+          setGetDate("");
+          setPassportNumber();
+          setName("");
+          setSurname("");
+          setEmail("");
+          setRequirements("");
+          setGetPdfLinks([]);
+        }
+        if (
+          response.data === "Interval server error" &&
+          response.data !== "Send request for Visa Confirmation."
+        ) {
+          toast.error("Something went wrong!");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
   return (
     <section>
       <div className={style.visaRequestWrap}>
@@ -23,14 +114,17 @@ const VisaRequest = () => {
           <h2 className="text-xl font-bold">
             Tell us where do you want to go ?{" "}
           </h2>
-          <form>
+          <form ref={formRef} onSubmit={handleConfirmVisaRequest}>
             <div className={style.inputFieldWrap}>
               <div className={style.formControl}>
                 <label className={style.inputLabel}>
                   {" "}
                   Select a destination from list
                 </label>
-                <select className={style.visaInput}>
+                <select
+                  onChange={(e) => setCountry(e.target.value)}
+                  className={style.visaInput}
+                >
                   <option selected value="Bangladesh">
                     Bangladesh
                   </option>
@@ -48,7 +142,11 @@ const VisaRequest = () => {
               </div>
               <div className={style.formControl}>
                 <label className={style.inputLabel}>Or Write down </label>
-                <input type="text" className={style.visaInput} />
+                <input
+                  onChange={(e) => setWriteDownCountry(e.target.value)}
+                  type="text"
+                  className={style.visaInput}
+                />
               </div>
             </div>
             <div className={style.inputFieldWrap}>
@@ -57,6 +155,7 @@ const VisaRequest = () => {
                   When do you want to go?
                 </label>
                 <input
+                  onChange={(e) => setGetDate(e.target.value)}
                   placeholder="Date "
                   type="date"
                   className={style.visaInput}
@@ -66,6 +165,7 @@ const VisaRequest = () => {
               <div className={style.formControl}>
                 <label className={style.inputLabel}>Passport Number </label>
                 <input
+                  onChange={(e) => setPassportNumber(e.target.value)}
                   placeholder="Passport Number "
                   type="text"
                   className={style.visaInput}
@@ -80,6 +180,7 @@ const VisaRequest = () => {
               <div className={style.formControl}>
                 <label className={style.inputLabel}>Given Name </label>
                 <input
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Given Name "
                   type="text"
                   className={style.visaInput}
@@ -92,6 +193,7 @@ const VisaRequest = () => {
                   Surname{" "}
                 </label>
                 <input
+                  onChange={(e) => setSurname(e.target.value)}
                   placeholder="Surname"
                   type="text"
                   className={style.visaInput}
@@ -103,6 +205,7 @@ const VisaRequest = () => {
               <div className={style.formControl}>
                 <label className={style.inputLabel}>Movile Number </label>
                 <input
+                  onChange={(e) => setMobileNumber(e.target.value)}
                   placeholder="Phone Number"
                   type="text"
                   className={style.visaInput}
@@ -112,26 +215,49 @@ const VisaRequest = () => {
               <div className={style.formControl}>
                 <label className={style.inputLabel}> Email </label>
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
                   type="text"
                   className={style.visaInput}
                   required
                 />
               </div>
-             
             </div>
             <div className={`${style.formControl} ${style.uploadDoc}`}>
-                <div className="flex items-center ">
-                  <div>
-                    <input type="file" id="files" className="hidden" />
-                    <label for="files">Upload Your Doc</label>
-                  </div>
-                  <CloudUpload className={style.uploadIcon} />
+              <div className="flex items-center ">
+                <div>
+                  <input
+                    onChange={handlePdf}
+                    name="image"
+                    accept=".pdf"
+                    className={style.inputField}
+                    type="file"
+                    id="files"
+                    class="hidden"
+                    multiple
+                  />
                 </div>
+                {getFile[0]?.name ? (
+                  <label for="files">{getFile[0]?.name}</label>
+                ) : (
+                  <label for="files">
+                    {" "}
+                    <CloudUpload className={style.uploadIcon} /> Upload Your Doc
+                  </label>
+                )}
+
+                {/* <label for="files"></label>
+                  <CloudUpload className={style.uploadIcon} /> */}
               </div>
+              {/* <div className={style.uploadFile}>
+                    
+                    
+                  </div> */}
+            </div>
             <div className={style.formControl}>
               <h2 className="font-bold text-xl"> Share Your Requirements </h2>
               <textarea
+                onChange={(e) => setRequirements(e.target.value)}
                 className={style.textField}
                 name=""
                 id=""
@@ -139,7 +265,7 @@ const VisaRequest = () => {
                 rows="10"
               ></textarea>
             </div>
-            <button className={style.visaSubmitBtn}>Confirm Request</button>
+            <button disabled={loading ? true : false} className={style.visaSubmitBtn}>Confirm Request</button>
           </form>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import HajjLayout from "../../../../components/UmrahHajj/Hajj/HajjLayout";
 import HajjUmrahCard from "../../../../components/Shared/HajjUmraCard/HajjUmrahCard";
 import economy from "../../../../public/assets/hajj5.jpeg";
+ 
 const Economy = () => {
   return (
     <HajjLayout>

@@ -8,9 +8,93 @@ import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import React, { useState, useEffect } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
-const Train = ({ value, onChange }) => {
+import toast from "react-hot-toast";
+import axios from "axios";
+import { useRef } from "react";
+const Train = () => {
   const [editorValue, setEditorValue] = useState("");
   const [quill, setQuill] = useState(null);
+  const [getFile, setGetFile] = useState({});
+  const [getImage, setGetImage] = useState([]);
+  const [value, setValue] = useState("");
+  const [countryName, setCountryName] = useState(null);
+  const [cityName, setCityName] = useState(null);
+  const [address, setAddress] = useState(null);
+  const [categoryType, setCategoryType] = useState(null);
+  const [productCategory, setProductCategory] = useState(null);
+  const [getDate, setGetDate] = useState(null);
+  const [price, setPrice] = useState();
+  const [title, setTitle] = useState(null);
+  const [subTitle, setSubTitle] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const formRef = useRef();
+
+  let files;
+  const handlePdf = async (e) => {
+    setGetFile(e.target.files);
+    try {
+      files = e.target.files;
+      const formData = new FormData();
+      for (let i = 0; i < files.length; i++) {
+        formData.append("pdfFiles", files[i]);
+      }
+      const response = await fetch("http://localhost:5000/api/v1/uploads/pdf", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.message === "success") {
+        setGetImage(data.imageLinks);
+        // console.log(data.imageLinks);
+      }
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
+  };
+
+  const handleTrainData = (e) => {
+    e.preventDefault();
+    const data = {
+      country_name: countryName,
+      city_name: cityName,
+      address: address,
+      category_type: categoryType,
+      product_category: productCategory,
+      date: getDate,
+      price: price,
+      title: title,
+      sub_title: subTitle,
+      image: getImage,
+      description: value,
+    };
+    setLoading(true);
+    axios
+      .post("http://localhost:5000/api/v1/train/details", data)
+      .then(function (response) {
+        console.log(response.data);
+        if (response.data.message === "Successfully post train details.") {
+          toast.success("Post successful.");
+          formRef.current.reset();
+
+          setGetImage([]);
+          setValue("");
+        }
+        if (
+          (response.data =
+            "Internal server error" &&
+            response.data.message !== "Successfully post train details.")
+        ) {
+          toast.error("Please fill all the field.");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -22,11 +106,14 @@ const Train = ({ value, onChange }) => {
               Train Data Input{" "}
             </h2>
             <div className="w-full mx-auto">
-              <form>
+              <form ref={formRef} onSubmit={handleTrainData}>
                 <div className={styles.formControl}>
                   <div>
                     <label> Enter Country </label>
-                    <select className={styles.inputField}>
+                    <select
+                      onChange={(e) => setCountryName(e.target.value)}
+                      className={styles.inputField}
+                    >
                       <option selected value="Bangladesh">
                         Bangladesh
                       </option>
@@ -44,7 +131,10 @@ const Train = ({ value, onChange }) => {
                   </div>
                   <div>
                     <label> Enter City </label>
-                    <select className={styles.inputField}>
+                    <select
+                      onChange={(e) => setCityName(e.target.value)}
+                      className={styles.inputField}
+                    >
                       <option value="Dhaka">Dhaka</option>
                       <option value="Bangkok">Bangkok</option>
                       <option value="Tokyo">Tokyo</option>
@@ -60,7 +150,7 @@ const Train = ({ value, onChange }) => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  <div>
+                  {/* <div>
                     <label> Enter City </label>
                     <select className={styles.inputField}>
                       <option value="Dhaka">Dhaka</option>
@@ -75,10 +165,11 @@ const Train = ({ value, onChange }) => {
                       <option value="Tehran">Tehran</option>
                       <option value="Islamabad">Islamabad</option>
                     </select>
-                  </div>
+                  </div> */}
                   <div>
                     <label> Address </label>
                     <input
+                      onChange={(e) => setAddress(e.target.value)}
                       name="address"
                       placeholder="Address"
                       type="text"
@@ -90,6 +181,7 @@ const Train = ({ value, onChange }) => {
                   <div>
                     <label>Category Type </label>
                     <input
+                      onChange={(e) => setCategoryType(e.target.value)}
                       name="category"
                       placeholder="Category Type "
                       type="text"
@@ -99,6 +191,7 @@ const Train = ({ value, onChange }) => {
                   <div>
                     <label>Product Category</label>
                     <input
+                      onChange={(e) => setProductCategory(e.target.value)}
                       name="productCategory"
                       placeholder="Product Category "
                       type="text"
@@ -110,6 +203,7 @@ const Train = ({ value, onChange }) => {
                   <div>
                     <label>Date</label>
                     <input
+                      onChange={(e) => setGetDate(e.target.value)}
                       name="date"
                       placeholder="Date "
                       type="date"
@@ -119,6 +213,7 @@ const Train = ({ value, onChange }) => {
                   <div>
                     <label>Price </label>
                     <input
+                      onChange={(e) => setPrice(e.target.value)}
                       name="price"
                       placeholder="Price"
                       type="text"
@@ -130,6 +225,7 @@ const Train = ({ value, onChange }) => {
                   <div>
                     <label> Title </label>
                     <input
+                      onChange={(e) => setTitle(e.target.value)}
                       name="title"
                       placeholder="Title"
                       type="text"
@@ -139,6 +235,7 @@ const Train = ({ value, onChange }) => {
                   <div>
                     <label> Sub Title </label>
                     <input
+                      onChange={(e) => setSubTitle(e.target.value)}
                       name="subTitle"
                       placeholder=" Sub Title"
                       type="text"
@@ -148,16 +245,25 @@ const Train = ({ value, onChange }) => {
                 </div>
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
-                    <label for="files">
-                      {" "}
-                      <CloudUpload className={styles.uploadIcon} /> Image Upload{" "}
-                    </label>
+                    {getFile[0]?.name ? (
+                      <label for="files">{getFile[0]?.name}</label>
+                    ) : (
+                      <label for="files">
+                        {" "}
+                        <CloudUpload className={styles.uploadIcon} /> Image
+                        Upload{" "}
+                      </label>
+                    )}
+
                     <input
+                      onChange={handlePdf}
                       name="image"
+                      // accept=".jpg/.jpeg/.png"
                       className={styles.inputField}
                       type="file"
                       id="files"
                       class="hidden"
+                      multiple
                     />
                   </div>
                 </div>
@@ -165,7 +271,7 @@ const Train = ({ value, onChange }) => {
                   <div>
                     <ReactQuill
                       value={value}
-                      onChange={onChange}
+                      onChange={setValue}
                       modules={{
                         toolbar: [
                           [{ font: [] }],
@@ -190,7 +296,11 @@ const Train = ({ value, onChange }) => {
                 </div>
 
                 <div className={styles.formControl}>
-                  <button className={styles.submitBtn} type="submit">
+                  <button
+                    disabled={loading ? true : false}
+                    className={styles.submitBtn}
+                    type="submit"
+                  >
                     Submit
                   </button>
                 </div>

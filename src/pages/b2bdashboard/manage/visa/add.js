@@ -4,12 +4,110 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
-const Add = ({ value, onChange }) => {
+import toast from "react-hot-toast";
+import axios from "axios";
+import Image from "next/image";
+const Add = () => {
   const [editorValue, setEditorValue] = useState("");
   const [quill, setQuill] = useState(null);
+
+  const [getFile, setGetFile] = useState({});
+  const [getImage, setGetImage] = useState([]);
+  const [value, setValue] = useState("");
+  const [countryName, setCountryName] = useState(null);
+  const [cityName, setCityName] = useState(null);
+  const [visaType, setVisaType] = useState(null);
+  const [travelerType, setTravelerType] = useState(null);
+  const [entry, setEntry] = useState(null);
+  const [duration, setDuration] = useState(null);
+  const [processingTime, setProcessingTime] = useState(null);
+  const [embassyFee, setEmbassyFee] = useState(null);
+  const [agentFee, setAgentFee] = useState(null);
+  const [agencyFee, setAgencyFee] = useState(null);
+  const [serviceCharge, setServiceCharge] = useState(null);
+  const [stay, setStay] = useState(null);
+  const [getDate, setGetDate] = useState(null);
+  const [requirement, setRequirement] = useState(null);
+
+  const [loading, setLoading] = useState(false);
+  const formRef = useRef();
+
+  let files;
+  const handlePdf = async (e) => {
+    setGetFile(e.target.files);
+    try {
+      files = e.target.files;
+      const formData = new FormData();
+      for (let i = 0; i < files.length; i++) {
+        formData.append("pdfFiles", files[i]);
+      }
+      const response = await fetch("http://localhost:5000/api/v1/uploads/pdf", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.message === "success") {
+        setGetImage(data.imageLinks);
+        // console.log(data.imageLinks);
+      }
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
+  };
+
+  const handleVisaData = (e) => {
+    e.preventDefault();
+    const data = {
+      country_name: countryName,
+      city_name: cityName,
+      visa_type: visaType,
+      traveler_type: travelerType,
+      entry: entry,
+      duration: duration,
+      processing_time: processingTime,
+      embassy_fee: embassyFee,
+      agent_fee: agentFee,
+      agency_fee: agencyFee,
+      service_charge: serviceCharge,
+      stay: stay,
+
+      date: getDate,
+      requirement: requirement,
+
+      image: getImage,
+      description: value,
+    };
+    setLoading(true);
+    axios
+      .post("http://localhost:5000/api/v1/visa/details", data)
+      .then(function (response) {
+        console.log(response.data);
+        if (response.data.message === "Successfully visa details posted.") {
+          toast.success("Post successful.");
+          
+          formRef.current.reset();
+        }
+        if (
+          (response.data =
+            "Internal server error" &&
+            response.data.message !== "Successfully visa details posted.")
+        ) {
+          toast.error("Please fill all the field.");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+ 
 
   return (
     <B2BdashboardLayout>
@@ -20,11 +118,14 @@ const Add = ({ value, onChange }) => {
           <div className={styling.flightHistory}>
             <h2 className="text-3xl font-bold text-center">Visa Data Input </h2>
             <div className="w-full mx-auto">
-              <form>
+              <form ref={formRef} onSubmit={handleVisaData}>
                 <div className={styles.formControl}>
                   <div>
                     <label> Enter Country </label>
-                    <select className={styles.inputField}>
+                    <select
+                      onChange={(e) => setCountryName(e.target.value)}
+                      className={styles.inputField}
+                    >
                       <option selected value="Bangladesh">
                         Bangladesh
                       </option>
@@ -42,7 +143,10 @@ const Add = ({ value, onChange }) => {
                   </div>
                   <div>
                     <label> Enter City </label>
-                    <select className={styles.inputField}>
+                    <select
+                      onChange={(e) => setCityName(e.target.value)}
+                      className={styles.inputField}
+                    >
                       <option value="Dhaka">Dhaka</option>
                       <option value="Bangkok">Bangkok</option>
                       <option value="Tokyo">Tokyo</option>
@@ -60,7 +164,10 @@ const Add = ({ value, onChange }) => {
                 <div className={styles.formControl}>
                   <div>
                     <label> Visa Type </label>
-                    <select className={styles.inputField}>
+                    <select
+                      onChange={(e) => setVisaType(e.target.value)}
+                      className={styles.inputField}
+                    >
                       <option value="Select Visa Type ">
                         Select Visa Type
                       </option>
@@ -71,7 +178,10 @@ const Add = ({ value, onChange }) => {
                   </div>
                   <div>
                     <label> Traveller Type </label>
-                    <select className={styles.inputField}>
+                    <select
+                      onChange={(e) => setTravelerType(e.target.value)}
+                      className={styles.inputField}
+                    >
                       <option value="Select Traveller Type">
                         Select Traveller Type{" "}
                       </option>
@@ -93,6 +203,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Entry </label>
                     <input
+                      onChange={(e) => setEntry(e.target.value)}
                       name="Entry"
                       placeholder="Entry"
                       type="text"
@@ -102,6 +213,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Duration </label>
                     <input
+                      onChange={(e) => setDuration(e.target.value)}
                       name="Duration"
                       placeholder="Duration"
                       type="text"
@@ -113,6 +225,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Processing Time </label>
                     <input
+                      onChange={(e) => setProcessingTime(e.target.value)}
                       name="process"
                       placeholder="Processing Time "
                       type="text"
@@ -122,6 +235,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Embassy Fee </label>
                     <input
+                      onChange={(e) => setEmbassyFee(e.target.value)}
                       name="coast"
                       placeholder="Embassy Fee"
                       type="text"
@@ -133,6 +247,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Agent Fee </label>
                     <input
+                      onChange={(e) => setAgentFee(e.target.value)}
                       name="process"
                       placeholder="Agent Fee"
                       type="text"
@@ -142,6 +257,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Agency Fee </label>
                     <input
+                      onChange={(e) => setAgencyFee(e.target.value)}
                       name="coast"
                       placeholder="Agency Fee"
                       type="text"
@@ -153,6 +269,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Service Charge </label>
                     <input
+                      onChange={(e) => setServiceCharge(e.target.value)}
                       name="process"
                       placeholder="Service Charge"
                       type="text"
@@ -160,8 +277,9 @@ const Add = ({ value, onChange }) => {
                     />
                   </div>
                   <div>
-                    <label>Stya </label>
+                    <label>Stay </label>
                     <input
+                      onChange={(e) => setStay(e.target.value)}
                       name="stay"
                       placeholder="Stay"
                       type="text"
@@ -173,6 +291,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Date</label>
                     <input
+                      onChange={(e) => setGetDate(e.target.value)}
                       name="date"
                       placeholder="Date "
                       type="date"
@@ -182,6 +301,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Requirement</label>
                     <input
+                      onChange={(e) => setRequirement(e.target.value)}
                       name="requirement"
                       placeholder="Requirement"
                       type="text"
@@ -191,16 +311,25 @@ const Add = ({ value, onChange }) => {
                 </div>
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
-                    <label for="files">
-                      {" "}
-                      <CloudUpload className={styles.uploadIcon} /> Image Upload{" "}
-                    </label>
+                    {getFile[0]?.name ? (
+                      <label for="files">{getFile[0]?.name}</label>
+                    ) : (
+                      <label for="files">
+                        {" "}
+                        <CloudUpload className={styles.uploadIcon} /> Image
+                        Upload{" "}
+                      </label>
+                    )}
+
                     <input
+                      onChange={handlePdf}
                       name="image"
+                      // accept=".jpg/.jpeg/.png"
                       className={styles.inputField}
                       type="file"
                       id="files"
                       class="hidden"
+                      multiple
                     />
                   </div>
                 </div>
@@ -208,7 +337,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <ReactQuill
                       value={value}
-                      onChange={onChange}
+                      onChange={setValue}
                       modules={{
                         toolbar: [
                           [{ font: [] }],
@@ -233,7 +362,7 @@ const Add = ({ value, onChange }) => {
                 </div>
 
                 <div className={styles.formControl}>
-                  <button className={styles.submitBtn} type="submit">
+                  <button disabled={loading ? true : false} className={styles.submitBtn} type="submit">
                     Submit
                   </button>
                 </div>

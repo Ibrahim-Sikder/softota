@@ -7,10 +7,80 @@ import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
+import toast from "react-hot-toast";
+import axios from "axios";
+import { useRef } from "react";
 
-const Add = ({ value, onChange }) => {
+const Add = ( ) => {
   const [editorValue, setEditorValue] = useState("");
   const [quill, setQuill] = useState(null);
+
+  const [getFile, setGetFile] = useState({});
+  const [getImage, setGetImage] = useState([]);
+  const [value, setValue] = useState("");
+  const [title, setTitle] = useState(null);
+  const [subTitle, setSubTitle] = useState(null);
+  
+
+  const [loading, setLoading] = useState(false);
+  const formRef = useRef();
+
+  let files;
+  const handlePdf = async (e) => {
+    setGetFile(e.target.files);
+    try {
+      files = e.target.files;
+      const formData = new FormData();
+      for (let i = 0; i < files.length; i++) {
+        formData.append("pdfFiles", files[i]);
+      }
+      const response = await fetch("http://localhost:5000/api/v1/uploads/pdf", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+      if (data.message === "success") {
+        setGetImage(data.imageLinks);
+      }
+    } catch (error) {
+      console.error("Error uploading file:", error);
+    }
+  };
+
+  const handleUmrahVisaRequirmentData = (e) => {
+    e.preventDefault();
+    const data = {
+      title: title,
+      sub_title: subTitle,
+      image: getImage,
+      description: value,
+      category:"Umrah Visa Requirment"
+    };
+    setLoading(true);
+    axios
+      .post("http://localhost:5000/api/v1/umrah/details", data)
+      .then(function (response) {
+        console.log(response.data);
+        if (response.data.message === "Successfully post umrah details.") {
+          toast.success("Post successful.");
+          formRef.current.reset();
+        }
+        if (
+          (response.data =
+            "Internal server error" &&
+            response.data.message !== "Successfully post umrah details.")
+        ) {
+          toast.error("Please fill all the field.");
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -21,11 +91,12 @@ const Add = ({ value, onChange }) => {
               Umrah Visa Requirment Data Input{" "}
             </h2>
             <div className="w-full mx-auto">
-              <form>
+              <form ref={formRef} onSubmit={handleUmrahVisaRequirmentData}>
                 <div className={styles.formControl}>
                   <div>
                     <label>Title </label>
                     <input
+                    onChange={(e)=>setTitle(e.target.value)}
                       name="category"
                       placeholder="Title"
                       type="text"
@@ -35,24 +106,35 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <label>Sub Title</label>
                     <input
-                      name="productCategory"
-                      placeholder="Product Category "
+                     onChange={(e)=>setSubTitle(e.target.value)}
+                      name="Sub title"
+                      placeholder="Sub title"
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  <div className={styles.uploadFile}>
-                    <label for="files">
-                      <CloudUpload className={styles.uploadIcon} /> Image Upload{" "}
-                    </label>
+                <div className={styles.uploadFile}>
+                    {getFile[0]?.name ? (
+                      <label for="files">{getFile[0]?.name}</label>
+                    ) : (
+                      <label for="files">
+                        {" "}
+                        <CloudUpload className={styles.uploadIcon} /> Image
+                        Upload{" "}
+                      </label>
+                    )}
+
                     <input
+                      onChange={handlePdf}
                       name="image"
+                      // accept=".jpg/.jpeg/.png"
                       className={styles.inputField}
                       type="file"
                       id="files"
                       class="hidden"
+                      multiple
                     />
                   </div>
                 </div>
@@ -60,7 +142,7 @@ const Add = ({ value, onChange }) => {
                   <div>
                     <ReactQuill
                       value={value}
-                      onChange={onChange}
+                      onChange={setValue}
                       modules={{
                         toolbar: [
                           [{ font: [] }],
@@ -85,7 +167,7 @@ const Add = ({ value, onChange }) => {
                 </div>
 
                 <div className={styles.formControl}>
-                  <button className={styles.submitBtn} type="submit">
+                  <button disabled={loading ? true : false} className={styles.submitBtn} type="submit">
                     Submit
                   </button>
                 </div>

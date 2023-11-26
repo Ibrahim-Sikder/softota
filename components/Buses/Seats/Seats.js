@@ -5,7 +5,7 @@ import { LuArmchair } from 'react-icons/lu';
 import PropTypes from 'prop-types';
 import allSeats from './Database/Seats';
 
-const Seats = ({ handleSeatSelection, selectedSeats }) => {
+const Seats = ({ handleSeatSelection, selectedSeats,setSeatsNumber }) => {
   const [seats] = useState([...allSeats]);
 
   function checkEvenOrOdd(number) {
