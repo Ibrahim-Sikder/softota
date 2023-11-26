@@ -7,7 +7,10 @@ import Loader from "../../components/Loader/Loader";
 import { useEffect } from "react";
 import style from "../../src/styles/globals.css";
 import { Toaster } from "react-hot-toast";
-import DataProvider from "@/Context/DataContext";
+import ApiProvider from "@/Context/ApiContext";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor, store } from "@/Redux/app/store";
 
 export default function App({ Component, pageProps: { ...pageProps } }) {
   function Loading() {
@@ -36,13 +39,17 @@ export default function App({ Component, pageProps: { ...pageProps } }) {
   return (
     <>
       <HelmetProvider>
-        <DataProvider>
-          <Layout>
-            <Loading />
-            <Component {...pageProps} />
-            <Toaster />
-          </Layout>
-        </DataProvider>
+        <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
+            <ApiProvider>
+              <Layout>
+                <Loading />
+                <Component {...pageProps} />
+                <Toaster />
+              </Layout>
+            </ApiProvider>
+          </PersistGate>
+        </Provider>
       </HelmetProvider>
 
       {/* <div className="chatbox">

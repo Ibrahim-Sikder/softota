@@ -52,7 +52,7 @@ const HajjUmrah = ({ onChange }) => {
     }
   };
 
-  console.log(value);
+  
   // const onChanges = (content, delta, source, editor) => {
   //   setValue(content);
   //   // You can perform any additional logic here if needed

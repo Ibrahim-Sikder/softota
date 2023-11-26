@@ -6,12 +6,13 @@ import { useState } from "react";
 import { LocalPhone } from "@mui/icons-material";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import SingleVisaSearch from "./SingleVisaSearch";
+import { useSelector } from "react-redux";
 
 const VisaSearch = () => {
   const [showDetail, setShowDetail] = useState(true);
-  const [loader, setLoader] = useState(false);
+  const visaDetailsData = useSelector((state) => state.visa.visaDetailsData);
   const [profession, setProfession] = useState("Business Man");
-
   const handleShowDetail = () => {
     setShowDetail((showDetail) => !showDetail);
   };
@@ -26,7 +27,7 @@ const VisaSearch = () => {
                 Required Documents for Malaysia Tourist Visa
               </h4>
               <p className=" mb-5 mt-3">Visa Type : Studnet Visa</p>
-              <p className=" font-bold text-xl ">Duration and Cost Details</p>
+              <p className=" font-bold text-xl "> </p>
             </div>
 
             <div className={style.visaDownload}>
@@ -45,35 +46,16 @@ const VisaSearch = () => {
               </div>
             </div>
           </div>
-          
-          <div className={style.visaDetailsWrap}>
-            <div className={style.detailHalf}>
-              <span>Enty</span>
-              <span>Duration</span>
-              <span>Maximum Stay </span>
-              <span>Processing Time</span>
-              <span>Interview</span>
-              <span>Cost</span>
-              <span>View Details</span>
-            </div>
 
-            <div className={style.coastHalf}>
-              <span>Single</span>
-              <span>04 Months</span>
-              <span>10 Days </span>
-              <span>5 Working Day </span>
-              <span>Embassies should catch the call </span>
-              <span>3888 BDT </span>
-              <span>
-                <small
-                  className={style.showDetailBtn}
-                  onClick={handleShowDetail}
-                >
-                  Show
-                </small>
-              </span>
-            </div>
-          </div> 
+          <div>
+            {visaDetailsData.getPackage?.map((visa) => (
+              <SingleVisaSearch
+                key={visa._id}
+                visa={visa}
+                handleShowDetail={handleShowDetail}
+              ></SingleVisaSearch>
+            ))}
+          </div>
 
           <div className={style.pricInfo}>
             <div
@@ -259,4 +241,5 @@ const VisaSearch = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(VisaSearch), { ssr: false });
+export default VisaSearch;
+// export default dynamic(() => Promise.resolve(VisaSearch), { ssr: false });
