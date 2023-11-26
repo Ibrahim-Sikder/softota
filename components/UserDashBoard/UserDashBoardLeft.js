@@ -42,7 +42,8 @@ import {
   ContactPhone,
   Gavel,
   Info,
-  PersonPin
+  PersonPin,
+  CheckCircle
 } from "@mui/icons-material"
 import Active from "../ActiveLink/Active"
 
@@ -370,7 +371,11 @@ const UserDashBoardLeft = () => {
                                 </AccordionDetails>
                               </Accordion>
                             </li>
-
+                            <li>
+                              <Active href="/b2bdashboard/manage/requirement-list">
+                                <CheckCircle className={style.flightIcons} /> Requirement List
+                              </Active>
+                            </li>
                             <li>
                               <Active href="/b2bdashboard/manage/about">
                                 <Info className={style.flightIcons} /> About Us

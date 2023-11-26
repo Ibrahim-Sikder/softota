@@ -91,23 +91,33 @@ const HajjUmrah = ({ value, onChange }) => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  <div>
-                    <label>Requirement List </label>
-                    <input
-                      name="price"
-                      placeholder="Requirement List "
-                      type="text"
-                      className={styles.inputField}
-                    />
+                   <div>
+                    <label> Requirement List </label>
+                    <select className={styles.inputField}>
+                      <option value="Platinum Umrah Packages">
+                      Platinum Umrah Packages
+                      </option>
+                      <option value="Shifting Hajj Package">
+                        Shifting Hajj Package
+                      </option>
+                      <option value="Non Shifting Hajj Package">
+                        Non Shifting Hajj Package
+                      </option>
+                    </select>
                   </div>
                   <div>
-                    <label>Popular Hajj Package </label>
-                    <input
-                      name="price"
-                      placeholder="Popular Hajj Package"
-                      type="text"
-                      className={styles.inputField}
-                    />
+                    <label> Popular Hajj Package </label>
+                    <select className={styles.inputField}>
+                      <option value="Platinum Umrah Packages">
+                      Platinum Umrah Packages
+                      </option>
+                      <option value="Shifting Hajj Package">
+                        Shifting Hajj Package
+                      </option>
+                      <option value="Non Shifting Hajj Package">
+                        Non Shifting Hajj Package
+                      </option>
+                    </select>
                   </div>
                 </div>
                 <div className={styles.formControl}>

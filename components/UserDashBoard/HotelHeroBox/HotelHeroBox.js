@@ -26,6 +26,7 @@ const HotelHeroBox = () => {
       endDate: addDays(new Date(), 7),
       key: "selection",
     },
+    
   ]);
 
   // open close

@@ -173,6 +173,7 @@ const Hotel = () => {
                 </select>
               </div>
             </div>
+            
             <div className={style.package2}>
               <div>
                 <h4>City/Hotel/Street Name</h4>
