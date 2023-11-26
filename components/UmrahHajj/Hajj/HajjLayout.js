@@ -12,11 +12,112 @@ import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
 import TourPackage from "../../../components/Tour/TourPackage/TourPackage";
 import { useEffect } from "react";
 import { useContext } from "react";
+ 
+import { APIContext } from "@/Context/ApiContext";
+import { fetchHajjData } from "@/Redux/features/hajjSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { fetchUmrahData } from "@/Redux/features/umrahSlice";
+ 
 import { DataContext } from "@/Context/DataContext";
  
  
+ 
 const HajjLayout = ({ children }) => {
-  const { handleGetHajjData, handleGetUmrahData } = useContext(DataContext);
+  const { handleGetUmrahData } = useContext(APIContext);
+  const dispatch = useDispatch();
+
+  const router = useRouter();
+  const params = router.asPath;
+  const refreshParams = params.split("/");
+  const lastPart = refreshParams[refreshParams.length - 1];
+
+  const handleGetHajjData = (e) => {};
+
+  useEffect(() => {
+    let data;
+    if (lastPart === "economy") {
+      data = {
+        hajj_package: "Economy Hajj Package",
+      };
+    }
+    if (lastPart === "nonshifting") {
+      data = {
+        hajj_package: "Non Shifting Hajj Package",
+      };
+    }
+    if (lastPart === "shifting") {
+      data = {
+        hajj_package: "Shifting Hajj Package",
+      };
+    }
+
+    dispatch(fetchHajjData(data)).then((result) => {
+      console.log(result);
+      // if (
+      //   result.payload &&
+      //   result.payload.message === "Successfully visa details gets."
+      // ) {
+      //   router.push("/visa/visaSearch");
+      // } else if (
+      //   result.payload &&
+      //   result.payload.message === "No matching package found."
+      // ) {
+      //   setNoMatching("No matching package found.");
+      // } else if (
+      //   result.payload &&
+      //   result.payload.message === "Please select a country and visa type."
+      // ) {
+      //   toast.error("Please select a country and visa type.");
+      // }
+    });
+  }, [lastPart]);
+  useEffect(() => {
+    let data;
+    if (lastPart === "umrah-in-ramadan") {
+      data = {
+        latest_umrah_package: "Umrah In Ramadan",
+      };
+    }
+    if (lastPart === "premium") {
+      data = {
+        latest_umrah_package: "Premium Umrah Packages",
+      };
+    }
+    if (lastPart === "platinum") {
+      data = {
+        latest_umrah_package: "Platinum Umrah Packages",
+      };
+    }
+    if (lastPart === "family") {
+      data = {
+        latest_umrah_package: "Family Umrah Packages",
+      };
+    }
+
+    dispatch(fetchUmrahData(data)).then((result) => {
+      console.log(result);
+      // if (
+      //   result.payload &&
+      //   result.payload.message === "Successfully visa details gets."
+      // ) {
+      //   router.push("/visa/visaSearch");
+      // } else if (
+      //   result.payload &&
+      //   result.payload.message === "No matching package found."
+      // ) {
+      //   setNoMatching("No matching package found.");
+      // } else if (
+      //   result.payload &&
+      //   result.payload.message === "Please select a country and visa type."
+      // ) {
+      //   toast.error("Please select a country and visa type.");
+      // }
+    });
+  }, [lastPart]);
+  const umrahDetailsData = useSelector((state) => state.umrah.umrahDetailsData);
+  console.log(umrahDetailsData)
+
   return (
     <div>
       <Nav />
@@ -51,7 +152,7 @@ const HajjLayout = ({ children }) => {
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography
-                        onClick={() => handleGetUmrahData("Umrah In Ramadan")}
+                        // onClick={() => handleGetUmrahData("Umrah In Ramadan")}
                         className={style.hajjTypograpy}
                       >
                         <HajjActiveLink href="/umrah/umrah-in-ramadan">
@@ -59,9 +160,9 @@ const HajjLayout = ({ children }) => {
                         </HajjActiveLink>
                       </Typography>
                       <Typography
-                        onClick={() =>
-                          handleGetUmrahData("Premium Umrah Packages")
-                        }
+                        // onClick={() =>
+                        //   handleGetUmrahData("Premium Umrah Packages")
+                        // }
                         className={style.hajjTypograpy}
                       >
                         <HajjActiveLink href="/umrah/premium">
@@ -69,9 +170,9 @@ const HajjLayout = ({ children }) => {
                         </HajjActiveLink>
                       </Typography>
                       <Typography
-                        onClick={() =>
-                          handleGetUmrahData("Platinum Umrah Packages")
-                        }
+                        // onClick={() =>
+                        //   handleGetUmrahData("Platinum Umrah Packages")
+                        // }
                         className={style.hajjTypograpy}
                       >
                         <HajjActiveLink href="/umrah/platinum">
@@ -79,9 +180,9 @@ const HajjLayout = ({ children }) => {
                         </HajjActiveLink>
                       </Typography>
                       <Typography
-                        onClick={() =>
-                          handleGetUmrahData("Family Umrah Packages")
-                        }
+                        // onClick={() =>
+                        //   handleGetUmrahData("Family Umrah Packages")
+                        // }
                         className={style.hajjTypograpy}
                       >
                         <HajjActiveLink href="/umrah/family">

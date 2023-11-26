@@ -1,20 +1,52 @@
 import React from "react";
 import style from "./Visa.module.css";
-import Link from "next/link";
 import { FaSistrix } from "react-icons/fa";
 import ActiveLink from "../Banner/ActiveLink";
 import {
   Flight,
   Hotel,
   BookOnline,
-  TransferWithinAStation
+  TransferWithinAStation,
 } from "@mui/icons-material";
-
-
-
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useRouter } from "next/router";
+import { fetchVisaData } from "@/Redux/features/visaSlice";
+import { useDispatch } from "react-redux";
 
 const visa = () => {
+  const dispatch = useDispatch();
+  const [visaCountry, setVisaCountry] = useState("");
+  const [visaType, setVisaType] = useState("");
+  const [noMatching, setNoMatching] = useState("");
+  // const isLoading = useSelector((state) => state.visa.isLoading);
+  const router = useRouter();
 
+  const handleGetVisaData = () => {
+    const data = {
+      country_name: visaCountry,
+      visa_type: visaType,
+    };
+
+    dispatch(fetchVisaData(data)).then((result) => {
+      if (
+        result.payload &&
+        result.payload.message === "Successfully visa details gets."
+      ) {
+        router.push("/visa/visaSearch");
+      } else if (
+        result.payload &&
+        result.payload.message === "No matching package found."
+      ) {
+        setNoMatching("No matching package found.");
+      } else if (
+        result.payload &&
+        result.payload.message === "Please select a country and visa type."
+      ) {
+        toast.error("Please select a country and visa type.");
+      }
+    });
+  };
 
   return (
     <section className={style.visa}>
@@ -26,7 +58,7 @@ const visa = () => {
         <div className={style.heroBoxMain}>
           {/* menubar */}
           <div className={style.menuWrap}>
-          <ul className={style.menu}>
+            <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/">
                   <li className={style.firstChild}>
@@ -130,7 +162,7 @@ const visa = () => {
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={45}
                       height={45}
@@ -299,10 +331,16 @@ const visa = () => {
 
           <div className={style.visaWrap}>
             <div>
+              <div className="text-white text-center font-medium lg:text-xl">
+                {noMatching}
+              </div>
               <div className={style.visaPackajWrap}>
                 <div className={style.visaPackaj}>
                   <label>Country </label> <br />
-                  <select className="select select-success w-full ">
+                  <select
+                    onChange={(e) => setVisaCountry(e.target.value)}
+                    className="select select-success w-full "
+                  >
                     <option selected="Chose Your Country">
                       Chose Your Country
                     </option>
@@ -322,7 +360,10 @@ const visa = () => {
                 </div>
                 <div className={style.visaPackaj}>
                   <label>Visa Type </label> <br />
-                  <select className="select select-success w-full max-w-xs">
+                  <select
+                    onChange={(e) => setVisaType(e.target.value)}
+                    className="select select-success w-full max-w-xs"
+                  >
                     <option selected="Search Your Visa">
                       Search Your Visa
                     </option>
@@ -331,12 +372,14 @@ const visa = () => {
                     <option>Business Visa</option>
                   </select>
                 </div>
-                <div className={style.visaBtn}>
-                  <Link href="/visa/visaSearch">
-                    <FaSistrix className={style.searchIcon} />
-                    <span>Search</span>
-                  </Link>
-                </div>
+                <button
+                  // disabled={isLoading ? true : false}
+                  onClick={handleGetVisaData}
+                  className={style.visaBtn}
+                >
+                  <FaSistrix className={style.searchIcon} />
+                  <span>Search</span>
+                </button>
               </div>
             </div>
           </div>
