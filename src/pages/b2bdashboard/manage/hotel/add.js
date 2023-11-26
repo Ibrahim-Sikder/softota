@@ -11,6 +11,30 @@ import 'react-quill/dist/quill.snow.css';
 const Hotel = ({ value, onChange }) => {
   const [editorValue, setEditorValue] = useState("");
   const [quill, setQuill] = useState(null);
+  const [child, setChild] = useState(0)
+  const [adult, setAdult] = useState(0)
+  const [room, setRoom] = useState("1 Room")
+
+  const childIncrement = () => {
+    setChild(child + 1)
+  }
+  const childDecrement = () => {
+    if (child < 1) {
+      setChild(0)
+    } else {
+      setChild(child - 1)
+    }
+  }
+  const incrementAdult = () => {
+    setAdult(adult + 1)
+  }
+  const decrementAdult = () => {
+    if (child < 1) {
+      setAdult(0)
+    } else {
+      setAdult(child - 1)
+    }
+  }
   return (
     <B2BdashboardLayout>
       <MoveText />
@@ -177,6 +201,7 @@ const Hotel = ({ value, onChange }) => {
                   <input  autoComplete="off" type="text" />
                 </div>
               <div>
+
               <Groups2
                   onClick={() => window.my_modal_3.showModal()}
                   className={styles.showModalIcon}
@@ -306,38 +331,8 @@ const Hotel = ({ value, onChange }) => {
                     />
                   </div>
                 </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Title </label>
-                    <input
-                      name="title"
-                      placeholder="Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label>Sub Title </label>
-                    <input
-                      name="subtitle"
-                      placeholder="Sub Title "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Hotel Name </label>
-                    <input
-                      name="name"
-                      placeholder="Hotel Name "
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
-                <div className={styles.formControl}>
+               
+                {/* <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     {getFile[0]?.name ? (
                       <label for="files">{getFile[0]?.name}</label>
@@ -360,13 +355,13 @@ const Hotel = ({ value, onChange }) => {
                       multiple
                     />
                   </div>
-                </div>
+                </div> */}
                 <div className={styles.formControl}>
                   {" "}
                   <div>
                     <ReactQuill
                       value={value}
-                      onChange={setValue}
+                      // onChange={setValue}
                       modules={{
                         toolbar: [
                           [{ font: [] }],

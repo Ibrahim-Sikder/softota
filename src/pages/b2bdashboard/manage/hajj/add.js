@@ -2,7 +2,7 @@ import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
 import styles from "../manage.module.css";
-import { CloudUpload } from "@mui/icons-material";
+import { CloudUpload,Checklist } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
 import React, { useState, useEffect } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
@@ -198,15 +198,67 @@ const HajjUmrah = ({ onChange }) => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  <div>
+                  <div onClick={() => window.my_modal_3.showModal()}>
                     <label>Requirement List </label>
-                    <input
+                   <div   className={styles.requirementField}>
+                   <input
                       onChange={(e) => setRequirementList(e.target.value)}
                       name="requirement"
                       placeholder="Requirement List "
                       type="text"
-                      className={styles.inputField}
+                     
                     />
+                    <Checklist className={styles.requirementIcon}/>
+
+
+                   </div>
+                   <div className={styles.modalWrap} >
+                <dialog id="my_modal_3" className={styles.requirementModal}>
+                  <form method="dialog" className="modal-box">
+                    <button className={styles.hotelModalCloseBtn2}>✕</button>
+                    <div className='my-3 '>
+                    <label> Requirement List </label>
+                    <select
+                     className={styles.inputField}
+                    >
+                      <option value="  Hajj Visa Requirement List">
+                       Hajj Visa Requirement List
+                      </option>
+                      <option value="Umrah Visa Requirement List">
+                       Umrah Visa Requirement List
+                      </option>
+                    </select>
+                  </div>
+                  <div className={styles.formControl}>
+                  <div>
+                    <ReactQuill
+                      value={value}
+                      onChange={setValue}
+                      modules={{
+                        toolbar: [
+                          [{ font: [] }],
+                          [{ size: ["small", false, "large", "huge"] }],
+                          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                          [{ color: [] }, { background: [] }],
+                          [{ align: [] }],
+                          [{ list: "ordered" }, { list: "bullet" }],
+                          ["bold", "italic", "underline"],
+                          [{ align: [] }],
+                          ["link", "image"],
+                          ["video"],
+                          ["clean"],
+                          ["blockquote", "code-block"],
+                          ["direction"],
+                          ["formula"],
+                          ["strike"],
+                        ],
+                      }}
+                    />
+                  </div>
+                </div>
+                  </form>
+                </dialog>
+              </div>
                   </div>
                   <div>
                     <label>Popular Hajj Package </label>
@@ -218,6 +270,7 @@ const HajjUmrah = ({ onChange }) => {
                       className={styles.inputField}
                     />
                   </div>
+                 
                 </div>
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>

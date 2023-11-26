@@ -2,7 +2,7 @@ import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
 import styles from "../manage.module.css";
-import { CloudUpload } from "@mui/icons-material";
+import { CloudUpload,Checklist } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
 import React, { useState, useEffect, useRef } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
@@ -223,6 +223,28 @@ const Add = () => {
                 </div>
                 <div className={styles.formControl}>
                   <div>
+                    <label>Maximum Stay </label>
+                    <input
+                      onChange={(e) => setEntry(e.target.value)}
+                      name="Entry"
+                      placeholder="Maximum Stay"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Interview </label>
+                    <input
+                      onChange={(e) => setDuration(e.target.value)}
+                      name="Duration"
+                      placeholder="Interview"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
                     <label>Processing Time </label>
                     <input
                       onChange={(e) => setProcessingTime(e.target.value)}
@@ -298,12 +320,75 @@ const Add = () => {
                       className={styles.inputField}
                     />
                   </div>
+                  <div onClick={() => window.my_modal_3.showModal()}>
+                    <label>Requirement List </label>
+                   <div   className={styles.requirementField}>
+                   <input
+                      onChange={(e) => setRequirementList(e.target.value)}
+                      name="requirement"
+                      placeholder="Requirement List "
+                      type="text"
+                     
+                    />
+                    <Checklist className={styles.requirementIcon}/>
+
+
+                   </div>
+                   <div className={styles.modalWrap} >
+                <dialog id="my_modal_3" className={styles.requirementModal}>
+                  <form method="dialog" className="modal-box">
+                    <button className={styles.hotelModalCloseBtn2}>✕</button>
+                   <strong className="block my-3 "> Required Documents for E-Visa (Malaysia)</strong>
+                  <div className={styles.formControl}>
                   <div>
-                    <label>Requirement</label>
+                    <ReactQuill
+                      value={value}
+                      onChange={setValue}
+                      modules={{
+                        toolbar: [
+                          [{ font: [] }],
+                          [{ size: ["small", false, "large", "huge"] }],
+                          [{ header: [1, 2, 3, 4, 5, 6, false] }],
+                          [{ color: [] }, { background: [] }],
+                          [{ align: [] }],
+                          [{ list: "ordered" }, { list: "bullet" }],
+                          ["bold", "italic", "underline"],
+                          [{ align: [] }],
+                          ["link", "image"],
+                          ["video"],
+                          ["clean"],
+                          ["blockquote", "code-block"],
+                          ["direction"],
+                          ["formula"],
+                          ["strike"],
+                        ],
+                      }}
+                    />
+                  </div>
+                </div>
+                  </form>
+                </dialog>
+              </div>
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                 
+                  <div>
+                    <label>Validity Day</label>
                     <input
                       onChange={(e) => setRequirement(e.target.value)}
-                      name="requirement"
-                      placeholder="Requirement"
+                      name="validity"
+                      placeholder="Validity Day"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Max Stay</label>
+                    <input
+                      onChange={(e) => setGetDate(e.target.value)}
+                      name="date"
+                      placeholder="Max Stay "
                       type="text"
                       className={styles.inputField}
                     />

@@ -1,10 +1,10 @@
 import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
+import style from '../../../../../components/Hotel/Hotel.module.css'
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
 import styles from "../manage.module.css";
-import { CloudUpload } from "@mui/icons-material";
+import { CloudUpload,Groups2 } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import React, { useState, useEffect, useRef } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
@@ -31,7 +31,29 @@ const Tours = () => {
 
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
+  const [child, setChild] = useState(0)
+  const [adult, setAdult] = useState(0)
 
+  const childIncrement = () => {
+    setChild(child + 1)
+  }
+  const childDecrement = () => {
+    if (child < 1) {
+      setChild(0)
+    } else {
+      setChild(child - 1)
+    }
+  }
+  const incrementAdult = () => {
+    setAdult(adult + 1)
+  }
+  const decrementAdult = () => {
+    if (child < 1) {
+      setAdult(0)
+    } else {
+      setAdult(child - 1)
+    }
+  }
   let files;
   const handlePdf = async (e) => {
     setGetFile(e.target.files);
@@ -45,6 +67,7 @@ const Tours = () => {
         method: "POST",
         body: formData,
       });
+
 
       const data = await response.json();
       if (data.message === "success") {
@@ -107,7 +130,7 @@ const Tours = () => {
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
             <h2 className="text-3xl font-bold text-center">
-              Tours Data Input{" "}
+              Tours Data Input
             </h2>
             <div className="w-full mx-auto">
               <form ref={formRef} onSubmit={handleToursData}>
@@ -155,6 +178,98 @@ const Tours = () => {
                     />
                   </div>
                 </div>
+                <div className={styles.formControl}>
+                <div>
+                <label> Your Destination Country</label>
+                <select  className={styles.inputField}>
+                  <option selected value="Bangladesh">
+                    Bangladesh
+                  </option>
+                  <option value="Thailand">Thailand</option>
+                  <option value="Malaysia">Malaysia</option>
+                  <option value="Indonesia">Indonesia</option>
+                  <option value="India">India</option>
+                  <option value="China">China</option>
+                  <option value="Singapore">Singapore</option>
+                  <option value="Iran">Iran</option>
+                  <option value="Vietnam">Vietnam</option>
+                  <option value="Pakistan">Pakistan</option>
+                  <option value="Japan">Japan</option>
+                </select>
+                </div>
+                  <div>
+                    <label>Journy Date </label>
+                    <input
+                    onChange={(e)=>setPrice(e.target.value)}
+                      name="price"
+                      placeholder="Journy Date "
+                      type="date"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                <div >
+                <h4>Guests & Room</h4>
+              <div  className={styles.mondalInputFiled} >
+                <div>
+              
+                  <small>
+                    {child + adult} Guest
+                  </small>
+                  <input  autoComplete="off" type="text" />
+                </div>
+              <div>
+
+              <Groups2
+                  onClick={() => window.my_modal_3.showModal()}
+                  className={styles.showModalIcon}
+                />
+              </div>
+              </div>
+              {/* Open modala  */}
+              <div className={styles.modalWrap} >
+                <dialog id="my_modal_3" className={styles.modalWrap2}>
+                  <form method="dialog" className="modal-box">
+                    <button className={styles.hotelModalCloseBtn2}>✕</button>
+                    <div className={style.guestRoomWrap}>
+                      <Groups2 className={style.groupIcon} />
+                      <div>
+                        <small>Guest & Room </small> <br />
+                        <p className="text-xl font-bold">
+                          {" "}
+                          {child + adult} Guest 
+                        </p>
+                      </div>
+                    </div>
+                    <div className={style.adultChildWrap}>
+                      <div className={style.adultIncrementDecrement}>
+                        <small onClick={decrementAdult}> - </small>
+                        <span>{adult} Adult </span>
+                        <small onClick={incrementAdult}> + </small>
+                      </div>
+                      <div className={style.childIncrementDecrement}>
+                        <small onClick={childDecrement}> - </small>
+                        <span> {child} Child </span>
+                        <small onClick={childIncrement}> + </small>
+                      </div>
+                    </div>
+                  </form>
+                </dialog>
+              </div>
+              
+            </div>
+                  <div>
+                    <label>Time</label>
+                    <input
+                      name="type"
+                      placeholder="Time "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                
                 <div className={styles.formControl}>
                   <div>
                     <label> What is included </label>

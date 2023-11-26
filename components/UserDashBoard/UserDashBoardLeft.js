@@ -371,11 +371,7 @@ const UserDashBoardLeft = () => {
                                 </AccordionDetails>
                               </Accordion>
                             </li>
-                            <li>
-                              <Active href="/b2bdashboard/manage/requirement-list">
-                                <CheckCircle className={style.flightIcons} /> Requirement List
-                              </Active>
-                            </li>
+                           
                             <li>
                               <Active href="/b2bdashboard/manage/about">
                                 <Info className={style.flightIcons} /> About Us

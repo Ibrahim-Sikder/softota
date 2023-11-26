@@ -26,6 +26,7 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 405px;
   padding-bottom: 46px;
+  border-radius: 10px;
 }
 .requirementModal{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -43,10 +44,11 @@
   color: #4AB449;
   width: 32px;
   font-size: 24px;
+  margin-left:10px;
 }
 .showModalIcon, .requirementIcon{
   color:#4AB449 !important;
-
+cursor:pointer;
 }
 .formControl {
   display: flex;
