@@ -403,7 +403,7 @@ const BusBanner = () => {
                   <div className="flex justify-between items-center">
                     <div>
                       <h4>Passenger Number </h4>
-                      <small> 0 Passenger</small>
+                      <small> {child + adult} Passenger & {seat}</small>
                     </div>
                     <Groups2
                       onClick={() => window.busModal.showModal()}
@@ -445,7 +445,7 @@ const BusBanner = () => {
                           setSeat(classes);
                         }}
                       >
-                        <option value="Class" selected>
+                        <option value="Economy" selected>
                          Economy
                         </option>
                         <option value="Premium">Premium</option>

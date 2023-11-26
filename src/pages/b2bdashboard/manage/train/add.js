@@ -107,6 +107,28 @@ const Train = () => {
             </h2>
             <div className="w-full mx-auto">
               <form ref={formRef} onSubmit={handleTrainData}>
+                 <div className={styles.formControl}>
+                 <div>
+                    <label> Train Name </label>
+                    <input
+                      onChange={(e) => setTitle(e.target.value)}
+                      name="name"
+                      placeholder="Train Name"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label> Title </label>
+                    <input
+                      onChange={(e) => setTitle(e.target.value)}
+                      name="title"
+                      placeholder="Title"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
                 <div className={styles.formControl}>
                   <div>
                     <label> Enter Country </label>
@@ -150,28 +172,48 @@ const Train = () => {
                   </div>
                 </div>
                 <div className={styles.formControl}>
-                  {/* <div>
-                    <label> Enter City </label>
-                    <select className={styles.inputField}>
-                      <option value="Dhaka">Dhaka</option>
-                      <option value="Bangkok">Bangkok</option>
-                      <option value="Tokyo">Tokyo</option>
-                      <option value="Kuala Lumpur">Kuala Lumpur</option>
-                      <option value="Jakarta">Jakarta</option>
-                      <option value="Beijing">Beijing</option>
-                      <option value="Singapore Island">Singapore Island</option>
-                      <option value="Iran">Iran</option>
-                      <option value="Hanoi">Hanoi</option>
-                      <option value="Tehran">Tehran</option>
-                      <option value="Islamabad">Islamabad</option>
-                    </select>
-                  </div> */}
                   <div>
-                    <label> Address </label>
+                  <label htmlFor="">Choos a class</label>
+                      <select   onChange={(e) => setCityName(e.target.value)}
+                      className={styles.inputField}>
+                      <option value="AC_B">AC_B</option>
+                      <option value="S_CHAIR">S_CHAIR</option>
+                      <option value="F_BERTH">F_BERTH</option>
+                      <option value="SHULOV">SHULOV</option>
+                      <option value="SNIGDHA">SNIGDHA</option>
+                      <option value="AC_CHAIR">AC_CHAIR</option>
+                      </select>
+                  </div>
+                  <div>
+                    <label> Journy Date </label>
+                    <input
+                      onChange={(e) => setAddress(e.target.value)}
+                      name="jouryDate"
+                      placeholder="Journy Date"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  
+                  <div>
+                    <label> Seat Type </label>
                     <input
                       onChange={(e) => setAddress(e.target.value)}
                       name="address"
-                      placeholder="Address"
+                      placeholder=" Seat Type "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                    
+                  <div>
+                    <label>DEPARTURE TIME </label>
+                    <input
+                      onChange={(e) => setAddress(e.target.value)}
+                      name="address"
+                      placeholder="DEPARTURE TIME "
                       type="text"
                       className={styles.inputField}
                     />
@@ -179,11 +221,11 @@ const Train = () => {
                 </div>
                 <div className={styles.formControl}>
                   <div>
-                    <label>Category Type </label>
+                    <label>ARRIVAL TIME</label>
                     <input
                       onChange={(e) => setCategoryType(e.target.value)}
                       name="category"
-                      placeholder="Category Type "
+                      placeholder="ARRIVAL TIME"
                       type="text"
                       className={styles.inputField}
                     />
@@ -194,6 +236,28 @@ const Train = () => {
                       onChange={(e) => setProductCategory(e.target.value)}
                       name="productCategory"
                       placeholder="Product Category "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Starting Point </label>
+                    <input
+                      onChange={(e) => setCategoryType(e.target.value)}
+                      name="category"
+                      placeholder="Starting Point"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>End Poin</label>
+                    <input
+                      onChange={(e) => setProductCategory(e.target.value)}
+                      name="productCategory"
+                      placeholder="End Poin "
                       type="text"
                       className={styles.inputField}
                     />
@@ -221,28 +285,7 @@ const Train = () => {
                     />
                   </div>
                 </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label> Title </label>
-                    <input
-                      onChange={(e) => setTitle(e.target.value)}
-                      name="title"
-                      placeholder="Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                  <div>
-                    <label> Sub Title </label>
-                    <input
-                      onChange={(e) => setSubTitle(e.target.value)}
-                      name="subTitle"
-                      placeholder=" Sub Title"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
-                </div>
+               
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     {getFile[0]?.name ? (
