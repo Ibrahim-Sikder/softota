@@ -3,7 +3,75 @@ import PropTypes from "prop-types";
 import { PriorityHigh } from "@mui/icons-material";
 import style from "./Seats.module.css";
 import Link from "next/link";
+import axios from "axios";
+import { useState } from "react";
+import { useEffect } from "react";
+import toast from "react-hot-toast";
+import { useRouter } from "next/router";
 const SelectedSeats = ({ selectedSeats }) => {
+  const [selectedSeatNumber, setSelectedSeatNumber] = useState(null);
+  const [fareAmount, setFareAmount] = useState(null);
+  const [className, setClassName] = useState(null);
+  const [getTotalAmount, setGetTotalAmount] = useState(null);
+  const [getId, setGetId] = useState("")
+  // const [getName, setGetName] = useState(null);
+  // const [getEmail, setGetEmail] = useState(null);
+  // const [getPhoneNumber, setGetPhoneNumber] = useState(null);
+  const [getBoardingPoint, setGetBoardingPoint] = useState(null);
+  const [loading, setLoading] = useState(false);
+ const router = useRouter  ()
+  useEffect(() => {
+    const allSeatNumbers = selectedSeats.map((seat) => seat.number).join(", ");
+    const allSeatFare = selectedSeats.map((seat) => seat.fare).join(", ");
+    const allSeatClass = selectedSeats.map((seat) => seat.class).join(", ");
+    const totalAmount = selectedSeats.reduce(
+      (price, next) => price + next.fare,
+      0
+    );
+
+    setSelectedSeatNumber(allSeatNumbers);
+    setFareAmount(allSeatFare);
+    setClassName(allSeatClass);
+    setGetTotalAmount(totalAmount);
+  }, [selectedSeats]);
+
+ 
+
+  const handleConfirmTrain = (e) => {
+    e.preventDefault();
+
+    const data = {
+      Seats: selectedSeatNumber,
+      fare: fareAmount,
+      class: className,
+      total: getTotalAmount,
+      boarding_point: getBoardingPoint,
+       
+    };
+    setLoading(true);
+    axios
+      .post("http://localhost:5000/api/v1/train", data)
+      .then(function (response) {
+        console.log(response)
+        if (response.data.message === "Send request for train confirmation.") {
+          toast.success(
+            "Confirmation request accepted. Please wait to confirm."
+          );
+          // setGetId(response.data.result._id)
+          // router.push("/train/confirm")
+        }
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error)
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  // console.log(getId)
+   
   return (
     <div className="">
       <div className="flex justify-between items-center">
@@ -49,8 +117,8 @@ const SelectedSeats = ({ selectedSeats }) => {
         </h1>
       </div>
 
-      <form>
-        <select className={style.boardingSelect}>
+      <form onSubmit={handleConfirmTrain}>
+        <select  onChange={(e) => setGetBoardingPoint(e.target.value)} className={style.boardingSelect}>
           <option value=" -- Boarding points -- ">
             {" "}
             -- Boarding points --{" "}
@@ -81,14 +149,16 @@ const SelectedSeats = ({ selectedSeats }) => {
           </option>
         </select>
        
-      </form>
-
       <div className="flex items-center justify-between my-5">
-       <Link href='/train/confirm'> <button className={style.continoueBtn}>Continoue Purchase</button></Link>
+       {/* <Link href='/train/confirm'>  */}
+       <button className={style.continoueBtn}>Continue Purchase</button>
+       {/* </Link> */}
         <small className="underline cursor-pointer hover:text-[#0BB811]">
           Close
         </small>
       </div>
+      </form>
+
       <div className="flex items-center">
         <PriorityHigh className={style.conditonIcon} />
         <small>Due to traffic condition, the trip may get canceled.</small>

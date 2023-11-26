@@ -10,6 +10,7 @@ import SelectedSeats from "../Seats/SelectedSeat";
 const SearchBus = () => {
   const [chooseSeat, setChooseSeat] = useState("A1", "৳1500", "Economy");
   const [showDetails, setShowDetails] = useState(false);
+  const [ seatsNumber, setSeatsNumber] = useState([])
   const handleShowDetails = () => {
     setShowDetails(!showDetails);
   };
@@ -217,8 +218,9 @@ const SearchBus = () => {
                         <Seats
                           handleSeatSelection={handleSeatSelection}
                           selectedSeats={selectedSeats}
+                          setSeatsNumber={setSeatsNumber}
                         />
-                        <SelectedSeats selectedSeats={selectedSeats} />
+                        <SelectedSeats selectedSeats={selectedSeats}  />
                       </div>
                     </div>
                   </div>
