@@ -594,4 +594,5 @@ const Hotel = () => {
   )
 }
 
-export default dynamic(() => Promise.resolve(Hotel), { ssr: false })
+// export default dynamic(() => Promise.resolve(Hotel), { ssr: false })
+export default Hotel;

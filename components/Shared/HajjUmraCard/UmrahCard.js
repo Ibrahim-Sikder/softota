@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Beenhere } from "@mui/icons-material";
 import Image from "next/image";
-import img1 from "../../../public/assets/umrah6.webp";
-import img2 from "../../../public/assets/umra2.jpg";
-import img3 from "../../../public/assets/umra3.jpeg";
-import img4 from "../../../public/assets/umrah4.webp";
 import Link from "next/link";
 import style from "./HajjUmrah.module.css";
-import { useContext } from "react";
-import { APIContext } from "@/Context/ApiContext";
 import { useSelector } from "react-redux";
-const HajjUmrahCard = ({ title, img }) => {
+const UmrahCard = ({ title, img }) => {
  
-  const hajjDetailsData = useSelector((state) => state.hajj.hajjDetailsData);
-  // console.log(error)
+  const umrahDetailsData = useSelector((state) => state.umrah.umrahDetailsData);
+  console.log(umrahDetailsData)
   // const datas = [
   //   {
   //     id: 1,
@@ -114,7 +108,7 @@ const HajjUmrahCard = ({ title, img }) => {
     sessionStorage.setItem("hajj", pageNumber.toString());
   };
   const pages = [];
-  for (let i = 1; i <= Math.ceil(hajjDetailsData?.length / limit); i++) {
+  for (let i = 1; i <= Math.ceil(umrahDetailsData?.length / limit); i++) {
     pages.push(i);
   }
 
@@ -141,12 +135,12 @@ const HajjUmrahCard = ({ title, img }) => {
 
   const lastIndex = currentPage * limit;
   const startIndex = lastIndex - limit;
-  const currentItems = hajjDetailsData?.slice(startIndex, lastIndex);
+  const currentItems = umrahDetailsData?.slice(startIndex, lastIndex);
 
-  const renderData = (hajjDetailsData) => {
+  const renderData = (umrahDetailsData) => {
     return (
       <>
-        {hajjDetailsData.map((data) => (
+        {umrahDetailsData.map((data) => (
           <div key={data.id} className={style.umrahPackageCardWrap}>
             <div className={style.packageCardWrap}>
               <div className={style.packageCard}>
@@ -278,7 +272,7 @@ const HajjUmrahCard = ({ title, img }) => {
           />
         </div>
         <h3 className="text-3xl font-bold my-8">{title}</h3>
-        {hajjDetailsData.length === 0 ? (
+        {umrahDetailsData.length === 0 ? (
           <div className="text-xl text-center flex justify-center items-center h-full">
             No matching packages found.
           </div>
@@ -329,4 +323,4 @@ const HajjUmrahCard = ({ title, img }) => {
   );
 };
 
-export default HajjUmrahCard;
+export default UmrahCard;
