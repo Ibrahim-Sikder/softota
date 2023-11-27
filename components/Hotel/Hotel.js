@@ -21,9 +21,10 @@ import format from "date-fns/format";
 import { addDays } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import { useDispatch } from "react-redux";
-import { fetchHotelData } from "@/Redux/features/hotelSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchHotelData, setHotelData } from "@/Redux/features/hotelSlice";
 import toast from "react-hot-toast";
+import { useRouter } from "next/router";
 const Hotel = () => {
   const [countryName, setCountryName] = useState(null);
   const [cityName, setCityName] = useState(null);
@@ -34,6 +35,10 @@ const Hotel = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [room, setRoom] = useState("1 Room");
+  const router = useRouter();
+  const dispatch = useDispatch();
+
+
 
   const childIncrement = () => {
     setChild(child + 1);
@@ -155,23 +160,22 @@ const Hotel = () => {
     ],
   };
 
-  const handleCheckInDateRangeChange = (ranges) => {
-    // Assuming the DateRange component always provides a single range
-    const selectedRange = ranges.selection;
+  // const handleCheckInDateRangeChange = (ranges) => {
+  //   // Assuming the DateRange component always provides a single range
+  //   const selectedRange = ranges.selection;
 
-    setRange2([selectedRange]); // Update the state with the selected date range
-    setCheckInDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
-  };
-  const handleCheckOutDateRangeChange = (ranges) => {
-    // Assuming the DateRange component always provides a single range
-    const selectedRange = ranges.selection;
+  //   setRange2([selectedRange]); // Update the state with the selected date range
+  //   setCheckInDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
+  // };
+  // const handleCheckOutDateRangeChange = (ranges) => {
+  //   // Assuming the DateRange component always provides a single range
+  //   const selectedRange = ranges.selection;
 
-    setRange2([selectedRange]); // Update the state with the selected date range
-    setCheckOutDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
-  };
+  //   setRange2([selectedRange]); // Update the state with the selected date range
+  //   setCheckOutDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
+  // };
 
-  const dispatch = useDispatch();
-  const handleHotelDetailsData = () => {
+  const handleHotelDetailsData = async () => {
     const data = {
       country_name: countryName,
       city_name: cityName,
@@ -182,8 +186,10 @@ const Hotel = () => {
       room_number: room,
     };
 
-    dispatch(fetchHotelData(data)).then((result) => {
-      console.log(result);
+    try {
+      const result = await dispatch(fetchHotelData(data));
+     
+
       if (
         result.payload &&
         result.payload.message === "Successfully hotel details gets."
@@ -200,8 +206,14 @@ const Hotel = () => {
       ) {
         toast.error("Please select all the field.");
       }
-    });
+    } catch (error) {
+      // Handle errors if needed
+      console.error("Error dispatching fetchHotelData:", error);
+    }
   };
+
+  
+
  
 
   return (
@@ -214,9 +226,10 @@ const Hotel = () => {
               <div>
                 <h4>Enter Your Destination Country</h4>
                 <select onChange={(e) => setCountryName(e.target.value)}>
-                  <option selected value="Bangladesh">
-                    Bangladesh
+                  <option selected value="Select your country">
+                    Select your country
                   </option>
+                  <option value="Bangladesh">Bangladesh</option>
                   <option value="Thailand">Thailand</option>
                   <option value="Malaysia">Malaysia</option>
                   <option value="Indonesia">Indonesia</option>
@@ -230,10 +243,12 @@ const Hotel = () => {
                 </select>
               </div>
             </div>
+
             <div className={style.package2}>
               <div>
                 <h4>City/Hotel/Street Name</h4>
                 <select onChange={(e) => setCityName(e.target.value)}>
+                  <option selected value="Select your city">Select your city</option>
                   <option value="Dhaka">Dhaka</option>
                   <option value="Bangkok">Bangkok</option>
                   <option value="Tokyo">Tokyo</option>
@@ -258,14 +273,15 @@ const Hotel = () => {
                 <h4>Check In</h4>
                 <div className={style.calendarInput}>
                   <input
-                    
-                    value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
-                    readOnly
+                    onChange={(e) => setCheckInDate(e.target.value)}
+                    name="checkIn"
+                    placeholder="Check In  "
+                    type="date"
+                    className={style.inputField}
                   />
-                  <CalendarMonth className={style.calendarIcon} />
                 </div>
 
-                <div className={style.calendarTow} ref={refOne}>
+                {/* <div className={style.calendarTow} ref={refOne}>
                   {open && (
                     <DateRange
                       onChange={handleCheckInDateRangeChange}
@@ -277,7 +293,7 @@ const Hotel = () => {
                       className="calendarElement"
                     />
                   )}
-                </div>
+                </div> */}
               </div>
               <div
                 onClick={() => setOpen2((open2) => !open2)}
@@ -285,14 +301,21 @@ const Hotel = () => {
               >
                 <h4>Check Out</h4>
                 <div className={style.calendarInput}>
-                  <input
+                  {/* <input
                     value={`${format(range2[0].startDate, "MM/dd/yyyy")}`}
                     readOnly
                   />
-                  <CalendarMonth className={style.calendarIcon} />
+                  <CalendarMonth className={style.calendarIcon} /> */}
+                  <input
+                    onChange={(e) => setCheckOutDate(e.target.value)}
+                    name="checkout"
+                    placeholder="Check Out "
+                    type="date"
+                    className={style.inputField}
+                  />
                 </div>
 
-                <div className={style.calendarTow} ref={refTow}>
+                {/* <div className={style.calendarTow} ref={refTow}>
                   {open2 && (
                     <DateRange
                       onChange={handleCheckOutDateRangeChange}
@@ -304,7 +327,7 @@ const Hotel = () => {
                       className="calendarElement"
                     />
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
             <div className={style.package4}>

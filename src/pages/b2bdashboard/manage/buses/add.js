@@ -2,9 +2,9 @@ import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
 import styles from "../manage.module.css";
-import { CloudUpload } from "@mui/icons-material";
+import style from '../../../../../components/Hotel/Hotel.module.css'
+import { CloudUpload, Groups2} from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import React, { useState, useEffect } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
@@ -18,15 +18,44 @@ const Busses = () => {
   const [getFile, setGetFile] = useState({});
   const [getImage, setGetImage] = useState([]);
   const [value, setValue] = useState("");
+  const [busName,setBusName] = useState(null)
   const [operators, setOperators] = useState(null);
+  const [travelFrom, setTravelFrom] = useState(null)
+  const [travelTo, setTravelTo] = useState(null)
+  const [startingTime, setStartingTime] = useState(null)
+  const [endTime, setEndTime] = useState(null)
+
+  const [price, setPrice] = useState(null);
+  const [journeyDate,setJourneyDate] = useState(null)
   const [typeOfBus, setTypeOfBus] = useState(null);
   const [boardingPoint, setBoardingPoint] = useState(null);
   const [facilities, setFacilities] = useState(null);
-  const [price, setPrice] = useState(null);
-  const [getDate, setGetDate] = useState(null);
+  // const [getDate, setGetDate] = useState(null);
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
-
+  const [child, setChild] = useState(0)
+  const [adult, setAdult] = useState(0)
+  const [seat, setSeat] = useState("1 Class");
+  const childIncrement = () => {
+    setChild(child + 1)
+  }
+  const childDecrement = () => {
+    if (child < 1) {
+      setChild(0)
+    } else {
+      setChild(child - 1)
+    }
+  }
+  const incrementAdult = () => {
+    setAdult(adult + 1)
+  }
+  const decrementAdult = () => {
+    if (child < 1) {
+      setAdult(0)
+    } else {
+      setAdult(child - 1)
+    }
+  }
   let files;
   const handlePdf = async (e) => {
     setGetFile(e.target.files);
@@ -54,12 +83,21 @@ const Busses = () => {
   const handleBusData = (e) => {
     e.preventDefault();
     const data = {
+      bus_name: busName,
+      starting_point: travelFrom,
+      end_point: travelTo,
+      starting_time: startingTime,
+      end_time: endTime,
+      price: price,
+      journey_date: journeyDate,
+      child: child,
+      adult: adult,
+      seat_type: seat,
       operators: operators,
       type_of_bus: typeOfBus,
       boarding_point: boardingPoint,
       facilities: facilities,
-      price: price,
-      date: getDate,
+     
       image: getImage,
       description: value,
     };
@@ -100,6 +138,148 @@ const Busses = () => {
             <h2 className="text-3xl font-bold text-center">Bus Data Input</h2>
             <div className="w-full mx-auto">
               <form ref={formRef} onSubmit={handleBusData}>
+              <div className={styles.formControl}>
+                  <div>
+                    <label>Bus Name </label>
+                    <input
+                      onChange={(e) => setBusName(e.target.value)}
+                      name="category"
+                      placeholder="Bus Name"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label> Starting Point</label>
+                    <input
+                      onChange={(e) => setTravelFrom(e.target.value)}
+                      name="productCategory"
+                      placeholder="Starting Point"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>End Point </label>
+                    <input
+                      onChange={(e) => setTravelTo(e.target.value)}
+                      name="category"
+                      placeholder="End Point"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label> Starting Time</label>
+                    <input
+                      onChange={(e) => setStartingTime(e.target.value)}
+                      name="productCategory"
+                      placeholder="Starting Time"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                <div>
+                    <label> End Time</label>
+                    <input
+                      onChange={(e) => setEndTime(e.target.value)}
+                      name="productCategory"
+                      placeholder="End Time"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Price</label>
+                    <input
+                      onChange={(e) => setPrice(e.target.value)}
+                      name="category"
+                      placeholder="Price"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                 
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <label>Journy Date </label>
+                    <input
+                      onChange={(e) => setJourneyDate(e.target.value)}
+                      name="category"
+                      placeholder="Journey Date"
+                      type="date"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div >
+                <h4>Passenger Number</h4>
+              <div  className={styles.mondalInputFiled} >
+                <div>
+              
+                  <small>
+                    {child + adult} Passenger & {seat} Class
+                  </small>
+                  <input  autoComplete="off" type="text" />
+                </div>
+              <div>
+
+              <Groups2
+                  onClick={() => window.my_modal_3.showModal()}
+                  className={styles.showModalIcon}
+                />
+              </div>
+              </div>
+              {/* Open modala  */}
+              <div className={styles.modalWrap} >
+                <dialog id="my_modal_3" className={styles.modalWrap2}>
+                  <form method="dialog" className="modal-box">
+                    <button className={styles.hotelModalCloseBtn2}>✕</button>
+                    <div className={style.guestRoomWrap}>
+                      <Groups2 className={style.groupIcon} />
+                      <div>
+                        <small>0 Passenger & 1 Class </small> <br />
+                        <p className="text-xl font-bold">
+                          {" "}
+                          {child + adult}  Passenger & {seat}
+                        </p>
+                      </div>
+                     
+                    </div>
+                    <div className={style.adultChildWrap}>
+                      <div className={style.adultIncrementDecrement}>
+                        <small onClick={decrementAdult}> - </small>
+                        <span>{adult} Adult </span>
+                        <small onClick={incrementAdult}> + </small>
+                      </div>
+                      <div className={style.childIncrementDecrement}>
+                        <small onClick={childDecrement}> - </small>
+                        <span> {child} Child </span>
+                        <small onClick={childIncrement}> + </small>
+                      </div>
+                    </div>
+                    <select
+                        className={style.roomSelect}
+                        onChange={(e) => {
+                          const classes = e.target.value;
+                          setSeat(classes);
+                        }}
+                      >
+                        <option value="Class" selected>
+                         Economy
+                        </option>
+                        <option value="Premium">Premium</option>
+                      </select>
+                  </form>
+                </dialog>
+              </div>
+              
+            </div>
+                </div>
                 <div className={styles.formControl}>
                   <div>
                     <label>Operators </label>
@@ -144,17 +324,8 @@ const Busses = () => {
                     />
                   </div>
                 </div>
-                <div className={styles.formControl}>
-                  <div>
-                    <label>Price</label>
-                    <input
-                      onChange={(e) => setPrice(e.target.value)}
-                      name="category"
-                      placeholder="Price"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
+                {/* <div className={styles.formControl}>
+                  
                   <div>
                     <label> Date </label>
                     <input
@@ -165,7 +336,7 @@ const Busses = () => {
                       className={styles.inputField}
                     />
                   </div>
-                </div>
+                </div> */}
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     {getFile[0]?.name ? (

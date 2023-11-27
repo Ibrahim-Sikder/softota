@@ -17,6 +17,9 @@ const HajjUmrahCard = ({ title, img }) => {
   const params = router.asPath;
   const refreshParams = params.split("/");
   const hajjDetailsData = useSelector((state) => state.hajj.hajjDetailsData);
+  const umrahDetailsData = useSelector((state) => state.umrah.umrahDetailsData);
+  const hotelDetailsData = useSelector((state) => state.hotel.hotelDetailsData);
+  
   // console.log(error)
   // const datas = [
   //   {
@@ -269,7 +272,7 @@ const HajjUmrahCard = ({ title, img }) => {
       </li>
     );
   }
-  console.log(refreshParams.length);
+  
   return (
     <section>
       <div>

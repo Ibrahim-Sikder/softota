@@ -50,7 +50,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View
@@ -75,7 +75,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View
@@ -100,7 +100,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View
@@ -125,7 +125,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View
@@ -150,7 +150,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View
@@ -175,7 +175,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View
@@ -200,7 +200,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View
@@ -225,7 +225,7 @@ const flight = () => {
                         <td>-5143</td>
                         <td>156</td>
                         <td>
-                          <Link href="/b2bsearch/flight/ticketbook">
+                          <Link href="/b2bdashboard/flight/ticketbook">
                             {" "}
                             <span className="btn bg-[#26ADE2] text-white rounded p-2">
                               View

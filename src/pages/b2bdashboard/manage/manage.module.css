@@ -1,7 +1,7 @@
 .formControl label {
   display: block;
 }
-.inputField {
+.inputField, .mondalInputFiled, .requirementField{
   width: 420px;
   border: 1px solid #4ab449;
   height: 42px;
@@ -9,6 +9,46 @@
   padding: 5px;
   padding-left: 16px;
   
+}
+.mondalInputFiled, .requirementField{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.requirementField{
+  padding-right:20px;
+
+}
+.requirementField input{
+  cursor:pointer;
+}
+.modalWrap2{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 405px;
+  padding-bottom: 46px;
+  border-radius: 10px;
+}
+.requirementModal{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding:30px;
+  border-radius:10px;
+}
+.roomSelect2 {
+  width: 293px;
+  border: 1px solid #ddd;
+  padding: 5px;
+  margin: 0 auto;
+  display: flex;
+}
+.hotelModalCloseBtn2 {
+  color: #4AB449;
+  width: 32px;
+  font-size: 24px;
+  margin-left:10px;
+}
+.showModalIcon, .requirementIcon{
+  color:#4AB449 !important;
+cursor:pointer;
 }
 .formControl {
   display: flex;

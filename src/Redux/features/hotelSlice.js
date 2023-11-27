@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
- 
 
 const initialState = {
   hotelDetailsData: [],
@@ -12,18 +11,23 @@ const initialState = {
 export const fetchHotelData = createAsyncThunk(
   "hotel/fetchHotelData",
   async (data) => {
-    const response = await axios.post("http://localhost:5000/api/v1", data);
+    const response = await axios.post(
+      "http://localhost:5000/api/v1/hotel/get/packages",
+      data
+    );
+
     return response.data;
   }
 );
 
 const hotelSlice = createSlice({
   name: "hotel",
-  reducers: {},
   initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchHotelData.pending, (state, action) => {
       state.isLoading = true;
+      state.hotelDetailsData = [];
     });
     builder.addCase(fetchHotelData.fulfilled, (state, action) => {
       state.hotelDetailsData = action.payload;
@@ -34,11 +38,10 @@ const hotelSlice = createSlice({
       state.isError = true;
       state.error = action.error.message;
       state.isLoading = false;
+      state.hotelDetailsData = [];
     });
   },
 });
 
- 
-
+export const { setHotelData } = hotelSlice.actions;
 export default hotelSlice.reducer;
- 

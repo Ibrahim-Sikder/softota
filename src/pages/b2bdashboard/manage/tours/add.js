@@ -1,10 +1,10 @@
 import styling from "../../profile.module.css";
 import dynamic from "next/dynamic";
+import style from "../../../../../components/Hotel/Hotel.module.css";
 import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText";
 import styles from "../manage.module.css";
-import { CloudUpload } from "@mui/icons-material";
+import { CloudUpload, Groups2 } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import React, { useState, useEffect, useRef } from "react";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 import "react-quill/dist/quill.snow.css";
@@ -17,10 +17,13 @@ const Tours = () => {
   const [getFile, setGetFile] = useState({});
   const [getImage, setGetImage] = useState([]);
   const [value, setValue] = useState("");
+
   const [title, setTitle] = useState(null);
   const [subTitle, setSubTitle] = useState(null);
   const [getDate, setGetDate] = useState(null);
   const [price, setPrice] = useState(null);
+  const [countryName, setCountryName] = useState(null);
+  const [cityName, setCityName] = useState(null);
   const [included, setIncluded] = useState(null);
   const [excluded, setExcluded] = useState(null);
   const [itinary, setItinary] = useState(null);
@@ -28,10 +31,33 @@ const Tours = () => {
   const [productCategory, setProductCategory] = useState(null);
   const [priceLowToHigh, setPriceLowToHight] = useState(null);
   const [priceHighToLow, setPriceHighToLow] = useState(null);
+  const [time, setTime] = useState(null);
 
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
+  const [child, setChild] = useState(0);
+  const [adult, setAdult] = useState(0);
 
+  const childIncrement = () => {
+    setChild(child + 1);
+  };
+  const childDecrement = () => {
+    if (child < 1) {
+      setChild(0);
+    } else {
+      setChild(child - 1);
+    }
+  };
+  const incrementAdult = () => {
+    setAdult(adult + 1);
+  };
+  const decrementAdult = () => {
+    if (child < 1) {
+      setAdult(0);
+    } else {
+      setAdult(child - 1);
+    }
+  };
   let files;
   const handlePdf = async (e) => {
     setGetFile(e.target.files);
@@ -59,18 +85,23 @@ const Tours = () => {
   const handleToursData = (e) => {
     e.preventDefault();
     const data = {
-       
       title: title,
       sub_title: subTitle,
-      date: getDate,
-      price:price,
-      included:included,
-      excluded:excluded,
-      itinary:itinary,
-      category_type:categoryType,
-      product_category:productCategory,
-      price_low_to_hight:priceLowToHigh,
-      price_hight_to_low:priceHighToLow,
+      journey_date: getDate,
+      price: price,
+      country_name: countryName,
+      travel_from: cityName,
+      child: child,
+      adult: adult,
+      time: time,
+      // room_number: room,
+      included: included,
+      excluded: excluded,
+      itinary: itinary,
+      category_type: categoryType,
+      product_category: productCategory,
+      price_low_to_hight: priceLowToHigh,
+      price_hight_to_low: priceHighToLow,
       image: getImage,
       description: value,
     };
@@ -106,16 +137,14 @@ const Tours = () => {
       <div className="mt-5">
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
-            <h2 className="text-3xl font-bold text-center">
-              Tours Data Input{" "}
-            </h2>
+            <h2 className="text-3xl font-bold text-center">Tours Data Input</h2>
             <div className="w-full mx-auto">
               <form ref={formRef} onSubmit={handleToursData}>
                 <div className={styles.formControl}>
                   <div>
                     <label>Title </label>
                     <input
-                    onChange={(e)=>setTitle(e.target.value)}
+                      onChange={(e) => setTitle(e.target.value)}
                       name="category"
                       placeholder="Title "
                       type="text"
@@ -125,7 +154,7 @@ const Tours = () => {
                   <div>
                     <label>Sub Title</label>
                     <input
-                    onChange={(e)=>setSubTitle(e.target.value)}
+                      onChange={(e) => setSubTitle(e.target.value)}
                       name="productCategory"
                       placeholder="Sub Title "
                       type="text"
@@ -137,7 +166,7 @@ const Tours = () => {
                   <div>
                     <label>Date</label>
                     <input
-                    onChange={(e)=>setGetDate(e.target.value)}
+                      onChange={(e) => setGetDate(e.target.value)}
                       name="date"
                       placeholder="Date "
                       type="date"
@@ -147,7 +176,7 @@ const Tours = () => {
                   <div>
                     <label>Price </label>
                     <input
-                    onChange={(e)=>setPrice(e.target.value)}
+                      onChange={(e) => setPrice(e.target.value)}
                       name="price"
                       placeholder="Price"
                       type="text"
@@ -157,9 +186,102 @@ const Tours = () => {
                 </div>
                 <div className={styles.formControl}>
                   <div>
+                    <label> Your Destination Country</label>
+                    <select
+                      onChange={(e) => setCountryName(e.target.value)}
+                      className={styles.inputField}
+                    >
+                      <option selected value="Bangladesh">
+                        Bangladesh
+                      </option>
+                      <option value="Thailand">Thailand</option>
+                      <option value="Malaysia">Malaysia</option>
+                      <option value="Indonesia">Indonesia</option>
+                      <option value="India">India</option>
+                      <option value="China">China</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="Iran">Iran</option>
+                      <option value="Vietnam">Vietnam</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="Japan">Japan</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label>Enter city </label>
+                    <input
+                      onChange={(e) => setCityName(e.target.value)}
+                      name="price"
+                      placeholder="Enter city"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                  <div>
+                    <h4>Guests & Room</h4>
+                    <div className={styles.mondalInputFiled}>
+                      <div>
+                        <small>{child + adult} Guest</small>
+                        <input autoComplete="off" type="text" />
+                      </div>
+                      <div>
+                        <Groups2
+                          onClick={() => window.my_modal_3.showModal()}
+                          className={styles.showModalIcon}
+                        />
+                      </div>
+                    </div>
+                    {/* Open modala  */}
+                    <div className={styles.modalWrap}>
+                      <dialog id="my_modal_3" className={styles.modalWrap2}>
+                        <form method="dialog" className="modal-box">
+                          <button className={styles.hotelModalCloseBtn2}>
+                            ✕
+                          </button>
+                          <div className={style.guestRoomWrap}>
+                            <Groups2 className={style.groupIcon} />
+                            <div>
+                              <small>Guest & Room </small> <br />
+                              <p className="text-xl font-bold">
+                                {" "}
+                                {child + adult} Guest
+                              </p>
+                            </div>
+                          </div>
+                          <div className={style.adultChildWrap}>
+                            <div className={style.adultIncrementDecrement}>
+                              <small onClick={decrementAdult}> - </small>
+                              <span>{adult} Adult </span>
+                              <small onClick={incrementAdult}> + </small>
+                            </div>
+                            <div className={style.childIncrementDecrement}>
+                              <small onClick={childDecrement}> - </small>
+                              <span> {child} Child </span>
+                              <small onClick={childIncrement}> + </small>
+                            </div>
+                          </div>
+                        </form>
+                      </dialog>
+                    </div>
+                  </div>
+                  <div>
+                    <label>Time</label>
+                    <input
+                      onChange={(e) => setTime(e.target.value)}
+                      name="type"
+                      placeholder="Time "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+
+                <div className={styles.formControl}>
+                  <div>
                     <label> What is included </label>
                     <input
-                    onChange={(e)=>setIncluded(e.target.value)}
+                      onChange={(e) => setIncluded(e.target.value)}
                       name="title"
                       placeholder="What is included "
                       type="text"
@@ -169,7 +291,7 @@ const Tours = () => {
                   <div>
                     <label> What is excluded </label>
                     <input
-                     onChange={(e)=>setExcluded(e.target.value)}
+                      onChange={(e) => setExcluded(e.target.value)}
                       name="subTitle"
                       placeholder="What is excluded "
                       type="text"
@@ -181,7 +303,7 @@ const Tours = () => {
                   <div>
                     <label> Itinary </label>
                     <input
-                     onChange={(e)=>setItinary(e.target.value)}
+                      onChange={(e) => setItinary(e.target.value)}
                       name="title"
                       placeholder="Itinary"
                       type="text"
@@ -191,7 +313,7 @@ const Tours = () => {
                   <div>
                     <label>Category Type </label>
                     <input
-                     onChange={(e)=>setCategoryType(e.target.value)}
+                      onChange={(e) => setCategoryType(e.target.value)}
                       name="subTitle"
                       placeholder="Category Type  "
                       type="text"
@@ -203,7 +325,7 @@ const Tours = () => {
                   <div>
                     <label> Product Category </label>
                     <input
-                     onChange={(e)=>setProductCategory(e.target.value)}
+                      onChange={(e) => setProductCategory(e.target.value)}
                       name="title"
                       placeholder="Product Category "
                       type="text"
@@ -213,7 +335,7 @@ const Tours = () => {
                   <div>
                     <label>Price Low To Hight </label>
                     <input
-                     onChange={(e)=>setPriceLowToHight(e.target.value)}
+                      onChange={(e) => setPriceLowToHight(e.target.value)}
                       name="subTitle"
                       placeholder="Price Low To Hight "
                       type="text"
@@ -225,7 +347,7 @@ const Tours = () => {
                   <div>
                     <label> Price Hight To Low </label>
                     <input
-                     onChange={(e)=>setPriceHighToLow(e.target.value)}
+                      onChange={(e) => setPriceHighToLow(e.target.value)}
                       name="title"
                       placeholder=" Price Hight To Low  "
                       type="text"
@@ -286,7 +408,11 @@ const Tours = () => {
                 </div>
 
                 <div className={styles.formControl}>
-                  <button disabled={loading ? true : false} className={styles.submitBtn} type="submit">
+                  <button
+                    disabled={loading ? true : false}
+                    className={styles.submitBtn}
+                    type="submit"
+                  >
                     Submit
                   </button>
                 </div>

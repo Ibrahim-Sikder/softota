@@ -3,7 +3,6 @@ import MoveText from "../../../../../components/UserDashBoard/MoveText/MoveText"
 import styles from "../manage.module.css";
 import { CloudUpload } from "@mui/icons-material";
 import B2BdashboardLayout from "../../../../../components/Layout/B2BdashboardLayout/B2BdashboardLayout";
-import TextEditor from "../../../../../components/TextEditor/TextEditor";
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });

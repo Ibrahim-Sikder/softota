@@ -1,9 +1,5 @@
 import React from "react";
 import style from "../Umrah/Umraha.module.css";
-import Image from "next/image";
-import Link from "next/link";
-import hajj2 from "../../../public/assets/hajj2.png";
-import umrah2 from "../../../public/assets/umra2.jpg";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -13,13 +9,20 @@ import Nav from "../../NavBarr/Nav";
 import Footer from "../../Footer/Footer";
 import dynamic from "next/dynamic";
 import HajjActiveLink from "../HajjActiveLink/HajjActiveLink";
+import TourPackage from "../../../components/Tour/TourPackage/TourPackage";
 import { useEffect } from "react";
 import { useContext } from "react";
+ 
 import { APIContext } from "@/Context/ApiContext";
 import { fetchHajjData } from "@/Redux/features/hajjSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { fetchUmrahData } from "@/Redux/features/umrahSlice";
+ 
+ 
+ 
+ 
+ 
 const HajjLayout = ({ children }) => {
   const { handleGetUmrahData } = useContext(APIContext);
   const dispatch = useDispatch();
@@ -316,6 +319,9 @@ const HajjLayout = ({ children }) => {
         </aside>
 
         <main className={style.packageRightSide}>{children}</main>
+      </div>
+      <div className="px-[20px] mb-8">
+      <TourPackage/>
       </div>
       <Footer />
     </div>

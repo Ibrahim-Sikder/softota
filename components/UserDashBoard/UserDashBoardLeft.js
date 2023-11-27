@@ -12,6 +12,7 @@ import {
   FaHeadset,
   FaSignOutAlt,
   FaAcquisitionsIncorporated,
+
 } from "react-icons/fa"
 import Accordion from "@mui/material/Accordion"
 import AccordionSummary from "@mui/material/AccordionSummary"
@@ -41,6 +42,8 @@ import {
   ContactPhone,
   Gavel,
   Info,
+  PersonPin,
+  CheckCircle
 } from "@mui/icons-material"
 import Active from "../ActiveLink/Active"
 
@@ -51,8 +54,7 @@ const UserDashBoardLeft = () => {
   }
 
   return (
-    <aside>
-      <div
+      <aside
         className={toggleSideBar ? `${style.sidebar}` : `${style.sideBarLeft}`}
       >
         <div
@@ -369,7 +371,7 @@ const UserDashBoardLeft = () => {
                                 </AccordionDetails>
                               </Accordion>
                             </li>
-
+                           
                             <li>
                               <Active href="/b2bdashboard/manage/about">
                                 <Info className={style.flightIcons} /> About Us
@@ -606,7 +608,7 @@ const UserDashBoardLeft = () => {
                                     <Typography>
                                       <ul>
                                         <li className="flex">
-                                          <Link href="/b2bsearch/flight">
+                                          <Link href="/b2bdashboard/flight">
                                             <AirplaneTicket
                                               className={style.flightIcons}
                                             />
@@ -614,7 +616,7 @@ const UserDashBoardLeft = () => {
                                           </Link>
                                         </li>
                                         <li className="flex">
-                                          <Link href="/b2bsearch/process">
+                                          <Link href="/b2bdashboard/process">
                                             <Spellcheck
                                               className={style.flightIcons}
                                             />
@@ -622,7 +624,7 @@ const UserDashBoardLeft = () => {
                                           </Link>
                                         </li>
                                         <li className="flex">
-                                          <Link href="/b2bsearch/ticketcancel">
+                                          <Link href="/b2bdashboard/ticketcancel">
                                             <CancelScheduleSend
                                               className={style.flightIcons}
                                             />
@@ -669,14 +671,14 @@ const UserDashBoardLeft = () => {
 
               <p className={style.showToolTip}>
                 <FaAcquisitionsIncorporated className={style.icon} />
-                <Link href="/b2bsearch/partial">
+                <Link href="/b2bdashboard/partial">
                   <div className={style.toolTip}>Partial Payment</div>{" "}
                 </Link>
               </p>
 
               <p className={style.showToolTip}>
                 <FaPlane className={style.icon} />
-                <Link href="/b2bsearch/returnChange">
+                <Link href="/b2bdashboard/returnChange">
                   <div className={`${style.toolTip} ${style.toolTip2}`}>
                     Void/Return /Change
                   </div>{" "}
@@ -685,7 +687,7 @@ const UserDashBoardLeft = () => {
 
               <p className={style.showToolTip}>
                 <FaCommentDollar className={style.icon} />
-                <Link href="/adb2bsearchmin/transactions">
+                <Link href="/adb2bdashboardmin/transactions">
                   <div className={`${style.toolTip} ${style.toolTip3}`}>
                     Transactions
                   </div>{" "}
@@ -693,7 +695,7 @@ const UserDashBoardLeft = () => {
               </p>
               <p className={style.showToolTip}>
                 <FaAmazonPay className={style.icon} />
-                <Link href="/b2bsearch/payment">
+                <Link href="/b2bdashboard/payment">
                   <div className={`${style.toolTip} ${style.toolTip4}`}>
                     Payment{" "}
                   </div>{" "}
@@ -701,7 +703,7 @@ const UserDashBoardLeft = () => {
               </p>
               <p className={style.showToolTip}>
                 <FaHospitalUser className={style.icon} />
-                <Link href="/b2bsearch/banklist">
+                <Link href="/b2bdashboard/banklist">
                   <div className={`${style.toolTip} ${style.toolTip5}`}>
                     Bank List
                   </div>{" "}
@@ -709,15 +711,15 @@ const UserDashBoardLeft = () => {
               </p>
               <p className={style.showToolTip}>
                 <FaUserAlt className={style.icon} />
-                <Link href="/b2bsearch/profile">
+                <Link href="/b2bdashboard/profile">
                   <div className={`${style.toolTip} ${style.toolTip6}`}>
                     Profile{" "}
                   </div>{" "}
                 </Link>
               </p>
               <p className={style.showToolTip}>
-                <FaUserAlt className={style.icon} />
-                <Link href="/b2bsearch/passenger">
+                <PersonPin className={style.icon} />
+                <Link href="/b2bdashboard/passenger">
                   <div className={`${style.toolTip} ${style.toolTip7}`}>
                     Quick Passengers
                   </div>{" "}
@@ -734,8 +736,8 @@ const UserDashBoardLeft = () => {
               </p>
               <p className={style.showToolTip}>
                 <FaSkating className={style.icon} />
-                <Link href="/b2bsearch/company">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                <Link href="/b2bdashboard/company">
+                  <div className={`${style.toolTip} ${style.toolTip9}`}>
                     Company
                   </div>{" "}
                 </Link>
@@ -743,7 +745,7 @@ const UserDashBoardLeft = () => {
               <p className={style.showToolTip}>
                 <FaHeadset className={style.icon} />
                 <Link href="#">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  <div className={`${style.toolTip} ${style.toolTip10}`}>
                   Customer Service
                   </div>{" "}
                 </Link>
@@ -751,7 +753,7 @@ const UserDashBoardLeft = () => {
               <p className={style.showToolTip}>
                 <FaSignOutAlt className={style.icon}/>
                 <Link href="#">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  <div className={`${style.toolTip} ${style.toolTip11}`}>
                   Sign Out
                   </div>{" "}
                 </Link>
@@ -759,7 +761,7 @@ const UserDashBoardLeft = () => {
               <p className={style.showToolTip}>
                 <Backup className={style.icon} />
                 <Link href="#">
-                  <div className={`${style.toolTip} ${style.toolTip8}`}>
+                  <div className={`${style.toolTip} ${style.toolTip12}`}>
                   Database Backup
                   </div>
                 </Link>
@@ -776,8 +778,7 @@ const UserDashBoardLeft = () => {
             </div>
           </div>
         </div>
-      </div>
-    </aside>
+      </aside>
   )
 }
 

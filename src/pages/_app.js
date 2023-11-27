@@ -52,9 +52,6 @@ export default function App({ Component, pageProps: { ...pageProps } }) {
         </Provider>
       </HelmetProvider>
 
-      {/* <div className="chatbox">
-        <iframe className={style.chatBox}  src="https://app.chatsimple.ai/iframe23/6ffdd3e6-23c8-447d-895d-cdcc660d25d3/1df0dbdd-5a7d-4466-aef4-0490dc89da58/a557f4df-16a8-448b-bb0c-2e599a3ee69d" height="400" width="800" title="Chatsimple" ></iframe>
-      </div> */}
     </>
   );
 }

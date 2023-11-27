@@ -15,6 +15,7 @@ const Hotel = () => {
       <Travel />
       <Customer />
     </B2BdashboardLayout>
+    
   )
 }
 

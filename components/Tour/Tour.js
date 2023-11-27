@@ -21,6 +21,7 @@ import dynamic from "next/dynamic";
 import { useDispatch } from "react-redux";
 import toast from "react-hot-toast";
 import { fetchToursData } from "@/Redux/features/toursSlice";
+import { useRouter } from "next/router";
 
 const BusBanner = () => {
   const [countryName, setCountryName] = useState(null);
@@ -31,7 +32,7 @@ const BusBanner = () => {
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [room, setRoom] = useState("1 Room");
-
+const router = useRouter()
   const childIncrement = () => {
     setChild(child + 1);
   };
@@ -444,14 +445,21 @@ const BusBanner = () => {
                 >
                   <h4>Journey Date </h4>
                   <div className="flex items-center justify-between ">
-                    <input
+                    {/* <input
                       value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
                       readOnly
+                    /> */}
+                    <input
+                      onChange={(e) => setJourneyDate(e.target.value)}
+                      name="date"
+                      placeholder="Date "
+                      type="date"
+                      className={style.inputField}
                     />
-                    <CalendarMonth className={style.calendarIcon} />
+                    {/* <CalendarMonth className={style.calendarIcon} /> */}
                   </div>
                 </div>
-                <div className={style.calendarTow} ref={refOne}>
+                {/* <div className={style.calendarTow} ref={refOne}>
                   {open && (
                     <DateRange
                       onChange={handleJourneyDate}
@@ -464,7 +472,7 @@ const BusBanner = () => {
                       className="calendarElement"
                     />
                   )}
-                </div>
+                </div> */}
               </div>
               <div className={style.formControl}>
                 <div className={style.package4}>
@@ -472,7 +480,7 @@ const BusBanner = () => {
                     <div>
                       <h4>Guests & Room</h4>
                       <small>
-                        {child + adult} Guest & {room}{" "}
+                        {child + adult} Guest  
                       </small>
                       <input type="text" />
                     </div>
