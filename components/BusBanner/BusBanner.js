@@ -18,8 +18,15 @@ import "react-date-range/dist/theme/default.css";
 import { useRef } from "react";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
+import { useDispatch } from "react-redux";
+import { fetchBusData } from "@/Redux/features/busSlice";
+import toast from "react-hot-toast";
 
 const BusBanner = () => {
+  const [cityFrom, setCityFrom] = useState(null);
+  const [cityTo, setCityTo] = useState(null);
+  const [noMatch, setNoMatch] = useState(null);
+  const [journeyDate, setJourneyDate] = useState(null);
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [seat, setSeat] = useState("1 Class");
@@ -79,6 +86,46 @@ const BusBanner = () => {
     }
   };
 
+  const handleJourneyDate = (ranges) => {
+    // Assuming the DateRange component always provides a single range
+    const selectedRange = ranges.selection;
+
+    setRange([selectedRange]); // Update the state with the selected date range
+    setJourneyDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
+  };
+
+  const dispatch = useDispatch();
+  const handleBusDetailsData = () => {
+    const data = {
+      city_from: cityFrom,
+      city_to: cityTo,
+      journey_date: journeyDate,
+      child: child,
+      adult: adult,
+      seat_type: seat,
+    };
+
+    dispatch(fetchBusData(data)).then((result) => {
+      console.log(result);
+      if (
+        result.payload &&
+        result.payload.message === "Successfully bus details gets."
+      ) {
+        router.push("/bus/search");
+      } else if (
+        result.payload &&
+        result.payload.message === "No matching package found."
+      ) {
+        setNoMatch("No matching package found.");
+      } else if (
+        result.payload &&
+        result.payload.message === "Please select all the field."
+      ) {
+        toast.error("Please select all the field.");
+      }
+    });
+  };
+
   return (
     <section>
       {/* banner */}
@@ -87,7 +134,7 @@ const BusBanner = () => {
         <div className={style.heroBoxMain}>
           {/* menubar */}
           <div className={style.desktopMenu}>
-          <ul className={style.menu}>
+            <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/">
                   <li className={style.firstChild}>
@@ -191,7 +238,7 @@ const BusBanner = () => {
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={45}
                       height={45}
@@ -362,11 +409,19 @@ const BusBanner = () => {
             <div className={style.singleForm}>
               <div className={style.formControl}>
                 <h4>From </h4>
-                <input type="text " placeholder="Enter City" />
+                <input
+                  onChange={(e) => setCityFrom(e.target.value)}
+                  type="text "
+                  placeholder="Enter City"
+                />
               </div>
               <div className={style.formControl}>
                 <h4> To </h4>
-                <input type="text " placeholder="Enter City" />
+                <input
+                  onChange={(e) => setCityTo(e.target.value)}
+                  type="text "
+                  placeholder="Enter City"
+                />
               </div>
             </div>
             <div className={style.singleForm}>
@@ -387,7 +442,7 @@ const BusBanner = () => {
                 <div className={style.calendarTow} ref={refOne}>
                   {open && (
                     <DateRange
-                      onChange={(item) => setRange([item.selection])}
+                      onChange={handleJourneyDate}
                       editableDateInputs={true}
                       moveRangeOnFirstSelection={false}
                       ranges={range}
@@ -446,7 +501,7 @@ const BusBanner = () => {
                         }}
                       >
                         <option value="Class" selected>
-                         Economy
+                          Economy
                         </option>
                         <option value="Premium">Premium</option>
                       </select>
@@ -456,10 +511,12 @@ const BusBanner = () => {
               </div>
             </div>
           </form>
-
-          <Link href="/bus/search">
-            <button className={style.heroBoxBtn}>Get Your Ticket</button>
-          </Link>
+          {/* <Link href="/bus/search"> */}
+          <button onClick={handleBusDetailsData} className={style.heroBoxBtn}>
+            Get Your Ticket
+          </button>
+          {/* </Link> */}
+          <div className="text-white text-center font-medium">{noMatch}</div>
         </div>
       </div>
     </section>

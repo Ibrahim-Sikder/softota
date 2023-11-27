@@ -6,6 +6,10 @@ import visaSlice from "../features/visaSlice";
 import { encryptTransform } from "../Encrypt/EncryptionTransform";
 import hajjSlice from "../features/hajjSlice";
 import umrahSlice from "../features/umrahSlice";
+import hotelSlice from "../features/hotelSlice";
+import toursSlice from "../features/toursSlice";
+import busSlice from "../features/busSlice";
+import trainSlice from "../features/trainSlice";
 
 const middlewares = [];
 
@@ -21,13 +25,17 @@ const rootReducer = combineReducers({
   visa: visaSlice,
   hajj: hajjSlice,
   umrah: umrahSlice,
+  hotel: hotelSlice,
+  tours: toursSlice,
+  bus: busSlice,
+  train: trainSlice
 });
 
 const persistConfig = {
   key: "root",
   storage,
   transforms: [encryptTransform],
-  whitelist: ["visa", "hajj","umrah"],
+  whitelist: ["visa", "hajj","umrah","hotel","tours","bus","train"],
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

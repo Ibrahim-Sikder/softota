@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import React, { useEffect, useRef } from "react"
-import style from "./Hotel.module.css"
-import Link from "next/link"
+import React, { useEffect, useRef } from "react";
+import style from "./Hotel.module.css";
+import Link from "next/link";
 import {
   Flight,
   BookOnline,
@@ -10,47 +10,55 @@ import {
   KingBed,
   Groups2,
   CalendarMonth,
-} from "@mui/icons-material"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import { useState } from "react"
-import dynamic from "next/dynamic"
-import ActiveLink from "../Banner/ActiveLink"
-import { DateRange } from "react-date-range"
-import format from "date-fns/format"
-import { addDays } from "date-fns"
-import "react-date-range/dist/styles.css"
-import "react-date-range/dist/theme/default.css"
+} from "@mui/icons-material";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import ActiveLink from "../Banner/ActiveLink";
+import { DateRange } from "react-date-range";
+import format from "date-fns/format";
+import { addDays } from "date-fns";
+import "react-date-range/dist/styles.css";
+import "react-date-range/dist/theme/default.css";
+import { useDispatch } from "react-redux";
+import { fetchHotelData } from "@/Redux/features/hotelSlice";
+import toast from "react-hot-toast";
 const Hotel = () => {
-  const [activeToggleMenu, setActiveToggleMenu] = useState(false)
-  const [child, setChild] = useState(0)
-  const [adult, setAdult] = useState(0)
-  const [room, setRoom] = useState("1 Room")
+  const [countryName, setCountryName] = useState(null);
+  const [cityName, setCityName] = useState(null);
+  const [checkInDate, setCheckInDate] = useState(null);
+  const [checkOutDate, setCheckOutDate] = useState(null);
+  const [noMatch, setNoMatch] = useState(null);
+  const [activeToggleMenu, setActiveToggleMenu] = useState(false);
+  const [child, setChild] = useState(0);
+  const [adult, setAdult] = useState(0);
+  const [room, setRoom] = useState("1 Room");
 
   const childIncrement = () => {
-    setChild(child + 1)
-  }
+    setChild(child + 1);
+  };
   const childDecrement = () => {
     if (child < 1) {
-      setChild(0)
+      setChild(0);
     } else {
-      setChild(child - 1)
+      setChild(child - 1);
     }
-  }
+  };
   const incrementAdult = () => {
-    setAdult(adult + 1)
-  }
+    setAdult(adult + 1);
+  };
   const decrementAdult = () => {
     if (child < 1) {
-      setAdult(0)
+      setAdult(0);
     } else {
-      setAdult(child - 1)
+      setAdult(child - 1);
     }
-  }
+  };
 
   const handleActiveMenu = () => {
-    setActiveToggleMenu((activeToggleMenu) => !activeToggleMenu)
-  }
+    setActiveToggleMenu((activeToggleMenu) => !activeToggleMenu);
+  };
 
   // date state
   const [range, setRange] = useState([
@@ -59,7 +67,7 @@ const Hotel = () => {
       endDate: addDays(new Date(), 7),
       key: "selection",
     },
-  ])
+  ]);
 
   const [range2, setRange2] = useState([
     {
@@ -67,48 +75,48 @@ const Hotel = () => {
       endDate: addDays(new Date(), 7),
       key: "selection",
     },
-  ])
+  ]);
 
   // open close
-  const [open, setOpen] = useState(false)
-  const [open2, setOpen2] = useState(false)
+  const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
 
   // get the target element to toggle
-  const refOne = useRef(null)
-  const refTow = useRef(null)
+  const refOne = useRef(null);
+  const refTow = useRef(null);
 
   useEffect(() => {
-    document.addEventListener("keydown", hideOnEscape, true)
-    document.addEventListener("click", hideOnClickOutside, true)
-  }, [])
+    document.addEventListener("keydown", hideOnEscape, true);
+    document.addEventListener("click", hideOnClickOutside, true);
+  }, []);
   useEffect(() => {
-    document.addEventListener("keydown", hideOnEscape2, true)
-    document.addEventListener("click", hideOnClickOutside2, true)
-  }, [])
+    document.addEventListener("keydown", hideOnEscape2, true);
+    document.addEventListener("click", hideOnClickOutside2, true);
+  }, []);
 
   // hide dropdown on ESC press
   const hideOnEscape = (e) => {
     if (e.key === "Escape") {
-      setOpen(false)
+      setOpen(false);
     }
-  }
+  };
   const hideOnEscape2 = (e) => {
     if (e.key === "Escape") {
-      setOpen2(false)
+      setOpen2(false);
     }
-  }
+  };
 
   // Hide on outside click
   const hideOnClickOutside = (e) => {
     if (refOne.current && !refOne.current.contains(e.target)) {
-      setOpen(false)
+      setOpen(false);
     }
-  }
+  };
   const hideOnClickOutside2 = (e) => {
     if (refTow.current && !refTow.current.contains(e.target)) {
-      setOpen2(false)
+      setOpen2(false);
     }
-  }
+  };
 
   var settings = {
     infinite: true,
@@ -145,18 +153,67 @@ const Hotel = () => {
         },
       },
     ],
-  }
+  };
+
+  const handleCheckInDateRangeChange = (ranges) => {
+    // Assuming the DateRange component always provides a single range
+    const selectedRange = ranges.selection;
+
+    setRange2([selectedRange]); // Update the state with the selected date range
+    setCheckInDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
+  };
+  const handleCheckOutDateRangeChange = (ranges) => {
+    // Assuming the DateRange component always provides a single range
+    const selectedRange = ranges.selection;
+
+    setRange2([selectedRange]); // Update the state with the selected date range
+    setCheckOutDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
+  };
+
+  const dispatch = useDispatch();
+  const handleHotelDetailsData = () => {
+    const data = {
+      country_name: countryName,
+      city_name: cityName,
+      check_in_date: checkInDate,
+      check_out_date: checkOutDate,
+      child: child,
+      adult: adult,
+      room_number: room,
+    };
+
+    dispatch(fetchHotelData(data)).then((result) => {
+      console.log(result);
+      if (
+        result.payload &&
+        result.payload.message === "Successfully hotel details gets."
+      ) {
+        router.push("/search");
+      } else if (
+        result.payload &&
+        result.payload.message === "No matching package found."
+      ) {
+        setNoMatch("No matching package found.");
+      } else if (
+        result.payload &&
+        result.payload.message === "Please select all the field."
+      ) {
+        toast.error("Please select all the field.");
+      }
+    });
+  };
+ 
 
   return (
     <section>
-        <div className={style.bannerWrap}>
+      <div className={style.bannerWrap}>
         <h2>Welcome to Ghuronti! Find Tours, Flights & Hotels Packages</h2>
         <div className={style.heroBoxMain}>
           <div className={style.packageWrap}>
             <div className={style.package}>
               <div>
                 <h4>Enter Your Destination Country</h4>
-                <select>
+                <select onChange={(e) => setCountryName(e.target.value)}>
                   <option selected value="Bangladesh">
                     Bangladesh
                   </option>
@@ -176,7 +233,7 @@ const Hotel = () => {
             <div className={style.package2}>
               <div>
                 <h4>City/Hotel/Street Name</h4>
-                <select>
+                <select onChange={(e) => setCityName(e.target.value)}>
                   <option value="Dhaka">Dhaka</option>
                   <option value="Bangkok">Bangkok</option>
                   <option value="Tokyo">Tokyo</option>
@@ -201,6 +258,7 @@ const Hotel = () => {
                 <h4>Check In</h4>
                 <div className={style.calendarInput}>
                   <input
+                    
                     value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
                     readOnly
                   />
@@ -210,7 +268,7 @@ const Hotel = () => {
                 <div className={style.calendarTow} ref={refOne}>
                   {open && (
                     <DateRange
-                      onChange={(item) => setRange2([item.selection])}
+                      onChange={handleCheckInDateRangeChange}
                       editableDateInputs={true}
                       moveRangeOnFirstSelection={false}
                       ranges={range}
@@ -237,7 +295,7 @@ const Hotel = () => {
                 <div className={style.calendarTow} ref={refTow}>
                   {open2 && (
                     <DateRange
-                      onChange={(item) => setRange2([item.selection])}
+                      onChange={handleCheckOutDateRangeChange}
                       editableDateInputs={true}
                       moveRangeOnFirstSelection={false}
                       ranges={range2}
@@ -293,8 +351,8 @@ const Hotel = () => {
                     <select
                       className={style.roomSelect}
                       onChange={(e) => {
-                        const classes = e.target.value
-                        setRoom(classes)
+                        const classes = e.target.value;
+                        setRoom(classes);
                       }}
                     >
                       <option value="1 Room" selected>
@@ -310,9 +368,12 @@ const Hotel = () => {
               </div>
             </div>
           </div>
-          <Link href="/search">
-            <button className={style.heroBoxBtn}>Get Your Hotel</button>
-          </Link>
+          {/* <Link href="/search"> */}
+
+          <button onClick={handleHotelDetailsData} className={style.heroBoxBtn}>
+            Get Your Hotel
+          </button>
+          {/* </Link> */}
 
           {/* menubar */}
 
@@ -588,11 +649,14 @@ const Hotel = () => {
               </div>
             </ul>
           </div>
+          <div className="  text-white font-medium text-center my-1">
+            {noMatch}
+          </div>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 // export default dynamic(() => Promise.resolve(Hotel), { ssr: false })
 export default Hotel;
