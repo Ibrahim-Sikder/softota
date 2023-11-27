@@ -5,92 +5,22 @@ import Link from "next/link";
 import style from "./HajjUmrah.module.css";
 import { useSelector } from "react-redux";
 const UmrahCard = ({ title, img }) => {
- 
   const umrahDetailsData = useSelector((state) => state.umrah.umrahDetailsData);
-  console.log(umrahDetailsData)
-  // const datas = [
-  //   {
-  //     id: 1,
-  //     title: "Platinum Umrah Package 2023 - 2024 from Bangladesh",
-  //     image: img1,
-  //     heading: "Platinum Umrah Package 2023",
-  //     subheading: "",
-  //     price: "150,000",
-  //     desc: "Hotel in Makkah: Distance 400 meters from Haram Sharif & Madinah 300 meters",
-  //     desc2: "Sharing Room (4 Persons)",
-  //     desc3: "Meals (3 Times)",
-  //     desc4: "Excluding Kurbani",
-  //     day: "20 days",
-  //   },
-  //   {
-  //     id: 1,
-  //     title: "Platinum Umrah Package 2023 - 2024 from Bangladesh",
-  //     image: img,
-  //     heading: "Platinum Umrah Package 2023",
-  //     subheading: "",
-  //     price: "150,000",
-  //     desc: "Hotel in Makkah: Distance 400 meters from Haram Sharif & Madinah 300 meters",
-  //     desc2: "Sharing Room (4 Persons)",
-  //     desc3: "Meals (3 Times)",
-  //     desc4: "Excluding Kurbani",
-  //     day: "20 days",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Platinum Umrah Package 2023 - 2024 from Bangladesh",
-  //     image: img2,
-  //     heading: "Platinum Umrah Package 2023",
-  //     subheading: "",
-  //     price: "150,000",
-  //     desc: "Hotel in Makkah: Distance 400 meters from Haram Sharif & Madinah 300 meters",
-  //     desc2: "Sharing Room (4 Persons)",
-  //     desc3: "Meals (3 Times)",
-  //     desc4: "Excluding Kurbani",
-  //     day: "20 days",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Platinum Umrah Package 2023 - 2024 from Bangladesh",
-  //     image: img3,
-  //     heading: "Platinum Umrah Package 2023",
-  //     subheading: "",
-  //     price: "150,000",
-  //     desc: "Hotel in Makkah: Distance 400 meters from Haram Sharif & Madinah 300 meters",
-  //     desc2: "Sharing Room (4 Persons)",
-  //     desc3: "Meals (3 Times)",
-  //     desc4: "Excluding Kurbani",
-  //     day: "20 days",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Platinum Umrah Package 2023 - 2024 from Bangladesh",
-  //     image: img4,
-  //     heading: "Platinum Umrah Package 2023",
-  //     subheading: "",
-  //     price: "150,000",
-  //     desc: "Hotel in Makkah: Distance 400 meters from Haram Sharif & Madinah 300 meters",
-  //     desc2: "Sharing Room (4 Persons)",
-  //     desc3: "Meals (3 Times)",
-  //     desc4: "Excluding Kurbani",
-  //     day: "20 days",
-  //   },
-  // ];
 
   const [limit, setLimit] = useState(5);
   const [currentPage, setCurrentPage] = useState(
-    Number(sessionStorage.getItem("hajj")) || 1
+    Number(sessionStorage.getItem("umrah")) || 1
   );
   const [pageNumberLimit, setPageNumberLimit] = useState(5);
   const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
   const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
   useEffect(() => {
-    sessionStorage.setItem("hajj", currentPage.toString());
+    sessionStorage.setItem("umrah", currentPage.toString());
   }, [currentPage]);
-  // ...
 
   useEffect(() => {
-    const storedPage = Number(sessionStorage.getItem("hajj")) || 1;
+    const storedPage = Number(sessionStorage.getItem("umrah")) || 1;
     setCurrentPage(storedPage);
     setMaxPageNumberLimit(
       Math.ceil(storedPage / pageNumberLimit) * pageNumberLimit
@@ -100,12 +30,10 @@ const UmrahCard = ({ title, img }) => {
     );
   }, [pageNumberLimit]);
 
-  // ...
-
   const handleClick = (e) => {
     const pageNumber = Number(e.target.id);
     setCurrentPage(pageNumber);
-    sessionStorage.setItem("hajj", pageNumber.toString());
+    sessionStorage.setItem("umrah", pageNumber.toString());
   };
   const pages = [];
   for (let i = 1; i <= Math.ceil(umrahDetailsData?.length / limit); i++) {
@@ -160,7 +88,7 @@ const UmrahCard = ({ title, img }) => {
                   <div className={style.rightText}>
                     <div className={style.cardText}>
                       <h5 className="text-xl font-bold mb-2">
-                        {data.hajj_package}
+                        {data.latest_umrah_package}
                       </h5>
                       <div className={style.cardIconText}>
                         <Beenhere className={style.checkIcon} />
@@ -218,7 +146,7 @@ const UmrahCard = ({ title, img }) => {
   const handlePrevious = () => {
     const newPage = currentPage - 1;
     setCurrentPage(newPage);
-    sessionStorage.setItem("hajj", newPage.toString());
+    sessionStorage.setItem("umrah", newPage.toString());
 
     if (newPage % pageNumberLimit === 0) {
       setMaxPageNumberLimit(maxPageNumberLimit - pageNumberLimit);
@@ -228,7 +156,7 @@ const UmrahCard = ({ title, img }) => {
   const handleNext = () => {
     const newPage = currentPage + 1;
     setCurrentPage(newPage);
-    sessionStorage.setItem("hajj", newPage.toString());
+    sessionStorage.setItem("umrah", newPage.toString());
 
     if (newPage > maxPageNumberLimit) {
       setMaxPageNumberLimit(maxPageNumberLimit + pageNumberLimit);
@@ -263,14 +191,14 @@ const UmrahCard = ({ title, img }) => {
   return (
     <section>
       <div>
-        <div className={style.umrahImgWrap}>
+        {/* <div className={style.umrahImgWrap}>
           <Image
             loading="lazy"
             src={img}
             alt="umra"
             className={style.umraImage}
           />
-        </div>
+        </div> */}
         <h3 className="text-3xl font-bold my-8">{title}</h3>
         {umrahDetailsData.length === 0 ? (
           <div className="text-xl text-center flex justify-center items-center h-full">

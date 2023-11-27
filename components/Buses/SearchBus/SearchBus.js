@@ -7,10 +7,13 @@ import Image from "next/image";
 
 import Seats from "../Seats/Seats";
 import SelectedSeats from "../Seats/SelectedSeat";
+import { useSelector } from "react-redux";
 const SearchBus = () => {
+  const busDetailsData = useSelector((state) => state.bus.busDetailsData);
+  console.log(busDetailsData.getPackage);
   const [chooseSeat, setChooseSeat] = useState("A1", "৳1500", "Economy");
   const [showDetails, setShowDetails] = useState(false);
-  const [ seatsNumber, setSeatsNumber] = useState([])
+  const [seatsNumber, setSeatsNumber] = useState([]);
   const handleShowDetails = () => {
     setShowDetails(!showDetails);
   };
@@ -22,7 +25,7 @@ const SearchBus = () => {
       departureTime: "10.30AM",
       arrivalTime: "12.20PM",
       seats: 33,
-    }
+    },
   ];
 
   const [selectedSeats, setSelectedSeats] = useState([]);
@@ -41,7 +44,7 @@ const SearchBus = () => {
         <div>
           <strong className="block">Departure </strong>
           <div className="flex items-center">
-            <Image  loading="lazy" alt="bus" src={bus} width={50} height={50} />
+            <Image loading="lazy" alt="bus" src={bus} width={50} height={50} />
             <div>
               <h6>Dhaka - Bandarban</h6>
               <small className="block">19 October, 2023</small>
@@ -170,21 +173,21 @@ const SearchBus = () => {
           </div>
           <div className={style.searchBusRightSide}>
             <div>
-              {busData.map((bus) => (
+              {busDetailsData.getPackage.map((bus) => (
                 <div key={bus.id} className={style.allBusCardWrap}>
                   <div className={style.busCard}>
                     <div className={style.busDetail}>
-                      <strong className="capitalize">{bus.name}</strong>
+                      <strong className="capitalize">{bus.bus_name}</strong>
                       <small className="block">504-BAN Non AC</small>
-                      <p>Starting Point: Uttara</p>
-                      <p>End Point: Bandarban</p>
+                      <p>Starting Point: {bus.starting_point}</p>
+                      <p>End Point: {bus.end_point}</p>
                     </div>
                     <div className={style.busDetail}>
-                      <h5 className=" capitalize">{bus.departureTime} </h5>
+                      <h5 className=" capitalize">{bus.starting_time} </h5>
                       <strong>10:30AM</strong>
                     </div>
                     <div className={style.busDetail}>
-                      <h5 className=" capitalize">{bus.arrivalTime} </h5>
+                      <h5 className=" capitalize">{bus.end_time} </h5>
                       <strong>10:30AM</strong>
                     </div>
                     <div className={style.busDetail}>
@@ -212,15 +215,15 @@ const SearchBus = () => {
                     className={showDetails ? `${style.show}` : `${style.hide}`}
                   >
                     <div className=" my-5">
-                     <b>Choose your seat</b>
-                     <hr className="mt-2"/>
+                      <b>Choose your seat</b>
+                      <hr className="mt-2" />
                       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-4">
                         <Seats
                           handleSeatSelection={handleSeatSelection}
                           selectedSeats={selectedSeats}
                           setSeatsNumber={setSeatsNumber}
                         />
-                        <SelectedSeats selectedSeats={selectedSeats}  />
+                        <SelectedSeats selectedSeats={selectedSeats} />
                       </div>
                     </div>
                   </div>

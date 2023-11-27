@@ -17,15 +17,19 @@ const Train = () => {
   const [getFile, setGetFile] = useState({});
   const [getImage, setGetImage] = useState([]);
   const [value, setValue] = useState("");
+  const [trainName, setTrainName] = useState(null)
+  const [title, setTitle] = useState(null);
+  // const [subTitle, setSubTitle] = useState(null);
   const [countryName, setCountryName] = useState(null);
   const [cityName, setCityName] = useState(null);
+  const [classType, setClassType] = useState(null)
+  const [getDate, setGetDate] = useState(null);
+
   const [address, setAddress] = useState(null);
   const [categoryType, setCategoryType] = useState(null);
   const [productCategory, setProductCategory] = useState(null);
-  const [getDate, setGetDate] = useState(null);
   const [price, setPrice] = useState();
-  const [title, setTitle] = useState(null);
-  const [subTitle, setSubTitle] = useState(null);
+  
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
 

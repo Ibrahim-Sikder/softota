@@ -1,7 +1,7 @@
 // visaSlice.js
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import toast from "react-hot-toast";
+ 
 
 const initialState = {
   visaDetailsData: [],
@@ -13,7 +13,7 @@ const initialState = {
 export const fetchVisaData = createAsyncThunk(
   "visa/fetchVisaData",
   async (data) => {
-    const response = await axios.post("http://localhost:5000/api/v1", data);
+    const response = await axios.post("http://localhost:5000/api/v1/visa/gets/package", data);
     return response.data;
   }
 );

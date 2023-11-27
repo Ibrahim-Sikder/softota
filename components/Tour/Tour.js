@@ -18,12 +18,21 @@ import "react-date-range/dist/theme/default.css";
 import { useRef } from "react";
 import { useEffect } from "react";
 import dynamic from "next/dynamic";
+import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
+import { fetchToursData } from "@/Redux/features/toursSlice";
+import { useRouter } from "next/router";
 
 const BusBanner = () => {
+  const [countryName, setCountryName] = useState(null);
+  const [travelFrom, setTravelFrom] = useState(null);
+  const [journeyDate, setJourneyDate] = useState(null);
+ 
+  const [noMatch, setNoMatch] = useState(null);
   const [child, setChild] = useState(0);
   const [adult, setAdult] = useState(0);
   const [room, setRoom] = useState("1 Room");
-
+const router = useRouter()
   const childIncrement = () => {
     setChild(child + 1);
   };
@@ -79,6 +88,51 @@ const BusBanner = () => {
     }
   };
 
+  const handleJourneyDate = (ranges) => {
+    // Assuming the DateRange component always provides a single range
+    const selectedRange = ranges.selection;
+
+    setRange([selectedRange]); // Update the state with the selected date range
+    setJourneyDate(`${format(selectedRange.startDate, "MM/dd/yyyy")}`);
+  };
+   
+
+  const dispatch = useDispatch();
+  const handleToursDetailsData = () => {
+    const data = {
+      country_name: countryName,
+      travel_from: travelFrom,
+      journey_date: journeyDate,
+      child: child,
+      adult: adult,
+      
+    };
+
+    dispatch(fetchToursData(data)).then((result) => {
+      console.log(result);
+      if (
+        result.payload &&
+        result.payload.message === "Successfully tours details gets."
+      ) {
+        router.push("/tours/search");
+      } else if (
+        result.payload &&
+        result.payload.message === "No matching package found."
+      ) {
+        setNoMatch("No matching package found.");
+      } else if (
+        result.payload &&
+        result.payload.message === "Please select all the field."
+      ) {
+        toast.error("Please select all the field.");
+      }
+    });
+  };
+
+
+ 
+ 
+ 
   return (
     <section>
       {/* banner */}
@@ -87,7 +141,7 @@ const BusBanner = () => {
         <div className={style.heroBoxMain}>
           {/* menubar */}
           <div className={style.desktopMenu}>
-          <ul className={style.menu}>
+            <ul className={style.menu}>
               <div className={style.wrapMenu}>
                 <ActiveLink href="/">
                   <li className={style.firstChild}>
@@ -191,7 +245,7 @@ const BusBanner = () => {
                 </ActiveLink>
                 <ActiveLink href="/visa">
                   <li>
-                  <svg
+                    <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width={45}
                       height={45}
@@ -362,12 +416,12 @@ const BusBanner = () => {
             <div className={style.singleForm}>
               <div className={style.formControl}>
                 <h4>Travel From </h4>
-                <input type="text " placeholder="Enter City" />
+                <input onChange={(e) => setTravelFrom(e.target.value)} type="text " placeholder="Enter City" />
               </div>
               <div className={style.formControl}>
                 <label> Your Destination Country</label>
-                <select>
-                  <option selected value="Bangladesh">
+                <select onChange={(e) => setCountryName(e.target.value)}>
+                  <option  selected value="Bangladesh">
                     Bangladesh
                   </option>
                   <option value="Thailand">Thailand</option>
@@ -391,17 +445,25 @@ const BusBanner = () => {
                 >
                   <h4>Journey Date </h4>
                   <div className="flex items-center justify-between ">
-                    <input
+                    {/* <input
                       value={`${format(range[0].startDate, "MM/dd/yyyy")}`}
                       readOnly
+                    /> */}
+                    <input
+                      onChange={(e) => setJourneyDate(e.target.value)}
+                      name="date"
+                      placeholder="Date "
+                      type="date"
+                      className={style.inputField}
                     />
-                    <CalendarMonth className={style.calendarIcon} />
+                    {/* <CalendarMonth className={style.calendarIcon} /> */}
                   </div>
                 </div>
-                <div className={style.calendarTow} ref={refOne}>
+                {/* <div className={style.calendarTow} ref={refOne}>
                   {open && (
                     <DateRange
-                      onChange={(item) => setRange([item.selection])}
+                      onChange={handleJourneyDate}
+                      // onChange={(item) => setRange([item.selection])}
                       editableDateInputs={true}
                       moveRangeOnFirstSelection={false}
                       ranges={range}
@@ -410,7 +472,7 @@ const BusBanner = () => {
                       className="calendarElement"
                     />
                   )}
-                </div>
+                </div> */}
               </div>
               <div className={style.formControl}>
                 <div className={style.package4}>
@@ -418,7 +480,7 @@ const BusBanner = () => {
                     <div>
                       <h4>Guests & Room</h4>
                       <small>
-                        {child + adult} Guest & {room}{" "}
+                        {child + adult} Guest  
                       </small>
                       <input type="text" />
                     </div>
@@ -430,32 +492,32 @@ const BusBanner = () => {
                 </div>
 
                 <div className={style.modalWrap}>
-            <dialog id="busModal" className={style.hotelModal}>
-              <form method="dialog" className="modal-box">
-                <button className={style.hotelModalCloseBtn}>✕</button>
-                <div className={style.guestRoomWrap}>
-                  <Groups2 className={style.groupIcon} />
-                  <div>
-                    <p className="text-xl font-bold">
-                      {" "}
-                      {child + adult} Traveller 
-                    </p>
-                  </div>
-                </div>
-                <div className={style.adultChildWrap}>
-                  <div className={style.adultIncrementDecrement}>
-                    <small onClick={decrementAdult}> - </small>
-                    <span>{adult} Adult </span>
-                    <small onClick={incrementAdult}> + </small>
-                  </div>
-                  <div className={style.childIncrementDecrement}>
-                    <small onClick={childDecrement}> - </small>
-                    <span> {child} Child </span>
-                    <small onClick={childIncrement}> + </small>
-                  </div>
-                </div>
-                    {/* room select */}
-                {/* <select
+                  <dialog id="busModal" className={style.hotelModal}>
+                    <form method="dialog" className="modal-box">
+                      <button className={style.hotelModalCloseBtn}>✕</button>
+                      <div className={style.guestRoomWrap}>
+                        <Groups2 className={style.groupIcon} />
+                        <div>
+                          <p className="text-xl font-bold">
+                            {" "}
+                            {child + adult} Traveller
+                          </p>
+                        </div>
+                      </div>
+                      <div className={style.adultChildWrap}>
+                        <div className={style.adultIncrementDecrement}>
+                          <small onClick={decrementAdult}> - </small>
+                          <span>{adult} Adult </span>
+                          <small onClick={incrementAdult}> + </small>
+                        </div>
+                        <div className={style.childIncrementDecrement}>
+                          <small onClick={childDecrement}> - </small>
+                          <span> {child} Child </span>
+                          <small onClick={childIncrement}> + </small>
+                        </div>
+                      </div>
+                      {/* room select */}
+                      {/* <select
                   className={style.roomSelect}
                   onChange={(e) => {
                     const classes = e.target.value;
@@ -470,16 +532,18 @@ const BusBanner = () => {
                   <option value="4 Room">4 Room</option>
                   <option value="5 Room">5 Room</option>
                 </select> */}
-              </form>
-            </dialog>
-          </div>
+                    </form>
+                  </dialog>
+                </div>
               </div>
             </div>
           </form>
-
-          <Link href="/tours/search">
-            <button className={style.heroBoxBtn}>Get Your Package</button>
-          </Link>
+             <div className="lg:text-xl text-center text-white font-medium">
+              {noMatch}
+             </div>
+          {/* <Link href="/tours/search"> */}
+            <button onClick={handleToursDetailsData} className={style.heroBoxBtn}>Get Your Package</button>
+          {/* </Link> */}
         </div>
       </div>
     </section>

@@ -19,7 +19,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import { fetchUmrahData } from "@/Redux/features/umrahSlice";
  
-import { DataContext } from "@/Context/DataContext";
+ 
  
  
  
@@ -30,23 +30,23 @@ const HajjLayout = ({ children }) => {
   const router = useRouter();
   const params = router.asPath;
   const refreshParams = params.split("/");
-  const lastPart = refreshParams[refreshParams.length - 1];
+  // const lastPart = refreshParams[refreshParams.length - 1];
 
   const handleGetHajjData = (e) => {};
 
   useEffect(() => {
     let data;
-    if (lastPart === "economy") {
+    if (refreshParams.includes("economy")) {
       data = {
         hajj_package: "Economy Hajj Package",
       };
     }
-    if (lastPart === "nonshifting") {
+    if (refreshParams.includes("nonshifting")) {
       data = {
         hajj_package: "Non Shifting Hajj Package",
       };
     }
-    if (lastPart === "shifting") {
+    if (refreshParams.includes("shifting")) {
       data = {
         hajj_package: "Shifting Hajj Package",
       };
@@ -71,25 +71,26 @@ const HajjLayout = ({ children }) => {
       //   toast.error("Please select a country and visa type.");
       // }
     });
-  }, [lastPart]);
+  }, []);
+  console.log(refreshParams)
   useEffect(() => {
     let data;
-    if (lastPart === "umrah-in-ramadan") {
+    if (refreshParams.includes("umrah-in-ramadan")) {
       data = {
         latest_umrah_package: "Umrah In Ramadan",
       };
     }
-    if (lastPart === "premium") {
+    if (refreshParams.includes("premium")) {
       data = {
         latest_umrah_package: "Premium Umrah Packages",
       };
     }
-    if (lastPart === "platinum") {
+    if (refreshParams.includes("platinum")) {
       data = {
         latest_umrah_package: "Platinum Umrah Packages",
       };
     }
-    if (lastPart === "family") {
+    if (refreshParams.includes("family")) {
       data = {
         latest_umrah_package: "Family Umrah Packages",
       };
@@ -114,9 +115,9 @@ const HajjLayout = ({ children }) => {
       //   toast.error("Please select a country and visa type.");
       // }
     });
-  }, [lastPart]);
-  const umrahDetailsData = useSelector((state) => state.umrah.umrahDetailsData);
-  console.log(umrahDetailsData)
+  }, []);
+  // const umrahDetailsData = useSelector((state) => state.umrah.umrahDetailsData);
+  // console.log(umrahDetailsData)
 
   return (
     <div>
