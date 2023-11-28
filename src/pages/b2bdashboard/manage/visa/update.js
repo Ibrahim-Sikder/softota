@@ -18,7 +18,7 @@ const Update = ({ value, onChange }) => {
       <div className="mt-5">
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
-            <h2 className="text-3xl font-bold text-center">Visa Data Input </h2>
+            <h2 className="text-3xl font-bold text-center">Visa Data Update </h2>
             <div className="w-full mx-auto">
               <form>
                 <div className={styles.formControl}>
@@ -234,7 +234,7 @@ const Update = ({ value, onChange }) => {
 
                 <div className={styles.formControl}>
                   <button className={styles.submitBtn} type="submit">
-                    Submit
+                    Update
                   </button>
                 </div>
               </form>

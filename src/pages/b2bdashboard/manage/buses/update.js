@@ -124,6 +124,28 @@ const Update = () => {
               <form ref={formRef} onSubmit={handleBusData}>
               <div className={styles.formControl}>
                   <div>
+                    <label>Travel From City</label>
+                    <input
+                      onChange={(e) => setOperators(e.target.value)}
+                      name="travelFromCity"
+                      placeholder="Travel From City"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label> Travel To City</label>
+                    <input
+                      onChange={(e) => setTypeOfBus(e.target.value)}
+                      name="travelToCity"
+                      placeholder="Travel To City"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+              <div className={styles.formControl}>
+                  <div>
                     <label>Bus Name </label>
                     <input
                       onChange={(e) => setOperators(e.target.value)}

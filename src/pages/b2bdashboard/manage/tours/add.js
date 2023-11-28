@@ -125,7 +125,6 @@ const Tours = () => {
   return (
     <B2BdashboardLayout>
       <MoveText />
-
       <div className="mt-5">
         <div className={styling.profileTop}>
           <div className={styling.flightHistory}>
@@ -136,21 +135,21 @@ const Tours = () => {
               <form ref={formRef} onSubmit={handleToursData}>
                 <div className={styles.formControl}>
                   <div>
-                    <label>Title </label>
+                    <label>Travel From </label>
                     <input
                     onChange={(e)=>setTitle(e.target.value)}
                       name="category"
-                      placeholder="Title "
+                      placeholder="Travel From "
                       type="text"
                       className={styles.inputField}
                     />
                   </div>
                   <div>
-                    <label>Sub Title</label>
+                    <label>Title </label>
                     <input
-                    onChange={(e)=>setSubTitle(e.target.value)}
-                      name="productCategory"
-                      placeholder="Sub Title "
+                    onChange={(e)=>setTitle(e.target.value)}
+                      name="category"
+                      placeholder="Title "
                       type="text"
                       className={styles.inputField}
                     />
@@ -168,11 +167,11 @@ const Tours = () => {
                     />
                   </div>
                   <div>
-                    <label>Price </label>
+                    <label>Sub Title</label>
                     <input
-                    onChange={(e)=>setPrice(e.target.value)}
-                      name="price"
-                      placeholder="Price"
+                    onChange={(e)=>setSubTitle(e.target.value)}
+                      name="productCategory"
+                      placeholder="Sub Title "
                       type="text"
                       className={styles.inputField}
                     />
@@ -343,6 +342,16 @@ const Tours = () => {
                      onChange={(e)=>setPriceHighToLow(e.target.value)}
                       name="title"
                       placeholder=" Price Hight To Low  "
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Price </label>
+                    <input
+                    onChange={(e)=>setPrice(e.target.value)}
+                      name="price"
+                      placeholder="Price"
                       type="text"
                       className={styles.inputField}
                     />

@@ -109,6 +109,28 @@ const Train = () => {
               <form ref={formRef} onSubmit={handleTrainData}>
                  <div className={styles.formControl}>
                  <div>
+                    <label>Travel From City </label>
+                    <input
+                      onChange={(e) => setTitle(e.target.value)}
+                      name="travelFromCity"
+                      placeholder="Travel From City"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                  <div>
+                    <label>Travel To City </label>
+                    <input
+                      onChange={(e) => setTitle(e.target.value)}
+                      name="travelToCity"
+                      placeholder="Travel To City"
+                      type="text"
+                      className={styles.inputField}
+                    />
+                  </div>
+                </div>
+                <div className={styles.formControl}>
+                 <div>
                     <label> Train Name </label>
                     <input
                       onChange={(e) => setTitle(e.target.value)}
@@ -231,11 +253,11 @@ const Train = () => {
                     />
                   </div>
                   <div>
-                    <label>Product Category</label>
+                    <label>Price </label>
                     <input
-                      onChange={(e) => setProductCategory(e.target.value)}
-                      name="productCategory"
-                      placeholder="Product Category "
+                      onChange={(e) => setPrice(e.target.value)}
+                      name="price"
+                      placeholder="Price"
                       type="text"
                       className={styles.inputField}
                     />
@@ -252,12 +274,13 @@ const Train = () => {
                       className={styles.inputField}
                     />
                   </div>
+
                   <div>
-                    <label>End Poin</label>
+                    <label>End Point</label>
                     <input
                       onChange={(e) => setProductCategory(e.target.value)}
                       name="productCategory"
-                      placeholder="End Poin "
+                      placeholder="End Point "
                       type="text"
                       className={styles.inputField}
                     />
@@ -274,16 +297,7 @@ const Train = () => {
                       className={styles.inputField}
                     />
                   </div>
-                  <div>
-                    <label>Price </label>
-                    <input
-                      onChange={(e) => setPrice(e.target.value)}
-                      name="price"
-                      placeholder="Price"
-                      type="text"
-                      className={styles.inputField}
-                    />
-                  </div>
+                 
                 </div>
                
                 <div className={styles.formControl}>
