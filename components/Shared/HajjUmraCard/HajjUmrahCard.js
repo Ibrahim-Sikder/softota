@@ -10,9 +10,16 @@ import style from "./HajjUmrah.module.css";
 import { useContext } from "react";
 import { APIContext } from "@/Context/ApiContext";
 import { useSelector } from "react-redux";
+import UmrahCard from "./UmrahCard";
+import { useRouter } from "next/router";
 const HajjUmrahCard = ({ title, img }) => {
- 
+  const router = useRouter();
+  const params = router.asPath;
+  const refreshParams = params.split("/");
   const hajjDetailsData = useSelector((state) => state.hajj.hajjDetailsData);
+  const umrahDetailsData = useSelector((state) => state.umrah.umrahDetailsData);
+  const hotelDetailsData = useSelector((state) => state.hotel.hotelDetailsData);
+  
   // console.log(error)
   // const datas = [
   //   {
@@ -265,7 +272,7 @@ const HajjUmrahCard = ({ title, img }) => {
       </li>
     );
   }
-
+  
   return (
     <section>
       <div>
@@ -278,52 +285,81 @@ const HajjUmrahCard = ({ title, img }) => {
           />
         </div>
         <h3 className="text-3xl font-bold my-8">{title}</h3>
-        {hajjDetailsData.length === 0 ? (
-          <div className="text-xl text-center flex justify-center items-center h-full">
-            No matching packages found.
+        {refreshParams.length === 2 ? (
+          <div className="lg:text-xl text-center font-medium">
+            Please select your favorable package.
           </div>
         ) : (
-          <>
-            <section className="lg:w-10/12 mx-auto rounded  ">
-              {renderData(currentItems)}
-              <ul
-                className={
-                  minPageNumberLimit < 5
-                    ? "flex justify-center gap-3 md:gap-4 pb-5"
-                    : "flex justify-center gap-[7px] md:gap-3 pb-5"
-                }
-              >
-                <button
-                  onClick={handlePrevious}
-                  disabled={currentPage === pages[0] ? true : false}
-                  className={
-                    currentPage === pages[0] ? "text-gray-400" : "text-black"
-                  }
-                >
-                  Previous
-                </button>
-                <span className={minPageNumberLimit < 5 ? "hidden" : "inline"}>
-                  {pageDecrementBtn}
-                </span>
-                {renderPagesNumber}
-                {pageIncrementBtn}
-                <button
-                  onClick={handleNext}
-                  disabled={
-                    currentPage === pages[pages?.length - 1] ? true : false
-                  }
-                  className={
-                    currentPage === pages[pages?.length - 1]
-                      ? "text-gray-400"
-                      : "text-black pl-1"
-                  }
-                >
-                  Next
-                </button>
-              </ul>
-            </section>
-          </>
+          <div>
+            {(refreshParams.includes("economy") ||
+              refreshParams.includes("nonshifting") ||
+              refreshParams.includes("shifting")) && (
+              <>
+                {hajjDetailsData.length === 0 ? (
+                  <div className="text-xl text-center flex justify-center items-center h-full">
+                    No matching packages found.
+                  </div>
+                ) : (
+                  <>
+                    <section className="lg:w-10/12 mx-auto rounded  ">
+                      {renderData(currentItems)}
+                      <ul
+                        className={
+                          minPageNumberLimit < 5
+                            ? "flex justify-center gap-3 md:gap-4 pb-5"
+                            : "flex justify-center gap-[7px] md:gap-3 pb-5"
+                        }
+                      >
+                        <button
+                          onClick={handlePrevious}
+                          disabled={currentPage === pages[0] ? true : false}
+                          className={
+                            currentPage === pages[0]
+                              ? "text-gray-400"
+                              : "text-black"
+                          }
+                        >
+                          Previous
+                        </button>
+                        <span
+                          className={
+                            minPageNumberLimit < 5 ? "hidden" : "inline"
+                          }
+                        >
+                          {pageDecrementBtn}
+                        </span>
+                        {renderPagesNumber}
+                        {pageIncrementBtn}
+                        <button
+                          onClick={handleNext}
+                          disabled={
+                            currentPage === pages[pages?.length - 1]
+                              ? true
+                              : false
+                          }
+                          className={
+                            currentPage === pages[pages?.length - 1]
+                              ? "text-gray-400"
+                              : "text-black pl-1"
+                          }
+                        >
+                          Next
+                        </button>
+                      </ul>
+                    </section>
+                  </>
+                )}
+              </>
+            )}
+          </div>
         )}
+
+        <div>
+          {(refreshParams.includes("umrah-in-ramadan") ||
+            refreshParams.includes("premium") ||
+            refreshParams.includes("platinum") ||
+            refreshParams.includes("family")) && <UmrahCard></UmrahCard>}
+        </div>
       </div>
     </section>
   );

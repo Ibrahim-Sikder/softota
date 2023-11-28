@@ -14,70 +14,79 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Checkbox from "@mui/material/Checkbox";
 import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const HotelSearch = () => {
-  const hotelData = [
-    {
-      id: 1,
-      title: "Bashati Bay Resort",
-      image: hotel,
-      address:
-        " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
-      price: 4500,
-      lastPrice: 4000,
-      night: 3,
-    },
-    {
-      id: 1,
-      title: "Bashati Bay Resort",
-      image: hotel3,
-      address:
-        " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
-      price: 4500,
-      lastPrice: 4000,
-      night: 3,
-    },
-    {
-      id: 1,
-      title: "Bashati Bay Resort",
-      image: hotel2,
-      address:
-        " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
-      price: 4500,
-      lastPrice: 4000,
-      night: 3,
-    },
-    {
-      id: 1,
-      title: "Bashati Bay Resort",
-      image: hotel4,
-      address:
-        " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
-      price: 4500,
-      lastPrice: 4000,
-      night: 3,
-    },
-    {
-      id: 1,
-      title: "Bashati Bay Resort",
-      image: hotel5,
-      address:
-        " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
-      price: 4500,
-      lastPrice: 4000,
-      night: 3,
-    },
-    {
-      id: 1,
-      title: "Bashati Bay Resort",
-      image: hotel6,
-      address:
-        " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
-      price: 4500,
-      lastPrice: 4000,
-      night: 3,
-    },
-  ];
+  const hotelDetailsData = useSelector((state) => state.hotel.hotelDetailsData);
+  const isLoading = useSelector((state) => state.hotel.isLoading);
+  // const hotelData = [
+  //   {
+  //     id: 1,
+  //     title: "Bashati Bay Resort",
+  //     image: hotel,
+  //     address:
+  //       " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
+  //     price: 4500,
+  //     lastPrice: 4000,
+  //     night: 3,
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Bashati Bay Resort",
+  //     image: hotel3,
+  //     address:
+  //       " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
+  //     price: 4500,
+  //     lastPrice: 4000,
+  //     night: 3,
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Bashati Bay Resort",
+  //     image: hotel2,
+  //     address:
+  //       " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
+  //     price: 4500,
+  //     lastPrice: 4000,
+  //     night: 3,
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Bashati Bay Resort",
+  //     image: hotel4,
+  //     address:
+  //       " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
+  //     price: 4500,
+  //     lastPrice: 4000,
+  //     night: 3,
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Bashati Bay Resort",
+  //     image: hotel5,
+  //     address:
+  //       " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
+  //     price: 4500,
+  //     lastPrice: 4000,
+  //     night: 3,
+  //   },
+  //   {
+  //     id: 1,
+  //     title: "Bashati Bay Resort",
+  //     image: hotel6,
+  //     address:
+  //       " Plot No.33, Block-A, Kolatoli Road, Sugandha Point Cox'x Bazar",
+  //     price: 4500,
+  //     lastPrice: 4000,
+  //     night: 3,
+  //   },
+  // ];
+
+  if (isLoading) {
+    return <div className="h-full flex justify-center items-center py-20">Loading...</div>;
+  }
+ 
+
   return (
     <section>
       <div className={style.searchDetailHead}>
@@ -102,7 +111,7 @@ const HotelSearch = () => {
             </div>
           </div>
           <div>
-            {hotelData.map((hotel) => (
+            {hotelDetailsData?.getPackage?.map((hotel) => (
               <div key={hotel.id} className={style.SearchHotel}>
                 <div className={style.detailBoxWrap}>
                   <div className={style.searchLeftSideImg}>

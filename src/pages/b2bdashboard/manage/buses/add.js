@@ -18,12 +18,19 @@ const Busses = () => {
   const [getFile, setGetFile] = useState({});
   const [getImage, setGetImage] = useState([]);
   const [value, setValue] = useState("");
+  const [busName,setBusName] = useState(null)
   const [operators, setOperators] = useState(null);
+  const [travelFrom, setTravelFrom] = useState(null)
+  const [travelTo, setTravelTo] = useState(null)
+  const [startingTime, setStartingTime] = useState(null)
+  const [endTime, setEndTime] = useState(null)
+
+  const [price, setPrice] = useState(null);
+  const [journeyDate,setJourneyDate] = useState(null)
   const [typeOfBus, setTypeOfBus] = useState(null);
   const [boardingPoint, setBoardingPoint] = useState(null);
   const [facilities, setFacilities] = useState(null);
-  const [price, setPrice] = useState(null);
-  const [getDate, setGetDate] = useState(null);
+  // const [getDate, setGetDate] = useState(null);
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
   const [child, setChild] = useState(0)
@@ -76,12 +83,21 @@ const Busses = () => {
   const handleBusData = (e) => {
     e.preventDefault();
     const data = {
+      bus_name: busName,
+      starting_point: travelFrom,
+      end_point: travelTo,
+      starting_time: startingTime,
+      end_time: endTime,
+      price: price,
+      journey_date: journeyDate,
+      child: child,
+      adult: adult,
+      seat_type: seat,
       operators: operators,
       type_of_bus: typeOfBus,
       boarding_point: boardingPoint,
       facilities: facilities,
-      price: price,
-      date: getDate,
+     
       image: getImage,
       description: value,
     };
@@ -148,7 +164,7 @@ const Busses = () => {
                   <div>
                     <label>Bus Name </label>
                     <input
-                      onChange={(e) => setOperators(e.target.value)}
+                      onChange={(e) => setBusName(e.target.value)}
                       name="category"
                       placeholder="Bus Name"
                       type="text"
@@ -158,7 +174,7 @@ const Busses = () => {
                   <div>
                     <label> Starting Point</label>
                     <input
-                      onChange={(e) => setTypeOfBus(e.target.value)}
+                      onChange={(e) => setTravelFrom(e.target.value)}
                       name="productCategory"
                       placeholder="Starting Point"
                       type="text"
@@ -170,7 +186,7 @@ const Busses = () => {
                   <div>
                     <label>End Point </label>
                     <input
-                      onChange={(e) => setOperators(e.target.value)}
+                      onChange={(e) => setTravelTo(e.target.value)}
                       name="category"
                       placeholder="End Point"
                       type="text"
@@ -180,7 +196,7 @@ const Busses = () => {
                   <div>
                     <label> Starting Time</label>
                     <input
-                      onChange={(e) => setTypeOfBus(e.target.value)}
+                      onChange={(e) => setStartingTime(e.target.value)}
                       name="productCategory"
                       placeholder="Starting Time"
                       type="text"
@@ -192,7 +208,7 @@ const Busses = () => {
                 <div>
                     <label> End Time</label>
                     <input
-                      onChange={(e) => setTypeOfBus(e.target.value)}
+                      onChange={(e) => setEndTime(e.target.value)}
                       name="productCategory"
                       placeholder="End Time"
                       type="text"
@@ -215,9 +231,9 @@ const Busses = () => {
                   <div>
                     <label>Journy Date </label>
                     <input
-                      onChange={(e) => setOperators(e.target.value)}
+                      onChange={(e) => setJourneyDate(e.target.value)}
                       name="category"
-                      placeholder="Joury Date"
+                      placeholder="Journey Date"
                       type="date"
                       className={styles.inputField}
                     />
@@ -330,7 +346,7 @@ const Busses = () => {
                     />
                   </div>
                 </div>
-                <div className={styles.formControl}>
+                {/* <div className={styles.formControl}>
                   
                   <div>
                     <label> Date </label>
@@ -342,7 +358,7 @@ const Busses = () => {
                       className={styles.inputField}
                     />
                   </div>
-                </div>
+                </div> */}
                 <div className={styles.formControl}>
                   <div className={styles.uploadFile}>
                     {getFile[0]?.name ? (
