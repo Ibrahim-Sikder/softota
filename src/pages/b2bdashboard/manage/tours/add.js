@@ -153,15 +153,9 @@ const Tours = () => {
                   <div>
                     <label>Title </label>
                     <input
-<<<<<<< HEAD
                     onChange={(e)=>setTitle(e.target.value)}
                       name="category"
                       placeholder="Title "
-=======
-                      onChange={(e) => setSubTitle(e.target.value)}
-                      name="productCategory"
-                      placeholder="Sub Title "
->>>>>>> 573258bd0a5f6bf5d243c20d382867dbd1e449ca
                       type="text"
                       className={styles.inputField}
                     />
@@ -181,15 +175,10 @@ const Tours = () => {
                   <div>
                     <label>Sub Title</label>
                     <input
-<<<<<<< HEAD
                     onChange={(e)=>setSubTitle(e.target.value)}
-                      name="productCategory"
-                      placeholder="Sub Title "
-=======
-                      onChange={(e) => setPrice(e.target.value)}
                       name="price"
                       placeholder="Price"
->>>>>>> 573258bd0a5f6bf5d243c20d382867dbd1e449ca
+
                       type="text"
                       className={styles.inputField}
                     />

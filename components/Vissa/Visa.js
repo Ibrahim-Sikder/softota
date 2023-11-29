@@ -8,45 +8,9 @@ import {
   BookOnline,
   TransferWithinAStation,
 } from "@mui/icons-material";
-import { useState } from "react";
-import toast from "react-hot-toast";
-import { useRouter } from "next/router";
-import { fetchVisaData } from "@/Redux/features/visaSlice";
-import { useDispatch } from "react-redux";
 
 const visa = () => {
-  const dispatch = useDispatch();
-  const [visaCountry, setVisaCountry] = useState("");
-  const [visaType, setVisaType] = useState("");
-  const [noMatching, setNoMatching] = useState("");
-  // const isLoading = useSelector((state) => state.visa.isLoading);
-  const router = useRouter();
 
-  const handleGetVisaData = () => {
-    const data = {
-      country_name: visaCountry,
-      visa_type: visaType,
-    };
-
-    dispatch(fetchVisaData(data)).then((result) => {
-      if (
-        result.payload &&
-        result.payload.message === "Successfully visa details gets."
-      ) {
-        router.push("/visa/visaSearch");
-      } else if (
-        result.payload &&
-        result.payload.message === "No matching package found."
-      ) {
-        setNoMatching("No matching package found.");
-      } else if (
-        result.payload &&
-        result.payload.message === "Please select a country and visa type."
-      ) {
-        toast.error("Please select a country and visa type.");
-      }
-    });
-  };
 
   return (
     <section className={style.visa}>
